@@ -74,7 +74,7 @@
         "3753f6b7-733c-49d7-881c-f8fe4195e49f": {
           "type": "menu_label",
           "settings": {
-            "title": "Menu label",
+            "title": "Doprava a platba",
             "icon": "delivery",
             "link": "shopify:\/\/pages\/zpusoby-dopravy-a-platby"
           }
