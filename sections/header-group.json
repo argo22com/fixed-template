@@ -52,7 +52,7 @@
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 29,
-            "color_scheme": ""
+            "color_scheme": "inverse"
           }
         },
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
@@ -76,6 +76,14 @@
           "settings": {
             "title": "Menu label",
             "icon": "delivery",
+            "link": "shopify:\/\/pages\/zpusoby-dopravy-a-platby"
+          }
+        },
+        "store_information_BwwfPB": {
+          "type": "store_information",
+          "settings": {
+            "icon": "document_search",
+            "title": "Kubatova 6, 370 04 České Budějovice",
             "link": ""
           }
         }
@@ -85,7 +93,8 @@
         "ed4cddab-febc-4198-92ee-40d8b70c47f9",
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
         "e4604373-561e-4dd2-b5dd-ec3431202f97",
-        "3753f6b7-733c-49d7-881c-f8fe4195e49f"
+        "3753f6b7-733c-49d7-881c-f8fe4195e49f",
+        "store_information_BwwfPB"
       ],
       "settings": {
         "color_scheme": "background-1",
@@ -210,13 +219,61 @@
             "overlay_color": "#000",
             "overlay_opacity": 50
           }
+        },
+        "text_overlay_image_UmKbz6": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_outside_image_p4kgWd": {
+          "type": "text-outside-image",
+          "settings": {
+            "link": "",
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "bottom",
+            "heading_color": "#000",
+            "caption_color": "#000",
+            "button_foreground": "#fff",
+            "button_background": "#000"
+          }
         }
       },
       "block_order": [
         "text_overlay_image_NMrEcE",
         "text_overlay_image_A77Va3",
         "text_overlay_image_nNMC7m",
-        "text_overlay_image_xDJV3w"
+        "text_overlay_image_xDJV3w",
+        "text_overlay_image_UmKbz6",
+        "text_outside_image_p4kgWd"
       ],
       "settings": {
         "title": "Gallery",
@@ -235,32 +292,10 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "featured_blog_k9xLmN": {
-      "type": "featured-blog",
-      "settings": {
-        "title": "Blog posts",
-        "heading_size": "h1",
-        "blog": "news",
-        "post_limit": 3,
-        "image_height": "medium",
-        "show_view_all": true,
-        "columns_desktop": 3,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "blog_card_text_alignment": "left",
-        "blog_card_color_scheme": "",
-        "show_image": true,
-        "show_date": true,
-        "show_author": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "header",
-    "gallery_aPdpEJ",
-    "featured_blog_k9xLmN"
+    "gallery_aPdpEJ"
   ]
 }
