@@ -98,6 +98,95 @@
         "padding_bottom": 52
       }
     },
+    "multicolumn_h6W9ED": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_MrNynF": {
+          "type": "column",
+          "settings": {
+            "icon": "book_open",
+            "title": "",
+            "text": "<p>Všechny produkty pocházejí z naší kožené dílny v Prostějově.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#166534",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#effdf4",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_rw8pBG": {
+          "type": "column",
+          "settings": {
+            "icon": "arrow_circle_up",
+            "title": "",
+            "text": "<p>Na výběru kůže záleží, proto máme jen tu nejlepší od italských dodavatelů.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#a06207",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fefce8",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_mK74JL": {
+          "type": "column",
+          "settings": {
+            "icon": "cake",
+            "title": "Card heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#981c1b",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fef2f2",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_MrNynF",
+        "column_rw8pBG",
+        "column_mK74JL"
+      ],
+      "settings": {
+        "title": "Promotion cards",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_product_yA4XrV": {
       "type": "featured-product",
       "blocks": {
@@ -267,95 +356,6 @@
         "overlay_color": "#1e40af"
       }
     },
-    "multicolumn_h6W9ED": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_MrNynF": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#166534",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#effdf4",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_rw8pBG": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#a06207",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_mK74JL": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#981c1b",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fef2f2",
-            "card_color_background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_MrNynF",
-        "column_rw8pBG",
-        "column_mK74JL"
-      ],
-      "settings": {
-        "title": "Promotion cards",
-        "subtitle": "",
-        "heading_size": "h1",
-        "media_type": "image",
-        "media_width_desktop": "100",
-        "image_ratio": "adapt",
-        "text_position": "bottom",
-        "columns_desktop": 3,
-        "columns_tablet": 3,
-        "desktop_gap": 30,
-        "auto_fit": false,
-        "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
-        "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
-        "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "video_XhEQtC": {
       "type": "video",
       "settings": {
@@ -447,10 +447,10 @@
     "main",
     "image_banner_aBk4NA",
     "rich_text_nb4Q38",
+    "multicolumn_h6W9ED",
     "featured_product_yA4XrV",
     "featured_collection_8kwXFr",
     "image_with_text_MUzzfc",
-    "multicolumn_h6W9ED",
     "video_XhEQtC",
     "collection_list_tabs_fyybDt"
   ]
