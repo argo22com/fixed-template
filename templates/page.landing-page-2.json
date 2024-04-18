@@ -27,11 +27,23 @@
             "text": "360° ochrana pro notebooky a tablety",
             "text_style": "body"
           }
+        },
+        "buttons_qQmyyy": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
         }
       },
       "block_order": [
         "heading_ewtxqN",
-        "text_zym3RF"
+        "text_zym3RF",
+        "buttons_qQmyyy"
       ],
       "settings": {
         "layout": "grid",
