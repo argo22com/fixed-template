@@ -27,23 +27,11 @@
             "text": "360° ochrana pro notebooky a tablety",
             "text_style": "body"
           }
-        },
-        "buttons_FAVnXN": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_1": "primary",
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_2": "primary"
-          }
         }
       },
       "block_order": [
         "heading_ewtxqN",
-        "text_zym3RF",
-        "buttons_FAVnXN"
+        "text_zym3RF"
       ],
       "settings": {
         "layout": "grid",
@@ -94,22 +82,10 @@
             "heading": "<p>Luxusní kožené pouzdro pro notebook i tablet<\/p>",
             "heading_size": "h2"
           }
-        },
-        "button_JCbgjV": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_1": "primary",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary"
-          }
         }
       },
       "block_order": [
-        "heading_EDk9Te",
-        "button_JCbgjV"
+        "heading_EDk9Te"
       ],
       "settings": {
         "desktop_content_position": "center",
