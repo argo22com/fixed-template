@@ -137,8 +137,8 @@
           "type": "column",
           "settings": {
             "icon": "cake",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "",
+            "text": "<p>Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.<\/p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
