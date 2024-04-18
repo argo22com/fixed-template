@@ -47,6 +47,7 @@
       ],
       "settings": {
         "layout": "grid",
+        "image": "shopify:\/\/shop_images\/OXFORD.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
@@ -82,6 +83,159 @@
         "gradient_background_container_mobile": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "rich_text_nb4Q38": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EDk9Te": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Luxusní kožené pouzdro pro notebook i tablet<\/p>",
+            "heading_size": "h2"
+          }
+        },
+        "button_JCbgjV": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EDk9Te",
+        "button_JCbgjV"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_product_yA4XrV": {
+      "type": "featured-product",
+      "blocks": {
+        "title_DkN93H": {
+          "type": "title",
+          "settings": {
+            "show_vendor_link": true,
+            "title_size": "h2"
+          }
+        },
+        "price_tTF8Dn": {
+          "type": "price",
+          "settings": {
+            "variant_price": false
+          }
+        },
+        "sale_box_JptV7G": {
+          "type": "sale_box",
+          "settings": {
+            "show_free_shipping_bar": true,
+            "enable_compare": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatches_style": "variant",
+            "size_chart_enable": true,
+            "size_chart_option": "size",
+            "size_chart_link_label": "Size chart",
+            "size_chart_page": "",
+            "quantity_selector_enable": true,
+            "show_dynamic_checkout": true
+          }
+        },
+        "description_aPVNb7": {
+          "type": "description",
+          "settings": {
+            "truncate_description": 0,
+            "read_more_button": "Read more"
+          }
+        },
+        "share_a4LHAz": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share",
+            "enable_floating_layout": false,
+            "share_on_facebook": true,
+            "share_on_twitter": true,
+            "share_on_pinterest": true,
+            "share_on_email": true,
+            "share_link": true
+          }
+        }
+      },
+      "block_order": [
+        "title_DkN93H",
+        "price_tTF8Dn",
+        "sale_box_JptV7G",
+        "description_aPVNb7",
+        "share_a4LHAz"
+      ],
+      "settings": {
+        "product": "kozene-pouzdro-fixed-oxford-pro-apple-ipad-10-2-2019-2021-ipad-10-9-2022-pro-11-air-2019-2022-hnede",
+        "section_width": "page-width",
+        "use_background_input": true,
+        "auto_scroll_up_mobile": false,
+        "hide_when_empty_content": true,
+        "view_details_button_text": "View product details",
+        "color_scheme": "",
+        "enable_sticky_info": true,
+        "default_image": "product_featured_image",
+        "media_position": "left",
+        "gallery_layout": "stacked",
+        "thumbnail_position": "left",
+        "media_size": "medium",
+        "image_ratio": "adapt",
+        "image_fit": true,
+        "disable_images_lightbox": false,
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_8kwXFr": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "subtitle": "",
+        "collection": "",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "enable_desktop_slider": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image_position_desktop": "left",
+        "image_height": "adapt_product_list",
+        "image_height_mobile": "34",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_MUzzfc": {
@@ -299,6 +453,9 @@
   "order": [
     "main",
     "image_banner_aBk4NA",
+    "rich_text_nb4Q38",
+    "featured_product_yA4XrV",
+    "featured_collection_8kwXFr",
     "image_with_text_MUzzfc",
     "collapsible_content_X97VWP",
     "multicolumn_h6W9ED"
