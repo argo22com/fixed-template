@@ -63,14 +63,6 @@
             "link": ""
           }
         },
-        "e4604373-561e-4dd2-b5dd-ec3431202f97": {
-          "type": "menu_label",
-          "settings": {
-            "title": "Menu label",
-            "icon": "sale",
-            "link": ""
-          }
-        },
         "3753f6b7-733c-49d7-881c-f8fe4195e49f": {
           "type": "menu_label",
           "settings": {
@@ -92,7 +84,6 @@
         "285909a8-8f88-4414-a5f1-1d926079936b",
         "ed4cddab-febc-4198-92ee-40d8b70c47f9",
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
-        "e4604373-561e-4dd2-b5dd-ec3431202f97",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "store_information_BwwfPB"
       ],
