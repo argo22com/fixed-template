@@ -17,14 +17,14 @@
         "heading_ewtxqN": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "POUZDRO OXFORD",
             "size": "h0"
           }
         },
         "text_zym3RF": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "360° ochrana pro notebooky a tablety",
             "text_style": "body"
           }
         },
@@ -219,7 +219,7 @@
             "link": "",
             "button_style": "solid",
             "card_color_text": "#166534",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#effdf4",
             "card_color_background_gradient": ""
@@ -235,7 +235,7 @@
             "link": "",
             "button_style": "solid",
             "card_color_text": "#a06207",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fefce8",
             "card_color_background_gradient": ""
@@ -251,7 +251,7 @@
             "link": "",
             "button_style": "solid",
             "card_color_text": "#981c1b",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fef2f2",
             "card_color_background_gradient": ""
