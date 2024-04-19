@@ -7,21 +7,28 @@
           "type": "collection_icon",
           "settings": {
             "collection": "",
-            "icon": "computers"
+            "icon": "microphone"
+          }
+        },
+        "28e78e22-1d7d-4efb-9b2d-b58b653de9ef": {
+          "type": "collection_icon",
+          "settings": {
+            "collection": "",
+            "icon": "device_mobile"
           }
         },
         "4fbcac9e-c27d-4d4e-9549-35730111dffe": {
           "type": "collection_icon",
           "settings": {
             "collection": "",
-            "icon": "cellphone"
+            "icon": "pencil_alt"
           }
         },
         "46b183e0-1c4a-4c4b-9f1a-a99484771399": {
           "type": "collection_icon",
           "settings": {
             "collection": "",
-            "icon": "book_open"
+            "icon": "paper_clip"
           }
         },
         "b2983b3f-e3c1-4c57-83cf-9bb714e21839": {
@@ -51,24 +58,17 @@
             "collection": "",
             "icon": "laptop"
           }
-        },
-        "28e78e22-1d7d-4efb-9b2d-b58b653de9ef": {
-          "type": "collection_icon",
-          "settings": {
-            "collection": "",
-            "icon": "box"
-          }
         }
       },
       "block_order": [
         "e83d1f32-c65d-42e6-9d33-6b71803d16dc",
+        "28e78e22-1d7d-4efb-9b2d-b58b653de9ef",
         "4fbcac9e-c27d-4d4e-9549-35730111dffe",
         "46b183e0-1c4a-4c4b-9f1a-a99484771399",
         "b2983b3f-e3c1-4c57-83cf-9bb714e21839",
         "6706735a-b87e-41b5-9761-42fdf16ade06",
         "72b9ace9-3125-4441-89a4-8d956338dc7e",
-        "2e123320-75bd-49bd-93ca-e935641e26fc",
-        "28e78e22-1d7d-4efb-9b2d-b58b653de9ef"
+        "2e123320-75bd-49bd-93ca-e935641e26fc"
       ],
       "settings": {
         "collection_tree_data": "",
@@ -76,7 +76,7 @@
         "show_number_of_products": true,
         "collection_icon_color_scheme": "background-1",
         "enable_transparent_header": false,
-        "text_color_transparent": "#fff"
+        "text_color_transparent": "#ffffff"
       }
     },
     "product-grid": {
