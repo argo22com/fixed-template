@@ -99,7 +99,7 @@
       ],
       "settings": {
         "color_scheme": "inverse",
-        "color_scheme_bottom": "inverse",
+        "color_scheme_bottom": "background-2",
         "bottom_links": "footer",
         "show_social": true,
         "enable_country_selector": false,
