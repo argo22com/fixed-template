@@ -714,14 +714,14 @@
       },
       "inverse": {
         "settings": {
-          "text": "#fafafa",
+          "text": "#000",
           "sale_off_price": "#e94200",
           "compare_at_price": "#737373",
           "background": "#00aae9",
           "gradient_background": "",
-          "background_input": "#212c4d",
-          "solid_button_label_primary": "#ffffff",
-          "solid_button_background_primary": "#7a7e80",
+          "background_input": "#ffffff",
+          "solid_button_label_primary": "#e94200",
+          "solid_button_background_primary": "#ffffff",
           "review_stars": "#0445ca",
           "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
           "text_message_success": "#166534",
