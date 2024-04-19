@@ -98,7 +98,7 @@
         "e1a58367-ad23-47c0-adf6-953cfbd41867"
       ],
       "settings": {
-        "color_scheme": "background-2",
+        "color_scheme": "inverse",
         "color_scheme_bottom": "inverse",
         "bottom_links": "footer",
         "show_social": true,
