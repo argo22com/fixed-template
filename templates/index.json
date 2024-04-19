@@ -25,14 +25,14 @@
             "gradient_heading_desktop": "",
             "colors_background": "#000000",
             "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#f87171",
+            "colors_badge_background": "#e94200",
             "colors_button_text": "#121212",
             "colors_button": "#ffffff",
             "colors_text_mobile": "#ffffff",
             "gradient_heading_mobile": "",
             "colors_background_mobile": "#000000",
             "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
+            "colors_badge_background_mobile": "#e94200",
             "colors_button_text_mobile": "#000000",
             "colors_button_mobile": "#ffffff"
           }
@@ -188,6 +188,9 @@
     },
     "5b71ef94-4638-489f-ae0b-ff72c1082704": {
       "type": "featured-collection",
+      "custom_css": [
+
+      ],
       "settings": {
         "title": "Bestsellery",
         "subtitle": "Bestsellery",
