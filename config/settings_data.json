@@ -694,13 +694,13 @@
       "background-2": {
         "settings": {
           "text": "#000000",
-          "sale_off_price": "#ef4444",
+          "sale_off_price": "#e94200",
           "compare_at_price": "#94a3b8",
           "background": "#fafafa",
           "gradient_background": "",
           "background_input": "#ffffff",
           "solid_button_label_primary": "#ffffff",
-          "solid_button_background_primary": "#2563eb",
+          "solid_button_background_primary": "#00aae9",
           "review_stars": "#fbbf24",
           "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
           "text_message_success": "#166534",
