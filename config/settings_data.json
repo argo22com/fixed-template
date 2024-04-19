@@ -47,6 +47,7 @@
     "recently_viewed_enable_quick_add": true,
     "recently_viewed_enable_quick_view": true,
     "recently_viewed_columns_mobile": "1",
+    "google_maps_api_key": "AIzaSyAXbEY8zTRx-sKh0bKje_zIHdoFgo2skwA",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -673,7 +674,7 @@
     "color_schemes": {
       "background-1": {
         "settings": {
-          "text": "#000",
+          "text": "#000000",
           "sale_off_price": "#e94200",
           "compare_at_price": "#16a34a",
           "background": "#ffffff",
