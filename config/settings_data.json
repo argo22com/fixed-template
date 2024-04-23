@@ -723,7 +723,7 @@
           "solid_button_label_primary": "#e94200",
           "solid_button_background_primary": "#ffffff",
           "review_stars": "#0445ca",
-          "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
+          "free_shipping_tracking_gradient_background": "radial-gradient(rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
           "text_message_success": "#166534",
           "background_message_success": "#effdf4",
           "text_message_warning": "#a06207",
