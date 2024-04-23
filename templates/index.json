@@ -463,7 +463,7 @@
         "enable_section_box_layout": false,
         "color_scheme": "background-1",
         "blog_card_text_alignment": "left",
-        "blog_card_color_scheme": "inverse",
+        "blog_card_color_scheme": "background-2",
         "show_image": true,
         "show_date": true,
         "show_author": true,
