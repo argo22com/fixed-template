@@ -117,30 +117,10 @@
             "heading": "VÍTEJTE NA FIXED PODPOŘE",
             "size": "h1"
           }
-        },
-        "text_QC7GKC": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_BhYtFk": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_1": "primary",
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_2": "primary"
-          }
         }
       },
       "block_order": [
-        "heading_7MJi6x",
-        "text_QC7GKC",
-        "buttons_BhYtFk"
+        "heading_7MJi6x"
       ],
       "settings": {
         "layout": "grid",
@@ -156,7 +136,7 @@
         "enable_parallax_scrolling_effect": false,
         "mobile_content_alignment": "center",
         "show_text_below_image": true,
-        "color_text": "#fff",
+        "color_text": "#575a64",
         "gradient_heading_desktop": "",
         "color_button_text_1": "#000",
         "color_button_1": "#fff",
