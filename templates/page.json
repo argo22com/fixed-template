@@ -71,8 +71,8 @@
           "settings": {
             "heading": "Jak si správně vybrat velikost univerzálního pouzdra?",
             "icon": "eye",
-            "row_content": "<p>V popisu u každého univerzálního pouzdra FIXED naleznete informaci o vnitřní velikosti pouzdra, dle které se můžete řídit. Tento údaj odpovídá maximální možné velikosti mobiliního telefonu, který můžete s pouzdrem pohodlně používat. Pouzdro by zároveň nemělo být větší než telefon více než o pár milimetrů.<\/p><p><\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "tabulka-velikosti-pouzder"
           }
         },
         "collapsible_row_aTgD3C": {
