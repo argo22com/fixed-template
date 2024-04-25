@@ -69,9 +69,9 @@
         "collapsible_row_TMY87y": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
+            "heading": "Jak si správně vybrat velikost univerzálního pouzdra?",
+            "icon": "eye",
+            "row_content": "<p>V popisu u každého univerzálního pouzdra FIXED naleznete informaci o vnitřní velikosti pouzdra, dle které se můžete řídit. Tento údaj odpovídá maximální možné velikosti mobiliního telefonu, který můžete s pouzdrem pohodlně používat. Pouzdro by zároveň nemělo být větší než telefon více než o pár milimetrů.<\/p><p><\/p>",
             "page": ""
           }
         },
