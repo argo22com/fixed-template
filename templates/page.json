@@ -9,9 +9,54 @@
         "padding_top": 0,
         "padding_bottom": 40
       }
+    },
+    "rich_text_k64knK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_V8EkEp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>PRODUKTOVÁ PODPORA<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_zmYcMn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Máte dotaz, nemůžete najít návod ke svému produktu nebo potřebujete vrátit nebo reklamovat zboží?<\/p>"
+          }
+        },
+        "button_8TWx7H": {
+          "type": "button",
+          "settings": {
+            "button_label": "Kontaktujte nás",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_V8EkEp",
+        "text_zmYcMn",
+        "button_8TWx7H"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_k64knK"
   ]
 }
