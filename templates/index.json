@@ -38,6 +38,41 @@
             "colors_button_mobile": "#000"
           }
         },
+        "template--18627972890925__518b8ced-997b-408e-84d5-64fe5082a6a1-168102112962a89f2d-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Armor_banner_desktop_v1.jpg",
+            "badge_label": "Button label",
+            "heading": "ARMOR",
+            "text": "ULTRA ODOLNÁ SKLA. NEJVYŠŠÍ ODOLNOST DÍKY VYSOKÉ TVRDOSTI I OHEBNOSTI",
+            "hide_text_on_mobile": false,
+            "button_label": "Button label",
+            "price": "",
+            "link": "",
+            "button_style": "primary",
+            "box_align": "middle-right",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "right",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#000000",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#00aae9",
+            "colors_button_text": "#000000",
+            "colors_button": "#ffffff",
+            "colors_text_mobile": "#ffffff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#000000",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#00aae9",
+            "colors_button_text_mobile": "#000000",
+            "colors_button_mobile": "#ffffff"
+          }
+        },
         "template--18627972890925__518b8ced-997b-408e-84d5-64fe5082a6a1-168102112962a89f2d-0": {
           "type": "slide",
           "settings": {
@@ -73,46 +108,12 @@
             "colors_button_mobile": "#ffffff"
           }
         },
-        "template--18627972890925__518b8ced-997b-408e-84d5-64fe5082a6a1-168102112962a89f2d-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Armor_banner_desktop_v1.jpg",
-            "badge_label": "Button label",
-            "heading": "ARMOR",
-            "text": "ULTRA ODOLNÁ SKLA. NEJVYŠŠÍ ODOLNOST DÍKY VYSOKÉ TVRDOSTI I OHEBNOSTI",
-            "hide_text_on_mobile": false,
-            "button_label": "Button label",
-            "price": "",
-            "link": "",
-            "button_style": "primary",
-            "box_align": "middle-right",
-            "text_alignment": "right",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "right",
-            "colors_text": "#ffffff",
-            "gradient_heading_desktop": "",
-            "colors_background": "#000000",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#00aae9",
-            "colors_button_text": "#000000",
-            "colors_button": "#ffffff",
-            "colors_text_mobile": "#ffffff",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#000000",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#00aae9",
-            "colors_button_text_mobile": "#000000",
-            "colors_button_mobile": "#ffffff"
-          }
-        },
         "6d524d43-1bde-474f-b4c0-f6b07a06c8be": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/banner-desktop_TagCard_OR_v3_AFM.jpg",
             "badge_label": "Badge label",
-            "heading": "Heading",
+            "heading": "TAG CARD",
             "text": "Your text",
             "hide_text_on_mobile": false,
             "button_label": "Button label",
@@ -120,7 +121,7 @@
             "link": "",
             "button_style": "primary",
             "box_align": "middle-center",
-            "text_alignment": "center",
+            "text_alignment": "left",
             "keep_ltr": false,
             "desktop_image_width": "full",
             "desktop_image_position": "left",
@@ -145,9 +146,10 @@
         "slide_AFmp8D": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/roll_desktop_banner_v2.jpg",
             "badge_label": "Badge label",
-            "heading": "Image slide",
-            "text": "Tell your brand's story through images",
+            "heading": "KONFIGURÁTOR DRŽÁKŮ",
+            "text": "SESTAVTE SI DRŽÁK PŘESNĚ NA MÍRU VAŠEMU AUTU",
             "hide_text_on_mobile": false,
             "button_label": "Button label",
             "price": "1300",
@@ -160,7 +162,7 @@
             "desktop_image_position": "left",
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center",
-            "colors_text": "#000",
+            "colors_text": "#fff",
             "gradient_heading_desktop": "",
             "colors_background": "#fff",
             "colors_badge_foreground": "#fff",
@@ -179,8 +181,8 @@
       },
       "block_order": [
         "slide_T3NJDj",
-        "template--18627972890925__518b8ced-997b-408e-84d5-64fe5082a6a1-168102112962a89f2d-0",
         "template--18627972890925__518b8ced-997b-408e-84d5-64fe5082a6a1-168102112962a89f2d-1",
+        "template--18627972890925__518b8ced-997b-408e-84d5-64fe5082a6a1-168102112962a89f2d-0",
         "6d524d43-1bde-474f-b4c0-f6b07a06c8be",
         "slide_AFmp8D"
       ],
