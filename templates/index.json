@@ -76,9 +76,10 @@
         "template--18627972890925__518b8ced-997b-408e-84d5-64fe5082a6a1-168102112962a89f2d-1": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Armor_banner_desktop_v1.jpg",
             "badge_label": "Button label",
-            "heading": "Heading",
-            "text": "Your text",
+            "heading": "ARMOR",
+            "text": "ULTRA ODOLNÁ SKLA. NEJVYŠŠÍ ODOLNOST DÍKY VYSOKÉ TVRDOSTI I OHEBNOSTI",
             "hide_text_on_mobile": false,
             "button_label": "Button label",
             "price": "",
