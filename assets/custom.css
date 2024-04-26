@@ -28,7 +28,7 @@
   font-size: 121px;
   line-height: 0;
   position: absolute;
-  color: rgb(0, 160, 225);
+  color: rgb(var(--color-button));
 }
 
 .article-template__content.rte blockquote::before {
