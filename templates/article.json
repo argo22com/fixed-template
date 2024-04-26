@@ -60,7 +60,7 @@
         "debaec65-1a3d-439e-932f-35484926a006"
       ],
       "custom_css": [
-        ".article-template__content.rte > iframe {min-width: 100%; height: auto; aspect-ratio: 560 \/ 315;}"
+
       ],
       "settings": {
       }
