@@ -60,7 +60,8 @@
         "debaec65-1a3d-439e-932f-35484926a006"
       ],
       "custom_css": [
-        "@media screen and (min-width: 990px) {.article-template__hero-image {max-width: 112rem; margin-inline: auto;}}"
+        "@media screen and (min-width: 990px) {.article-template__hero-image {max-width: 112rem; margin-inline: auto; }}",
+        ".article-template__content.rte > iframe {min-width: 100%; height: auto; aspect-ratio: 560 \/ 315;}"
       ],
       "settings": {
       }
