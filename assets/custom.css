@@ -1,8 +1,13 @@
-.article-template__content.rte > iframe {
+.article-template__content.rte iframe {
   min-width: 100%;
   height: auto;
   aspect-ratio: 560 / 315;
 }
+
+.article-template__content.rte img {
+  width: 100%;
+}
+
 .article-template__content.rte blockquote {
   background: #f5f5f5;
   padding: 4.5rem;
