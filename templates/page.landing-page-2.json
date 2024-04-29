@@ -369,61 +369,13 @@
               "pouzdro-fixed-soft-slim-se-zaviranim-pu-kuze-velikost-3xl-cerne",
               "pouzdro-fixed-velvet-mix-barev"
             ],
-            "products_to_show": 4,
-            "columns_desktop": 4
-          }
-        },
-        "featured_collection_8xhTK4": {
-          "type": "featured_collection",
-          "settings": {
-            "title": "Featured collection",
-            "collection": "",
-            "products_to_show": 4,
-            "columns_desktop": 4,
-            "show_view_all": true,
-            "view_all_style": "solid"
-          }
-        },
-        "featured_collection_KgkhwF": {
-          "type": "featured_collection",
-          "settings": {
-            "title": "Featured collection",
-            "collection": "",
-            "products_to_show": 4,
-            "columns_desktop": 4,
-            "show_view_all": true,
-            "view_all_style": "solid"
-          }
-        },
-        "featured_products_QWycB8": {
-          "type": "featured_products",
-          "settings": {
-            "title": "Featured products",
-            "product_list": [
-
-            ],
-            "products_to_show": 4,
-            "columns_desktop": 4
-          }
-        },
-        "featured_products_X9Ugpn": {
-          "type": "featured_products",
-          "settings": {
-            "title": "Featured products",
-            "product_list": [
-
-            ],
-            "products_to_show": 4,
+            "products_to_show": 9,
             "columns_desktop": 4
           }
         }
       },
       "block_order": [
-        "featured_products_pAMU7k",
-        "featured_collection_8xhTK4",
-        "featured_collection_KgkhwF",
-        "featured_products_QWycB8",
-        "featured_products_X9Ugpn"
+        "featured_products_pAMU7k"
       ],
       "settings": {
         "title": "Featured products tabs",
