@@ -153,17 +153,26 @@
             "title_size": "h2"
           }
         },
-        "description_faWYFW": {
-          "type": "description",
+        "sale_box_TiDiBK": {
+          "type": "sale_box",
           "settings": {
-            "truncate_description": 170,
-            "read_more_button": "Číst dále"
+            "show_free_shipping_bar": true,
+            "enable_compare": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatches_style": "variant",
+            "size_chart_enable": true,
+            "size_chart_option": "size",
+            "size_chart_link_label": "Size chart",
+            "size_chart_page": "",
+            "quantity_selector_enable": true,
+            "show_dynamic_checkout": true
           }
         }
       },
       "block_order": [
         "title_DkN93H",
-        "description_faWYFW"
+        "sale_box_TiDiBK"
       ],
       "settings": {
         "product": "horizontalni-kozene-pouzdro-fixed-posh-se-zaviranim-velikost-5xl-cerne",
