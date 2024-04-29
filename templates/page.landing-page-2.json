@@ -149,8 +149,8 @@
         "title_DkN93H": {
           "type": "title",
           "settings": {
-            "show_vendor_link": true,
-            "title_size": "h2"
+            "show_vendor_link": false,
+            "title_size": "h3"
           }
         },
         "sale_box_TiDiBK": {
