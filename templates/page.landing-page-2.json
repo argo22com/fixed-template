@@ -81,7 +81,7 @@
           "settings": {
             "icon": "check",
             "custom_icon": "shopify:\/\/shop_images\/manufacturebox01.png",
-            "title": "Icon",
+            "title": "",
             "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
             "link": "",
             "open_link_in_new_tab": false
@@ -92,7 +92,7 @@
           "settings": {
             "icon": "check",
             "custom_icon": "shopify:\/\/shop_images\/top-grain-1.png",
-            "title": "Icon",
+            "title": "",
             "subheading": "Na výběru kůže záleží, proto máme jen tu nejlepší od italských dodavatelů.",
             "link": "",
             "open_link_in_new_tab": false
@@ -103,7 +103,7 @@
           "settings": {
             "icon": "check",
             "custom_icon": "shopify:\/\/shop_images\/natural-material.png",
-            "title": "Icon",
+            "title": "",
             "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
             "link": "",
             "open_link_in_new_tab": false
