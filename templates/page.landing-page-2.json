@@ -153,54 +153,17 @@
             "title_size": "h2"
           }
         },
-        "price_tTF8Dn": {
-          "type": "price",
-          "settings": {
-            "variant_price": false
-          }
-        },
-        "sale_box_JptV7G": {
-          "type": "sale_box",
-          "settings": {
-            "show_free_shipping_bar": true,
-            "enable_compare": true,
-            "picker_type": "button",
-            "enable_color_swatches": true,
-            "color_swatches_style": "variant",
-            "size_chart_enable": true,
-            "size_chart_option": "size",
-            "size_chart_link_label": "Size chart",
-            "size_chart_page": "",
-            "quantity_selector_enable": true,
-            "show_dynamic_checkout": true
-          }
-        },
-        "description_aPVNb7": {
+        "description_faWYFW": {
           "type": "description",
           "settings": {
-            "truncate_description": 0,
-            "read_more_button": "Read more"
-          }
-        },
-        "share_a4LHAz": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share",
-            "enable_floating_layout": false,
-            "share_on_facebook": true,
-            "share_on_twitter": true,
-            "share_on_pinterest": true,
-            "share_on_email": true,
-            "share_link": true
+            "truncate_description": 170,
+            "read_more_button": "Číst dále"
           }
         }
       },
       "block_order": [
         "title_DkN93H",
-        "price_tTF8Dn",
-        "sale_box_JptV7G",
-        "description_aPVNb7",
-        "share_a4LHAz"
+        "description_faWYFW"
       ],
       "settings": {
         "product": "horizontalni-kozene-pouzdro-fixed-posh-se-zaviranim-velikost-5xl-cerne",
@@ -211,7 +174,7 @@
         "view_details_button_text": "Prohlédnout",
         "color_scheme": "",
         "enable_sticky_info": true,
-        "default_image": "product_featured_image",
+        "default_image": "variant_image",
         "media_position": "left",
         "gallery_layout": "thumbnail_slider",
         "thumbnail_position": "left",
