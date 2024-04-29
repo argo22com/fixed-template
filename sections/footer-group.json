@@ -2,57 +2,6 @@
   "type": "footer",
   "name": "Footer Group",
   "sections": {
-    "048623a6-08ae-48a7-aab7-6b7a6888bec3": {
-      "type": "spacer",
-      "settings": {
-        "height": 40
-      }
-    },
-    "4e078c05-1639-42a5-afa3-cafcfb09f9ef": {
-      "type": "newsletter",
-      "blocks": {
-        "sections--18627971875117__4e078c05-1639-42a5-afa3-cafcfb09f9ef-16843368904683bb0d-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "ZŮSTAŇTE V OBRAZE",
-            "heading_size": "h1"
-          }
-        },
-        "sections--18627971875117__4e078c05-1639-42a5-afa3-cafcfb09f9ef-16843368904683bb0d-1": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce.<\/p>"
-          }
-        },
-        "sections--18627971875117__4e078c05-1639-42a5-afa3-cafcfb09f9ef-16843368904683bb0d-2": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "sections--18627971875117__4e078c05-1639-42a5-afa3-cafcfb09f9ef-16843368904683bb0d-0",
-        "sections--18627971875117__4e078c05-1639-42a5-afa3-cafcfb09f9ef-16843368904683bb0d-1",
-        "sections--18627971875117__4e078c05-1639-42a5-afa3-cafcfb09f9ef-16843368904683bb0d-2"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "background-2",
-        "enable_parallax_scrolling_effect": true,
-        "colors_text": "#ffffff",
-        "colors_input": "#64748b",
-        "overlay_color": "#1e40af",
-        "mobile_content_alignment": "left",
-        "padding_top": 60,
-        "padding_bottom": 76
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -115,8 +64,6 @@
     }
   },
   "order": [
-    "048623a6-08ae-48a7-aab7-6b7a6888bec3",
-    "4e078c05-1639-42a5-afa3-cafcfb09f9ef",
     "footer"
   ]
 }
