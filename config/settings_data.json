@@ -41,6 +41,9 @@
     "free_shipping_threshold": "2000",
     "free_shipping_unreached_message": "Nakup ještě za <strong>[remain]<\/strong> a získej  <strong>dopravu zdarma<\/strong>!",
     "free_shipping_reached_message": "Gratulujeme! Získáváš dopravu zdarma.",
+    "free_shipping_exclude_products": [
+      "pouzdro-fixed-velvet-mix-barev"
+    ],
     "back_to_top_button_enable": true,
     "recently_viewed_enable": true,
     "recently_viewed_image_ratio": "adapt",
