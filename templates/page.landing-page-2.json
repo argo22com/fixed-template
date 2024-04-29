@@ -207,7 +207,7 @@
         "section_width": "page-width",
         "use_background_input": true,
         "auto_scroll_up_mobile": false,
-        "hide_when_empty_content": true,
+        "hide_when_empty_content": false,
         "view_details_button_text": "Prohlédnout",
         "color_scheme": "",
         "enable_sticky_info": true,
