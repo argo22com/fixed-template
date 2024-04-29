@@ -143,6 +143,64 @@
         "padding_bottom": 36
       }
     },
+    "collection_list_eWDbNk": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_3EgVMz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_zw7aah": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_gRqpQz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_nka6Az": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_3EgVMz",
+        "featured_collection_zw7aah",
+        "featured_collection_gRqpQz",
+        "featured_collection_nka6Az"
+      ],
+      "settings": {
+        "title": "V jednoduchosti je krása",
+        "subtitle": "Zavírání na silné magnety  komplexní ochrana vašeho zařízení  s dlouholetou výdrží.",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_section_box_layout": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "show_view_all": false,
+        "collection_card_show_title": true,
+        "show_products_count": false,
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_product_yA4XrV": {
       "type": "featured-product",
       "blocks": {
@@ -1113,6 +1171,7 @@
     "main",
     "image_banner_aBk4NA",
     "text_icons_fictdW",
+    "collection_list_eWDbNk",
     "featured_product_yA4XrV",
     "featured_collection_8kwXFr",
     "image_with_text_MUzzfc",
