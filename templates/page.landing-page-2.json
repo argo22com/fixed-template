@@ -73,116 +73,72 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_nb4Q38": {
-      "type": "rich-text",
+    "text_icons_fictdW": {
+      "type": "text-icons",
       "blocks": {
-        "heading_EDk9Te": {
-          "type": "heading",
+        "text_icon_Cimifi": {
+          "type": "text-icon",
           "settings": {
-            "heading": "<h2><strong>Luxusní kožené pouzdro pro notebook i tablet<\/strong><\/h2>",
-            "heading_size": "h2"
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/manufacturebox01.png",
+            "title": "Icon",
+            "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_FKQJQ6": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/top-grain-1.png",
+            "title": "Icon",
+            "subheading": "Na výběru kůže záleží, proto máme jen tu nejlepší od italských dodavatelů.",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_rHAfmj": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/natural-material.png",
+            "title": "Icon",
+            "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
+            "link": "",
+            "open_link_in_new_tab": false
           }
         }
       },
       "block_order": [
-        "heading_EDk9Te"
+        "text_icon_Cimifi",
+        "text_icon_FKQJQ6",
+        "text_icon_rHAfmj"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "multicolumn_h6W9ED": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_MrNynF": {
-          "type": "column",
-          "settings": {
-            "icon": "book_open",
-            "title": "",
-            "text": "<p>Všechny produkty pocházejí z naší kožené dílny v Prostějově.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#166534",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#effdf4",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_rw8pBG": {
-          "type": "column",
-          "settings": {
-            "icon": "arrow_circle_up",
-            "title": "",
-            "text": "<p>Na výběru kůže záleží, proto máme jen tu nejlepší od italských dodavatelů.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#a06207",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_mK74JL": {
-          "type": "column",
-          "settings": {
-            "icon": "cake",
-            "title": "",
-            "text": "<p>Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#981c1b",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fef2f2",
-            "card_color_background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_MrNynF",
-        "column_rw8pBG",
-        "column_mK74JL"
-      ],
-      "settings": {
-        "title": "Promotion cards",
+        "title": "Luxusní kožené pouzdro pro notebook i tablet",
         "subtitle": "",
-        "heading_size": "h2",
-        "media_type": "icon",
-        "media_width_desktop": "100",
-        "image_ratio": "adapt",
+        "heading_size": "h1",
+        "icon_width_desktop": 30,
         "text_position": "bottom",
+        "enable_heading_in_box": false,
         "columns_desktop": 3,
         "columns_tablet": 3,
-        "desktop_gap": 30,
         "auto_fit": false,
-        "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": false,
-        "button_label": "Button label",
-        "button_link": "",
+        "column_alignment": "center",
+        "highlight_icon": false,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
+        "border_width": 1,
+        "border_opacity": 0,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "square",
+        "blur_background": false,
         "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
+        "icon_width_mobile": 30,
+        "border_spacing_mobile": 0,
         "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1156,8 +1112,7 @@
   "order": [
     "main",
     "image_banner_aBk4NA",
-    "rich_text_nb4Q38",
-    "multicolumn_h6W9ED",
+    "text_icons_fictdW",
     "featured_product_yA4XrV",
     "featured_collection_8kwXFr",
     "image_with_text_MUzzfc",
