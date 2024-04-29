@@ -19,7 +19,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "variant_price": false
+            "variant_price": true
           }
         },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
@@ -121,7 +121,7 @@
         "1638dd10-8e33-4e82-b01c-2eb71d6362ba": {
           "type": "description",
           "settings": {
-            "title": "Product description",
+            "title": "Popis produktu",
             "truncate_description": 0,
             "read_more_button": "Read more"
           }
@@ -129,7 +129,7 @@
         "8274ef04-23c0-4245-a55b-07501c2bd206": {
           "type": "page_content",
           "settings": {
-            "title": "Page content tab",
+            "title": "Parametry",
             "page": ""
           }
         },
@@ -139,12 +139,20 @@
             "title": "Page content tab",
             "page": ""
           }
+        },
+        "page_content_LqEiyQ": {
+          "type": "page_content",
+          "settings": {
+            "title": "Návod",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "1638dd10-8e33-4e82-b01c-2eb71d6362ba",
         "8274ef04-23c0-4245-a55b-07501c2bd206",
-        "cbb96b5f-f683-42e5-b865-6ac18e11645e"
+        "cbb96b5f-f683-42e5-b865-6ac18e11645e",
+        "page_content_LqEiyQ"
       ],
       "settings": {
         "grid_layout": "grid",
