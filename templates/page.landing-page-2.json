@@ -198,59 +198,83 @@
         "padding_bottom": 36
       }
     },
-    "collection_list_eWDbNk": {
-      "type": "collection-list",
+    "text_icons_J39XEV": {
+      "type": "text-icons",
       "blocks": {
-        "featured_collection_3EgVMz": {
-          "type": "featured_collection",
+        "text_icon_qapCnK": {
+          "type": "text-icon",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/Oxford1.jpg",
+            "title": "",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
           }
         },
-        "featured_collection_zw7aah": {
-          "type": "featured_collection",
+        "text_icon_zzxPQ6": {
+          "type": "text-icon",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/oxford4.jpg",
+            "title": "",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
           }
         },
-        "featured_collection_gRqpQz": {
-          "type": "featured_collection",
+        "text_icon_C3z8U6": {
+          "type": "text-icon",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/oxford3.jpg",
+            "title": "",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
           }
         },
-        "featured_collection_nka6Az": {
-          "type": "featured_collection",
+        "text_icon_Tz8WKd": {
+          "type": "text-icon",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/oxford4.jpg",
+            "title": "",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
           }
         }
       },
       "block_order": [
-        "featured_collection_3EgVMz",
-        "featured_collection_zw7aah",
-        "featured_collection_gRqpQz",
-        "featured_collection_nka6Az"
+        "text_icon_qapCnK",
+        "text_icon_zzxPQ6",
+        "text_icon_C3z8U6",
+        "text_icon_Tz8WKd"
       ],
       "settings": {
         "title": "V jednoduchosti je krása",
         "subtitle": "Zavírání na silné magnety  komplexní ochrana vašeho zařízení  s dlouholetou výdrží.",
         "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "full_width": false,
+        "icon_width_desktop": 50,
+        "text_position": "bottom",
+        "enable_heading_in_box": false,
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "auto_fit": false,
+        "column_alignment": "center",
+        "highlight_icon": false,
         "enable_section_box_layout": false,
-        "enable_desktop_slider": false,
         "color_scheme": "",
-        "show_view_all": false,
-        "collection_card_show_title": true,
-        "show_products_count": false,
-        "columns_tablet": "2",
+        "border_width": 1,
+        "border_opacity": 0,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "square",
+        "blur_background": false,
         "columns_mobile": "1",
+        "icon_width_mobile": 30,
+        "border_spacing_mobile": 0,
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
@@ -1144,7 +1168,7 @@
     "image_banner_aBk4NA",
     "text_icons_fictdW",
     "featured_product_yA4XrV",
-    "collection_list_eWDbNk",
+    "text_icons_J39XEV",
     "featured_collection_8kwXFr",
     "image_with_text_MUzzfc",
     "video_XhEQtC",
