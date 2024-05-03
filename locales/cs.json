@@ -575,5 +575,14 @@
       "send_on": "RRRR-MM-DD",
       "send_on_label": "Datum odeslání (volitelné)"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "sheet": {
+          "expand": "Rozšířit"
+        }
+      }
+    }
   }
 }
