@@ -56,3 +56,9 @@
   line-height: 0;
   color: #dc4405;
 }
+
+.rte ol li::marker {
+  font-family: Barlow, sans-serif;
+  font-weight: 600;
+  color: #dc4405;
+}
