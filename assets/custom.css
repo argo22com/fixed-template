@@ -63,7 +63,8 @@
   color: #dc4405;
 }
 
-.rte table {
+.rte table,
+.rte table:not([class]) {
   border-collapse: collapse;
   width: 100%;
 }
