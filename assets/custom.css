@@ -62,3 +62,36 @@
   font-weight: 600;
   color: #dc4405;
 }
+
+.rte table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.rte table tr td:first-child {
+    padding-left: 30px;
+}
+
+.rte table tr:first-child td {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    background: #00ade9;
+    color: #fff;
+}
+
+.rte table tr td {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    background: #fef6f3;
+    padding: 12px 15px;
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 1.2em;
+    border: none;
+}
+
+.rte table td,
+.rte table th {
+    border: 1px solid;
+    padding: .5em;
+}
