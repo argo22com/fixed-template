@@ -1,3 +1,11 @@
+.article-template__content.rte a {
+  transition: text-decoration-thickness .1s ease, color .1s ease;
+}
+
+.article-template__content.rte a:hover {
+  color: rgb(var(--color-highlight));
+}
+
 .article-template__content.rte iframe {
   min-width: 100%;
   height: auto;
