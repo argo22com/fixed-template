@@ -161,29 +161,29 @@
         "padding_bottom": 40
       }
     },
-    "9fea5ba7-31d4-4140-849f-3a727ceb4e8f": {
+    "8124c74c-24a1-4cc3-9369-91db0fab3a14": {
+      "type": "spacer",
+      "settings": {
+        "height": 40
+      }
+    },
+    "video_wYWGfk": {
       "type": "video",
       "settings": {
-        "title": "",
+        "title": "Video",
         "subtitle": "",
         "heading_size": "h1",
-        "video_url": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
-        "autoplay": true,
+        "autoplay": false,
         "enable_controls": false,
         "enable_video_looping": true,
         "full_width": false,
         "hide_when_empty_video": false,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "8124c74c-24a1-4cc3-9369-91db0fab3a14": {
-      "type": "spacer",
-      "settings": {
-        "height": 40
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "6099b098-2d24-4b53-9488-988cbaa630f3": {
@@ -262,6 +262,45 @@
         "table_color_scheme": "",
         "padding_top": 80,
         "padding_bottom": 80
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "title": "Doporučené produkty",
+        "subtitle": "",
+        "heading_size": "h2",
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 72,
+        "padding_bottom": 40
+      }
+    },
+    "42ea5b86-e5b3-44b9-8a28-410eec1590ed": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Naposledy zobrazené produkty",
+        "subtitle": "",
+        "heading_size": "h2",
+        "full_width": false,
+        "color_scheme": "background-2",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "96482c8e-18e4-432f-a2aa-323d63bd401b": {
@@ -434,11 +473,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#000",
+            "color_text": "#000000",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#000000",
             "color_background": "#fafafa"
           }
         },
@@ -464,11 +503,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         }
       },
@@ -508,57 +547,18 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "settings": {
-        "title": "Section heading",
-        "subtitle": "",
-        "heading_size": "h2",
-        "products_to_show": 10,
-        "columns_desktop": 4,
-        "full_width": false,
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "enable_compare": true,
-        "enable_quick_view": true,
-        "show_color_swatches": true,
-        "color_swatches_style": "custom",
-        "columns_tablet": "3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 72,
-        "padding_bottom": 40
-      }
-    },
-    "42ea5b86-e5b3-44b9-8a28-410eec1590ed": {
-      "type": "recently-viewed-products",
-      "settings": {
-        "title": "Naposledy zobrazené produkty",
-        "subtitle": "",
-        "heading_size": "h2",
-        "full_width": false,
-        "color_scheme": "background-2",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "main",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
-    "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "8124c74c-24a1-4cc3-9369-91db0fab3a14",
+    "video_wYWGfk",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
+    "product-recommendations",
+    "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
     "96482c8e-18e4-432f-a2aa-323d63bd401b",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
-    "168088586605a49d77",
-    "product-recommendations",
-    "42ea5b86-e5b3-44b9-8a28-410eec1590ed"
+    "168088586605a49d77"
   ]
 }
