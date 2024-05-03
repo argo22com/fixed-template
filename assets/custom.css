@@ -75,10 +75,12 @@
   padding-left: 30px;
 }
 
-.rte table tr th {
+.rte table tr th,
+.rte table:not([class]) tr th {
   font-weight: 600;
   background: #00ade9;
   color: #fff;
+  border: none;
 }
 
 .rte table tr td {
