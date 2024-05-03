@@ -50,3 +50,7 @@
   bottom: -22px;
   right: 58px;
 }
+
+.rte ul li::marker {
+  color: #dc4405;
+}
