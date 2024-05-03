@@ -84,7 +84,7 @@
 }
 
 .rte table tr td:nth-child(2n) {
-    background: #fdeee7;
+  background: #fdeee7;
 }
 
 .rte table tr:nth-child(2n) td:nth-child(2n) {
