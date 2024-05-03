@@ -37,7 +37,24 @@
       height: 0px;
       border: 0.1rem solid rgb(var(--color-foreground), 0.3);
     }
-  {%- endif -%}  
+  {%- endif -%}
+
+  {%- if section.settings.show_article_tags -%}
+    .article-tags__list {
+      justify-content: flex-start;
+    }
+    li.article-tags__item {
+      border-radius: 12px;
+      line-height: 25px;
+      color: rgb(var(--color-foreground);
+      font-size: 1.4rem;
+      padding: 0 12px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      background: rgb(var(--color-background));
+      display: inline-block;
+    }
+  {%- endif -%}
 
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
