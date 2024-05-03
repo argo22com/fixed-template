@@ -73,15 +73,12 @@
 }
 
 .rte table tr:first-child td {
-    font-family: "Barlow", sans-serif;
     font-weight: 600;
     background: #00ade9;
     color: #fff;
 }
 
 .rte table tr td {
-    font-family: "Barlow", sans-serif;
-    font-weight: 400;
     background: #fef6f3;
     padding: 12px 15px;
     color: #000;
