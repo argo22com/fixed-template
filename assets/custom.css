@@ -79,6 +79,15 @@
   color: #fff;
 }
 
+.rte table tr td {
+  background: #fef6f3;
+  padding: 12px 15px;
+  color: #000;
+  font-size: 1.6rem;
+  line-height: 1.2em;
+  border: none;
+}
+
 .rte table th td:nth-child(2n) {
   background: #0ca8de;
 }
@@ -89,15 +98,6 @@
 
 .rte table tr:nth-child(2n) td:nth-child(2n) {
   background: #fef6f3;
-}
-
-.rte table tr td {
-  background: #fef6f3;
-  padding: 12px 15px;
-  color: #000;
-  font-size: 1.6rem;
-  line-height: 1.2em;
-  border: none;
 }
 
 .rte table td,
