@@ -52,5 +52,7 @@
 }
 
 .rte ul li::marker {
+  font-size: 1.6em;
+  line-height: 0;
   color: #dc4405;
 }
