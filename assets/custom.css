@@ -65,6 +65,7 @@
 
 .rte table,
 .rte table:not([class]) {
+  border: none;
   border-collapse: collapse;
   width: 100%;
 }
