@@ -153,6 +153,13 @@
             "title": "Hodnocení",
             "custom_text": ""
           }
+        },
+        "page_content_g4T3PM": {
+          "type": "page_content",
+          "settings": {
+            "title": "Výběr správné velikosti pouzdra",
+            "page": "jak-si-vybrat-spravnou-velikost-uni-pouzdra"
+          }
         }
       },
       "block_order": [
@@ -160,7 +167,8 @@
         "8274ef04-23c0-4245-a55b-07501c2bd206",
         "cbb96b5f-f683-42e5-b865-6ac18e11645e",
         "page_content_LqEiyQ",
-        "custom_text_RxXKMH"
+        "custom_text_RxXKMH",
+        "page_content_g4T3PM"
       ],
       "settings": {
         "grid_layout": "grid",
