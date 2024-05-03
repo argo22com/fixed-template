@@ -83,6 +83,10 @@
   border: none;
 }
 
+.rte table tr:first-child th:nth-child(2n) {
+  background: #0ca8de;
+}
+
 .rte table tr td {
   background: #fef6f3;
   padding: 12px 15px;
