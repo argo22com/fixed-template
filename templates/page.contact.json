@@ -1,5 +1,37 @@
 {
   "sections": {
+    "form": {
+      "type": "contact-form",
+      "blocks": {
+        "c9e382bc-285f-41fc-a753-956539360c7f": {
+          "type": "address",
+          "settings": {
+            "name": "Servis a reklamace",
+            "phone": " + 420 724 161 817",
+            "direction": "",
+            "email": "reklamace@FIXED.zone"
+          }
+        },
+        "c17536c2-bac0-4885-834f-6f3efc3850fa": {
+          "type": "social_media_icons",
+          "settings": {
+            "title": "Sledujte nás"
+          }
+        }
+      },
+      "block_order": [
+        "c9e382bc-285f-41fc-a753-956539360c7f",
+        "c17536c2-bac0-4885-834f-6f3efc3850fa"
+      ],
+      "settings": {
+        "title": "Kontakt",
+        "subtitle": "Napište nám",
+        "heading_size": "h2",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f": {
       "type": "maps",
       "blocks": {
@@ -41,38 +73,6 @@
         "padding_bottom": 0
       }
     },
-    "form": {
-      "type": "contact-form",
-      "blocks": {
-        "c9e382bc-285f-41fc-a753-956539360c7f": {
-          "type": "address",
-          "settings": {
-            "name": "Servis a reklamace",
-            "phone": " + 420 724 161 817",
-            "direction": "",
-            "email": "reklamace@FIXED.zone"
-          }
-        },
-        "c17536c2-bac0-4885-834f-6f3efc3850fa": {
-          "type": "social_media_icons",
-          "settings": {
-            "title": "Sledujte nás"
-          }
-        }
-      },
-      "block_order": [
-        "c9e382bc-285f-41fc-a753-956539360c7f",
-        "c17536c2-bac0-4885-834f-6f3efc3850fa"
-      ],
-      "settings": {
-        "title": "Kontakt",
-        "subtitle": "Napište nám",
-        "heading_size": "h2",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "3e50a7fa-ef6f-4125-90d4-609ab7b2f2b5": {
       "type": "spacer",
       "settings": {
@@ -81,8 +81,8 @@
     }
   },
   "order": [
-    "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f",
     "form",
+    "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f",
     "3e50a7fa-ef6f-4125-90d4-609ab7b2f2b5"
   ]
 }
