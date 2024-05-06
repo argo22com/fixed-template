@@ -22,8 +22,8 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "title": "Centrála",
-        "heading_size": "h1",
+        "title": "Sídlo společnosti",
+        "heading_size": "h2",
         "description": "",
         "badge": "",
         "overlapping_content_layout": true,
@@ -62,40 +62,16 @@
             "email": "Email"
           }
         },
-        "d93a8f14-f408-4bf2-af1c-ad8dcc0c50c2": {
-          "type": "opening_hour",
-          "settings": {
-            "weekdays": "Weekdays",
-            "working_hour": "Working hour"
-          }
-        },
-        "01bcc434-a620-4dac-92ab-dc4fc0b1c843": {
-          "type": "opening_hour",
-          "settings": {
-            "weekdays": "Weekdays",
-            "working_hour": "Working hour"
-          }
-        },
-        "2eb8e845-4b25-4c5b-a594-c208438a031f": {
-          "type": "opening_hour",
-          "settings": {
-            "weekdays": "Weekdays",
-            "working_hour": "Working hour"
-          }
-        },
         "c17536c2-bac0-4885-834f-6f3efc3850fa": {
           "type": "social_media_icons",
           "settings": {
-            "title": "Follow us"
+            "title": "Sledujte nás"
           }
         }
       },
       "block_order": [
         "c9e382bc-285f-41fc-a753-956539360c7f",
         "975dab66-b3c6-4126-bed9-24122e80689a",
-        "d93a8f14-f408-4bf2-af1c-ad8dcc0c50c2",
-        "01bcc434-a620-4dac-92ab-dc4fc0b1c843",
-        "2eb8e845-4b25-4c5b-a594-c208438a031f",
         "c17536c2-bac0-4885-834f-6f3efc3850fa"
       ],
       "settings": {
