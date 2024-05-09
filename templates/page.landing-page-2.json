@@ -280,6 +280,68 @@
         "padding_bottom": 36
       }
     },
+    "collection_list_zf9QEz": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_mM96Df": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_image": "shopify:\/\/shop_images\/Oxford1.jpg",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_NHhcPp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_image": "shopify:\/\/shop_images\/oxford2.jpg",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_a7xEL7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_image": "shopify:\/\/shop_images\/oxford3.jpg",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_nkj73G": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_image": "shopify:\/\/shop_images\/oxford4.jpg",
+            "custom_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_mM96Df",
+        "featured_collection_NHhcPp",
+        "featured_collection_a7xEL7",
+        "featured_collection_nkj73G"
+      ],
+      "settings": {
+        "title": "Collections",
+        "subtitle": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_section_box_layout": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "show_view_all": false,
+        "collection_card_show_title": true,
+        "show_products_count": false,
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_MUzzfc": {
       "type": "image-with-text",
       "blocks": {
@@ -407,6 +469,7 @@
     "text_icons_fictdW",
     "featured_product_yA4XrV",
     "text_icons_J39XEV",
+    "collection_list_zf9QEz",
     "image_with_text_MUzzfc",
     "video_XhEQtC",
     "featured_products_tabs_34jJUP"
