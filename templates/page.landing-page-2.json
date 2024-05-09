@@ -368,6 +368,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/oxford_brown.jpg",
+        "second_image": "shopify:\/\/shop_images\/Oxford1.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -393,6 +394,67 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_jGnCP4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zMJxWR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_Qygne6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_iFbWg9": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zMJxWR",
+        "text_Qygne6",
+        "button_iFbWg9"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "video_XhEQtC": {
@@ -471,6 +533,7 @@
     "text_icons_J39XEV",
     "collection_list_zf9QEz",
     "image_with_text_MUzzfc",
+    "image_with_text_jGnCP4",
     "video_XhEQtC",
     "featured_products_tabs_34jJUP"
   ]
