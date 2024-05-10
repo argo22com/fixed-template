@@ -143,6 +143,86 @@
         "padding_bottom": 36
       }
     },
+    "collection_list_6fky8j": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_wxznfr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_image": "shopify:\/\/shop_images\/Blog_powerbanka_fixzenm-6-wh_005.jpg",
+            "custom_title": "Pouzdra na tablety"
+          }
+        },
+        "featured_collection_qQXpgU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_image": "shopify:\/\/shop_images\/img_556ccc70-c1d4-4c34-890b-1fd61ca4f554.jpg",
+            "custom_title": "Pouzdra na notebooky"
+          }
+        },
+        "featured_collection_TgHxw7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_image": "shopify:\/\/shop_images\/img_498b2873-3593-46b0-844b-b9d0a92aeff5.jpg",
+            "custom_title": "Pouzdra na telefony"
+          }
+        },
+        "featured_collection_7LEQf7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_image": "shopify:\/\/shop_images\/img_3a9c1569-f047-4ec7-b1ed-53b1884685d3.jpg",
+            "custom_title": "Peněženka s lokátorem"
+          }
+        },
+        "featured_collection_VKwVee": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kozene-test",
+            "custom_image": "shopify:\/\/shop_images\/img_c9efea29-eb98-469d-b010-cafb09f610f7.jpg",
+            "custom_title": "Peněženky pro AirTag"
+          }
+        },
+        "featured_collection_ygfUwq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kozene-test",
+            "custom_image": "shopify:\/\/shop_images\/img_1537f845-d4a9-483c-bc5b-740b5add7f91.jpg",
+            "custom_title": "Pasovky"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_wxznfr",
+        "featured_collection_qQXpgU",
+        "featured_collection_TgHxw7",
+        "featured_collection_7LEQf7",
+        "featured_collection_VKwVee",
+        "featured_collection_ygfUwq"
+      ],
+      "settings": {
+        "title": "Collections",
+        "subtitle": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "full_width": false,
+        "enable_section_box_layout": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "show_view_all": false,
+        "collection_card_show_title": true,
+        "show_products_count": false,
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_product_yA4XrV": {
       "type": "featured-product",
       "blocks": {
@@ -368,11 +448,10 @@
       "settings": {
         "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/oxford_brown.jpg",
-        "second_image": "shopify:\/\/shop_images\/Oxford1.jpg",
         "height": "small",
         "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "hide_when_empty_image": false,
@@ -394,6 +473,67 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_7YXALF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_emLHxp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_DdfWLg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_DzdtTT": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_emLHxp",
+        "text_DdfWLg",
+        "button_DzdtTT"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "video_XhEQtC": {
@@ -468,10 +608,12 @@
     "main",
     "image_banner_aBk4NA",
     "text_icons_fictdW",
+    "collection_list_6fky8j",
     "featured_product_yA4XrV",
     "text_icons_J39XEV",
     "collection_list_zf9QEz",
     "image_with_text_MUzzfc",
+    "image_with_text_7YXALF",
     "video_XhEQtC",
     "featured_products_tabs_34jJUP"
   ]
