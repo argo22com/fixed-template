@@ -152,10 +152,10 @@
             "link_label": "",
             "link": "",
             "button_style": "solid",
-            "card_color_text": "#166534",
+            "card_color_text": "#212c4d",
             "color_button_text": "#fff",
             "color_button": "#2563eb",
-            "card_color_background": "#effdf4",
+            "card_color_background": "#fff",
             "card_color_background_gradient": ""
           }
         },
@@ -186,7 +186,7 @@
         "subtitle": "",
         "heading_size": "h1",
         "media_type": "image",
-        "media_width_desktop": "100",
+        "media_width_desktop": "30",
         "image_ratio": "portrait",
         "text_position": "bottom",
         "columns_desktop": 2,
