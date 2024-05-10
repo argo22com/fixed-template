@@ -78,11 +78,73 @@
       "settings": {
         "height": 40
       }
+    },
+    "newsletter_BUjiNr": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_zQCKNF": {
+          "type": "heading",
+          "settings": {
+            "heading": "ZŮSTAŇTE V OBRAZE",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_y9NyUc": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce.<\/p>"
+          }
+        },
+        "email_form_Rh4dWj": {
+          "type": "email_form",
+          "settings": {
+          }
+        },
+        "social_icons_ABPQJe": {
+          "type": "social_icons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_zQCKNF",
+        "paragraph_y9NyUc",
+        "email_form_Rh4dWj",
+        "social_icons_ABPQJe"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#fff",
+        "colors_input": "#64748B",
+        "overlay_color": "#1E40AF",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_m79bJK": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "form",
     "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f",
-    "3e50a7fa-ef6f-4125-90d4-609ab7b2f2b5"
+    "3e50a7fa-ef6f-4125-90d4-609ab7b2f2b5",
+    "newsletter_BUjiNr",
+    "custom_liquid_m79bJK"
   ]
 }

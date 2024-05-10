@@ -359,65 +359,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "featured_products_tabs_34jJUP": {
-      "type": "featured-products-tabs",
-      "blocks": {
-        "featured_products_pAMU7k": {
-          "type": "featured_products",
-          "settings": {
-            "title": "novinky",
-            "product_list": [
-              "fixed-drzak-tab-s-nohou-xxl",
-              "horizontalni-kozene-pouzdro-fixed-posh-se-zaviranim-velikost-5xl-cerne",
-              "ochranne-tvrzene-sklo-fixed-pro-apple-iphone-5-5s-se-5c-cire",
-              "horizontalni-pouzdro-fixed-sarif-se-zaviranim-pu-kuze-velikost-5xl-cerne",
-              "pouzdro-fixed-sarif-se-zaviranim-pu-kuze-velikost-5xl-cerne",
-              "pouzdro-fixed-soft-slim-se-zaviranim-pu-kuze-velikost-3xl-cerne",
-              "pouzdro-fixed-velvet-mix-barev"
-            ],
-            "products_to_show": 9,
-            "columns_desktop": 4
-          }
-        },
-        "featured_collection_TUTH3P": {
-          "type": "featured_collection",
-          "settings": {
-            "title": "Best sellery",
-            "collection": "kozene-test",
-            "products_to_show": 4,
-            "columns_desktop": 4,
-            "show_view_all": true,
-            "view_all_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "featured_products_pAMU7k",
-        "featured_collection_TUTH3P"
-      ],
-      "settings": {
-        "title": "Další kožené produkty",
-        "subtitle": "",
-        "heading_size": "h1",
-        "full_width": false,
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "enable_compare": true,
-        "enable_quick_view": true,
-        "show_color_swatches": true,
-        "color_swatches_style": "custom",
-        "columns_tablet": "3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -427,7 +368,6 @@
     "text_icons_J39XEV",
     "collection_list_zf9QEz",
     "image_with_text_MUzzfc",
-    "video_XhEQtC",
-    "featured_products_tabs_34jJUP"
+    "video_XhEQtC"
   ]
 }
