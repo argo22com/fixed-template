@@ -65,61 +65,27 @@
     "multicolumn_pB9F8d": {
       "type": "multicolumn",
       "blocks": {
-        "column_aVx7f7": {
+        "column_M8x8nb": {
           "type": "column",
           "repeater": "{{ metaobject.image_with_text_list.value }}",
           "settings": {
             "image": "{{ block.repeater.hero_image.value }}",
             "icon": "check",
-            "title": "{{ block.repeater.hero_subtitle.value }}",
-            "text": "<p>{{ block.repeater.hero_title.value }}<\/p>",
+            "title": "{{ block.repeater.hero_title.value }}",
+            "text": "<p>{{ block.repeater.hero_subtitle.value }}<\/p>",
             "link_label": "",
             "link": "{{ block.repeater.link.value }}",
             "button_style": "solid",
-            "card_color_text": "#166534",
+            "card_color_text": "#121212",
             "color_button_text": "#fff",
             "color_button": "#2563eb",
-            "card_color_background": "#effdf4",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_WXGbNJ": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#a06207",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_kMGYtR": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#981c1b",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fef2f2",
+            "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
           }
         }
       },
       "block_order": [
-        "column_aVx7f7",
-        "column_WXGbNJ",
-        "column_kMGYtR"
+        "column_M8x8nb"
       ],
       "settings": {
         "title": "Promotion cards",
