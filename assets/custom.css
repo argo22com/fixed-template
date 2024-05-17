@@ -55,9 +55,6 @@
   color: rgb(var(--color-button-text));
   background-color: rgb(var(--color-button));
   padding: 1.25em 2.375em;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
 }
 
 .rte ul li::marker {
