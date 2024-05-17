@@ -82,10 +82,27 @@
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
           }
+        },
+        "column_ed8eCa": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "{{ metaobject.image_with_text_list | metafield_text: field: 'hero_title' }}",
+            "text": "{{ metaobject.image_with_text_list | metafield_tag: field: 'hero_subtitle' }}",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
         }
       },
       "block_order": [
-        "column_M8x8nb"
+        "column_M8x8nb",
+        "column_ed8eCa"
       ],
       "settings": {
         "title": "Promotion cards",
