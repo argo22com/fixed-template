@@ -62,83 +62,69 @@
         "overlay_color": "#1e40af"
       }
     },
-    "multicolumn_pB9F8d": {
-      "type": "multicolumn",
+    "slideshow_anJP6B": {
+      "type": "slideshow",
       "blocks": {
-        "column_M8x8nb": {
-          "type": "column",
+        "slide_7wBTtM": {
+          "type": "slide",
           "repeater": "{{ metaobject.image_with_text_list.value }}",
           "settings": {
             "image": "{{ block.repeater.hero_image.value }}",
-            "icon": "check",
-            "title": "{{ block.repeater.hero_title.value }}",
-            "text": "<p>{{ block.repeater.hero_subtitle.value }}<\/p>",
-            "link_label": "",
+            "badge_label": "",
+            "heading": "{{ block.repeater.hero_title.value }}",
+            "text": "{{ block.repeater.hero_subtitle.value }}",
+            "hide_text_on_mobile": false,
+            "button_label": "Button label",
+            "price": "1300",
             "link": "{{ block.repeater.link.value }}",
-            "button_style": "solid",
-            "card_color_text": "#121212",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#f8fafc",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_ed8eCa": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "{{ metaobject.image_with_text_list | metafield_text: field: 'hero_title' }}",
-            "text": "{{ metaobject.image_with_text_list | metafield_tag: field: 'hero_subtitle' }}",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#121212",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#f8fafc",
-            "card_color_background_gradient": ""
+            "button_style": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#000",
+            "gradient_heading_desktop": "",
+            "colors_background": "#fff",
+            "colors_badge_foreground": "#fff",
+            "colors_badge_background": "#F87171",
+            "colors_button_text": "#fff",
+            "colors_button": "#000",
+            "colors_text_mobile": "#000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#fff",
+            "colors_badge_foreground_mobile": "#fff",
+            "colors_badge_background_mobile": "#F87171",
+            "colors_button_text_mobile": "#fff",
+            "colors_button_mobile": "#000"
           }
         }
       },
       "block_order": [
-        "column_M8x8nb",
-        "column_ed8eCa"
+        "slide_7wBTtM"
       ],
       "settings": {
-        "title": "Promotion cards",
-        "subtitle": "",
-        "heading_size": "h1",
-        "media_type": "image",
-        "media_width_desktop": "100",
-        "image_ratio": "adapt",
-        "text_position": "bottom",
-        "columns_desktop": 3,
-        "columns_tablet": 3,
-        "desktop_gap": 30,
-        "auto_fit": false,
-        "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
-        "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
-        "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slide_height_mobile": "adapt_image_mobile",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_pagination_desktop": true,
+        "enable_navigation_desktop": true,
+        "preload": false,
+        "show_text_below": true,
+        "enable_pagination_mobile": true,
+        "enable_navigation_mobile": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "image_with_text_Lm6gQg",
-    "multicolumn_pB9F8d"
+    "slideshow_anJP6B"
   ]
 }
