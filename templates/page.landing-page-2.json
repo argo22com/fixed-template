@@ -503,6 +503,68 @@
         "overlay_color": "#1e40af"
       }
     },
+    "image_with_text_t6gYAg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JyC6aT": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ page.metafields.custom.dynmic_content.value.image_with_text_title_2.value }}",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_XpH7fj": {
+          "type": "text",
+          "settings": {
+            "text": "{{ page.metafields.custom.dynmic_content.value.image_with_text_description_2 | metafield_tag }}",
+            "text_style": "body"
+          }
+        },
+        "button_4izWyt": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JyC6aT",
+        "text_XpH7fj",
+        "button_4izWyt"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "{{ page.metafields.custom.dynmic_content.value.image_with_text_picture_2.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
     "video_XhEQtC": {
       "type": "video",
       "settings": {
@@ -532,6 +594,7 @@
     "text_icons_J39XEV",
     "collection_list_zf9QEz",
     "image_with_text_MUzzfc",
+    "image_with_text_t6gYAg",
     "video_XhEQtC"
   ]
 }
