@@ -326,7 +326,7 @@
           "type": "button",
           "settings": {
             "button_label": "OBJEVIT VŠECHNY MODELY",
-            "button_link": "{{ page.metafields.custom.dynmic_content.value.rich_text_link.value }}",
+            "button_link": "",
             "button_style_1": "primary",
             "button_label_2": "",
             "button_link_2": "",
@@ -355,7 +355,7 @@
         "heading_JW7Xxj": {
           "type": "heading",
           "settings": {
-            "heading": "{{ page.metafields.custom.dynmic_content.value.image_with_text_title_1.value }}",
+            "heading": "Kůže zraje",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -363,7 +363,7 @@
         "text_LgN74N": {
           "type": "text",
           "settings": {
-            "text": "{{ page.metafields.custom.dynmic_content.value.description | metafield_tag }}",
+            "text": "<ul><li>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.<\/li><li>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.<\/li><li>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -383,10 +383,10 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "{{ page.metafields.custom.dynmic_content.value.image_with_text_picture_1.value }}",
+        "image": "shopify:\/\/shop_images\/oxford_brown.jpg",
         "height": "small",
-        "desktop_image_width": "small",
-        "layout": "text_first",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -417,7 +417,7 @@
         "heading_JyC6aT": {
           "type": "heading",
           "settings": {
-            "heading": "{{ page.metafields.custom.dynmic_content.value.image_with_text_title_2.value }}",
+            "heading": "Péče o kůži",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -425,7 +425,7 @@
         "text_XpH7fj": {
           "type": "text",
           "settings": {
-            "text": "{{ page.metafields.custom.dynmic_content.value.image_with_text_description_2 | metafield_tag }}",
+            "text": "<ul><li>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu<\/li><li>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci<\/li><li>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.<\/li><li>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -445,62 +445,9 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "{{ page.metafields.custom.dynmic_content.value.image_with_text_picture_2.value }}",
+        "image": "shopify:\/\/shop_images\/pece_o_kuzi_videocover.jpg",
         "height": "small",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#000000",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
-      }
-    },
-    "image_with_text_j8Qig9": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_dDT4qW": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ page.metafields.custom.dynmic_content.value.image_with_text_title_3.value }}",
-            "heading_size": "h1",
-            "enable_bold_heading": true
-          }
-        },
-        "text_KmgUnq": {
-          "type": "text",
-          "settings": {
-            "text": "{{ page.metafields.custom.dynmic_content.value.image_with_text_description_3 | metafield_tag }}",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_dDT4qW",
-        "text_KmgUnq"
-      ],
-      "settings": {
-        "grid_layout": "stretched_grid",
-        "image": "{{ page.metafields.custom.dynmic_content.value.image_with_text_picture_3.value }}",
-        "height": "small",
-        "desktop_image_width": "small",
+        "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -526,78 +473,6 @@
         "overlay_color": "#1e40af"
       }
     },
-    "multicolumn_dATNWi": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_639AQA": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#166534",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#effdf4",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_YGyC9A": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#a06207",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
-            "card_color_background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_639AQA",
-        "column_YGyC9A"
-      ],
-      "settings": {
-        "title": "Promotion cards",
-        "subtitle": "",
-        "heading_size": "h1",
-        "media_type": "image",
-        "media_width_desktop": "100",
-        "image_ratio": "adapt",
-        "text_position": "bottom",
-        "columns_desktop": 2,
-        "columns_tablet": 3,
-        "desktop_gap": 30,
-        "auto_fit": false,
-        "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
-        "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
-        "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "video_XhEQtC": {
       "type": "video",
       "settings": {
@@ -617,6 +492,47 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "featured_products_tabs_KxNGVc": {
+      "type": "featured-products-tabs",
+      "blocks": {
+        "featured_collection_r8tcyd": {
+          "type": "featured_collection",
+          "settings": {
+            "title": "",
+            "collection": "",
+            "products_to_show": 6,
+            "columns_desktop": 3,
+            "show_view_all": true,
+            "view_all_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_r8tcyd"
+      ],
+      "settings": {
+        "title": "Další kožené produkty",
+        "subtitle": "",
+        "heading_size": "h1",
+        "full_width": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -629,8 +545,7 @@
     "rich_text_WGRr4t",
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
-    "image_with_text_j8Qig9",
-    "multicolumn_dATNWi",
-    "video_XhEQtC"
+    "video_XhEQtC",
+    "featured_products_tabs_KxNGVc"
   ]
 }
