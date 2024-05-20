@@ -80,7 +80,7 @@
         "heading_e8gCVG": {
           "type": "heading",
           "settings": {
-            "heading": "{{ metaobject.hero_title.value }}",
+            "heading": "",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -88,7 +88,7 @@
         "text_LxBYte": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ metaobject.hero_subtitle.value }}<\/p>",
+            "text": "",
             "text_style": "subtitle"
           }
         },
@@ -108,7 +108,6 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "{{ metaobject.hero_banner.value }}",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
