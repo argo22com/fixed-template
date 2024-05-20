@@ -177,12 +177,45 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_pEzQib": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cTz4QP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>Reklamace a vrácení zboží<\/strong><\/h3>",
+            "heading_size": "h2"
+          }
+        },
+        "text_HTrB6U": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Postup pro vrácení zboží a reklamace.<\/strong><\/p><p><em>Některé reklamace je možné posoudit a vyřešit vzdáleně na základě popisu, fotografie, či videa. Prosíme, než nám reklamac, nebo vratku odešlete, kontaktujte nás skrze online chat v pravém dolním rohu. Posoudíme Váš požadavek nejprve vzdáleně a navrhneme Vám vhodné řešení.<\/em><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cTz4QP",
+        "text_HTrB6U"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "image_banner_aBk4NA",
     "rich_text_WGRr4t",
-    "collapsible_content_6mYWW4"
+    "collapsible_content_6mYWW4",
+    "rich_text_pEzQib"
   ]
 }
