@@ -243,6 +243,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
+            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_1.value }}",
             "title": "",
             "subheading": "",
             "link": "",
@@ -253,6 +254,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
+            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_2.value }}",
             "title": "",
             "subheading": "",
             "link": "",
@@ -263,6 +265,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
+            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_3.value }}",
             "title": "",
             "subheading": "",
             "link": "",
@@ -276,7 +279,7 @@
         "text_icon_rHAfmj"
       ],
       "settings": {
-        "title": "",
+        "title": "{{ page.metafields.custom.dynmic_content.value.icon_heading.value }}",
         "subtitle": "",
         "heading_size": "h2",
         "icon_width_desktop": 50,
