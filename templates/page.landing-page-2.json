@@ -11,13 +11,107 @@
         "padding_bottom": 40
       }
     },
+    "slideshow_rEQqc9": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_jYW3dY": {
+          "type": "slide",
+          "settings": {
+            "image": "{{ page.metafields.custom.dynmic_content.value.hero_banner.value }}",
+            "badge_label": "Badge label",
+            "heading": "{{ page.metafields.custom.dynmic_content.value.hero_title.value }}",
+            "text": "{{ page.metafields.custom.dynmic_content.value.hero_subtitle.value }}",
+            "hide_text_on_mobile": false,
+            "button_label": "Button label",
+            "price": "1300",
+            "link": "",
+            "button_style": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#fff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#fff",
+            "colors_badge_foreground": "#fff",
+            "colors_badge_background": "#F87171",
+            "colors_button_text": "#fff",
+            "colors_button": "#000",
+            "colors_text_mobile": "#000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#fff",
+            "colors_badge_foreground_mobile": "#fff",
+            "colors_badge_background_mobile": "#F87171",
+            "colors_button_text_mobile": "#fff",
+            "colors_button_mobile": "#000"
+          }
+        },
+        "slide_86Keci": {
+          "type": "slide",
+          "settings": {
+            "badge_label": "Badge label",
+            "heading": "Image slide",
+            "text": "Tell your brand's story through images",
+            "hide_text_on_mobile": false,
+            "button_label": "Button label",
+            "price": "1300",
+            "link": "",
+            "button_style": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#000",
+            "gradient_heading_desktop": "",
+            "colors_background": "#fff",
+            "colors_badge_foreground": "#fff",
+            "colors_badge_background": "#F87171",
+            "colors_button_text": "#fff",
+            "colors_button": "#000",
+            "colors_text_mobile": "#000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#fff",
+            "colors_badge_foreground_mobile": "#fff",
+            "colors_badge_background_mobile": "#F87171",
+            "colors_button_text_mobile": "#fff",
+            "colors_button_mobile": "#000"
+          }
+        }
+      },
+      "block_order": [
+        "slide_jYW3dY",
+        "slide_86Keci"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slide_height_mobile": "adapt_image_mobile",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_pagination_desktop": true,
+        "enable_navigation_desktop": true,
+        "preload": false,
+        "show_text_below": true,
+        "enable_pagination_mobile": true,
+        "enable_navigation_mobile": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "image_banner_aBk4NA": {
       "type": "image-banner",
       "blocks": {
         "heading_ewtxqN": {
           "type": "heading",
           "settings": {
-            "heading": "{{ page.title }}",
+            "heading": "",
             "size": "h0"
           }
         },
@@ -35,11 +129,10 @@
       ],
       "settings": {
         "layout": "grid",
-        "image": "{{ page.metafields.custom.dynmic_content.value.hero_banner.value }}",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
         "keep_ltr": false,
         "hide_when_empty_image": false,
@@ -363,6 +456,7 @@
   },
   "order": [
     "main",
+    "slideshow_rEQqc9",
     "image_banner_aBk4NA",
     "text_icons_fictdW",
     "text_icons_J39XEV",
