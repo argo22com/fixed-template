@@ -605,18 +605,18 @@
     "video_XhEQtC": {
       "type": "video",
       "settings": {
-        "title": "",
-        "subtitle": "Podívejte se na příběh vzniku koženého produktu od začátku do konce.",
+        "title": "Podívejte se na příběh vzniku koženého produktu od začátku do konce.",
+        "subtitle": "",
         "heading_size": "h2",
         "cover_image": "shopify:\/\/shop_images\/rucni_vyroba_video_cover.jpg",
         "video_url": "https:\/\/www.youtube.com\/watch?v=EtSwUKtAff4",
         "description": "FIXED ruční výroba v Prostějově",
         "autoplay": false,
         "enable_controls": false,
-        "enable_video_looping": true,
+        "enable_video_looping": false,
         "full_width": false,
         "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
+        "enable_section_box_layout": true,
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
