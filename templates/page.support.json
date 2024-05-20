@@ -209,6 +209,16 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "page_trCqk7": {
+      "type": "page",
+      "settings": {
+        "page": "reklamace",
+        "heading_size": "h2",
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -216,6 +226,7 @@
     "image_banner_aBk4NA",
     "rich_text_WGRr4t",
     "collapsible_content_6mYWW4",
-    "rich_text_pEzQib"
+    "rich_text_pEzQib",
+    "page_trCqk7"
   ]
 }
