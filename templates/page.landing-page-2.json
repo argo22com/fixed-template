@@ -81,7 +81,7 @@
           "settings": {
             "icon": "none",
             "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_1.value }}",
-            "title": "",
+            "title": "{{ page.metafields.custom.dynmic_content.value.icon_heading_1.value }}",
             "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_1.value }}",
             "link": "",
             "open_link_in_new_tab": false
