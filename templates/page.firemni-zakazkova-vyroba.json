@@ -11,133 +11,76 @@
         "padding_bottom": 40
       }
     },
-    "slideshow_8r6nPV": {
-      "type": "slideshow",
+    "image_banner_Q7m3KH": {
+      "type": "image-banner",
       "blocks": {
-        "slide_68Kgzz": {
-          "type": "slide",
+        "heading_Jex9x4": {
+          "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/profit_banner-desktop.jpg",
-            "badge_label": "",
-            "heading": "KOŽENÉ POUZDRO  PROFIT",
-            "text": "PRAVÁ ITALSKÁ KŮŽE A DOŽIVOTNÍ ZÁRUKA",
-            "hide_text_on_mobile": false,
-            "button_label": "",
-            "price": "",
-            "link": "",
-            "button_style": "primary",
-            "box_align": "middle-left",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
-            "colors_text": "#ffffff",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#f87171",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
-            "colors_text_mobile": "#ffffff",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
+            "heading": "Firemní zakázková výroba",
+            "size": "h1"
           }
         },
-        "slide_DJbWYU": {
-          "type": "slide",
+        "text_KMparF": {
+          "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/OXFORD.jpg",
-            "badge_label": "",
-            "heading": "KOŽENÉ POUZDRO OXFORD",
-            "text": "360° OCHRANA PRO NOTEBOOKY A TABLETY",
-            "hide_text_on_mobile": false,
-            "button_label": "Button label",
-            "price": "",
-            "link": "",
-            "button_style": "primary",
-            "box_align": "middle-left",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
-            "colors_text": "#ffffff",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#f87171",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
-            "colors_text_mobile": "#ffffff",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
+            "text": "Zanechte trvalý dojem u svých obchodních partnerů, klientů a zaměstnanců. Personalizované luxusní kožené doplňky z pravé italské kůže, které přišly na svět v naší dílně v Prostějově, vyrábíme přesně dle vaší představy a požadavků.",
+            "text_style": "body"
           }
         },
-        "slide_d3AYiw": {
-          "type": "slide",
+        "buttons_jfLw8a": {
+          "type": "buttons",
           "settings": {
-            "image": "shopify:\/\/shop_images\/kuze_banner-desktop.jpg",
-            "badge_label": "",
-            "heading": "RUČNÍ VÝROBA",
-            "text": "KOŽENÉ DOPLŇKY PRO VAŠE CHYTRÁ ZAŘÍZENÍ",
-            "hide_text_on_mobile": false,
-            "button_label": "",
-            "price": "",
-            "link": "",
-            "button_style": "primary",
-            "box_align": "middle-left",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
-            "colors_text": "#ffffff",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#f87171",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
-            "colors_text_mobile": "#ffffff",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
+            "button_label_1": "ZJISTIT VÍCE",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_label_2": "KONTAKT",
+            "button_link_2": "",
+            "button_style_2": "primary"
           }
         }
       },
       "block_order": [
-        "slide_68Kgzz",
-        "slide_DJbWYU",
-        "slide_d3AYiw"
+        "heading_Jex9x4",
+        "text_KMparF",
+        "buttons_jfLw8a"
       ],
       "settings": {
-        "layout": "stretched_grid",
-        "slide_height": "medium",
-        "slide_height_mobile": "adapt_image_mobile",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_pagination_desktop": true,
-        "enable_navigation_desktop": true,
+        "layout": "grid",
+        "image": "shopify:\/\/shop_images\/firemninakupy.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
         "preload": false,
-        "show_text_below": true,
-        "enable_pagination_mobile": true,
-        "enable_navigation_mobile": true,
-        "accessibility_info": "Slideshow about our brand",
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -148,14 +91,14 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>LUXUSNÍ KOŽENÉ PŘÍSLUŠENSTVÍ PRO VAŠE ZAŘÍZENÍ<\/h3>",
+            "heading": "<h2>Výroba kožených produktů na míru Vašim potřebám již od 50 kusů<\/h2>",
             "heading_size": "h2"
           }
         },
         "text_PTb6yL": {
           "type": "text",
           "settings": {
-            "text": "<p>Na každém koženém doplňku si dáváme záležet, jenom tak můžeme dosáhnout té nejvyšší kvality. Od návrhu designu, přípravy kůže, střihu, pečlivé výroby až po důkladnou kontrolu. Tak vzniká dokonalý výrobek s vůní pravé kůže.<\/p>"
+            "text": "<p>Kožené produkty FIXED vyrábíme v dílně v Prostějově od jejího zakoupení v roce 2014 a každý z výrobků si našel svého spokojeného zákazníka. Díky kvalitním materiálům, ruční výrobě a pečlivé kontrole jsou naše Prostějovské produkty ten pravý luxus pro Váš mobilní telefon, tablet, notebook a další důležité věci.<\/p>"
           }
         }
       },
@@ -171,7 +114,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 80
       }
     },
     "text_icons_fictdW": {
@@ -181,9 +124,8 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/warranty_1.png",
-            "title": "",
-            "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
+            "title": "Prémiové materiály a kvalita",
+            "subheading": "Pro naše pouzdra, peněženky a další produkty jsme vybrali tu nejkvalitnější italskou kůži Torcello od prověřených dodavatelů. Díky vlastnostem pravé kůže pouzdro nestárne, ale zraje. Časem získává jedinečnou patinu a z každého kousku se stává originální a unikátní doplněk pro Vás či Vaše obchodní partnery.",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -192,9 +134,8 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/natural-material.png",
-            "title": "",
-            "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
+            "title": "Personalizace",
+            "subheading": "Každý náš prémiový výrobek je možné upravit dle vašich potřeb již od 50 kusů. Pomocí gravírování či ražení přidáme na produkty loga, citaci, či jednoduché obrázky.",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -203,9 +144,8 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/top-grain-1.png",
-            "title": "",
-            "subheading": "Na výběru kůže záleží, proto máme jen to nejlepší od italských dodavatelů.",
+            "title": "Jak na to",
+            "subheading": "Stačí nás kontaktovat pomocí formjuláře níže. Budete kontaktování naším obchodním zástupcem, který Vám poradí s výběrem a mírou personalizace",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -625,7 +565,7 @@
   },
   "order": [
     "main",
-    "slideshow_8r6nPV",
+    "image_banner_Q7m3KH",
     "rich_text_GnRiqE",
     "text_icons_fictdW",
     "rich_text_WGRr4t",
