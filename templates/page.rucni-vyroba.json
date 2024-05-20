@@ -142,6 +142,38 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_GnRiqE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UWbDfX": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3>LUXUSNÍ KOŽENÉ PŘÍSLUŠENSTVÍ PRO VAŠE ZAŘÍZENÍ<\/h3>",
+            "heading_size": "h2"
+          }
+        },
+        "text_PTb6yL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Na každém koženém doplňku si dáváme záležet, jenom tak můžeme dosáhnout té nejvyšší kvality. Od návrhu designu, přípravy kůže, střihu, pečlivé výroby až po důkladnou kontrolu. Tak vzniká dokonalý výrobek s vůní pravé kůže.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UWbDfX",
+        "text_PTb6yL"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "text_icons_fictdW": {
       "type": "text-icons",
       "blocks": {
@@ -149,9 +181,9 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_1.value }}",
+            "custom_icon": "shopify:\/\/shop_images\/warranty_1.png",
             "title": "",
-            "subheading": "",
+            "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -160,9 +192,9 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_2.value }}",
+            "custom_icon": "shopify:\/\/shop_images\/natural-material.png",
             "title": "",
-            "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_2.value }}",
+            "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -185,7 +217,7 @@
         "text_icon_rHAfmj"
       ],
       "settings": {
-        "title": "{{ page.metafields.custom.dynmic_content.value.icon_heading.value }}",
+        "title": "",
         "subtitle": "",
         "heading_size": "h2",
         "icon_width_desktop": 50,
@@ -735,6 +767,7 @@
   "order": [
     "main",
     "slideshow_8r6nPV",
+    "rich_text_GnRiqE",
     "text_icons_fictdW",
     "text_icons_J39XEV",
     "image_with_text_zKVCnf",
