@@ -17,12 +17,11 @@
         "slide_jYW3dY": {
           "type": "slide",
           "settings": {
-            "image": "{{ page.metafields.custom.dynmic_content.value.hero_banner.value }}",
-            "badge_label": "Badge label",
-            "heading": "{{ page.metafields.custom.dynmic_content.value.hero_title.value }}",
-            "text": "{{ page.metafields.custom.dynmic_content.value.hero_subtitle.value }}",
+            "badge_label": "",
+            "heading": "",
+            "text": "",
             "hide_text_on_mobile": false,
-            "button_label": "Button label",
+            "button_label": "",
             "price": "1300",
             "link": "",
             "button_style": "primary",
@@ -82,11 +81,81 @@
             "colors_button_text_mobile": "#fff",
             "colors_button_mobile": "#000"
           }
+        },
+        "slide_GHFFgF": {
+          "type": "slide",
+          "settings": {
+            "badge_label": "Badge label",
+            "heading": "Image slide",
+            "text": "Tell your brand's story through images",
+            "hide_text_on_mobile": false,
+            "button_label": "Button label",
+            "price": "1300",
+            "link": "",
+            "button_style": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#000",
+            "gradient_heading_desktop": "",
+            "colors_background": "#fff",
+            "colors_badge_foreground": "#fff",
+            "colors_badge_background": "#F87171",
+            "colors_button_text": "#fff",
+            "colors_button": "#000",
+            "colors_text_mobile": "#000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#fff",
+            "colors_badge_foreground_mobile": "#fff",
+            "colors_badge_background_mobile": "#F87171",
+            "colors_button_text_mobile": "#fff",
+            "colors_button_mobile": "#000"
+          }
+        },
+        "slide_Lrji97": {
+          "type": "slide",
+          "settings": {
+            "badge_label": "Badge label",
+            "heading": "Image slide",
+            "text": "Tell your brand's story through images",
+            "hide_text_on_mobile": false,
+            "button_label": "Button label",
+            "price": "1300",
+            "link": "",
+            "button_style": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#000",
+            "gradient_heading_desktop": "",
+            "colors_background": "#fff",
+            "colors_badge_foreground": "#fff",
+            "colors_badge_background": "#F87171",
+            "colors_button_text": "#fff",
+            "colors_button": "#000",
+            "colors_text_mobile": "#000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#fff",
+            "colors_badge_foreground_mobile": "#fff",
+            "colors_badge_background_mobile": "#F87171",
+            "colors_button_text_mobile": "#fff",
+            "colors_button_mobile": "#000"
+          }
         }
       },
       "block_order": [
         "slide_jYW3dY",
-        "slide_86Keci"
+        "slide_86Keci",
+        "slide_GHFFgF",
+        "slide_Lrji97"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -111,7 +180,7 @@
         "heading_ewtxqN": {
           "type": "heading",
           "settings": {
-            "heading": "",
+            "heading": "{{ page.metafields.custom.dynmic_content.value.hero_title.value }}",
             "size": "h0"
           }
         },
@@ -129,6 +198,7 @@
       ],
       "settings": {
         "layout": "grid",
+        "image": "{{ page.metafields.custom.dynmic_content.value.hero_banner.value }}",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
