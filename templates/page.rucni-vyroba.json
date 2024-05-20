@@ -171,7 +171,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
     "text_icons_fictdW": {
@@ -203,9 +203,9 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_3.value }}",
+            "custom_icon": "shopify:\/\/shop_images\/top-grain-1.png",
             "title": "",
-            "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_3.value }}",
+            "subheading": "Na výběru kůže záleží, proto máme jen to nejlepší od italských dodavatelů.",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -240,90 +240,52 @@
         "icon_width_mobile": 30,
         "border_spacing_mobile": 0,
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
-    "text_icons_J39XEV": {
-      "type": "text-icons",
+    "rich_text_RkHXd6": {
+      "type": "rich-text",
       "blocks": {
-        "text_icon_qapCnK": {
-          "type": "text-icon",
+        "heading_f744PT": {
+          "type": "heading",
           "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/Oxford1.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "h1"
           }
         },
-        "text_icon_zzxPQ6": {
-          "type": "text-icon",
+        "text_BFeAJV": {
+          "type": "text",
           "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/oxford4.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
           }
         },
-        "text_icon_C3z8U6": {
-          "type": "text-icon",
+        "button_R9QFUL": {
+          "type": "button",
           "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/oxford3.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_Tz8WKd": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/oxford4.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
           }
         }
       },
       "block_order": [
-        "text_icon_qapCnK",
-        "text_icon_zzxPQ6",
-        "text_icon_C3z8U6",
-        "text_icon_Tz8WKd"
+        "heading_f744PT",
+        "text_BFeAJV",
+        "button_R9QFUL"
       ],
       "settings": {
-        "title": "V jednoduchosti je krása",
-        "subtitle": "Zavírání na silné magnety  komplexní ochrana vašeho zařízení  s dlouholetou výdrží.",
-        "heading_size": "h1",
-        "icon_width_desktop": 50,
-        "text_position": "bottom",
-        "enable_heading_in_box": false,
-        "columns_desktop": 3,
-        "columns_tablet": 3,
-        "auto_fit": false,
-        "column_alignment": "center",
-        "highlight_icon": false,
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "border_width": 1,
-        "border_opacity": 0,
-        "border_spacing": 0,
-        "highlight_border": false,
-        "border_shape": "square",
-        "blur_background": false,
-        "columns_mobile": "1",
-        "icon_width_mobile": 30,
-        "border_spacing_mobile": 0,
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "image_with_text_zKVCnf": {
@@ -332,23 +294,23 @@
         "heading_JYcbnb": {
           "type": "heading",
           "settings": {
-            "heading": "{{ page.metafields.custom.dynmic_content.value.product_with_text.value }}",
-            "heading_size": "h1",
+            "heading": "Obal, který už nebudete muset měnit.",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
         "text_BVLD3r": {
           "type": "text",
           "settings": {
-            "text": "{{ page.metafields.custom.dynmic_content.value.product_with_text_description | metafield_tag }}",
+            "text": "<p>S doživotní zárukou na náš kožený obal ProFit můžete mít jeden obal po celou dobu používání vašeho telefonu.<\/p><ul><li>Ochrání váš telefon ze všech stran<\/li><li>Má praktické kapsy na karty či peníze<\/li><li>Dá se využít i jako stojánek<\/li><\/ul>",
             "text_style": "body"
           }
         },
         "button_MppFHw": {
           "type": "button",
           "settings": {
-            "button_label": "{{ page.metafields.custom.dynmic_content.value.product_with_text_button.value }}",
-            "button_link": "{{ page.metafields.custom.dynmic_content.value.product_with_text_link.value }}",
+            "button_label": "Zjistit více",
+            "button_link": "shopify:\/\/collections\/kozene-test",
             "button_style": "solid"
           }
         }
@@ -360,8 +322,8 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "{{ page.metafields.custom.dynmic_content.value.product_with_text_picture.value }}",
-        "height": "adapt",
+        "image": "shopify:\/\/shop_images\/leather.png",
+        "height": "small",
         "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -456,32 +418,13 @@
         "heading_AkqqtD": {
           "type": "heading",
           "settings": {
-            "heading": "<p>{{ page.metafields.custom.dynmic_content.value.rich_text_heading.value }}<\/p>",
+            "heading": "<h3>KATEGORIE KOŽENÝCH VÝROBKŮ<\/h3>",
             "heading_size": "h2"
-          }
-        },
-        "text_TChkMN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>{{ page.metafields.custom.dynmic_content.value.rich_text_subheading | metafield_tag }}<\/p>"
-          }
-        },
-        "button_DmicHy": {
-          "type": "button",
-          "settings": {
-            "button_label": "{{ page.metafields.custom.dynmic_content.value.rich_text_button.value }}",
-            "button_link": "{{ page.metafields.custom.dynmic_content.value.rich_text_link.value }}",
-            "button_style_1": "primary",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary"
           }
         }
       },
       "block_order": [
-        "heading_AkqqtD",
-        "text_TChkMN",
-        "button_DmicHy"
+        "heading_AkqqtD"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -769,7 +712,7 @@
     "slideshow_8r6nPV",
     "rich_text_GnRiqE",
     "text_icons_fictdW",
-    "text_icons_J39XEV",
+    "rich_text_RkHXd6",
     "image_with_text_zKVCnf",
     "collection_list_zf9QEz",
     "rich_text_WGRr4t",
