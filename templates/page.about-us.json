@@ -1,1 +1,554 @@
-{"sections":{"main":{"type":"main-page","settings":{"section_width":"grid","content_alignment":"left","color_scheme":"background-2","padding_top":40,"padding_bottom":40}},"f2736caf-f589-4e31-b174-a65d7ece43bc":{"type":"image-banner","blocks":{"template--19267002171693__f2736caf-f589-4e31-b174-a65d7ece43bc-168525056050516aff-0":{"type":"heading","settings":{"heading":"Seznamte se s FIXED","size":"h0"}},"template--19267002171693__f2736caf-f589-4e31-b174-a65d7ece43bc-168525056050516aff-1":{"type":"text","settings":{"text":"Značka FIXED přináší na trh neotřelá řešení pro smartphony a tablety. Výrobky značky FIXED vynikají praktičností a jsou vyvíjeny s důrazem na kvalitu a jednoduchost použití. Zjistěte o nás více.","text_style":"body"}}},"block_order":["template--19267002171693__f2736caf-f589-4e31-b174-a65d7ece43bc-168525056050516aff-0","template--19267002171693__f2736caf-f589-4e31-b174-a65d7ece43bc-168525056050516aff-1"],"settings":{"layout":"full_bleed","image":"shopify:\/\/shop_images\/o_nas.jpg","image_overlay_opacity":20,"image_height":"adapt","image_height_mobile":"medium-mobile","desktop_content_position":"middle-left","desktop_content_alignment":"left","keep_ltr":false,"hide_when_empty_image":false,"preload":false,"enable_parallax_scrolling_effect":false,"mobile_content_alignment":"left","show_text_below_image":true,"color_text":"#ffffff","gradient_heading_desktop":"","color_button_text_1":"#000000","color_button_1":"#ffffff","color_button_text_2":"#000000","color_button_2":"#ffffff","colors_badge_foreground":"#ffffff","colors_badge_background":"#f87171","color_countdown_foreground":"#000000","color_countdown_background":"#ffffff","color_text_mobile":"#ffffff","gradient_heading_mobile":"","color_button_text_1_mobile":"#000000","color_button_1_mobile":"#ffffff","color_button_text_2_mobile":"#000000","color_button_2_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","color_countdown_foreground_mobile":"#000000","color_countdown_background_mobile":"#ffffff","background_container_mobile":"#171717","gradient_background_container_mobile":"","padding_top":0,"padding_bottom":40}},"71343d97-7291-4a99-9541-7955e514e378":{"type":"image-with-text","blocks":{"template--19267002171693__71343d97-7291-4a99-9541-7955e514e378-168525057517e0ba79-0":{"type":"heading","settings":{"heading":"Heading","heading_size":"h2","enable_bold_heading":false}},"template--19267002171693__71343d97-7291-4a99-9541-7955e514e378-168525057517e0ba79-1":{"type":"text","settings":{"text":"<p>Content<\/p>","text_style":"body"}}},"block_order":["template--19267002171693__71343d97-7291-4a99-9541-7955e514e378-168525057517e0ba79-0","template--19267002171693__71343d97-7291-4a99-9541-7955e514e378-168525057517e0ba79-1"],"disabled":true,"settings":{"grid_layout":"full_bleed","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":40,"padding_bottom":40,"color_heading":"#ffffff","gradient_heading":"","color_text":"#ffffff","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"rgba(0,0,0,0)","gradient_background_container":"linear-gradient(180deg, rgba(23, 23, 23, 1), rgba(221, 221, 221, 1) 100%)","background_section":"rgba(0,0,0,0)","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"ff765c78-937f-4e09-b331-4f4d0ee49a9a":{"type":"image-with-text","blocks":{"template--19267002171693__ff765c78-937f-4e09-b331-4f4d0ee49a9a-1685541011940a1fb4-0":{"type":"heading","settings":{"heading":"Heading","heading_size":"h1","enable_bold_heading":true}},"template--19267002171693__ff765c78-937f-4e09-b331-4f4d0ee49a9a-1685541011940a1fb4-1":{"type":"text","settings":{"text":"<p>Content<\/p>","text_style":"body"}}},"block_order":["template--19267002171693__ff765c78-937f-4e09-b331-4f4d0ee49a9a-1685541011940a1fb4-0","template--19267002171693__ff765c78-937f-4e09-b331-4f4d0ee49a9a-1685541011940a1fb4-1"],"disabled":true,"settings":{"grid_layout":"grid","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":40,"padding_bottom":40,"color_heading":"#ffffff","gradient_heading":"","color_text":"#ffffff","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"rgba(0,0,0,0)","gradient_background_container":"radial-gradient(rgba(23, 23, 23, 1), rgba(221, 221, 221, 1) 85.95%, rgba(215, 204, 250, 1) 100%, rgba(221, 221, 221, 1) 100%)","background_section":"#ffffff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"image_with_text_kwwHWP":{"type":"image-with-text","blocks":{"heading_ytf6Vn":{"type":"heading","settings":{"heading":"Stojíme na pevných základech","heading_size":"h2","enable_bold_heading":true}},"text_nxYEXq":{"type":"text","settings":{"text":"<p>Skvělé produkty a služby mají základ v dobře fungující firmě. U nás se při jejich vývoji a následné péči řídíme naší vizí, hodnotami, znalostmi zákazníka, osobním přístupem a sny. Tyto kvality současně tvoří silné kořeny, na kterých vyrůstá firma s potenciálem a silná značka FIXED.<\/p>","text_style":"body"}}},"block_order":["heading_ytf6Vn","text_nxYEXq"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/koreny_znacky.png","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000","gradient_heading":"","color_text":"#000","color_highlight_text":"#DA2127","color_caption":"#000","color_countdown":"#000","color_button_text":"#fff","color_button":"#000","background_container":"#fff","gradient_background_container":"","background_section":"#fff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1E40AF"}},"image_with_text_rg74nc":{"type":"image-with-text","blocks":{"heading_nEQNni":{"type":"heading","settings":{"heading":"Identita definující tonalitu značky","heading_size":"h2","enable_bold_heading":true}},"text_Bexj93":{"type":"text","settings":{"text":"<p>FIXED je nejlepší přítel s kreativní myslí. Co jste možná sami neviděli, dokáže posunout dále. Můžete se spolehnout, že vymyslí řešení, dá dobrou radu. Nenechává se jen vést, sám ovlivňuje věci kolem a přetváří je k lepšímu. K tomu samému pomáhá i vám.<\/p>","text_style":"body"}}},"block_order":["heading_nEQNni","text_Bexj93"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/kreativni_mysl.png","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000","gradient_heading":"","color_text":"#000","color_highlight_text":"#DA2127","color_caption":"#000","color_countdown":"#000","color_button_text":"#fff","color_button":"#000","background_container":"#fff","gradient_background_container":"","background_section":"#fff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1E40AF"}},"image_with_text_RPtdHq":{"type":"image-with-text","blocks":{"heading_eMMHrH":{"type":"heading","settings":{"heading":"Produktové inovace pro každý den","heading_size":"h1","enable_bold_heading":true}},"text_UHibpy":{"type":"text","settings":{"text":"<p>Usilujeme o to, aby naše produkty byly vašimi každodenními pomocníky a mohli jste se na ně spolehnout. Produkty vylepšujeme, designujeme, vyvíjíme a testujeme. V rámci našeho závazku k udržitelné budoucnosti také částečně vyrábíme v České republice a zabýváme se projekty na recyklaci a využití obnovitelných zdrojů.<\/p>","text_style":"body"}}},"block_order":["heading_eMMHrH","text_UHibpy"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/produktove_inovace.png","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000","gradient_heading":"","color_text":"#000","color_highlight_text":"#DA2127","color_caption":"#000","color_countdown":"#000","color_button_text":"#fff","color_button":"#000","background_container":"#fff","gradient_background_container":"","background_section":"#fff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1E40AF"}},"image_with_text_KG4pFG":{"type":"image-with-text","blocks":{"heading_HhbXqa":{"type":"heading","settings":{"heading":"Sledujte příběh naší značky","heading_size":"h1","enable_bold_heading":true}},"text_LCAYGk":{"type":"text","settings":{"text":"<p>FIXED je na trhu od roku 2001. Od té doby rok co rok rosteme, díky čemuž vám můžeme přinášet stále nové možnosti. Přidejte se k naší komunitě a seznamte se s našimi produkty a kampaněmi a nezapomeňte se přihlásit k odběru našich novinek.<\/p>","text_style":"body"}}},"block_order":["heading_HhbXqa","text_LCAYGk"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/pribeh_fixed.png","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000","gradient_heading":"","color_text":"#000","color_highlight_text":"#DA2127","color_caption":"#000","color_countdown":"#000","color_button_text":"#fff","color_button":"#000","background_container":"#fff","gradient_background_container":"","background_section":"#fff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1E40AF"}},"newsletter_T73k7q":{"type":"newsletter","disabled":true,"settings":{"grid_layout":"grid","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","enable_section_box_layout":false,"color_scheme":"","enable_parallax_scrolling_effect":true,"colors_text":"#fff","colors_input":"#64748B","overlay_color":"#1E40AF","mobile_content_alignment":"left","padding_top":40,"padding_bottom":52}},"4be7147d-ac84-4d18-8a0a-e34076db2667":{"type":"image-banner","blocks":{"template--19267002171693__4be7147d-ac84-4d18-8a0a-e34076db2667-168525056050516aff-0":{"type":"heading","settings":{"heading":"Heading","size":"h0"}},"template--19267002171693__4be7147d-ac84-4d18-8a0a-e34076db2667-168525056050516aff-1":{"type":"text","settings":{"text":"Description","text_style":"body"}}},"block_order":["template--19267002171693__4be7147d-ac84-4d18-8a0a-e34076db2667-168525056050516aff-0","template--19267002171693__4be7147d-ac84-4d18-8a0a-e34076db2667-168525056050516aff-1"],"settings":{"layout":"grid","image_overlay_opacity":70,"image_height":"medium","image_height_mobile":"medium-mobile","desktop_content_position":"middle-right","desktop_content_alignment":"right","keep_ltr":false,"hide_when_empty_image":false,"preload":false,"enable_parallax_scrolling_effect":false,"mobile_content_alignment":"left","show_text_below_image":true,"color_text":"#ffffff","gradient_heading_desktop":"","color_button_text_1":"#000000","color_button_1":"#ffffff","color_button_text_2":"#000000","color_button_2":"#ffffff","colors_badge_foreground":"#ffffff","colors_badge_background":"#f87171","color_countdown_foreground":"#000000","color_countdown_background":"#ffffff","color_text_mobile":"#ffffff","gradient_heading_mobile":"","color_button_text_1_mobile":"#000000","color_button_1_mobile":"#ffffff","color_button_text_2_mobile":"#000000","color_button_2_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","color_countdown_foreground_mobile":"#000000","color_countdown_background_mobile":"#ffffff","background_container_mobile":"#171717","gradient_background_container_mobile":"","padding_top":40,"padding_bottom":40}},"fccc0dc8-b7d0-457f-a241-d01ab070f398":{"type":"banner-grid","blocks":{"template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-0":{"type":"promotion-banner","settings":{"image_overlay_opacity":50,"heading":"Heading","heading_size":"h1","text":"Text","text_style":"body","button_label":"","button_style":"primary","badge":"","badge_style":"box","url":"","enable_parallax_scrolling_effect":false,"desktop_column":2,"desktop_row":1,"desktop_content_position":"middle-center","desktop_narrow_content":false,"elements_gap_desktop":"1.5","image_height_mobile":"medium-mobile","mobile_content_alignment":"center","elements_gap_mobile":"1.5","color_text":"#ffffff","color_gradient_heading":"","color_button_text":"#ffffff","color_button":"#2563eb","color_badge":"#ffffff"}},"template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-1":{"type":"promotion-banner","settings":{"image_overlay_opacity":50,"heading":"Heading","heading_size":"h1","text":"Text","text_style":"body","button_label":"","button_style":"primary","badge":"","badge_style":"box","url":"","enable_parallax_scrolling_effect":false,"desktop_column":2,"desktop_row":2,"desktop_content_position":"middle-center","desktop_narrow_content":false,"elements_gap_desktop":"1.5","image_height_mobile":"medium-mobile","mobile_content_alignment":"center","elements_gap_mobile":"1.5","color_text":"#ffffff","color_gradient_heading":"","color_button_text":"#ffffff","color_button":"#2563eb","color_badge":"#ffffff"}},"template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-2":{"type":"promotion-banner","settings":{"image_overlay_opacity":50,"heading":"Heading","heading_size":"h1","text":"Text","text_style":"body","button_label":"","button_style":"primary","badge":"","badge_style":"box","url":"","enable_parallax_scrolling_effect":false,"desktop_column":2,"desktop_row":1,"desktop_content_position":"middle-center","desktop_narrow_content":false,"elements_gap_desktop":"1.5","image_height_mobile":"medium-mobile","mobile_content_alignment":"center","elements_gap_mobile":"1.5","color_text":"#ffffff","color_gradient_heading":"","color_button_text":"#ffffff","color_button":"#2563eb","color_badge":"#ffffff"}}},"block_order":["template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-0","template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-1","template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-2"],"settings":{"layout":"grid","desktop_row_height":30,"desktop_gap":30,"mobile_gap":10,"hide_when_empty_content":true,"enable_section_box_layout":false,"media_border_thickness":1,"media_border_opacity":5,"media_radius":15,"enable_shadow":true,"padding_top":36,"padding_bottom":36}},"image_with_text_4CrME4":{"type":"image-with-text","blocks":{"heading_cp7be3":{"type":"heading","settings":{"heading":"Image with text","heading_size":"h1","enable_bold_heading":true}},"text_m8WJEB":{"type":"text","settings":{"text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","text_style":"body"}},"button_DxnMiF":{"type":"button","settings":{"button_label":"Button label","button_link":"","button_style":"solid"}}},"block_order":["heading_cp7be3","text_m8WJEB","button_DxnMiF"],"disabled":true,"settings":{"grid_layout":"grid","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000","gradient_heading":"","color_text":"#000","color_highlight_text":"#DA2127","color_caption":"#000","color_countdown":"#000","color_button_text":"#fff","color_button":"#000","background_container":"#fff","gradient_background_container":"","background_section":"#fff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1E40AF"}}},"order":["main","f2736caf-f589-4e31-b174-a65d7ece43bc","71343d97-7291-4a99-9541-7955e514e378","ff765c78-937f-4e09-b331-4f4d0ee49a9a","image_with_text_kwwHWP","image_with_text_rg74nc","image_with_text_RPtdHq","image_with_text_KG4pFG","newsletter_T73k7q","4be7147d-ac84-4d18-8a0a-e34076db2667","fccc0dc8-b7d0-457f-a241-d01ab070f398","image_with_text_4CrME4"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "section_width": "grid",
+        "content_alignment": "left",
+        "color_scheme": "background-2",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "f2736caf-f589-4e31-b174-a65d7ece43bc": {
+      "type": "image-banner",
+      "blocks": {
+        "template--19267002171693__f2736caf-f589-4e31-b174-a65d7ece43bc-168525056050516aff-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Seznamte se s FIXED",
+            "size": "h0"
+          }
+        },
+        "template--19267002171693__f2736caf-f589-4e31-b174-a65d7ece43bc-168525056050516aff-1": {
+          "type": "text",
+          "settings": {
+            "text": "Značka FIXED přináší na trh neotřelá řešení pro smartphony a tablety. Výrobky značky FIXED vynikají praktičností a jsou vyvíjeny s důrazem na kvalitu a jednoduchost použití. Zjistěte o nás více.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--19267002171693__f2736caf-f589-4e31-b174-a65d7ece43bc-168525056050516aff-0",
+        "template--19267002171693__f2736caf-f589-4e31-b174-a65d7ece43bc-168525056050516aff-1"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/o_nas.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "adapt",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "left",
+        "show_text_below_image": true,
+        "color_text": "#ffffff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000000",
+        "color_button_1": "#ffffff",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#ffffff",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#171717",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "image_with_text_kwwHWP": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ytf6Vn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stojíme na pevných základech",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_nxYEXq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Skvělé produkty a služby mají základ v dobře fungující firmě. U nás se při jejich vývoji a následné péči řídíme naší vizí, hodnotami, znalostmi zákazníka, osobním přístupem a sny. Tyto kvality současně tvoří silné kořeny, na kterých vyrůstá firma s potenciálem a silná značka FIXED.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ytf6Vn",
+        "text_nxYEXq"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/koreny_znacky.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_rg74nc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nEQNni": {
+          "type": "heading",
+          "settings": {
+            "heading": "Identita definující tonalitu značky",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_Bexj93": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FIXED je nejlepší přítel s kreativní myslí. Co jste možná sami neviděli, dokáže posunout dále. Můžete se spolehnout, že vymyslí řešení, dá dobrou radu. Nenechává se jen vést, sám ovlivňuje věci kolem a přetváří je k lepšímu. K tomu samému pomáhá i vám.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nEQNni",
+        "text_Bexj93"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/kreativni_mysl.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_RPtdHq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_eMMHrH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Produktové inovace pro každý den",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_UHibpy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Usilujeme o to, aby naše produkty byly vašimi každodenními pomocníky a mohli jste se na ně spolehnout. Produkty vylepšujeme, designujeme, vyvíjíme a testujeme. V rámci našeho závazku k udržitelné budoucnosti také částečně vyrábíme v České republice a zabýváme se projekty na recyklaci a využití obnovitelných zdrojů.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eMMHrH",
+        "text_UHibpy"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/produktove_inovace.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_KG4pFG": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HhbXqa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sledujte příběh naší značky",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_LCAYGk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FIXED je na trhu od roku 2001. Od té doby rok co rok rosteme, díky čemuž vám můžeme přinášet stále nové možnosti. Přidejte se k naší komunitě a seznamte se s našimi produkty a kampaněmi a nezapomeňte se přihlásit k odběru našich novinek.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HhbXqa",
+        "text_LCAYGk"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/pribeh_fixed.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "newsletter_UHYWiM": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_rDrbAp": {
+          "type": "heading",
+          "settings": {
+            "heading": "ZŮSTAŇTE V OBRAZE",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph_g7yDQ4": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce.<\/p>"
+          }
+        },
+        "email_form_c3Lj3G": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_rDrbAp",
+        "paragraph_g7yDQ4",
+        "email_form_c3Lj3G"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#fff",
+        "colors_input": "#64748B",
+        "overlay_color": "#1E40AF",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_AYc8pp": {
+      "type": "rich-text",
+      "blocks": {
+        "text_rFPF8J": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Přečtěte si naše <a href=\"https:\/\/obchod.fixed.zone\/ochrana-osobnich-udaju-a-zasilani-obchodnich-sdeleni\/\" target=\"_blank\">zásady ochrany osobních údajů<\/a>.<\/p>"
+          }
+        },
+        "button_369HBa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "text_rFPF8J",
+        "button_369HBa"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "fccc0dc8-b7d0-457f-a241-d01ab070f398": {
+      "type": "banner-grid",
+      "blocks": {
+        "template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-0": {
+          "type": "promotion-banner",
+          "settings": {
+            "image_overlay_opacity": 50,
+            "heading": "Heading",
+            "heading_size": "h1",
+            "text": "Text",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 2,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#ffffff",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
+          }
+        },
+        "template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-1": {
+          "type": "promotion-banner",
+          "settings": {
+            "image_overlay_opacity": 50,
+            "heading": "Heading",
+            "heading_size": "h1",
+            "text": "Text",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 2,
+            "desktop_row": 2,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#ffffff",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
+          }
+        },
+        "template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-2": {
+          "type": "promotion-banner",
+          "settings": {
+            "image_overlay_opacity": 50,
+            "heading": "Heading",
+            "heading_size": "h1",
+            "text": "Text",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 2,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#ffffff",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-0",
+        "template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-1",
+        "template--19267002171693__fccc0dc8-b7d0-457f-a241-d01ab070f398-16868077699a8f506d-2"
+      ],
+      "settings": {
+        "layout": "grid",
+        "desktop_row_height": 30,
+        "desktop_gap": 30,
+        "mobile_gap": 10,
+        "hide_when_empty_content": true,
+        "enable_section_box_layout": false,
+        "media_border_thickness": 1,
+        "media_border_opacity": 5,
+        "media_radius": 15,
+        "enable_shadow": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_4CrME4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cp7be3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_m8WJEB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_DxnMiF": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cp7be3",
+        "text_m8WJEB",
+        "button_DxnMiF"
+      ],
+      "disabled": true,
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f2736caf-f589-4e31-b174-a65d7ece43bc",
+    "image_with_text_kwwHWP",
+    "image_with_text_rg74nc",
+    "image_with_text_RPtdHq",
+    "image_with_text_KG4pFG",
+    "newsletter_UHYWiM",
+    "rich_text_AYc8pp",
+    "fccc0dc8-b7d0-457f-a241-d01ab070f398",
+    "image_with_text_4CrME4"
+  ]
+}
