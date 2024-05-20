@@ -220,7 +220,7 @@
         "title": "",
         "subtitle": "",
         "heading_size": "h2",
-        "icon_width_desktop": 25,
+        "icon_width_desktop": 20,
         "text_position": "bottom",
         "enable_heading_in_box": false,
         "columns_desktop": 3,
