@@ -244,7 +244,7 @@
           "settings": {
             "icon": "check",
             "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_1.value }}",
-            "title": "",
+            "title": "{{ page.metafields.custom.dynmic_content.value.icon_heading_1.value }}",
             "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
@@ -256,7 +256,7 @@
             "icon": "check",
             "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_2.value }}",
             "title": "",
-            "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_2.value }}",
+            "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
