@@ -267,7 +267,7 @@
             "icon": "check",
             "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_3.value }}",
             "title": "",
-            "subheading": "",
+            "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_3.value }}",
             "link": "",
             "open_link_in_new_tab": false
           }
