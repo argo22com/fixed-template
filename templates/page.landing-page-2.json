@@ -243,9 +243,9 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/manufacturebox01.png",
+            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_1.value }}",
             "title": "",
-            "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
+            "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -254,9 +254,9 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/top-grain-1.png",
+            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_2.value }}",
             "title": "",
-            "subheading": "Na výběru kůže záleží, proto máme jen tu nejlepší od italských dodavatelů.",
+            "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_2.value }}",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -265,9 +265,9 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/natural-material.png",
+            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_3.value }}",
             "title": "",
-            "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
+            "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -279,8 +279,8 @@
         "text_icon_rHAfmj"
       ],
       "settings": {
-        "title": "Luxusní kožené pouzdro pro notebook i tablet",
-        "subtitle": "tady je podnadpis",
+        "title": "{{ page.metafields.custom.dynmic_content.value.icon_heading.value }}",
+        "subtitle": "",
         "heading_size": "h2",
         "icon_width_desktop": 50,
         "text_position": "bottom",
