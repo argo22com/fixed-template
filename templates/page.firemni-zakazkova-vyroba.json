@@ -124,6 +124,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
+            "custom_icon": "shopify:\/\/shop_images\/handmade01.png",
             "title": "Prémiové materiály a kvalita",
             "subheading": "Pro naše pouzdra, peněženky a další produkty jsme vybrali tu nejkvalitnější italskou kůži Torcello od prověřených dodavatelů. Díky vlastnostem pravé kůže pouzdro nestárne, ale zraje. Časem získává jedinečnou patinu a z každého kousku se stává originální a unikátní doplněk pro Vás či Vaše obchodní partnery.",
             "link": "",
@@ -134,6 +135,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
+            "custom_icon": "shopify:\/\/shop_images\/handmade02.png",
             "title": "Personalizace",
             "subheading": "Každý náš prémiový výrobek je možné upravit dle vašich potřeb již od 50 kusů. Pomocí gravírování či ražení přidáme na produkty loga, citaci, či jednoduché obrázky.",
             "link": "",
@@ -144,6 +146,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
+            "custom_icon": "shopify:\/\/shop_images\/handmade03.png",
             "title": "Jak na to",
             "subheading": "Stačí nás kontaktovat pomocí formjuláře níže. Budete kontaktování naším obchodním zástupcem, který Vám poradí s výběrem a mírou personalizace",
             "link": "",
@@ -160,8 +163,8 @@
         "title": "",
         "subtitle": "",
         "heading_size": "h2",
-        "icon_width_desktop": 50,
-        "text_position": "bottom",
+        "icon_width_desktop": 10,
+        "text_position": "right",
         "enable_heading_in_box": false,
         "columns_desktop": 3,
         "columns_tablet": 3,
