@@ -464,7 +464,7 @@
         "text_LgN74N": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.<\/li><li>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.<\/li><li>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.<\/li><\/ul>",
+            "text": "{{ page.metafields.custom.dynmic_content.value.description | metafield_tag }}",
             "text_style": "body"
           }
         }
