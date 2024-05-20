@@ -368,8 +368,8 @@
         "button_DmicHy": {
           "type": "button",
           "settings": {
-            "button_label": "",
-            "button_link": "",
+            "button_label": "{{ page.metafields.custom.dynmic_content.value.rich_text_button.value }}",
+            "button_link": "{{ page.metafields.custom.dynmic_content.value.rich_text_link.value }}",
             "button_style_1": "primary",
             "button_label_2": "",
             "button_link_2": "",
