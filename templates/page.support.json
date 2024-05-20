@@ -212,12 +212,47 @@
     },
     "page_trCqk7": {
       "type": "page",
+      "custom_css": [
+
+      ],
       "settings": {
         "page": "reklamace",
         "heading_size": "h2",
-        "color_scheme": "",
+        "color_scheme": "background-2",
         "padding_top": 16,
         "padding_bottom": 20
+      }
+    },
+    "rich_text_tgLq4X": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kkfr79": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>KONTAKTUJTE NÁS<\/strong><\/h3>",
+            "heading_size": "h2"
+          }
+        },
+        "text_n33pPc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Máte dotaz na nás a naše produkty? Neváhejte nás kontaktovat do chatu v pravém dolním rohu stránky, naši operátoři rádi na vaše dotazy odpoví.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kkfr79",
+        "text_n33pPc"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -227,6 +262,7 @@
     "rich_text_WGRr4t",
     "collapsible_content_6mYWW4",
     "rich_text_pEzQib",
-    "page_trCqk7"
+    "page_trCqk7",
+    "rich_text_tgLq4X"
   ]
 }
