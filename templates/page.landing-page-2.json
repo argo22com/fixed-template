@@ -276,7 +276,7 @@
         "text_icon_rHAfmj"
       ],
       "settings": {
-        "title": "{{ page.metafields.custom.dynmic_content.value.icon_heading.value }}",
+        "title": "",
         "subtitle": "",
         "heading_size": "h2",
         "icon_width_desktop": 50,
