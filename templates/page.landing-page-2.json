@@ -279,9 +279,9 @@
         "color_countdown": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
-        "background_container": "#ffffff",
+        "background_container": "#ececec",
         "gradient_background_container": "",
-        "background_section": "#ffffff",
+        "background_section": "#ececec",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
