@@ -17,15 +17,15 @@
         "heading_ewtxqN": {
           "type": "heading",
           "settings": {
-            "heading": "{{ page.metafields.custom.dynmic_content.value.hero_title.value }}",
-            "size": "h0"
+            "heading": "FIXED SMART",
+            "size": "h1"
           }
         },
         "text_zym3RF": {
           "type": "text",
           "settings": {
-            "text": "{{ page.metafields.custom.dynmic_content.value.hero_subtitle.value }}",
-            "text_style": "subtitle"
+            "text": "CHYTRÉ LOKÁTORY. MĚJTE SVÉ CENNOSTI VŽDY POD KONTROLOU",
+            "text_style": "body"
           }
         }
       },
@@ -35,7 +35,7 @@
       ],
       "settings": {
         "layout": "grid",
-        "image": "{{ page.metafields.custom.dynmic_content.value.hero_banner.value }}",
+        "image": "shopify:\/\/shop_images\/Smart.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
@@ -73,303 +73,27 @@
         "padding_bottom": 0
       }
     },
-    "text_icons_fictdW": {
-      "type": "text-icons",
-      "blocks": {
-        "text_icon_Cimifi": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "none",
-            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_1.value }}",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_FKQJQ6": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "none",
-            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_2.value }}",
-            "title": "",
-            "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_2.value }}",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_rHAfmj": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "none",
-            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_3.value }}",
-            "title": "",
-            "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_3.value }}",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "text_icon_Cimifi",
-        "text_icon_FKQJQ6",
-        "text_icon_rHAfmj"
-      ],
-      "settings": {
-        "title": "{{ page.metafields.custom.dynmic_content.value.icon_heading.value }}",
-        "subtitle": "",
-        "heading_size": "h2",
-        "icon_width_desktop": 50,
-        "text_position": "bottom",
-        "enable_heading_in_box": false,
-        "columns_desktop": 3,
-        "columns_tablet": 3,
-        "auto_fit": false,
-        "column_alignment": "center",
-        "highlight_icon": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "background-1",
-        "border_width": 1,
-        "border_opacity": 0,
-        "border_spacing": 0,
-        "highlight_border": false,
-        "border_shape": "square",
-        "blur_background": false,
-        "columns_mobile": "1",
-        "icon_width_mobile": 30,
-        "border_spacing_mobile": 0,
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "text_icons_J39XEV": {
-      "type": "text-icons",
-      "blocks": {
-        "text_icon_qapCnK": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/Oxford1.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_zzxPQ6": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/oxford4.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_C3z8U6": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/oxford3.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_Tz8WKd": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/oxford4.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "text_icon_qapCnK",
-        "text_icon_zzxPQ6",
-        "text_icon_C3z8U6",
-        "text_icon_Tz8WKd"
-      ],
-      "settings": {
-        "title": "V jednoduchosti je krása",
-        "subtitle": "Zavírání na silné magnety  komplexní ochrana vašeho zařízení  s dlouholetou výdrží.",
-        "heading_size": "h1",
-        "icon_width_desktop": 50,
-        "text_position": "bottom",
-        "enable_heading_in_box": false,
-        "columns_desktop": 3,
-        "columns_tablet": 3,
-        "auto_fit": false,
-        "column_alignment": "center",
-        "highlight_icon": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "border_width": 1,
-        "border_opacity": 0,
-        "border_spacing": 0,
-        "highlight_border": false,
-        "border_shape": "square",
-        "blur_background": false,
-        "columns_mobile": "1",
-        "icon_width_mobile": 30,
-        "border_spacing_mobile": 0,
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_zKVCnf": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_JYcbnb": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ page.metafields.custom.dynmic_content.value.product_with_text.value }}",
-            "heading_size": "h1",
-            "enable_bold_heading": true
-          }
-        },
-        "text_BVLD3r": {
-          "type": "text",
-          "settings": {
-            "text": "{{ page.metafields.custom.dynmic_content.value.product_with_text_description | metafield_tag }}",
-            "text_style": "body"
-          }
-        },
-        "button_MppFHw": {
-          "type": "button",
-          "settings": {
-            "button_label": "{{ page.metafields.custom.dynmic_content.value.product_with_text_button.value }}",
-            "button_link": "{{ page.metafields.custom.dynmic_content.value.product_with_text_link.value }}",
-            "button_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "heading_JYcbnb",
-        "text_BVLD3r",
-        "button_MppFHw"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "image": "{{ page.metafields.custom.dynmic_content.value.product_with_text_picture.value }}",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#000000",
-        "background_container": "#ececec",
-        "gradient_background_container": "",
-        "background_section": "#ececec",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
-      }
-    },
-    "collection_list_zf9QEz": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_mM96Df": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_image": "shopify:\/\/shop_images\/Oxford1.jpg",
-            "custom_title": ""
-          }
-        },
-        "featured_collection_NHhcPp": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_image": "shopify:\/\/shop_images\/oxford2.jpg",
-            "custom_title": ""
-          }
-        },
-        "featured_collection_a7xEL7": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_image": "shopify:\/\/shop_images\/oxford3.jpg",
-            "custom_title": ""
-          }
-        },
-        "featured_collection_nkj73G": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_image": "shopify:\/\/shop_images\/oxford4.jpg",
-            "custom_title": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_mM96Df",
-        "featured_collection_NHhcPp",
-        "featured_collection_a7xEL7",
-        "featured_collection_nkj73G"
-      ],
-      "settings": {
-        "title": "Collections",
-        "subtitle": "",
-        "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "full_width": false,
-        "enable_section_box_layout": false,
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "show_view_all": false,
-        "collection_card_show_title": true,
-        "show_products_count": false,
-        "columns_tablet": "2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_WGRr4t": {
+    "rich_text_7BWfWR": {
       "type": "rich-text",
       "blocks": {
-        "heading_AkqqtD": {
+        "heading_Nmdam7": {
           "type": "heading",
           "settings": {
-            "heading": "<p>{{ page.metafields.custom.dynmic_content.value.rich_text_heading.value }}<\/p>",
+            "heading": "<h3><strong>Chytré lokátory s podporou Apple Find My<\/strong><\/h3>",
             "heading_size": "h2"
           }
         },
-        "text_TChkMN": {
+        "text_eqbpAU": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ page.metafields.custom.dynmic_content.value.rich_text_subheading | metafield_tag }}<\/p>"
+            "text": "<p>Hledání peněženky a klíčů nebylo nikdy jednodušší. S FIXED chytrými lokátory, které jsou kompatibilní se sítí Apple Find My, už budete mít své věci vždy pod kontrolou. Pomohou vám v tom miliony uživatelů zařízení s operačním systémem iOS po celém světě. Stačí si přidat svůj Tag do aplikace a vše ostatní už je hračka.<br\/>Jak na to?<\/p>"
           }
         },
-        "button_DmicHy": {
+        "button_MYnFAt": {
           "type": "button",
           "settings": {
-            "button_label": "{{ page.metafields.custom.dynmic_content.value.rich_text_button.value }}",
-            "button_link": "{{ page.metafields.custom.dynmic_content.value.rich_text_link.value }}",
+            "button_label": "PŘEJÍT NA PRODUKTY",
+            "button_link": "",
             "button_style_1": "primary",
             "button_label_2": "",
             "button_link_2": "",
@@ -378,9 +102,9 @@
         }
       },
       "block_order": [
-        "heading_AkqqtD",
-        "text_TChkMN",
-        "button_DmicHy"
+        "heading_Nmdam7",
+        "text_eqbpAU",
+        "button_MYnFAt"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -399,7 +123,7 @@
         "heading_JW7Xxj": {
           "type": "heading",
           "settings": {
-            "heading": "{{ page.metafields.custom.dynmic_content.value.image_with_text_title_1.value }}",
+            "heading": "1. Přidejte zařízení do aplikace Find My",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -407,7 +131,7 @@
         "text_LgN74N": {
           "type": "text",
           "settings": {
-            "text": "{{ page.metafields.custom.dynmic_content.value.description | metafield_tag }}",
+            "text": "<p>Pořídili jste si nový Tag?<br\/>Přidejte si jej do aplikace Find My. Stačí dlouze stisknout tlačítko a aplikace jej sama nalezne.<\/p><p>Pak už stačí Tag jenom pojmenovat a přidat mu ikonu, ať jej na mapě jednoduše rozeznáte.<\/p><p>Jak funguje hledání? Tag se automaticky hlásí svým zabezpečeným Bluetooth signálem ke všem zařízením, které využívají iOS operativní systém. Data jsou následně ukládaná do iCloudu odkud se propisují do mapy v aplikaci.<\/p>",
             "text_style": "body"
           }
         },
@@ -427,9 +151,9 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "{{ page.metafields.custom.dynmic_content.value.image_with_text_picture_1.value }}",
-        "height": "small",
-        "desktop_image_width": "small",
+        "image": "shopify:\/\/shop_images\/Smart_lp_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
@@ -461,15 +185,15 @@
         "heading_JyC6aT": {
           "type": "heading",
           "settings": {
-            "heading": "{{ page.metafields.custom.dynmic_content.value.image_with_text_title_2.value }}",
-            "heading_size": "h1",
+            "heading": "2. Nastavte si notifikace",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
         "text_XpH7fj": {
           "type": "text",
           "settings": {
-            "text": "{{ page.metafields.custom.dynmic_content.value.image_with_text_description_2 | metafield_tag }}",
+            "text": "<p>Ke každému Tagu si jednoduše můžete nastavit specifické notifikace.<\/p><p>Chcete, aby vás telefon upozornil, že jste někde zanechali svou peněženku, ale nechcete, aby se tak dělo pokaždé když vyběhnete z bytu s odpadem? Také si můžete nastavit notifikaci na to, že se od vás vás Tag vzdaluje.<\/p><p>Aplikace má různé možnosti, jak si upozornění personalizovat.<\/p><p>Hledáte Tag někde ve svém okolí, ale nevidíte ho? V aplikaci zvolíte možnost „prozvonit“ a Tag se vám ozve.<\/p><p>Tag se také dá nahlásit jako ztracený, automaticky tak nálezci ukáže vámi personalizovanou zprávu s kontaktem.<\/p>",
             "text_style": "body"
           }
         },
@@ -489,9 +213,9 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "{{ page.metafields.custom.dynmic_content.value.image_with_text_picture_2.value }}",
-        "height": "small",
-        "desktop_image_width": "small",
+        "image": "shopify:\/\/shop_images\/SMART_lp_2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -523,15 +247,15 @@
         "heading_dDT4qW": {
           "type": "heading",
           "settings": {
-            "heading": "{{ page.metafields.custom.dynmic_content.value.image_with_text_title_3.value }}",
-            "heading_size": "h1",
+            "heading": "3. Neomezený počet zařízení",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
         "text_KmgUnq": {
           "type": "text",
           "settings": {
-            "text": "{{ page.metafields.custom.dynmic_content.value.image_with_text_description_3 | metafield_tag }}",
+            "text": "<p>Nezáleží na tom, kolik svých cenností si chcete ohlídat.<\/p><p>Přidejte si neomezený počet Tagů pro každou vaši cennost.<\/p><p>Navíc můžete lokaci každého Tagu sdílet až s pěti lidmi.<\/p><p>Hlídejte své věci beze strachu o své soukromí. Veškerá data jsou samozřejmě zabezpečená, všechna vaše data jsou anonymní, anonymní jsou také data uživatelů, kteří Tag ve svém okolí zaznamenali a data se nikam neukládají.<\/p>",
             "text_style": "body"
           }
         }
@@ -542,9 +266,9 @@
       ],
       "settings": {
         "grid_layout": "stretched_grid",
-        "image": "{{ page.metafields.custom.dynmic_content.value.image_with_text_picture_3.value }}",
-        "height": "small",
-        "desktop_image_width": "small",
+        "image": "shopify:\/\/shop_images\/SMART_lp_3.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -576,32 +300,34 @@
         "column_639AQA": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/blog_tagcard1.jpg",
             "icon": "check",
-            "title": "",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
+            "title": "FIXED Tag",
+            "text": "<p>Ideální společník pro hlídání a hledání klíčů, batohů a dalších objektů, stačí připnout karabinou a vaše cennosti jsou chráněné.<\/p><p>Tag je vyrobený z tvrzených materiálů a nemusíte se bát ani vlhkosti s certifikací IP66. Baterie vydrží až 12 měsíců, a dá se jednoduše vyměnit, jedno zařízení vám tak vydrží dlouhá léta.<\/p>",
+            "link_label": "VÍCE O TAG",
             "link": "",
-            "button_style": "solid",
-            "card_color_text": "#166534",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#effdf4",
+            "button_style": "secondary",
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         },
         "column_YGyC9A": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/blog_tagcard2.png",
             "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
+            "title": "FIXED Tag Card",
+            "text": "<p>Chytrý lokátor ve tvaru kreditní karty, skvěle zapadne do peněženky, kabelky či jiného zavazadla, která jsou pak vždy hlídané.<\/p><p>Tag Card se dá bezdrátově nabíjet, jedno nabití vydrží až 3 měsíce. Odolné zpracování karty z tvrzeného plastu a certifikace IP67 chrání kartu před vlhkostí a prachem.<\/p>",
+            "link_label": "VÍCE O TAG CARD",
             "link": "",
-            "button_style": "solid",
-            "card_color_text": "#a06207",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
+            "button_style": "secondary",
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         }
@@ -611,7 +337,7 @@
         "column_YGyC9A"
       ],
       "settings": {
-        "title": "Promotion cards",
+        "title": "",
         "subtitle": "",
         "heading_size": "h1",
         "media_type": "image",
@@ -625,7 +351,7 @@
         "column_alignment": "left",
         "enable_shadow": true,
         "background_transparent": false,
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "enable_section_box_layout": false,
         "color_scheme": "",
@@ -642,14 +368,45 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_rXNM9Y": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QV4Y3G": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3>JAK CHYTRÉ LOKÁTORY POUŽÍVAT?<\/h3>",
+            "heading_size": "h2"
+          }
+        },
+        "text_EXxTFb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mrkněte se na krátké video.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QV4Y3G",
+        "text_EXxTFb"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "video_XhEQtC": {
       "type": "video",
       "settings": {
-        "title": "Péče o kůži",
+        "title": "",
         "subtitle": "",
         "heading_size": "h2",
-        "cover_image": "shopify:\/\/shop_images\/oxford_video.jpg",
-        "video_url": "https:\/\/youtu.be\/EtSwUKtAff4",
+        "video_url": "https:\/\/youtu.be\/os4MYblhzVc",
         "description": "FIXED ruční výroba v Prostějově",
         "autoplay": false,
         "enable_controls": false,
@@ -666,15 +423,12 @@
   "order": [
     "main",
     "image_banner_aBk4NA",
-    "text_icons_fictdW",
-    "text_icons_J39XEV",
-    "image_with_text_zKVCnf",
-    "collection_list_zf9QEz",
-    "rich_text_WGRr4t",
+    "rich_text_7BWfWR",
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
     "image_with_text_j8Qig9",
     "multicolumn_dATNWi",
+    "rich_text_rXNM9Y",
     "video_XhEQtC"
   ]
 }
