@@ -242,10 +242,9 @@
         "text_icon_Cimifi": {
           "type": "text-icon",
           "settings": {
-            "icon": "check",
-            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_1.value }}",
+            "icon": "none",
             "title": "",
-            "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_1.value }}",
+            "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -253,10 +252,9 @@
         "text_icon_FKQJQ6": {
           "type": "text-icon",
           "settings": {
-            "icon": "check",
-            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_2.value }}",
+            "icon": "none",
             "title": "",
-            "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_2.value }}",
+            "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -264,10 +262,9 @@
         "text_icon_rHAfmj": {
           "type": "text-icon",
           "settings": {
-            "icon": "check",
-            "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_3.value }}",
+            "icon": "none",
             "title": "",
-            "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_3.value }}",
+            "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
