@@ -456,7 +456,7 @@
         "heading_JW7Xxj": {
           "type": "heading",
           "settings": {
-            "heading": "Kůže zraje",
+            "heading": "{{ page.metafields.custom.dynmic_content.value.image_with_text_title_1.value }}",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -475,7 +475,6 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/oxford_brown.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
