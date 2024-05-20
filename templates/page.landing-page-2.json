@@ -475,6 +475,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
+        "image": "{{ page.metafields.custom.dynmic_content.value.image_with_text_picture_1.value }}",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
