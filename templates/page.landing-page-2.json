@@ -81,8 +81,8 @@
           "settings": {
             "icon": "none",
             "custom_icon": "{{ page.metafields.custom.dynmic_content.value.icon_1.value }}",
-            "title": "{{ page.metafields.custom.dynmic_content.value.icon_heading_1.value }}",
-            "subheading": "{{ page.metafields.custom.dynmic_content.value.icon_heading_1.value }}",
+            "title": "",
+            "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -285,6 +285,50 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_WGRr4t": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AkqqtD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>{{ page.metafields.custom.dynmic_content.value.rich_text_heading.value }}<\/p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_TChkMN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ page.metafields.custom.dynmic_content.value.rich_text_subheading | metafield_tag }}<\/p>"
+          }
+        },
+        "button_DmicHy": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AkqqtD",
+        "text_TChkMN",
+        "button_DmicHy"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "image_with_text_MUzzfc": {
@@ -491,6 +535,7 @@
     "text_icons_fictdW",
     "text_icons_J39XEV",
     "collection_list_zf9QEz",
+    "rich_text_WGRr4t",
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
     "image_with_text_j8Qig9",
