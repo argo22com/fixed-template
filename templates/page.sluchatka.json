@@ -11,66 +11,131 @@
         "padding_bottom": 40
       }
     },
-    "image_banner_aBk4NA": {
-      "type": "image-banner",
+    "slideshow_wxJP4x": {
+      "type": "slideshow",
       "blocks": {
-        "heading_ewtxqN": {
-          "type": "heading",
+        "slide_r7UA9i": {
+          "type": "slide",
           "settings": {
-            "heading": "POUZDRO OXFORD",
-            "size": "h1"
+            "image": "shopify:\/\/shop_images\/sluchatka_2_banner-desktop_v1.jpg",
+            "badge_label": "",
+            "heading": "PODS PRO",
+            "text": "SLUCHÁTKA NA NERUŠENÝ POSLECH S DLOUHOU VÝDRŽÍ",
+            "hide_text_on_mobile": false,
+            "button_label": "",
+            "price": "",
+            "link": "",
+            "button_style": "primary",
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#fff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#fff",
+            "colors_badge_foreground": "#fff",
+            "colors_badge_background": "#F87171",
+            "colors_button_text": "#fff",
+            "colors_button": "#000",
+            "colors_text_mobile": "#fff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#fff",
+            "colors_badge_foreground_mobile": "#fff",
+            "colors_badge_background_mobile": "#F87171",
+            "colors_button_text_mobile": "#fff",
+            "colors_button_mobile": "#000"
           }
         },
-        "text_zym3RF": {
-          "type": "text",
+        "slide_aw3xYC": {
+          "type": "slide",
           "settings": {
-            "text": "360° OCHRANA PRO NOTEBOOKY A TABLETY",
-            "text_style": "subtitle"
+            "image": "shopify:\/\/shop_images\/sluchatka_banner-desktop.jpg",
+            "badge_label": "",
+            "heading": "BUDS PRO",
+            "text": "SLUCHÁTKA S UNIKÁTNÍM DESIGNEM A VODĚODOLNOSTÍ IPX4",
+            "hide_text_on_mobile": false,
+            "button_label": "",
+            "price": "",
+            "link": "",
+            "button_style": "primary",
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#fff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#fff",
+            "colors_badge_foreground": "#fff",
+            "colors_badge_background": "#F87171",
+            "colors_button_text": "#fff",
+            "colors_button": "#000",
+            "colors_text_mobile": "#fff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#fff",
+            "colors_badge_foreground_mobile": "#fff",
+            "colors_badge_background_mobile": "#F87171",
+            "colors_button_text_mobile": "#fff",
+            "colors_button_mobile": "#000"
           }
         }
       },
       "block_order": [
-        "heading_ewtxqN",
-        "text_zym3RF"
+        "slide_r7UA9i",
+        "slide_aw3xYC"
       ],
       "settings": {
-        "layout": "grid",
-        "image": "shopify:\/\/shop_images\/OXFORD.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "image_height_mobile": "medium-mobile",
-        "desktop_content_position": "middle-left",
-        "desktop_content_alignment": "left",
-        "keep_ltr": false,
-        "hide_when_empty_image": false,
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slide_height_mobile": "adapt_image_mobile",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_pagination_desktop": true,
+        "enable_navigation_desktop": true,
         "preload": false,
-        "enable_parallax_scrolling_effect": false,
-        "mobile_content_alignment": "center",
-        "show_text_below_image": true,
-        "color_text": "#ffffff",
-        "gradient_heading_desktop": "",
-        "color_button_text_1": "#000000",
-        "color_button_1": "#ffffff",
-        "color_button_text_2": "#000000",
-        "color_button_2": "#ffffff",
-        "colors_badge_foreground": "#ffffff",
-        "colors_badge_background": "#f87171",
-        "color_countdown_foreground": "#000000",
-        "color_countdown_background": "#ffffff",
-        "color_text_mobile": "#ffffff",
-        "gradient_heading_mobile": "",
-        "color_button_text_1_mobile": "#000000",
-        "color_button_1_mobile": "#ffffff",
-        "color_button_text_2_mobile": "#000000",
-        "color_button_2_mobile": "#ffffff",
-        "colors_badge_foreground_mobile": "#ffffff",
-        "colors_badge_background_mobile": "#f87171",
-        "color_countdown_foreground_mobile": "#000000",
-        "color_countdown_background_mobile": "#ffffff",
-        "background_container_mobile": "#565656",
-        "gradient_background_container_mobile": "",
+        "show_text_below": true,
+        "enable_pagination_mobile": true,
+        "enable_navigation_mobile": true,
+        "accessibility_info": "Slideshow about our brand",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "rich_text_dWXckk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rMyJr8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>S okolním světem vás propojí, nebo od něj odpojí<\/strong><\/h3>",
+            "heading_size": "h2"
+          }
+        },
+        "text_Y9R7Pt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Naše řada sluchátek Pro je nabitá všemi funkcemi, které od TWS sluchátek chcete.<br\/>ANC funkce, která snadno odfiltruje veškeré okolní hluky abyste se mohli naplno ponořit do toho, co zrovna děláte, transparency mód, který naopak umožňuje, aby byly okolní zvuky slyšet když je to potřeba. K tomu navíc se můžete spolehnout i na perfektní výdrž baterie, bezdrátové nabíjení, dotykové ovládání a perfektní párování s vaším zařízením.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rMyJr8",
+        "text_Y9R7Pt"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "text_icons_fictdW": {
@@ -80,9 +145,9 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/manufacturebox01.png",
-            "title": "",
-            "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
+            "custom_icon": "shopify:\/\/shop_images\/ANC_blue-e1700309897742.png",
+            "title": "Active Noise Cancelling (ANC)",
+            "subheading": "Dokonale izoluje okolní hluky a nechá vás soustředit se jen na poslech",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -91,9 +156,9 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/top-grain-1.png",
-            "title": "",
-            "subheading": "Na výběru kůže záleží, proto máme jen tu nejlepší od italských dodavatelů.",
+            "custom_icon": "shopify:\/\/shop_images\/ANC_orange-e1700309973911.png",
+            "title": "Transparency mode",
+            "subheading": "Při zapnutí propouští okolní zvuky, abyste byli v bezpečí i na rušné ulici",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -102,9 +167,42 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/natural-material.png",
-            "title": "",
-            "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
+            "custom_icon": "shopify:\/\/shop_images\/FIXED_ico_PowerDelivery-1.png",
+            "title": "Extra výdrž baterie",
+            "subheading": "Spolu s nabíjecím pouzdrem vydrží doslova celodenní zápřah až 24 hodin poslechu",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_DjUY3z": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/wirelesscharging.png",
+            "title": "Bezdrátové nabíjení",
+            "subheading": "Pouzdro stačí pro doplnění energie položit na jakoukoliv Qi bezdrátovou nabíječku",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_CfadXp": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/FIXED_ico_Soft_touch.png",
+            "title": "Dotykové ovládání",
+            "subheading": "Pohyb v playlistu, příjem hovoru nebo přepnutí ANC\/Transparency módu vyřešíte pouhým poklepáním",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_4RmwkA": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/instantconnect-1.png",
+            "title": "Okamžité párování",
+            "subheading": "Sluchátka se spojí s telefonem okamžitě po otevření nabíjecího pouzdra",
             "link": "",
             "open_link_in_new_tab": false
           }
@@ -113,7 +211,10 @@
       "block_order": [
         "text_icon_Cimifi",
         "text_icon_FKQJQ6",
-        "text_icon_rHAfmj"
+        "text_icon_rHAfmj",
+        "text_icon_DjUY3z",
+        "text_icon_CfadXp",
+        "text_icon_4RmwkA"
       ],
       "settings": {
         "title": "",
@@ -143,292 +244,78 @@
         "padding_bottom": 36
       }
     },
-    "featured_product_kFbBf8": {
-      "type": "featured-product",
+    "multicolumn_DX9wN8": {
+      "type": "multicolumn",
       "blocks": {
-        "title_Vmb8MU": {
-          "type": "title",
+        "column_y4PQfQ": {
+          "type": "column",
           "settings": {
-            "show_vendor_link": true,
-            "title_size": "h2"
+            "image": "shopify:\/\/shop_images\/podspro-768x477.jpg",
+            "icon": "check",
+            "title": "Pods Pro",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "VÍCE O PODS PRO",
+            "link": "",
+            "button_style": "secondary",
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#e94200",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
           }
         },
-        "price_wKtEmC": {
-          "type": "price",
+        "column_Jz3mxg": {
+          "type": "column",
           "settings": {
-            "variant_price": false
-          }
-        },
-        "sale_box_CC7qVy": {
-          "type": "sale_box",
-          "settings": {
-            "show_free_shipping_bar": true,
-            "enable_compare": true,
-            "picker_type": "button",
-            "enable_color_swatches": true,
-            "color_swatches_style": "variant",
-            "size_chart_enable": true,
-            "size_chart_option": "size",
-            "size_chart_link_label": "Size chart",
-            "size_chart_page": "",
-            "quantity_selector_enable": true,
-            "show_dynamic_checkout": true
-          }
-        },
-        "description_fYbkX8": {
-          "type": "description",
-          "settings": {
-            "truncate_description": 0,
-            "read_more_button": "Read more"
-          }
-        },
-        "share_gJVpTD": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share",
-            "enable_floating_layout": false,
-            "share_on_facebook": true,
-            "share_on_twitter": true,
-            "share_on_pinterest": true,
-            "share_on_email": true,
-            "share_link": true
+            "image": "shopify:\/\/shop_images\/budspro-768x477.jpg",
+            "icon": "check",
+            "title": "Buds Pro",
+            "text": "<p>Malá, ale překvapivě výkonná sluchátka s ANC nabitá Pro funkcemi, navíc s odolností proti vodě IPX4.<\/p>",
+            "link_label": "VÍCE O BUDS PRO",
+            "link": "",
+            "button_style": "secondary",
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#e94200",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
           }
         }
       },
       "block_order": [
-        "title_Vmb8MU",
-        "price_wKtEmC",
-        "sale_box_CC7qVy",
-        "description_fYbkX8",
-        "share_gJVpTD"
+        "column_y4PQfQ",
+        "column_Jz3mxg"
       ],
       "settings": {
-        "product": "",
-        "section_width": "page-width",
-        "use_background_input": true,
-        "auto_scroll_up_mobile": false,
-        "hide_when_empty_content": true,
-        "view_details_button_text": "View product details",
-        "color_scheme": "",
-        "enable_sticky_info": true,
-        "default_image": "product_featured_image",
-        "media_position": "left",
-        "gallery_layout": "stacked",
-        "thumbnail_position": "left",
-        "media_size": "medium",
-        "image_ratio": "adapt",
-        "image_fit": true,
-        "disable_images_lightbox": false,
-        "mobile_thumbnails": "hide",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "text_icons_J39XEV": {
-      "type": "text-icons",
-      "blocks": {
-        "text_icon_qapCnK": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/Oxford1.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_zzxPQ6": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/oxford4.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_C3z8U6": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/oxford3.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_Tz8WKd": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/oxford4.jpg",
-            "title": "",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "text_icon_qapCnK",
-        "text_icon_zzxPQ6",
-        "text_icon_C3z8U6",
-        "text_icon_Tz8WKd"
-      ],
-      "settings": {
-        "title": "V jednoduchosti je krása",
-        "subtitle": "Zavírání na silné magnety  komplexní ochrana vašeho zařízení  s dlouholetou výdrží.",
-        "heading_size": "h1",
-        "icon_width_desktop": 50,
-        "text_position": "bottom",
-        "enable_heading_in_box": false,
-        "columns_desktop": 3,
-        "columns_tablet": 3,
-        "auto_fit": false,
-        "column_alignment": "center",
-        "highlight_icon": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "border_width": 1,
-        "border_opacity": 0,
-        "border_spacing": 0,
-        "highlight_border": false,
-        "border_shape": "square",
-        "blur_background": false,
-        "columns_mobile": "1",
-        "icon_width_mobile": 30,
-        "border_spacing_mobile": 0,
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_Acq8gW": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Mm7XYt": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h3>V JEDNODUCHOSTI JE KRÁSA<\/h3>",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Mm7XYt"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "collection_list_zf9QEz": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_mM96Df": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_image": "shopify:\/\/shop_images\/Oxford1.jpg",
-            "custom_title": ""
-          }
-        },
-        "featured_collection_NHhcPp": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_image": "shopify:\/\/shop_images\/oxford2.jpg",
-            "custom_title": ""
-          }
-        },
-        "featured_collection_a7xEL7": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_image": "shopify:\/\/shop_images\/oxford3.jpg",
-            "custom_title": ""
-          }
-        },
-        "featured_collection_nkj73G": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_image": "shopify:\/\/shop_images\/oxford4.jpg",
-            "custom_title": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_mM96Df",
-        "featured_collection_NHhcPp",
-        "featured_collection_a7xEL7",
-        "featured_collection_nkj73G"
-      ],
-      "settings": {
-        "title": "",
+        "title": "Promotion cards",
         "subtitle": "",
         "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
         "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "full_width": false,
+        "text_position": "bottom",
+        "columns_desktop": 2,
+        "columns_tablet": 2,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
         "enable_section_box_layout": false,
-        "enable_desktop_slider": false,
         "color_scheme": "",
-        "show_view_all": false,
-        "collection_card_show_title": true,
-        "show_products_count": false,
-        "columns_tablet": "2",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
         "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
         "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "rich_text_WGRr4t": {
-      "type": "rich-text",
-      "blocks": {
-        "text_TChkMN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Zavírání na silné magnety, komplexní ochrana vašeho zařízení s dlouholetou výdrží.<\/p>"
-          }
-        },
-        "button_DmicHy": {
-          "type": "button",
-          "settings": {
-            "button_label": "OBJEVIT VŠECHNY MODELY",
-            "button_link": "",
-            "button_style_1": "primary",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "text_TChkMN",
-        "button_DmicHy"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "image_with_text_MUzzfc": {
@@ -437,7 +324,7 @@
         "heading_JW7Xxj": {
           "type": "heading",
           "settings": {
-            "heading": "Kůže zraje",
+            "heading": "Podívejte se s námi do světa sluchátek řady Pro",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -445,15 +332,15 @@
         "text_LgN74N": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.<\/li><li>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.<\/li><li>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.<\/li><\/ul>",
+            "text": "<p>Sluchátka řady Pro výrazně zvyšují uživatelský zážitek, ale i bezpečnost. Díky ANC a transparency módu si můžete vybrat, kdy se od světa odpojíte a kdy okolní zvuky naopak slouží pro vaše bezpečí.<\/p>",
             "text_style": "body"
           }
         },
         "button_JkNULB": {
           "type": "button",
           "settings": {
-            "button_label": "{{ page.metafields.custom.dynmic_content.value.image_with_text_button_1.value }}",
-            "button_link": "{{ page.metafields.custom.dynmic_content.value.image_with_text_link_1.value }}",
+            "button_label": "",
+            "button_link": "",
             "button_style": "solid"
           }
         }
@@ -465,10 +352,10 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/oxford_brown.jpg",
+        "image": "shopify:\/\/shop_images\/Sluchatka_video_cover.jpg",
         "height": "small",
         "desktop_image_width": "medium",
-        "layout": "text_first",
+        "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -499,7 +386,7 @@
         "heading_JyC6aT": {
           "type": "heading",
           "settings": {
-            "heading": "Péče o kůži",
+            "heading": "Nakupte sluchátka od výrobce s dopravou zdarma",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -507,14 +394,14 @@
         "text_XpH7fj": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu<\/li><li>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci<\/li><li>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.<\/li><li>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.<\/li><\/ul>",
+            "text": "<p>Při nákupu sluchátek <a href=\"https:\/\/obchod.fixed.zone\/product\/bezdratova-tws-sluchatka-fixed-buds-pro-s-anc-a-bezdratovym-nabijenim-seda\/?utm_source=referral&utm_medium=fixed&_gl=1*cmhxul*_ga*NjIxMjM0OTY1LjE2OTM4MTMwNzA.*_ga_5Q6XBVHJPW*MTcwMDEzMjI3Mi4xMDIuMS4xNzAwMTMzMTU5LjM3LjAuMA..\">Buds Pro<\/a> nebo <a href=\"https:\/\/obchod.fixed.zone\/product\/bezdratova-tws-sluchatka-fixed-pods-pro-s-anc-a-bezdratovym-nabijenim-bila\/?utm_source=referral&utm_medium=fixed&_gl=1*18dgfbg*_ga*NjIxMjM0OTY1LjE2OTM4MTMwNzA.*_ga_5Q6XBVHJPW*MTcwMDEzMjI3Mi4xMDIuMS4xNzAwMTMzMTM3LjU5LjAuMA..\">Pods Pro <\/a> vám bude v košíku automaticky odečtena cena za dopravu.<\/p><p>Tato akce platí pouze <strong>do 20.12.<\/strong> tak si jí nenechte ujít!<\/p>",
             "text_style": "body"
           }
         },
         "button_4izWyt": {
           "type": "button",
           "settings": {
-            "button_label": "",
+            "button_label": "KOUPIT PODS PRO",
             "button_link": "",
             "button_style": "solid"
           }
@@ -527,10 +414,10 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/oxford4.jpg",
+        "image": "shopify:\/\/shop_images\/Sluchatka.jpg",
         "height": "small",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -553,6 +440,68 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_UjPCyz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_N8CpXh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Jak si vybrat ta správná sluchátka?",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_xnJ6tx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vsadit na špunty, nebo raději sáhnout po peckách? A jak je to s výdrží baterie? I takové otázky vás mohou napadnout, pokud hledáte ideální bezdrátová sluchátka. Mrkněte na náš blog, sepsali jsme potřebné informace pro pomoc s rozhodováním.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_WzqjnE": {
+          "type": "button",
+          "settings": {
+            "button_label": "ČÍST BLOG",
+            "button_link": "shopify:\/\/blogs\/news\/prehledne-jak-pro-sebe-vybrat-idealni-bezdratova-sluchatka",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_N8CpXh",
+        "text_xnJ6tx",
+        "button_WzqjnE"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/Sluchatka2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "featured_products_tabs_Fy3G9B": {
@@ -619,15 +568,13 @@
   },
   "order": [
     "main",
-    "image_banner_aBk4NA",
+    "slideshow_wxJP4x",
+    "rich_text_dWXckk",
     "text_icons_fictdW",
-    "featured_product_kFbBf8",
-    "text_icons_J39XEV",
-    "rich_text_Acq8gW",
-    "collection_list_zf9QEz",
-    "rich_text_WGRr4t",
+    "multicolumn_DX9wN8",
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
+    "image_with_text_UjPCyz",
     "featured_products_tabs_Fy3G9B",
     "video_XhEQtC"
   ]
