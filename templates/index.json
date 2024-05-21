@@ -241,14 +241,15 @@
         "column_CyN8xU": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/float.png",
             "icon": "check",
             "title": "POUZDRA FLOAT",
             "text": "<p>Voděodolná pouzdra pro léto s telefonem v suchu<\/p>",
             "link_label": "ZJISTIT VÍCE",
             "link": "",
             "button_style": "link",
-            "card_color_text": "#000",
-            "color_button_text": "#fff",
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#e5e5e5",
             "card_color_background_gradient": ""
@@ -264,8 +265,8 @@
             "link_label": "ZJISTIT VÍCE",
             "link": "",
             "button_style": "link",
-            "card_color_text": "#000",
-            "color_button_text": "#fff",
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#e5e5e5",
             "card_color_background_gradient": ""
@@ -277,7 +278,7 @@
         "column_bHC7mW"
       ],
       "settings": {
-        "title": "Promotion cards",
+        "title": "",
         "subtitle": "",
         "heading_size": "h1",
         "media_type": "image",
