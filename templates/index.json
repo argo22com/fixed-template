@@ -203,98 +203,110 @@
         "padding_bottom": 40
       }
     },
-    "1aded6ef-5727-4347-bf56-9fc610343e55": {
-      "type": "collection-list",
+    "rich_text_RPc8kt": {
+      "type": "rich-text",
       "blocks": {
-        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-0": {
-          "type": "featured_collection",
+        "heading_hh6rpY": {
+          "type": "heading",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "heading": "<h2><strong>HLEDEJ PŘÍSLUŠENSTVÍ PODLE ZAŘÍZENÍ<\/strong><\/h2>",
+            "heading_size": "h2"
           }
         },
-        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-1": {
-          "type": "featured_collection",
+        "text_jr9xnA": {
+          "type": "text",
           "settings": {
-            "collection": "",
-            "custom_title": ""
-          }
-        },
-        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_title": ""
-          }
-        },
-        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_title": ""
+            "text": "<p>Vyber si telefon, hodinky nebo tablet ze seznamu a najdi dostupné příslušenství přesně pro své zařízení.<\/p>"
           }
         }
       },
       "block_order": [
-        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-0",
-        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-1",
-        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-2",
-        "template--18418624921901__1aded6ef-5727-4347-bf56-9fc610343e55-1680769155d946d1f5-3"
+        "heading_hh6rpY",
+        "text_jr9xnA"
       ],
       "settings": {
-        "title": "Collections",
-        "subtitle": "",
-        "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "full_width": true,
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
         "enable_section_box_layout": false,
-        "enable_desktop_slider": false,
-        "color_scheme": "background-2",
-        "show_view_all": false,
-        "collection_card_show_title": true,
-        "show_products_count": true,
-        "columns_tablet": "2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "color_scheme": "",
+        "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 52
       }
     },
-    "5b71ef94-4638-489f-ae0b-ff72c1082704": {
-      "type": "featured-collection",
-      "custom_css": [
-
+    "multicolumn_DzgRVp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_CyN8xU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/float.jpg",
+            "icon": "check",
+            "title": "POUZDRA FLOAT",
+            "text": "<p>Voděodolná pouzdra pro léto s telefonem v suchu<\/p>",
+            "link_label": "ZJISTIT VÍCE",
+            "link": "",
+            "button_style": "link",
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#e5e5e5",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_bHC7mW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/zen20_pro.jpg",
+            "icon": "check",
+            "title": "ZEN 20 PRO",
+            "text": "<p>Powerbanka, která zvládne dobít notebook i cokoliv dalšího<\/p>",
+            "link_label": "ZJISTIT VÍCE",
+            "link": "",
+            "button_style": "link",
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#e5e5e5",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_CyN8xU",
+        "column_bHC7mW"
       ],
       "settings": {
-        "title": "Bestsellery",
-        "subtitle": "Bestsellery",
-        "collection": "",
+        "title": "Promotion cards",
+        "subtitle": "",
         "heading_size": "h1",
-        "products_to_show": 3,
-        "columns_desktop": 3,
-        "full_width": true,
-        "show_view_all": true,
-        "enable_desktop_slider": false,
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 2,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
         "enable_section_box_layout": false,
         "color_scheme": "background-1",
-        "image_position_desktop": "left",
-        "image_height": "adapt_product_list",
-        "image_height_mobile": "34",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "enable_compare": true,
-        "enable_quick_view": true,
-        "show_color_swatches": true,
-        "color_swatches_style": "custom",
-        "columns_tablet": "3",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
         "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "579dde05-0f38-4f94-be74-555c4e260873": {
@@ -620,8 +632,8 @@
   },
   "order": [
     "518b8ced-997b-408e-84d5-64fe5082a6a1",
-    "1aded6ef-5727-4347-bf56-9fc610343e55",
-    "5b71ef94-4638-489f-ae0b-ff72c1082704",
+    "rich_text_RPc8kt",
+    "multicolumn_DzgRVp",
     "579dde05-0f38-4f94-be74-555c4e260873",
     "b6fc3696-5052-44a5-8e1e-f832f6d868be",
     "3f150f9f-e43d-4feb-85ee-4160e6f40f24",
