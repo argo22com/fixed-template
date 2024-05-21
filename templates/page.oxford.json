@@ -445,17 +445,29 @@
             "heading": "<h3>V JEDNODUCHOSTI JE KRÁSA<\/h3>",
             "heading_size": "h2"
           }
+        },
+        "button_x4pqUb": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
         }
       },
       "block_order": [
-        "heading_Mm7XYt"
+        "heading_Mm7XYt",
+        "button_x4pqUb"
       ],
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "large",
         "content_alignment": "center",
         "enable_section_box_layout": false,
-        "color_scheme": "",
+        "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -642,7 +654,7 @@
         "button_4izWyt": {
           "type": "button",
           "settings": {
-            "button_label": "",
+            "button_label": "více informací",
             "button_link": "",
             "button_style": "solid"
           }
@@ -674,7 +686,7 @@
         "color_caption": "#000000",
         "color_countdown": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#dc2626",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
@@ -696,10 +708,22 @@
             "products_to_show": 6,
             "columns_desktop": 3
           }
+        },
+        "featured_products_9DVkmG": {
+          "type": "featured_products",
+          "settings": {
+            "title": "Featured products",
+            "product_list": [
+
+            ],
+            "products_to_show": 4,
+            "columns_desktop": 4
+          }
         }
       },
       "block_order": [
-        "featured_products_4GpF7r"
+        "featured_products_4GpF7r",
+        "featured_products_9DVkmG"
       ],
       "settings": {
         "title": "Další kožené produkty",
