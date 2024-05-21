@@ -241,7 +241,6 @@
         "column_CyN8xU": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/float.jpg",
             "icon": "check",
             "title": "POUZDRA FLOAT",
             "text": "<p>Voděodolná pouzdra pro léto s telefonem v suchu<\/p>",
@@ -258,7 +257,7 @@
         "column_bHC7mW": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/zen20_pro.jpg",
+            "image": "shopify:\/\/shop_images\/zen20_pro.png",
             "icon": "check",
             "title": "ZEN 20 PRO",
             "text": "<p>Powerbanka, která zvládne dobít notebook i cokoliv dalšího<\/p>",
