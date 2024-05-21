@@ -442,25 +442,20 @@
         "heading_Mm7XYt": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>V JEDNODUCHOSTI JE KRÁSA<\/h3>",
+            "heading": "<h3><strong>V JEDNODUCHOSTI JE KRÁSA<\/strong><\/h3>",
             "heading_size": "h2"
           }
         },
-        "button_x4pqUb": {
-          "type": "button",
+        "text_Gzj79m": {
+          "type": "text",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_1": "primary",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary"
+            "text": "<p>Zavírání na silné magnety  komplexní ochrana vašeho zařízení  s dlouholetou výdrží.<\/p>"
           }
         }
       },
       "block_order": [
         "heading_Mm7XYt",
-        "button_x4pqUb"
+        "text_Gzj79m"
       ],
       "settings": {
         "desktop_content_position": "center",
