@@ -309,84 +309,6 @@
         "padding_bottom": 36
       }
     },
-    "579dde05-0f38-4f94-be74-555c4e260873": {
-      "type": "gallery",
-      "blocks": {
-        "template--18627972890925__579dde05-0f38-4f94-be74-555c4e260873-1681925793128c5672-0": {
-          "type": "text-overlay-image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/taglogoMFI2-768x803.png",
-            "link": "",
-            "keep_ltr": false,
-            "text": "Chytrý lokátor pro iOS",
-            "text_style": "subtitle",
-            "text_size": "large",
-            "heading": "Tag",
-            "heading_size": "h4",
-            "heading_uppercase": false,
-            "button_label": "",
-            "button_style": "secondary",
-            "button_size": "normal",
-            "button_pin_bottom": true,
-            "horizontal_alignment": "right",
-            "vertical_alignment": "start",
-            "heading_color": "#0f172a",
-            "caption_color": "#fff",
-            "button_foreground": "#ffffff",
-            "button_background": "#0f172a",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "10b3e77d-3878-4876-8e62-56d624a06655": {
-          "type": "text-overlay-image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/fixmfle-gr_1-768x768.png",
-            "link": "https:\/\/www.fixed.zone\/products\/fixed-tag\/",
-            "keep_ltr": false,
-            "text": "Text as subtitle",
-            "text_style": "subtitle",
-            "text_size": "large",
-            "heading": "Item heading",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "Button",
-            "button_style": "secondary",
-            "button_size": "normal",
-            "button_pin_bottom": true,
-            "horizontal_alignment": "right",
-            "vertical_alignment": "start",
-            "heading_color": "#212c4d",
-            "caption_color": "#fff",
-            "button_foreground": "#ffffff",
-            "button_background": "#0f172a",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "template--18627972890925__579dde05-0f38-4f94-be74-555c4e260873-1681925793128c5672-0",
-        "10b3e77d-3878-4876-8e62-56d624a06655"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "flexible_columns_layout": "grid",
-        "columns_desktop": 4,
-        "columns_tablet": "2",
-        "full_width": true,
-        "auto_fit": false,
-        "disable_item_space": true,
-        "enable_section_box_layout": false,
-        "color_scheme": "background-1",
-        "image_ratio": "square",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "rich_text_yjX8CW": {
       "type": "rich-text",
       "blocks": {
@@ -844,7 +766,6 @@
     "518b8ced-997b-408e-84d5-64fe5082a6a1",
     "rich_text_RPc8kt",
     "multicolumn_DzgRVp",
-    "579dde05-0f38-4f94-be74-555c4e260873",
     "rich_text_yjX8CW",
     "banner_grid_9TnpLD",
     "rich_text_CM9eEp",
