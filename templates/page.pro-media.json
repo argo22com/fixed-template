@@ -19,10 +19,30 @@
             "heading": "Pro média",
             "size": "h0"
           }
+        },
+        "text_kLRUWb": {
+          "type": "text",
+          "settings": {
+            "text": "Chcete se dozvědět více o naší firmě a jejím vývoji? Neváhejte nás kontaktovat.",
+            "text_style": "body"
+          }
+        },
+        "buttons_iKLAiA": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Zjistit více",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
         }
       },
       "block_order": [
-        "heading_NTttBg"
+        "heading_NTttBg",
+        "text_kLRUWb",
+        "buttons_iKLAiA"
       ],
       "settings": {
         "layout": "grid",
@@ -40,8 +60,8 @@
         "show_text_below_image": true,
         "color_text": "#fff",
         "gradient_heading_desktop": "",
-        "color_button_text_1": "#000",
-        "color_button_1": "#fff",
+        "color_button_text_1": "#fff",
+        "color_button_1": "#e94200",
         "color_button_text_2": "#000",
         "color_button_2": "#fff",
         "colors_badge_foreground": "#fff",
