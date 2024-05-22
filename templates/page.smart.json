@@ -135,11 +135,11 @@
             "text_style": "body"
           }
         },
-        "button_JkNULB": {
+        "button_xNVhWk": {
           "type": "button",
           "settings": {
-            "button_label": "{{ page.metafields.custom.dynmic_content.value.image_with_text_button_1.value }}",
-            "button_link": "{{ page.metafields.custom.dynmic_content.value.image_with_text_link_1.value }}",
+            "button_label": "Jak přidat lokátor do aplikace Najít",
+            "button_link": "",
             "button_style": "solid"
           }
         }
@@ -147,7 +147,7 @@
       "block_order": [
         "heading_JW7Xxj",
         "text_LgN74N",
-        "button_JkNULB"
+        "button_xNVhWk"
       ],
       "settings": {
         "grid_layout": "grid",
@@ -265,7 +265,7 @@
         "text_KmgUnq"
       ],
       "settings": {
-        "grid_layout": "stretched_grid",
+        "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/SMART_lp_3.jpg",
         "height": "small",
         "desktop_image_width": "small",
