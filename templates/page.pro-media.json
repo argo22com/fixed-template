@@ -117,7 +117,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "2024",
-            "icon": "emoji_happy",
+            "icon": "pencil",
             "row_content": "",
             "page": "2024"
           }
@@ -126,7 +126,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "2023",
-            "icon": "emoji_happy",
+            "icon": "pencil",
             "row_content": "",
             "page": "2023"
           }
@@ -135,7 +135,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "2022",
-            "icon": "emoji_happy",
+            "icon": "pencil",
             "row_content": "",
             "page": ""
           }
@@ -144,7 +144,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "2021",
-            "icon": "emoji_happy",
+            "icon": "pencil",
             "row_content": "",
             "page": ""
           }
