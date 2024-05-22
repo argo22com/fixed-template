@@ -152,17 +152,10 @@
             "heading": "<h3><strong>V JEDNODUCHOSTI JE KRÁSA<\/strong><\/h3>",
             "heading_size": "h2"
           }
-        },
-        "text_Gzj79m": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Zavírání na silné magnety  komplexní ochrana vašeho zařízení  s dlouholetou výdrží.<\/p>"
-          }
         }
       },
       "block_order": [
-        "heading_Mm7XYt",
-        "text_Gzj79m"
+        "heading_Mm7XYt"
       ],
       "settings": {
         "desktop_content_position": "center",
