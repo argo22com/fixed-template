@@ -17,14 +17,14 @@
         "heading_ewtxqN": {
           "type": "heading",
           "settings": {
-            "heading": "FIXED SMART",
+            "heading": "RESTORY",
             "size": "h1"
           }
         },
         "text_zym3RF": {
           "type": "text",
           "settings": {
-            "text": "CHYTRÉ LOKÁTORY. MĚJTE SVÉ CENNOSTI VŽDY POD KONTROLOU",
+            "text": "RECYKLOVANÉ TPU POUZDRO",
             "text_style": "body"
           }
         }
@@ -35,7 +35,7 @@
       ],
       "settings": {
         "layout": "grid",
-        "image": "shopify:\/\/shop_images\/Smart.jpg",
+        "image": "shopify:\/\/shop_images\/restory_banner.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
@@ -71,6 +71,52 @@
         "gradient_background_container_mobile": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "text_icons_gVrHBP": {
+      "type": "text-icons",
+      "blocks": {
+        "text_icon_MPFk7k": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/restory_releaf.png",
+            "title": "Zlepšujeme život s chytrými zařízeními. Udržitelně.",
+            "subheading": "<strong>Logem ReLeaf označujeme naše produkty a projekty zaměřené na snižování dopadu na životní prostředí. Naším cílem je v maximální možné míře přispět k udržitelné budoucnosti a předat planetu našim dětem v co nejlepším stavu.<\/strong>",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_icon_MPFk7k"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h2",
+        "icon_width_desktop": 18,
+        "text_position": "right",
+        "enable_heading_in_box": false,
+        "columns_desktop": 1,
+        "columns_tablet": 3,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "highlight_icon": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "background-2",
+        "border_width": 1,
+        "border_opacity": 0,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "square",
+        "blur_background": false,
+        "columns_mobile": "1",
+        "icon_width_mobile": 15,
+        "border_spacing_mobile": 0,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "rich_text_7BWfWR": {
@@ -167,9 +213,9 @@
         "gradient_heading": "",
         "color_text": "#000000",
         "color_highlight_text": "#e94200",
-        "color_caption": "#fff",
+        "color_caption": "#ffffff",
         "color_countdown": "#000000",
-        "color_button_text": "#fff",
+        "color_button_text": "#ffffff",
         "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
@@ -424,6 +470,7 @@
   "order": [
     "main",
     "image_banner_aBk4NA",
+    "text_icons_gVrHBP",
     "rich_text_7BWfWR",
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
