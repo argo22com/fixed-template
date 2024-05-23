@@ -125,32 +125,20 @@
         "heading_Nmdam7": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>Chytré lokátory s podporou Apple Find My<\/strong><\/h3>",
+            "heading": "<h3><strong>RECYKLOVANÉ POUZDRO RESTORY<\/strong><\/h3>",
             "heading_size": "h2"
           }
         },
         "text_eqbpAU": {
           "type": "text",
           "settings": {
-            "text": "<p>Hledání peněženky a klíčů nebylo nikdy jednodušší. S FIXED chytrými lokátory, které jsou kompatibilní se sítí Apple Find My, už budete mít své věci vždy pod kontrolou. Pomohou vám v tom miliony uživatelů zařízení s operačním systémem iOS po celém světě. Stačí si přidat svůj Tag do aplikace a vše ostatní už je hračka.<br\/>Jak na to?<\/p>"
-          }
-        },
-        "button_MYnFAt": {
-          "type": "button",
-          "settings": {
-            "button_label": "PŘEJÍT NA PRODUKTY",
-            "button_link": "",
-            "button_style_1": "primary",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary"
+            "text": "<p>Stejné pouzdro, stejná cena, stejná kvalita.<br\/>Vyrobeno z recyklovaného materiálu z nepoužitých TPU pouzder v EU.<\/p>"
           }
         }
       },
       "block_order": [
         "heading_Nmdam7",
-        "text_eqbpAU",
-        "button_MYnFAt"
+        "text_eqbpAU"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -169,7 +157,7 @@
         "heading_JW7Xxj": {
           "type": "heading",
           "settings": {
-            "heading": "1. Přidejte zařízení do aplikace Find My",
+            "heading": "1. krok k ReStory",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -177,27 +165,18 @@
         "text_LgN74N": {
           "type": "text",
           "settings": {
-            "text": "<p>Pořídili jste si nový Tag?<br\/>Přidejte si jej do aplikace Find My. Stačí dlouze stisknout tlačítko a aplikace jej sama nalezne.<\/p><p>Pak už stačí Tag jenom pojmenovat a přidat mu ikonu, ať jej na mapě jednoduše rozeznáte.<\/p><p>Jak funguje hledání? Tag se automaticky hlásí svým zabezpečeným Bluetooth signálem ke všem zařízením, které využívají iOS operativní systém. Data jsou následně ukládaná do iCloudu odkud se propisují do mapy v aplikaci.<\/p>",
+            "text": "<p>Nepoužitá TPU pouzdra, která by byla odsouzena k likvidaci, jsou převezena do lokální výroby, kde jsou následně rozemleta na částice.<\/p><p>Každá várka je důkladně měřena a kontrolována, abychom zajistili skvělou kvalitu každému recyklovanému produktu.<\/p>",
             "text_style": "body"
-          }
-        },
-        "button_xNVhWk": {
-          "type": "button",
-          "settings": {
-            "button_label": "Jak přidat lokátor do aplikace Najít",
-            "button_link": "",
-            "button_style": "solid"
           }
         }
       },
       "block_order": [
         "heading_JW7Xxj",
-        "text_LgN74N",
-        "button_xNVhWk"
+        "text_LgN74N"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/Smart_lp_1.jpg",
+        "image": "shopify:\/\/shop_images\/restory_drt.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -231,7 +210,7 @@
         "heading_JyC6aT": {
           "type": "heading",
           "settings": {
-            "heading": "2. Nastavte si notifikace",
+            "heading": "2. krok k ReStory",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -239,7 +218,7 @@
         "text_XpH7fj": {
           "type": "text",
           "settings": {
-            "text": "<p>Ke každému Tagu si jednoduše můžete nastavit specifické notifikace.<\/p><p>Chcete, aby vás telefon upozornil, že jste někde zanechali svou peněženku, ale nechcete, aby se tak dělo pokaždé když vyběhnete z bytu s odpadem? Také si můžete nastavit notifikaci na to, že se od vás vás Tag vzdaluje.<\/p><p>Aplikace má různé možnosti, jak si upozornění personalizovat.<\/p><p>Hledáte Tag někde ve svém okolí, ale nevidíte ho? V aplikaci zvolíte možnost „prozvonit“ a Tag se vám ozve.<\/p><p>Tag se také dá nahlásit jako ztracený, automaticky tak nálezci ukáže vámi personalizovanou zprávu s kontaktem.<\/p>",
+            "text": "<p>Připravená směs je obohacena o aditiva, roztavena do jednolité hmoty a připravena k lisování.<\/p><p>Pouzdra jsou lisovaná na míru jednotlivým modelům telefonů, aby seděly přesně na každé tlačítko, či výřez.<\/p>",
             "text_style": "body"
           }
         },
@@ -259,7 +238,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/SMART_lp_2.jpg",
+        "image": "shopify:\/\/shop_images\/restory_forma.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -293,7 +272,7 @@
         "heading_dDT4qW": {
           "type": "heading",
           "settings": {
-            "heading": "3. Neomezený počet zařízení",
+            "heading": "3. krok k ReStory",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -301,7 +280,7 @@
         "text_KmgUnq": {
           "type": "text",
           "settings": {
-            "text": "<p>Nezáleží na tom, kolik svých cenností si chcete ohlídat.<\/p><p>Přidejte si neomezený počet Tagů pro každou vaši cennost.<\/p><p>Navíc můžete lokaci každého Tagu sdílet až s pěti lidmi.<\/p><p>Hlídejte své věci beze strachu o své soukromí. Veškerá data jsou samozřejmě zabezpečená, všechna vaše data jsou anonymní, anonymní jsou také data uživatelů, kteří Tag ve svém okolí zaznamenali a data se nikam neukládají.<\/p>",
+            "text": "<p>Hotové produkty jsou ručně baleny do celopapírových obalů a převezeny lokálně k odběratelům.<\/p><p>Využití lokální výroby a eliminace zaoceánské dopravy přispělo k úspoře až 45 % uhlíkové stopy pouzder, které jsou vyrobeny standardním procesem.<\/p>",
             "text_style": "body"
           }
         }
@@ -312,7 +291,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/SMART_lp_3.jpg",
+        "image": "shopify:\/\/shop_images\/restory_baleni.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -338,6 +317,68 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_QbxJnp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_tzaYLz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Snížení uhlíkové stopy podložené studií",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_6NYTDL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>„<em>Jak z pohledu uhlíkové stopy, tak z pohledu celkových environmentálních dopadů vykazují recyklovaná TPU pouzdra ReStory vyrobené společností FIXED výrazně nižší environmentální zátěž. V případě uhlíkové stopy recyklované pouzdro dosahuje 55% hodnoty emisí skleníkových plynů, což je o polovinu méně než u obalů vyrobených v Číně. V případě celkového hodnocení všech environmentálních dopadů vykazuje recyklované pouzdro ještě větší míru úspor a to hodnotu 51 %<\/em>,“<\/p><p><strong>prof. Ing. Vladimír Kočí, Ph.D., MBA <\/strong>z Ústavu udržitelnosti a produktové ekologie VŠCHT Praha<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_WFi8Dc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Prohlédnout studii",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tzaYLz",
+        "text_6NYTDL",
+        "button_WFi8Dc"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/Restory_uhliokva_stopa.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "multicolumn_dATNWi": {
@@ -475,6 +516,7 @@
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
     "image_with_text_j8Qig9",
+    "image_with_text_QbxJnp",
     "multicolumn_dATNWi",
     "rich_text_rXNM9Y",
     "video_XhEQtC"
