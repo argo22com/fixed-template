@@ -158,8 +158,8 @@
           "type": "heading",
           "settings": {
             "heading": "",
-            "heading_size": "h1",
-            "enable_bold_heading": true
+            "heading_size": "h2",
+            "enable_bold_heading": false
           }
         },
         "text_K6fd8C": {
