@@ -355,7 +355,7 @@
         "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/Restory_uhliokva_stopa.png",
         "height": "small",
-        "desktop_image_width": "small",
+        "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
