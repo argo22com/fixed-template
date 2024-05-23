@@ -98,8 +98,8 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/restory_releaf.png",
-        "height": "adapt",
+        "image": "shopify:\/\/shop_images\/restory_releaf_male.png",
+        "height": "small",
         "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "top",
