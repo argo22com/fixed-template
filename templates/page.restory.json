@@ -151,6 +151,36 @@
         "padding_bottom": 52
       }
     },
+    "before_after_image_slider_QxGcXL": {
+      "type": "before-after-image-slider",
+      "settings": {
+        "section_width": "grid",
+        "title": "Předtím a potom",
+        "subtitle": "",
+        "heading_size": "h1",
+        "before_image": "shopify:\/\/shop_images\/TPU.jpg",
+        "after_image": "shopify:\/\/shop_images\/restory-pouzdro.jpg",
+        "image_height": 60,
+        "image_fit": "cover",
+        "before_text": "Nepoužité pouzdro na starší model telefonu",
+        "after_text": "Nové ReStory pouzdro na aktuální model telefonu",
+        "before_text_position": "bottom",
+        "after_text_position": "bottom",
+        "text_size": "h3",
+        "enable_section_box_layout": false,
+        "show_content_first_in_desktop": true,
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "",
+        "drag_cursor_foreground": "#000",
+        "drag_cursor_background": "#fff",
+        "before_text_color": "#fff",
+        "after_text_color": "#fff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_MUzzfc": {
       "type": "image-with-text",
       "blocks": {
@@ -431,6 +461,7 @@
     "image_banner_aBk4NA",
     "text_icons_gVrHBP",
     "rich_text_7BWfWR",
+    "before_after_image_slider_QxGcXL",
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
     "image_with_text_j8Qig9",
