@@ -168,20 +168,11 @@
             "text": "<h3><strong>ANTI-UV Ochrana<\/strong><\/h3><p>Přidáním kvalitních aditiv do směsi zajistí, že pouzdro vydrží mnohem déle, než standardní TPU pouzdra bez zažloutnutí.<\/p><h3><strong>Na míru každému modelu<\/strong><\/h3><p>Pouzdra jsou lisovaná na míru každému modelu.<\/p><h3><strong>Dokonalá ochrana telefonu<\/strong><\/h3><p>Ochrání telefon před pádem i poškrábáním.<\/p><h3><strong>Vyrobeno z kvalitního TPU<\/strong><\/h3><p>Recyklovaná směs je kontrolovaná při každém lisu, je tak zajištěna nekompromisní kvalita každého vyrobeného kusu.<\/p><h3><strong>Snížení uhlíkové stopy o 45 %<\/strong><\/h3><p>Recyklace nepoužitých pouzder a lokální výroba snižuje náročnost na naší planetu. Více ve studii níže.<\/p><h3><strong>Vyrobeno a baleno v EU<\/strong><\/h3><p>Využitím lokální výroby eliminuje uhlíkovou stopu ze zaoceánské dopravy.<\/p>",
             "text_style": "body"
           }
-        },
-        "button_MznizK": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid"
-          }
         }
       },
       "block_order": [
         "heading_hdRc4p",
-        "text_K6fd8C",
-        "button_MznizK"
+        "text_K6fd8C"
       ],
       "settings": {
         "grid_layout": "grid",
