@@ -381,100 +381,19 @@
         "overlay_color": "#1E40AF"
       }
     },
-    "multicolumn_dATNWi": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_639AQA": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/blog_tagcard1.jpg",
-            "icon": "check",
-            "title": "FIXED Tag",
-            "text": "<p>Ideální společník pro hlídání a hledání klíčů, batohů a dalších objektů, stačí připnout karabinou a vaše cennosti jsou chráněné.<\/p><p>Tag je vyrobený z tvrzených materiálů a nemusíte se bát ani vlhkosti s certifikací IP66. Baterie vydrží až 12 měsíců, a dá se jednoduše vyměnit, jedno zařízení vám tak vydrží dlouhá léta.<\/p>",
-            "link_label": "VÍCE O TAG",
-            "link": "",
-            "button_style": "secondary",
-            "card_color_text": "#000000",
-            "color_button_text": "#ffffff",
-            "color_button": "#e94200",
-            "card_color_background": "#ffffff",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_YGyC9A": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/blog_tagcard2.png",
-            "icon": "check",
-            "title": "FIXED Tag Card",
-            "text": "<p>Chytrý lokátor ve tvaru kreditní karty, skvěle zapadne do peněženky, kabelky či jiného zavazadla, která jsou pak vždy hlídané.<\/p><p>Tag Card se dá bezdrátově nabíjet, jedno nabití vydrží až 3 měsíce. Odolné zpracování karty z tvrzeného plastu a certifikace IP67 chrání kartu před vlhkostí a prachem.<\/p>",
-            "link_label": "VÍCE O TAG CARD",
-            "link": "",
-            "button_style": "secondary",
-            "card_color_text": "#000000",
-            "color_button_text": "#ffffff",
-            "color_button": "#e94200",
-            "card_color_background": "#ffffff",
-            "card_color_background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_639AQA",
-        "column_YGyC9A"
-      ],
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h1",
-        "media_type": "image",
-        "media_width_desktop": "100",
-        "image_ratio": "adapt",
-        "text_position": "bottom",
-        "columns_desktop": 2,
-        "columns_tablet": 3,
-        "desktop_gap": 30,
-        "auto_fit": false,
-        "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": false,
-        "button_label": "",
-        "button_link": "",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
-        "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
-        "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_rXNM9Y": {
+    "rich_text_f8tn7m": {
       "type": "rich-text",
       "blocks": {
-        "heading_QV4Y3G": {
+        "heading_ttd8WB": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>JAK CHYTRÉ LOKÁTORY POUŽÍVAT?<\/h3>",
-            "heading_size": "h2"
-          }
-        },
-        "text_EXxTFb": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Mrkněte se na krátké video.<\/p>"
+            "heading": "<h3><strong>Jak vzniká ReStory?<\/strong><\/h3>",
+            "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "heading_QV4Y3G",
-        "text_EXxTFb"
+        "heading_ttd8WB"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -493,8 +412,7 @@
         "title": "",
         "subtitle": "",
         "heading_size": "h2",
-        "cover_image": "shopify:\/\/shop_images\/blog_tagcard4.jpg",
-        "video_url": "https:\/\/youtu.be\/os4MYblhzVc",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=zksfD4kX1sU",
         "description": "FIXED ruční výroba v Prostějově",
         "autoplay": false,
         "enable_controls": false,
@@ -517,8 +435,7 @@
     "image_with_text_t6gYAg",
     "image_with_text_j8Qig9",
     "image_with_text_QbxJnp",
-    "multicolumn_dATNWi",
-    "rich_text_rXNM9Y",
+    "rich_text_f8tn7m",
     "video_XhEQtC"
   ]
 }
