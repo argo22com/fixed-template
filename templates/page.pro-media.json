@@ -18,7 +18,7 @@
           "type": "heading",
           "settings": {
             "heading": "Pro média",
-            "size": "h0"
+            "size": "h1"
           }
         },
         "text_kLRUWb": {
@@ -51,8 +51,8 @@
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
-        "desktop_content_position": "middle-left",
-        "desktop_content_alignment": "left",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
         "keep_ltr": false,
         "hide_when_empty_image": false,
         "preload": false,
