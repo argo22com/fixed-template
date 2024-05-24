@@ -6,9 +6,38 @@
   "sections": {
     "banner_grid_9TnpLD": {
       "settings": {
-        "enable_shadow": false
+        "enable_shadow": false,
+        "media_border_opacity": 0
       },
       "blocks": {
+        "promotion_banner_Nrggkx": {
+          "settings": {
+            "color_text": "#fff",
+            "image_overlay_opacity": 10
+          }
+        },
+        "promotion_banner_JbFm66": {
+          "settings": {
+            "color_text": "#fff",
+            "image_overlay_opacity": 10
+          }
+        },
+        "promotion_banner_Fk3Lmq": {
+          "settings": {
+            "image_overlay_opacity": 10,
+            "color_text": "#fff"
+          }
+        },
+        "promotion_banner_6FCtfC": {
+          "settings": {
+            "image_overlay_opacity": 10
+          }
+        },
+        "promotion_banner_JRj7ji": {
+          "settings": {
+            "image_overlay_opacity": 10
+          }
+        }
       }
     }
   }
