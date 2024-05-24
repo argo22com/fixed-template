@@ -237,7 +237,7 @@
         "border_shape": "square",
         "blur_background": false,
         "columns_mobile": "1",
-        "icon_width_mobile": 30,
+        "icon_width_mobile": 22,
         "border_spacing_mobile": 0,
         "swipe_on_mobile": false,
         "padding_top": 36,
