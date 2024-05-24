@@ -459,12 +459,12 @@
         "button_yAjbgy": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "JAK PŘIDAT FIXED TAG DO APLIKACE NAJÍT",
             "button_link": "shopify:\/\/pages\/jak-pridat-fixed-tag-do-aplikace-najit",
             "button_style_1": "primary",
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_2": "primary"
+            "button_style_2": "secondary"
           }
         }
       },
