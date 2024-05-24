@@ -27,23 +27,11 @@
             "text": "Chcete se dozvědět více o naší firmě a jejím vývoji? Neváhejte nás kontaktovat.",
             "text_style": "body"
           }
-        },
-        "buttons_iKLAiA": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Zjistit více",
-            "button_link_1": "",
-            "button_style_1": "primary",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary"
-          }
         }
       },
       "block_order": [
         "heading_NTttBg",
-        "text_kLRUWb",
-        "buttons_iKLAiA"
+        "text_kLRUWb"
       ],
       "settings": {
         "layout": "grid",
@@ -83,6 +71,31 @@
         "gradient_background_container_mobile": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "rich_text_Crb7hb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Vcfa68": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>Kontakty pro média<\/strong><\/h3>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Vcfa68"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_CJBGge": {
@@ -175,6 +188,7 @@
   "order": [
     "main",
     "image_banner_6aqRKH",
+    "rich_text_Crb7hb",
     "rich_text_CJBGge",
     "collapsible_content_AHHHxy"
   ]
