@@ -6,23 +6,23 @@
   "sections": {
     "banner_grid_9TnpLD": {
       "settings": {
+        "media_border_opacity": 0,
         "enable_shadow": false,
-        "media_border_opacity": 0
+        "desktop_gap": 30
       },
       "blocks": {
-        "promotion_banner_Nrggkx": {
+        "promotion_banner_JRj7ji": {
           "settings": {
-            "color_text": "#fff",
             "image_overlay_opacity": 10
           }
         },
         "promotion_banner_JbFm66": {
           "settings": {
-            "color_text": "#fff",
-            "image_overlay_opacity": 10
+            "image_overlay_opacity": 10,
+            "color_text": "#fff"
           }
         },
-        "promotion_banner_Fk3Lmq": {
+        "promotion_banner_Nrggkx": {
           "settings": {
             "image_overlay_opacity": 10,
             "color_text": "#fff"
@@ -33,9 +33,10 @@
             "image_overlay_opacity": 10
           }
         },
-        "promotion_banner_JRj7ji": {
+        "promotion_banner_Fk3Lmq": {
           "settings": {
-            "image_overlay_opacity": 10
+            "image_overlay_opacity": 10,
+            "color_text": "#fff"
           }
         }
       }
