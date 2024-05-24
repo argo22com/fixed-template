@@ -371,7 +371,7 @@
           "type": "button",
           "settings": {
             "button_label": "Zjistit více",
-            "button_link": "shopify:\/\/collections\/kozene-test",
+            "button_link": "shopify:\/\/pages\/pouzdro-profit",
             "button_style": "solid"
           }
         }
