@@ -4,5 +4,12 @@
     "market": "cz"
   },
   "sections": {
+    "banner_grid_9TnpLD": {
+      "settings": {
+        "enable_shadow": false
+      },
+      "blocks": {
+      }
+    }
   }
 }
