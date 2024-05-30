@@ -18,7 +18,7 @@
             "box_align": "bottom-left",
             "text_alignment": "right",
             "keep_ltr": false,
-            "desktop_image_width": "half",
+            "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center",
