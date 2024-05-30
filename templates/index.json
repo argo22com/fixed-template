@@ -785,73 +785,6 @@
         "padding_bottom": 36
       }
     },
-    "3f150f9f-e43d-4feb-85ee-4160e6f40f24": {
-      "type": "text-icons",
-      "blocks": {
-        "template--20124663021869__3f150f9f-e43d-4feb-85ee-4160e6f40f24-text-icon-1": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "truck",
-            "title": "",
-            "subheading": "Nakupte alespoň za 2000 Kč a dopravu máte zdarma.",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "template--20124663021869__3f150f9f-e43d-4feb-85ee-4160e6f40f24-text-icon-2": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "annotation",
-            "title": "",
-            "subheading": "Your text",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "template--20124663021869__3f150f9f-e43d-4feb-85ee-4160e6f40f24-text-icon-3": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "thumb_down",
-            "title": "",
-            "subheading": "Your text",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "template--20124663021869__3f150f9f-e43d-4feb-85ee-4160e6f40f24-text-icon-1",
-        "template--20124663021869__3f150f9f-e43d-4feb-85ee-4160e6f40f24-text-icon-2",
-        "template--20124663021869__3f150f9f-e43d-4feb-85ee-4160e6f40f24-text-icon-3"
-      ],
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h1",
-        "icon_width_desktop": 50,
-        "text_position": "bottom",
-        "enable_heading_in_box": false,
-        "columns_desktop": 3,
-        "columns_tablet": 3,
-        "auto_fit": false,
-        "column_alignment": "center",
-        "highlight_icon": true,
-        "enable_section_box_layout": false,
-        "color_scheme": "background-2",
-        "border_width": 1,
-        "border_opacity": 0,
-        "border_spacing": 70,
-        "highlight_border": true,
-        "border_shape": "circle",
-        "blur_background": true,
-        "columns_mobile": "1",
-        "icon_width_mobile": 30,
-        "border_spacing_mobile": 30,
-        "swipe_on_mobile": false,
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80": {
       "type": "featured-blog",
       "settings": {
@@ -863,9 +796,9 @@
         "show_view_all": true,
         "columns_desktop": 3,
         "enable_section_box_layout": false,
-        "color_scheme": "background-1",
+        "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
         "blog_card_text_alignment": "left",
-        "blog_card_color_scheme": "inverse",
+        "blog_card_color_scheme": "background-2",
         "show_image": true,
         "show_date": true,
         "show_author": true,
@@ -943,6 +876,42 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_trbrie": {
+      "type": "rich-text",
+      "blocks": {
+        "text_ebUx64": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nenašli jste odpověď na vaši otázku? Konktaktujte naši podporu!<\/p>"
+          }
+        },
+        "button_hwHD86": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zákaznická podpora",
+            "button_link": "shopify:\/\/pages\/podpora",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "text_ebUx64",
+        "button_hwHD86"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -955,8 +924,8 @@
     "banner_grid_9TnpLD",
     "rich_text_CM9eEp",
     "featured_products_tabs_EB8HcH",
-    "3f150f9f-e43d-4feb-85ee-4160e6f40f24",
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
-    "8f5a111c-95e5-4fe4-9470-893b0e7841d7"
+    "8f5a111c-95e5-4fe4-9470-893b0e7841d7",
+    "rich_text_trbrie"
   ]
 }
