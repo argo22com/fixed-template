@@ -93,8 +93,8 @@
       "settings": {
         "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
         "top_color_scheme": "background-1",
-        "logo": "shopify:\/\/shop_images\/img_ac959bc4-0ba8-4203-aa7f-70edee39ff73.jpg",
-        "logo_width": 90,
+        "logo": "shopify:\/\/shop_images\/fixed_logo_bk_ong.png",
+        "logo_width": 150,
         "logo_position": "top-left",
         "menu": "main-menu",
         "show_go_to_link": true,
