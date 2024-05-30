@@ -187,7 +187,7 @@
         "slide_AFmp8D"
       ],
       "settings": {
-        "layout": "full_bleed",
+        "layout": "stretched_grid",
         "slide_height": "large",
         "slide_height_mobile": "small-mobile",
         "auto_rotate": true,
@@ -347,8 +347,8 @@
         "color_scheme": "background-2",
         "background_image_section": "shopify:\/\/shop_images\/img_8c2f62bf-ea7c-4f19-bf55-9db0df5a3151.jpg",
         "enable_parallax_scrolling_effect": true,
-        "colors_text": "#fff",
-        "colors_input": "#64748B",
+        "colors_text": "#ffffff",
+        "colors_input": "#64748b",
         "overlay_color": "#ebecf2",
         "mobile_content_alignment": "left",
         "padding_top": 40,
@@ -475,7 +475,7 @@
             "link": "",
             "button_style": "solid",
             "card_color_text": "#166534",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#effdf4",
             "card_color_background_gradient": ""
@@ -492,7 +492,7 @@
             "link": "",
             "button_style": "solid",
             "card_color_text": "#121212",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
@@ -508,7 +508,7 @@
             "link": "",
             "button_style": "solid",
             "card_color_text": "#a06207",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fefce8",
             "card_color_background_gradient": ""
@@ -524,7 +524,7 @@
             "link": "",
             "button_style": "solid",
             "card_color_text": "#981c1b",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fef2f2",
             "card_color_background_gradient": ""
