@@ -804,38 +804,6 @@
         "padding_bottom": 52
       }
     },
-    "rich_text_yjX8CW": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Lipktj": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p><strong>PRODUKTOVÉ KATEGORIE<\/strong><\/p>",
-            "heading_size": "h2"
-          }
-        },
-        "text_3RDAYi": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Hledáte držák, pouzdro na telefon nebo nabíječku? Podívejte se do našich kategorií.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Lipktj",
-        "text_3RDAYi"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "multicolumn_LmRzeh": {
       "type": "multicolumn",
       "blocks": {
@@ -1076,6 +1044,38 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_yjX8CW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Lipktj": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>PRODUKTOVÉ KATEGORIE - další pokus<\/strong><\/p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_3RDAYi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hledáte držák, pouzdro na telefon nebo nabíječku? Podívejte se do našich kategorií.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Lipktj",
+        "text_3RDAYi"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "banner_grid_9TnpLD": {
@@ -1404,9 +1404,9 @@
     "featured_products_tabs_LXinbh",
     "featured_collection_xcmLFp",
     "newsletter_7jCQFM",
-    "rich_text_yjX8CW",
     "multicolumn_LmRzeh",
     "gallery_hgMnHR",
+    "rich_text_yjX8CW",
     "banner_grid_9TnpLD",
     "rich_text_CM9eEp",
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80",

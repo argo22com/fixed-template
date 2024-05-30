@@ -772,7 +772,7 @@
       },
       "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c": {
         "settings": {
-          "text": "#000",
+          "text": "#000000",
           "sale_off_price": "#0605e3",
           "compare_at_price": "#e94200",
           "background": "#ffffff",
@@ -782,9 +782,9 @@
           "solid_button_background_primary": "#e94200",
           "review_stars": "#fbbf24",
           "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
-          "text_message_success": "#fff",
+          "text_message_success": "#ffffff",
           "background_message_success": "#00aae9",
-          "text_message_warning": "#fff",
+          "text_message_warning": "#ffffff",
           "background_message_warning": "#e94200",
           "text_message_error": "#ea5c5c",
           "background_message_error": "#fef2f2"
