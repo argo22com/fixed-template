@@ -32,12 +32,6 @@
           "settings": {
             "image_overlay_opacity": 10
           }
-        },
-        "promotion_banner_Fk3Lmq": {
-          "settings": {
-            "image_overlay_opacity": 10,
-            "color_text": "#fff"
-          }
         }
       }
     }

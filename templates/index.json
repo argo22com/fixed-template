@@ -309,112 +309,6 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_LmRzeh": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_CLjVGD": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#166534",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#effdf4",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_zMbUqm": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#121212",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#f8fafc",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_4nBjYD": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#a06207",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_TRthke": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#981c1b",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fef2f2",
-            "card_color_background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_CLjVGD",
-        "column_zMbUqm",
-        "column_4nBjYD",
-        "column_TRthke"
-      ],
-      "settings": {
-        "title": "Promotion cards",
-        "subtitle": "",
-        "heading_size": "h1",
-        "media_type": "image",
-        "media_width_desktop": "100",
-        "image_ratio": "adapt",
-        "text_position": "bottom",
-        "columns_desktop": 4,
-        "columns_tablet": 3,
-        "desktop_gap": 30,
-        "auto_fit": false,
-        "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
-        "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
-        "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "newsletter_7jCQFM": {
       "type": "newsletter",
       "blocks": {
@@ -567,6 +461,114 @@
         "padding_bottom": 52
       }
     },
+    "multicolumn_LmRzeh": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_CLjVGD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_7791d557-1b7b-4bd5-9182-28010fc8fe16.jpg",
+            "icon": "check",
+            "title": "Nabíječky",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#166534",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#effdf4",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_zMbUqm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/budspro-768x477.jpg",
+            "icon": "check",
+            "title": "Sluchátka",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_4nBjYD": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "Příslušenství",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#a06207",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fefce8",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_TRthke": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "Hodinky",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#981c1b",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fef2f2",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_CLjVGD",
+        "column_zMbUqm",
+        "column_4nBjYD",
+        "column_TRthke"
+      ],
+      "settings": {
+        "title": "Promotion cards",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "banner_grid_9TnpLD": {
       "type": "banner-grid",
       "blocks": {
@@ -574,7 +576,7 @@
           "type": "promotion-banner",
           "settings": {
             "image": "shopify:\/\/shop_images\/producttile01.jpg",
-            "image_overlay_opacity": 50,
+            "image_overlay_opacity": 10,
             "heading": "Ochrana",
             "heading_size": "h2",
             "text": "",
@@ -587,7 +589,7 @@
             "enable_parallax_scrolling_effect": false,
             "desktop_column": 1,
             "desktop_row": 2,
-            "desktop_content_position": "top-center",
+            "desktop_content_position": "top-right",
             "desktop_narrow_content": false,
             "elements_gap_desktop": "1.5",
             "image_height_mobile": "medium-mobile",
@@ -604,7 +606,7 @@
           "type": "promotion-banner",
           "settings": {
             "image": "shopify:\/\/shop_images\/producttile02.jpg",
-            "image_overlay_opacity": 50,
+            "image_overlay_opacity": 10,
             "heading": "Držáky",
             "heading_size": "h2",
             "text": "",
@@ -615,9 +617,9 @@
             "badge_style": "box",
             "url": "",
             "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 1,
-            "desktop_content_position": "middle-left",
+            "desktop_column": 1,
+            "desktop_row": 2,
+            "desktop_content_position": "top-right",
             "desktop_narrow_content": false,
             "elements_gap_desktop": "1.5",
             "image_height_mobile": "medium-mobile",
@@ -647,7 +649,7 @@
             "enable_parallax_scrolling_effect": false,
             "desktop_column": 1,
             "desktop_row": 2,
-            "desktop_content_position": "top-center",
+            "desktop_content_position": "top-right",
             "desktop_narrow_content": false,
             "elements_gap_desktop": "1.5",
             "image_height_mobile": "medium-mobile",
@@ -664,7 +666,7 @@
           "type": "promotion-banner",
           "settings": {
             "image": "shopify:\/\/shop_images\/producttile03.jpg",
-            "image_overlay_opacity": 50,
+            "image_overlay_opacity": 10,
             "heading": "Hudba",
             "heading_size": "h2",
             "text": "",
@@ -676,8 +678,8 @@
             "url": "",
             "enable_parallax_scrolling_effect": false,
             "desktop_column": 1,
-            "desktop_row": 1,
-            "desktop_content_position": "top-center",
+            "desktop_row": 2,
+            "desktop_content_position": "top-right",
             "desktop_narrow_content": false,
             "elements_gap_desktop": "1.5",
             "image_height_mobile": "medium-mobile",
@@ -689,44 +691,13 @@
             "color_button": "#2563eb",
             "color_badge": "#ffffff"
           }
-        },
-        "promotion_banner_Fk3Lmq": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/producttile04.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "Nabíjení",
-            "heading_size": "h2",
-            "text": "",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 1,
-            "desktop_row": 1,
-            "desktop_content_position": "bottom-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#212c4d",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#ffffff"
-          }
         }
       },
       "block_order": [
         "promotion_banner_JRj7ji",
         "promotion_banner_JbFm66",
         "promotion_banner_Nrggkx",
-        "promotion_banner_6FCtfC",
-        "promotion_banner_Fk3Lmq"
+        "promotion_banner_6FCtfC"
       ],
       "settings": {
         "layout": "grid",
@@ -735,9 +706,9 @@
         "mobile_gap": 10,
         "hide_when_empty_content": true,
         "enable_section_box_layout": false,
-        "media_border_thickness": 1,
-        "media_border_opacity": 5,
-        "media_radius": 18,
+        "media_border_thickness": 0,
+        "media_border_opacity": 0,
+        "media_radius": 0,
         "enable_shadow": true,
         "padding_top": 36,
         "padding_bottom": 36
@@ -964,10 +935,10 @@
     "518b8ced-997b-408e-84d5-64fe5082a6a1",
     "rich_text_RPc8kt",
     "collection_list_BhPdUz",
-    "multicolumn_LmRzeh",
     "newsletter_7jCQFM",
     "multicolumn_DzgRVp",
     "rich_text_yjX8CW",
+    "multicolumn_LmRzeh",
     "banner_grid_9TnpLD",
     "rich_text_CM9eEp",
     "featured_products_tabs_EB8HcH",
