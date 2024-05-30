@@ -777,7 +777,7 @@
           "compare_at_price": "#e94200",
           "background": "#ffffff",
           "gradient_background": "",
-          "background_input": "#e7f5fa",
+          "background_input": "#f9f9f9",
           "solid_button_label_primary": "#ffffff",
           "solid_button_background_primary": "#e94200",
           "review_stars": "#fbbf24",
