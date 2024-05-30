@@ -398,7 +398,7 @@
         "subtitle": "",
         "heading_size": "h2",
         "full_width": false,
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
         "show_secondary_image": true,
