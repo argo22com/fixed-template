@@ -724,6 +724,40 @@
         "padding_bottom": 8
       }
     },
+    "featured_collection_xcmLFp": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Top 3 (výběr z nadefinované kolekce)",
+        "subtitle": "",
+        "collection": "kozena-vyroba",
+        "heading_size": "h2",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "enable_desktop_slider": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/img_d4964ccb-26f6-4c74-99ac-16d9d74fe3d6.jpg",
+        "image_position_desktop": "left",
+        "image_height": "adapt_product_list",
+        "image_height_mobile": "34",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "newsletter_7jCQFM": {
       "type": "newsletter",
       "blocks": {
@@ -770,80 +804,6 @@
         "padding_bottom": 52
       }
     },
-    "multicolumn_DzgRVp": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_CyN8xU": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/float.png",
-            "icon": "check",
-            "title": "POUZDRA FLOAT",
-            "text": "<p>Voděodolná pouzdra pro léto s telefonem v suchu<\/p>",
-            "link_label": "ZJISTIT VÍCE",
-            "link": "",
-            "button_style": "link",
-            "card_color_text": "#000000",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#e5e5e5",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_bHC7mW": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/zen20_pro.png",
-            "icon": "check",
-            "title": "ZEN 20 PRO",
-            "text": "<p>Powerbanka, která zvládne dobít notebook i cokoliv dalšího<\/p>",
-            "link_label": "ZJISTIT VÍCE",
-            "link": "",
-            "button_style": "link",
-            "card_color_text": "#000000",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#e5e5e5",
-            "card_color_background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_CyN8xU",
-        "column_bHC7mW"
-      ],
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h1",
-        "media_type": "image",
-        "media_width_desktop": "100",
-        "image_ratio": "adapt",
-        "text_position": "bottom",
-        "columns_desktop": 2,
-        "columns_tablet": 3,
-        "desktop_gap": 30,
-        "auto_fit": false,
-        "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": false,
-        "button_label": "",
-        "button_link": "",
-        "enable_section_box_layout": false,
-        "color_scheme": "background-1",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
-        "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
-        "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text_yjX8CW": {
       "type": "rich-text",
       "blocks": {
@@ -882,9 +842,9 @@
         "column_CLjVGD": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/img_7791d557-1b7b-4bd5-9182-28010fc8fe16.jpg",
+            "image": "shopify:\/\/shop_images\/producttile05.jpg",
             "icon": "check",
-            "title": "Nabíječky",
+            "title": "Smartwatch",
             "text": "",
             "link_label": "",
             "link": "",
@@ -899,9 +859,9 @@
         "column_zMbUqm": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/budspro-768x477.jpg",
+            "image": "shopify:\/\/shop_images\/producttile01.jpg",
             "icon": "check",
-            "title": "Sluchátka",
+            "title": "Ochrana",
             "text": "",
             "link_label": "",
             "link": "",
@@ -916,8 +876,9 @@
         "column_4nBjYD": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/fixmfle-gr_1-768x768.png",
             "icon": "check",
-            "title": "Příslušenství",
+            "title": "Nabíjení",
             "text": "",
             "link_label": "",
             "link": "",
@@ -932,8 +893,9 @@
         "column_TRthke": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/producttile03.jpg",
             "icon": "check",
-            "title": "Hodinky",
+            "title": "Hudba",
             "text": "",
             "link_label": "",
             "link": "",
@@ -953,7 +915,7 @@
         "column_TRthke"
       ],
       "settings": {
-        "title": "Promotion cards",
+        "title": "kategorie - 1. varianta",
         "subtitle": "",
         "heading_size": "h1",
         "media_type": "image",
@@ -980,6 +942,138 @@
         "text_boxes_border_thickness": 0,
         "text_boxes_border_opacity": 0,
         "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_hgMnHR": {
+      "type": "gallery",
+      "blocks": {
+        "text_overlay_image_TrcKUU": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/producttile01.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "popis této kategorie",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Kategorie 1",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "right",
+            "vertical_alignment": "start",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_QcRW6g": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/producttile03.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "popis kategoriee2 ůlksajdsůlkfja",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Kategorie 2",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "right",
+            "vertical_alignment": "start",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_kzc9B8": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/producttile04.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "popis kategorie 3",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Kategorie 3",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "tady je tlačítko",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": true,
+            "horizontal_alignment": "right",
+            "vertical_alignment": "start",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#dc2626",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_yq9DWA": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/producttile05.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "a ještě nějaký popis a dolu dáme tlačítko",
+            "text_style": "subtitle",
+            "text_size": "medium",
+            "heading": "Kategorie 4",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "pojďte dál",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": true,
+            "horizontal_alignment": "right",
+            "vertical_alignment": "start",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#dc2626",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_TrcKUU",
+        "text_overlay_image_QcRW6g",
+        "text_overlay_image_kzc9B8",
+        "text_overlay_image_yq9DWA"
+      ],
+      "settings": {
+        "title": "Kategorie - varianta 2",
+        "heading_size": "h0",
+        "flexible_columns_layout": "grid",
+        "columns_desktop": 4,
+        "columns_tablet": "3",
+        "full_width": true,
+        "auto_fit": true,
+        "disable_item_space": true,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1308,10 +1402,11 @@
     "gallery_UPmV7L",
     "featured_products_tabs_EB8HcH",
     "featured_products_tabs_LXinbh",
+    "featured_collection_xcmLFp",
     "newsletter_7jCQFM",
-    "multicolumn_DzgRVp",
     "rich_text_yjX8CW",
     "multicolumn_LmRzeh",
+    "gallery_hgMnHR",
     "banner_grid_9TnpLD",
     "rich_text_CM9eEp",
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
