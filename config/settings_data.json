@@ -781,12 +781,12 @@
           "solid_button_label_primary": "#ffffff",
           "solid_button_background_primary": "#e94200",
           "review_stars": "#fbbf24",
-          "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
+          "free_shipping_tracking_gradient_background": "linear-gradient(261deg, rgba(NaN, NaN, NaN, 1) 0.05%, rgba(0, 170, 233, 1) 100%)",
           "text_message_success": "#fff",
           "background_message_success": "#00aae9",
           "text_message_warning": "#fff",
           "background_message_warning": "#e94200",
-          "text_message_error": "#981c1b",
+          "text_message_error": "#dc2626",
           "background_message_error": "#fef2f2"
         }
       }
