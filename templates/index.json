@@ -489,8 +489,8 @@
         "colors_input": "#64748b",
         "overlay_color": "#ebecf2",
         "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 72,
+        "padding_bottom": 0
       }
     },
     "gallery_hgMnHR": {
