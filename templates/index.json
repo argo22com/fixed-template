@@ -383,7 +383,7 @@
               "datovy-a-nabijeci-kabel-fixed-s-konektory-usb-lightning-1-metr-mfi-certifikace-bily"
             ],
             "products_to_show": 3,
-            "columns_desktop": 4
+            "columns_desktop": 3
           }
         }
       },
@@ -395,7 +395,7 @@
         "subtitle": "",
         "heading_size": "h2",
         "full_width": false,
-        "enable_desktop_slider": true,
+        "enable_desktop_slider": false,
         "color_scheme": "background-2",
         "image_ratio": "portrait",
         "show_secondary_image": true,
