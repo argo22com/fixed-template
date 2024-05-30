@@ -235,6 +235,186 @@
         "padding_bottom": 52
       }
     },
+    "collection_list_BhPdUz": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_ifKJzm": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_8CXmWP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_NzzhMJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_gTxYyA": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_FGDJEn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_TN8wTn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_ifKJzm",
+        "featured_collection_8CXmWP",
+        "featured_collection_NzzhMJ",
+        "featured_collection_gTxYyA",
+        "featured_collection_FGDJEn",
+        "featured_collection_TN8wTn"
+      ],
+      "settings": {
+        "title": "Collections",
+        "subtitle": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "full_width": false,
+        "enable_section_box_layout": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "show_view_all": false,
+        "collection_card_show_title": true,
+        "show_products_count": false,
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_LmRzeh": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_CLjVGD": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "Card heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#166534",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#effdf4",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_zMbUqm": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "Card heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_4nBjYD": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "Card heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#a06207",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fefce8",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_TRthke": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "Card heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#981c1b",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fef2f2",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_CLjVGD",
+        "column_zMbUqm",
+        "column_4nBjYD",
+        "column_TRthke"
+      ],
+      "settings": {
+        "title": "Promotion cards",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn_DzgRVp": {
       "type": "multicolumn",
       "blocks": {
@@ -675,7 +855,7 @@
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80": {
       "type": "featured-blog",
       "settings": {
-        "title": "IT'S FIXED",
+        "title": "Blog It's FIXED",
         "heading_size": "h1",
         "blog": "news",
         "post_limit": 3,
@@ -768,6 +948,8 @@
   "order": [
     "518b8ced-997b-408e-84d5-64fe5082a6a1",
     "rich_text_RPc8kt",
+    "collection_list_BhPdUz",
+    "multicolumn_LmRzeh",
     "multicolumn_DzgRVp",
     "rich_text_yjX8CW",
     "banner_grid_9TnpLD",
