@@ -413,53 +413,6 @@
         "padding_bottom": 20
       }
     },
-    "featured_products_tabs_LXinbh": {
-      "type": "featured-products-tabs",
-      "blocks": {
-        "featured_products_gbA9Xc": {
-          "type": "featured_products",
-          "settings": {
-            "title": "",
-            "product_list": [
-              "bezdratova-tws-sluchatka-fixed-boom-joy-cerna",
-              "bezdratova-tws-sluchatka-fixed-pods-bila",
-              "bezdratova-tws-sluchatka-fixed-pods-ruzova",
-              "bezdratova-tws-sluchatka-fixed-buds-pro-s-anc-a-bezdratovym-nabijenim-seda",
-              "bezdratova-tws-sluchatka-fixed-buds-bila",
-              "bezdratova-tws-sluchatka-fixed-buds-cerna",
-              "bezdratova-tws-sluchatka-fixed-boom-pods-bila"
-            ],
-            "products_to_show": 7,
-            "columns_desktop": 5
-          }
-        }
-      },
-      "block_order": [
-        "featured_products_gbA9Xc"
-      ],
-      "settings": {
-        "title": "Novinky v sortimentu",
-        "subtitle": "ukázka číslo 2",
-        "heading_size": "h1",
-        "full_width": false,
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "enable_compare": false,
-        "enable_quick_view": true,
-        "show_color_swatches": true,
-        "color_swatches_style": "variant",
-        "columns_tablet": "3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 8,
-        "padding_bottom": 8
-      }
-    },
     "featured_collection_xcmLFp": {
       "type": "featured-collection",
       "settings": {
@@ -1137,7 +1090,6 @@
     "rich_text_RPc8kt",
     "gallery_UPmV7L",
     "featured_products_tabs_EB8HcH",
-    "featured_products_tabs_LXinbh",
     "featured_collection_xcmLFp",
     "newsletter_7jCQFM",
     "multicolumn_LmRzeh",
