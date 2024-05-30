@@ -1223,6 +1223,40 @@
         "padding_bottom": 36
       }
     },
+    "featured_collection_Ma4mPk": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "subtitle": "",
+        "collection": "kozena-vyroba",
+        "heading_size": "h1",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": true,
+        "show_view_all": true,
+        "enable_desktop_slider": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/podspro-768x477.jpg",
+        "image_position_desktop": "right",
+        "image_height": "adapt_product_list",
+        "image_height_mobile": "34",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80": {
       "type": "featured-blog",
       "settings": {
@@ -1376,6 +1410,7 @@
     "gallery_hgMnHR",
     "rich_text_yjX8CW",
     "banner_grid_9TnpLD",
+    "featured_collection_Ma4mPk",
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
     "8f5a111c-95e5-4fe4-9470-893b0e7841d7",
     "rich_text_trbrie"
