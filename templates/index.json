@@ -961,18 +961,18 @@
             "heading": "Kategorie 1",
             "heading_size": "h2",
             "heading_uppercase": false,
-            "button_label": "",
+            "button_label": "račte vstoupit",
             "button_style": "primary",
             "button_size": "normal",
-            "button_pin_bottom": false,
+            "button_pin_bottom": true,
             "horizontal_alignment": "right",
             "vertical_alignment": "start",
-            "heading_color": "#fff",
+            "heading_color": "#000",
             "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
+            "button_foreground": "#ffffff",
+            "button_background": "#00aae9",
             "overlay_color": "#000",
-            "overlay_opacity": 50
+            "overlay_opacity": 6
           }
         },
         "text_overlay_image_QcRW6g": {
@@ -987,18 +987,18 @@
             "heading": "Kategorie 2",
             "heading_size": "h2",
             "heading_uppercase": false,
-            "button_label": "",
-            "button_style": "primary",
+            "button_label": "nebo radši ne",
+            "button_style": "secondary",
             "button_size": "normal",
-            "button_pin_bottom": false,
+            "button_pin_bottom": true,
             "horizontal_alignment": "right",
             "vertical_alignment": "start",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
+            "heading_color": "#00aae9",
+            "caption_color": "#00aae9",
             "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
-            "overlay_opacity": 50
+            "button_background": "#ffffff",
+            "overlay_color": "#00aae9",
+            "overlay_opacity": 6
           }
         },
         "text_overlay_image_kzc9B8": {
@@ -1019,18 +1019,18 @@
             "button_pin_bottom": true,
             "horizontal_alignment": "right",
             "vertical_alignment": "start",
-            "heading_color": "#fff",
+            "heading_color": "#e94200",
             "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#dc2626",
-            "overlay_color": "#000",
-            "overlay_opacity": 50
+            "button_foreground": "#ffffff",
+            "button_background": "#e94200",
+            "overlay_color": "#e94200",
+            "overlay_opacity": 9
           }
         },
         "text_overlay_image_yq9DWA": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/producttile05.jpg",
+            "image": "shopify:\/\/shop_images\/img_ba0cca3e-7a46-465f-b918-3b80e65b426f.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "a ještě nějaký popis a dolu dáme tlačítko",
@@ -1046,11 +1046,11 @@
             "horizontal_alignment": "right",
             "vertical_alignment": "start",
             "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#dc2626",
+            "caption_color": "#000",
+            "button_foreground": "#e94200",
             "button_background": "#fff",
-            "overlay_color": "#000",
-            "overlay_opacity": 50
+            "overlay_color": "#c0edfd",
+            "overlay_opacity": 67
           }
         }
       },
