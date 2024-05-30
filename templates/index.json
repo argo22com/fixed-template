@@ -241,7 +241,7 @@
         "featured_products_R8jfLQ": {
           "type": "featured_products",
           "settings": {
-            "title": "Novinky",
+            "title": "",
             "product_list": [
               "6-portovy-hlinikovy-usb-c-fixed-hub-pro-pro-notebooky-a-tablety-sedy-rozbaleno",
               "automaticky-drzak-do-auta-s-rychlym-bezdratovym-nabijenim-fixed-matic-xl-na-sklo-nebo-palubni-desku-15w-cerny",
@@ -261,9 +261,9 @@
       "settings": {
         "title": "Produktové novinky",
         "subtitle": "",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "full_width": false,
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "",
         "image_ratio": "square",
         "show_secondary_image": true,
