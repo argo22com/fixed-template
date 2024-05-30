@@ -608,7 +608,7 @@
         "text_overlay_image_yq9DWA"
       ],
       "settings": {
-        "title": "Kategorie",
+        "title": "",
         "heading_size": "h0",
         "flexible_columns_layout": "grid",
         "columns_desktop": 4,
@@ -632,8 +632,8 @@
         "subtitle": "",
         "collection": "kozena-vyroba",
         "heading_size": "h1",
-        "products_to_show": 4,
-        "columns_desktop": 2,
+        "products_to_show": 3,
+        "columns_desktop": 3,
         "full_width": true,
         "show_view_all": true,
         "enable_desktop_slider": false,
