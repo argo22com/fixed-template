@@ -209,7 +209,7 @@
         "auto_scroll_up_mobile": false,
         "hide_when_empty_content": true,
         "view_details_button_text": "View product details",
-        "color_scheme": "",
+        "color_scheme": "background-2",
         "enable_sticky_info": true,
         "default_image": "product_featured_image",
         "media_position": "left",
