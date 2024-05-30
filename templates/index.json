@@ -415,6 +415,52 @@
         "padding_bottom": 36
       }
     },
+    "newsletter_7jCQFM": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_grTNDz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Přihlašte se k  odběru novinek",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_rerDNd": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Buďte první, blablabla<\/p>"
+          }
+        },
+        "email_form_FXwgyM": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_grTNDz",
+        "paragraph_rerDNd",
+        "email_form_FXwgyM"
+      ],
+      "settings": {
+        "grid_layout": "stretched_grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "background_image_section": "shopify:\/\/shop_images\/img_8c2f62bf-ea7c-4f19-bf55-9db0df5a3151.jpg",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#fff",
+        "colors_input": "#64748B",
+        "overlay_color": "#1E40AF",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "multicolumn_DzgRVp": {
       "type": "multicolumn",
       "blocks": {
@@ -919,6 +965,7 @@
     "rich_text_RPc8kt",
     "collection_list_BhPdUz",
     "multicolumn_LmRzeh",
+    "newsletter_7jCQFM",
     "multicolumn_DzgRVp",
     "rich_text_yjX8CW",
     "banner_grid_9TnpLD",
