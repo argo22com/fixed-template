@@ -493,116 +493,6 @@
         "padding_bottom": 52
       }
     },
-    "multicolumn_LmRzeh": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_CLjVGD": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/producttile05.jpg",
-            "icon": "check",
-            "title": "Smartwatch",
-            "text": "",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#166534",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#effdf4",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_zMbUqm": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/producttile01.jpg",
-            "icon": "check",
-            "title": "Ochrana",
-            "text": "",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#121212",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#f8fafc",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_4nBjYD": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/fixmfle-gr_1-768x768.png",
-            "icon": "check",
-            "title": "Nabíjení",
-            "text": "",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#a06207",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_TRthke": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/producttile03.jpg",
-            "icon": "check",
-            "title": "Hudba",
-            "text": "",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#981c1b",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fef2f2",
-            "card_color_background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_CLjVGD",
-        "column_zMbUqm",
-        "column_4nBjYD",
-        "column_TRthke"
-      ],
-      "settings": {
-        "title": "kategorie - 1. varianta",
-        "subtitle": "",
-        "heading_size": "h1",
-        "media_type": "image",
-        "media_width_desktop": "100",
-        "image_ratio": "portrait",
-        "text_position": "bottom",
-        "columns_desktop": 4,
-        "columns_tablet": 3,
-        "desktop_gap": 1,
-        "auto_fit": false,
-        "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
-        "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
-        "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "gallery_hgMnHR": {
       "type": "gallery",
       "blocks": {
@@ -718,7 +608,7 @@
         "text_overlay_image_yq9DWA"
       ],
       "settings": {
-        "title": "Kategorie - varianta 2",
+        "title": "Kategorie",
         "heading_size": "h0",
         "flexible_columns_layout": "grid",
         "columns_desktop": 4,
@@ -1092,7 +982,6 @@
     "featured_products_tabs_EB8HcH",
     "featured_collection_xcmLFp",
     "newsletter_7jCQFM",
-    "multicolumn_LmRzeh",
     "gallery_hgMnHR",
     "rich_text_yjX8CW",
     "banner_grid_9TnpLD",
