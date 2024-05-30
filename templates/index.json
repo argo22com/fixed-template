@@ -22,12 +22,12 @@
             "desktop_image_position": "left",
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center",
-            "colors_text": "#8AFFF8",
+            "colors_text": "#8afff8",
             "gradient_heading_desktop": "",
             "colors_background": "#ffffff",
             "colors_badge_foreground": "#ffffff",
             "colors_badge_background": "#f87171",
-            "colors_button_text": "#8AFFF8",
+            "colors_button_text": "#8afff8",
             "colors_button": "#c64848",
             "colors_text_mobile": "#ffffff",
             "gradient_heading_mobile": "",
@@ -459,7 +459,6 @@
       ],
       "settings": {
         "grid_layout": "stretched_grid",
-        "image": "shopify:\/\/shop_images\/img_ea6fe315-fcc1-4d2a-9d9b-27c120e09c25.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -992,6 +991,15 @@
             "row_content": "<p>V popisu u každého univerzálního pouzdra FIXED naleznete informaci o vnitřní velikosti pouzdra, dle které se můžete řídit. Tento údaj odpovídá maximální možné velikosti mobiliního telefonu, který můžete s pouzdrem pohodlně používat. Pouzdro by zároveň nemělo být větší než telefon více než o pár milimetrů.<\/p>",
             "page": ""
           }
+        },
+        "collapsible_row_nip6h8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "document_download",
+            "row_content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -999,7 +1007,8 @@
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-2",
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-3",
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-4",
-        "f720c224-680e-4598-aa51-f0d9c079f489"
+        "f720c224-680e-4598-aa51-f0d9c079f489",
+        "collapsible_row_nip6h8"
       ],
       "settings": {
         "section_width": "grid",

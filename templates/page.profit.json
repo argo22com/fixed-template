@@ -370,8 +370,8 @@
         "button_JkNULB": {
           "type": "button",
           "settings": {
-            "button_label": "{{ page.metafields.custom.dynmic_content.value.image_with_text_button_1.value }}",
-            "button_link": "{{ page.metafields.custom.dynmic_content.value.image_with_text_link_1.value }}",
+            "button_label": "",
+            "button_link": "",
             "button_style": "solid"
           }
         }
