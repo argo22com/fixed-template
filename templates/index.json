@@ -1223,38 +1223,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_CM9eEp": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_mdWCm9": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p><strong>Novinky a bestsellery<\/strong><\/p>",
-            "heading_size": "h2"
-          }
-        },
-        "text_jCy4Hb": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Prohlédněte si aktuální novinky a nejprodávanější produkty v našem sortimentu.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_mdWCm9",
-        "text_jCy4Hb"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80": {
       "type": "featured-blog",
       "settings": {
@@ -1408,7 +1376,6 @@
     "gallery_hgMnHR",
     "rich_text_yjX8CW",
     "banner_grid_9TnpLD",
-    "rich_text_CM9eEp",
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
     "8f5a111c-95e5-4fe4-9470-893b0e7841d7",
     "rich_text_trbrie"
