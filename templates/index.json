@@ -118,7 +118,7 @@
             "hide_text_on_mobile": false,
             "button_label": "KOUPIT",
             "price": "",
-            "link": "",
+            "link": "shopify:\/\/blogs\/news",
             "button_style": "primary",
             "box_align": "middle-center",
             "text_alignment": "left",
