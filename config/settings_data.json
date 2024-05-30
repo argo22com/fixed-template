@@ -512,17 +512,20 @@
           "81681345-92da-40d5-b495-55347c040808": {
             "type": "title",
             "settings": {
-              "show_vendor_link": true
+              "show_vendor_link": true,
+              "title_size": "h2"
             }
           },
           "b584dc9b-0ad8-4a39-9dd0-0b9f6094d975": {
             "type": "rating",
             "settings": {
+              "show_if_no_reviews": true
             }
           },
           "2961e62f-c3f6-4c1a-a2f3-16550bf5d57f": {
             "type": "price",
             "settings": {
+              "variant_price": false
             }
           },
           "c23b6d41-96d0-4988-8c67-db14307e7b03": {
@@ -554,10 +557,12 @@
           "use_background_input": true,
           "enable_sticky_info": true,
           "gallery_layout": "thumbnail_slider_vertical",
+          "default_image": "product_featured_image",
           "media_position": "left",
           "thumbnail_position": "left",
           "image_ratio": "adapt",
           "image_fit": true,
+          "disable_images_lightbox": false,
           "hide_variants": false,
           "enable_video_looping": false
         }
@@ -767,21 +772,21 @@
       },
       "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c": {
         "settings": {
-          "text": "#000000",
+          "text": "#000",
           "sale_off_price": "#562e1e",
-          "compare_at_price": "#16a34a",
+          "compare_at_price": "#e94200",
           "background": "#ffffff",
           "gradient_background": "",
-          "background_input": "#dfe5f2",
+          "background_input": "#00aae9",
           "solid_button_label_primary": "#ffffff",
           "solid_button_background_primary": "#e94200",
           "review_stars": "#fbbf24",
-          "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
-          "text_message_success": "#166534",
-          "background_message_success": "#effdf4",
-          "text_message_warning": "#a06207",
-          "background_message_warning": "#fefce8",
-          "text_message_error": "#981c1b",
+          "free_shipping_tracking_gradient_background": "linear-gradient(261deg, rgba(0, 56, 233, 1) 0.05%, rgba(251, 191, 36, 1) 100%)",
+          "text_message_success": "#fff",
+          "background_message_success": "#00aae9",
+          "text_message_warning": "#fff",
+          "background_message_warning": "#e94200",
+          "text_message_error": "#dc2626",
           "background_message_error": "#fef2f2"
         }
       }
