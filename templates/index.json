@@ -661,15 +661,15 @@
         "full_width": false,
         "enable_desktop_slider": true,
         "color_scheme": "",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": false,
-        "enable_compare": true,
+        "enable_quick_add": true,
+        "enable_compare": false,
         "enable_quick_view": true,
         "show_color_swatches": true,
-        "color_swatches_style": "custom",
+        "color_swatches_style": "variant",
         "columns_tablet": "3",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -713,7 +713,7 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": true,
-        "enable_compare": true,
+        "enable_compare": false,
         "enable_quick_view": true,
         "show_color_swatches": true,
         "color_swatches_style": "variant",
@@ -721,7 +721,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 8,
-        "padding_bottom": 12
+        "padding_bottom": 8
       }
     },
     "newsletter_7jCQFM": {
