@@ -214,6 +214,31 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_7BWfWR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Nmdam7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>LÉTO, KTERÉ CHCEŠ ZAŽÍT. <br\/>PRODUKTY OD FIXED TI HO JEŠTĚ ZPŘÍJEMNÍ<\/strong><\/h3>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Nmdam7"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "gallery_q3WMYR": {
       "type": "gallery",
       "blocks": {
@@ -400,38 +425,13 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_7BWfWR": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Nmdam7": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h3><strong>LÉTO, KTERÉ CHCEŠ ZAŽÍT. <br\/>PRODUKTY OD FIXED TI HO JEŠTĚ ZPŘÍJEMNÍ<\/strong><\/h3>",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Nmdam7"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
     "image_with_text_MUzzfc": {
       "type": "image-with-text",
       "blocks": {
         "heading_JW7Xxj": {
           "type": "heading",
           "settings": {
-            "heading": "1. krok k ReStory",
+            "heading": "Voyager 65 W",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -439,18 +439,27 @@
         "text_LgN74N": {
           "type": "text",
           "settings": {
-            "text": "<p>Nepoužitá TPU pouzdra, která by byla odsouzena k likvidaci, jsou převezena do lokální výroby, kde jsou následně rozemleta na částice.<\/p><p>Každá várka je důkladně měřena a kontrolována, abychom zajistili skvělou kvalitu každému recyklovanému produktu.<\/p>",
+            "text": "<p><strong>Adaptér a nabíječka pro celý svět<\/strong><\/p><p>Ve variantě 30 nebo 65 W.<\/p><p>Nezáleží kam se v létě vydáte. Voyager je vhodný pro téměř jakoukoli zásuvku na světě. Navíc má až 5 nabíjecích portů: 3x USB-C a 2x USB-A. S jedním zařízením máte tedy vyřešeno nabíjení doma i na cestách.<\/p>",
             "text_style": "body"
+          }
+        },
+        "button_ntzmf9": {
+          "type": "button",
+          "settings": {
+            "button_label": "OBJEVIT VÍCE",
+            "button_link": "",
+            "button_style": "secondary"
           }
         }
       },
       "block_order": [
         "heading_JW7Xxj",
-        "text_LgN74N"
+        "text_LgN74N",
+        "button_ntzmf9"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/restory_drt.jpg",
+        "image": "shopify:\/\/shop_images\/voyager-1024x682.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -484,7 +493,7 @@
         "heading_JyC6aT": {
           "type": "heading",
           "settings": {
-            "heading": "2. krok k ReStory",
+            "heading": "Zen 20 Pro",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -492,16 +501,16 @@
         "text_XpH7fj": {
           "type": "text",
           "settings": {
-            "text": "<p>Připravená směs je obohacena o aditiva, roztavena do jednolité hmoty a připravena k lisování.<\/p><p>Pouzdra jsou lisovaná na míru jednotlivým modelům telefonů, aby seděly přesně na každé tlačítko, či výřez.<\/p>",
+            "text": "<p><strong>Extra výkonná powerbanka Zen 20 Pro<\/strong><\/p><p>Celý den na pláži, nebo na dlouhém výletě nemusí znamenat, že budete bez baterky. S výkonem až 130 W nemá powerbanka Zen 20 Pro problém nabít ani větší notebook či tablet. Užijte si absolutní svobodu tvoření odkudkoliv.<\/p>",
             "text_style": "body"
           }
         },
         "button_4izWyt": {
           "type": "button",
           "settings": {
-            "button_label": "",
+            "button_label": "OBJEVIT VÍCE",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "secondary"
           }
         }
       },
@@ -512,7 +521,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/restory_forma.jpg",
+        "image": "shopify:\/\/shop_images\/1B1A5843-1024x683.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -531,7 +540,7 @@
         "color_caption": "#000000",
         "color_countdown": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
@@ -546,7 +555,7 @@
         "heading_dDT4qW": {
           "type": "heading",
           "settings": {
-            "heading": "3. krok k ReStory",
+            "heading": "Verona",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -554,18 +563,27 @@
         "text_KmgUnq": {
           "type": "text",
           "settings": {
-            "text": "<p>Hotové produkty jsou ručně baleny do celopapírových obalů a převezeny lokálně k odběratelům.<\/p><p>Využití lokální výroby a eliminace zaoceánské dopravy přispělo k úspoře až 45 % uhlíkové stopy pouzder, které jsou vyrobeny standardním procesem.<\/p>",
+            "text": "<p><strong>Elegantní taštička Verona<\/strong><\/p><p>Žádné kapsy, žádný problém. Vyberte si z 11 barev precizně zpracovaných taštiček a budeš tak mít telefon i doklady vždy po ruce. Je univerzální, vejde se do ní telefon velikosti úhlopříčky až 7″ a může být nošena na rameni, ale i jako cross body díky nastavitelné délce šňůrky.<\/p>",
             "text_style": "body"
+          }
+        },
+        "button_9rrggN": {
+          "type": "button",
+          "settings": {
+            "button_label": "OBJEVIT VÍCE",
+            "button_link": "",
+            "button_style": "secondary"
           }
         }
       },
       "block_order": [
         "heading_dDT4qW",
-        "text_KmgUnq"
+        "text_KmgUnq",
+        "button_9rrggN"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/restory_baleni.jpg",
+        "image": "shopify:\/\/shop_images\/1B1A5199-1024x683.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -584,7 +602,7 @@
         "color_caption": "#000000",
         "color_countdown": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
@@ -599,24 +617,24 @@
         "heading_tzaYLz": {
           "type": "heading",
           "settings": {
-            "heading": "Snížení uhlíkové stopy podložené studií",
-            "heading_size": "h1",
+            "heading": "Pouzdra Float",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
         "text_6NYTDL": {
           "type": "text",
           "settings": {
-            "text": "<p>„<em>Jak z pohledu uhlíkové stopy, tak z pohledu celkových environmentálních dopadů vykazují recyklovaná TPU pouzdra ReStory vyrobené společností FIXED výrazně nižší environmentální zátěž. V případě uhlíkové stopy recyklované pouzdro dosahuje 55% hodnoty emisí skleníkových plynů, což je o polovinu méně než u obalů vyrobených v Číně. V případě celkového hodnocení všech environmentálních dopadů vykazuje recyklované pouzdro ještě větší míru úspor a to hodnotu 51 %<\/em>,“<\/p><p><strong>prof. Ing. Vladimír Kočí, Ph.D., MBA <\/strong>z Ústavu udržitelnosti a produktové ekologie VŠCHT Praha<\/p>",
+            "text": "<p><strong>K vodě bez obav s voděodolnými pouzdry Float<\/strong><\/p><p>Mějte svá zařízení vždy v bezpečí, ať už jste celý den u bazénu, nebo na pláži. Taštičky Float jsou dostupné v různých variantách, od nejmenší pouze na mobil, s oddělenou kapsičkou na další drobnosti, nebo větší taška s objemem 3 litry na více věcí s oddělenou částí pro telefon.<\/p>",
             "text_style": "body"
           }
         },
         "button_WFi8Dc": {
           "type": "button",
           "settings": {
-            "button_label": "Prohlédnout studii",
+            "button_label": "OBJEVIT VÍCE",
             "button_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0561\/0228\/9490\/files\/Koci_VSCHT_prezentace.pdf?v=1716471766",
-            "button_style": "solid"
+            "button_style": "secondary"
           }
         }
       },
@@ -630,7 +648,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/Restory_uhlikokva_stopa.png",
+        "image": "shopify:\/\/shop_images\/1B1A6021-1024x683.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -656,6 +674,68 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_L8jbAU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TaBJgX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Selfie tyč MagSnap",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_GtiGzX": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Selfie tyč s podporou technologie MagSafe<\/strong><\/p><p>Zachyťte všechny momenty se selfie tyčí, na kterou telefon stačí jenom přichytit. Má také možnost využití funkce tripodu a vzdálené spouště, kdy zachytíte i momenty na dálku.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_MjfrpX": {
+          "type": "button",
+          "settings": {
+            "button_label": "OBJEVIT VÍCE",
+            "button_link": "",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TaBJgX",
+        "text_GtiGzX",
+        "button_MjfrpX"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/Blog_dovolena6.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#e94200",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "rich_text_f8tn7m": {
@@ -707,12 +787,13 @@
   "order": [
     "main",
     "slideshow_hRHKHW",
-    "gallery_q3WMYR",
     "rich_text_7BWfWR",
+    "gallery_q3WMYR",
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
     "image_with_text_j8Qig9",
     "image_with_text_QbxJnp",
+    "image_with_text_L8jbAU",
     "rich_text_f8tn7m",
     "video_XhEQtC"
   ]
