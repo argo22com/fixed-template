@@ -458,7 +458,7 @@
         "button_ntzmf9"
       ],
       "settings": {
-        "grid_layout": "grid",
+        "grid_layout": "stretched_grid",
         "image": "shopify:\/\/shop_images\/voyager-1024x682.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -520,7 +520,7 @@
         "button_4izWyt"
       ],
       "settings": {
-        "grid_layout": "grid",
+        "grid_layout": "stretched_grid",
         "image": "shopify:\/\/shop_images\/1B1A5843-1024x683.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -582,7 +582,7 @@
         "button_9rrggN"
       ],
       "settings": {
-        "grid_layout": "grid",
+        "grid_layout": "stretched_grid",
         "image": "shopify:\/\/shop_images\/1B1A5199-1024x683.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -647,7 +647,7 @@
 
       ],
       "settings": {
-        "grid_layout": "grid",
+        "grid_layout": "stretched_grid",
         "image": "shopify:\/\/shop_images\/1B1A6021-1024x683.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -709,7 +709,7 @@
         "button_MjfrpX"
       ],
       "settings": {
-        "grid_layout": "grid",
+        "grid_layout": "stretched_grid",
         "image": "shopify:\/\/shop_images\/Blog_dovolena6.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
