@@ -92,7 +92,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
-        "top_color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
+        "top_color_scheme": "inverse",
         "logo": "shopify:\/\/shop_images\/logo.png",
         "logo_width": 150,
         "logo_position": "top-left",
