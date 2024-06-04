@@ -681,7 +681,7 @@
           "settings": {
             "icon": "check",
             "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -697,7 +697,7 @@
           "settings": {
             "icon": "check",
             "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -713,7 +713,7 @@
           "settings": {
             "icon": "check",
             "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -723,12 +723,29 @@
             "card_color_background": "#fef2f2",
             "card_color_background_gradient": ""
           }
+        },
+        "column_UBcV4c": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "Card heading",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
         }
       },
       "block_order": [
         "column_3EEtDy",
         "column_rR4cCN",
-        "column_4KrnCB"
+        "column_4KrnCB",
+        "column_UBcV4c"
       ],
       "settings": {
         "title": "Promotion cards",
@@ -738,9 +755,9 @@
         "media_width_desktop": "100",
         "image_ratio": "adapt",
         "text_position": "bottom",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "columns_tablet": 3,
-        "desktop_gap": 30,
+        "desktop_gap": 15,
         "auto_fit": false,
         "column_alignment": "left",
         "enable_shadow": true,
