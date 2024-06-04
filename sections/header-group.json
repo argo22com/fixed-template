@@ -88,7 +88,7 @@
         "store_information_BwwfPB"
       ],
       "custom_css": [
-
+        ".header__heading {margin-top:-38px}"
       ],
       "settings": {
         "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
