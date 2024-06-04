@@ -568,7 +568,7 @@
         "enable_section_box_layout": false,
         "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
         "blog_card_text_alignment": "left",
-        "blog_card_color_scheme": "background-2",
+        "blog_card_color_scheme": "inverse",
         "show_image": true,
         "show_date": true,
         "show_author": true,
