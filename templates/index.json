@@ -360,7 +360,7 @@
       "settings": {
         "title": "TOP produkty",
         "subtitle": "TOP produkty",
-        "collection": "kozena-vyroba",
+        "collection": "top",
         "heading_size": "h2",
         "products_to_show": 3,
         "columns_desktop": 3,
@@ -488,9 +488,9 @@
             "button_pin_bottom": true,
             "horizontal_alignment": "right",
             "vertical_alignment": "start",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
             "button_background": "#ffffff",
             "overlay_color": "#00a9e0",
             "overlay_opacity": 30
