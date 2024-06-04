@@ -411,7 +411,7 @@
             "horizontal_alignment": "right",
             "vertical_alignment": "start",
             "heading_color": "#000000",
-            "caption_color": "#ffffff",
+            "caption_color": "#000",
             "button_foreground": "#ffffff",
             "button_background": "#00aae9",
             "overlay_color": "#000000",
