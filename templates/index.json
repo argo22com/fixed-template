@@ -685,10 +685,10 @@
             "link_label": "",
             "link": "",
             "button_style": "solid",
-            "card_color_text": "#166534",
+            "card_color_text": "#fff",
             "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#effdf4",
+            "color_button": "#fff",
+            "card_color_background": "#fff",
             "card_color_background_gradient": ""
           }
         },
@@ -704,7 +704,7 @@
             "card_color_text": "#a06207",
             "color_button_text": "#fff",
             "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
+            "card_color_background": "#fff",
             "card_color_background_gradient": ""
           }
         },
@@ -720,7 +720,7 @@
             "card_color_text": "#981c1b",
             "color_button_text": "#fff",
             "color_button": "#2563eb",
-            "card_color_background": "#fef2f2",
+            "card_color_background": "#fff",
             "card_color_background_gradient": ""
           }
         },
@@ -736,7 +736,7 @@
             "card_color_text": "#121212",
             "color_button_text": "#fff",
             "color_button": "#2563eb",
-            "card_color_background": "#f8fafc",
+            "card_color_background": "#fff",
             "card_color_background_gradient": ""
           }
         }
