@@ -421,7 +421,7 @@
         "text_overlay_image_QcRW6g": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/producttile03.jpg",
+            "image": "shopify:\/\/shop_images\/sluchatka.1386.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "popis kategoriee2 ůlksajdsůlkfja",
@@ -430,18 +430,18 @@
             "heading": "Kategorie 2",
             "heading_size": "h2",
             "heading_uppercase": false,
-            "button_label": "nebo radši ne",
-            "button_style": "secondary",
+            "button_label": "Více",
+            "button_style": "primary",
             "button_size": "normal",
             "button_pin_bottom": true,
             "horizontal_alignment": "right",
             "vertical_alignment": "start",
-            "heading_color": "#00aae9",
-            "caption_color": "#212c4d",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
             "button_foreground": "#000000",
             "button_background": "#ffffff",
             "overlay_color": "#00aae9",
-            "overlay_opacity": 6
+            "overlay_opacity": 0
           }
         },
         "text_overlay_image_kzc9B8": {
