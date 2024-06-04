@@ -473,6 +473,7 @@
         "text_overlay_image_yq9DWA": {
           "type": "text-overlay-image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/drzaky.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "Do auta, na kolo i motorku...",
@@ -487,8 +488,8 @@
             "button_pin_bottom": true,
             "horizontal_alignment": "right",
             "vertical_alignment": "start",
-            "heading_color": "#000",
-            "caption_color": "#000000",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
             "button_foreground": "#000",
             "button_background": "#ffffff",
             "overlay_color": "#c0edfd",
