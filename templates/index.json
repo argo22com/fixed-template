@@ -385,7 +385,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Top 3",
-        "subtitle": "",
+        "subtitle": "Top 3",
         "collection": "kozena-vyroba",
         "heading_size": "h2",
         "products_to_show": 3,
