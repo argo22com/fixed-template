@@ -286,7 +286,7 @@
         "columns_tablet": 4,
         "desktop_gap": 12,
         "auto_fit": false,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "enable_shadow": true,
         "background_transparent": false,
         "button_label": "",
