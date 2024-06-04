@@ -73,41 +73,6 @@
             "colors_button_mobile": "#ffffff"
           }
         },
-        "template--18627972890925__518b8ced-997b-408e-84d5-64fe5082a6a1-168102112962a89f2d-0": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/banner_desktop_Samsung.jpg",
-            "badge_label": "",
-            "heading": "SAMSUNG GALAXY S 24",
-            "text": "PŘÍSLUŠENSTVÍ PRO NOVÉ MODELY SAMSUNG GALAXY S24\/S24+\/S24 Ultra",
-            "hide_text_on_mobile": false,
-            "button_label": "text odkazu",
-            "price": "",
-            "link": "shopify:\/\/pages\/jak-pridat-fixed-card-do-aplikace-najit",
-            "button_style": "link",
-            "box_align": "bottom-right",
-            "text_alignment": "right",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "left",
-            "colors_text": "#ffffff",
-            "gradient_heading_desktop": "",
-            "colors_background": "#000000",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#e94200",
-            "colors_button_text": "#121212",
-            "colors_button": "#ffffff",
-            "colors_text_mobile": "#ffffff",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#000000",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#e94200",
-            "colors_button_text_mobile": "#000000",
-            "colors_button_mobile": "#ffffff"
-          }
-        },
         "6d524d43-1bde-474f-b4c0-f6b07a06c8be": {
           "type": "slide",
           "settings": {
@@ -182,7 +147,6 @@
       "block_order": [
         "slide_T3NJDj",
         "slide_VnxEnd",
-        "template--18627972890925__518b8ced-997b-408e-84d5-64fe5082a6a1-168102112962a89f2d-0",
         "6d524d43-1bde-474f-b4c0-f6b07a06c8be",
         "slide_AFmp8D"
       ],
