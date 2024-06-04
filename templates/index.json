@@ -384,8 +384,8 @@
     "featured_collection_xcmLFp": {
       "type": "featured-collection",
       "settings": {
-        "title": "Top 3",
-        "subtitle": "Top 3",
+        "title": "TOP produkty",
+        "subtitle": "TOP produkty",
         "collection": "kozena-vyroba",
         "heading_size": "h2",
         "products_to_show": 3,
@@ -413,52 +413,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 76
-      }
-    },
-    "newsletter_7jCQFM": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_grTNDz": {
-          "type": "heading",
-          "settings": {
-            "heading": "Přihlašte se k  odběru novinek",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_rerDNd": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Buďte první, blablabla<\/p>"
-          }
-        },
-        "email_form_FXwgyM": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "heading_grTNDz",
-        "paragraph_rerDNd",
-        "email_form_FXwgyM"
-      ],
-      "settings": {
-        "grid_layout": "stretched_grid",
-        "height": "small",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "background-2",
-        "background_image_section": "shopify:\/\/shop_images\/img_8c2f62bf-ea7c-4f19-bf55-9db0df5a3151.jpg",
-        "enable_parallax_scrolling_effect": true,
-        "colors_text": "#f5f2f4",
-        "colors_input": "#000000",
-        "overlay_color": "#000000",
-        "mobile_content_alignment": "left",
-        "padding_top": 72,
-        "padding_bottom": 72
       }
     },
     "gallery_hgMnHR": {
@@ -719,6 +673,52 @@
         "padding_bottom": 36
       }
     },
+    "newsletter_7jCQFM": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_grTNDz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Přihlašte se k  odběru novinek",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_rerDNd": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Buďte první, blablabla<\/p>"
+          }
+        },
+        "email_form_FXwgyM": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_grTNDz",
+        "paragraph_rerDNd",
+        "email_form_FXwgyM"
+      ],
+      "settings": {
+        "grid_layout": "stretched_grid",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "background-2",
+        "background_image_section": "shopify:\/\/shop_images\/img_8c2f62bf-ea7c-4f19-bf55-9db0df5a3151.jpg",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#f5f2f4",
+        "colors_input": "#000000",
+        "overlay_color": "#000000",
+        "mobile_content_alignment": "left",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "rich_text_trbrie": {
       "type": "rich-text",
       "blocks": {
@@ -762,11 +762,11 @@
     "gallery_UPmV7L",
     "featured_products_tabs_EB8HcH",
     "featured_collection_xcmLFp",
-    "newsletter_7jCQFM",
     "gallery_hgMnHR",
     "featured_collection_Ma4mPk",
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
     "8f5a111c-95e5-4fe4-9470-893b0e7841d7",
+    "newsletter_7jCQFM",
     "rich_text_trbrie"
   ]
 }
