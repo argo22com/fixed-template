@@ -696,7 +696,7 @@
           "type": "column",
           "settings": {
             "icon": "check",
-            "title": "Card heading",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": "",
@@ -712,7 +712,7 @@
           "type": "column",
           "settings": {
             "icon": "check",
-            "title": "Card heading",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": "",
@@ -728,7 +728,7 @@
           "type": "column",
           "settings": {
             "icon": "check",
-            "title": "Card heading",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": "",
