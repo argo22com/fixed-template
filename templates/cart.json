@@ -12,11 +12,17 @@
           "type": "buttons",
           "settings": {
           }
+        },
+        "free_shipping_bar_jKQU8H": {
+          "type": "free-shipping-bar",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "subtotal",
-        "buttons"
+        "buttons",
+        "free_shipping_bar_jKQU8H"
       ],
       "settings": {
         "show_vendor": true,
