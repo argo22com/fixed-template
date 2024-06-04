@@ -597,7 +597,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "TOP produkty",
-        "subtitle": "",
+        "subtitle": "TOP produkty",
         "collection": "kozena-vyroba",
         "heading_size": "h2",
         "products_to_show": 3,
