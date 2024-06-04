@@ -16,7 +16,7 @@
             "link": "https:\/\/www.fixed.zone",
             "button_style": "primary",
             "box_align": "middle-left",
-            "text_alignment": "right",
+            "text_alignment": "left",
             "keep_ltr": false,
             "desktop_image_width": "full",
             "desktop_image_position": "left",
