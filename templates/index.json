@@ -635,10 +635,10 @@
       "settings": {
         "section_width": "grid",
         "title": "Často kladené otázky",
-        "subtitle": "",
+        "subtitle": "Často kladené otázky",
         "heading_size": "h2",
         "enable_section_box_layout": false,
-        "color_scheme": "background-2",
+        "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
         "open_first_collapsible_row": false,
         "hide_image_on_mobile": false,
         "image_ratio": "adapt",
