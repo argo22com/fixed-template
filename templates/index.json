@@ -384,7 +384,7 @@
     "featured_collection_xcmLFp": {
       "type": "featured-collection",
       "settings": {
-        "title": "Top 3 (výběr z nadefinované kolekce)",
+        "title": "Top 3",
         "subtitle": "",
         "collection": "kozena-vyroba",
         "heading_size": "h2",
