@@ -415,7 +415,7 @@
             "button_foreground": "#00a3ad",
             "button_background": "#ffffff",
             "overlay_color": "#00a3ad",
-            "overlay_opacity": 0
+            "overlay_opacity": 30
           }
         },
         "text_overlay_image_QcRW6g": {
