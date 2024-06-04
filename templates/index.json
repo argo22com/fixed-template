@@ -753,7 +753,7 @@
         "heading_size": "h1",
         "media_type": "image",
         "media_width_desktop": "100",
-        "image_ratio": "adapt",
+        "image_ratio": "landscape",
         "text_position": "bottom",
         "columns_desktop": 4,
         "columns_tablet": 3,
