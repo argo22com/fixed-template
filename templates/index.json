@@ -356,7 +356,7 @@
         "featured_products_R8jfLQ"
       ],
       "custom_css": [
-
+        ".media {background-color: #ccc;}"
       ],
       "settings": {
         "title": "Novinky v sortimentu",
@@ -366,17 +366,17 @@
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": true,
         "enable_compare": false,
         "enable_quick_view": true,
         "show_color_swatches": true,
-        "color_swatches_style": "variant",
+        "color_swatches_style": "custom",
         "columns_tablet": "3",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 72,
         "padding_bottom": 36
       }
