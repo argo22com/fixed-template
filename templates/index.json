@@ -424,7 +424,7 @@
             "image": "shopify:\/\/shop_images\/sluchatka.1388.jpg",
             "link": "",
             "keep_ltr": false,
-            "text": "Sluchátka, headsety...",
+            "text": "Bezdrátová sluchátka, sluchátka s kabelem...",
             "text_style": "subtitle",
             "text_size": "medium",
             "heading": "HUdba",
@@ -440,8 +440,8 @@
             "caption_color": "#ffffff",
             "button_foreground": "#8031a7",
             "button_background": "#ffffff",
-            "overlay_color": "#00aae9",
-            "overlay_opacity": 0
+            "overlay_color": "#8031a7",
+            "overlay_opacity": 20
           }
         },
         "text_overlay_image_kzc9B8": {
