@@ -110,6 +110,7 @@
         },
         "slide_AFmp8D": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/roll_desktop_banner_v2.jpg",
             "badge_label": "",
