@@ -210,7 +210,7 @@
             "icon": "check",
             "title": "Mfi Tag",
             "text": "<p>Tady text do obrázku nedostaneme<\/p>",
-            "link_label": "Více",
+            "link_label": "",
             "link": "shopify:\/\/metaobjects\/landing_page\/smart",
             "button_style": "solid",
             "card_color_text": "#212c4d",
