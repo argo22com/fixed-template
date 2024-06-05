@@ -209,7 +209,7 @@
             "image": "shopify:\/\/shop_images\/tag.jpg",
             "icon": "check",
             "title": "Mfi Tag",
-            "text": "<p>Tady text do obrázku nedostaneme<\/p>",
+            "text": "<p>Tady text do obrázku nedostaneme, ani odkaz.<\/p>",
             "link_label": "",
             "link": "shopify:\/\/metaobjects\/landing_page\/smart",
             "button_style": "solid",
