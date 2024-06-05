@@ -240,7 +240,6 @@
         "column_Ftt4cf": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/tag.jpg",
             "icon": "check",
             "title": "",
             "text": "",
@@ -257,7 +256,6 @@
         "column_9H9ckR": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/tag.jpg",
             "icon": "check",
             "title": "",
             "text": "",
