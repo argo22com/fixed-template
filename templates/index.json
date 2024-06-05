@@ -526,7 +526,7 @@
       "settings": {
         "title": "TOP produkty",
         "subtitle": "TOP produkty",
-        "collection": "kozena-vyroba",
+        "collection": "top2",
         "heading_size": "h2",
         "products_to_show": 3,
         "columns_desktop": 3,
