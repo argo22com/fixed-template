@@ -211,7 +211,7 @@
             "title": "Mfi Tag",
             "text": "<p>Tady text do obrázku nedostaneme<\/p>",
             "link_label": "",
-            "link": "shopify:\/\/pages\/smart",
+            "link": "shopify:\/\/metaobjects\/landing_page\/smart",
             "button_style": "solid",
             "card_color_text": "#212c4d",
             "color_button_text": "#ffffff",
