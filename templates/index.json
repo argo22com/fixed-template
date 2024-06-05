@@ -206,8 +206,9 @@
         "column_QxJR8a": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/tag.jpg",
             "icon": "check",
-            "title": "Ruční výroba",
+            "title": "Mfi Tag",
             "text": "<p>Tady text do obrázku nedostaneme<\/p>",
             "link_label": "",
             "link": "",
