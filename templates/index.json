@@ -780,6 +780,81 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "image_banner_jK8X4g": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_J6MwGG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zákaznická podpora",
+            "size": "h1"
+          }
+        },
+        "text_YyipEE": {
+          "type": "text",
+          "settings": {
+            "text": "Nanašli jste odpověď na vaši otázku? Kontaktujte naši podporu!",
+            "text_style": "body"
+          }
+        },
+        "buttons_cFAhHM": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Zákaznická Podpora",
+            "button_link_1": "shopify:\/\/pages\/contact",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_J6MwGG",
+        "text_YyipEE",
+        "buttons_cFAhHM"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/news.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": false,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -794,6 +869,7 @@
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
     "8f5a111c-95e5-4fe4-9470-893b0e7841d7",
     "newsletter_7jCQFM",
-    "rich_text_trbrie"
+    "rich_text_trbrie",
+    "image_banner_jK8X4g"
   ]
 }
