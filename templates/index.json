@@ -492,7 +492,7 @@
             "vertical_alignment": "start",
             "heading_color": "#ffffff",
             "caption_color": "#ffffff",
-            "button_foreground": "#000000",
+            "button_foreground": "#00a9e0",
             "button_background": "#ffffff",
             "overlay_color": "#00a9e0",
             "overlay_opacity": 30
