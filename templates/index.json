@@ -227,7 +227,7 @@
             "icon": "check",
             "title": "Landing page",
             "text": "<p>Odkaz zde může být i takto v textu <a href=\"\/pages\/landing_page\/pouzdro-oxford\" title=\"Pouzdro Oxford\"><strong>Lorem ipsum dolor <\/strong><\/a><\/p>",
-            "link_label": "",
+            "link_label": "Chci vědět více",
             "link": "",
             "button_style": "link",
             "card_color_text": "#212c4d",
