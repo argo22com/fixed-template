@@ -46,9 +46,9 @@
         >
           {%- if section.settings.video_hosted == null and section.settings.video_url != null -%}
             <a href="{{ section.settings.video_url }}" class="video-section__poster media media--transparent media--landscape{% if cover_image == blank %} video-section__placeholder{% endif %}">
+              {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
+              {%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
               {%- if cover_image != blank -%}
-                {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
-                {%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
                 {{ cover_image | image_url: width: 3840 | image_tag:
                   loading: 'lazy',
                   sizes: sizes,
@@ -56,7 +56,12 @@
                   alt: alt
                 }}
               {%- else -%}
-                {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                {% if section.settings.video_url.type == 'youtube' %}
+                  {% capture thumbnail_url_max %}http://img.youtube.com/vi/{{ section.settings.video_url.id }}/maxresdefault.jpg{% endcapture %}
+                  <img src="{{ thumbnail_url_max }}" sizes="{{ sizes }}" alt="{{ alt }}" loading="lazy"  />
+                {% else %}
+                  {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                {% endif %}
               {%- endif -%}
             </a>
           {%- else -%}
@@ -75,9 +80,9 @@
           type="button"
           aria-label="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
         >
+          {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
+          {%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
           {%- if cover_image != blank -%}
-            {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}{%- endcapture -%}
-            {%- assign alt = 'sections.video.load_video' | t: description: section.settings.description | escape -%}
             {{ cover_image | image_url: width: 3840 | image_tag:
               loading: 'lazy',
               sizes: sizes,
@@ -85,7 +90,12 @@
               alt: alt
             }}
           {%- else -%}
-            {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+            {% if section.settings.video_url.type == 'youtube' %}
+              {% capture thumbnail_url_max %}http://img.youtube.com/vi/{{ section.settings.video_url.id }}/maxresdefault.jpg{% endcapture %}
+              <img src="{{ thumbnail_url_max }}" sizes="{{ sizes }}" alt="{{ alt }}" loading="lazy"  />
+            {% else %}
+              {{ 'collection-apparel-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+            {% endif %}
           {%- endif -%}
           <span class="deferred-media__poster-button motion-reduce">
             {%- render 'icon-play' -%}
