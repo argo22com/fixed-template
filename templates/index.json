@@ -260,7 +260,7 @@
         "column_Ftt4cf"
       ],
       "settings": {
-        "title": "Hot news",
+        "title": "",
         "subtitle": "",
         "heading_size": "h2",
         "media_type": "image",
@@ -330,7 +330,7 @@
         "featured_collection_BEHfYD"
       ],
       "settings": {
-        "title": "",
+        "title": "Kolekce",
         "subtitle": "",
         "heading_size": "h1",
         "image_ratio": "adapt",
