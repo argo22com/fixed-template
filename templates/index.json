@@ -298,7 +298,8 @@
           "type": "featured_collection",
           "settings": {
             "collection": "",
-            "custom_title": ""
+            "custom_image": "shopify:\/\/shop_images\/magsafe.jpg",
+            "custom_title": "Magsafe"
           }
         },
         "featured_collection_emzhYj": {
