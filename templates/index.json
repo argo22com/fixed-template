@@ -151,6 +151,9 @@
         "6d524d43-1bde-474f-b4c0-f6b07a06c8be",
         "slide_AFmp8D"
       ],
+      "custom_css": [
+        ".slideshow__progress__path {stroke: #dc4405; }"
+      ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "large",
