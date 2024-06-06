@@ -260,6 +260,9 @@
         "column_GJR9bJ",
         "column_Ftt4cf"
       ],
+      "custom_css": [
+        ".multicolumn-card__info {text-align: left;}"
+      ],
       "settings": {
         "title": "",
         "subtitle": "",
