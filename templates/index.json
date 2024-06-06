@@ -210,7 +210,7 @@
             "icon": "check",
             "title": "Lorem ipsum dolor sit amed",
             "text": "<p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum <\/p>",
-            "link_label": "Odkaz na stránku",
+            "link_label": "Odkaz na nějakou stránku",
             "link": "shopify:\/\/metaobjects\/landing_page\/smart",
             "button_style": "link",
             "card_color_text": "#212c4d",
