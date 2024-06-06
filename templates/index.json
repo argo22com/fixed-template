@@ -699,6 +699,42 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_trbrie": {
+      "type": "rich-text",
+      "blocks": {
+        "text_ebUx64": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nenašli jste odpověď na vaši otázku? Konktaktujte naši podporu!<\/p>"
+          }
+        },
+        "button_hwHD86": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zákaznická podpora",
+            "button_link": "shopify:\/\/pages\/podpora",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "text_ebUx64",
+        "button_hwHD86"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "newsletter_7jCQFM": {
       "type": "newsletter",
       "blocks": {
@@ -743,42 +779,6 @@
         "mobile_content_alignment": "left",
         "padding_top": 72,
         "padding_bottom": 72
-      }
-    },
-    "rich_text_trbrie": {
-      "type": "rich-text",
-      "blocks": {
-        "text_ebUx64": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Nenašli jste odpověď na vaši otázku? Konktaktujte naši podporu!<\/p>"
-          }
-        },
-        "button_hwHD86": {
-          "type": "button",
-          "settings": {
-            "button_label": "Zákaznická podpora",
-            "button_link": "shopify:\/\/pages\/podpora",
-            "button_style_1": "primary",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "text_ebUx64",
-        "button_hwHD86"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "image_banner_jK8X4g": {
@@ -868,8 +868,8 @@
     "featured_collection_Ma4mPk",
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
     "8f5a111c-95e5-4fe4-9470-893b0e7841d7",
-    "newsletter_7jCQFM",
     "rich_text_trbrie",
+    "newsletter_7jCQFM",
     "image_banner_jK8X4g"
   ]
 }
