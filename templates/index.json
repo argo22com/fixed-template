@@ -152,7 +152,8 @@
         "slide_AFmp8D"
       ],
       "custom_css": [
-        ".slideshow__progress__path {stroke: #dc4405; }"
+        ".slideshow__progress__path {stroke: #dc4405;}",
+        ".slider-counter__link--active.slider-counter__link--dots .dot, .slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
       ],
       "settings": {
         "layout": "full_bleed",
