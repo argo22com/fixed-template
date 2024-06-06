@@ -314,7 +314,7 @@
         "text_overlay_image_xzBgzJ": {
           "type": "text-overlay-image",
           "settings": {
-            "link": "",
+            "link": "shopify:\/\/metaobjects\/landing_page\/skvela-rucni-vyroba",
             "keep_ltr": false,
             "text": "",
             "text_style": "caption-with-letter-spacing",
@@ -418,7 +418,6 @@
         "text_overlay_image_k9Bf44",
         "text_overlay_image_9iWwmT"
       ],
-      "disabled": true,
       "custom_css": [
         ".section__box {padding: 0rem; border: 1px solid red;}"
       ],
@@ -431,7 +430,7 @@
         "full_width": false,
         "auto_fit": false,
         "disable_item_space": false,
-        "enable_section_box_layout": true,
+        "enable_section_box_layout": false,
         "color_scheme": "",
         "image_ratio": "landscape",
         "columns_mobile": "2",
