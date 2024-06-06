@@ -297,7 +297,7 @@
         "featured_collection_xdJmVL": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "magsafe",
             "custom_image": "shopify:\/\/shop_images\/magsafe.jpg",
             "custom_title": "Magsafe"
           }
