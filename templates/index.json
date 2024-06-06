@@ -291,6 +291,64 @@
         "padding_bottom": 0
       }
     },
+    "collection_list_ndxz9L": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_xdJmVL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_emzhYj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_ejGJRA": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_BEHfYD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_xdJmVL",
+        "featured_collection_emzhYj",
+        "featured_collection_ejGJRA",
+        "featured_collection_BEHfYD"
+      ],
+      "settings": {
+        "title": "Collections",
+        "subtitle": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_section_box_layout": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "show_view_all": false,
+        "collection_card_show_title": true,
+        "show_products_count": false,
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_products_tabs_EB8HcH": {
       "type": "featured-products-tabs",
       "blocks": {
@@ -314,6 +372,7 @@
       "block_order": [
         "featured_products_R8jfLQ"
       ],
+      "disabled": true,
       "custom_css": [
 
       ],
@@ -719,6 +778,7 @@
     "518b8ced-997b-408e-84d5-64fe5082a6a1",
     "rich_text_RPc8kt",
     "multicolumn_Liefqw",
+    "collection_list_ndxz9L",
     "featured_products_tabs_EB8HcH",
     "featured_collection_xcmLFp",
     "gallery_hgMnHR",
