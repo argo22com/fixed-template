@@ -811,7 +811,7 @@
         "paragraph_rerDNd": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Přidejte se k naší komunitě ať už vám žádné novinky neutečou!<\/p><p>Přečtěte si naše zásady ochrany osobních údajů. <\/p>"
+            "text": "<p>Přidejte se k naší komunitě ať už vám žádné novinky neutečou!<br\/>Přečtěte si naše <a href=\"\/pages\/contact\" title=\"Kontakt\">zásady ochrany osobních údajů<\/a>. <\/p>"
           }
         },
         "email_form_FXwgyM": {
