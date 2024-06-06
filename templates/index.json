@@ -228,7 +228,7 @@
             "title": "Landing page",
             "text": "<p>Odkaz zde může být i takto v textu <a href=\"\/pages\/landing_page\/pouzdro-oxford\" title=\"Pouzdro Oxford\"><strong>Lorem ipsum dolor <\/strong><\/a><\/p>",
             "link_label": "Chci vědět více",
-            "link": "",
+            "link": "shopify:\/\/metaobjects\/landing_page\/smart",
             "button_style": "link",
             "card_color_text": "#212c4d",
             "color_button_text": "#ffffff",
