@@ -306,6 +306,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "",
+            "custom_image": "shopify:\/\/shop_images\/magsafe.jpg",
             "custom_title": ""
           }
         },
@@ -313,6 +314,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "",
+            "custom_image": "shopify:\/\/shop_images\/magsafe.jpg",
             "custom_title": ""
           }
         },
@@ -320,6 +322,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "",
+            "custom_image": "shopify:\/\/shop_images\/magsafe.jpg",
             "custom_title": ""
           }
         }
