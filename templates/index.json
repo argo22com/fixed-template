@@ -261,7 +261,7 @@
             "text": "<p>nejde jen o text, ale na obrázek nejde pověsit ani odkaz. Ten jde v tomto bloku jen jako button pod text.<\/p>",
             "link_label": "Odkaz",
             "link": "",
-            "button_style": "solid",
+            "button_style": "link",
             "card_color_text": "#000",
             "color_button_text": "#ffffff",
             "color_button": "#dc2626",
@@ -306,137 +306,6 @@
         "text_boxes_radius": 10,
         "padding_top": 36,
         "padding_bottom": 0
-      }
-    },
-    "gallery_3zTUdt": {
-      "type": "gallery",
-      "blocks": {
-        "text_overlay_image_xzBgzJ": {
-          "type": "text-overlay-image",
-          "settings": {
-            "link": "shopify:\/\/metaobjects\/landing_page\/skvela-rucni-vyroba",
-            "keep_ltr": false,
-            "text": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "heading": "Our collection",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "",
-            "button_style": "primary",
-            "button_size": "normal",
-            "button_pin_bottom": false,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
-            "overlay_opacity": 50
-          }
-        },
-        "text_overlay_image_tPtre3": {
-          "type": "text-overlay-image",
-          "settings": {
-            "link": "",
-            "keep_ltr": false,
-            "text": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "heading": "Our collection",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "",
-            "button_style": "primary",
-            "button_size": "normal",
-            "button_pin_bottom": false,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
-            "overlay_opacity": 50
-          }
-        },
-        "text_overlay_image_k9Bf44": {
-          "type": "text-overlay-image",
-          "settings": {
-            "link": "",
-            "keep_ltr": false,
-            "text": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "heading": "Our collection",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "",
-            "button_style": "primary",
-            "button_size": "normal",
-            "button_pin_bottom": false,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
-            "overlay_opacity": 50
-          }
-        },
-        "text_overlay_image_9iWwmT": {
-          "type": "text-overlay-image",
-          "settings": {
-            "link": "",
-            "keep_ltr": false,
-            "text": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "heading": "Our collection",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "",
-            "button_style": "primary",
-            "button_size": "normal",
-            "button_pin_bottom": false,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
-            "overlay_opacity": 50
-          }
-        }
-      },
-      "block_order": [
-        "text_overlay_image_xzBgzJ",
-        "text_overlay_image_tPtre3",
-        "text_overlay_image_k9Bf44",
-        "text_overlay_image_9iWwmT"
-      ],
-      "custom_css": [
-        ".section__box {padding: 0rem; border: 1px solid red;}"
-      ],
-      "settings": {
-        "title": "Gallery",
-        "heading_size": "h1",
-        "flexible_columns_layout": "grid",
-        "columns_desktop": 4,
-        "columns_tablet": "3",
-        "full_width": false,
-        "auto_fit": false,
-        "disable_item_space": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "image_ratio": "landscape",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "featured_products_tabs_EB8HcH": {
@@ -530,7 +399,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/OCHRANA.1384.jpg",
             "link": "",
-            "keep_ltr": false,
+            "keep_ltr": true,
             "text": "Pouzdra, tvrzená skla, folie...",
             "text_style": "subtitle",
             "text_size": "large",
@@ -867,7 +736,6 @@
     "518b8ced-997b-408e-84d5-64fe5082a6a1",
     "rich_text_RPc8kt",
     "multicolumn_Liefqw",
-    "gallery_3zTUdt",
     "featured_products_tabs_EB8HcH",
     "featured_collection_xcmLFp",
     "gallery_hgMnHR",
