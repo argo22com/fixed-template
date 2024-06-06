@@ -733,6 +733,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/shutterstock_1778085617_kopie.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
