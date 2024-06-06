@@ -232,7 +232,7 @@
             "button_style": "solid",
             "card_color_text": "#212c4d",
             "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
+            "color_button": "#dc2626",
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
@@ -264,7 +264,7 @@
             "button_style": "solid",
             "card_color_text": "#000",
             "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
+            "color_button": "#dc2626",
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
