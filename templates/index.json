@@ -568,8 +568,8 @@
     "featured_collection_Ma4mPk": {
       "type": "featured-collection",
       "settings": {
-        "title": "TOP produkty",
-        "subtitle": "TOP produkty",
+        "title": "Novinky",
+        "subtitle": "Novinky",
         "collection": "top2",
         "heading_size": "h2",
         "products_to_show": 3,
