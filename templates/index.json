@@ -252,29 +252,12 @@
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
-        },
-        "column_9H9ckR": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "",
-            "text": "<p>nejde jen o text, ale na obrázek nejde pověsit ani odkaz. Ten jde v tomto bloku jen jako button pod text.<\/p>",
-            "link_label": "Odkaz",
-            "link": "",
-            "button_style": "link",
-            "card_color_text": "#000",
-            "color_button_text": "#ffffff",
-            "color_button": "#dc2626",
-            "card_color_background": "#ffffff",
-            "card_color_background_gradient": ""
-          }
         }
       },
       "block_order": [
         "column_QxJR8a",
         "column_GJR9bJ",
-        "column_Ftt4cf",
-        "column_9H9ckR"
+        "column_Ftt4cf"
       ],
       "settings": {
         "title": "Hot news",
