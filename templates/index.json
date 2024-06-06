@@ -276,7 +276,6 @@
         "column_Ftt4cf",
         "column_9H9ckR"
       ],
-      "disabled": true,
       "settings": {
         "title": "Hot news",
         "subtitle": "",
@@ -419,6 +418,7 @@
         "text_overlay_image_k9Bf44",
         "text_overlay_image_9iWwmT"
       ],
+      "disabled": true,
       "custom_css": [
         ".section__box {padding: 0rem; border: 1px solid red;}"
       ],
