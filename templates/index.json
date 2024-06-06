@@ -242,8 +242,8 @@
           "settings": {
             "icon": "check",
             "title": "Lorem ipsum",
-            "text": "<p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet <a href=\"\/products\/3x-set-pogumovanych-krytu-fixed-story-pro-samsung-galaxy-a54-5g-v-ruznych-barvach-variace-1\" title=\"3x Set krytů FIXED Story pro Samsung Galaxy A54 5G\"><strong>Lorem ipsum dolor sit amet <\/strong><\/a><\/p>",
-            "link_label": "",
+            "text": "<p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet <\/p>",
+            "link_label": "Lorem ipsum",
             "link": "shopify:\/\/metaobjects\/landing_page\/pouzdro-oxford",
             "button_style": "link",
             "card_color_text": "#212c4d",
