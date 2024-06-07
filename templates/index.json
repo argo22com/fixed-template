@@ -41,7 +41,7 @@
         "slide_VnxEnd": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/armor_27793b37-c6cd-48f4-ab9f-06919827f17b.jpg",
+            "image": "shopify:\/\/shop_images\/armor.jpg",
             "badge_label": "Novinka",
             "heading": "Ultra odolná skla Armor",
             "text": "Vysoká tvrdost i ohebnost",
@@ -153,7 +153,7 @@
       ],
       "custom_css": [
         ".slideshow__progress__path {stroke: #dc4405;}",
-        ".slider-counter__link--active.slider-counter__link--dots .dot, .slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
+        ".slider-counter__link--active.slider-counter__link--dots .dot,.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -217,7 +217,7 @@
             "link_label": "Odkaz na nějakou stránku",
             "link": "shopify:\/\/metaobjects\/landing_page\/smart",
             "button_style": "link",
-            "card_color_text": "#000",
+            "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#dc4405",
             "card_color_background": "#ffffff",
@@ -234,7 +234,7 @@
             "link_label": "Chci vědět více",
             "link": "shopify:\/\/metaobjects\/landing_page\/smart",
             "button_style": "link",
-            "card_color_text": "#000",
+            "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#dc2626",
             "card_color_background": "#ffffff",
@@ -251,8 +251,8 @@
             "link_label": "Lorem ipsum",
             "link": "shopify:\/\/metaobjects\/landing_page\/pouzdro-oxford",
             "button_style": "link",
-            "card_color_text": "#000",
-            "color_button_text": "#fff",
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
@@ -749,20 +749,20 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
-        "color_heading": "#000",
+        "color_heading": "#000000",
         "gradient_heading": "",
-        "color_text": "#000",
-        "color_highlight_text": "#DA2127",
-        "color_caption": "#000",
-        "color_countdown": "#000",
-        "color_button_text": "#fff",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
         "color_button": "#dc4405",
-        "background_container": "#fff",
+        "background_container": "#ffffff",
         "gradient_background_container": "",
-        "background_section": "#fff",
+        "background_section": "#ffffff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "rich_text_trbrie": {
