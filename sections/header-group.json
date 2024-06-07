@@ -88,14 +88,14 @@
         "store_information_BwwfPB"
       ],
       "custom_css": [
-        ".header__heading {margin-top: -26px;}",
+        ".header__heading {margin-top: -27px;}",
         ".search__input {\/*border: 1px solid #00a9e0;*\/ background: #eefaff;}"
       ],
       "settings": {
         "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
         "top_color_scheme": "inverse",
         "logo": "shopify:\/\/shop_images\/logo.png",
-        "logo_width": 180,
+        "logo_width": 170,
         "logo_position": "top-left",
         "menu": "main-menu",
         "show_go_to_link": true,
