@@ -88,7 +88,7 @@
         "store_information_BwwfPB"
       ],
       "custom_css": [
-        ".header__heading {margin-top: -38px;}",
+        ".header__heading {margin-top: -26px;}",
         ".search__input {\/*border: 1px solid #00a9e0;*\/ background: #eefaff;}"
       ],
       "settings": {
