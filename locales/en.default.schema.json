@@ -5331,6 +5331,7 @@
           "option_value_metafield_info": "Enter as a text the namespace and key of the metafield holding the value. Eg.: custom.color",
           "product_list": "Products",
           "product_list_info": "Select all the variations (including the product itself)."
+        }
       },
       "settings": {
         "section_width": {
