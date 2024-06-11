@@ -461,6 +461,12 @@ button.shopify-payment-button__button--unbranded {
   cursor: pointer;
 }
 
+.autosize-iframe iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
 /* Fallback */
 .product-form__input__radio.focused + label,
 .no-js .shopify-payment-button__button [role="button"]:focus + label {
