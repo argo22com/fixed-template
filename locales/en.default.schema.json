@@ -5516,6 +5516,10 @@
           "settings": {
             "page": {
               "label": "Page"
+            },
+            "allowed_skus": {
+              "label": "SKU of products where this page is shown",
+              "info": "Enter the SKU of the products for which this page is shown. Separate multiple SKUs with a comma. SKUs are matched by prefix - f. e. 'SKU-' matches products 'SKU-123' and 'SKU-456'."
             }
           }
         },
