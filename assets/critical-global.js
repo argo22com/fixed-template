@@ -1035,11 +1035,13 @@ class VariantRadios extends VariantSelects {
         });
         const instockValues = instocktVariantsForOption.map(variant => variant.options[index]);
         option.querySelectorAll(this.optionValuesSelector).forEach(valueTag => {
-          valueTag.classList.remove(this.soldOutClass);
           const inputValue = valueTag.parentElement.querySelector(`#${valueTag.htmlFor}`);
+          valueTag.classList.remove(this.soldOutClass);
+          inputValue.disabled = "";
           const value = inputValue.value;
           if(!instockValues.includes(value) && (this.dataset.hideUnavailableOptions || !inputValue.classList.contains('disabled'))) {
             valueTag.classList.add(this.soldOutClass);
+            inputValue.disabled = "disabled";
           }
         });
       });

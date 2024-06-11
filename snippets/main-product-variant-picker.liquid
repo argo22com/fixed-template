@@ -151,7 +151,7 @@
                         {%- endunless -%}
                       </a>
                     </li>
-                      
+
                   {%- endfor -%}
                 {%- endif -%}
               {%- else -%}
@@ -173,6 +173,11 @@
                     {% if option.selected_value == value %}
                       checked="checked"
                     {% endif %}
+                    {% if settings.hide_unavailable_options %}
+                      {% unless instock_option_values contains value %}disabled="disabled"{% endunless %}
+                    {% elsif available_option_values contains value %}
+                      {% unless instock_option_values contains value %}disabled="disabled"{% endunless %}
+                    {% endif %}
                   >
                   <label
                     for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -193,8 +198,8 @@
                       {{ value }}
                     {%- else -%}
                       <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ value }}</span>
-                      {%- render 'icon-checkmark' -%}  
-                    {%- endunless -%}  
+                      {%- render 'icon-checkmark' -%}
+                    {%- endunless -%}
                   </label>
                 </li>
               {%-  endif -%}

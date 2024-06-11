@@ -415,6 +415,7 @@ button.shopify-payment-button__button--unbranded {
 .product-form__input__radio-label--pill.soldout {
   color: rgb(var(--color-foreground), 0.55);
   box-shadow: none;
+  cursor: default;
 }
 
 .product-form__input__radio.disabled + .product-form__input__radio-label--pill:not(.soldout) {
@@ -449,7 +450,6 @@ button.shopify-payment-button__button--unbranded {
 .product-form__input__radio:disabled + label {
   border-color: rgba(var(--color-foreground), 0.1);
   color: rgba(var(--color-foreground), 0.4);
-  text-decoration: line-through;
 }
 .product-form__input__radio:focus-visible + label {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
