@@ -2,16 +2,17 @@
   gap: 1.2rem;
 }
 
-.button.fpt__tab-item-label {
+.fpt__tab-item-label {
   padding: 1.2rem 1.4rem;
   letter-spacing: -0.42px;
-  opacity: 0.3;
   transition: opacity 300ms ease;
   width: max-content;
+  font-size: 2rem;
+  border-bottom: 3px solid transparent;
 }
 
-.button.fpt__tab-item-label:hover {
-  opacity: 1;
+.fpt__tab-item-label:hover {
+  border-bottom: 3px solid rgb(var(--color-button));
 }
 
 .tabs__title-list__content {
