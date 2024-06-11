@@ -70,7 +70,7 @@
               <div class="title__buttons title__buttons--{{ section.id }}{% if section.settings.enable_desktop_slider or section.settings.swipe_on_mobile %} flex title__gap justify-space-between align-center{% endif %}">
                 <ul class="fpt__tab-title-list list-unstyled margin0 flex fpt__tab-title-list--{{ section.id }}">
                   {%- for block in section.blocks -%}
-                    {%- if available_tab_ids contains block.id -%}
+                    {%- if available_tab_ids contains block.id and block.settings.title != empty -%}
                       {%- assign suffix = section.id | append: '-' | append: block.id -%}
                       <li>
                         <label for="tab-item-input-{{ suffix }}" class="fpt__tab-item-label button button--secondary ignore-effect fpt__tab-item-label--{{ section.id }}" {{ block.shopify_attributes }}>{{ block.settings.title }}</label>
