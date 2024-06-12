@@ -30,10 +30,10 @@
             "picker_type": "button",
             "enable_color_swatches": true,
             "color_swatches_style": "custom",
-            "size_chart_enable": true,
+            "size_chart_enable": false,
             "size_chart_option": "size",
-            "size_chart_link_label": "Tabulka velikostí",
-            "size_chart_page": "tabulka-velikosti-univerzalni-pouzdra",
+            "size_chart_link_label": "Size chart",
+            "size_chart_page": "",
             "quantity_selector_enable": true,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true,
@@ -163,7 +163,7 @@
           "settings": {
             "title": "Výběr správné velikosti pouzdra",
             "page": "jak-si-vybrat-spravnou-velikost-uni-pouzdra",
-            "allowed_skus": ""
+            "allowed_skus": "FIXPOH-,FIXPOH2-,RPPOH-,RPSFH-,RPSFM-,RPSOS-,FIXPOM-,FIXPOM2-,FIXAB-,FIXCL-,FIXSOS-"
           }
         }
       },
