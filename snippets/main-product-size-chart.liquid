@@ -8,7 +8,6 @@
       <div role="dialog" aria-label="{{ variant_picker_block.settings.size_chart_link_label | default: variant_picker_block.settings.size_chart_page.title }}" aria-modal="true" class="popup-modal__content" tabindex="-1">
         <button id="ModalClose-{{ variant_picker_block.id }}" type="button" class="popup-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
         <div class="popup-modal__content-info">
-          <h1 class="h2">{{ variant_picker_block.settings.size_chart_page.title }}</h1>
           <div class="rte element-small-margin-top">
             {{ variant_picker_block.settings.size_chart_page.content }}
           </div>  
