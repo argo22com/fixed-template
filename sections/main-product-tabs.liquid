@@ -24,6 +24,11 @@
               if block.settings.custom_text == blank
                 assign available_tab = false
               endif
+            when 'files'
+              assign documents = product.selected_or_first_available_variant.metafields.custom.documents
+              if documents.count == 0
+                assign available_tab = false
+              endif
             when 'page_content'
               if block.settings.allowed_skus != blank
                 assign sku_exists = false
@@ -125,6 +130,26 @@
                       echo block.settings.custom_liquid_code
                     endif
                   -%}
+                {%- when 'files' -%}
+                  {% assign documents = product.selected_or_first_available_variant.metafields.custom.documents.value %}
+                  {%- if documents.count > 0 -%}
+                    <div class="element-small-margin-top">
+                      <ul class="list-unstyled flex flex-wrap">
+                        {%- for document in documents -%}
+                          {% if document.media_type == 'generic_file' %}
+                            {% assign file_name_with_shopify_extension = document.url | split: '/' | last %} <!-- parse the file name from the URL -->
+                            {% assign file_name = file_name_with_shopify_extension | split: '?' | first %} <!-- strip off the ?v=123456789 part of the file name -->
+                            <li>
+                              <a href="{{ document.url }}" class="product-download-link link button--large" target="_blank" download="{{ file_name }}">
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /></svg>
+                                {{ file_name }}
+                              </a>
+                            </li>
+                          {% endif %}
+                        {%- endfor -%}
+                      </ul>
+                    </div>
+                  {%- endif -%}
                 {%- when 'page_content' -%}
                   {%- if block.settings.page != blank -%}
                     {{ block.settings.page.content }}  
@@ -1300,6 +1325,17 @@
           "id": "allowed_skus",
           "label": "t:sections.main-product-tabs.blocks.page_content.settings.allowed_skus.label",
           "info": "t:sections.main-product-tabs.blocks.page_content.settings.allowed_skus.info"
+        }
+      ]
+    },
+    {
+      "type": "files",
+      "name": "t:sections.main-product-tabs.blocks.files.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-product-tabs.blocks.all.settings.title.label"
         }
       ]
     },

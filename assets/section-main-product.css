@@ -35,6 +35,22 @@
   transition: opacity 500ms ease;
 }
 
+.product-download-link {
+  background-color: rgba(var(--color-background));
+  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border-radius: 3px;
+}
+
+.product-download-link svg {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.product-download-link:hover {
+  background-color: rgba(var(--color-foreground), 0.1);
+  transition: background-color 0.3s linear;
+}
+
 .product__media.loaded + .product__media-loading {
   opacity: 0;
 }
