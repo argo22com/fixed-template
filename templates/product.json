@@ -133,21 +133,22 @@
           "type": "page_content",
           "settings": {
             "title": "Parametry",
-            "page": ""
+            "page": "",
+            "allowed_skus": ""
           }
         },
         "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
           "type": "page_content",
           "settings": {
             "title": "Související produkty",
-            "page": ""
+            "page": "",
+            "allowed_skus": ""
           }
         },
-        "page_content_LqEiyQ": {
-          "type": "page_content",
+        "files_GRHLmJ": {
+          "type": "files",
           "settings": {
-            "title": "Dokumenty",
-            "page": ""
+            "title": "Dokumenty"
           }
         },
         "custom_text_RxXKMH": {
@@ -161,7 +162,8 @@
           "type": "page_content",
           "settings": {
             "title": "Výběr správné velikosti pouzdra",
-            "page": "jak-si-vybrat-spravnou-velikost-uni-pouzdra"
+            "page": "jak-si-vybrat-spravnou-velikost-uni-pouzdra",
+            "allowed_skus": ""
           }
         }
       },
@@ -169,7 +171,7 @@
         "1638dd10-8e33-4e82-b01c-2eb71d6362ba",
         "8274ef04-23c0-4245-a55b-07501c2bd206",
         "cbb96b5f-f683-42e5-b865-6ac18e11645e",
-        "page_content_LqEiyQ",
+        "files_GRHLmJ",
         "custom_text_RxXKMH",
         "page_content_g4T3PM"
       ],
