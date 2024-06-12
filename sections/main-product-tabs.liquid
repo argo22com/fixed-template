@@ -25,8 +25,8 @@
                 assign available_tab = false
               endif
             when 'files'
-              assign documents = product.selected_or_first_available_variant.metafields.custom.documents
-              if documents.count == 0
+              assign documents = product.selected_or_first_available_variant.metafields.custom.documents.value
+              if documents == blank or documents.count == 0
                 assign available_tab = false
               endif
             when 'page_content'
