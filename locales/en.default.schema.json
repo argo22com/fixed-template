@@ -476,11 +476,11 @@
         },
         "social_vimeo_link": {
           "label": "Vimeo",
-          "info": "https://vimeo.com/shopify"
+          "info": "https:\/\/vimeo.com\/shopify"
         },
         "social_linkedin_link": {
           "label": "Linked",
-          "info": "https://linkedin.com/company/shopify"
+          "info": "https:\/\/linkedin.com\/company\/shopify"
         }
       }
     },
@@ -650,7 +650,7 @@
       "settings": {
         "google_maps_api_key": {
           "label": "Google maps API key",
-          "info": "[Learn how to get the API key](https://developers.google.com/maps/documentation/embed/get-api-key)"
+          "info": "[Learn how to get the API key](https:\/\/developers.google.com\/maps\/documentation\/embed\/get-api-key)"
         }
       }
     },
@@ -3179,7 +3179,7 @@
         },
         "header__9": {
           "content": "Follow on Shop",
-          "info": "To allow customers to follow your store on the Shop app from your storefront, Shop Pay must be enabled. [Learn more](https://help.shopify.com/manual/online-store/themes/customizing-themes/follow-on-shop)"
+          "info": "To allow customers to follow your store on the Shop app from your storefront, Shop Pay must be enabled. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/follow-on-shop)"
         },
         "enable_follow_on_shop": {
           "label": "Enable Follow on Shop"
@@ -3450,7 +3450,7 @@
             },
             "brand_link": {
               "label": "Custom link",
-              "info": "Leave empty to use an automatically generated link of the format /collections/vendors?q=<brand_name>"
+              "info": "Leave empty to use an automatically generated link of the format \/collections\/vendors?q=<brand_name>"
             }
           }
         },
@@ -3498,7 +3498,7 @@
             },
             "type_link": {
               "label": "Custom link",
-              "info": "Leave empty to use an automatically generated link of the format /collections/types?q=<type_name>"
+              "info": "Leave empty to use an automatically generated link of the format \/collections\/types?q=<type_name>"
             }
           }
         },
@@ -3779,7 +3779,7 @@
             },
             "description": {
               "label": "Video alt text",
-              "info": "Describe the video for customers using screen readers. [Learn more](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video)"
+              "info": "Describe the video for customers using screen readers. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#video)"
             },
             "autoplay": {
               "label": "Enable autoplay"
@@ -3809,7 +3809,7 @@
             },
             "description": {
               "label": "Video alt text",
-              "info": "Describe the video for customers using screen readers. [Learn more](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video)"
+              "info": "Describe the video for customers using screen readers. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#video)"
             },
             "button_1_label": {
               "label": "Button 1 label"
@@ -4444,10 +4444,10 @@
             "label": "Link"
           },
           "share_featured_image_info": {
-            "content": "If you include a link in social media posts, the page’s featured image will be shown as the preview image. [Learn more](https://help.shopify.com/manual/online-store/images/showing-social-media-thumbnail-images)."
+            "content": "If you include a link in social media posts, the page’s featured image will be shown as the preview image. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/images\/showing-social-media-thumbnail-images)."
           },
           "share_title_info": {
-            "content": "A store title and description are included with the preview image. [Learn more](https://help.shopify.com/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)."
+            "content": "A store title and description are included with the preview image. [Learn more](https:\/\/help.shopify.com\/manual\/promoting-marketing\/seo\/adding-keywords#set-a-title-and-description-for-your-online-store)."
           }
         }
       }
@@ -4741,7 +4741,7 @@
           }
         },
         "filter_collapse": {
-          "label": "Collapse/expand state",
+          "label": "Collapse\/expand state",
           "options__1": {
             "label": "Collapse"
           },
@@ -5187,7 +5187,7 @@
           "name": "Product rating",
           "settings": {
             "paragraph": {
-              "content": "To display a rating, add a product rating app. [Learn more](https://boostheme.zendesk.com/hc/en-us/articles/19577808467097-Product-pages#product-rating-block)"
+              "content": "To display a rating, add a product rating app. [Learn more](https:\/\/boostheme.zendesk.com\/hc\/en-us\/articles\/19577808467097-Product-pages#product-rating-block)"
             },
             "show_if_no_reviews": {
               "label": "Show on storefront if no reviews"
@@ -5440,8 +5440,8 @@
           "label": "Enable video looping"
         },
         "show_next_prev_products": {
-          "label": "Show next/previous products",
-          "info": "Only work if the user views the product page with collection link. Ex: /collections/collection_handle/products/product_handle."
+          "label": "Show next\/previous products",
+          "info": "Only work if the user views the product page with collection link. Ex: \/collections\/collection_handle\/products\/product_handle."
         },
         "disable_images_lightbox": {
           "label": "Disable images lightbox"
@@ -7147,11 +7147,11 @@
           "options__2": {
             "label": "Maps Javascript API"
           },
-          "info": "Depending on your choice, you must enable the corresponding APIs you choose to use with your project. [Learn how to enable and disable APIs](https://support.google.com/googleapi/answer/6158841?hl=en)."
+          "info": "Depending on your choice, you must enable the corresponding APIs you choose to use with your project. [Learn how to enable and disable APIs](https:\/\/support.google.com\/googleapi\/answer\/6158841?hl=en)."
         },
         "coordinates": {
           "label": "Coordinates of a place",
-          "info": "[Learn how to get your address coordinates](https://support.google.com/maps/answer/18539?hl=en)."
+          "info": "[Learn how to get your address coordinates](https:\/\/support.google.com\/maps\/answer\/18539?hl=en)."
         },
         "map_height": {
           "label": "Map height",
