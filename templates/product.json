@@ -36,7 +36,10 @@
             "size_chart_page": "",
             "quantity_selector_enable": true,
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": true,
+            "option_name": "Color",
+            "option_value_metafield": "product_variants_grouping.variation_value",
+            "products": "{{ product.metafields.product_variants_grouping.variation_products.value }}"
           }
         },
         "share": {

@@ -346,6 +346,8 @@
               {%- when 'share' -%}
                 {%- assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin -%}
                 {%- render 'main-product-share', share_url: share_url, title: product.title, block: block, featured_media: featured_media -%}
+              {%- when 'product_variations' -%}
+                {%- render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id -%}
               {%- when 'sale_box' -%}
                 <div class="product__sale-box product__info-box flex flex-column{% if block.settings.picker_type == 'button' %} overflow-hidden{% endif %}" {{ block.shopify_attributes }}>
                   {%- render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id -%}
@@ -1622,6 +1624,34 @@
       ]
     },
     {
+      "type": "product_variations",
+      "name": "t:sections.main_product.blocks.product_variations.name",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.main_product.blocks.product_variations.instructions"
+        },
+        {
+          "type": "text",
+          "id": "option_name",
+          "label": "t:sections.main_product.blocks.product_variations.option_name",
+          "placeholder": "t:sections.main_product.blocks.product_variations.option_name_placeholder"
+        },
+        {
+          "type": "text",
+          "id": "option_value_metafield",
+          "label": "t:sections.main_product.blocks.product_variations.option_value_metafield",
+          "info": "t:sections.main_product.blocks.product_variations.option_value_metafield_info"
+        },
+        {
+          "type": "product_list",
+          "id": "products",
+          "label": "t:sections.main_product.blocks.product_variations.product_list",
+          "info": "t:sections.main_product.blocks.product_variations.product_list_info"
+        }
+      ]
+    },
+    {
       "type": "sale_box",
       "name": "t:sections.main-product.blocks.sale_box.name",
       "settings": [
@@ -1736,6 +1766,28 @@
           "default": false,
           "label": "t:sections.main-product.blocks.sale_box.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.sale_box.settings.show_gift_card_recipient.info"
+        },
+        {
+          "type": "paragraph",
+          "content": "t:sections.main_product.blocks.product_variations.instructions"
+        },
+        {
+          "type": "text",
+          "id": "option_name",
+          "label": "t:sections.main_product.blocks.product_variations.option_name",
+          "placeholder": "t:sections.main_product.blocks.product_variations.option_name_placeholder"
+        },
+        {
+          "type": "text",
+          "id": "option_value_metafield",
+          "label": "t:sections.main_product.blocks.product_variations.option_value_metafield",
+          "info": "t:sections.main_product.blocks.product_variations.option_value_metafield_info"
+        },
+        {
+          "type": "product_list",
+          "id": "products",
+          "label": "t:sections.main_product.blocks.product_variations.product_list",
+          "info": "t:sections.main_product.blocks.product_variations.product_list_info"
         }
       ],
       "limit": 1

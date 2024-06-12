@@ -77,57 +77,117 @@
         -%}
         <fieldset class="js product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
-            {{ option.name }}:
+            {{ option.name | capitalize }}:
+            {%- unless option.name == 'color' -%}
             <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
+            {%- else -%}
+            <span class="product-form__input__option-value font-body-bold">{{ shop.metaobjects['color_codes_hex']['color-code-BK'] }}</span>
+            {%- endunless -%}
           </legend>
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
             {%- for value in option.values -%}
-              <li
-                {% unless is_first_option %}
-                  class="dynamic-option{% if settings.hide_unavailable_options %}{% unless available_option_values contains value %} hidden{% endunless %}{% endif %}"
-                {% endunless %}
-              >
-                {%- if is_color_swatches and block.settings.color_swatches_style == 'variant' -%}
-                  {%- assign variant_color = product.variants
-                    | where: attribute, value
-                    | where: 'featured_image'
-                    | first
-                  -%}
+              {% comment %}  {% endcomment %}
+              {%- if is_color_swatches and block.settings.color_swatches_style == 'variant' -%}
+                {%- assign variant_color = product.variants
+                  | where: attribute, value
+                  | where: 'featured_image'
+                  | first
+                -%}
+              {%- endif -%}
+              {%- if is_color_swatches -%}
+                {%- liquid
+                  assign contains_product = false
+
+                  for product_variation in block.settings.products
+                    if product_variation == product
+                      assign contains_product = true
+                    endif
+                  endfor
+                -%}
+                {%- if contains_product -%}
+                  {%- assign metafield_parts = block.settings.option_value_metafield | split: '.' -%}
+                  {%- assign metafield_namespace = metafield_parts | first -%}
+                  {%- assign metafield_key = metafield_parts | last -%}
+
+                  {%- for product_variation in block.settings.products -%}
+                    {%- liquid
+                      assign value = product_variation.metafields[metafield_namespace][metafield_key].value
+
+                      if product_variation == product
+                        assign selected = true
+                      else
+                        assign selected = false
+                      endif
+                    -%}
+
+                    <li>
+                      <a href="{{ product_variation.url }}"
+                        class="product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if settings.hide_unavailable_options %}{% unless instock_option_values contains value %} soldout{% endunless %}{% elsif available_option_values contains value %}{% unless instock_option_values contains value %} soldout{% endunless %}{% endif %}"
+                        {% if is_color_swatches %}
+                          data-color="{{ product_variation.options_by_name['color'].values | first | handleize }}"
+                          {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
+                            style="--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }})"
+                          {%- endif -%}
+                        {% endif %}
+                      >
+                        {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
+                          <span
+                            class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"
+                          ></span>
+                        {%- endif -%}
+                        {%- unless is_color_swatches -%}
+                          {{ product_variation.title }}
+                        {%- else -%}
+                          <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ product_variation.title }}</span>
+                          {%- render 'icon-checkmark' -%}
+                        {%- endunless -%}
+                      </a>
+                    </li>
+                      
+                  {%- endfor -%}
                 {%- endif -%}
-                <input
-                  type="radio"
-                  id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                  name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
-                  class="product-form__input__radio{% unless settings.hide_unavailable_options %}{% unless available_option_values contains value %} disabled{% endunless %}{% endunless %}"
-                  value="{{ value | escape }}"
-                  form="{{ product_form_id }}"
-                  {% if option.selected_value == value %}
-                    checked="checked"
-                  {% endif %}
+              {%- else -%}
+              {% comment %}  {% endcomment %}
+                <li
+                  {% unless is_first_option %}
+                    class="dynamic-option{% if settings.hide_unavailable_options %}{% unless available_option_values contains value %} hidden{% endunless %}{% endif %}"
+                  {% endunless %}
                 >
-                <label
-                  for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                  class="product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if settings.hide_unavailable_options %}{% unless instock_option_values contains value %} soldout{% endunless %}{% elsif available_option_values contains value %}{% unless instock_option_values contains value %} soldout{% endunless %}{% endif %}"
-                  {% if is_color_swatches %}
-                    data-color="{{ value | handleize }}"
-                    {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
-                      style="--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }})"
+                  <input
+                    type="radio"
+                    id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+                    class="product-form__input__radio{% unless settings.hide_unavailable_options %}{% unless available_option_values contains value %} disabled{% endunless %}{% endunless %}"
+                    value="{{ value | escape }}"
+                    form="{{ product_form_id }}"
+                    {% if option.selected_value == value %}
+                      checked="checked"
+                    {% endif %}
+                  >
+                  <label
+                    for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    class="product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if settings.hide_unavailable_options %}{% unless instock_option_values contains value %} soldout{% endunless %}{% elsif available_option_values contains value %}{% unless instock_option_values contains value %} soldout{% endunless %}{% endif %}"
+                    {% if is_color_swatches %}
+                      data-color="{{ value | handleize }}"
+                      {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
+                        style="--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }})"
+                      {%- endif -%}
+                    {% endif %}
+                  >
+                    {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
+                      <span
+                        class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"
+                      ></span>
                     {%- endif -%}
-                  {% endif %}
-                >
-                  {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
-                    <span
-                      class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"
-                    ></span>
-                  {%- endif -%}
-                  {%- unless is_color_swatches -%}
-                    {{ value }}
-                  {%- else -%}
-                    <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ value }}</span>
-                    {%- render 'icon-checkmark' -%}  
-                  {%- endunless -%}  
-                </label>
-              </li>
+                    {%- unless is_color_swatches -%}
+                      {{ value }}
+                    {%- else -%}
+                      <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ value }}</span>
+                      {%- render 'icon-checkmark' -%}  
+                    {%- endunless -%}  
+                  </label>
+                </li>
+              {%-  endif -%}
             {%- endfor -%}
           </ul>
         </fieldset>
