@@ -701,6 +701,7 @@ class VariantSelects extends HTMLElement {
   constructor() {
     super();
     this.addEventListener('change', this.onVariantChange);
+    document.querySelector('.js-show-more').addEventListener('click', this.showMoreVariants)
   }
 
   onVariantChange(event) {
@@ -911,6 +912,16 @@ class VariantSelects extends HTMLElement {
           })
         }
       });
+  }
+
+  showMoreVariants(event) {
+    console.log('test');
+    event.preventDefault();
+
+    this.style.display = "none";
+    document.querySelectorAll('.variant-flex-item.hidden-more').forEach(variantSelect => {
+      variantSelect.classList.remove('hidden-more');
+    })
   }
 
   toggleAddButton(disable = true, text, modifyClass = true) {

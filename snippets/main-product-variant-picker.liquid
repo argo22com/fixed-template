@@ -12,9 +12,22 @@
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
   {%- liquid
+    assign max_rows = 4
+    assign items_per_row = 3
+    assign total_visible_items = max_rows | times: items_per_row
     assign current_variant = product.selected_or_first_available_variant
     assign first_selected_variant = current_variant | default: product.variants[0]
   -%}
+  {% style %}
+    .variant-flex-item {
+      flex: 1 0 calc(100% * (1/{{ items_per_row }}) - 2rem);
+      max-width: calc(100% * (1/{{ items_per_row }}) - 1rem);
+    }
+
+    .hidden-more {
+      display: none !important;
+    }
+  {% endstyle %}
   {%- if block.settings.picker_type == 'button' -%}
     {%- if block.settings.enable_color_swatches -%}
       <link rel="stylesheet" href="{{ 'component-tooltip.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -125,7 +138,7 @@
                       endif
                     -%}
 
-                    <li>
+                    <li class="variant-flex-item">
                       <a href="{{ product_variation.url }}"
                         class="product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if settings.hide_unavailable_options %}{% unless instock_option_values contains value %} soldout{% endunless %}{% elsif available_option_values contains value %}{% unless instock_option_values contains value %} soldout{% endunless %}{% endif %}"
                         {% if is_color_swatches %}
@@ -158,7 +171,9 @@
               {% comment %}  {% endcomment %}
                 <li
                   {% unless is_first_option %}
-                    class="dynamic-option{% if settings.hide_unavailable_options %}{% unless available_option_values contains value %} hidden{% endunless %}{% endif %}"
+                    class="variant-flex-item dynamic-option{% if settings.hide_unavailable_options %}{% unless available_option_values contains value %} hidden{% endunless %}{% endif %}{% if forloop.index0 < total_visible_items %} hidden-more{% endif %}"
+                  {% else %}
+                    class="variant-flex-item{% if forloop.index >= total_visible_items %} hidden-more{% endif %}"
                   {% endunless %}
                 >
                   <input
@@ -203,6 +218,21 @@
                   </label>
                 </li>
               {%-  endif -%}
+              {% if forloop.index == total_visible_items %}
+                <li class="variant-flex-item js-show-more">
+                    <label
+                            for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                            class="product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if settings.hide_unavailable_options %}{% unless instock_option_values contains value %} soldout{% endunless %}{% elsif available_option_values contains value %}{% unless instock_option_values contains value %} soldout{% endunless %}{% endif %}"
+                    >
+                        {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
+                            <span
+                                    class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"
+                            ></span>
+                        {%- endif -%}
+                            {{ 'products.product.show_more' | t }}
+                    </label>
+                </li>
+              {% endif %}
             {%- endfor -%}
           </ul>
         </fieldset>

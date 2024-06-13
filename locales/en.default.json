@@ -192,6 +192,7 @@
       },
       "share": "Share this product",
       "sold_out": "Sold out",
+      "show_more": "More sizes",
       "unavailable": "Unavailable",
       "vendor": "Vendor",
       "value_unavailable": "{{ option_value }} - Unavailable",
