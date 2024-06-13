@@ -188,25 +188,6 @@
         "height": 40
       }
     },
-    "video_wYWGfk": {
-      "type": "video",
-      "settings": {
-        "title": "Video",
-        "subtitle": "",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "autoplay": false,
-        "enable_controls": false,
-        "enable_video_looping": true,
-        "full_width": false,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "6099b098-2d24-4b53-9488-988cbaa630f3": {
       "type": "main-product-attributes",
       "blocks": {
@@ -574,7 +555,6 @@
     "main",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "8124c74c-24a1-4cc3-9369-91db0fab3a14",
-    "video_wYWGfk",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
