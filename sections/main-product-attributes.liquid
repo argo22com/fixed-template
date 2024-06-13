@@ -41,7 +41,7 @@
             {%- if block.type != 'specifications' -%}
               <div class="grid__item" {{ block.shopify_attributes }}>
                 <div class="product-attributes__table-item flex flex-column">
-                  <h3 class="product-attributes__table-item__title margin0 font-heading-bold h5">{{ block.settings.title | capitalize }}</h3>
+                  <h3 class="product-attributes__table-item__title margin0 font-heading-bold h5">{{ block.settings.title }}</h3>
                   <div class="product-attributes__table-item__content text-medium margin-top-1rem product-attributes__tablet-item-light">
                     {%-liquid
                       case block.type
@@ -78,9 +78,9 @@
 									</div>
                 </div>
               </div>
-            {%- else -%}  
+            {%- else -%}
               {%-liquid 
-                assign has_content = false
+                assign has_content = true
                 assign block_content = ''
               -%}
               {%- if block.settings.metafields != blank -%}
@@ -146,10 +146,21 @@
                           {%- endif -%}
                         {%- endif -%}
                       {%- endfor -%}
-                    </ul>  
-								{%- endif -%}
+                    </ul>
+                  {%- endif -%}
                 {%- endcapture -%}
-              {%- endif -%}  
+              {% else %}
+                {%- capture block_content -%}
+                  {% for collection in product.collections %}
+                    {% assign attribute_set = collection.metafields.product_attributes.product_attribute_set %}
+                    {% if attribute_set == blank %}
+                      {% continue %}
+                    {% endif %}
+                    {{ attribute_set }}
+
+                  {% endfor %}
+                {%- endcapture -%}
+              {%- endif -%}
               {%-liquid
                 assign is_display = has_content
                 if request.design_mode and block.settings.title != blank and is_display == false
