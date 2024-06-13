@@ -130,6 +130,8 @@
                       echo block.settings.custom_liquid_code
                     endif
                   -%}
+                {% when '@app' %}
+                  {% render block %}
                 {%- when 'files' -%}
                   {% assign documents = product.selected_or_first_available_variant.metafields.custom.documents.value %}
                   {%- if documents.count > 0 -%}
@@ -1338,6 +1340,9 @@
           "label": "t:sections.main-product-tabs.blocks.all.settings.title.label"
         }
       ]
+    },
+    {
+      "type": "@app"
     },
     {
       "type": "metafields",
