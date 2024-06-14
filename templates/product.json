@@ -32,7 +32,7 @@
             "color_swatches_style": "custom",
             "size_chart_enable": true,
             "size_chart_option": "size",
-            "size_chart_link_label": "Tabulka velikostí",
+            "size_chart_link_label": "size chart",
             "size_chart_page": "tabulka-velikosti-univerzalni-pouzdra",
             "quantity_selector_enable": true,
             "show_dynamic_checkout": true,
