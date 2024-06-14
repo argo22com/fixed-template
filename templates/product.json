@@ -37,9 +37,11 @@
             "quantity_selector_enable": true,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true,
-            "option_name": "Color",
-            "option_value_metafield": "product_variants_grouping.variation_value",
-            "products": "{{ product.metafields.product_variants_grouping.variation_products.value }}"
+            "option_name": "",
+            "option_value_metafield": "",
+            "products": [
+
+            ]
           }
         },
         "share": {
@@ -60,15 +62,15 @@
             "brand_enable": false,
             "brand_label": "Brand",
             "stock_enable": true,
-            "stock_label": "Availability",
+            "stock_label": "Dostupnost",
             "inventory_threshold": 10,
             "show_inventory_quantity": true,
             "sku_enable": true,
-            "sku_label": "SKU",
+            "sku_label": "Produktový kód",
             "tags_enable": true,
             "tags_label": "Tags",
             "collections_enable": true,
-            "collections_label": "Collections"
+            "collections_label": "Kolekce"
           }
         },
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
