@@ -47,7 +47,7 @@
         "share": {
           "type": "share",
           "settings": {
-            "share_label": "Share",
+            "share_label": "Sdílet",
             "enable_floating_layout": false,
             "share_on_facebook": true,
             "share_on_twitter": true,
