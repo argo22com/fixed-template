@@ -5103,6 +5103,16 @@
             "show_free_shipping_bar": {
               "label": "Show free shipping bar",
               "info": "Configure free shipping bar in Theme settings > Cart > Free shipping."
+            },
+            "product_variations": {
+              "name": "Product variations",
+              "instructions": "Use metafields to easily setup product variations.",
+              "option_name": "Option name",
+              "option_name_placeholder": "Color",
+              "option_value_metafield": "Option value metafield",
+              "option_value_metafield_info": "Enter as a text the namespace and key of the metafield holding the value. Eg.: custom.color",
+              "product_list": "Products",
+              "product_list_info": "Select all the variations (including the product itself)."
             }
           }
         },
@@ -5321,16 +5331,6 @@
               "label": "Text"
             }
           }
-        },
-        "product_variations": {
-          "name": "Product variations",
-          "instructions": "Use metafields to easily setup product variations.",
-          "option_name": "Option name",
-          "option_name_placeholder": "Color",
-          "option_value_metafield": "Option value metafield",
-          "option_value_metafield_info": "Enter as a text the namespace and key of the metafield holding the value. Eg.: custom.color",
-          "product_list": "Products",
-          "product_list_info": "Select all the variations (including the product itself)."
         }
       },
       "settings": {
