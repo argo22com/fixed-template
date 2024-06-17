@@ -5524,7 +5524,12 @@
           "name": "Files"
         },
         "parameters": {
-          "name": "Parameters"
+          "name": "Parameters",
+          "settings": {
+            "show_sku": {
+              "label": "Show SKU"
+            }
+          }
         },
         "metafields": {
           "name": "Product metafields",

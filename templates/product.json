@@ -131,7 +131,8 @@
         "parameters_qpiADk": {
           "type": "parameters",
           "settings": {
-            "title": ""
+            "title": "Parametry",
+            "show_sku": true
           }
         },
         "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
@@ -183,46 +184,6 @@
       "type": "spacer",
       "settings": {
         "height": 40
-      }
-    },
-    "6099b098-2d24-4b53-9488-988cbaa630f3": {
-      "type": "main-product-attributes",
-      "blocks": {
-        "template--20050134237485__6099b098-2d24-4b53-9488-988cbaa630f3-16896858800c7f6815-0": {
-          "type": "product_brand",
-          "settings": {
-            "title": "Značka"
-          }
-        },
-        "product_sku_CC8AkN": {
-          "type": "product_sku",
-          "settings": {
-            "title": "SKU"
-          }
-        },
-        "specifications_y7bE8w": {
-          "type": "specifications",
-          "settings": {
-            "title": "Další špecifikace",
-            "metafields": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20050134237485__6099b098-2d24-4b53-9488-988cbaa630f3-16896858800c7f6815-0",
-        "product_sku_CC8AkN",
-        "specifications_y7bE8w"
-      ],
-      "settings": {
-        "show_description": false,
-        "title": "Parametry",
-        "subtitle": "",
-        "heading_size": "h2",
-        "enable_section_box_layout": false,
-        "color_scheme": "background-2",
-        "table_color_scheme": "",
-        "padding_top": 80,
-        "padding_bottom": 80
       }
     },
     "product-recommendations": {
