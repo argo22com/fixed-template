@@ -168,7 +168,6 @@
             "enable_color_swatches": true,
             "color_swatches_style": "variant",
             "size_chart_enable": true,
-            "size_chart_option": "size",
             "size_chart_link_label": "Size chart",
             "size_chart_page": "",
             "quantity_selector_enable": true,

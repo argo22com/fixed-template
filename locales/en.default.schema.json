@@ -5074,9 +5074,6 @@
             "size_chart_enable": {
               "label": "Enable"
             },
-            "size_chart_option": {
-              "label": "Link from option"
-            },
             "size_chart_link_label": {
               "label": "Label"
             },

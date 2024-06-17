@@ -31,7 +31,6 @@
             "enable_color_swatches": true,
             "color_swatches_style": "custom",
             "size_chart_enable": true,
-            "size_chart_option": "Leg",
             "size_chart_link_label": "Velikostní tabulka",
             "size_chart_page": "tabulka-velikosti-univerzalni-pouzdra",
             "quantity_selector_enable": true,
