@@ -5523,6 +5523,9 @@
         "files": {
           "name": "Files"
         },
+        "parameters": {
+          "name": "Parameters"
+        },
         "metafields": {
           "name": "Product metafields",
           "settings": {
