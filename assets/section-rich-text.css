@@ -55,11 +55,11 @@
   }
 
   .rich-text__blocks--medium {
-    --width: 70rem;
+    --width: 80rem;
   }
 
   .rich-text__blocks--large {
-    --width: 83rem;
+    --width: 110rem;
   }
 }
 
