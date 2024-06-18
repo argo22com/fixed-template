@@ -142,7 +142,7 @@
                   </div>
                 {%- when 'social_icons' -%}
                   <div class="newsletter__social-icons newsletter__override-color-{{ section.id }}" {{ block.shopify_attributes }}>
-                    {%- render 'social-media-icons', add_classes: 'newsletter__list-social' -%}
+                    {%- render 'social-media-icons', add_classes: 'newsletter__list-social', icon_width: 32 -%}
                   </div>  
               {%- endcase -%}
             {%- endfor -%}
