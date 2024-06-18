@@ -414,6 +414,11 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates<\/a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key<\/a>."
+    },
+    "product_tabs": {
+      "reviews": {
+        "title": "Reviews"
+      }
     }
   },
   "localization": {

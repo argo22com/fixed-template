@@ -53,6 +53,8 @@
                             endif
                         when 'parameters'
                             assign available_tab = true
+                        when '@app'
+                            assign available_tab = true
                         else
                             if block.settings.namespace_key == blank
                                 assign available_tab = false
@@ -87,9 +89,11 @@
                         {%- for block in section.blocks -%}
                             {%- if available_tab_ids contains block.id -%}
                                 {%- assign suffix = section.id | append: '-' | append: block.id -%}
+                                {% assign review_title = 'sections.product_tabs.reviews.title' | t %}
+                                {% assign title = block.settings.title | default: review_title %}
                                 <li>
                                     <label for="tab-item-input-{{ suffix }}"
-                                           class="tabs__item-label font-heading-bold light por db h4" {{ block.shopify_attributes }}>{{ block.settings.title }}</label>
+                                           class="tabs__item-label font-heading-bold light por db h4" {{ block.shopify_attributes }}>{{ title }}</label>
                                 </li>
                             {%- endif -%}
                         {%- endfor -%}
@@ -171,6 +175,9 @@
                                     {%- if block.settings.page != blank -%}
                                         {{ block.settings.page.content }}
                                     {%- endif -%}
+                                    {% comment %}App block will be used only for reviews{% endcomment %}
+                                {% when '@app' %}
+                                    {% render block %}
                                 {%- when 'metafields' -%}
                                     {%- if block.settings.namespace_key != blank -%}
                                         {%- assign metafield_parts = block.settings.namespace_key | split: '.' -%}
@@ -1371,6 +1378,9 @@
           "label": "t:sections.main-product-tabs.blocks.parameters.settings.show_sku.label"
         }
       ]
+    },
+    {
+      "type": "@app"
     },
     {
       "type": "metafields",
