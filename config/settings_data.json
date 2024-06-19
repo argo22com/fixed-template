@@ -32,6 +32,7 @@
     "card_border_radius": 0,
     "card_buttons": "visible",
     "card_truncate_heading": 2,
+    "collection_card_enable_overlay": true,
     "collection_card_color_scheme": "inverse",
     "sale_badge_label": "amount",
     "sale_badge_text_color": "#dc2626",

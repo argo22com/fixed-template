@@ -315,7 +315,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "magsafe-nabijecky",
-            "custom_image": "shopify:\/\/shop_images\/magsafe.1559.jpg",
+            "custom_image": "shopify:\/\/shop_images\/fixmpadp-gr_05.jpg",
             "custom_title": "Magsafe zařízení"
           }
         },
@@ -359,7 +359,7 @@
         "full_width": false,
         "enable_section_box_layout": false,
         "enable_desktop_slider": false,
-        "color_scheme": "",
+        "color_scheme": "background-1",
         "show_view_all": false,
         "collection_card_show_title": true,
         "show_products_count": true,
