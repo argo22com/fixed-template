@@ -350,6 +350,9 @@
         "featured_collection_ejGJRA",
         "featured_collection_BEHfYD"
       ],
+      "custom_css": [
+        "h3 {font-size: 2.5rem;}"
+      ],
       "settings": {
         "title": "Kolekce",
         "subtitle": "",
