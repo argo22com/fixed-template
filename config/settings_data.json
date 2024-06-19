@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "color_scheme_body": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
@@ -744,7 +753,7 @@
           "text": "#ffffff",
           "sale_off_price": "#e94200",
           "compare_at_price": "#737373",
-          "background": "#000000",
+          "background": "#494949",
           "gradient_background": "",
           "background_input": "#ded4d4",
           "solid_button_label_primary": "#e94200",
