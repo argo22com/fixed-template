@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "518b8ced-997b-408e-84d5-64fe5082a6a1": {
@@ -212,9 +221,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/1B1A2804_kopie.jpg",
             "icon": "check",
-            "title": "Lorem ipsum dolor sit amed",
-            "text": "<p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum <\/p>",
-            "link_label": "Odkaz na nějakou stránku",
+            "title": "Tag Card",
+            "text": "<p>Chytrý lokátor ve velikosti kreditní karty pro ochranu každé peněženky. Je kompatibilní s iOS a ovládá se v aplikaci Apple Najít. Navíc má i bezdrátové nabíjení.<br\/><\/p>",
+            "link_label": "Zjistit více",
             "link": "shopify:\/\/metaobjects\/landing_page\/smart",
             "button_style": "link",
             "card_color_text": "#000000",
@@ -229,9 +238,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/1B1A5341_kopie.jpg",
             "icon": "check",
-            "title": "Lorem ipsum dolor sit amed dolor sit amed",
-            "text": "<p>Odkaz zde může být i takto v textu <a href=\"\/pages\/landing_page\/pouzdro-oxford\" title=\"Pouzdro Oxford\"><strong>Lorem ipsum dolor <\/strong><\/a><\/p>",
-            "link_label": "Chci vědět více",
+            "title": "Verona",
+            "text": "<p>Elegantní taštička precizně vyrobená v naší Prostějovské dílně v ČR. Je ideální pro telefony do 6.7\", doklady a další nezbytnosti. Vyrábí se v 11 barevných provedeních.<\/p>",
+            "link_label": "Vybrat si tu svou",
             "link": "shopify:\/\/metaobjects\/landing_page\/smart",
             "button_style": "link",
             "card_color_text": "#000000",
@@ -246,9 +255,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/1B1A5843_kopie.jpg",
             "icon": "check",
-            "title": "Lorem ipsum",
-            "text": "<p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet <\/p>",
-            "link_label": "Lorem ipsum",
+            "title": "Léto s FIXED",
+            "text": "<p>Užijte si léto s produkty FIXED. Prohlédněte si produkty, které vám usnadní cestování, ochrání vaše zařízení při sportovních aktivitách, nebo vám zajistí plnou baterku i na dlouhých výletech.<\/p>",
+            "link_label": "Zjistit více",
             "link": "shopify:\/\/metaobjects\/landing_page\/pouzdro-oxford",
             "button_style": "link",
             "card_color_text": "#000000",
