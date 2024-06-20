@@ -79,7 +79,7 @@
             <div class="tabs__tab-content tabs__tab-content--{{ section.id }} tabs__tab-content--{{ suffix }} w100" data-suffix="{{ suffix }}">
               {%- case block.type -%}
                 {%- when 'description' -%}
-                  {%- if product.description != blank -%}
+                  {%- if product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml != blank -%}
                     {%-liquid
                       render 'main-product-description', product: product, section: section, block: block, no_shopify_attributes: true
                       assign icons = section.blocks | where: "type", "description_icon"
