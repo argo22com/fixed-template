@@ -88,6 +88,10 @@
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
             {%- for value in option.values -%}
               {% comment %}  {% endcomment %}
+              {%- assign variant = product.variants
+                | where: attribute, value
+                | first
+              -%}
               {%- if is_color_swatches and block.settings.color_swatches_style == 'variant' -%}
                 {%- assign variant_color = product.variants
                   | where: attribute, value
@@ -164,6 +168,7 @@
                     class="product-form__input__radio{% unless settings.hide_unavailable_options %}{% unless available_option_values contains value %} disabled{% endunless %}{% endunless %}"
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
+                    data-desc="{{ variant.metafields['product_texts']['descriptionHtml'].value | escape }}"
                     {% if option.selected_value == value %}
                       checked="checked"
                     {% endif %}
