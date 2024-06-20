@@ -36,7 +36,7 @@
   {
     "@context": "http://schema.org/",
     "@type": "Product",
-    "name": {{ product.title | json }},
+    "name": {{ product.selected_or_first_available_variant.metafields.product_texts.title | json }},
     "url": {{ request.origin | append: product.url | json }},
     "productID": "{{ product.id }}",
     {% if seo_media -%}
@@ -44,7 +44,7 @@
         {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
       ],
     {%- endif %}
-    "description": {{ product.description | strip_html | json }},
+    "description": {{ product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml | strip_html | json }},
     {% if current_variant.sku != blank -%}
       "sku": {{ current_variant.sku | json }},
     {%- endif %}

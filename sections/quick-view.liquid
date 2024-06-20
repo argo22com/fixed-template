@@ -8,7 +8,7 @@
         class="quick-view__submit button"
         aria-haspopup="dialog"
         data-product-url="{{ product.url }}"
-        aria-label="{{ product.title | escape }}"
+        aria-label="{{ product.selected_or_first_available_variant.metafields.product_texts.title | escape }}"
       >
         {%- render 'icon-eye' -%}
         <div class="loading-overlay__spinner hidden">
@@ -246,7 +246,7 @@
                       {%- if block.settings.show_vendor_link and product.vendor -%}
                         <a href="{{ product.vendor | url_for_vendor }}" class="link color-foreground db w100 product__vendor-link font-body-semi-bold break">{{ 'products.product.by_vendor_html' | t: vendor: product.vendor }}</a>  
                       {%- endif -%}
-                      <a href="{{ product.url }}" class="{{ block.settings.title_size }} font-heading-extra-bold margin0">{{ product.title | escape }}</a>
+                      <a href="{{ product.url }}" class="{{ block.settings.title_size }} font-heading-extra-bold margin0">{{ product.selected_or_first_available_variant.metafields.product_texts.title | escape }}</a>
                     </div>
                   {%- when 'price' -%}
                     <div id="price-top-{{ section.id }}" {{ block.shopify_attributes }}>
@@ -278,9 +278,9 @@
                       </div>
                     {%- endif -%}
                   {%- when 'description' -%}
-                    {%- if product.description != blank -%}
+                    {%- if product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml != blank -%}
                       <div class="product__description rte">
-                        {{ product.description }}
+                        {{ product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml }}
                       </div>
                     {%- endif -%}
                   {%- when 'custom_liquid' -%}
@@ -314,7 +314,7 @@
                     {%- endif -%}
                   {%- when 'share' -%}
                     {%- assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin -%}
-                    {%- render 'main-product-share', share_url: share_url, title: product.title, block: block, featured_media: featured_media -%}
+                    {%- render 'main-product-share', share_url: share_url, title: product.selected_or_first_available_variant.metafields.product_texts.title, block: block, featured_media: featured_media -%}
                   {%- when 'sale_box' -%}
                     <div class="product__sale-box product__info-box flex flex-column{% if block.settings.picker_type == 'button' %} overflow-hidden{% endif %}" {{ block.shopify_attributes }}>
                       {%- render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id -%}
