@@ -758,7 +758,7 @@
         "content_layout": "no-overlap",
         "hide_when_empty_image": false,
         "preload": false,
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36,
         "color_heading": "#000000",
@@ -855,7 +855,7 @@
         "colors_text": "#f5f2f4",
         "colors_input": "#000000",
         "overlay_color": "#00a9e0",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "padding_top": 72,
         "padding_bottom": 72
       }
