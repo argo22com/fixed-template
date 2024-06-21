@@ -422,12 +422,13 @@ class DrawerFixed extends HTMLElement {
   }
 }
 
-// FIXME done like this due to unknown error in this file. Should be done as 
+// FIXME done like this due to unknown error in this file. Should be done as web component
 var radioButtons = document.querySelectorAll('input.product-form__input__radio');
 
 radioButtons.forEach((radioButton) => {
   radioButton.addEventListener('change', (event) => {
     document.querySelector('truncate-text .truncate-text__content').innerHTML = event.target.getAttribute('data-desc')
+    document.querySelector('.product__title h1').innerHTML = event.target.getAttribute('data-title')
   })
 })
 
