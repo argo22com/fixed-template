@@ -427,7 +427,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "TOP produkty",
-        "subtitle": "TOP produkty",
+        "subtitle": "",
         "collection": "cestovni-adaptery",
         "heading_size": "h2",
         "products_to_show": 3,
@@ -593,7 +593,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Novinky",
-        "subtitle": "Novinky",
+        "subtitle": "",
         "collection": "top2",
         "heading_size": "h2",
         "products_to_show": 3,
@@ -703,7 +703,7 @@
       "settings": {
         "section_width": "grid",
         "title": "Často kladené otázky",
-        "subtitle": "Často kladené otázky",
+        "subtitle": "",
         "heading_size": "h2",
         "enable_section_box_layout": false,
         "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
