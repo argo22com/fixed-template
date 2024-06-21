@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "general": {
     "password_page": {
@@ -404,7 +413,7 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add\/edit\/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
       "group_item": "Group #{{ index }}"
     },
     "cookies_banner": {
