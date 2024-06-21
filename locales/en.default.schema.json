@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "settings_schema": {
     "global": {
@@ -5074,9 +5083,6 @@
             "size_chart_enable": {
               "label": "Enable"
             },
-            "size_chart_option": {
-              "label": "Link from option"
-            },
             "size_chart_link_label": {
               "label": "Label"
             },
@@ -5516,6 +5522,21 @@
           "settings": {
             "page": {
               "label": "Page"
+            },
+            "allowed_skus": {
+              "label": "SKU of products where this page is shown",
+              "info": "Enter the SKU of the products for which this page is shown. Separate multiple SKUs with a comma. SKUs are matched by prefix - f. e. 'SKU-' matches products 'SKU-123' and 'SKU-456'."
+            }
+          }
+        },
+        "files": {
+          "name": "Files"
+        },
+        "parameters": {
+          "name": "Parameters",
+          "settings": {
+            "show_sku": {
+              "label": "Show SKU"
             }
           }
         },

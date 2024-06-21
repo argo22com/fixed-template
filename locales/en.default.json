@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "general": {
     "password_page": {
@@ -192,6 +201,7 @@
       },
       "share": "Share this product",
       "sold_out": "Sold out",
+      "show_more": "More sizes",
       "unavailable": "Unavailable",
       "vendor": "Vendor",
       "value_unavailable": "{{ option_value }} - Unavailable",
@@ -403,7 +413,7 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add\/edit\/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
       "group_item": "Group #{{ index }}"
     },
     "cookies_banner": {
@@ -413,6 +423,11 @@
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates<\/a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key<\/a>."
+    },
+    "product_tabs": {
+      "reviews": {
+        "title": "Reviews"
+      }
     }
   },
   "localization": {

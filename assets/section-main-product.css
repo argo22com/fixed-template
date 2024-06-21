@@ -35,6 +35,22 @@
   transition: opacity 500ms ease;
 }
 
+.product-download-link {
+  background-color: rgba(var(--color-background));
+  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border-radius: 3px;
+}
+
+.product-download-link svg {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.product-download-link:hover {
+  background-color: rgba(var(--color-foreground), 0.1);
+  transition: background-color 0.3s linear;
+}
+
 .product__media.loaded + .product__media-loading {
   opacity: 0;
 }
@@ -415,6 +431,7 @@ button.shopify-payment-button__button--unbranded {
 .product-form__input__radio-label--pill.soldout {
   color: rgb(var(--color-foreground), 0.55);
   box-shadow: none;
+  cursor: default;
 }
 
 .product-form__input__radio.disabled + .product-form__input__radio-label--pill:not(.soldout) {
@@ -449,7 +466,6 @@ button.shopify-payment-button__button--unbranded {
 .product-form__input__radio:disabled + label {
   border-color: rgba(var(--color-foreground), 0.1);
   color: rgba(var(--color-foreground), 0.4);
-  text-decoration: line-through;
 }
 .product-form__input__radio:focus-visible + label {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
@@ -459,6 +475,12 @@ button.shopify-payment-button__button--unbranded {
 .popup-modal__button-size-chart button:hover {
   color: rgb(var(--color-foreground));
   cursor: pointer;
+}
+
+.autosize-iframe iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
 }
 
 /* Fallback */

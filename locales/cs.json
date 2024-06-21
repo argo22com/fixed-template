@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "general": {
     "password_page": {
@@ -160,6 +169,7 @@
       "product_variants": "Varianty produktu",
       "share": "Sdílet tento produkt",
       "sold_out": "Vyprodáno",
+      "show_more": "Více velikostí",
       "unavailable": "Není k dispozici",
       "vendor": "Dodavatel",
       "video_exit_message": "{{ title }} otevře ve stejném okně video na celé obrazovce.",
@@ -427,6 +437,11 @@
     "gallery": {
       "list": "Gallery items",
       "item_id_label": "Gallery item #{{ item_number }}"
+    },
+    "product_tabs": {
+      "reviews": {
+        "title": "Hodnocení"
+      }
     }
   },
   "localization": {
