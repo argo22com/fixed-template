@@ -100,7 +100,6 @@
 
   <section class="product-section color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding {% if section.settings.use_background_input %}background-input{% else %}gradient{% endif %}">
     <div class="{{ section.settings.section_width }}">
-      <h1>{{ section.settings.gallery_layout }}</h1>
       {%- if section.settings.gallery_layout == 'thumbnail_slider_compact' -%}
       <media-gallery id="MediaGallery-{{ section.id }}" role="region" class="product__media-gallery{% if is_vertical %} product__media-gallery--vertical product__media-gallery--vertical-{{ section.settings.thumbnail_position }}{% endif %}" aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}"{% if section.settings.auto_scroll_up_mobile %} data-scroll-up-mobile="true"{% endif %}{% if section.settings.disable_images_lightbox %} data-disable-lightbox="true"{% endif %}>
       {%- endif -%}
@@ -285,7 +284,7 @@
                     {%- endif -%}
                   </h2>
                 </div>
-                {%- if section.settings.gallery_layout != 'thumbnail_slider_compact' -%}
+                {%- if section.settings.gallery_layout == 'thumbnail_slider_compact' -%}
                   {%- if media_count > 1 and section.settings.gallery_layout contains 'thumbnail' or section.settings.mobile_thumbnails == 'show' -%}
                     <{%- if is_vertical -%}product-thumbnail-vertical-{%- endif -%}slider-component id="GalleryThumbnails-{{ section.id }}" class="por thumbnail-slider slider-mobile-gutter flex align-center{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}{% if is_vertical %} thumbnail-slider--vertical flex-grow-1{% else %} element-small-margin-top{% endif %}{% if section.settings.gallery_layout contains 'slider' %} slider-component-desktop slider-component-tablet{% endif %} slider-component-mobile{% if section.settings.gallery_layout == 'stacked' or section.settings.gallery_layout == 'columns' %} medium-hide large-up-hide{% endif %}">
                       <button type="button" class="product__slider-button--prev slider-button flex flex-column justify-center align-center slider-button--prev tap-area-icon{% if media_count <= 5 %} small-hide{% endif %}{% if section.settings.gallery_layout == 'stacked' or section.settings.gallery_layout == 'thumbnail' or section.settings.gallery_layout == 'columns' %} medium-hide large-up-hide{% else %}{% if media_count <= 4 %} medium-hide{% endif %}{% if media_count <= threshold_media_desktop %} large-up-hide{% endif %}{% endif %}" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="GalleryThumbnails-{{ section.id }}">{% render 'icon-caret-slider-prev' %}</button>
