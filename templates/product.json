@@ -31,8 +31,7 @@
             "enable_color_swatches": true,
             "color_swatches_style": "custom",
             "size_chart_enable": true,
-            "size_chart_option": "size",
-            "size_chart_link_label": "Tabulka velikostí",
+            "size_chart_link_label": "Velikostní tabulka",
             "size_chart_page": "tabulka-velikosti-univerzalni-pouzdra",
             "quantity_selector_enable": true,
             "show_dynamic_checkout": true,
@@ -129,48 +128,47 @@
             "read_more_button": "Číst dále"
           }
         },
-        "8274ef04-23c0-4245-a55b-07501c2bd206": {
-          "type": "page_content",
+        "parameters_qpiADk": {
+          "type": "parameters",
           "settings": {
             "title": "Parametry",
-            "page": ""
+            "show_sku": true
           }
         },
         "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
           "type": "page_content",
           "settings": {
             "title": "Související produkty",
-            "page": ""
+            "page": "",
+            "allowed_skus": ""
           }
         },
-        "page_content_LqEiyQ": {
-          "type": "page_content",
+        "files_GRHLmJ": {
+          "type": "files",
           "settings": {
-            "title": "Dokumenty",
-            "page": ""
+            "title": "Dokumenty"
           }
         },
-        "custom_text_RxXKMH": {
-          "type": "custom_text",
+        "judge_me_reviews_review_widget_iCM3m4": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "title": "Hodnocení",
-            "custom_text": ""
           }
         },
         "page_content_g4T3PM": {
           "type": "page_content",
           "settings": {
             "title": "Výběr správné velikosti pouzdra",
-            "page": "jak-si-vybrat-spravnou-velikost-uni-pouzdra"
+            "page": "jak-si-vybrat-spravnou-velikost-uni-pouzdra",
+            "allowed_skus": "FIXPOH-,FIXPOH2-,RPPOH-,RPSFH-,RPSFM-,RPSOS-,FIXPOM-,FIXPOM2-,FIXAB-,FIXCL-,FIXSOS-"
           }
         }
       },
       "block_order": [
         "1638dd10-8e33-4e82-b01c-2eb71d6362ba",
-        "8274ef04-23c0-4245-a55b-07501c2bd206",
+        "parameters_qpiADk",
         "cbb96b5f-f683-42e5-b865-6ac18e11645e",
-        "page_content_LqEiyQ",
-        "custom_text_RxXKMH",
+        "files_GRHLmJ",
+        "judge_me_reviews_review_widget_iCM3m4",
         "page_content_g4T3PM"
       ],
       "settings": {
@@ -184,103 +182,6 @@
       "type": "spacer",
       "settings": {
         "height": 40
-      }
-    },
-    "video_wYWGfk": {
-      "type": "video",
-      "settings": {
-        "title": "Video",
-        "subtitle": "",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "autoplay": false,
-        "enable_controls": false,
-        "enable_video_looping": true,
-        "full_width": false,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "6099b098-2d24-4b53-9488-988cbaa630f3": {
-      "type": "main-product-attributes",
-      "blocks": {
-        "template--20050134237485__6099b098-2d24-4b53-9488-988cbaa630f3-16896858800c7f6815-0": {
-          "type": "product_brand",
-          "settings": {
-            "title": "Brand"
-          }
-        },
-        "product_sku_CC8AkN": {
-          "type": "product_sku",
-          "settings": {
-            "title": "SKU"
-          }
-        },
-        "product_weight_NByTRw": {
-          "type": "product_weight",
-          "settings": {
-            "title": "Weight"
-          }
-        },
-        "product_text_9LUibb": {
-          "type": "product_text",
-          "settings": {
-            "title": "Dimensions",
-            "content": ""
-          }
-        },
-        "specifications_y7bE8w": {
-          "type": "specifications",
-          "settings": {
-            "title": "Technical specs",
-            "metafields": ""
-          }
-        },
-        "template--20050134237485__6099b098-2d24-4b53-9488-988cbaa630f3-16896858800c7f6815-1": {
-          "type": "product_type",
-          "settings": {
-            "title": "Type"
-          }
-        },
-        "c2731e6a-27ad-4c71-b114-f2c62da34e42": {
-          "type": "specifications",
-          "settings": {
-            "title": "Label",
-            "metafields": "namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key"
-          }
-        },
-        "517e3875-04c8-4ad9-a3de-d00c3d5a9451": {
-          "type": "specifications",
-          "settings": {
-            "title": "Label",
-            "metafields": "custom.metafield_key,custom.metafield_key,custom.metafield_key,custom.metafield_key,custom.metafield_key,custom.metafield_key"
-          }
-        }
-      },
-      "block_order": [
-        "template--20050134237485__6099b098-2d24-4b53-9488-988cbaa630f3-16896858800c7f6815-0",
-        "product_sku_CC8AkN",
-        "product_weight_NByTRw",
-        "product_text_9LUibb",
-        "specifications_y7bE8w",
-        "template--20050134237485__6099b098-2d24-4b53-9488-988cbaa630f3-16896858800c7f6815-1",
-        "c2731e6a-27ad-4c71-b114-f2c62da34e42",
-        "517e3875-04c8-4ad9-a3de-d00c3d5a9451"
-      ],
-      "settings": {
-        "show_description": false,
-        "title": "Parametry",
-        "subtitle": "",
-        "heading_size": "h2",
-        "enable_section_box_layout": false,
-        "color_scheme": "background-2",
-        "table_color_scheme": "",
-        "padding_top": 80,
-        "padding_bottom": 80
       }
     },
     "product-recommendations": {
@@ -572,8 +473,6 @@
     "main",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "8124c74c-24a1-4cc3-9369-91db0fab3a14",
-    "video_wYWGfk",
-    "6099b098-2d24-4b53-9488-988cbaa630f3",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
     "96482c8e-18e4-432f-a2aa-323d63bd401b",

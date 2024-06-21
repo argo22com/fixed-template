@@ -461,8 +461,7 @@
                     endif
                     assign has_size_chart = false
                     if block.settings.size_chart_enable
-                      assign size_name = block.settings.size_chart_option
-                      if product.options_by_name[size_name] != nil
+                      if product.metafields.custom.product_size_chart != blank
                         assign has_size_chart = true
                       endif
                     endif
@@ -1721,12 +1720,6 @@
           "id": "size_chart_enable",
           "label": "t:sections.main-product.blocks.sale_box.settings.size_chart_enable.label",
           "default": true
-        },
-        {
-          "type": "text",
-          "id": "size_chart_option",
-          "label": "t:sections.main-product.blocks.sale_box.settings.size_chart_option.label",
-          "default": "size"
         },
         {
           "type": "text",
