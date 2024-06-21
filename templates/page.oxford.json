@@ -414,7 +414,7 @@
         "enable_sticky_info": true,
         "default_image": "product_featured_image",
         "media_position": "left",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider_compact",
         "thumbnail_position": "left",
         "media_size": "medium",
         "image_ratio": "adapt",
