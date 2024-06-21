@@ -761,8 +761,8 @@ summary::-webkit-details-marker {
 /* Subtitle in sections */
 
 .title__front {
-  margin-top: var(--title-gap);
-  margin-inline-start: var(--title-indent);
+  /* margin-top: var(--title-gap);
+  margin-inline-start: var(--title-indent); */
 }
 
 .title__front--small {
@@ -771,9 +771,9 @@ summary::-webkit-details-marker {
 }
 
 .title__back {
-  font-size: calc(var(--title-back-size) * var(--font-heading-scale));
+  /* font-size: calc(var(--title-back-size) * var(--font-heading-scale));
   letter-spacing: var(--title-back-letter-spacing);
-  color: rgb(var(--color-foreground), 0.1);
+  color: rgb(var(--color-foreground), 0.1); */
 }
 
 .subtitle {
