@@ -98,9 +98,14 @@
 
   <section class="product-section color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding {% if section.settings.use_background_input %}background-input{% else %}gradient{% endif %}">
     <div class="{{ section.settings.section_width }}">
+      {%- if section.settings.gallery_layout == 'thumbnail_slider_compact' -%}
+      <media-gallery id="MediaGallery-{{ section.id }}" role="region" class="product__media-gallery{% if is_vertical %} product__media-gallery--vertical product__media-gallery--vertical-{{ section.settings.thumbnail_position }}{% endif %}" aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}"{% if section.settings.auto_scroll_up_mobile %} data-scroll-up-mobile="true"{% endif %}{% if section.settings.disable_images_lightbox %} data-disable-lightbox="true"{% endif %}>
+      {%- endif -%}
       <div class="product product--{{ section.settings.media_size }} product--media-{{ section.settings.media_position }} {% unless is_vertical %}product--{{ section.settings.gallery_layout }}{% else %}product--thumbnail_slider{% endunless %} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col grid--gapless {% if product.media.size > 0 or product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %} w100">
         <div class="grid__item product__media-wrapper{% if section.settings.enable_sticky_info and section.settings.gallery_layout != 'stacked' and section.settings.gallery_layout != 'columns' %} product__sticky{% endif %}">
-          <media-gallery id="MediaGallery-{{ section.id }}" role="region" class="product__media-gallery{% if is_vertical %} product__media-gallery--vertical product__media-gallery--vertical-{{ section.settings.thumbnail_position }}{% endif %}" aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}"{% if section.settings.auto_scroll_up_mobile %} data-scroll-up-mobile="true"{% endif %}{% if section.settings.disable_images_lightbox %} data-disable-lightbox="true"{% endif %}>
+          {%- if section.settings.gallery_layout != 'thumbnail_slider_compact' -%}
+            <media-gallery id="MediaGallery-{{ section.id }}" role="region" class="product__media-gallery{% if is_vertical %} product__media-gallery--vertical product__media-gallery--vertical-{{ section.settings.thumbnail_position }}{% endif %}" aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}"{% if section.settings.auto_scroll_up_mobile %} data-scroll-up-mobile="true"{% endif %}{% if section.settings.disable_images_lightbox %} data-disable-lightbox="true"{% endif %}>
+          {%- endif -%}
             <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
             <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter por{% if is_vertical %} product__media-vertical{% endif %}">
               <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
@@ -246,7 +251,9 @@
                 <button type="button" class="product__slider-button--next slider-button flex flex-column justify-center align-center slider-button--next tap-area-icon{% if media_count <= 5 %} small-hide{% endif %}{% if section.settings.gallery_layout == 'stacked' or section.settings.gallery_layout == 'thumbnail' or section.settings.gallery_layout == 'columns' %} medium-hide large-up-hide{% else %}{% if media_count <= 4 %} medium-hide{% endif %}{% if media_count <= threshold_media_desktop %} large-up-hide{% endif %}{% endif %}" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="GalleryThumbnails-{{ section.id }}">{% render 'icon-caret-slider-next' %}</button>
               </{%- if is_vertical -%}product-thumbnail-vertical-{%- endif -%}slider-component>
             {%- endif -%}
-          </media-gallery>
+          {%- if section.settings.gallery_layout != 'thumbnail_slider_compact' -%}
+            </media-gallery>
+          {%- endif -%}
         </div>
         <div class="product__info-wrapper product__info-wrapper-media-{{ section.settings.media_position }} grid__item por">
           <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %}{% if section.settings.gallery_layout == 'stacked' or section.settings.gallery_layout == 'columns' %} product__sticky{% endif %}{% endif %}">
@@ -530,6 +537,9 @@
           </div>
         </div>
       </div>
+      {%- if section.settings.gallery_layout == 'thumbnail_slider_compact' -%}
+      </media-gallery>
+      {%- endif -%}
     </div>    
     {%- render 'main-product-popups', section: section, product: product -%}
     {%- render 'main-product-size-chart', section: section, product: product -%}
@@ -4146,6 +4156,10 @@
         {
           "value": "thumbnail_slider_vertical",
           "label": "t:sections.main-product.settings.gallery_layout.options__5.label"
+        },
+        {
+          "value": "thumbnail_slider_compact",
+          "label": "t:sections.main-product.settings.gallery_layout.options__6.label"
         }
       ],
       "default": "stacked",
