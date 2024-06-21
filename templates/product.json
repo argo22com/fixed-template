@@ -168,7 +168,7 @@
           "settings": {
             "title": "Výběr správné velikosti pouzdra",
             "page": "jak-si-vybrat-spravnou-velikost-uni-pouzdra",
-            "allowed_skus": ""
+            "allowed_skus": "FIXPOH-,FIXPOH2-,RPPOH-,RPSFH-,RPSFM-,RPSOS-,FIXPOM-,FIXPOM2-,FIXAB-,FIXCL-,FIXSOS-"
           }
         }
       },
