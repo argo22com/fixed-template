@@ -5382,6 +5382,9 @@
           },
           "options__5": {
             "label": "Vertical thumbnail carousel"
+          },
+          "options__6": {
+            "label": "Compact carousel below title"
           }
         },
         "thumbnail_position": {
