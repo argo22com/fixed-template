@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "type": "footer",
   "name": "Footer Group",
@@ -9,7 +18,7 @@
           "type": "store_information",
           "settings": {
             "heading": "Kontaktní informace",
-            "address": "Kubatova 1240\/6                         370 04 České Budějovice",
+            "address": "Budějovická 19, 370 01 Homole",
             "phone": "(+420) 606 909 990",
             "email": "<a href=\"mailto:podpora@fixed.zone\">podpora@fixed.zone<\/a>",
             "footer_logo_enable": true,
