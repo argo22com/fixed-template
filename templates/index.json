@@ -224,7 +224,7 @@
             "title": "Tag Card",
             "text": "<p>Chytrý lokátor ve velikosti kreditní karty pro ochranu každé peněženky. Je kompatibilní s iOS a ovládá se v aplikaci Apple Najít. Navíc má i bezdrátové nabíjení.<br\/><\/p>",
             "link_label": "Zjistit více",
-            "link": "shopify:\/\/metaobjects\/landing_page\/smart",
+            "link": "shopify:\/\/pages\/smart",
             "button_style": "link",
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
