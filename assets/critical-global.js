@@ -425,8 +425,13 @@ class DrawerFixed extends HTMLElement {
 // FIXME done like this due to unknown error in this file. Should be done as web component
 document.addEventListener('change', (e) => {
   if (e.target.classList.contains('product-form__input__radio')) {
+    const description = e.target.getAttribute('data-desc')
+
     if (document.querySelector('truncate-text .truncate-text__content')) {
-      document.querySelector('truncate-text .truncate-text__content').innerHTML = e.target.getAttribute('data-desc')
+      document.querySelector('truncate-text .truncate-text__content').innerHTML = description
+    }
+    if (document.querySelector('#ProductInfo-quickview-quick-view .product__description')) {
+      document.querySelector('#ProductInfo-quickview-quick-view .product__description').innerHTML = description
     }
     const title = e.target.getAttribute('data-title')
 
