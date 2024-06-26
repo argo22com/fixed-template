@@ -423,14 +423,12 @@ class DrawerFixed extends HTMLElement {
 }
 
 // FIXME done like this due to unknown error in this file. Should be done as web component
-var radioButtons = document.querySelectorAll('input.product-form__input__radio');
-
-radioButtons.forEach((radioButton) => {
-  radioButton.addEventListener('change', (event) => {
+document.addEventListener('change', (e) => {
+  if (e.target.classList.contains('product-form__input__radio')) {
     if (document.querySelector('truncate-text .truncate-text__content')) {
-      document.querySelector('truncate-text .truncate-text__content').innerHTML = event.target.getAttribute('data-desc')
+      document.querySelector('truncate-text .truncate-text__content').innerHTML = e.target.getAttribute('data-desc')
     }
-    const title = event.target.getAttribute('data-title')
+    const title = e.target.getAttribute('data-title')
 
     if (document.querySelector('.product__title h1')) {
       document.querySelector('.product__title h1').innerHTML = title
@@ -438,12 +436,15 @@ radioButtons.forEach((radioButton) => {
     if (document.querySelector('.product__title h2')) { 
       document.querySelector('.product__title h2').innerHTML = title
     }
+    if (document.querySelector('.product__title .h2')) { 
+      document.querySelector('.product__title .h2').innerHTML = title
+    }
 
     // set the last child of breadcrumbs to the product title
     if (document.querySelector('ol.breadcrumb__list').lastChild.querySelector('span')) {
       document.querySelector('ol.breadcrumb__list').lastChild.querySelector('span').innerHTML = title;
     }
-  })
+  }
 })
 
 class ModalDialog extends HTMLElement {
