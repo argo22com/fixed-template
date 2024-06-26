@@ -5655,6 +5655,9 @@
         "files": {
           "name": "Files"
         },
+        "recommendations": {
+          "name": "Product recommendations"
+        },
         "parameters": {
           "name": "Parameters",
           "settings": {
