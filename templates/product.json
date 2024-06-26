@@ -214,33 +214,6 @@
         "height": 40
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "settings": {
-        "title": "Doporučené produkty",
-        "subtitle": "",
-        "heading_size": "h2",
-        "products_to_show": 10,
-        "columns_desktop": 4,
-        "full_width": false,
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "enable_compare": true,
-        "enable_quick_view": true,
-        "show_color_swatches": true,
-        "color_swatches_style": "custom",
-        "columns_tablet": "3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 72,
-        "padding_bottom": 40
-      }
-    },
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed": {
       "type": "recently-viewed-products",
       "settings": {
@@ -271,7 +244,6 @@
     "main",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "8124c74c-24a1-4cc3-9369-91db0fab3a14",
-    "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
     "168088586605a49d77"
