@@ -11,6 +11,18 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "blocks": {
+        "subcollection_icon_YYD4k8": {
+          "type": "subcollection_icon",
+          "settings": {
+            "collection": "",
+            "icon": "cellphone"
+          }
+        }
+      },
+      "block_order": [
+        "subcollection_icon_YYD4k8"
+      ],
       "settings": {
         "collection_tree_data": "produkty",
         "title_background_image": "shopify:\/\/shop_images\/img_a6f047dd-0329-4c14-9a30-77b00918c632.jpg",
