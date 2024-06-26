@@ -167,12 +167,10 @@
             "show_sku": true
           }
         },
-        "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
-          "type": "page_content",
+        "recommendations_3a3QYP": {
+          "type": "recommendations",
           "settings": {
-            "title": "Související produkty",
-            "page": "",
-            "allowed_skus": ""
+            "title": "Související produkty"
           }
         },
         "files_dWmtVg": {
@@ -198,7 +196,7 @@
       "block_order": [
         "1638dd10-8e33-4e82-b01c-2eb71d6362ba",
         "parameters_GiBjwJ",
-        "cbb96b5f-f683-42e5-b865-6ac18e11645e",
+        "recommendations_3a3QYP",
         "files_dWmtVg",
         "judge_me_reviews_review_widget_8VjJfr",
         "page_content_g4T3PM"
