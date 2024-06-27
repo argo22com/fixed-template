@@ -283,13 +283,32 @@
             "overlay_color": "#000000",
             "overlay_opacity": 50
           }
+        },
+        "text_AHVB8k": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Zavírání na silné magnety, komplexní ochrana vašeho zařízení s dlouholetou výdrží.<\/p>"
+          }
+        },
+        "button_qm4QNt": {
+          "type": "button",
+          "settings": {
+            "button_label": "OBJEVIT VŠECHNY MODELY",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
         }
       },
       "block_order": [
         "text_overlay_image_Mkkd46",
         "text_overlay_image_HwxYBK",
         "text_overlay_image_gYAfpE",
-        "text_overlay_image_bqxP4Q"
+        "text_overlay_image_bqxP4Q",
+        "text_AHVB8k",
+        "button_qm4QNt"
       ],
       "settings": {
         "title": "",
