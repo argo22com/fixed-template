@@ -113,7 +113,8 @@
           {% if section.settings.disable_item_space %} grid--gapless{% endif %}
           {% if section.settings.flexible_columns_layout contains '2cols' %} grid--extra-equal{% endif %}" 
           role="list" aria-label="{{ 'sections.gallery.list' | t }}">
-          {%- for block in section.blocks -%}
+          {% assign gallery_blocks = section.blocks | where_exp: "item", "item.type != 'text' and item.type != 'button'" %}
+          {%- for block in gallery_blocks -%}
             {%- liquid
               assign ratio = 1
               if section.settings.image_ratio == 'portrait'
@@ -247,6 +248,29 @@
           {%- endif -%}
         {%- endif -%}
       </slider-component>
+      {% assign text_blocks = section.blocks | where: "type", "text" %}
+      {% for block in text_blocks %}
+        <div class="rich-text__text rte" {{ block.shopify_attributes }}>
+          {{ block.settings.text }}
+        </div>
+      {% endfor %}
+      {% assign button_blocks = section.blocks | where: "type", "button" %}
+      {% for block in button_blocks %}
+        <div class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
+          {%- if block.settings.button_label != blank -%}
+            <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="{% if block.settings.button_style_1 != 'link' %}button button--{{ block.settings.button_style_1 }}{% else %}link link-with-icon align-center{% endif %}">
+              <span>{{ block.settings.button_label | escape }}</span>
+              {%- if block.settings.button_style_1 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
+            </a>
+          {%- endif -%}
+          {%- if block.settings.button_label_2 != blank -%}
+            <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="{% if block.settings.button_style_2 != 'link' %}button button--{{ block.settings.button_style_2 }}{% else %}link link-with-icon align-center{% endif %}">
+              <span>{{ block.settings.button_label_2 | escape }}</span>
+              {%- if block.settings.button_style_2 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
+            </a>
+          {%- endif -%}
+        </div>
+      {% endfor %}
     </div>
   {%- if  section.settings.enable_section_box_layout -%}
     </div>
@@ -874,6 +898,88 @@
           "label": "t:sections.gallery.blocks.image.settings.button_background.label",
           "info": "t:sections.gallery.blocks.image.settings.button_background.info",
           "default": "#000"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.rich-text.blocks.text.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "t:sections.rich-text.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.rich-text.blocks.buttons.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "select",
+          "id": "button_style_1",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_1.label",
+          "options": [
+            {
+              "value": "primary",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_1.options_1.label"
+            },
+            {
+              "value": "secondary",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_1.options_2.label"
+            },
+            {
+              "value": "link",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_1.options_3.label"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_2.label"
+        },
+        {
+          "type": "select",
+          "id": "button_style_2",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_2.label",
+          "options": [
+            {
+              "value": "primary",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_2.options_1.label"
+            },
+            {
+              "value": "secondary",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_2.options_2.label"
+            },
+            {
+              "value": "link",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_2.options_3.label"
+            }
+          ],
+          "default": "primary"
         }
       ]
     }
