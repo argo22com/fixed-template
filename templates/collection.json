@@ -101,7 +101,7 @@
         "pagination_style": "numbers",
         "image_ratio": "adapt",
         "show_secondary_image": true,
-        "show_vendor": true,
+        "show_vendor": false,
         "show_rating": true,
         "include_collection_in_url": true,
         "enable_quick_add": true,
