@@ -5,20 +5,30 @@
   <link rel="stylesheet" href="{{ 'component-extra-grid-tablet-up.css' | asset_url }}" media="all and (min-width:750px)">
 {%- endif -%}  
 {%- liquid
+  assign gallery_blocks = null | sort
+  for block in section.blocks
+    if block.type == 'text-overlay-image' or block.type == 'text-outside-image'
+      assign gallery_block = block | sort
+      assign gallery_blocks = gallery_blocks | concat: gallery_block
+    endif
+  endfor
+  assign button_blocks = section.blocks | where: "type", "button"
+  assign text_blocks = section.blocks | where: "type", "text"
+
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
   assign show_mobile_slider = false
-  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
+  if section.settings.swipe_on_mobile and gallery_blocks.size > columns_mobile_int
     assign show_mobile_slider = true
   endif
 
   assign columns_tablet_int = section.settings.columns_tablet | plus: 0
   assign show_tablet_slider = false
-  if section.settings.flexible_columns_layout == 'carousel' and section.blocks.size > columns_tablet_int
+  if section.settings.flexible_columns_layout == 'carousel' and gallery_blocks.size > columns_tablet_int
     assign show_tablet_slider = true
   endif
 
   assign show_desktop_slider = false
-  if section.settings.flexible_columns_layout == 'carousel' and section.blocks.size > section.settings.columns_desktop
+  if section.settings.flexible_columns_layout == 'carousel' and gallery_blocks.size > section.settings.columns_desktop
     assign show_desktop_slider = true
   endif
   if settings.enable_appear_effect
@@ -56,7 +66,7 @@
     }
   }
 
-  {%- for block in section.blocks -%}
+  {%- for block in gallery_blocks -%}
     {%- if block.settings.heading != blank or block.settings.button_label != blank or block.settings.text != blank -%}
       .gallery__item__content--{{ section.id }}-{{ block.id }} {
         --color-caption: {{ block.settings.caption_color.red }}, {{ block.settings.caption_color.green }}, {{ block.settings.caption_color.blue }};
@@ -78,6 +88,20 @@
       }
     {%- endif -%}  
   {%- endfor -%}
+
+  {% for block in text_blocks %}
+    .text-padding-{{ block.id }} {
+      padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  {% endfor %}
+
+  {% for block in button_blocks %}
+    .button-padding-{{ block.id }} {
+    padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  {% endfor %}
 
   {%- render 'section-heading-styles' -%}
 {%- endstyle -%}
@@ -113,7 +137,7 @@
           {% if section.settings.disable_item_space %} grid--gapless{% endif %}
           {% if section.settings.flexible_columns_layout contains '2cols' %} grid--extra-equal{% endif %}" 
           role="list" aria-label="{{ 'sections.gallery.list' | t }}">
-          {%- for block in section.blocks -%}
+          {%- for block in gallery_blocks -%}
             {%- liquid
               assign ratio = 1
               if section.settings.image_ratio == 'portrait'
@@ -243,10 +267,33 @@
         </ul>
         {%- if show_mobile_slider or show_tablet_slider or show_desktop_slider -%}
           {%- if section.settings.title == blank -%}
-            {%- render 'slider-controls', suffix_id: section.id, total_items: section.blocks.size, hide_counter: true, wrapper_classes: 'small-margin-top slider-buttons--box' -%}
+            {%- render 'slider-controls', suffix_id: section.id, total_items: gallery_blocks.size, hide_counter: true, wrapper_classes: 'small-margin-top slider-buttons--box' -%}
           {%- endif -%}
         {%- endif -%}
       </slider-component>
+      {% for block in text_blocks %}
+        <div class="rich-text__text rte {{ block.settings.text_alignment }} text-padding-{{ block.id }}" {{ block.shopify_attributes }}>
+          {{ block.settings.text }}
+        </div>
+      {% endfor %}
+      {% for block in button_blocks %}
+        <div class="w100 flex justify-{{ block.settings.content_alignment }} button-padding-{{ block.id }}">
+          <div class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
+            {%- if block.settings.button_label != blank -%}
+              <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="{% if block.settings.button_style_1 != 'link' %}button button--{{ block.settings.button_style_1 }}{% else %}link link-with-icon align-center{% endif %}">
+                <span>{{ block.settings.button_label | escape }}</span>
+                {%- if block.settings.button_style_1 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
+              </a>
+            {%- endif -%}
+            {%- if block.settings.button_label_2 != blank -%}
+              <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="{% if block.settings.button_style_2 != 'link' %}button button--{{ block.settings.button_style_2 }}{% else %}link link-with-icon align-center{% endif %}">
+                <span>{{ block.settings.button_label_2 | escape }}</span>
+                {%- if block.settings.button_style_2 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
+              </a>
+            {%- endif -%}
+          </div>
+        </div>
+      {% endfor %}
     </div>
   {%- if  section.settings.enable_section_box_layout -%}
     </div>
@@ -874,6 +921,140 @@
           "label": "t:sections.gallery.blocks.image.settings.button_background.label",
           "info": "t:sections.gallery.blocks.image.settings.button_background.info",
           "default": "#000"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.rich-text.blocks.text.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "t:sections.rich-text.blocks.text.settings.text.label"
+        },
+        {
+          "type": "text_alignment",
+          "id": "text_alignment",
+          "label": "t:sections.gallery.blocks.image.settings.horizontal_alignment.label",
+          "default": "center"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 40
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 12
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.rich-text.blocks.buttons.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "select",
+          "id": "button_style_1",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_1.label",
+          "options": [
+            {
+              "value": "primary",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_1.options_1.label"
+            },
+            {
+              "value": "secondary",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_1.options_2.label"
+            },
+            {
+              "value": "link",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_1.options_3.label"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_2.label"
+        },
+        {
+          "type": "select",
+          "id": "button_style_2",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_2.label",
+          "options": [
+            {
+              "value": "primary",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_2.options_1.label"
+            },
+            {
+              "value": "secondary",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_2.options_2.label"
+            },
+            {
+              "value": "link",
+              "label": "t:sections.rich-text.blocks.buttons.settings.button_style_2.options_3.label"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "text_alignment",
+          "id": "content_alignment",
+          "default": "center",
+          "label": "t:sections.rich-text.settings.content_alignment.label"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 0
         }
       ]
     }
