@@ -111,7 +111,7 @@
           ],
           "collection_card_show_title": true,
           "product_recommendations_enable": true,
-          "product_recommendations_heading": "Recommendations",
+          "product_recommendations_heading": "Doporučené produkty",
           "product_recommendations_limit": 5,
           "product_recommendations_image_ratio": "square"
         }
