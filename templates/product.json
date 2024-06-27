@@ -50,6 +50,13 @@
             "products": "{{ product.metafields.product_variants_grouping.variation_products.value }}"
           }
         },
+        "popup_XDycdy": {
+          "type": "popup",
+          "settings": {
+            "text": "Tabulka velikostí",
+            "page": "tabulka-velikosti-pouzder"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -92,13 +99,6 @@
             "button_label": "Add items to cart",
             "image_ratio": "square"
           }
-        },
-        "popup_XDycdy": {
-          "type": "popup",
-          "settings": {
-            "text": "Tabulka velikostí",
-            "page": "tabulka-velikosti-pouzder"
-          }
         }
       },
       "block_order": [
@@ -106,10 +106,10 @@
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "price",
         "e592d434-8377-4309-b179-f98d4b3742a2",
+        "popup_XDycdy",
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
-        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
-        "popup_XDycdy"
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
       ],
       "settings": {
         "section_width": "page-width",
