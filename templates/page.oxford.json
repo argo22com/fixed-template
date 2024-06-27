@@ -287,7 +287,10 @@
         "text_AHVB8k": {
           "type": "text",
           "settings": {
-            "text": "<p>Zavírání na silné magnety, komplexní ochrana vašeho zařízení s dlouholetou výdrží.<\/p>"
+            "text": "<p>Zavírání na silné magnety, komplexní ochrana vašeho zařízení s dlouholetou výdrží.<\/p>",
+            "text_alignment": "center",
+            "padding_top": 40,
+            "padding_bottom": 12
           }
         },
         "button_qm4QNt": {
@@ -298,7 +301,10 @@
             "button_style_1": "primary",
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_2": "primary"
+            "button_style_2": "primary",
+            "content_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0
           }
         }
       },
@@ -326,42 +332,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "rich_text_WGRr4t": {
-      "type": "rich-text",
-      "blocks": {
-        "text_TChkMN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Zavírání na silné magnety, komplexní ochrana vašeho zařízení s dlouholetou výdrží.<\/p>"
-          }
-        },
-        "button_DmicHy": {
-          "type": "button",
-          "settings": {
-            "button_label": "OBJEVIT VŠECHNY MODELY",
-            "button_link": "",
-            "button_style_1": "primary",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "text_TChkMN",
-        "button_DmicHy"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "featured_product_kFbBf8": {
@@ -654,7 +624,6 @@
     "text_icons_fictdW",
     "rich_text_Acq8gW",
     "gallery_4mPDEy",
-    "rich_text_WGRr4t",
     "featured_product_kFbBf8",
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
