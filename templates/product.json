@@ -25,6 +25,13 @@
             "show_if_no_reviews": true
           }
         },
+        "popup_XDycdy": {
+          "type": "popup",
+          "settings": {
+            "text": "Tabulka velikostí",
+            "page": "tabulka-velikosti-pouzder"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -48,13 +55,6 @@
             "option_name": "color",
             "option_value_metafield": "product_variants_grouping.variation_value",
             "products": "{{ product.metafields.product_variants_grouping.variation_products.value }}"
-          }
-        },
-        "popup_XDycdy": {
-          "type": "popup",
-          "settings": {
-            "text": "Tabulka velikostí",
-            "page": "tabulka-velikosti-pouzder"
           }
         },
         "share": {
@@ -104,9 +104,9 @@
       "block_order": [
         "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
+        "popup_XDycdy",
         "price",
         "e592d434-8377-4309-b179-f98d4b3742a2",
-        "popup_XDycdy",
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
