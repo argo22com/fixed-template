@@ -29,7 +29,7 @@
           "type": "popup",
           "settings": {
             "text": "Tabulka velikostí",
-            "page": "tabulka-velikosti-pouzder"
+            "page": "tabulka-velikosti-univerzalni-pouzdra"
           }
         },
         "price": {
