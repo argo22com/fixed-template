@@ -519,17 +519,31 @@
         "featured_products_4GpF7r": {
           "type": "featured_products",
           "settings": {
-            "title": "",
+            "title": "sluchátka",
             "product_list": [
-
+              "bezdratova-tws-sluchatka-fixed-buds-pro-s-anc-a-bezdratovym-nabijenim-seda",
+              "bezdratova-tws-sluchatka-fixed-buds-bila",
+              "bezdratova-tws-sluchatka-fixed-buds-cerna"
             ],
             "products_to_show": 3,
             "columns_desktop": 3
           }
+        },
+        "featured_collection_7wM74g": {
+          "type": "featured_collection",
+          "settings": {
+            "title": "Kabely",
+            "collection": "kabely",
+            "products_to_show": 3,
+            "columns_desktop": 3,
+            "show_view_all": true,
+            "view_all_style": "solid"
+          }
         }
       },
       "block_order": [
-        "featured_products_4GpF7r"
+        "featured_products_4GpF7r",
+        "featured_collection_7wM74g"
       ],
       "settings": {
         "title": "Všechny produkty z kategorie sluchátka",
