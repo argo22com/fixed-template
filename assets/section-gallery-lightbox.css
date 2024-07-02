@@ -16,6 +16,7 @@
     background-repeat: no-repeat;
     flex-grow: 2;
     position: relative;
+    height: 450px;
 }
 
 .content-block::after {
@@ -41,6 +42,9 @@
     height: 100%;
     width: 100%;
     max-width: 100%;
+    transition: all .3s ease-in-out;
+    object-fit: cover;
+    object-position: top;
 }
 
 .icon-hover {
@@ -64,4 +68,55 @@
 
 .content-block:hover .icon-hover {
     opacity: 1
+}
+
+@media screen and (max-width: 1550px) and (min-width: 0px) {
+    .gallery .content-block {
+        height: 390px;
+    }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 0px) {
+    .gallery .content-block {
+        height: 330px;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 0px) {
+    .gallery .content-block {
+        height: 280px;
+    }
+
+    .gallery-row-padding {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 0px) {
+    .gallery .content-block {
+        height: 230px;
+    }
+
+    .gallery-row-padding {
+        gap: 10px;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 0px) {
+    .gallery .content-block {
+        width: 100%;
+        height: 230px;
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .gallery-row-padding {
+        gap: 0;
+    }
+
+    .gallery .gallery-stretch {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
 }

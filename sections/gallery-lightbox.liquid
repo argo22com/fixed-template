@@ -45,7 +45,7 @@
         {% assign row_images = images | map: 'settings' | where: "row", i %}
         {% for image_setting in row_images %}
           <a href="#" class="content-block">
-            {{ image_setting.image | image_url: height: 390 | image_tag }}
+            {{ image_setting.image | image_url: width: 700 | image_tag }}
             <span class="icon-hover">{% render 'icon-search', width: 20, height: 20 %}</span>
           </a>
         {% endfor %}
