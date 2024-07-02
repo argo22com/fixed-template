@@ -60,10 +60,12 @@
             {% continue %}
           {% endif %}
 
-          <a href="#" class="content-block gallery-item--{{ block.id }}-{{ block.settings.gradient }}">
-            {{ block.settings.image | image_url: width: 700 | image_tag }}
-            <span class="icon-hover">{% render 'icon-search', width: 20, height: 20 %}</span>
-          </a>
+          {% if block.settings.image != blank %}
+            <a href="#" class="content-block gallery-item--{{ block.id }}-{{ block.settings.gradient }}">
+              {{ block.settings.image | image_url: width: 700 | image_tag }}
+              <span class="icon-hover">{% render 'icon-search', width: 20, height: 20 %}</span>
+            </a>
+          {% endif %}
         {% endfor %}
       </div>
     {% endfor %}
@@ -144,15 +146,10 @@
           "label": "t:sections.gallery-lightbox.blocks.image.settings.image.label"
         },
         {
-          "type": "url",
-          "id": "link",
-          "label": "t:sections.gallery-lightbox.blocks.image.settings.link.label"
-        },
-        {
           "type": "range",
           "id": "row",
           "min": 1,
-          "max": 100,
+          "max": 25,
           "step": 1,
           "label": "t:sections.gallery-lightbox.blocks.image.settings.row.label",
           "default": 1,
