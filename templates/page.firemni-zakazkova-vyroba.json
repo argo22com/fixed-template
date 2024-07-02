@@ -202,7 +202,9 @@
         "gallery_image_Gf63YR": {
           "type": "gallery-image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/O2_guru_leather-1-1024x807.png",
             "link": "",
+            "row": 1,
             "caption": "Our collection",
             "subcaption": "",
             "caption_color": "#ffffff",
@@ -215,7 +217,9 @@
         "gallery_image_rqQTqF": {
           "type": "gallery-image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/1B1A4684-1024x683.jpg",
             "link": "",
+            "row": 1,
             "caption": "Our collection",
             "subcaption": "",
             "caption_color": "#ffffff",
@@ -228,7 +232,9 @@
         "gallery_image_epDgFJ": {
           "type": "gallery-image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/03-1024x683.jpg",
             "link": "",
+            "row": 1,
             "caption": "Our collection",
             "subcaption": "",
             "caption_color": "#ffffff",
