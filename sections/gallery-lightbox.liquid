@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="{{ 'section-gallery-lightbox.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'section-gallery-lightbox.css' | asset_url | stylesheet_tag }}</noscript>
+<script src="{{ 'gallery-lightbox.js' | asset_url }}"></script>
 
 {% liquid
+  assign max_rows = section.settings.max_rows
   assign min_row_number = 101
   assign max_row_number = 0
 
@@ -51,9 +53,9 @@
       <h1 class="{{ section.settings.heading_size }}"><strong>{{ section.settings.title }}</strong></h1>
     </div>
   {%- endif -%}
-  <div class="gallery">
+  <gallery-lightbox class="gallery">
     {% for i in (min_row_number..max_row_number) %}
-      <div class="flex w100 margin-bottom-1rem gallery-row-padding gallery-stretch">
+      <div class="flex w100 margin-bottom-1rem gallery-row-padding gallery-stretch js-gallery-row" {% if max_rows != blank and i > max_rows %}style="display: none;"{% endif %}>
         {% assign row_images = images | map: 'settings' | where: "row", i %}
         {% for block in images %}
           {% if block.settings.row != i %}
@@ -69,7 +71,12 @@
         {% endfor %}
       </div>
     {% endfor %}
-  </div>
+    {% if max_row_number > max_rows %}
+      <div class="flex justify-center w100">
+        <button class="button button--primary js-load-more-button">{{ 'sections.gallery_lightbox.load_more' | t }}</button>
+      </div>
+    {% endif %}
+  </gallery-lightbox>
 </div>
 
 {% schema %}
@@ -103,6 +110,13 @@
       ],
       "default": "h2",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "number",
+      "id": "max_rows",
+      "default": 2,
+      "label": "t:sections.gallery-lightbox.settings.max_rows.label",
+      "info": "t:sections.gallery-lightbox.settings.max_rows.info"
     },
     {
       "type": "color_scheme",

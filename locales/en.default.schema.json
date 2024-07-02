@@ -3024,6 +3024,10 @@
       "settings": {
         "title": {
           "label": "Heading"
+        },
+        "max_rows": {
+          "label": "Maximum rows",
+          "info": "The maximum number of rows to show before user needs to click a button. Leave empty to show all rows."
         }
       },
       "blocks": {
