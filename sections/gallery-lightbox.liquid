@@ -1,5 +1,28 @@
-<div>
-  Gallery with lightbox test
+<link rel="stylesheet" href="{{ 'section-gallery-lightbox.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-gallery-lightbox.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  {%- render 'section-heading-styles' -%}
+{% endstyle %}
+
+<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient isolate page-width--full">
+  {%- if section.settings.title != blank -%}
+    <div class="flex justify-center">
+      <h1 class="{{ section.settings.heading_size }}"><strong>{{ section.settings.title }}</strong></h1>
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
@@ -19,19 +42,19 @@
       "id": "heading_size",
       "options": [
         {
-          "value": "h2",
+          "value": "h3",
           "label": "t:sections.all.heading_size.options__1.label"
         },
         {
-          "value": "h1",
+          "value": "h2",
           "label": "t:sections.all.heading_size.options__2.label"
         },
         {
-          "value": "h0",
+          "value": "h1",
           "label": "t:sections.all.heading_size.options__3.label"
         }
       ],
-      "default": "h1",
+      "default": "h2",
       "label": "t:sections.all.heading_size.label"
     },
     {
