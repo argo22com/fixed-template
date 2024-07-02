@@ -1,6 +1,22 @@
 <link rel="stylesheet" href="{{ 'section-gallery-lightbox.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'section-gallery-lightbox.css' | asset_url | stylesheet_tag }}</noscript>
 
+{% liquid
+  assign min_row_number = 101
+  assign max_row_number = 0
+
+  for block in section.blocks
+    if block.settings.row < min_row_number
+      assign min_row_number = block.settings.row
+    endif
+    if block.settings.row > max_row_number
+      assign max_row_number = block.settings.row
+    endif
+  endfor
+
+  assign images = section.blocks | where: "type", "gallery-image"
+%}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -17,12 +33,25 @@
   {%- render 'section-heading-styles' -%}
 {% endstyle %}
 
-<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient isolate page-width--full">
+<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient isolate">
   {%- if section.settings.title != blank -%}
     <div class="flex justify-center">
       <h1 class="{{ section.settings.heading_size }}"><strong>{{ section.settings.title }}</strong></h1>
     </div>
   {%- endif -%}
+  <div class="gallery">
+    {% for i in (min_row_number..max_row_number) %}
+      <div class="flex w100 margin-bottom-1rem gallery-row-padding gallery-stretch">
+        {% assign row_images = images | map: 'settings' | where: "row", i %}
+        {% for image_setting in row_images %}
+          <a href="#" class="content-block">
+            {{ image_setting.image | image_url: height: 390 | image_tag }}
+            <span class="icon-hover">{% render 'icon-search', width: 20, height: 20 %}</span>
+          </a>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
