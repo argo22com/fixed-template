@@ -30,6 +30,18 @@
     }
   }
 
+  {% for block in images %}
+    .gallery-item--{{ block.id }}-top.content-block::after {
+      background: #000;
+      background: linear-gradient(180deg,#000 0,rgba(255,255,255,0) 90%);
+    }
+
+    .gallery-item--{{ block.id }}-bottom.content-block::after {
+      background: #000;
+      background: linear-gradient(0deg,#000 0,rgba(255,255,255,0) 90%);
+    }
+  {% endfor %}
+
   {%- render 'section-heading-styles' -%}
 {% endstyle %}
 
@@ -43,9 +55,13 @@
     {% for i in (min_row_number..max_row_number) %}
       <div class="flex w100 margin-bottom-1rem gallery-row-padding gallery-stretch">
         {% assign row_images = images | map: 'settings' | where: "row", i %}
-        {% for image_setting in row_images %}
-          <a href="#" class="content-block">
-            {{ image_setting.image | image_url: width: 700 | image_tag }}
+        {% for block in images %}
+          {% if block.settings.row != i %}
+            {% continue %}
+          {% endif %}
+
+          <a href="#" class="content-block gallery-item--{{ block.id }}-{{ block.settings.gradient }}">
+            {{ block.settings.image | image_url: width: 700 | image_tag }}
             <span class="icon-hover">{% render 'icon-search', width: 20, height: 20 %}</span>
           </a>
         {% endfor %}
@@ -141,6 +157,27 @@
           "label": "t:sections.gallery-lightbox.blocks.image.settings.row.label",
           "default": 1,
           "info": "t:sections.gallery-lightbox.blocks.image.settings.row.description"
+        },
+        {
+          "type": "select",
+          "id": "gradient",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.gallery-lightbox.blocks.image.settings.gradient.options__1.label"
+            },
+            {
+              "value": "top",
+              "label": "t:sections.gallery-lightbox.blocks.image.settings.gradient.options__2.label"
+            },
+            {
+              "value": "bottom",
+              "label": "t:sections.gallery-lightbox.blocks.image.settings.gradient.options__3.label"
+            }
+          ],
+          "default": "none",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.gradient.label",
+          "info": "t:sections.gallery-lightbox.blocks.image.settings.gradient.info"
         },
         {
           "type": "header",
