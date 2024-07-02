@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -187,29 +196,75 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_WGRr4t": {
-      "type": "rich-text",
+    "gallery_lightbox_dBe4XY": {
+      "type": "gallery-lightbox",
       "blocks": {
-        "heading_AkqqtD": {
-          "type": "heading",
+        "gallery_image_Gf63YR": {
+          "type": "gallery-image",
           "settings": {
-            "heading": "<h3><strong>Ukázky realizací<\/strong><\/h3>",
-            "heading_size": "h2"
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "gallery_image_rqQTqF": {
+          "type": "gallery-image",
+          "settings": {
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "gallery_image_epDgFJ": {
+          "type": "gallery-image",
+          "settings": {
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
           }
         }
       },
       "block_order": [
-        "heading_AkqqtD"
+        "gallery_image_Gf63YR",
+        "gallery_image_rqQTqF",
+        "gallery_image_epDgFJ"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
+        "title": "Gallery with lightbox",
+        "heading_size": "h1",
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "rich_text_w69QNV": {
@@ -272,24 +327,24 @@
             "form_settings": false,
             "font_color": "#000000",
             "size": 16,
-            "input_background_color": "#FFF",
-            "input_background_color_focus": "#F4DADA",
+            "input_background_color": "#ffffff",
+            "input_background_color_focus": "#f4dada",
             "input_border_radius": 1,
             "input_border_color": "#ebe9e9",
-            "input_border_color_focus": "#2D2727",
-            "input_font_color": "#3D3131",
+            "input_border_color_focus": "#2d2727",
+            "input_font_color": "#3d3131",
             "input_size": 16,
             "border_color": "#121212",
             "border_radius": 2,
             "border": 1,
-            "fill_color": "#EBE9E9",
+            "fill_color": "#ebe9e9",
             "padding": 35,
             "form_width": 600,
             "btn_text": "Submit",
-            "sub_btn_txt_color": "#F3F3F3",
-            "sub_btn_bg_color": "#3F3333",
+            "sub_btn_txt_color": "#f3f3f3",
+            "sub_btn_bg_color": "#3f3333",
             "sub_btn_font_size": 14,
-            "sub_btn_bdr_color": "#FFFFFF",
+            "sub_btn_bdr_color": "#ffffff",
             "sub_btn_bdr_rad": 3,
             "sub_btn_bdr_width": 1,
             "fonts": "Helvetica"
@@ -427,7 +482,7 @@
     "image_banner_Q7m3KH",
     "rich_text_GnRiqE",
     "text_icons_fictdW",
-    "rich_text_WGRr4t",
+    "gallery_lightbox_dBe4XY",
     "rich_text_w69QNV",
     "rich_text_MRRXE6",
     "17180107320ce2e4a0",

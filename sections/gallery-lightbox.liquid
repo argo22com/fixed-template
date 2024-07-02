@@ -1,0 +1,156 @@
+<div>
+  Gallery with lightbox test
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.gallery-lightbox.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Gallery with lightbox",
+      "label": "t:sections.gallery-lightbox.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gallery-image",
+      "name": "t:sections.gallery-lightbox.blocks.image.name_overlay",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.image.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.link.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.gallery-lightbox.blocks.image.settings.heading_header.content"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.heading.label",
+          "default": "Our collection"
+        },
+        {
+          "type": "text",
+          "id": "subcaption",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.text.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.gallery-lightbox.blocks.image.settings.button_header.content"
+        },
+        {
+          "type": "color",
+          "id": "caption_color",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.caption_color.label",
+          "default": "#fff"
+        },
+        {
+          "type": "color",
+          "id": "button_foreground",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.button_foreground.label",
+          "default": "#000"
+        },
+        {
+          "type": "color",
+          "id": "button_background",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.button_background.label",
+          "info": "t:sections.gallery-lightbox.blocks.image.settings.button_background.info",
+          "default": "#fff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_color",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.overlay_color.label",
+          "default": "#000"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.overlay_opacity.label",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 50
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.gallery-lightbox.presets.name",
+      "blocks": [
+        {
+          "type": "gallery-image"
+        },
+        {
+          "type": "gallery-image"
+        },
+        {
+          "type": "gallery-image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
