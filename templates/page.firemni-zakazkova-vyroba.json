@@ -203,17 +203,12 @@
           "type": "gallery-image",
           "settings": {
             "link": "",
-            "keep_ltr": false,
-            "text": "",
-            "heading": "Our collection",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "caption": "Our collection",
+            "subcaption": "",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         },
@@ -221,17 +216,12 @@
           "type": "gallery-image",
           "settings": {
             "link": "",
-            "keep_ltr": false,
-            "text": "",
-            "heading": "Our collection",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "caption": "Our collection",
+            "subcaption": "",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         },
@@ -239,17 +229,12 @@
           "type": "gallery-image",
           "settings": {
             "link": "",
-            "keep_ltr": false,
-            "text": "",
-            "heading": "Our collection",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "",
-            "heading_color": "#fff",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "caption": "Our collection",
+            "subcaption": "",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         }
@@ -260,11 +245,11 @@
         "gallery_image_epDgFJ"
       ],
       "settings": {
-        "title": "Gallery with lightbox",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "Ukázky realizací",
+        "heading_size": "h3",
+        "color_scheme": "inverse",
+        "padding_top": 48,
+        "padding_bottom": 32
       }
     },
     "rich_text_w69QNV": {
