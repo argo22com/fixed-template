@@ -294,6 +294,38 @@
             "overlay_color": "#000000",
             "overlay_opacity": 50
           }
+        },
+        "gallery_image_wUbKfz": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DATART-1024x683.jpg",
+            "link": "",
+            "row": 3,
+            "gradient": "none",
+            "caption": "Our collection",
+            "subcaption": "",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "gallery_image_tJAieB": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BL-1024x683.jpg",
+            "link": "",
+            "row": 3,
+            "gradient": "none",
+            "caption": "Our collection",
+            "subcaption": "",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
         }
       },
       "block_order": [
@@ -302,11 +334,13 @@
         "gallery_image_epDgFJ",
         "gallery_image_z6HMJc",
         "gallery_image_U3pajr",
-        "gallery_image_tnMBiQ"
+        "gallery_image_tnMBiQ",
+        "gallery_image_wUbKfz",
+        "gallery_image_tJAieB"
       ],
       "settings": {
         "title": "Ukázky realizací",
-        "heading_size": "h3",
+        "heading_size": "h2",
         "color_scheme": "scheme-ed30eab5-ffda-4ed0-95af-80a522aeb93f",
         "padding_top": 48,
         "padding_bottom": 32
