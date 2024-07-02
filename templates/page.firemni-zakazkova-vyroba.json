@@ -243,12 +243,60 @@
             "overlay_color": "#000000",
             "overlay_opacity": 50
           }
+        },
+        "gallery_image_z6HMJc": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/storage-one-FIXSM-SMMW2-1024x683.jpg",
+            "link": "",
+            "row": 2,
+            "caption": "Our collection",
+            "subcaption": "",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "gallery_image_U3pajr": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/storage-one-FIXSMS-C2-1024x683.jpg",
+            "link": "",
+            "row": 2,
+            "caption": "Our collection",
+            "subcaption": "",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "gallery_image_tnMBiQ": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/amusnet-1024x682.jpg",
+            "link": "",
+            "row": 2,
+            "caption": "Our collection",
+            "subcaption": "",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
         }
       },
       "block_order": [
         "gallery_image_Gf63YR",
         "gallery_image_rqQTqF",
-        "gallery_image_epDgFJ"
+        "gallery_image_epDgFJ",
+        "gallery_image_z6HMJc",
+        "gallery_image_U3pajr",
+        "gallery_image_tnMBiQ"
       ],
       "settings": {
         "title": "Ukázky realizací",
