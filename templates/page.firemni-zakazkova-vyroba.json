@@ -203,7 +203,6 @@
           "type": "gallery-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/O2_guru_leather-1-1024x807.png",
-            "link": "",
             "row": 1,
             "gradient": "top",
             "caption": "Our collection",
@@ -219,7 +218,6 @@
           "type": "gallery-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/1B1A4684-1024x683.jpg",
-            "link": "",
             "row": 1,
             "gradient": "top",
             "caption": "Our collection",
@@ -235,7 +233,6 @@
           "type": "gallery-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/03-1024x683.jpg",
-            "link": "",
             "row": 1,
             "gradient": "top",
             "caption": "Our collection",
@@ -251,7 +248,6 @@
           "type": "gallery-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/storage-one-FIXSM-SMMW2-1024x683.jpg",
-            "link": "",
             "row": 2,
             "gradient": "bottom",
             "caption": "Our collection",
@@ -267,7 +263,6 @@
           "type": "gallery-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/storage-one-FIXSMS-C2-1024x683.jpg",
-            "link": "",
             "row": 2,
             "gradient": "bottom",
             "caption": "Our collection",
@@ -283,7 +278,6 @@
           "type": "gallery-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/amusnet-1024x682.jpg",
-            "link": "",
             "row": 2,
             "gradient": "bottom",
             "caption": "Our collection",
@@ -299,15 +293,14 @@
           "type": "gallery-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/DATART-1024x683.jpg",
-            "link": "",
             "row": 3,
             "gradient": "none",
             "caption": "Our collection",
             "subcaption": "",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         },
@@ -315,15 +308,14 @@
           "type": "gallery-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/BL-1024x683.jpg",
-            "link": "",
             "row": 3,
             "gradient": "none",
             "caption": "Our collection",
             "subcaption": "",
-            "caption_color": "#fff",
-            "button_foreground": "#000",
-            "button_background": "#fff",
-            "overlay_color": "#000",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
             "overlay_opacity": 50
           }
         }
@@ -341,9 +333,31 @@
       "settings": {
         "title": "Ukázky realizací",
         "heading_size": "h2",
+        "max_rows": 2,
         "color_scheme": "scheme-ed30eab5-ffda-4ed0-95af-80a522aeb93f",
         "padding_top": 48,
         "padding_bottom": 32
+      }
+    },
+    "video_8NNtLE": {
+      "type": "video",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "cover_image": "shopify:\/\/shop_images\/010_Loutocky_COM_DS2_2408_exp-scaled.jpg",
+        "video_hosted": "shopify:\/\/files\/videos\/Vyroba-kozene-penezenky-Tiny-Wallet-pro-BCPP-Burzu-cennych-papiru-Praha.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": true,
+        "enable_video_looping": true,
+        "full_width": true,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "scheme-ed30eab5-ffda-4ed0-95af-80a522aeb93f",
+        "padding_top": 20,
+        "padding_bottom": 36
       }
     },
     "rich_text_w69QNV": {
@@ -562,6 +576,7 @@
     "rich_text_GnRiqE",
     "text_icons_fictdW",
     "gallery_lightbox_dBe4XY",
+    "video_8NNtLE",
     "rich_text_w69QNV",
     "rich_text_MRRXE6",
     "17180107320ce2e4a0",
