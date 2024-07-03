@@ -11037,15 +11037,15 @@
     Lightbox.defaults = {
         albumLabel: 'Image %1 of %2',
         alwaysShowNavOnTouchDevices: false,
-        fadeDuration: 600,
+        fadeDuration: 400, // default was 600
         fitImagesInViewport: true,
-        imageFadeDuration: 600,
+        imageFadeDuration: 0, // default was 600
         // maxWidth: 800,
         // maxHeight: 600,
         positionFromTop: 50,
-        resizeDuration: 700,
+        resizeDuration: 350, // default was 700
         showImageNumberLabel: true,
-        wrapAround: false,
+        wrapAround: true, // default was false
         disableScrolling: false,
         /*
     Sanitize Title
@@ -11105,30 +11105,13 @@
         // on the page below.
         //
         // Github issue: https://github.com/lokesh/lightbox2/issues/663
-        $('<div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay"></div><div id="lightbox" tabindex="-1" class="lightbox"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/><div class="lb-nav"><a class="lb-prev" role="button" tabindex="0" aria-label="Previous image" href="" ></a><a class="lb-next" role="button" tabindex="0" aria-label="Next image" href="" ></a></div><div class="lb-loader"><a class="lb-cancel" role="button" tabindex="0"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close" role="button" tabindex="0"></a></div></div></div></div>').appendTo($('body'));
-
+        // $('<div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay"></div><div id="lightbox" tabindex="-1" class="lightbox"><span class="lb-close" role="button" tabindex="0"></span><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/><div class="lb-nav"><a class="lb-prev" role="button" tabindex="0" aria-label="Previous image" href="" ></a><a class="lb-next" role="button" tabindex="0" aria-label="Next image" href="" ></a></div><div class="lb-loader"><a class="lb-cancel" role="button" tabindex="0"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div></div></div></div>').appendTo($('body'));
+        $('<div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay"></div><div id="lightbox" tabindex="-1" class="lightbox"><span class="lb-close" role="button" tabindex="0"></span><div class="lb-outerContainer"><div class="lb-container"><div class="lb-main-picture-block"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""><div class="lb-nav"><a class="lb-prev lb-arrow" role="button" tabindex="0" aria-label="Previous image" href=""><span class="circle"><span class="icon"></span></span></a><a class="lb-next lb-arrow" role="button" tabindex="0" aria-label="Next image" href=""><span class="circle"><span class="icon"></span></span></a></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div></div></div></div><div class="lb-other-pictures"></div><div class="lb-loader"><a class="lb-cancel" role="button" tabindex="0"></a></div></div></div></div>').appendTo($('body'));
         // Cache jQuery objects
         this.$lightbox       = $('#lightbox');
         this.$overlay        = $('#lightboxOverlay');
         this.$outerContainer = this.$lightbox.find('.lb-outerContainer');
-        this.$container      = this.$lightbox.find('.lb-container');
-        this.$image          = this.$lightbox.find('.lb-image');
         this.$nav            = this.$lightbox.find('.lb-nav');
-
-        // Store css values for future lookup
-        this.containerPadding = {
-            top: parseInt(this.$container.css('padding-top'), 10),
-            right: parseInt(this.$container.css('padding-right'), 10),
-            bottom: parseInt(this.$container.css('padding-bottom'), 10),
-            left: parseInt(this.$container.css('padding-left'), 10)
-        };
-
-        this.imageBorderWidth = {
-            top: parseInt(this.$image.css('border-top-width'), 10),
-            right: parseInt(this.$image.css('border-right-width'), 10),
-            bottom: parseInt(this.$image.css('border-bottom-width'), 10),
-            left: parseInt(this.$image.css('border-left-width'), 10)
-        };
 
         // Attach event handlers to the newly minted DOM elements
         this.$overlay.hide().on('click', function() {
@@ -11251,13 +11234,7 @@
             }
         }
 
-        // Position Lightbox
-        var top  = $window.scrollTop() + this.options.positionFromTop;
-        var left = $window.scrollLeft();
-        this.$lightbox.css({
-            top: top + 'px',
-            left: left + 'px'
-        }).fadeIn(this.options.fadeDuration);
+        this.$lightbox.fadeIn(this.options.fadeDuration);
 
         // Disable scrolling of the page while open
         if (this.options.disableScrolling) {
@@ -11271,7 +11248,6 @@
     Lightbox.prototype.changeImage = function(imageNumber) {
         var self = this;
         var filename = this.album[imageNumber].link;
-        var filetype = filename.split('.').slice(-1)[0];
         var $image = this.$lightbox.find('.lb-image');
 
         // Disable keyboard nav during transitions
@@ -11283,89 +11259,15 @@
         this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
         this.$outerContainer.addClass('animating');
 
-        // When image to show is preloaded, we send the width and height to sizeContainer()
+        // When image to show is preloaded, we show image
         var preloader = new Image();
         preloader.onload = function() {
-            var $preloader;
-            var imageHeight;
-            var imageWidth;
-            var maxImageHeight;
-            var maxImageWidth;
-            var windowHeight;
-            var windowWidth;
-
             $image.attr({
                 'alt': self.album[imageNumber].alt,
                 'src': filename
             });
 
-            $preloader = $(preloader);
-
-            $image.width(preloader.width);
-            $image.height(preloader.height);
-
-            var aspectRatio = preloader.width / preloader.height;
-
-            windowWidth = $(window).width();
-            windowHeight = $(window).height();
-
-            // Calculate the max image dimensions for the current viewport.
-            // Take into account the border around the image and an additional 10px gutter on each side.
-            maxImageWidth  = windowWidth - self.containerPadding.left - self.containerPadding.right - self.imageBorderWidth.left - self.imageBorderWidth.right - 20;
-            maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - self.options.positionFromTop - 70;
-
-            /*
-      Since many SVGs have small intrinsic dimensions, but they support scaling
-      up without quality loss because of their vector format, max out their
-      size inside the viewport.
-      */
-            if (filetype === 'svg') {
-                if (aspectRatio >= 1) {
-                    imageWidth = maxImageWidth;
-                    imageHeight = parseInt(maxImageWidth / aspectRatio, 10);
-                } else {
-                    imageWidth = parseInt(maxImageHeight / aspectRatio, 10);
-                    imageHeight = maxImageHeight;
-                }
-                $image.width(imageWidth);
-                $image.height(imageHeight);
-
-            } else {
-
-                // Fit image inside the viewport.
-                if (self.options.fitImagesInViewport) {
-
-                    // Check if image size is larger then maxWidth|maxHeight in settings
-                    if (self.options.maxWidth && self.options.maxWidth < maxImageWidth) {
-                        maxImageWidth = self.options.maxWidth;
-                    }
-                    if (self.options.maxHeight && self.options.maxHeight < maxImageHeight) {
-                        maxImageHeight = self.options.maxHeight;
-                    }
-
-                } else {
-                    maxImageWidth = self.options.maxWidth || preloader.width || maxImageWidth;
-                    maxImageHeight = self.options.maxHeight || preloader.height || maxImageHeight;
-                }
-
-                // Is the current image's width or height is greater than the maxImageWidth or maxImageHeight
-                // option than we need to size down while maintaining the aspect ratio.
-                if ((preloader.width > maxImageWidth) || (preloader.height > maxImageHeight)) {
-                    if ((preloader.width / maxImageWidth) > (preloader.height / maxImageHeight)) {
-                        imageWidth  = maxImageWidth;
-                        imageHeight = parseInt(preloader.height / (preloader.width / imageWidth), 10);
-                        $image.width(imageWidth);
-                        $image.height(imageHeight);
-                    } else {
-                        imageHeight = maxImageHeight;
-                        imageWidth = parseInt(preloader.width / (preloader.height / imageHeight), 10);
-                        $image.width(imageWidth);
-                        $image.height(imageHeight);
-                    }
-                }
-            }
-
-            self.sizeContainer($image.width(), $image.height());
+            self.showImage();
         };
 
         // Preload image before showing
@@ -11389,39 +11291,6 @@
                 .height($(document).height());
 
         }, 0);
-    };
-
-    // Animate the size of the lightbox to fit the image we are showing
-    // This method also shows the the image.
-    Lightbox.prototype.sizeContainer = function(imageWidth, imageHeight) {
-        var self = this;
-
-        var oldWidth  = this.$outerContainer.outerWidth();
-        var oldHeight = this.$outerContainer.outerHeight();
-        var newWidth  = imageWidth + this.containerPadding.left + this.containerPadding.right + this.imageBorderWidth.left + this.imageBorderWidth.right;
-        var newHeight = imageHeight + this.containerPadding.top + this.containerPadding.bottom + this.imageBorderWidth.top + this.imageBorderWidth.bottom;
-
-        function postResize() {
-            self.$lightbox.find('.lb-dataContainer').width(newWidth);
-            self.$lightbox.find('.lb-prevLink').height(newHeight);
-            self.$lightbox.find('.lb-nextLink').height(newHeight);
-
-            // Set focus on one of the two root nodes so keyboard events are captured.
-            self.$overlay.trigger('focus');
-
-            self.showImage();
-        }
-
-        if (oldWidth !== newWidth || oldHeight !== newHeight) {
-            this.$outerContainer.animate({
-                width: newWidth,
-                height: newHeight
-            }, this.options.resizeDuration, 'swing', function() {
-                postResize();
-            });
-        } else {
-            postResize();
-        }
     };
 
     // Display the image and its details and begin preload neighboring images.
