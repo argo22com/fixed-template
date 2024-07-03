@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="{{ 'section-gallery-lightbox.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'lightbox.css' | asset_url }}">
 <noscript>{{ 'section-gallery-lightbox.css' | asset_url | stylesheet_tag }}</noscript>
+
 <script src="{{ 'gallery-lightbox.js' | asset_url }}"></script>
 
 {% liquid
@@ -63,7 +65,7 @@
           {% endif %}
 
           {% if block.settings.image != blank %}
-            <a href="#" class="content-block gallery-item--{{ block.id }}-{{ block.settings.gradient }}">
+            <a href="{{ block.settings.image | image_url: width: 1920 }}" data-title="{{ block.settings.caption }}" data-alt="{{ block.settings.subcaption }}" data-lightbox="{{ section.id }}" class="content-block gallery-item--{{ block.id }}-{{ block.settings.gradient }}">
               {{ block.settings.image | image_url: width: 700 | image_tag }}
               <span class="icon-hover">{% render 'icon-search', width: 20, height: 20 %}</span>
             </a>
@@ -78,6 +80,8 @@
     {% endif %}
   </gallery-lightbox>
 </div>
+
+<script src="{{ 'lightbox-plus-jquery.js' | asset_url }}"></script>
 
 {% schema %}
 {
@@ -197,8 +201,7 @@
         {
           "type": "text",
           "id": "caption",
-          "label": "t:sections.gallery-lightbox.blocks.image.settings.heading.label",
-          "default": "Our collection"
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.heading.label"
         },
         {
           "type": "text",

@@ -3037,15 +3037,9 @@
             "image": {
               "label": "Image"
             },
-            "link": {
-              "label": "Link"
-            },
             "row": {
               "label": "Row",
               "description": "Images with same row number will be grouped together in one row."
-            },
-            "text_header": {
-              "content": "Text"
             },
             "gradient": {
               "label": "Gradient",
@@ -3060,38 +3054,14 @@
                 "label": "Bottom"
               }
             },
-            "text": {
-              "label": "Text"
-            },
-            "text_style": {
-              "label": "Text style",
-              "options__1": {
-                "label": "Subtitle"
-              },
-              "options__2": {
-                "label": "Caption"
-              }
-            },
-            "text_size": {
-              "label": "Text size",
-              "options__1": {
-                "label": "Small"
-              },
-              "options__2": {
-                "label": "Medium"
-              },
-              "options__3": {
-                "label": "Large"
-              }
-            },
             "heading_header": {
-              "content": "Heading"
+              "content": "Image description"
             },
             "heading": {
-              "label": "Heading"
+              "label": "Caption"
             },
-            "heading_uppercase": {
-              "label": "Show heading in uppercase"
+            "text": {
+              "label": "Sub-caption"
             },
             "button_header": {
               "content": "Button"
@@ -3121,41 +3091,8 @@
               },
               "info": "Not apply for the link style."
             },
-            "button_pin_bottom": {
-              "label": "Pin button to bottom"
-            },
             "content_alignment_header": {
               "content": "Content alignment"
-            },
-            "horizontal_alignment": {
-              "label": "Horizontal alignment",
-              "option_1": {
-                "label": "Left"
-              },
-              "option_2": {
-                "label": "Center"
-              },
-              "option_3": {
-                "label": "Right"
-              }
-            },
-            "vertical_alignment": {
-              "label": "Vertical alignment",
-              "option_0": {
-                "label": "Above the image"
-              },
-              "option_1": {
-                "label": "Top"
-              },
-              "option_2": {
-                "label": "Middle"
-              },
-              "option_3": {
-                "label": "Bottom"
-              },
-              "option_4": {
-                "label": "Below the image"
-              }
             },
             "colors_header": {
               "content": "Colors"
