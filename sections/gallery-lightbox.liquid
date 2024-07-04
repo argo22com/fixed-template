@@ -61,6 +61,7 @@
     </div>
   {%- endif -%}
   <gallery-lightbox class="gallery">
+    {% assign sizes = '(max-width: 1023px) and (min-width: 0px) 280px, (max-width: 1300px) and (min-width: 0px) 330px, (max-width: 1550px) and (min-width: 0px) 390px, 450px' %}
     {% for i in (min_row_number..max_row_number) %}
       <div class="flex w100 margin-bottom-1rem gallery-row-padding gallery-stretch js-gallery-row" {% if max_rows != blank and i > max_rows %}style="display: none;"{% endif %}>
         {% assign row_images = images | map: 'settings' | where: "row", i %}
@@ -71,7 +72,7 @@
 
           {% if block.settings.image != blank %}
             <a href="{{ block.settings.image | image_url: width: 1920 }}" data-title="{{ block.settings.caption }}" data-alt="{{ block.settings.subcaption }}" data-lightbox="{{ section.id }}" class="content-block gallery-item--{{ block.id }}-{{ block.settings.gradient }}">
-              {{ block.settings.image | image_url: width: 700 | image_tag }}
+              {{ block.settings.image | image_url: height: 450 | image_tag: sizes: sizes }}
               <span class="icon-hover">{% render 'icon-search', width: 20, height: 20 %}</span>
             </a>
           {% endif %}
