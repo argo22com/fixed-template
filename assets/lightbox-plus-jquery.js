@@ -11044,7 +11044,7 @@
         // maxHeight: 600,
         positionFromTop: 50,
         resizeDuration: 350, // default was 700
-        showImageNumberLabel: true,
+        showImageNumberLabel: false, // default was true
         wrapAround: true, // default was false
         disableScrolling: false,
         /*
@@ -11105,8 +11105,7 @@
         // on the page below.
         //
         // Github issue: https://github.com/lokesh/lightbox2/issues/663
-        // $('<div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay"></div><div id="lightbox" tabindex="-1" class="lightbox"><span class="lb-close" role="button" tabindex="0"></span><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/><div class="lb-nav"><a class="lb-prev" role="button" tabindex="0" aria-label="Previous image" href="" ></a><a class="lb-next" role="button" tabindex="0" aria-label="Next image" href="" ></a></div><div class="lb-loader"><a class="lb-cancel" role="button" tabindex="0"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div></div></div></div>').appendTo($('body'));
-        $('<div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay"></div><div id="lightbox" tabindex="-1" class="lightbox"><span class="lb-close" role="button" tabindex="0"></span><div class="lb-outerContainer"><div class="lb-container"><div class="lb-main-picture-block"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""><div class="lb-nav"><a class="lb-prev lb-arrow" role="button" tabindex="0" aria-label="Previous image" href=""><span class="circle"><span class="icon"></span></span></a><a class="lb-next lb-arrow" role="button" tabindex="0" aria-label="Next image" href=""><span class="circle"><span class="icon"></span></span></a></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div></div></div></div><div class="lb-other-pictures"></div><div class="lb-loader"><a class="lb-cancel" role="button" tabindex="0"></a></div></div></div></div>').appendTo($('body'));
+        $('<div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay"></div><div id="lightbox" tabindex="-1" class="lightbox"><span class="lb-close" role="button" tabindex="0"></span><div class="lb-outerContainer"><div class="lb-container"><div class="lb-main-picture-block"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""><div class="lb-nav"><a class="lb-prev lb-arrow" role="button" tabindex="0" aria-label="Previous image" href=""><span class="circle"><span class="icon"></span></span></a><a class="lb-next lb-arrow" role="button" tabindex="0" aria-label="Next image" href=""><span class="circle"><span class="icon"></span></span></a></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div></div></div></div><div class="lb-other-pictures-container"><div class="lb-other-pictures"></div></div><div class="lb-loader"><a class="lb-cancel" role="button" tabindex="0"></a></div></div></div></div>').appendTo($('body'));
         // Cache jQuery objects
         this.$lightbox       = $('#lightbox');
         this.$overlay        = $('#lightboxOverlay');
@@ -11190,6 +11189,7 @@
     Lightbox.prototype.start = function($link) {
         var self    = this;
         var $window = $(window);
+        const $otherPictures = $('.lb-other-pictures')
 
         $window.on('resize', $.proxy(this.sizeOverlay, this));
 
@@ -11233,6 +11233,19 @@
                 }
             }
         }
+
+        // append pictures to sidebar
+        if ($otherPictures.is(':empty')) {
+            for (let i = 0; i < this.album.length; i++) {
+                const url = this.album[i].link;
+                $(`<span class="other-image lb-image-preview" data-index="${i}" style="background-image: url('${url}')"></span>`).appendTo($otherPictures)
+            }
+
+            this.$lightbox.find('.lb-image-preview').on('click', function() {
+                self.changeImage($(this).data('index'));
+            })
+        }
+
 
         this.$lightbox.fadeIn(this.options.fadeDuration);
 

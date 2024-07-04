@@ -78,6 +78,10 @@ body.lb-disable-scrolling {
     z-index: 10;
 }
 
+.lb-container {
+    display: flex;
+}
+
 .lb-container > .nav {
     left: 0;
 }
@@ -167,6 +171,7 @@ body.lb-disable-scrolling {
     float: left;
     text-align: left;
     line-height: 1.1em;
+    color: black;
 }
 
 .lb-data .lb-caption {
@@ -213,4 +218,30 @@ body.lb-disable-scrolling {
     height: calc(100vh - 200px);
     padding: 30px 30px 45px 30px;
     position: relative;
+}
+
+.lb-other-pictures-container {
+    width: 200px;
+    position: relative;
+}
+
+.lb-other-pictures {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.other-image {
+    display: block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 140px;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
