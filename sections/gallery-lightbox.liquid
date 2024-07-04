@@ -22,6 +22,11 @@
 %}
 
 {%- style -%}
+  .lightboxOverlay {
+    background-color: {{ section.settings.overlay_color }};
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+  }
+
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -151,6 +156,21 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "t:sections.gallery-lightbox.blocks.image.settings.overlay_color.label",
+      "default": "#999999"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "t:sections.gallery-lightbox.blocks.image.settings.overlay_opacity.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
     }
   ],
   "blocks": [
@@ -207,44 +227,6 @@
           "type": "text",
           "id": "subcaption",
           "label": "t:sections.gallery-lightbox.blocks.image.settings.text.label"
-        },
-        {
-          "type": "header",
-          "content": "t:sections.gallery-lightbox.blocks.image.settings.button_header.content"
-        },
-        {
-          "type": "color",
-          "id": "caption_color",
-          "label": "t:sections.gallery-lightbox.blocks.image.settings.caption_color.label",
-          "default": "#fff"
-        },
-        {
-          "type": "color",
-          "id": "button_foreground",
-          "label": "t:sections.gallery-lightbox.blocks.image.settings.button_foreground.label",
-          "default": "#000"
-        },
-        {
-          "type": "color",
-          "id": "button_background",
-          "label": "t:sections.gallery-lightbox.blocks.image.settings.button_background.label",
-          "info": "t:sections.gallery-lightbox.blocks.image.settings.button_background.info",
-          "default": "#fff"
-        },
-        {
-          "type": "color",
-          "id": "overlay_color",
-          "label": "t:sections.gallery-lightbox.blocks.image.settings.overlay_color.label",
-          "default": "#000"
-        },
-        {
-          "type": "range",
-          "id": "overlay_opacity",
-          "label": "t:sections.gallery-lightbox.blocks.image.settings.overlay_opacity.label",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "default": 50
         }
       ]
     }
