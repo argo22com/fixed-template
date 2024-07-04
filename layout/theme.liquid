@@ -227,6 +227,7 @@
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
+    <link rel="stylesheet" href="{{ 'lightbox.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'component-popup.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == "notification" and request.page_type != 'cart' -%}
