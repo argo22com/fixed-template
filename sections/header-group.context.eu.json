@@ -13,5 +13,21 @@
     "market": "eu"
   },
   "sections": {
+    "header": {
+      "settings": {
+      },
+      "blocks": {
+        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
+          "settings": {
+            "title": "Information"
+          }
+        },
+        "3753f6b7-733c-49d7-881c-f8fe4195e49f": {
+          "settings": {
+            "title": "Shipping and payment"
+          }
+        }
+      }
+    }
   }
 }
