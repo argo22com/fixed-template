@@ -15,6 +15,7 @@
   "sections": {
     "header": {
       "settings": {
+        "customer_support_region_caption": "Kundendienst"
       },
       "blocks": {
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
