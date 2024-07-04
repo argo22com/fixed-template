@@ -39,7 +39,7 @@
     "sale_badge_background": "#fef2f2",
     "sold_out_badge_text_color": "#ea5c5c",
     "sold_out_badge_background": "#fff",
-    "custom_badge_metafield_1": "badge_new",
+    "custom_badge_metafield_1": "product_badges.badge_new",
     "custom_badge_text_color_1": "#16a34a",
     "custom_badge_background_1": "#f0fdf4",
     "custom_badge_metafield_2": "badge_bestseller",
@@ -814,10 +814,10 @@
       },
       "scheme-ed30eab5-ffda-4ed0-95af-80a522aeb93f": {
         "settings": {
-          "text": "#fff",
+          "text": "#ffffff",
           "sale_off_price": "#e94200",
           "compare_at_price": "#16a34a",
-          "background": "#000",
+          "background": "#000000",
           "gradient_background": "",
           "background_input": "#f9f9f9",
           "solid_button_label_primary": "#ffffff",
