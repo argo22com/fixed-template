@@ -11235,16 +11235,15 @@
         }
 
         // append pictures to sidebar
-        if ($otherPictures.is(':empty')) {
-            for (let i = 0; i < this.album.length; i++) {
-                const url = this.album[i].link;
-                $(`<span class="other-image lb-image-preview" data-index="${i}" style="background-image: url('${url}')"></span>`).appendTo($otherPictures)
-            }
-
-            this.$lightbox.find('.lb-image-preview').on('click', function() {
-                self.changeImage($(this).data('index'));
-            })
+        $otherPictures.children().remove();
+        for (let i = 0; i < this.album.length; i++) {
+            const url = this.album[i].link;
+            $(`<span class="other-image lb-image-preview" data-index="${i}" style="background-image: url('${url}')"></span>`).appendTo($otherPictures)
         }
+
+        this.$lightbox.find('.lb-image-preview').on('click', function() {
+            self.changeImage($(this).data('index'));
+        })
 
 
         this.$lightbox.fadeIn(this.options.fadeDuration);

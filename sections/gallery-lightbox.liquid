@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{ 'lightbox.css' | asset_url }}">
 <noscript>{{ 'section-gallery-lightbox.css' | asset_url | stylesheet_tag }}</noscript>
 
-<script src="{{ 'gallery-lightbox.js' | asset_url }}"></script>
+<script src="{{ 'gallery-lightbox.js' | asset_url }}" defer="defer"></script>
 
 {% liquid
   assign max_rows = section.settings.max_rows
@@ -85,8 +85,6 @@
     {% endif %}
   </gallery-lightbox>
 </div>
-
-<script src="{{ 'lightbox-plus-jquery.js' | asset_url }}"></script>
 
 {% schema %}
 {

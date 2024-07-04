@@ -1,19 +1,21 @@
-class GalleryLightbox extends HTMLElement {
-    constructor() {
-        super();
+if (!customElements.get('gallery-lightbox')) {
+    class GalleryLightbox extends HTMLElement {
+        constructor() {
+            super();
 
-        this.addEventListener('click', this.onItemClick.bind(this));
-    }
-
-    onItemClick(event) {
-        if (!event.target.classList.contains('js-load-more-button')) {
-            return;
+            this.addEventListener('click', this.onItemClick.bind(this));
         }
 
-        event.preventDefault();
-        document.querySelectorAll('.js-gallery-row').forEach(row => row.style.display = 'flex');
-        document.querySelector('.js-load-more-button').style.display = 'none';
-    }
-}
+        onItemClick(event) {
+            if (!event.target.classList.contains('js-load-more-button')) {
+                return;
+            }
 
-customElements.define('gallery-lightbox', GalleryLightbox);
+            event.preventDefault();
+            document.querySelectorAll('.js-gallery-row').forEach(row => row.style.display = 'flex');
+            document.querySelector('.js-load-more-button').style.display = 'none';
+        }
+    }
+
+    customElements.define('gallery-lightbox', GalleryLightbox);
+}
