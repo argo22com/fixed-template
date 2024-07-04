@@ -11037,7 +11037,7 @@
     Lightbox.defaults = {
         albumLabel: 'Image %1 of %2',
         alwaysShowNavOnTouchDevices: false,
-        fadeDuration: 400, // default was 600
+        fadeDuration: 200, // default was 600
         fitImagesInViewport: true,
         imageFadeDuration: 0, // default was 600
         // maxWidth: 800,
@@ -11255,6 +11255,7 @@
         }
 
         this.changeImage(imageNumber);
+        this.$lightbox.focus();
     };
 
     // Hide most UI elements in preparation for the animated resizing of the lightbox.
