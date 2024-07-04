@@ -1,0 +1,249 @@
+{{ 'section-gallery-lightbox.css' | asset_url | stylesheet_tag }}
+<noscript>{{ 'section-gallery-lightbox.css' | asset_url | stylesheet_tag }}</noscript>
+
+<script src="{{ 'gallery-lightbox.js' | asset_url }}" defer="defer"></script>
+
+{% liquid
+  assign max_rows = section.settings.max_rows
+  assign min_row_number = 101
+  assign max_row_number = 0
+
+  for block in section.blocks
+    if block.settings.row < min_row_number
+      assign min_row_number = block.settings.row
+    endif
+    if block.settings.row > max_row_number
+      assign max_row_number = block.settings.row
+    endif
+  endfor
+
+  assign images = section.blocks | where: "type", "gallery-image"
+%}
+
+{%- style -%}
+  .lightboxOverlay {
+    background-color: {{ section.settings.overlay_color }};
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  {% for block in images %}
+    .gallery-item--{{ block.id }}-top.content-block::after {
+      background: #000;
+      background: linear-gradient(180deg,#000 0,rgba(255,255,255,0) 90%);
+    }
+
+    .gallery-item--{{ block.id }}-bottom.content-block::after {
+      background: #000;
+      background: linear-gradient(0deg,#000 0,rgba(255,255,255,0) 90%);
+    }
+  {% endfor %}
+
+  {%- render 'section-heading-styles' -%}
+{% endstyle %}
+
+<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient isolate">
+  {%- if section.settings.title != blank -%}
+    <div class="flex justify-center">
+      <h1 class="{{ section.settings.heading_size }}"><strong>{{ section.settings.title }}</strong></h1>
+    </div>
+  {%- endif -%}
+  <gallery-lightbox class="gallery">
+    {% assign sizes = '(max-width: 1023px) and (min-width: 0px) 280px, (max-width: 1300px) and (min-width: 0px) 330px, (max-width: 1550px) and (min-width: 0px) 390px, 450px' %}
+    {% for i in (min_row_number..max_row_number) %}
+      <div class="flex w100 margin-bottom-1rem gallery-row-padding gallery-stretch js-gallery-row" {% if max_rows != blank and i > max_rows %}style="display: none;"{% endif %}>
+        {% assign row_images = images | map: 'settings' | where: "row", i %}
+        {% for block in images %}
+          {% if block.settings.row != i %}
+            {% continue %}
+          {% endif %}
+
+          {% if block.settings.image != blank %}
+            <a href="{{ block.settings.image | image_url: width: 1920 }}" data-title="{{ block.settings.caption }}" data-alt="{{ block.settings.subcaption }}" data-lightbox="{{ section.id }}" class="content-block gallery-item--{{ block.id }}-{{ block.settings.gradient }}">
+              {{ block.settings.image | image_url: height: 450 | image_tag: sizes: sizes }}
+              <span class="icon-hover">{% render 'icon-search', width: 20, height: 20 %}</span>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+    {% if max_row_number > max_rows %}
+      <div class="flex justify-center w100">
+        <button class="button button--primary js-load-more-button">{{ 'sections.gallery_lightbox.load_more' | t }}</button>
+      </div>
+    {% endif %}
+  </gallery-lightbox>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.gallery-lightbox.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Gallery with lightbox",
+      "label": "t:sections.gallery-lightbox.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h2",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "number",
+      "id": "max_rows",
+      "default": 2,
+      "label": "t:sections.gallery-lightbox.settings.max_rows.label",
+      "info": "t:sections.gallery-lightbox.settings.max_rows.info"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "t:sections.gallery-lightbox.blocks.image.settings.overlay_color.label",
+      "default": "#999999"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "t:sections.gallery-lightbox.blocks.image.settings.overlay_opacity.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gallery-image",
+      "name": "t:sections.gallery-lightbox.blocks.image.name_overlay",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.image.label"
+        },
+        {
+          "type": "range",
+          "id": "row",
+          "min": 1,
+          "max": 25,
+          "step": 1,
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.row.label",
+          "default": 1,
+          "info": "t:sections.gallery-lightbox.blocks.image.settings.row.description"
+        },
+        {
+          "type": "select",
+          "id": "gradient",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.gallery-lightbox.blocks.image.settings.gradient.options__1.label"
+            },
+            {
+              "value": "top",
+              "label": "t:sections.gallery-lightbox.blocks.image.settings.gradient.options__2.label"
+            },
+            {
+              "value": "bottom",
+              "label": "t:sections.gallery-lightbox.blocks.image.settings.gradient.options__3.label"
+            }
+          ],
+          "default": "none",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.gradient.label",
+          "info": "t:sections.gallery-lightbox.blocks.image.settings.gradient.info"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.gallery-lightbox.blocks.image.settings.heading_header.content"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "subcaption",
+          "label": "t:sections.gallery-lightbox.blocks.image.settings.text.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.gallery-lightbox.presets.name",
+      "blocks": [
+        {
+          "type": "gallery-image"
+        },
+        {
+          "type": "gallery-image"
+        },
+        {
+          "type": "gallery-image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

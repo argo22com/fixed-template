@@ -1,0 +1,119 @@
+.gallery-row-padding {
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.gallery-stretch {
+    align-items: stretch;
+}
+
+.content-block {
+    width: unset;
+    flex-basis: unset;
+    display: block;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-grow: 2;
+    position: relative;
+    height: 450px;
+}
+
+.content-block::after {
+    transition: all .3s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 102%;
+    height: 102%;
+    bottom: -1%;
+    left: -1%;
+}
+
+.content-block:hover::after {
+    opacity: 0;
+}
+
+.content-block img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    transition: all .3s ease-in-out;
+    object-fit: cover;
+    object-position: top;
+}
+
+.icon-hover {
+    position: absolute;
+    transition: all .3s ease-in-out;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    background-size: 19px 19px;
+    background-position: center center;
+    background-color: #fff;
+    border-radius: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.content-block:hover .icon-hover {
+    opacity: 1
+}
+
+@media screen and (max-width: 1550px) and (min-width: 0px) {
+    .gallery .content-block {
+        height: 390px;
+    }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 0px) {
+    .gallery .content-block {
+        height: 330px;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 0px) {
+    .gallery .content-block {
+        height: 280px;
+    }
+
+    .gallery-row-padding {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 0px) {
+    .gallery .content-block {
+        height: 230px;
+    }
+
+    .gallery-row-padding {
+        gap: 10px;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 0px) {
+    .gallery .content-block {
+        width: 100%;
+        height: 230px;
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .gallery-row-padding {
+        gap: 0;
+    }
+
+    .gallery .gallery-stretch {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+}

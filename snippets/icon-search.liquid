@@ -1,0 +1,19 @@
+{% liquid
+    assign width = width | default: 16
+    assign height = height | default: 16
+%}
+
+<svg width="{{ width }}" height="{{ height }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: #069ec6; stop-opacity: 1;"/>
+            <stop offset="100%" style="stop-color: #3ac48e; stop-opacity: 1;"/>
+        </linearGradient>
+    </defs>
+    <title>search</title>
+    <g id="tvar" class="cls-1">
+        <g id="tvar-2" data-name="tvar">
+            <path style="fill: url(#gradient);-webkit-transition: fill .5s ease-in-out;-moz-transition: fill .5s ease-in-out;-o-transition: fill .5s ease-in-out;transition: fill .5s ease-in-out;" class="cls-2" d="M18.59,17.07,13,11.45h0l-.05,0-.21-.19.23-.3a7,7,0,1,0-2,2l.3-.23.19.21,0,0,5.63,5.63a1.1,1.1,0,0,0,.76.42,1.16,1.16,0,0,0,.83-.34A1.1,1.1,0,0,0,18.59,17.07ZM7.05,12.2A5.16,5.16,0,1,1,12.2,7,5.17,5.17,0,0,1,7.05,12.2Z" transform="translate(0 0)"/>
+        </g>
+    </g>
+</svg>
