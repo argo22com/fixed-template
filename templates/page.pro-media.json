@@ -110,9 +110,10 @@
     "graph_cVdgJT": {
       "type": "graph",
       "settings": {
-        "heading": "Vývoj obratu",
-        "description": "Celkový obrat v Kč",
-        "source_data": "custom.stats"
+        "heading1": "Vývoj obratu",
+        "description1": "Celkový obrat v Kč",
+        "heading2": "Počet zaměstnanců",
+        "description2": "S růstem firmy roste počet zaměstnanců"
       }
     },
     "rich_text_CJBGge": {
