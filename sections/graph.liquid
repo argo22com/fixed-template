@@ -6,6 +6,7 @@
     }
     .chart {
       width: 50%;
+      padding: 40px 50px;
     }
     .chart.white {
       background-color: white;
@@ -36,12 +37,22 @@
 
       let turnoverValues = []
       let employeeVales = []
-      let xAxisLabels = []
+      let turnoverXAxisLabels = []
+      let employeesXAxisLabels = []
+      let onlyEmployees = true
 
       for (var yearlyData of chartData.stats) {
-        turnoverValues.push(yearlyData.turnover)
         employeeVales.push(yearlyData.employees)
-        xAxisLabels.push(yearlyData.year)
+        employeesXAxisLabels.push(yearlyData.year)
+
+        if (yearlyData.turnover > 0) {
+          onlyEmployees = false
+        }
+        if (onlyEmployees) {
+          continue;
+        }
+        turnoverValues.push(yearlyData.turnover)
+        turnoverXAxisLabels.push(yearlyData.year)
       }
       optionsTurnover = {
         redrawOnParentResize: true,
@@ -90,7 +101,7 @@
               colors: "#000"
             },
           },
-          categories: xAxisLabels,
+          categories: turnoverXAxisLabels,
         },
         yaxis: {
           min: 0,
@@ -124,7 +135,7 @@
         markers: {
           size: 8,
           strokeWidth: 5,
-          strokeColors: '#000',
+          strokeColors: '#fff',
           colors: "#3bc4c4", //['#3ac48e','#069ec6'],
           shape: "circle",
         },
@@ -159,7 +170,7 @@
               colors: "#FFF"
             },
           },
-          categories: xAxisLabels,
+          categories: employeesXAxisLabels,
         },
         yaxis: {
           min: 0,
