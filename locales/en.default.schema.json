@@ -3126,16 +3126,16 @@
     "graph": {
       "settings": {
         "main": {
-          "label": "Graph settings",
+          "label": "Graph settings"
         },
         "heading": {
-          "label": "Main header",
+          "label": "Main header"
         },
         "description": {
-          "label": "Description",
+          "label": "Description"
         },
         "source_data": {
-          "label": "Source of data",
+          "label": "Source of data"
         }
       }
     },
