@@ -1,23 +1,54 @@
 <section>
   <style>
-    .chart-fixed {
+    .charts-container {
+      display: flex;
       padding: 2em;
     }
+    .chart {
+      width: 50%;
+    }
+    .chart.white {
+      background-color: white;
+      color: black;
+    }
+    .chart.black {
+      background-color: black;
+    }
+    .text-white{
+      color: white;
+    }
   </style>
-  <div class="chart-fixed">
-    <h3>{{ section.settings.heading }}</h3>
-    <p>{{ section.settings.description }}</p>
-    <div id="chart-white"></div>
+  <div class="charts-container">
+    <div class="chart white">
+      <h3>{{ section.settings.heading1 }}</h3>
+      <p>{{ section.settings.description1 }}</p>
+      <div id="chart-turnover"></div>
+    </div>
+    <div class="chart black">
+      <h3 class="text-white">{{ section.settings.heading2 }}</h3>
+      <p class="text-white">{{ section.settings.description2 }}</p>
+      <div id="chart-employees"></div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <input type="hidden" name="chartData" value='{{ shop.metaobjects['stats']['stats-9yuit78n']['yearly_stats'] }}'>
     <script>
-      data1 = [180891115, 217964934, 193802909, 215956587, 224070456, 254282001, 324663780, 374654176]
-      labels1 = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022];
-      options1 = {
+      const chartData = JSON.parse(document.querySelector('input[name="chartData"]').value)
+
+      let turnoverValues = []
+      let employeeVales = []
+      let xAxisLabels = []
+
+      for (var yearlyData of chartData.stats) {
+        turnoverValues.push(yearlyData.turnover)
+        employeeVales.push(yearlyData.employees)
+        xAxisLabels.push(yearlyData.year)
+      }
+      optionsTurnover = {
         redrawOnParentResize: true,
         series: [
           {
             name: "Obrat ",
-            data: data1
+            data: turnoverValues
           }
         ],
         markers: {
@@ -59,7 +90,7 @@
               colors: "#000"
             },
           },
-          categories: labels1,
+          categories: xAxisLabels,
         },
         yaxis: {
           min: 0,
@@ -81,9 +112,80 @@
           },
         },
       };
+      optionsEmployees = {
+        redrawOnParentResize: true,
+        series: [
+          {
+            name: "Počet zaměstnanců ",
+            data: employeeVales,
+            background: '#000'
+          }
+        ],
+        markers: {
+          size: 8,
+          strokeWidth: 5,
+          strokeColors: '#000',
+          colors: "#3bc4c4", //['#3ac48e','#069ec6'],
+          shape: "circle",
+        },
+        fill: {
+          type: "gradient",
+          gradient: {
+            colors: "#3bc480", //['#3ac48e','#069ec6'],
+            shadeIntensity: 1,
+            opacityFrom: 0.9,
+            opacityTo: 0.2,
+            stops: [0, 70, 100]
+          },
+        },
+        chart: {
+          type: 'area',
+          height: 300,
+          foreColor: '#6D6D6D',
+          zoom: {
+            enabled: false
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          colors: ['#3bc4c4'], //#2f9d73
+          curve: 'straight' //straight
+        },
+        xaxis: {
+          labels: {
+            style: {
+              colors: "#FFF"
+            },
+          },
+          categories: xAxisLabels,
+        },
+        yaxis: {
+          min: 0,
+          opposite: false,
+          forceNiceScale: true,
+          showForNullSeries: true,
+          axisTicks: {
+            show: true
+          },
+          axisBorder: {
+            show: false,
+          },
+          labels: {
+            style: {
+              colors: "#FFF"
+            },
+            tickAmount: 5,
+            formatter: (val, index) => { return parseInt(val) }
+          },
+        },
+      };
 
-      chart1 = new ApexCharts(document.querySelector("#chart-white"), options1)
-      chart1.render()
+      chartTurnover = new ApexCharts(document.querySelector("#chart-turnover"), optionsTurnover)
+      chartTurnover.render()
+      chartEmployees = new ApexCharts(document.querySelector("#chart-employees"), optionsEmployees)
+      chartEmployees.render()
     </script>
   </div>
 </section>
@@ -98,18 +200,24 @@
     },
     {
       "type": "text",
-      "id": "heading",
+      "id": "heading1",
       "label": "t:sections.graph.settings.heading.label"
     },
     {
       "type": "text",
-      "id": "description",
+      "id": "description1",
       "label": "t:sections.graph.settings.description.label"
     },
     {
-      "type": "json",
-      "id": "source_data"
-    }
+      "type": "text",
+      "id": "heading2",
+      "label": "t:sections.graph.settings.heading.label"
+    },
+    {
+      "type": "text",
+      "id": "description2",
+      "label": "t:sections.graph.settings.description.label"
+    },
   ],
   "presets": [
     {

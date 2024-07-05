@@ -112,7 +112,7 @@
       "settings": {
         "heading": "Vývoj obratu",
         "description": "Celkový obrat v Kč",
-        "source_data": ""
+        "source_data": "custom.stats"
       }
     },
     "rich_text_CJBGge": {
