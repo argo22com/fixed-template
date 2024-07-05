@@ -3125,18 +3125,18 @@
     },
     "graph": {
       "settings": {
-        "main": {
-          "label": "Graph settings"
+        "main1": {
+          "label": "Graph 1 settings",
+        },
+        "main2": {
+          "label": "Graph 2 settings",
         },
         "heading": {
-          "label": "Main header"
+          "label": "Main header",
         },
         "description": {
-          "label": "Description"
+          "label": "Description",
         },
-        "source_data": {
-          "label": "Source of data"
-        }
       }
     },
     "footer": {
