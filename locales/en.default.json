@@ -431,6 +431,22 @@
       "reviews": {
         "title": "Reviews"
       }
+    },
+    "graph": {
+      "settings": {
+        "main": {
+          "label": "Graph settings",
+        },
+        "heading": {
+          "label": "Main header",
+        },
+        "description": {
+          "label": "Description",
+        },
+        "source_data": {
+          "label": "Source",
+        }
+      }
     }
   },
   "localization": {
