@@ -110,6 +110,9 @@
     "graph_cVdgJT": {
       "type": "graph",
       "settings": {
+        "heading": "Vývoj obratu",
+        "description": "Celkový obrat v Kč",
+        "source_data": ""
       }
     },
     "rich_text_CJBGge": {
