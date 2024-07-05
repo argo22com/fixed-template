@@ -1,0 +1,131 @@
+<section>
+  <div class="block effect-item visible">
+    <h3>Vývoj obratu</h3>
+    <p>Celkový obrat v Kč</p>
+    <div id="chart-white"></div>
+    <script>
+      data1 = [180891115, 217964934, 193802909, 215956587, 224070456, 254282001, 324663780, 374654176]
+      labels1 = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022];
+      options1 = {
+        redrawOnParentResize: true,
+        series: [{
+          name: "Obrat ",
+          data: data1
+          //data: series.monthDataSeries1.prices
+        }],
+        markers: {
+          size: 8,
+          strokeWidth: 5,
+          strokeColors: '#fff',
+          colors: "#3bc4c4", //['#3ac48e','#069ec6'],
+          shape: "circle",
+        },
+        /*fill: {
+        type: "gradient",
+        gradient: {
+        shape: "dark",
+        colors: ['#069ec6', '#3ac48e'],
+        shadeIntensity: 1,
+        opacityFrom: 1,
+        opacityTo: 0.7,
+        stops: [0, 70, 100]
+        },
+        },*/
+        fill: {
+          type: "gradient",
+          gradient: {
+            shape: "dark",
+            colors: "#3bc480", //['#3ac48e','#069ec6'],
+            shadeIntensity: 1,
+            opacityFrom: 0.9,
+            opacityTo: 0.9,
+            stops: [0, 70, 100]
+          },
+        },
+        chart: {
+          type: 'area',
+          height: 300,
+          foreColor: '#6D6D6D',
+          zoom: {
+            enabled: false
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          colors: ['#3bc4c4'], //#2f9d73
+          curve: 'straight' //straight
+        },
+        /*
+        stroke: {
+        colors: ['#069ec6', '#3ac48e'],
+        curve: 'straight' //straight
+        },*/
+        xaxis: {
+          labels: {
+            style: {
+              colors: "#000"
+            },
+          },
+          categories: labels1,
+        },
+        yaxis: {
+          min: 0,
+          opposite: false,
+          forceNiceScale: true,
+          showForNullSeries: true,
+          axisTicks: {
+            show: true
+          },
+          axisBorder: {
+            show: false,
+          },
+          labels: {
+            style: {
+              colors: "#000"
+            },
+            tickAmount: 5,
+            formatter: function (val, index) {
+              return parseInt(val);/* + "M";*/
+            }
+          },
+        },
+      };
+
+      chart1 = new ApexCharts(document.querySelector("#chart-white"), options1);
+      chart1.render();
+      jQuery(document).ready(function ($) {
+        wwi1 = $(window).width();
+        $(window).on("resize", function () {
+          if ($(window).width() !== wwi1) {
+            chart1.destroy();
+            setTimeout(function () {
+              $(document).find("#chart-white").html(" ");
+              chart1 = new ApexCharts(document.querySelector("#chart-white"), options1);
+              chart1.render();
+            }, 500);
+            wwi1 = $(window).width();
+          }
+        });
+      });
+    </script>
+    <div class="resize-triggers">
+      <div class="expand-trigger">
+        <div style="width: 589px; height: 513px;"></div>
+      </div>
+      <div class="contract-trigger"></div>
+    </div>
+  </div>
+</section>\
+
+{% schema %}
+{
+  "name": "Chart",
+  "presets": [
+    {
+      "name": "Chart"
+    }
+  ],
+}
+{% endschema %}
