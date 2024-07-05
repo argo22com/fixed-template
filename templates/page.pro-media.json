@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -98,6 +107,11 @@
         "padding_bottom": 52
       }
     },
+    "graph_cVdgJT": {
+      "type": "graph",
+      "settings": {
+      }
+    },
     "rich_text_CJBGge": {
       "type": "rich-text",
       "blocks": {
@@ -189,6 +203,7 @@
     "main",
     "image_banner_6aqRKH",
     "rich_text_Crb7hb",
+    "graph_cVdgJT",
     "rich_text_CJBGge",
     "collapsible_content_AHHHxy"
   ]
