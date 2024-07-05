@@ -1,0 +1,356 @@
+body.lb-disable-scrolling {
+    overflow: hidden;
+}
+
+.lightboxOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: black;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8;
+    display: none;
+}
+
+.lightbox-container {
+    display: flex;
+    justify-content: center;
+}
+
+.lightbox {
+    position: fixed;
+    z-index: 10000;
+    text-align: center;
+    line-height: 0;
+    font-weight: normal;
+    outline: none;
+    display: block;
+    top: 100px;
+    height: calc(100vh - 200px);
+    background: #fff;
+    width: 1300px;
+    transition: all .3s ease-in-out;
+}
+
+.lightbox .lb-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+    object-position: center center;
+    transition: all .3s ease-in-out;
+}
+
+.lightbox a img {
+    border: none;
+}
+
+.lb-outerContainer {
+    padding: 0;
+}
+
+.lb-outerContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.lb-loader {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    line-height: 0;
+}
+
+.lb-cancel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url(loading.gif) no-repeat;
+}
+
+.lb-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.lb-container {
+    display: flex;
+}
+
+.lb-container > .nav {
+    left: 0;
+}
+
+.lb-nav a {
+    outline: none;
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+.lb-prev, .lb-next {
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+.lb-nav a.lb-arrow {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -23px;
+    margin-bottom: 15px;
+    padding: 2px;
+    background: linear-gradient(90deg,#069ec6,#3ac48e);
+    border-radius: 100%;
+}
+
+.lb-prev {
+    left: 50px;
+}
+
+.lb-next {
+    right: 50px;
+}
+
+.lb-arrow .circle {
+    width: 42px;
+    background-color: #fff;
+    padding: 10px;
+    height: 42px;
+    position: relative;
+    display: block;
+    border-radius: 100%;
+}
+
+.lb-prev .circle .icon {
+    height: 22px;
+    display: block;
+    background: url(prev.png) no-repeat;
+    background-size: 22px 22px;
+    margin-left: -5px;
+    filter: brightness(0)
+}
+
+.lb-next .circle .icon {
+    height: 22px;
+    display: block;
+    background: url(next.png) no-repeat;
+    background-size: 22px 22px;
+    margin-left: 5px;
+    filter: brightness(0)
+}
+
+.lb-dataContainer {
+    margin: 0 auto;
+    padding-top: 5px;
+    *zoom: 1;
+    width: 100%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.lb-data {
+    padding: 0 4px;
+    color: #ccc;
+}
+
+.lb-data .lb-details {
+    width: 85%;
+    float: left;
+    text-align: left;
+    line-height: 1.1em;
+    color: black;
+}
+
+.lb-data .lb-caption {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+    color: #4ae;
+}
+
+.lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: #999999;
+}
+
+.lb-close {
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 30px;
+    top: 0;
+    right: -40px;
+    cursor: pointer;
+    z-index: 100000;
+    background: url(close.png) top right no-repeat;
+    transition: all .3s ease-in-out;
+}
+
+.lb-close:hover {
+    cursor: pointer;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.lb-main-picture-block {
+    transition: all .3s ease-in-out;
+    width: calc(100% - 200px);
+    height: calc(100vh - 200px);
+    padding: 30px 30px 45px 30px;
+    position: relative;
+}
+
+.lb-other-pictures-container {
+    width: 200px;
+    position: relative;
+}
+
+.lb-other-pictures {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.other-image {
+    display: block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 140px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1550px) and (min-width: 0px) {
+    .lightbox {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 0px) {
+    .lightbox {
+        width: 85%;
+    }
+
+    .lb-main-picture-block {
+        width: calc(100% - 180px);
+        padding: 15px 15px 40px 15px;
+    }
+
+
+    .lb-other-pictures-container {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 0px) {
+    .lb-container {
+        display: block;
+    }
+
+    .lb-main-picture-block {
+        width: 100%;
+        padding: 15px 15px 30px 15px;
+        height: calc(100vh - 350px);
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lb-other-pictures-container {
+        width: 100%;
+        float: left;
+        height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .other-image {
+        width: 25%;
+        height: 150px;
+        float: left;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 0px) {
+    .lightbox {
+        width: 90%;
+        height: calc(100vh - 50px);
+        top: 30px;
+    }
+
+    .lb-main-picture-block {
+        padding: 15px 15px 30px 15px;
+        height: calc(100vh - 170px);
+    }
+
+    .other-image {
+        width: 25%;
+        height: 100px;
+        float: left;
+        margin-bottom: 10px;
+        background-size: contain;
+    }
+
+    .lb-other-pictures-container {
+        height: 110px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 0px) {
+    .lb-main-picture-block {
+        padding: 10px 10px 30px 10px;
+        height: calc(100vh - 250px);
+    }
+
+    .lb-arrow {
+        width: 38px;
+        height: 38px;
+    }
+
+    .lb-prev {
+        left: 10px;
+    }
+
+    .lb-next {
+        right: 10px;
+    }
+
+    .lb-other-pictures-container {
+        height: 200px;
+    }
+
+    .other-image {
+        height: 90px;
+        width: 50%;
+    }
+}
