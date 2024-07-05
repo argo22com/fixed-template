@@ -3123,6 +3123,22 @@
         "name": "Image gallery lightbox"
       }
     },
+    "graph": {
+      "settings": {
+        "main": {
+          "label": "Graph settings",
+        },
+        "heading": {
+          "label": "Main header",
+        },
+        "description": {
+          "label": "Description",
+        },
+        "source_data": {
+          "label": "Source",
+        }
+      }
+    },
     "footer": {
       "name": "Footer",
       "blocks": {
