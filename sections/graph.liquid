@@ -1,18 +1,25 @@
 <section>
-  <div class="block effect-item visible">
-    <h3>Vývoj obratu</h3>
-    <p>Celkový obrat v Kč</p>
+  <style>
+    .chart-fixed {
+      padding: 2em;
+    }
+  </style>
+  <div class="chart-fixed">
+    <h3>{{ section.settings.header }}</h3>
+    <p>{{ section.settings.description }}</p>
     <div id="chart-white"></div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script>
       data1 = [180891115, 217964934, 193802909, 215956587, 224070456, 254282001, 324663780, 374654176]
       labels1 = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022];
       options1 = {
         redrawOnParentResize: true,
-        series: [{
-          name: "Obrat ",
-          data: data1
-          //data: series.monthDataSeries1.prices
-        }],
+        series: [
+          {
+            name: "Obrat ",
+            data: data1
+          }
+        ],
         markers: {
           size: 8,
           strokeWidth: 5,
@@ -20,17 +27,6 @@
           colors: "#3bc4c4", //['#3ac48e','#069ec6'],
           shape: "circle",
         },
-        /*fill: {
-        type: "gradient",
-        gradient: {
-        shape: "dark",
-        colors: ['#069ec6', '#3ac48e'],
-        shadeIntensity: 1,
-        opacityFrom: 1,
-        opacityTo: 0.7,
-        stops: [0, 70, 100]
-        },
-        },*/
         fill: {
           type: "gradient",
           gradient: {
@@ -57,11 +53,6 @@
           colors: ['#3bc4c4'], //#2f9d73
           curve: 'straight' //straight
         },
-        /*
-        stroke: {
-        colors: ['#069ec6', '#3ac48e'],
-        curve: 'straight' //straight
-        },*/
         xaxis: {
           labels: {
             style: {
@@ -86,42 +77,41 @@
               colors: "#000"
             },
             tickAmount: 5,
-            formatter: function (val, index) {
-              return parseInt(val);/* + "M";*/
-            }
+            formatter: (val, index) => { return parseInt(val) }
           },
         },
       };
 
-      chart1 = new ApexCharts(document.querySelector("#chart-white"), options1);
-      chart1.render();
-      jQuery(document).ready(function ($) {
-        wwi1 = $(window).width();
-        $(window).on("resize", function () {
-          if ($(window).width() !== wwi1) {
-            chart1.destroy();
-            setTimeout(function () {
-              $(document).find("#chart-white").html(" ");
-              chart1 = new ApexCharts(document.querySelector("#chart-white"), options1);
-              chart1.render();
-            }, 500);
-            wwi1 = $(window).width();
-          }
-        });
-      });
+      chart1 = new ApexCharts(document.querySelector("#chart-white"), options1)
+      chart1.render()
     </script>
-    <div class="resize-triggers">
-      <div class="expand-trigger">
-        <div style="width: 589px; height: 513px;"></div>
-      </div>
-      <div class="contract-trigger"></div>
-    </div>
   </div>
-</section>\
+</section>
 
 {% schema %}
 {
   "name": "Chart",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.general.settings.header_layout.content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.general.settings.heading.label",
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "t:sections.general.settings.description.label",
+    },
+    {
+      "type": "text",
+      "id": "source_data",
+      "label": "t:sections.general.settings.source_data.label",
+    }
+  ],
   "presets": [
     {
       "name": "Chart"
