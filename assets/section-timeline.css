@@ -222,6 +222,26 @@
     align-items: center;
 }
 
+.timeline-hover-block {
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    width: 415px;
+    display: block;
+    position: absolute;
+    height: auto;
+    padding: 40px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 0 14px -10px rgba(0,0,0,.75);
+    z-index: 9;
+}
+
+.timeline-hover-block.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 @media screen and (max-width: 1700px) and (min-width: 0px) {
     .button-next {
         right: -70px;
