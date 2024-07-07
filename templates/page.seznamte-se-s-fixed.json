@@ -18,9 +18,53 @@
         "padding_top": 0,
         "padding_bottom": 16
       }
+    },
+    "timeline_ccWkJE": {
+      "type": "timeline",
+      "blocks": {
+        "timeline_block_AGKLpD": {
+          "type": "timeline_block",
+          "settings": {
+            "title": "Timeline block",
+            "link_text": "Show more",
+            "description": ""
+          }
+        },
+        "timeline_block_aMNg8J": {
+          "type": "timeline_block",
+          "settings": {
+            "title": "Timeline block",
+            "link_text": "Show more",
+            "description": ""
+          }
+        },
+        "timeline_block_n39hKL": {
+          "type": "timeline_block",
+          "settings": {
+            "title": "Timeline block",
+            "link_text": "Show more",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "timeline_block_AGKLpD",
+        "timeline_block_aMNg8J",
+        "timeline_block_n39hKL"
+      ],
+      "settings": {
+        "title": "FIXED Timeline",
+        "subtitle": "Historické milníky na časové ose od založení firmy až do současnosti.",
+        "heading_size": "h2",
+        "ordering": "asc",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "timeline_ccWkJE"
   ]
 }
