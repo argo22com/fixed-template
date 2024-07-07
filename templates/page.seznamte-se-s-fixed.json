@@ -27,7 +27,8 @@
           "settings": {
             "title": "Timeline block",
             "link_text": "Show more",
-            "description": ""
+            "description": "",
+            "year": 1997
           }
         },
         "timeline_block_aMNg8J": {
@@ -35,7 +36,8 @@
           "settings": {
             "title": "Timeline block",
             "link_text": "Show more",
-            "description": ""
+            "description": "",
+            "year": 1995
           }
         },
         "timeline_block_n39hKL": {
@@ -43,7 +45,8 @@
           "settings": {
             "title": "Timeline block",
             "link_text": "Show more",
-            "description": ""
+            "description": "",
+            "year": 2000
           }
         }
       },

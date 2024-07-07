@@ -1,6 +1,11 @@
 {{ 'section-timeline.css' | asset_url | stylesheet_tag }}
 
+<script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'timeline.js' | asset_url }}" defer="defer"></script>
+
+{% liquid
+  assign timeline_blocks = section.blocks | where: 'type', 'timeline_block' | sort: 'settings.year'
+%}
 
 {%- style -%}
     .section-{{ section.id }}-padding {
@@ -33,20 +38,22 @@
           </div>
         {%- endif -%}
       </div>
-      <div class="timeline">
+      <timeline-section class="timeline swiper">
         <span class="line"></span>
         <div class="swiper-container">
-          {% for block in section.blocks %}
-            <p>{{ block.settings.title }}</p>
-          {% endfor %}
+          <div class="swiper-wrapper">
+            {% for block in timeline_blocks %}
+              <div class="swiper-slide">{{ block.settings.title }} - {{ block.settings.year }}</div>
+            {% endfor %}
+          </div>
         </div>
-        <div class="swiper-button button-next">
+        <div class="swiper-button swiper-button-prev button-next">
           {% render 'icon-caret-next' %}
         </div>
-        <div class="swiper-button button-prev">
+        <div class="swiper-button swiper-button-next button-prev">
           {% render 'icon-caret-prev' %}
         </div>
-      </div>
+      </timeline-section>
     </div>
 </div>
 
@@ -55,6 +62,7 @@
   "name": "t:sections.timeline.name",
   "tag": "section",
   "class": "section",
+  "max_blocks": 100,
   "settings": [
     {
       "type": "text",
