@@ -3,6 +3,27 @@ if (!customElements.get('timeline-section')) {
         constructor() {
             super();
 
+            const listElement = document.querySelector('.js-timeline-blocks');
+            const ordering = listElement.dataset.ordering;
+
+            const toSort = [...listElement.children];
+            toSort.sort((a, b) => {
+                const sortA = +a.dataset.year;
+                const sortB = +b.dataset.year;
+
+                return ordering === 'asc' ? sortA - sortB : sortB - sortA;
+            });
+
+            listElement.innerHTML = "";
+
+            for (let i = 0; i < toSort.length; i++) {
+                const element = toSort[i];
+                if (i % 2 !== 0) {
+                    element.querySelector('.js-block').classList.add('reverse');
+                }
+                listElement.appendChild(element);
+            }
+
             new Swiper('.swiper-container', {
                 loop: false,
                 autoplay: false,

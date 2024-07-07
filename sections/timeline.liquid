@@ -4,7 +4,7 @@
 <script src="{{ 'timeline.js' | asset_url }}" defer="defer"></script>
 
 {% liquid
-  assign timeline_blocks = section.blocks | where: 'type', 'timeline_block' | sort: 'settings.year'
+  assign timeline_blocks = section.blocks | where: 'type', 'timeline_block'
 %}
 
 {%- style -%}
@@ -41,11 +41,10 @@
       <timeline-section class="timeline swiper">
         <span class="line"></span>
         <div class="swiper-container">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper js-timeline-blocks" data-ordering="{{ section.settings.ordering }}">
             {% for block in timeline_blocks %}
-              <div class="swiper-slide">
-                {% assign loop_modulo = forloop.index0 | modulo: 2 %}
-                <div class="block {% if loop_modulo == 1 %}reverse{% endif %}">
+              <div class="swiper-slide" data-year="{{ block.settings.year }}">
+                <div class="block js-block">
                   <div class="block-text">
                     <h3>{{ block.settings.title }}</h3>
                     <div class="show">{{ block.settings.link_text }}</div>
