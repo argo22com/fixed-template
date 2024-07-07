@@ -3,7 +3,12 @@ if (!customElements.get('timeline-section')) {
         constructor() {
             super();
 
-            const swiper = new Swiper('.swiper-container', {});
+            const swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
             console.log(swiper);
         }
     }

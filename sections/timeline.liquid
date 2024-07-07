@@ -34,7 +34,7 @@
 
         {%- if section.settings.subtitle != blank -%}
           <div class="flex justify-center">
-            <p class="text-center">{{ section.settings.subtitle }}</p>
+            <p class="subtitle-text">{{ section.settings.subtitle }}</p>
           </div>
         {%- endif -%}
       </div>
@@ -43,14 +43,26 @@
         <div class="swiper-container">
           <div class="swiper-wrapper">
             {% for block in timeline_blocks %}
-              <div class="swiper-slide">{{ block.settings.title }} - {{ block.settings.year }}</div>
+              <div class="swiper-slide">
+                {% assign loop_modulo = forloop.index0 | modulo: 2 %}
+                <div class="block {% if loop_modulo == 1 %}reverse{% endif %}">
+                  <div class="block-text">
+                    <h3>{{ block.settings.title }}</h3>
+                    <div class="show">{{ block.settings.link_text }}</div>
+                  </div>
+                  <div class="date">{{ block.settings.year }}</div>
+                  <div class="help-block">
+                    <span class="plus-dot">+</span>
+                  </div>
+                </div>
+              </div>
             {% endfor %}
           </div>
         </div>
-        <div class="swiper-button swiper-button-prev button-next">
+        <div class="swiper-button swiper-button-next button-next">
           {% render 'icon-caret-next' %}
         </div>
-        <div class="swiper-button swiper-button-next button-prev">
+        <div class="swiper-button swiper-button-prev button-prev">
           {% render 'icon-caret-prev' %}
         </div>
       </timeline-section>
