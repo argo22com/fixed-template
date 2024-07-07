@@ -18,24 +18,35 @@
     {%- render 'section-heading-styles' -%}
 {% endstyle %}
 
-<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient isolate">
-    <div>
+<div class="timeline-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient isolate">
+    <div class="timeline-container">
+      <div class="timeline-main-text">
         {%- if section.settings.title != blank -%}
-            <div class="flex justify-center">
-                <h1 class="{{ section.settings.heading_size }}"><strong>{{ section.settings.title }}</strong></h1>
-            </div>
+          <div class="flex justify-center">
+            <h1 class="{{ section.settings.heading_size }} timeline-title"><strong>{{ section.settings.title }}</strong></h1>
+          </div>
         {%- endif -%}
 
         {%- if section.settings.subtitle != blank -%}
-            <div class="flex justify-center">
-                <p class="text-center">{{ section.settings.subtitle }}</p>
-            </div>
+          <div class="flex justify-center">
+            <p class="text-center">{{ section.settings.subtitle }}</p>
+          </div>
         {%- endif -%}
-    </div>
-    <div class="timeline">
-        {% for block in section.blocks %}
+      </div>
+      <div class="timeline">
+        <span class="line"></span>
+        <div class="swiper-container">
+          {% for block in section.blocks %}
             <p>{{ block.settings.title }}</p>
-        {% endfor %}
+          {% endfor %}
+        </div>
+        <div class="swiper-button button-next">
+          {% render 'icon-caret-next' %}
+        </div>
+        <div class="swiper-button button-prev">
+          {% render 'icon-caret-prev' %}
+        </div>
+      </div>
     </div>
 </div>
 

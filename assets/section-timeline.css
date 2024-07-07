@@ -1,0 +1,169 @@
+.timeline-container {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1420px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.timeline-main-text {
+    max-width: 690px;
+    display: block;
+    margin: 0 auto 80px;
+}
+
+.timeline-title {
+    margin-bottom: 25px;
+}
+
+.timeline {
+    position: relative;
+    display: block;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: calc((1920px - 100%)/2);
+    height: 2px;
+    background-color: #e6edef;
+    top: 50%;
+    margin-top: -1px;
+    right: 100%;
+    z-index: 9;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: calc((1920px - 100%)/2);
+    height: 2px;
+    background-color: #e6edef;
+    top: 50%;
+    margin-top: -1px;
+    left: 100%;
+    z-index: 8;
+}
+
+.line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 2px;
+    background-image: linear-gradient(90deg,transparent,transparent 50%,#fff 50%,#fff 100%),linear-gradient(90deg,#069ec6,#3ac48e);
+    background-size: 5px 5px,100% 8px;
+    z-index: 1;
+}
+
+.swiper-button {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    border: 2px solid transparent;
+    background: linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,#069ec6,#3ac48e) border-box;
+    z-index: 9;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.button-next {
+    right: -134px;
+}
+
+.button-prev {
+    left: -134px;
+}
+
+.swiper-button svg {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 7px;
+    height: 13px;
+}
+
+@media screen and (max-width: 1700px) and (min-width: 0px) {
+    .button-next {
+        right: -70px;
+    }
+
+    .button-prev {
+        left: -70px;
+    }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 0px) {
+    .timeline-container {
+        width: 1240px;
+    }
+
+    .swiper-button {
+        width: 40px;
+        height: 40px;
+        margin-top: -24px;
+    }
+
+    .button-next {
+        right: -30px;
+    }
+
+    .button-prev {
+        left: -30px;
+    }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 0px) {
+    .timeline-container {
+        width: 968px;
+    }
+
+    .timeline-section .timeline-main-text {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 0px) {
+    .timeline-container {
+        width: 748px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .timeline-section .timeline-main-text {
+        margin-bottom: 50px;
+    }
+
+    .swiper-button {
+        width: 35px;
+        height: 35px;
+        margin-top: -21px;
+    }
+
+    .button-next {
+        right: -5px;
+    }
+
+    .button-prev {
+        left: -5px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 0px) {
+    .timeline-container {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
