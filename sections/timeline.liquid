@@ -1,0 +1,173 @@
+{{ 'section-timeline.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'timeline.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+
+    {%- render 'section-heading-styles' -%}
+{% endstyle %}
+
+<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient isolate">
+    <div>
+        {%- if section.settings.title != blank -%}
+            <div class="flex justify-center">
+                <h1 class="{{ section.settings.heading_size }}"><strong>{{ section.settings.title }}</strong></h1>
+            </div>
+        {%- endif -%}
+
+        {%- if section.settings.subtitle != blank -%}
+            <div class="flex justify-center">
+                <p class="text-center">{{ section.settings.subtitle }}</p>
+            </div>
+        {%- endif -%}
+    </div>
+    <div class="timeline">
+        {% for block in section.blocks %}
+            <p>{{ block.settings.title }}</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.timeline.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Timeline",
+      "label": "t:sections.timeline.settings.title.label"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "t:sections.timeline.settings.subtitle.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h2",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "ordering",
+      "label": "t:sections.timeline.settings.ordering.label",
+      "info": "t:sections.timeline.settings.ordering.info",
+      "options": [
+        {
+          "value": "asc",
+          "label": "t:sections.timeline.settings.ordering.options__asc.label"
+        },
+        {
+          "value": "desc",
+          "label": "t:sections.timeline.settings.ordering.options__desc.label"
+        }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "timeline_block",
+      "name": "t:sections.timeline.blocks.timeline_block.name",
+      "settings": [
+        {
+          "type": "number",
+          "id": "year",
+          "label": "t:sections.timeline.blocks.timeline_block.settings.year.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Timeline block",
+          "label": "t:sections.timeline.blocks.timeline_block.settings.title.label"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "default": "Show more",
+          "label": "t:sections.timeline.blocks.timeline_block.settings.link_text.label"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "t:sections.timeline.blocks.timeline_block.settings.description.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.timeline.presets.name",
+      "blocks": [
+        {
+          "type": "timeline_block"
+        },
+        {
+          "type": "timeline_block"
+        },
+        {
+          "type": "timeline_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
