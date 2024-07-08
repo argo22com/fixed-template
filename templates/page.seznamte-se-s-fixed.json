@@ -25,35 +25,55 @@
         "timeline_block_AGKLpD": {
           "type": "timeline_block",
           "settings": {
-            "title": "Timeline block",
-            "link_text": "Show more",
-            "description": "",
-            "year": 1997
+            "year": 2001,
+            "title": "Založení společnosti",
+            "link_text": "Ukaž mi více",
+            "description": "Bratři Havnerovi se společníkem Radkem Doudou zakládají společnost s.r.o. a doslova z garáže začínají podnikat s příslušenstvím k mobilním telefonům. Začíná se psát historie společnosti RECALL s.r.o., předchůdce současné FIXED.zone a.s. RECALL s.r.o. začíná s distribucí značky FONTASTIC."
           }
         },
         "timeline_block_aMNg8J": {
           "type": "timeline_block",
           "settings": {
-            "title": "Timeline block",
-            "link_text": "Show more",
-            "description": "",
-            "year": 1995
+            "year": 2002,
+            "title": "První spolupráce s řetězcem",
+            "link_text": "Ukaž mi více",
+            "description": "První distribuce ve spolupráci s řetězcem, společností GLOBUS."
           }
         },
         "timeline_block_n39hKL": {
           "type": "timeline_block",
           "settings": {
-            "title": "Timeline block",
-            "link_text": "Show more",
-            "description": "",
-            "year": 2000
+            "year": 2003,
+            "title": "První Bluetooth produkt",
+            "link_text": "Ukaž mi více",
+            "description": "Představení prvních produktů s technologií Bluetooth na český trh"
+          }
+        },
+        "timeline_block_7TQjtb": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2004,
+            "title": "Distribuce CELLY",
+            "link_text": "Ukaž mi více",
+            "description": "Počátek úspěšné distribuce italské značky CELLY"
+          }
+        },
+        "timeline_block_Pdww8F": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2005,
+            "title": "První handsfree",
+            "link_text": "Ukaž mi více",
+            "description": "Distribuce značky SUPERTOOTH a první handsfree  na stínítka aut.Zahájení prodeje navigací GEOSAT, klíčová spolupráce se specialistou na příslušenství, společností CORADIA."
           }
         }
       },
       "block_order": [
         "timeline_block_AGKLpD",
         "timeline_block_aMNg8J",
-        "timeline_block_n39hKL"
+        "timeline_block_n39hKL",
+        "timeline_block_7TQjtb",
+        "timeline_block_Pdww8F"
       ],
       "settings": {
         "title": "FIXED Timeline",
