@@ -67,7 +67,7 @@ if (!customElements.get('timeline-section')) {
         }
 
         onHover(event) {
-            let minusPixels = -50;
+            let minusPixels = 50;
 
             const t = event.target;
             const dataFor = t.dataset.for;
