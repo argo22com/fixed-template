@@ -274,6 +274,11 @@
     .block h3 {
         font-size: 2.2rem;
     }
+
+    .timeline-hover-block {
+        margin-left: -16px;
+        padding: 35px;
+    }
 }
 
 @media screen and (max-width: 1300px) and (min-width: 0px) {
@@ -283,6 +288,10 @@
 
     .timeline-section .timeline-main-text {
         margin-bottom: 60px;
+    }
+
+    .timeline-hover-block {
+        margin-top: -15px;
     }
 }
 
@@ -314,6 +323,13 @@
     .swiper-slide {
         min-height: 320px;
     }
+
+    .timeline-hover-block {
+        width: 295px;
+        padding: 25px;
+        margin-left: 48px;
+        margin-top: -30px;
+    }
 }
 
 @media screen and (max-width: 767px) and (min-width: 0px) {
@@ -329,6 +345,13 @@
 
     .block h3 {
         font-size: 1.9rem;
+    }
+
+    .timeline-hover-block {
+        width: 245px;
+        padding: 15px;
+        margin-left: 132px;
+        margin-top: -35px;
     }
 }
 
