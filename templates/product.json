@@ -99,6 +99,20 @@
             "button_label": "Add items to cart",
             "image_ratio": "square"
           }
+        },
+        "wishlist_hero_custom_product_button_McnAG4": {
+          "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/custom-product-button\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+          "settings": {
+            "displayButtonMode": "~",
+            "contentAlignment": "center",
+            "buttonAlignment": "center",
+            "buttonFullwidth": true,
+            "removeBoxShadowAndBorder": false,
+            "horizontalPadding": 20,
+            "iconTopOffset": 0,
+            "addedCssClassNames": "",
+            "addedContainerStyles": ""
+          }
         }
       },
       "block_order": [
@@ -109,7 +123,8 @@
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
-        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
+        "wishlist_hero_custom_product_button_McnAG4"
       ],
       "settings": {
         "section_width": "page-width",
