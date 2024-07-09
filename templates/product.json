@@ -25,13 +25,6 @@
             "show_if_no_reviews": true
           }
         },
-        "popup_XDycdy": {
-          "type": "popup",
-          "settings": {
-            "text": "Tabulka velikostí",
-            "page": "tabulka-velikosti-univerzalni-pouzdra"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -118,7 +111,6 @@
       "block_order": [
         "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
-        "popup_XDycdy",
         "price",
         "wishlist_hero_custom_product_button_McnAG4",
         "e592d434-8377-4309-b179-f98d4b3742a2",
