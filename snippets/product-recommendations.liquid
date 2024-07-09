@@ -1,0 +1,141 @@
+{%- comment -%}
+    Renders a recommendation block
+
+    Input:
+    - id: block ID
+    - show_rating: boolean
+    - enable_quick_add: boolean
+    - enable_quick_view: boolean
+    - show_color_swatches: boolean
+    - padding_top: number
+    - padding_bottom: number
+    - enable_compare: boolean
+    - enable_product_compare: boolean
+
+    Usage:
+    {% render 'product-recommendations', ... %}
+{%- endcomment -%}
+
+{% liquid
+    assign show_rating = show_rating | default: true
+    assign enable_quick_add = enable_quick_add | default: true
+    assign enable_quick_view = enable_quick_view | default: true
+    assign show_color_swatches = show_color_swatches | default: true
+    assign padding_top = padding_top | default: 0
+    assign padding_bottom = padding_bottom | default: 0
+    assign enable_compare = enable_compare | default: false
+    assign enable_product_compare = enable_product_compare | default: false
+    assign color_scheme = color_scheme | default: 'background-1'
+    assign full_width = full_width | default: false
+    assign products_to_show = products_to_show | default: 10
+    assign columns_mobile = columns_mobile | default: 1
+    assign columns_tablet = columns_tablet | default: 3
+    assign columns_desktop = columns_desktop | default: 4
+    assign swipe_on_mobile = swipe_on_mobile | default: true
+    assign enable_desktop_slider = enable_desktop_slider | default: true
+    assign image_ratio = image_ratio | default: 'square'
+    assign show_secondary_image = show_secondary_image | default: true
+    assign show_vendor = show_vendor | default: true
+%}
+
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
+
+<script src="{{ 'product-recommendation.js' | asset_url }}" defer="defer"></script>
+{%- if show_rating -%}
+    <link rel="stylesheet" href="{{ 'component-rating.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>{{ 'component-rating.css' | asset_url | stylesheet_tag }}</noscript>
+{%- endif -%}
+
+{%- if enable_quick_add -%}
+    <link rel="stylesheet" href="{{ 'component-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+    <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{%- if enable_quick_view -%}
+    <link rel="stylesheet" href="{{ 'quick-view.css' | asset_url }}" media="print" onload="this.media='all'">
+    <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{%- if show_color_swatches -%}
+    <script src="{{ 'card-product-colors.js' | asset_url }}" defer="defer"></script>
+    <link rel="stylesheet" href="{{ 'component-card-product-colors.css' | asset_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ 'component-tooltip.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>{{ 'component-tooltip.css' | asset_url | stylesheet_tag }}</noscript>
+    <noscript>{{ 'component-card-product-colors.css' | asset_url | stylesheet_tag }}</noscript>
+{%- endif -%}
+
+{%- style -%}
+    .product-recommendations {
+    display: block;
+    }
+
+    .section-{{ id }}-padding {
+    padding-top: {{ padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+    .section-{{ id }}-padding {
+    padding-top: {{ padding_top }}px;
+    padding-bottom: {{ padding_bottom }}px;
+    }
+    }
+
+    {%- render 'section-heading-styles' -%}
+{%- endstyle -%}
+{%-liquid
+    if enable_compare and enable_product_compare
+        assign enable_compare = true
+    else
+        assign enable_compare = false
+    endif
+-%}
+
+<div class="color-{{ color_scheme }} gradient no-js-hidden">
+    <product-recommendations class="product-recommendations section-{{ id }}-padding{% if full_width == false %} page-width{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ id }}&product_id={{ product.id }}&limit={{ products_to_show }}">
+        {% if recommendations.performed and recommendations.products_count > 0 %}
+            {%- liquid
+                assign products_to_display = recommendations.products.size
+
+                assign show_mobile_slider = false
+                if swipe_on_mobile and products_to_display > columns_mobile
+                    assign show_mobile_slider = true
+                endif
+
+                assign show_tablet_slider = false
+                if swipe_on_mobile and products_to_display > columns_tablet
+                    assign show_tablet_slider = true
+                endif
+
+                assign show_desktop_slider = false
+                if enable_desktop_slider and products_to_display > columns_desktop
+                    assign show_desktop_slider = true
+                endif
+            -%}
+            {%- render 'section-heading', title: title, full_width: full_width, show_desktop_slider: show_desktop_slider, show_tablet_slider: show_tablet_slider, show_mobile_slider: show_mobile_slider, include_page_width: true -%}
+            <slider-component class="por slider-mobile-gutter{% if full_width %} page-width--full{% endif %}{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %}{% if full_width %} slider-component-full-width{% endif %}{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if show_tablet_slider %} slider-component-tablet{% endif %}{% if show_mobile_slider %} slider-component-mobile{% endif %}" data-outside-prev-button-id="Slider-{{ id }}-prev-button" data-outside-next-button-id="Slider-{{ id }}-next-button">
+                <ul id="Slider-{{ id }}" class="recommendation-list grid product-grid contains-card contains-card--product grid--{{ columns_tablet }}-col-tablet grid--{{ gs.columns_desktop }}-col-desktop grid--{{ columns_mobile }}-col{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %} slider{% if full_width %} grid--peek{% endif %}{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_tablet_slider %} slider--tablet{% endif %}{% if show_mobile_slider %} slider--mobile{% endif %}{% endif %}" role="list" aria-label="{{ 'sections.featured_collection.slider' | t }}">
+                    {% for recommendation in recommendations.products %}
+                        <li id="Slide-{{ id }}-{{ forloop.index }}" class="grid__item{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %} slider__slide{% endif %}">
+                            {% render 'card-product',
+                                    card_product: recommendation,
+                                    media_aspect_ratio: image_ratio,
+                                    show_secondary_image: show_secondary_image,
+                                    show_vendor: show_vendor,
+                                    show_rating: show_rating,
+                                    show_quick_add: enable_quick_add,
+                                    enable_compare: enable_compare,
+                                    show_quick_view: enable_quick_view,
+                                    section_id: id,
+                                    show_color_swatches: show_color_swatches,
+                                    color_swatches_style: color_swatches_style
+                            %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </slider-component>
+        {% endif %}
+    </product-recommendations>
+</div>

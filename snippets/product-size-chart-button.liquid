@@ -1,13 +1,37 @@
 {%- liquid
-  assign size_chart_page = product.metafields.custom_product_size_chart.value
+  assign handles = 'size_charts_straps,size_charts_cases' | split: ','
+  assign size_charts = shop.metaobjects['size_charts']
+
+  assign size_chart = nil
+
+  for handle in handles
+    assign current_size_chart = size_charts[handle]
+    if current_size_chart
+      for code in current_size_chart.codes.value
+        assign stripped_code = code | strip
+        if product.selected_or_first_available_variant.sku contains stripped_code
+          assign size_chart = current_size_chart
+          break
+        endif
+      endfor
+    endif
+
+    if size_chart
+      break
+    endif
+  endfor
 -%}
-<modal-opener class="popup-modal__opener popup-modal__button-size-chart no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ block.id }}">
-  <button id="ProductPopup-{{ block.id }}" class="product__sale-box__footer-button font-body-semi-bold flex align-center unstyled-button text-body por" type="button" aria-haspopup="dialog">
+
+{% if size_chart != nil %}
+  {% assign size_chart_page = size_chart.size_chart_page.value %}
+  <modal-opener class="popup-modal__opener popup-modal__button-size-chart no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ block.id }}">
+    <button id="ProductPopup-{{ block.id }}" class="product__sale-box__footer-button font-body-semi-bold flex align-center unstyled-button text-body por" type="button" aria-haspopup="dialog">
+      {%- render 'icon-ruler' -%}
+      <span class="caption-large">{{- block.settings.size_chart_link_label | default: size_chart_page.title -}}</span>
+    </button>
+  </modal-opener>
+  <a href="{{ size_chart_page.url }}" class="popup-modal__button popup-modal__button-size-chart product__sale-box__footer-button font-body-semi-bold flex align-center unstyled-button text-body link no-js">
     {%- render 'icon-ruler' -%}
-    <span class="caption-large">{{- block.settings.size_chart_link_label | default: size_chart_page.title -}}</span>
-  </button>
-</modal-opener>
-<a href="{{ size_chart_page.url }}" class="popup-modal__button popup-modal__button-size-chart product__sale-box__footer-button font-body-semi-bold flex align-center unstyled-button text-body link no-js">
-  {%- render 'icon-ruler' -%}
-  <span class="caption-large">{{ block.settings.size_chart_link_label | default: size_chart_page.title }}</span>
-</a> 
+    <span class="caption-large">{{ block.settings.size_chart_link_label | default: size_chart_page.title }}</span>
+  </a>
+{% endif %}

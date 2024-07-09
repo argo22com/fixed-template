@@ -451,7 +451,6 @@ document.addEventListener('change', (e) => {
     }
   }
 })
-console.log('drawer-fixed')
 
 // TODO Workaround for overloading the style property of Wishlist hero app
 document.addEventListener('DOMContentLoaded', () => {
@@ -746,7 +745,11 @@ class VariantSelects extends HTMLElement {
   constructor() {
     super();
     this.addEventListener('change', this.onVariantChange);
-    document.querySelector('.js-show-more').addEventListener('click', this.showMoreVariants)
+
+    const showMoreButton = document.querySelector('.js-show-more');
+    if (showMoreButton) {
+      showMoreButton.addEventListener('click', this.showMoreVariants)
+    }
   }
 
   onVariantChange(event) {
@@ -960,7 +963,6 @@ class VariantSelects extends HTMLElement {
   }
 
   showMoreVariants(event) {
-    console.log('test');
     event.preventDefault();
 
     this.style.display = "none";

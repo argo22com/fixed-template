@@ -25,13 +25,6 @@
             "show_if_no_reviews": true
           }
         },
-        "popup_XDycdy": {
-          "type": "popup",
-          "settings": {
-            "text": "Tabulka velikostí",
-            "page": "tabulka-velikosti-univerzalni-pouzdra"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -62,7 +55,7 @@
             "color_swatches_style": "custom",
             "size_chart_enable": true,
             "size_chart_link_label": "Tabulka velikostí",
-            "size_chart_page": "tabulka-velikosti-univerzalni-pouzdra",
+            "size_chart_page": "",
             "quantity_selector_enable": true,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true,
@@ -118,7 +111,6 @@
       "block_order": [
         "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
-        "popup_XDycdy",
         "price",
         "wishlist_hero_custom_product_button_McnAG4",
         "e592d434-8377-4309-b179-f98d4b3742a2",
@@ -167,12 +159,10 @@
             "show_sku": true
           }
         },
-        "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
-          "type": "page_content",
+        "recommendations_3a3QYP": {
+          "type": "recommendations",
           "settings": {
-            "title": "Související produkty",
-            "page": "",
-            "allowed_skus": ""
+            "title": "Související produkty"
           }
         },
         "files_dWmtVg": {
@@ -198,7 +188,7 @@
       "block_order": [
         "1638dd10-8e33-4e82-b01c-2eb71d6362ba",
         "parameters_GiBjwJ",
-        "cbb96b5f-f683-42e5-b865-6ac18e11645e",
+        "recommendations_3a3QYP",
         "files_dWmtVg",
         "judge_me_reviews_review_widget_8VjJfr",
         "page_content_g4T3PM"
@@ -214,33 +204,6 @@
       "type": "spacer",
       "settings": {
         "height": 40
-      }
-    },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "settings": {
-        "title": "Doporučené produkty",
-        "subtitle": "",
-        "heading_size": "h2",
-        "products_to_show": 10,
-        "columns_desktop": 4,
-        "full_width": false,
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "enable_compare": true,
-        "enable_quick_view": true,
-        "show_color_swatches": true,
-        "color_swatches_style": "custom",
-        "columns_tablet": "3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 72,
-        "padding_bottom": 40
       }
     },
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed": {
@@ -273,7 +236,6 @@
     "main",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "8124c74c-24a1-4cc3-9369-91db0fab3a14",
-    "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
     "168088586605a49d77"

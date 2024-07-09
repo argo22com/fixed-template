@@ -559,12 +559,7 @@
                     else
                       assign enable_compare = false
                     endif
-                    assign has_size_chart = false
-                    if block.settings.size_chart_enable
-                      if product.metafields.custom.product_size_chart != blank
-                        assign has_size_chart = true
-                      endif
-                    endif
+                    assign has_size_chart = block.settings.size_chart_enable
                   -%}
                   {%- if enable_compare or has_size_chart -%}
                     <div class="product__sale-box__footer por flex">

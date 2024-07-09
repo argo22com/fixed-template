@@ -55,6 +55,8 @@
                             assign available_tab = true
                         when '@app'
                             assign available_tab = true
+                        when 'recommendations'
+                            assign available_tab = true
                         else
                             if block.settings.namespace_key == blank
                                 assign available_tab = false
@@ -142,6 +144,8 @@
                                     -%}
                                 {% when 'parameters' %}
                                     {% render 'main-product-attributes', show_sku: block.settings.show_sku, product: product, title: block.settings.title %}
+                                {% when 'recommendations' %}
+                                    {% render 'product-recommendations', id: section.id, title: block.settings.title %}
                                 {%- when 'files' -%}
                                     {% assign documents = product.selected_or_first_available_variant.metafields.custom.documents.value %}
                                     {%- if documents.count > 0 -%}
@@ -1381,6 +1385,17 @@
     },
     {
       "type": "@app"
+    },
+    {
+      "type": "recommendations",
+      "name": "t:sections.main-product-tabs.blocks.recommendations.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-product-tabs.blocks.all.settings.title.label"
+        }
+      ]
     },
     {
       "type": "metafields",
