@@ -1,6 +1,28 @@
 {%- liquid
   assign variant_picker_block = section.blocks | where: "type", "sale_box" | first
-  assign size_chart_page = product.metafields.custom.product_size_chart.value | default: variant_picker_block.settings.size_chart_page
+
+  assign handles = 'size_charts_straps,size_charts_cases' | split: ','
+  assign size_charts = shop.metaobjects['size_charts']
+
+  assign size_chart = nil
+  assign size_chart_page = nil
+
+  for handle in handles
+    assign current_size_chart = size_charts[handle]
+    if current_size_chart
+      for code in current_size_chart.codes.value
+        assign stripped_code = code | strip
+        if product.selected_or_first_available_variant.sku contains stripped_code
+          assign size_chart = current_size_chart
+          break
+        endif
+      endfor
+    endif
+
+    if size_chart
+      assign size_chart_page = size_chart.size_chart_page.value
+    endif
+  endfor
 -%}
 {%- if variant_picker_block and variant_picker_block.settings.size_chart_enable and variant_picker_block.settings.size_chart_link_label != blank -%}
     <modal-dialog id="PopupModal-{{ variant_picker_block.id }}" class="popup-modal">
