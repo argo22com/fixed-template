@@ -452,15 +452,6 @@ document.addEventListener('change', (e) => {
   }
 })
 
-// TODO Workaround for overloading the style property of Wishlist hero app
-document.addEventListener('DOMContentLoaded', () => {
-  const wishlistButton = document.querySelector('button[aria-label="Add to wishlist"]')
-  console.log(wishlistButton)
-  if (wishlistButton) {
-    wishlistButton.removeAttribute('style')
-  }
-})
-
 class ModalDialog extends HTMLElement {
   constructor() {
     super();
