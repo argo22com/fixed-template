@@ -454,28 +454,11 @@ document.addEventListener('change', (e) => {
 
 // TODO Workaround for overloading the style property of Wishlist hero app
 document.addEventListener('DOMContentLoaded', () => {
-  function addWishlistButtonListener() {
-      const wishlistButton = document.querySelector('button[aria-label="Add to wishlist"]')
-      if (wishlistButton) {
-          wishlistButton.removeAttribute('style')
-      }
+  const wishlistButton = document.querySelector('button[aria-label="Add to wishlist"]')
+  console.log(wishlistButton)
+  if (wishlistButton) {
+    wishlistButton.removeAttribute('style')
   }
-
-  addWishlistButtonListener()
-
-  const observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-          if (mutation.addedNodes.length) {
-              mutation.addedNodes.forEach(function(node) {
-                  if (node.nodeType === 1 && node.matches('wishlisthero-product-page-button-container button')) {
-                      addWishlistButtonListener()
-                  }
-              })
-          }
-      })
-  })
-
-  observer.observe(document.body, { childList: true, subtree: true })
 })
 
 class ModalDialog extends HTMLElement {

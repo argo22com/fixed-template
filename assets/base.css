@@ -270,7 +270,7 @@ summary .icon-caret {
   border-radius: calc(var(--buttons-radius) - 1px);
 }
 
-.button:not(.ignore-effect, .btn--secondary-accent):not(:disabled):hover {
+.button:not(.ignore-effect):not(:disabled):hover {
   color: rgb(var(--color-button));
 }
 
