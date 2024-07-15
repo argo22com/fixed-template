@@ -22,7 +22,7 @@
     {%- render 'section-heading-styles' -%}
 {% endstyle %}
 
-<timeline-section class="timeline-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient isolate">
+<timeline-section class="timeline-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient isolate" style="display: block; overflow: hidden;">
     <div class="timeline-container">
       <div class="timeline-main-text">
         {%- if section.settings.title != blank -%}
