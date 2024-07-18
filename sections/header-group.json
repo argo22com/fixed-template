@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "type": "header",
   "name": "Header Group",
@@ -35,26 +44,6 @@
             "type_link_10": ""
           }
         },
-        "ed4cddab-febc-4198-92ee-40d8b70c47f9": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "",
-            "title": "Megamenu - Promotion column",
-            "image_ratio": "adapt",
-            "caption": "",
-            "heading_text": "Heading",
-            "subheading": "Subheading",
-            "button_label": "Button",
-            "button_style": "solid",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 29,
-            "color_scheme": "inverse"
-          }
-        },
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
           "type": "store_information",
           "settings": {
@@ -78,14 +67,46 @@
             "title": "Budějovická 19, 370 01 Homole",
             "link": ""
           }
+        },
+        "mega_menu_product_brand_VqECzf": {
+          "type": "mega_menu_product_brand",
+          "settings": {
+            "trigger": "Hokus pokus",
+            "title": "první",
+            "position": "first",
+            "item_label": "Shop by brand",
+            "image_ratio": "circle",
+            "brand_1": "fixed",
+            "brand_image_1": "shopify:\/\/shop_images\/img_11126eef-abeb-4a44-9d9c-9d348e50688b.jpg",
+            "brand_link_1": "",
+            "brand_2": "iterphone",
+            "brand_image_2": "shopify:\/\/shop_images\/img_3905d8ab-e8de-4503-ae2a-6f96eb8d4e96.jpg",
+            "brand_link_2": "",
+            "brand_3": "",
+            "brand_link_3": "",
+            "brand_4": "",
+            "brand_link_4": "",
+            "brand_5": "",
+            "brand_link_5": "",
+            "brand_6": "",
+            "brand_link_6": "",
+            "brand_7": "",
+            "brand_link_7": "",
+            "brand_8": "",
+            "brand_link_8": "",
+            "brand_9": "",
+            "brand_link_9": "",
+            "brand_10": "",
+            "brand_link_10": ""
+          }
         }
       },
       "block_order": [
         "285909a8-8f88-4414-a5f1-1d926079936b",
-        "ed4cddab-febc-4198-92ee-40d8b70c47f9",
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
-        "store_information_BwwfPB"
+        "store_information_BwwfPB",
+        "mega_menu_product_brand_VqECzf"
       ],
       "custom_css": [
         ".header__heading {margin-top: -27px;}",
