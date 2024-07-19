@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -697,71 +706,144 @@
         "padding_bottom": 36
       }
     },
-    "lookbook_f4mqGx": {
-      "type": "lookbook",
+    "multicolumn_7hJrci": {
+      "type": "multicolumn",
       "blocks": {
-        "hotspot_YirViL": {
-          "type": "hotspot",
+        "column_RTAQVm": {
+          "type": "column",
           "settings": {
-            "product": "",
-            "color_scheme": "",
-            "colors_background": "#000000",
-            "colors_text": "#ffffff",
-            "horizontal_axis": 30,
-            "vertical_axis": 30,
-            "horizontal_axis_mobile": 30,
-            "vertical_axis_mobile": 30
+            "icon": "check",
+            "title": "VZTAHY S INVESTORY",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Navštivte VZTAHY S INVESTORY",
+            "link": "",
+            "button_style": "link",
+            "card_color_text": "#166534",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#effdf4",
+            "card_color_background_gradient": ""
           }
         },
-        "hotspot_FdBPwN": {
-          "type": "hotspot",
+        "column_KKUmYw": {
+          "type": "column",
           "settings": {
-            "product": "",
-            "color_scheme": "",
-            "colors_background": "#000000",
-            "colors_text": "#ffffff",
-            "horizontal_axis": 60,
-            "vertical_axis": 60,
-            "horizontal_axis_mobile": 60,
-            "vertical_axis_mobile": 60
+            "icon": "check",
+            "title": "TISKOVÉ CENTRUM",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Navštivte TISKOVÉ CENTRUM",
+            "link": "",
+            "button_style": "link",
+            "card_color_text": "#a06207",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fefce8",
+            "card_color_background_gradient": ""
           }
         },
-        "hotspot_ACLQ7T": {
-          "type": "hotspot",
+        "column_6q3Yk7": {
+          "type": "column",
           "settings": {
-            "product": "",
-            "color_scheme": "",
-            "colors_background": "#000000",
-            "colors_text": "#ffffff",
-            "horizontal_axis": 80,
-            "vertical_axis": 30,
-            "horizontal_axis_mobile": 80,
-            "vertical_axis_mobile": 30
+            "icon": "check",
+            "title": "KONTAKT",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "KONTAKT",
+            "link": "",
+            "button_style": "link",
+            "card_color_text": "#981c1b",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fef2f2",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_8JzJ7y": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "VZTAHY S MÉDII",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Navštivte VZTAHY S MÉDII",
+            "link": "",
+            "button_style": "link",
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_TcF7aE": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "COMPLIANCE",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Navštivte COMPLIANCE",
+            "link": "",
+            "button_style": "link",
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_w8RMwM": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "PATENTY",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Navštivte PATENTY",
+            "link": "",
+            "button_style": "link",
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
           }
         }
       },
       "block_order": [
-        "hotspot_YirViL",
-        "hotspot_FdBPwN",
-        "hotspot_ACLQ7T"
+        "column_RTAQVm",
+        "column_KKUmYw",
+        "column_6q3Yk7",
+        "column_8JzJ7y",
+        "column_TcF7aE",
+        "column_w8RMwM"
       ],
       "settings": {
-        "caption": "",
-        "title": "",
-        "image_ratio": "adapt",
-        "image_ratio_mobile": "adapt",
-        "hotspot_size": "3",
-        "hotspot_size_desktop": "4",
-        "content_layout": "popup",
-        "full_width": true,
+        "title": "Prozkoumejte další",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "landscape",
+        "text_position": "bottom",
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "enable_section_box_layout": false,
         "color_scheme": "",
-        "product_image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "enable_quick_view": false,
-        "quick_view_button_text": "View",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -784,6 +866,6 @@
     "rich_text_98ABPf",
     "rich_text_wPwqrb",
     "contact_form_KxdteU",
-    "lookbook_f4mqGx"
+    "multicolumn_7hJrci"
   ]
 }
