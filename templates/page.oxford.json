@@ -349,7 +349,7 @@
             "size_chart_link_label": "Size chart",
             "size_chart_page": "",
             "quantity_selector_enable": true,
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
           }
         }
       },
@@ -362,7 +362,7 @@
         "use_background_input": true,
         "auto_scroll_up_mobile": false,
         "hide_when_empty_content": true,
-        "view_details_button_text": "View product details",
+        "view_details_button_text": "Přejdi na produkt",
         "color_scheme": "",
         "enable_sticky_info": true,
         "default_image": "product_featured_image",
@@ -370,7 +370,7 @@
         "gallery_layout": "thumbnail_slider_compact",
         "thumbnail_position": "left",
         "media_size": "medium",
-        "image_ratio": "adapt",
+        "image_ratio": "landscape",
         "image_fit": true,
         "disable_images_lightbox": false,
         "mobile_thumbnails": "hide",
