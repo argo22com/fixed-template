@@ -365,15 +365,6 @@
         "padding_bottom": 52
       }
     },
-    "custom_liquid_zJPrKz": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "rich_text_AYc8pp": {
       "type": "rich-text",
       "blocks": {
@@ -720,7 +711,7 @@
             "link": "",
             "button_style": "link",
             "card_color_text": "#166534",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#effdf4",
             "card_color_background_gradient": ""
@@ -736,7 +727,7 @@
             "link": "",
             "button_style": "link",
             "card_color_text": "#a06207",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fefce8",
             "card_color_background_gradient": ""
@@ -752,7 +743,7 @@
             "link": "",
             "button_style": "link",
             "card_color_text": "#981c1b",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fef2f2",
             "card_color_background_gradient": ""
@@ -768,7 +759,7 @@
             "link": "",
             "button_style": "link",
             "card_color_text": "#121212",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
@@ -784,7 +775,7 @@
             "link": "",
             "button_style": "link",
             "card_color_text": "#121212",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
@@ -800,7 +791,7 @@
             "link": "",
             "button_style": "link",
             "card_color_text": "#121212",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
@@ -857,7 +848,6 @@
     "image_with_text_KG4pFG",
     "rich_text_7MMr9G",
     "newsletter_UHYWiM",
-    "custom_liquid_zJPrKz",
     "rich_text_AYc8pp",
     "rich_text_pAABLf",
     "rich_text_ybHQgL",
