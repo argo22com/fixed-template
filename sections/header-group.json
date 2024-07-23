@@ -83,9 +83,9 @@
           "settings": {
             "trigger": "Ochrana",
             "title": "",
-            "position": "first",
+            "position": "last",
             "item_label": "Shop by brand",
-            "image_ratio": "circle",
+            "image_ratio": "square",
             "brand_1": "",
             "brand_link_1": "",
             "brand_2": "",
