@@ -81,7 +81,7 @@
         "mega_menu_product_brand_eyX8xY": {
           "type": "mega_menu_product_brand",
           "settings": {
-            "trigger": "Ochrana",
+            "trigger": "Akce",
             "title": "",
             "position": "last",
             "item_label": "Shop by brand",
