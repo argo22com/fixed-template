@@ -414,6 +414,36 @@
             "brand_link_10": ""
           }
         },
+        "mega_menu_product_brand_3VPHNd": {
+          "type": "mega_menu_product_brand",
+          "settings": {
+            "trigger": "Objevujte",
+            "title": "Pro zákazníky",
+            "position": "last",
+            "item_label": "Pro zákazníky",
+            "image_ratio": "circle",
+            "brand_1": "Zákaznická podpora",
+            "brand_link_1": "shopify:\/\/pages\/podpora",
+            "brand_2": "Obchodní podmínky",
+            "brand_link_2": "",
+            "brand_3": "Zásady ochrany osobních údajů",
+            "brand_link_3": "shopify:\/\/pages\/zasady-ochrany-osobnich-udaju",
+            "brand_4": "Reklamační řád",
+            "brand_link_4": "shopify:\/\/pages\/reklamace-a-vraceni-zbozi",
+            "brand_5": "",
+            "brand_link_5": "",
+            "brand_6": "",
+            "brand_link_6": "",
+            "brand_7": "",
+            "brand_link_7": "",
+            "brand_8": "",
+            "brand_link_8": "",
+            "brand_9": "",
+            "brand_link_9": "",
+            "brand_10": "",
+            "brand_link_10": ""
+          }
+        },
         "mega_menu_promotion_YqyFiJ": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -559,6 +589,7 @@
         "mega_menu_product_brand_4Tp9gJ",
         "mega_menu_product_brand_KBhfXH",
         "mega_menu_product_brand_mQFGEn",
+        "mega_menu_product_brand_3VPHNd",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_Bh4wzD",
