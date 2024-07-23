@@ -83,7 +83,27 @@
             "title": "",
             "image_ratio": "adapt",
             "caption": "",
-            "heading_text": "New collection",
+            "heading_text": "Kolekce 1",
+            "subheading": "25% off",
+            "button_label": "Shop now",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_kURg37": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Smart",
+            "title": "",
+            "image_ratio": "adapt",
+            "caption": "",
+            "heading_text": "Kolekce 2",
             "subheading": "50% off",
             "button_label": "Shop now",
             "button_style": "solid",
@@ -125,6 +145,7 @@
         "285909a8-8f88-4414-a5f1-1d926079936b",
         "mega_menu_product_brand_JBT6cd",
         "mega_menu_promotion_YqyFiJ",
+        "mega_menu_promotion_kURg37",
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "store_information_BwwfPB"
