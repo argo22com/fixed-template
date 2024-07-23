@@ -19,7 +19,7 @@
           "settings": {
             "trigger": "Hudba",
             "title": "Megamenu - Product type column",
-            "position": "first",
+            "position": "last",
             "item_label": "Hudba",
             "image_ratio": "square",
             "type_1": "Test",
