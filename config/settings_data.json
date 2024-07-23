@@ -717,6 +717,12 @@
           "additionalWLButtonCssClasses": "",
           "additionalWLCartBubbleCssClasses": ""
         }
+      },
+      "2127842402487706816": {
+        "type": "shopify:\/\/apps\/spurit-discount-reminder\/blocks\/app-embed\/cbf22c2a-9546-45b8-8db5-60582288cfde",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
