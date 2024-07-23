@@ -196,6 +196,36 @@
             "brand_link_10": ""
           }
         },
+        "mega_menu_product_brand_zNPCm4": {
+          "type": "mega_menu_product_brand",
+          "settings": {
+            "trigger": "Produkty",
+            "title": "Ruční výroba",
+            "position": "last",
+            "item_label": "Ruční výroba",
+            "image_ratio": "circle",
+            "brand_1": "Kožená pouzdra na notebooky",
+            "brand_link_1": "shopify:\/\/collections\/pouzdra-na-notebooky",
+            "brand_2": "",
+            "brand_link_2": "",
+            "brand_3": "",
+            "brand_link_3": "",
+            "brand_4": "",
+            "brand_link_4": "",
+            "brand_5": "",
+            "brand_link_5": "",
+            "brand_6": "",
+            "brand_link_6": "",
+            "brand_7": "",
+            "brand_link_7": "",
+            "brand_8": "",
+            "brand_link_8": "",
+            "brand_9": "",
+            "brand_link_9": "",
+            "brand_10": "",
+            "brand_link_10": ""
+          }
+        },
         "mega_menu_promotion_YqyFiJ": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -311,6 +341,7 @@
         "mega_menu_product_brand_zgqyNq",
         "mega_menu_product_type_q8zqCX",
         "mega_menu_product_brand_9PcMhc",
+        "mega_menu_product_brand_zNPCm4",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_Bh4wzD",
