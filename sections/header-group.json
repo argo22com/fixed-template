@@ -136,6 +136,36 @@
             "brand_link_10": ""
           }
         },
+        "mega_menu_product_type_q8zqCX": {
+          "type": "mega_menu_product_type",
+          "settings": {
+            "trigger": "Produkty",
+            "title": "Hudba",
+            "position": "last",
+            "item_label": "Hudba",
+            "image_ratio": "circle",
+            "type_1": "Bezdrátová sluchátka",
+            "type_link_1": "shopify:\/\/collections\/sluchatka-a-headsety",
+            "type_2": "Klasická sluchátka",
+            "type_link_2": "shopify:\/\/collections\/sluchatka-a-headsety",
+            "type_3": "",
+            "type_link_3": "",
+            "type_4": "",
+            "type_link_4": "",
+            "type_5": "",
+            "type_link_5": "",
+            "type_6": "",
+            "type_link_6": "",
+            "type_7": "",
+            "type_link_7": "",
+            "type_8": "",
+            "type_link_8": "",
+            "type_9": "",
+            "type_link_9": "",
+            "type_10": "",
+            "type_link_10": ""
+          }
+        },
         "mega_menu_promotion_YqyFiJ": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -249,6 +279,7 @@
         "mega_menu_product_brand_JBT6cd",
         "mega_menu_product_brand_kjMCTa",
         "mega_menu_product_brand_zgqyNq",
+        "mega_menu_product_type_q8zqCX",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_Bh4wzD",
