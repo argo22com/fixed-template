@@ -1408,3 +1408,24 @@ back-to-top .icon {
 .shipping-calculator__date {
   margin-inline-start: 0.5rem;
 }
+
+
+.spurit-simplemodal-data #SNBE_popup_photo {
+  float: unset!important;
+}
+
+.spurit-simplemodal-data #SNBE_popup_price {
+  margin-left: 0!important;
+}
+
+.spurit-simplemodal-data #SNBE_form_variant-wrapper {
+  margin: 10px 0!important;
+}
+
+.spurit-simplemodal-data div:has(select) {
+  overflow: visible!important;
+}
+
+.spurit-simplemodal-data select {
+  width: 100%!important;
+}
