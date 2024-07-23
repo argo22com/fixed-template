@@ -14,38 +14,6 @@
     "header": {
       "type": "header",
       "blocks": {
-        "285909a8-8f88-4414-a5f1-1d926079936b": {
-          "type": "mega_menu_product_type",
-          "settings": {
-            "trigger": "Hudba",
-            "title": "Megamenu - Product type column",
-            "position": "last",
-            "item_label": "Hudba",
-            "image_ratio": "square",
-            "type_1": "Test",
-            "type_image_1": "shopify:\/\/shop_images\/010_Loutocky_COM_DS2_2408_exp-scaled.jpg",
-            "type_link_1": "shopify:\/\/collections\/sluchatka-a-headsety",
-            "type_2": "Test 2",
-            "type_image_2": "shopify:\/\/shop_images\/FIXSMS-STN2-BL_004-1024x1024.jpg",
-            "type_link_2": "",
-            "type_3": "",
-            "type_link_3": "",
-            "type_4": "",
-            "type_link_4": "",
-            "type_5": "",
-            "type_link_5": "",
-            "type_6": "",
-            "type_link_6": "",
-            "type_7": "",
-            "type_link_7": "",
-            "type_8": "",
-            "type_link_8": "",
-            "type_9": "",
-            "type_link_9": "",
-            "type_10": "",
-            "type_link_10": ""
-          }
-        },
         "mega_menu_product_brand_JBT6cd": {
           "type": "mega_menu_product_brand",
           "settings": {
@@ -316,14 +284,6 @@
             "brand_link_10": ""
           }
         },
-        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
-          "type": "store_information",
-          "settings": {
-            "icon": "link",
-            "title": "Informace",
-            "link": ""
-          }
-        },
         "mega_menu_product_brand_4Tp9gJ": {
           "type": "mega_menu_product_brand",
           "settings": {
@@ -335,6 +295,44 @@
             "brand_1": "Personalizované kožené příslušenství",
             "brand_link_1": "",
             "brand_2": "",
+            "brand_link_2": "",
+            "brand_3": "",
+            "brand_link_3": "",
+            "brand_4": "",
+            "brand_link_4": "",
+            "brand_5": "",
+            "brand_link_5": "",
+            "brand_6": "",
+            "brand_link_6": "",
+            "brand_7": "",
+            "brand_link_7": "",
+            "brand_8": "",
+            "brand_link_8": "",
+            "brand_9": "",
+            "brand_link_9": "",
+            "brand_10": "",
+            "brand_link_10": ""
+          }
+        },
+        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
+          "type": "store_information",
+          "settings": {
+            "icon": "link",
+            "title": "Informace",
+            "link": ""
+          }
+        },
+        "mega_menu_product_brand_eMcj9n": {
+          "type": "mega_menu_product_brand",
+          "settings": {
+            "trigger": "Objevujte",
+            "title": "Pro firmy",
+            "position": "last",
+            "item_label": "Pro firmy",
+            "image_ratio": "circle",
+            "brand_1": "B2B obchod",
+            "brand_link_1": "",
+            "brand_2": "Firemní zakázková výroba",
             "brand_link_2": "",
             "brand_3": "",
             "brand_link_3": "",
@@ -491,6 +489,7 @@
           "settings": {
             "trigger": "Akce",
             "title": "Tag Card",
+            "image": "shopify:\/\/shop_images\/blog_tagcard3.jpg",
             "image_ratio": "adapt",
             "caption": "",
             "heading_text": "Tag Card",
@@ -527,42 +526,96 @@
             "color_scheme": "inverse"
           }
         },
-        "mega_menu_product_brand_eMcj9n": {
-          "type": "mega_menu_product_brand",
-          "settings": {
-            "trigger": "Objevujte",
-            "title": "Pro firmy",
-            "position": "first",
-            "item_label": "Pro firmy",
-            "image_ratio": "circle",
-            "brand_1": "B2B obchod",
-            "brand_link_1": "",
-            "brand_2": "Firemní zakázková výroba",
-            "brand_link_2": "",
-            "brand_3": "",
-            "brand_link_3": "",
-            "brand_4": "",
-            "brand_link_4": "",
-            "brand_5": "",
-            "brand_link_5": "",
-            "brand_6": "",
-            "brand_link_6": "",
-            "brand_7": "",
-            "brand_link_7": "",
-            "brand_8": "",
-            "brand_link_8": "",
-            "brand_9": "",
-            "brand_link_9": "",
-            "brand_10": "",
-            "brand_link_10": ""
-          }
-        },
         "3753f6b7-733c-49d7-881c-f8fe4195e49f": {
           "type": "menu_label",
           "settings": {
             "title": "Doprava a platba",
             "icon": "delivery",
             "link": "shopify:\/\/pages\/zpusoby-dopravy-a-platby"
+          }
+        },
+        "mega_menu_promotion_9HJwDd": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Blog",
+            "title": "Voděodolné příslušenství",
+            "image": "shopify:\/\/shop_images\/zen20_pro.png",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "Voděodolné příslušenství",
+            "subheading": "Jak vybrat to správné",
+            "button_label": "číst",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify:\/\/blogs\/news\/jedes-na-dovolenou-ci-vylet-nezapomen-si-zabalit-techto-6-veci",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_ya4VNA": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Blog",
+            "title": "Léto s FIXED",
+            "image": "shopify:\/\/shop_images\/1B1A5843_kopie.jpg",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "Léto s FIXED",
+            "subheading": "7 věcí, které nesmí chybět na žádné dovolené",
+            "button_label": "číst",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_TLTfPK": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Blog",
+            "title": "Držáky na kolo",
+            "image": "shopify:\/\/shop_images\/Bikee_Bag_2-768x479.jpg",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "Držáky na kolo",
+            "subheading": "Vybere si dle jednoduchého průvodce držáky na telefon",
+            "button_label": "číst",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_LL7tjW": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Blog",
+            "title": "Přejít na blog",
+            "image": "shopify:\/\/shop_images\/Voyager_2-768x462.jpg",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "Přejít na blog",
+            "subheading": "Prozkoumejte všechny články a návody, které jsme si pro tebe připravili",
+            "button_label": "přejít na blog",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify:\/\/blogs\/news",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
           }
         },
         "store_information_BwwfPB": {
@@ -575,7 +628,6 @@
         }
       },
       "block_order": [
-        "285909a8-8f88-4414-a5f1-1d926079936b",
         "mega_menu_product_brand_JBT6cd",
         "mega_menu_product_brand_kjMCTa",
         "mega_menu_product_brand_zgqyNq",
@@ -585,8 +637,9 @@
         "mega_menu_product_brand_cqVA4H",
         "mega_menu_product_brand_UrkzTe",
         "mega_menu_product_brand_43GajV",
-        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
         "mega_menu_product_brand_4Tp9gJ",
+        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
+        "mega_menu_product_brand_eMcj9n",
         "mega_menu_product_brand_KBhfXH",
         "mega_menu_product_brand_mQFGEn",
         "mega_menu_product_brand_3VPHNd",
@@ -594,8 +647,11 @@
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_Bh4wzD",
         "mega_menu_promotion_9KBrbX",
-        "mega_menu_product_brand_eMcj9n",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
+        "mega_menu_promotion_9HJwDd",
+        "mega_menu_promotion_ya4VNA",
+        "mega_menu_promotion_TLTfPK",
+        "mega_menu_promotion_LL7tjW",
         "store_information_BwwfPB"
       ],
       "custom_css": [
