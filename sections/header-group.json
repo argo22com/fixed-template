@@ -193,7 +193,7 @@
         "logo": "shopify:\/\/shop_images\/logo.png",
         "logo_width": 170,
         "logo_position": "top-left",
-        "menu": "produkty",
+        "menu": "hlavn-menu",
         "show_go_to_link": true,
         "show_line_separator": false,
         "enable_sticky_header": true,
