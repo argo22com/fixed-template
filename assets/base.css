@@ -1409,6 +1409,9 @@ back-to-top .icon {
   margin-inline-start: 0.5rem;
 }
 
+#SNBE_popup_container {
+  opacity: unset!important;
+}
 
 .spurit-simplemodal-data #SNBE_popup_photo {
   float: unset!important;
