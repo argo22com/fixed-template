@@ -326,10 +326,10 @@
             "subheading": "Ultra odolné krycí sklo",
             "button_label": "Objevit",
             "button_style": "solid",
-            "text_align": "center",
+            "text_align": "left",
             "text_position": "2",
             "link": "",
-            "position": "last",
+            "position": "first",
             "overlay_text_enable": true,
             "overlay_opacity": 50,
             "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c"
