@@ -1412,6 +1412,12 @@ back-to-top .icon {
 
 .spurit-simplemodal-data #SNBE_popup_photo {
   float: unset!important;
+  max-width: unset!important;
+  width: unset!important;
+}
+
+.spurit-simplemodal-data #SNBE_popup_photo img {
+  max-width: 250px!important;
 }
 
 .spurit-simplemodal-data #SNBE_popup_price {
