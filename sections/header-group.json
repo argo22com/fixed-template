@@ -316,6 +316,14 @@
             "brand_link_10": ""
           }
         },
+        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
+          "type": "store_information",
+          "settings": {
+            "icon": "link",
+            "title": "Informace",
+            "link": ""
+          }
+        },
         "mega_menu_product_brand_4Tp9gJ": {
           "type": "mega_menu_product_brand",
           "settings": {
@@ -327,6 +335,66 @@
             "brand_1": "Personalizované kožené příslušenství",
             "brand_link_1": "",
             "brand_2": "",
+            "brand_link_2": "",
+            "brand_3": "",
+            "brand_link_3": "",
+            "brand_4": "",
+            "brand_link_4": "",
+            "brand_5": "",
+            "brand_link_5": "",
+            "brand_6": "",
+            "brand_link_6": "",
+            "brand_7": "",
+            "brand_link_7": "",
+            "brand_8": "",
+            "brand_link_8": "",
+            "brand_9": "",
+            "brand_link_9": "",
+            "brand_10": "",
+            "brand_link_10": ""
+          }
+        },
+        "mega_menu_product_brand_KBhfXH": {
+          "type": "mega_menu_product_brand",
+          "settings": {
+            "trigger": "Objevujte",
+            "title": "O nás",
+            "position": "last",
+            "item_label": "O nás",
+            "image_ratio": "circle",
+            "brand_1": "Seznamte se s FIXED",
+            "brand_link_1": "shopify:\/\/pages\/seznamte-se-s-fixed",
+            "brand_2": "Kontakty",
+            "brand_link_2": "shopify:\/\/pages\/contact",
+            "brand_3": "Kariéra ve FIXED",
+            "brand_link_3": "https:\/\/www.welcometothejungle.com\/cs\/companies\/fixed\/jobs",
+            "brand_4": "Udržitelnost",
+            "brand_link_4": "",
+            "brand_5": "",
+            "brand_link_5": "",
+            "brand_6": "",
+            "brand_link_6": "",
+            "brand_7": "",
+            "brand_link_7": "",
+            "brand_8": "",
+            "brand_link_8": "",
+            "brand_9": "",
+            "brand_link_9": "",
+            "brand_10": "",
+            "brand_link_10": ""
+          }
+        },
+        "mega_menu_product_brand_mQFGEn": {
+          "type": "mega_menu_product_brand",
+          "settings": {
+            "trigger": "Objevujte",
+            "title": "Informujte se",
+            "position": "last",
+            "item_label": "Informujte se",
+            "image_ratio": "circle",
+            "brand_1": "Mediální centrum",
+            "brand_link_1": "shopify:\/\/pages\/pro-media",
+            "brand_2": "Investorské centrum",
             "brand_link_2": "",
             "brand_3": "",
             "brand_link_3": "",
@@ -429,12 +497,34 @@
             "color_scheme": "inverse"
           }
         },
-        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
-          "type": "store_information",
+        "mega_menu_product_brand_eMcj9n": {
+          "type": "mega_menu_product_brand",
           "settings": {
-            "icon": "link",
-            "title": "Informace",
-            "link": ""
+            "trigger": "Objevujte",
+            "title": "Pro firmy",
+            "position": "first",
+            "item_label": "Pro firmy",
+            "image_ratio": "circle",
+            "brand_1": "B2B obchod",
+            "brand_link_1": "",
+            "brand_2": "Firemní zakázková výroba",
+            "brand_link_2": "",
+            "brand_3": "",
+            "brand_link_3": "",
+            "brand_4": "",
+            "brand_link_4": "",
+            "brand_5": "",
+            "brand_link_5": "",
+            "brand_6": "",
+            "brand_link_6": "",
+            "brand_7": "",
+            "brand_link_7": "",
+            "brand_8": "",
+            "brand_link_8": "",
+            "brand_9": "",
+            "brand_link_9": "",
+            "brand_10": "",
+            "brand_link_10": ""
           }
         },
         "3753f6b7-733c-49d7-881c-f8fe4195e49f": {
@@ -465,12 +555,15 @@
         "mega_menu_product_brand_cqVA4H",
         "mega_menu_product_brand_UrkzTe",
         "mega_menu_product_brand_43GajV",
+        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
         "mega_menu_product_brand_4Tp9gJ",
+        "mega_menu_product_brand_KBhfXH",
+        "mega_menu_product_brand_mQFGEn",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_Bh4wzD",
         "mega_menu_promotion_9KBrbX",
-        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
+        "mega_menu_product_brand_eMcj9n",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "store_information_BwwfPB"
       ],
