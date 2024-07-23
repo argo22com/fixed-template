@@ -314,6 +314,27 @@
             "brand_link_10": ""
           }
         },
+        "mega_menu_promotion_UdqXan": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Produkty",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/img_afaacc8d-a9ab-46db-bb47-a725dc200eaf.jpg",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "Armor",
+            "subheading": "Ultra odolné krycí sklo",
+            "button_label": "Objevit",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c"
+          }
+        },
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
           "type": "store_information",
           "settings": {
@@ -638,6 +659,7 @@
         "mega_menu_product_brand_UrkzTe",
         "mega_menu_product_brand_43GajV",
         "mega_menu_product_brand_4Tp9gJ",
+        "mega_menu_promotion_UdqXan",
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
         "mega_menu_product_brand_eMcj9n",
         "mega_menu_product_brand_KBhfXH",
