@@ -50,18 +50,18 @@
           "type": "mega_menu_product_brand",
           "settings": {
             "trigger": "Produkty",
-            "title": "",
+            "title": "Držáky",
             "position": "last",
             "item_label": "Držáky",
             "image_ratio": "square",
             "brand_1": "Konfigurátor držáků",
             "brand_link_1": "",
             "brand_2": "Do auta",
-            "brand_link_2": "",
+            "brand_link_2": "shopify:\/\/collections\/do-auta",
             "brand_3": "Na stůl",
-            "brand_link_3": "",
+            "brand_link_3": "shopify:\/\/collections\/na-stul",
             "brand_4": "Selfie tyče",
-            "brand_link_4": "",
+            "brand_link_4": "shopify:\/\/collections\/selfie-tyce-a-stativy",
             "brand_5": "",
             "brand_link_5": "",
             "brand_6": "",
@@ -76,14 +76,14 @@
             "brand_link_10": ""
           }
         },
-        "mega_menu_product_brand_eyX8xY": {
+        "mega_menu_product_brand_kjMCTa": {
           "type": "mega_menu_product_brand",
           "settings": {
-            "trigger": "Nabíjení",
-            "title": "",
+            "trigger": "Produkty",
+            "title": "Nabíjení",
             "position": "last",
-            "item_label": "Shop by brand",
-            "image_ratio": "square",
+            "item_label": "Nabíjení",
+            "image_ratio": "circle",
             "brand_1": "",
             "brand_link_1": "",
             "brand_2": "",
@@ -217,7 +217,7 @@
       "block_order": [
         "285909a8-8f88-4414-a5f1-1d926079936b",
         "mega_menu_product_brand_JBT6cd",
-        "mega_menu_product_brand_eyX8xY",
+        "mega_menu_product_brand_kjMCTa",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_Bh4wzD",
