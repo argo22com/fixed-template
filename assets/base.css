@@ -1429,3 +1429,7 @@ back-to-top .icon {
 .spurit-simplemodal-data select {
   width: 100%!important;
 }
+
+.spurit-simplemodal-data #SNBE_form_email {
+  width: 100%!important;
+}
