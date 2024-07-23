@@ -128,6 +128,16 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "page_DRQxNg": {
+      "type": "page",
+      "settings": {
+        "page": "provozovatel",
+        "heading_size": "h2",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -135,6 +145,7 @@
     "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f",
     "3e50a7fa-ef6f-4125-90d4-609ab7b2f2b5",
     "custom_liquid_m79bJK",
-    "rich_text_6kDnHf"
+    "rich_text_6kDnHf",
+    "page_DRQxNg"
   ]
 }
