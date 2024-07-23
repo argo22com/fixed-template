@@ -46,6 +46,56 @@
             "type_link_10": ""
           }
         },
+        "mega_menu_product_brand_JBT6cd": {
+          "type": "mega_menu_product_brand",
+          "settings": {
+            "trigger": "Ochrana",
+            "title": "",
+            "position": "first",
+            "item_label": "Shop by brand",
+            "image_ratio": "circle",
+            "brand_1": "",
+            "brand_link_1": "",
+            "brand_2": "",
+            "brand_link_2": "",
+            "brand_3": "",
+            "brand_link_3": "",
+            "brand_4": "",
+            "brand_link_4": "",
+            "brand_5": "",
+            "brand_link_5": "",
+            "brand_6": "",
+            "brand_link_6": "",
+            "brand_7": "",
+            "brand_link_7": "",
+            "brand_8": "",
+            "brand_link_8": "",
+            "brand_9": "",
+            "brand_link_9": "",
+            "brand_10": "",
+            "brand_link_10": ""
+          }
+        },
+        "mega_menu_promotion_YqyFiJ": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Smart",
+            "title": "",
+            "image_ratio": "adapt",
+            "caption": "",
+            "heading_text": "New collection",
+            "subheading": "50% off",
+            "button_label": "Shop now",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
           "type": "store_information",
           "settings": {
@@ -73,6 +123,8 @@
       },
       "block_order": [
         "285909a8-8f88-4414-a5f1-1d926079936b",
+        "mega_menu_product_brand_JBT6cd",
+        "mega_menu_promotion_YqyFiJ",
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "store_information_BwwfPB"
