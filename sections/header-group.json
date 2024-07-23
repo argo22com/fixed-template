@@ -166,6 +166,36 @@
             "type_link_10": ""
           }
         },
+        "mega_menu_product_brand_9PcMhc": {
+          "type": "mega_menu_product_brand",
+          "settings": {
+            "trigger": "Produkty",
+            "title": "Pro hodinky",
+            "position": "last",
+            "item_label": "Pro hodinky",
+            "image_ratio": "circle",
+            "brand_1": "Řemínky",
+            "brand_link_1": "shopify:\/\/collections\/reminky",
+            "brand_2": "Ochrana displeje",
+            "brand_link_2": "shopify:\/\/collections\/ochrana-displeje",
+            "brand_3": "Stojánky",
+            "brand_link_3": "shopify:\/\/collections\/stojanky",
+            "brand_4": "",
+            "brand_link_4": "",
+            "brand_5": "",
+            "brand_link_5": "",
+            "brand_6": "",
+            "brand_link_6": "",
+            "brand_7": "",
+            "brand_link_7": "",
+            "brand_8": "",
+            "brand_link_8": "",
+            "brand_9": "",
+            "brand_link_9": "",
+            "brand_10": "",
+            "brand_link_10": ""
+          }
+        },
         "mega_menu_promotion_YqyFiJ": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -280,6 +310,7 @@
         "mega_menu_product_brand_kjMCTa",
         "mega_menu_product_brand_zgqyNq",
         "mega_menu_product_type_q8zqCX",
+        "mega_menu_product_brand_9PcMhc",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_Bh4wzD",
