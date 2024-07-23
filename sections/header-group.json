@@ -106,6 +106,36 @@
             "brand_link_10": ""
           }
         },
+        "mega_menu_product_brand_zgqyNq": {
+          "type": "mega_menu_product_brand",
+          "settings": {
+            "trigger": "Produkty",
+            "title": "Ochrana",
+            "position": "last",
+            "item_label": "Ochrana",
+            "image_ratio": "circle",
+            "brand_1": "Pouzdra",
+            "brand_link_1": "shopify:\/\/collections\/pouzdra",
+            "brand_2": "Skla Armor",
+            "brand_link_2": "shopify:\/\/collections\/skla-armor",
+            "brand_3": "Ochranné folie",
+            "brand_link_3": "shopify:\/\/collections\/ochranne-folie",
+            "brand_4": "",
+            "brand_link_4": "",
+            "brand_5": "",
+            "brand_link_5": "",
+            "brand_6": "",
+            "brand_link_6": "",
+            "brand_7": "",
+            "brand_link_7": "",
+            "brand_8": "",
+            "brand_link_8": "",
+            "brand_9": "",
+            "brand_link_9": "",
+            "brand_10": "",
+            "brand_link_10": ""
+          }
+        },
         "mega_menu_promotion_YqyFiJ": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -218,6 +248,7 @@
         "285909a8-8f88-4414-a5f1-1d926079936b",
         "mega_menu_product_brand_JBT6cd",
         "mega_menu_product_brand_kjMCTa",
+        "mega_menu_product_brand_zgqyNq",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_Bh4wzD",
