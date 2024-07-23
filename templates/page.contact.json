@@ -41,6 +41,167 @@
         "padding_bottom": 36
       }
     },
+    "banner_grid_MMpbFx": {
+      "type": "banner-grid",
+      "blocks": {
+        "promotion_text_UEyGhw": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "Fixed",
+            "heading_size": "h1",
+            "text": "<strong>FIXED.zone a.s.                       Centrála:<\/strong>Budějovická 19            370 01, Homole                       Czech Republic <strong>IČO:<\/strong> 26036363,  <strong>DIČ:<\/strong> CZ26036363<em>          Spisová značka: B 2491 vedená u Krajského soudu v Českých Budějovicích<\/em>",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 2,
+            "desktop_row": 2,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#000",
+            "color_background": "#fafafa"
+          }
+        },
+        "promotion_text_gqCayi": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "",
+            "heading_size": "h2",
+            "text": "<strong>Servis a reklamace:                          E-mail:<\/strong> reklamace@FIXED.zone  <strong>GSM<\/strong>: + 420 724 161 817",
+            "text_style": "subtitle",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#000",
+            "color_background": "#fafafa"
+          }
+        },
+        "promotion_text_pEfrbG": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "",
+            "heading_size": "h2",
+            "text": "<strong>Objednávky E-shop:E-mail:<\/strong> podpora@FIXED.zone<strong>GSM:<\/strong> +420 267 317 817<strong>Po – Pá<\/strong>: 8:00 – 16:00",
+            "text_style": "subtitle",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#000",
+            "color_background": "#fafafa"
+          }
+        },
+        "promotion_text_iFwmYe": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1",
+            "text": "<strong>Zákaznická podpora:                      E-mail:<\/strong> podpora@FIXED.zone    <strong>GSM:<\/strong> +420 267 317 817               <strong>Po – Pá<\/strong>: 8:00 – 16:00 <strong>Whistleblowing:E-mail: <\/strong><a href=\"mailto:WB@fixed.zone\">WB@fixed.zone<\/a><strong>Telefon (<\/strong>pro zanechání záznamu<strong>) : +420 <\/strong>385 310120",
+            "text_style": "subtitle",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#000",
+            "color_background": "#fafafa"
+          }
+        },
+        "promotion_text_b8CKKM": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1",
+            "text": "<strong>Výroba v Prostějově:Po – Pá: <\/strong>8:00 – 14:00<strong>FIXED.zone a.s.<\/strong>Žeranovská 8796 01 Prostějov",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#000",
+            "color_background": "#fafafa"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_text_UEyGhw",
+        "promotion_text_gqCayi",
+        "promotion_text_pEfrbG",
+        "promotion_text_iFwmYe",
+        "promotion_text_b8CKKM"
+      ],
+      "settings": {
+        "layout": "grid",
+        "desktop_row_height": 30,
+        "desktop_gap": 30,
+        "mobile_gap": 10,
+        "hide_when_empty_content": true,
+        "enable_section_box_layout": false,
+        "media_border_thickness": 1,
+        "media_border_opacity": 5,
+        "media_radius": 15,
+        "enable_shadow": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f": {
       "type": "maps",
       "blocks": {
@@ -143,6 +304,7 @@
   },
   "order": [
     "form",
+    "banner_grid_MMpbFx",
     "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f",
     "3e50a7fa-ef6f-4125-90d4-609ab7b2f2b5",
     "custom_liquid_m79bJK",
