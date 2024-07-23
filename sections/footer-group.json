@@ -37,8 +37,8 @@
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Produkty",
-            "menu": "produkty-archiv"
+            "heading": "Landing pages",
+            "menu": "paticka-lp"
           }
         },
         "e1a58367-ad23-47c0-adf6-953cfbd41867": {

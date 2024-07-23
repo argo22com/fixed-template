@@ -337,19 +337,6 @@
     "featured_product_kFbBf8": {
       "type": "featured-product",
       "blocks": {
-        "title_Vmb8MU": {
-          "type": "title",
-          "settings": {
-            "show_vendor_link": true,
-            "title_size": "h2"
-          }
-        },
-        "price_wKtEmC": {
-          "type": "price",
-          "settings": {
-            "variant_price": false
-          }
-        },
         "sale_box_CC7qVy": {
           "type": "sale_box",
           "settings": {
@@ -358,39 +345,16 @@
             "picker_type": "button",
             "enable_color_swatches": true,
             "color_swatches_style": "variant",
-            "size_chart_enable": true,
+            "size_chart_enable": false,
             "size_chart_link_label": "Size chart",
             "size_chart_page": "",
             "quantity_selector_enable": true,
-            "show_dynamic_checkout": true
-          }
-        },
-        "description_fYbkX8": {
-          "type": "description",
-          "settings": {
-            "truncate_description": 0,
-            "read_more_button": "Read more"
-          }
-        },
-        "share_gJVpTD": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share",
-            "enable_floating_layout": false,
-            "share_on_facebook": true,
-            "share_on_twitter": true,
-            "share_on_pinterest": true,
-            "share_on_email": true,
-            "share_link": true
+            "show_dynamic_checkout": false
           }
         }
       },
       "block_order": [
-        "title_Vmb8MU",
-        "price_wKtEmC",
-        "sale_box_CC7qVy",
-        "description_fYbkX8",
-        "share_gJVpTD"
+        "sale_box_CC7qVy"
       ],
       "settings": {
         "product": "kozene-pouzdro-fixed-oxford-pro-apple-macbook-pro-14-2021-2023-hnede",
@@ -398,7 +362,7 @@
         "use_background_input": true,
         "auto_scroll_up_mobile": false,
         "hide_when_empty_content": true,
-        "view_details_button_text": "View product details",
+        "view_details_button_text": "Přejdi na produkt",
         "color_scheme": "",
         "enable_sticky_info": true,
         "default_image": "product_featured_image",
@@ -406,7 +370,7 @@
         "gallery_layout": "thumbnail_slider_compact",
         "thumbnail_position": "left",
         "media_size": "medium",
-        "image_ratio": "adapt",
+        "image_ratio": "landscape",
         "image_fit": true,
         "disable_images_lightbox": false,
         "mobile_thumbnails": "hide",

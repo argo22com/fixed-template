@@ -6014,6 +6014,49 @@
         "name": "Text with icons"
       }
     },
+    "timeline": {
+      "name": "Timeline",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "subtitle": {
+          "label": "Subtitle"
+        },
+        "ordering": {
+          "label": "Block order",
+          "info": "Choose the order of the blocks in the timeline.",
+          "options__asc": {
+            "label": "Ascending"
+          },
+          "options__desc": {
+            "label": "Descending"
+          }
+        }
+      },
+      "blocks": {
+        "timeline_block": {
+          "name": "Timeline block",
+          "settings": {
+            "title": {
+              "label": "Title"
+            },
+            "link_text": {
+              "label": "Link text"
+            },
+            "year": {
+              "label": "Year"
+            },
+            "description": {
+              "label": "Description"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Timeline"
+      }
+    },
     "promotion-cards": {
       "name": "Promotion cards",
       "settings": {

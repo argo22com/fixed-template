@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "type": "header",
   "name": "Header Group",
@@ -35,26 +44,6 @@
             "type_link_10": ""
           }
         },
-        "ed4cddab-febc-4198-92ee-40d8b70c47f9": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "",
-            "title": "Megamenu - Promotion column",
-            "image_ratio": "adapt",
-            "caption": "",
-            "heading_text": "Heading",
-            "subheading": "Subheading",
-            "button_label": "Button",
-            "button_style": "solid",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 29,
-            "color_scheme": "inverse"
-          }
-        },
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
           "type": "store_information",
           "settings": {
@@ -82,7 +71,6 @@
       },
       "block_order": [
         "285909a8-8f88-4414-a5f1-1d926079936b",
-        "ed4cddab-febc-4198-92ee-40d8b70c47f9",
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "store_information_BwwfPB"

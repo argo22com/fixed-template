@@ -18,9 +18,256 @@
         "padding_top": 0,
         "padding_bottom": 16
       }
+    },
+    "timeline_ccWkJE": {
+      "type": "timeline",
+      "blocks": {
+        "timeline_block_AGKLpD": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2001,
+            "title": "Založení společnosti",
+            "link_text": "Ukaž mi více",
+            "description": "Bratři Havnerovi se společníkem Radkem Doudou zakládají společnost s.r.o. a doslova z garáže začínají podnikat s příslušenstvím k mobilním telefonům. Začíná se psát historie společnosti RECALL s.r.o., předchůdce současné FIXED.zone a.s. RECALL s.r.o. začíná s distribucí značky FONTASTIC."
+          }
+        },
+        "timeline_block_aMNg8J": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2002,
+            "title": "První spolupráce s řetězcem",
+            "link_text": "Ukaž mi více",
+            "description": "První distribuce ve spolupráci s řetězcem, společností GLOBUS."
+          }
+        },
+        "timeline_block_n39hKL": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2003,
+            "title": "První Bluetooth produkt",
+            "link_text": "Ukaž mi více",
+            "description": "Představení prvních produktů s technologií Bluetooth na český trh"
+          }
+        },
+        "timeline_block_7TQjtb": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2004,
+            "title": "Distribuce CELLY",
+            "link_text": "Ukaž mi více",
+            "description": "Počátek úspěšné distribuce italské značky CELLY"
+          }
+        },
+        "timeline_block_Pdww8F": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2005,
+            "title": "První handsfree",
+            "link_text": "Ukaž mi více",
+            "description": "<p>Distribuce značky SUPERTOOTH a první handsfree  na stínítka aut.<\/p>\n\n<p>Zahájení prodeje navigací GEOSAT, klíčová spolupráce se specialistou na příslušenství, společností CORADIA.<\/p>"
+          }
+        },
+        "timeline_block_zkKpXD": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2006,
+            "title": "Otevření moto segmentu",
+            "link_text": "Ukaž mi více",
+            "description": "<p>Start aktivit v motosegmentu s produkty Supertooth Moto – později přejmenováno na Interphone.<\/p>\n\n<p>Počátek prodeje navigací Mio<\/p>"
+          }
+        },
+        "timeline_block_RY6jLQ": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2007,
+            "title": "Spolupráce s ElectroWorld",
+            "link_text": "Ukaž mi více",
+            "description": "<p>Počátek spolupráce s elektrospecialistou – řetězcem ElectroWorld.<\/p>\n\n<p>První výstava Motocykl s intercom Interphone.<\/p>"
+          }
+        },
+        "timeline_block_nKwYGg": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2008,
+            "title": "Distribuce Touratech",
+            "link_text": "Ukaž mi více",
+            "description": "<p>Zahájení spolupráce s distributorem značky Touratech.<\/p>\n\n<p>Podpora prodeje Interphone<\/p>"
+          }
+        },
+        "timeline_block_zkdBRa": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2009,
+            "title": "Specialista na plánogramy",
+            "link_text": "Ukaž mi více",
+            "description": "Započetí dodávání zákazníkům unikátní službu v oblasti category managentu. Tvorba kompletních plánogramů u partnerů."
+          }
+        },
+        "timeline_block_ehWPbV": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2010,
+            "title": "Specializace na příslušenství",
+            "link_text": "Ukaž mi více",
+            "description": "Ukončení prodeje navigací. Úplná specializace na příslušenství."
+          }
+        },
+        "timeline_block_4WTjpj": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2011,
+            "title": "Spolupráce s Mall.cz",
+            "link_text": "Ukaž mi více",
+            "description": "Nový informační systém, 3. generace moderního B2B online systému, spolupráce s Mall.cz"
+          }
+        },
+        "timeline_block_TdJ8E6": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2012,
+            "title": "Merchandising",
+            "link_text": "Ukaž mi více",
+            "description": "Založení oddělení merchandising. Prodej příslušenství jako služba „na klíč“"
+          }
+        },
+        "timeline_block_nhFXmh": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2013,
+            "title": "Založení RECALL Slovensko",
+            "link_text": "Ukaž mi více",
+            "description": "<p>Založení pobočky na Slovensku.<\/p>\n\n<p>Spolupráce s Datart, Expert. V roce 2013 jsme již distributory 40 světových značek příslušenství.<\/p>"
+          }
+        },
+        "timeline_block_bm6igB": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2014,
+            "title": "Czech hand made",
+            "link_text": "Ukaž mi více",
+            "description": "<p>Strategický nákup šicí dílny v českém Prostějově. Zde se začíná doslova šít historie. Stáváme se výrobci ručně šitých kožených pouzder. I přes těžkosti jsme ruční práci vždy věřili a považujeme ji za naše rodinné stříbro.<\/p>\n\n<p>Spolupráce s Alza.cz<\/p>"
+          }
+        },
+        "timeline_block_M3GVnM": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2015,
+            "title": "Vznik značky FIXED",
+            "link_text": "Ukaž mi více",
+            "description": "<p>Posouváme se dál s ambicí vybudovat vlastní značku. Světlo světa tak spatřují první produkty FIXED. Z pozice úspěšného distributora směřujeme do pozice inovátora, tvůrce, vývojáře a výrobce vlastní značky.<\/p>\n\n<p>Spolupráce s mobilním operátorem O2<\/p>"
+          }
+        },
+        "timeline_block_XEwRrb": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2016,
+            "title": "Smart lokátor 1. generace",
+            "link_text": "Ukaž mi více",
+            "description": "Věříme ve smart technologie.  Začínáme psát historii v kategorii SMART, vývoj lokátoru první generace."
+          }
+        },
+        "timeline_block_ARqHFM": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2017,
+            "title": "Fokus na FIXED",
+            "link_text": "Ukaž mi více",
+            "description": "Specializace na FIXED. Redukujeme distribuci značek, soustředíme pozornost na vlastní značku FIXED."
+          }
+        },
+        "timeline_block_4e9jRX": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2018,
+            "title": "Uvedení na trh prvního lokátoru FIXED Smile",
+            "link_text": "Ukaž mi více",
+            "description": "Začátek vývoje FIXED Buddy. Design vlastních držáků do auta ICON."
+          }
+        },
+        "timeline_block_izc7HK": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2019,
+            "title": "European Design Award",
+            "link_text": "Ukaž mi více",
+            "description": "<p>Držák FIXED ICON získává ocenění za design European Design Award.<\/p>\n\n<p>2. generace FIXED Smile, ukončení prodeje CELLY. FIXED se stává hlavní značkou v portfoliu.<\/p>\n\n<p>Založení exportního oddělení, první výstava IFA Berlin.<\/p>"
+          }
+        },
+        "timeline_block_FW6Pg9": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2020,
+            "title": "CES Las Vegas",
+            "link_text": "Ukaž mi více",
+            "description": "Vznikají projekty Marketplaces a D2C FIXED.zone. Představení nové FIXED brand identity."
+          }
+        },
+        "timeline_block_TdKicb": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2021,
+            "title": "Vstup na burzu",
+            "link_text": "Ukaž mi více",
+            "description": "<p>RECALL s.r.o. se po dvaceti úspěšných letech mění na společnost FIXED.zone a.s. a oficiálně vstupuje na pražskou burzu Start.<\/p>\n\n<p>Exportní oddělení začíná otevírat nové trhy.<\/p>\n\n<p>Nový web FIXED.zone.<\/p>"
+          }
+        },
+        "timeline_block_RM6EpU": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2022,
+            "title": "Brand boosting",
+            "link_text": "Ukaž mi více",
+            "description": "<p>Prošli jsme programem na posílení komunikace značky FIXED.<\/p>\n\n<p>Byla nastavena strategie komunikace, pilíře prezentace značky a jednotná vizuální identita. Připravili jsme a spustili první komunikační kampaň orientovanou na koncové zákazníky a začali rozšiřovat jednotnou identitu do všech částí komunikačního mixu od balení produktů, přes kampaně, průběžnou komunikaci na sociálních sítích až po PR.<\/p>"
+          }
+        },
+        "timeline_block_8qttDJ": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2023,
+            "title": "GRS certifikace",
+            "link_text": "Ukaž mi více",
+            "description": "<p>V rámci našeho závazku a přípravy k plnění cílů ESG jsme prošli první certifikací GRS. Global Recycled Standard dává jednotný pohled a požadavky na firemní procesy a práci s produkty.<\/p>\n\n<p>Koncem září jsme obdrželi GRS certifikát.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_block_AGKLpD",
+        "timeline_block_aMNg8J",
+        "timeline_block_n39hKL",
+        "timeline_block_7TQjtb",
+        "timeline_block_Pdww8F",
+        "timeline_block_zkKpXD",
+        "timeline_block_RY6jLQ",
+        "timeline_block_nKwYGg",
+        "timeline_block_zkdBRa",
+        "timeline_block_ehWPbV",
+        "timeline_block_4WTjpj",
+        "timeline_block_TdJ8E6",
+        "timeline_block_nhFXmh",
+        "timeline_block_bm6igB",
+        "timeline_block_M3GVnM",
+        "timeline_block_XEwRrb",
+        "timeline_block_ARqHFM",
+        "timeline_block_4e9jRX",
+        "timeline_block_izc7HK",
+        "timeline_block_FW6Pg9",
+        "timeline_block_TdKicb",
+        "timeline_block_RM6EpU",
+        "timeline_block_8qttDJ"
+      ],
+      "settings": {
+        "title": "FIXED Timeline",
+        "subtitle": "Historické milníky na časové ose od založení firmy až do současnosti.",
+        "heading_size": "h2",
+        "ordering": "asc",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "timeline_ccWkJE"
   ]
 }
