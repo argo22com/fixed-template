@@ -79,7 +79,7 @@
         "mega_menu_product_brand_eyX8xY": {
           "type": "mega_menu_product_brand",
           "settings": {
-            "trigger": "Akce",
+            "trigger": "Nabíjení",
             "title": "",
             "position": "last",
             "item_label": "Shop by brand",
@@ -109,13 +109,13 @@
         "mega_menu_promotion_YqyFiJ": {
           "type": "mega_menu_promotion",
           "settings": {
-            "trigger": "Smart",
-            "title": "",
+            "trigger": "Akce",
+            "title": "ReLeaf",
             "image_ratio": "adapt",
             "caption": "",
-            "heading_text": "Kolekce 1",
-            "subheading": "25% off",
-            "button_label": "Shop now",
+            "heading_text": "ReLeaf",
+            "subheading": "Prozkoumejte naše udržitelné produkty a projekty",
+            "button_label": "Objevit",
             "button_style": "solid",
             "text_align": "center",
             "text_position": "2",
@@ -129,13 +129,13 @@
         "mega_menu_promotion_kURg37": {
           "type": "mega_menu_promotion",
           "settings": {
-            "trigger": "Smart",
-            "title": "",
+            "trigger": "Akce",
+            "title": "Léto s FIXED",
             "image_ratio": "adapt",
             "caption": "",
-            "heading_text": "Kolekce 2",
-            "subheading": "50% off",
-            "button_label": "Shop now",
+            "heading_text": "Léto s FIXED",
+            "subheading": "Vybrali jsmepro vás novinky a bestsellery pro letní sezónu",
+            "button_label": "Objevit",
             "button_style": "solid",
             "text_align": "center",
             "text_position": "2",
@@ -144,6 +144,26 @@
             "overlay_text_enable": true,
             "overlay_opacity": 50,
             "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_9KBrbX": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Armor",
+            "image_ratio": "adapt",
+            "caption": "",
+            "heading_text": "New collection",
+            "subheading": "50% off",
+            "button_label": "Shop now",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "",
+            "position": "first",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "scheme-93d0b4d7-0fb9-4886-b4bf-c2a0b0dd1c82"
           }
         },
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
@@ -177,6 +197,7 @@
         "mega_menu_product_brand_eyX8xY",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_kURg37",
+        "mega_menu_promotion_9KBrbX",
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "store_information_BwwfPB"
