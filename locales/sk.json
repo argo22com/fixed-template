@@ -304,6 +304,38 @@
     },
     "cart": {
       "cart": "Košík"
+    },
+    "contact": {
+      "form": {
+        "name": "Meno",
+        "email": "E-mail",
+        "phone": "Telefónne číslo",
+        "comment": "Komentár",
+        "send": "Odoslať",
+        "post_success": "Ďakujeme, že ste nás kontaktovali. Ozveme sa vám čo možno najskôr.",
+        "error_heading": "Upravte prosím nasledujúce informácie:",
+        "title": "Kontaktný formulár"
+      },
+      "address": {
+        "heading": "Naša adresa"
+      },
+      "opening_hour": {
+        "heading": "Pracovný čas"
+      }
+    },
+    "404": {
+      "title": "Stránka nebola nájdená",
+      "subtext": "404"
+    },
+    "compare": {
+      "header_icon": "Porovnanie produktov",
+      "add_button": "Pridaj {{ product_title }} do porovnávacieho zoznamu",
+      "add_to_compare": "Pridať na porovnanie",
+      "popup": "Vyskakovacie okno na porovnanie produktov",
+      "empty": "V porovnávacom zozname nie sú žiadne produkty.",
+      "warning": "Vyberte aspoň 2 produkty na porovnanie.",
+      "success": "Pridané do porovnávacieho zoznamu.",
+      "remove": "Odstrániť"
     }
   }
 }
