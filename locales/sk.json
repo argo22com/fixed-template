@@ -254,6 +254,17 @@
     },
     "collection_banner": {
       "load_collection_icon": "Kolekcia s ikonou"
+    },
+    "cookies_banner": {
+      "accept": "Súhlasiť",
+      "decline": "Odmietnuť"
+    },
+    "google_maps": {
+      "coordinate_empty_error_html": "Zadajte svoje súradnice. <a href=\"{{ link }}\">Zistite, ako získať súradnice adresy<\/a>.",
+      "api_key_empty_error_html": "Zadajte svoj kľúč API. Uistite sa, že kľúč obsahuje rozhranie Maps Embed API. <a href=\"{{ link }}\">Zistite, ako získať kľúč API<\/a>."
+    },
+    "gallery_lightbox": {
+      "load_more": "Nahrať viac fotiek"
     }
   }
 }
