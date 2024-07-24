@@ -423,7 +423,16 @@
     "countdown": {
       "days": "dní",
       "hours": "hodín",
-      "minutes": "minút"
+      "minutes": "minút",
+      "seconds": "sekúnd",
+      "error_msg": "Nesprávna syntax. Zadajte dátum so syntaxou: rrrr-mm-dd alebo rrrr-mm-dd hh:ii. Príklad: 2023-01-15 alebo 2023-01-15 23:00.",
+      "expired_msg": "Časovač odpočítavania vypršal."
+    },
+    "floating_bar": {
+      "recently_viewed": "Naposledy zobrazené",
+      "recently_viewed_empty": "Neexistujú žiadne nedávno zobrazené produkty.",
+      "recently_viewed_open": "Otvoriť naposledy zobrazené",
+      "back_to_top": "Späť na začiatok"
     }
   }
 }
