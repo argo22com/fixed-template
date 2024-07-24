@@ -337,5 +337,35 @@
       "success": "Pridané do porovnávacieho zoznamu.",
       "remove": "Odstrániť"
     }
+  },
+  "general": {
+    "password_page": {
+      "login_form_heading": "Pre prihlásenie do obchodu zadajte heslo:",
+      "login_password_button": "Vstúpiť pomocou hesla",
+      "login_form_password_label": "Heslo",
+      "login_form_password_placeholder": "Vaše heslo",
+      "login_form_error": "Heslo nie je správne!",
+      "login_form_submit": "Zadať",
+      "admin_link_html": "Ste majiteľom obchodu? <a href=\"\/admin\" class=\"link underlined-link\">Prihláste sa tu<\/a>",
+      "powered_by_shopify_html": "Obchod bude využívať platformu {{ shopify }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Zdieľať na Facebooku",
+        "share_on_twitter": "Tweetnúť na Twitteri",
+        "share_on_pinterest": "Pripnúť na Pintereste",
+        "share_by_email": "Zdieľajte e-mailom"
+      },
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo"
+      }
+    }
   }
 }
