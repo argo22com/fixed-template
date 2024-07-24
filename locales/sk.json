@@ -253,7 +253,8 @@
       "group_item": "Skupina č. {{ index }}"
     },
     "collection_banner": {
-      "load_collection_icon": "Kolekcia s ikonou"
+      "load_collection_icon": "Kolekcia s ikonou",
+      "slider": "Slider"
     },
     "cookies_banner": {
       "accept": "Súhlasiť",
@@ -265,6 +266,14 @@
     },
     "gallery_lightbox": {
       "load_more": "Nahrať viac fotiek"
+    },
+    "gallery": {
+      "item_id_label": "Položka galérie č. {{ item_number }}"
+    },
+    "product_tabs": {
+      "reviews": {
+        "title": "Hodnotenie"
+      }
     }
   }
 }
