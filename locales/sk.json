@@ -202,7 +202,8 @@
       "apply": "Použiť",
       "view_cart": "Zobraziť košík",
       "cart_success": "Produkt bol pridaný do košíka",
-      "cart_totals": "Celkem"
+      "cart_totals": "Celkem",
+      "shipping": "Doprava"
     }
   }
 }
