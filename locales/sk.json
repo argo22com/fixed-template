@@ -476,7 +476,7 @@
     },
     "skip_to_product_info": "Prejsť na informácie o produkte",
     "total_reviews": "Celkový počet recenzií",
-    "star_reviews_info": " 47 \/ 5 000 {{ rating_value }} z {{ rating_max }} hviezdičiek",
+    "star_reviews_info": "{{ rating_value }} z {{ rating_max }} hviezdičiek",
     "collapsible_content_title": "Zbaliteľný obsah",
     "complementary_products": "Doplnkové produkty",
     "skip_to_product_grid": "Preskočiť na mriežku produktov",
