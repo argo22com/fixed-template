@@ -189,7 +189,20 @@
       "cart_error": "Pri aktualizácii vášho košíka došlo k chybe. Skúste to prosím znova.",
       "cart_quantity_error_html": "Do košíka môžete pridať len nasledujúce množstvo danej položky: {{ quantity }}.",
       "taxes_and_shipping_policy_at_checkout_html": "Dane a <a href=\"{{ link }}\">poštovné<\/a> sa vypočítajú v pokladni",
-      "taxes_included_but_shipping_at_checkout": "Príslušná daň a poštovné sa vypočítajú v pokladni"
+      "taxes_included_but_shipping_at_checkout": "Príslušná daň a poštovné sa vypočítajú v pokladni",
+      "taxes_included_and_shipping_policy_html": "Vrátane dane. <a href=\"{{ link }}\">Poštovné<\/a> sa vypočíta na pokladni.",
+      "taxes_and_shipping_at_checkout": "Dane a poštovné sa vypočítajú na pokladni",
+      "update": "Aktualizovať",
+      "headings": {
+        "product": "Produkt",
+        "price": "Cena",
+        "total": "Celkem"
+      },
+      "note_drawer": "Poznámka",
+      "apply": "Použiť",
+      "view_cart": "Zobraziť košík",
+      "cart_success": "Produkt bol pridaný do košíka",
+      "cart_totals": "Celkem"
     }
   }
 }
