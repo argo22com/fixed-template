@@ -275,5 +275,35 @@
         "title": "Hodnotenie"
       }
     }
+  },
+  "templates": {
+    "search": {
+      "no_results": "Pre {{ terms }} neboli nájdené žiadne výsledky. Skontrolujte pravopis alebo zadajte iné slovo alebo slovné spojenie.",
+      "title": "Výsledky hľadania",
+      "results_with_count": {
+        "one": "{{ count }} výsledok",
+        "other": "Výsledky: {{ count }}",
+        "few": "Výsledky: {{ count }}",
+        "many": "Výsledky: {{ count }}"
+      },
+      "page": "Stránka",
+      "products": "Produkty",
+      "search_for": "Vyhľadať: {{ terms }}",
+      "results_with_count_and_term": {
+        "one": "Pre otázku {{ terms }} bol nájdený {{ count }} výsledok\n",
+        "other": "Pre otázku {{ terms }} bol nájdený tento počet výsledkov: {{ count }}",
+        "few": "Pre otázku {{ terms }} bol nájdený tento počet výsledkov: {{ count }}",
+        "many": "Pre otázku {{ terms }} bol nájdený tento počet výsledkov: {{ count }}"
+      },
+      "no_products": "Nenašli sa žiadne produkty pre „{{ terms }}“. Skontrolujte pravopis alebo použite iné slovo či frázu.",
+      "no_articles": "Nenašli sa žiadne články pre „{{ terms }}“. Skontrolujte pravopis alebo použite iné slovo či frázu.",
+      "no_pages": "Nenašli sa žiadne stránky pre „{{ terms }}“. Skontrolujte pravopis alebo použite iné slovo či frázu.",
+      "no_collections": "Nenašli sa žiadne kolekcie pre „{{ terms }}“. Skontrolujte pravopis alebo použite iné slová či frázy.",
+      "article": "Články",
+      "suggestions": "Návrhy"
+    },
+    "cart": {
+      "cart": "Košík"
+    }
   }
 }
