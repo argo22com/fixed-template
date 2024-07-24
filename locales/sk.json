@@ -146,5 +146,20 @@
       "hide_filter": "Schovať filter",
       "categories_block_label": "Kategória"
     }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Chcem tovar poslať ako darček",
+      "email_label": "Email príjemcu",
+      "email": "Email",
+      "name_label": "Meno príjemcu (voliteľné)",
+      "name": "Meno",
+      "message_label": "Správa (voliteľné)",
+      "message": "Správa ",
+      "max_characters": "Maximálny počet znakov: Maximálny počet znakov:",
+      "email_label_optional_for_no_js_behavior": "Email príjemcu (voliteľné)",
+      "send_on": "DD-MM-RRRR",
+      "send_on_label": "Dátum odoslania (voliteľné)"
+    }
   }
 }
