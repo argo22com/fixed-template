@@ -196,14 +196,25 @@
       "headings": {
         "product": "Produkt",
         "price": "Cena",
-        "total": "Celkem"
+        "total": "Celkem",
+        "quantity": "Množstvo",
+        "image": "Obrázok produktu"
       },
       "note_drawer": "Poznámka",
       "apply": "Použiť",
       "view_cart": "Zobraziť košík",
       "cart_success": "Produkt bol pridaný do košíka",
       "cart_totals": "Celkem",
-      "shipping": "Doprava"
+      "shipping": "Doprava",
+      "login": {
+        "title": "Máte účet?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Prihláste sa<\/a>, aby ste si urýchlili proces pokladnice."
+      }
+    },
+    "featured_blog": {
+      "view_all": "Platobné metódy",
+      "onboarding_title": "Blogový príspevok",
+      "onboarding_content": "Zhrňte pre zákazníkov obsah svojho blogového príspevku"
     }
   }
 }
