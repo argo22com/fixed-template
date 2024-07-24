@@ -218,6 +218,42 @@
     },
     "footer": {
       "payment": "Platobné metódy"
+    },
+    "featured_collection": {
+      "view_all": "Zobraziť všetko",
+      "view_all_label": "Zobraziť všetky produkty v kolekcii {{ collection_name }}",
+      "slider": "Slider"
+    },
+    "collection_list": {
+      "view_all": "Zobraziť všetko"
+    },
+    "collection_template": {
+      "title": "Kolekcia",
+      "empty": "Nenašli sme žiadne produkty",
+      "use_fewer_filters_html": "Môžete použiť menej filtrov alebo <a class=\"{{ class }}\" href=\"{{ link }}\">všetky odstrániť<\/a>"
+    },
+    "video": {
+      "load_video": "Načítať video: {{ description }}"
+    },
+    "slideshow": {
+      "load_slide": "Načítať snímku",
+      "previous_slideshow": "Predchádzajúca snímka",
+      "next_slideshow": "Ďalšia snímka",
+      "pause_slideshow": "Pozastaviť prezentáciu",
+      "play_slideshow": "Prehrať prezentáciu",
+      "carousel": "Karusel",
+      "slide": "Snímka"
+    },
+    "page": {
+      "title": "Názov stránky"
+    },
+    "background-color-swatches": {
+      "preview_title": "Ukážka vzorkovníkov farieb",
+      "preview_description": "Táto ukážka je viditeľná iba na stránke editora tém, aby vám pomohla jednoducho pridávať\/upravovať\/odstraňovať farebné kódy. Vo výklade sa tento náhľad nezobrazí, spustia sa iba farebné kódy.",
+      "group_item": "Skupina č. {{ index }}"
+    },
+    "collection_banner": {
+      "load_collection_icon": "Kolekcia s ikonou"
     }
   }
 }
