@@ -161,5 +161,35 @@
       "send_on": "DD-MM-RRRR",
       "send_on_label": "Dátum odoslania (voliteľné)"
     }
+  },
+  "sections": {
+    "header": {
+      "announcement": "Oznámenie",
+      "menu": "Ponuka",
+      "cart_count": {
+        "one": "{{ count }} položka",
+        "other": "{{ count }} polož.",
+        "few": "{{ count }} polož.",
+        "many": "{{ count }} polož."
+      },
+      "breadcrumbs": {
+        "home": "Home"
+      },
+      "go_to_link": "Prejdi na  {{ title }}"
+    },
+    "cart": {
+      "title": "Váš košík",
+      "caption": "Položky košíka",
+      "remove_title": "Odobrať:  {{ title }}",
+      "subtotal": "Medzisúčet",
+      "new_subtotal": "Nový medzisúčet",
+      "note": "Zvláštne pokyny k objednávke",
+      "checkout": "Pokladňa",
+      "empty": "Košík je prázdny",
+      "cart_error": "Pri aktualizácii vášho košíka došlo k chybe. Skúste to prosím znova.",
+      "cart_quantity_error_html": "Do košíka môžete pridať len nasledujúce množstvo danej položky: {{ quantity }}.",
+      "taxes_and_shipping_policy_at_checkout_html": "Dane a <a href=\"{{ link }}\">poštovné<\/a> sa vypočítajú v pokladni",
+      "taxes_included_but_shipping_at_checkout": "Príslušná daň a poštovné sa vypočítajú v pokladni"
+    }
   }
 }
