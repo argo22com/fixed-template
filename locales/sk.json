@@ -434,5 +434,31 @@
       "recently_viewed_open": "Otvoriť naposledy zobrazené",
       "back_to_top": "Späť na začiatok"
     }
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "read_more_title": "Prečítajte si viac: {{ title }}",
+      "moderated": "Upozorňujeme, že komentáre musia byť pred zverejnením schválené.",
+      "comment_form_title": "Napíšte komentár",
+      "name": "Názov",
+      "email": "E-mail",
+      "message": "Komentár",
+      "post": "Zverejniť komentár",
+      "back_to_blog": "Späť na blog",
+      "share": "Nazdieľať tento článok",
+      "success": "Váš komentár bol úspešne publikovaný! Ďakujeme!",
+      "success_moderated": "Váš komentár bol úspešne publikovaný. Zverejníme ho až o chvíľu, pretože náš blog je moderovaný.",
+      "comments": {
+        "one": "{{ count }} komentár",
+        "other": "Počet komentárov: {{ count }}",
+        "few": "Počet komentárov: {{ count }}",
+        "many": "Počet komentárov: {{ count }}"
+      },
+      "author_html": "Napísal <strong>{{ author }}<\/strong>",
+      "previous": "Predchádzajúci",
+      "next": "Ďalšia",
+      "tags_all": "Všetko"
+    }
   }
 }
