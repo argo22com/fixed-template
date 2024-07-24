@@ -113,7 +113,21 @@
       "from": "Od",
       "filter_and_sort": "Filtrovanie a radenie",
       "filter_by_label": "Filtrovať:",
-      "filter_button": "Filter"
+      "filter_button": "Filter",
+      "max_price": "Najvyššia cena je {{ price }}",
+      "price_from_to_html": "{{ price_label }} {{ price_from }} - {{ price_to }}",
+      "reset": "Resetovať",
+      "sort_button": "Zoradiť",
+      "sort_by_label": "Zoradiť podľa:",
+      "to": "Do",
+      "filters_selected": {
+        "one": "Vybrané: {{ count }}",
+        "other": "Vybrané: {{ count }}",
+        "few": "Vybrané: {{ count }}",
+        "many": "Vybrané: {{ count }}"
+      },
+      "clear_filter": "Odobrať filter",
+      "filter_selected_accessibility": "{{ type }} (počet vybraných filtrov: {{ count }})"
     }
   }
 }
