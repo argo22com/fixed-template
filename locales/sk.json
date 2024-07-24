@@ -37,5 +37,33 @@
   "onboarding": {
     "product_title": "Vzorový název produktu",
     "collection_title": "Názov vašej kolekcie"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Pridať do košíka",
+      "description": "Popis",
+      "on_sale": "Zľava",
+      "product_variants": "Varianty produktu",
+      "share": "Zdieľať tento produkt",
+      "sold_out": "Vypredané",
+      "show_more": "Viac možností",
+      "unavailable": "Nie je k dispozícii",
+      "vendor": "Dodávateľ",
+      "video_exit_message": "{{ title }} otvorí v rovnakom okne video na celej obrazovke",
+      "xr_button": "Zobraziť vo vašom priestore",
+      "xr_button_label": "Zobraziť vo vašom priestore: Umožňuje načítať položku v okne rozšírenej reality",
+      "quantity": {
+        "label": "Množstvo",
+        "input_label": "Množstvo produktu {{ product }}",
+        "increase": "Zvýšiť množstvo produktu {{ product }}",
+        "decrease": "Znížiť množstvo produktu {{ product }}"
+      },
+      "price": {
+        "from_price_html": "Od {{ price }}",
+        "regular_price": "Bežná cena",
+        "sale_price": "Výpredajová cena",
+        "unit_price": "Jednotková cena"
+      }
+    }
   }
 }
