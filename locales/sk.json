@@ -461,5 +461,25 @@
       "tags_all": "Všetko",
       "continue": "Čítať ďalej"
     }
+  },
+  "accessibility": {
+    "skip_to_text": "Prejsť k obsahu",
+    "close": "Zavrieť",
+    "unit_price_separator": "za",
+    "vendor": "Dodávateľ:",
+    "error": "Chyba",
+    "refresh_page": "Po voľbe výberu sa obnoví celá stránka.",
+    "loading": "Načítanie...",
+    "link_messages": {
+      "new_window": "Otvorí sa v novom okne.",
+      "external": "Otvorí externú webovú stránku."
+    },
+    "skip_to_product_info": "Prejsť na informácie o produkte",
+    "total_reviews": "Celkový počet recenzií",
+    "star_reviews_info": " 47 \/ 5 000 {{ rating_value }} z {{ rating_max }} hviezdičiek",
+    "collapsible_content_title": "Zbaliteľný obsah",
+    "complementary_products": "Doplnkové produkty",
+    "skip_to_product_grid": "Preskočiť na mriežku produktov",
+    "navigation_toggle": "Prepínač navigácie v lepiacej hlavičke"
   }
 }
