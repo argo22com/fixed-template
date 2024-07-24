@@ -583,6 +583,13 @@
       "subtotal": "Medzisúčet",
       "total_duties": "Clá"
     },
-    "back_to_login": "Späť na prihlasovaciu stránku"
+    "back_to_login": "Späť na prihlasovaciu stránku",
+    "account": {
+      "title": "Účet",
+      "details": "Podrobnosti účtu",
+      "view_addresses": "Zobraziť adresy",
+      "return": "Vrátiť sa k podrobnostiam účtu",
+      "welcome_html": "Welcome back, <strong>{{ first_name }}<\/strong>!"
+    }
   }
 }
