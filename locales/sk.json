@@ -212,9 +212,12 @@
       }
     },
     "featured_blog": {
-      "view_all": "Platobné metódy",
+      "view_all": "Zobraziť všetko",
       "onboarding_title": "Blogový príspevok",
       "onboarding_content": "Zhrňte pre zákazníkov obsah svojho blogového príspevku"
+    },
+    "footer": {
+      "payment": "Platobné metódy"
     }
   }
 }
