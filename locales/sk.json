@@ -87,7 +87,33 @@
       "view_full_details": "Zobraziť všetky podrobnosti",
       "include_taxes": "Vrátane daní.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Poštovné<\/a> sa vypočíta na pokladni.",
-      "choose_options": "Výber možností"
+      "choose_options": "Výber možností",
+      "choose_product_options": "Zvoľte možnosti pre: {{ product_name }}",
+      "value_unavailable": "{{ option_value }} - Nedostupné",
+      "inventory_in_stock": "Skladom",
+      "inventory_in_stock_show_count": "{{ quantity }} ks skladom",
+      "inventory_low_stock": "Takmer vypredané",
+      "inventory_low_stock_show_count": "Takmer vypredané: zostáva len {{ quantity }} ks",
+      "inventory_out_of_stock": "Vypredané",
+      "inventory_out_of_stock_continue_selling": "Skladom",
+      "quick_view": "Rýchly náhľad produktu",
+      "number_of_reviews": {
+        "one": "{{ count }} hodnotenie",
+        "other": "{{ count }} hodnotenie"
+      },
+      "by_vendor_html": "<span>Od<\/span> {{ vendor }}"
+    },
+    "modal": {
+      "label": "Galéria multimédií"
+    },
+    "facets": {
+      "apply": "Použiť",
+      "clear": "Vymazať",
+      "clear_all": "Odobrať všetko",
+      "from": "Od",
+      "filter_and_sort": "Filtrovanie a radenie",
+      "filter_by_label": "Filtrovať:",
+      "filter_button": "Filter"
     }
   }
 }
