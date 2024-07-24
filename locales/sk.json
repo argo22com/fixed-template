@@ -458,7 +458,8 @@
       "author_html": "Napísal <strong>{{ author }}<\/strong>",
       "previous": "Predchádzajúci",
       "next": "Ďalšia",
-      "tags_all": "Všetko"
+      "tags_all": "Všetko",
+      "continue": "Čítať ďalej"
     }
   }
 }
