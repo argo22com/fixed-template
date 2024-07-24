@@ -28,5 +28,10 @@
       "copy_code_success": "Kód bol úsešne skopírovaný",
       "print_gift_card": "Vytlačiť"
     }
+  },
+  "newsletter": {
+    "label": "E-mail",
+    "success": "Ďakujeme za prihlásenie k odberu newslettera",
+    "button_label": "Prihlásiť k odberu"
   }
 }
