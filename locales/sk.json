@@ -62,8 +62,32 @@
         "from_price_html": "Od {{ price }}",
         "regular_price": "Bežná cena",
         "sale_price": "Výpredajová cena",
-        "unit_price": "Jednotková cena"
-      }
+        "unit_price": "Jednotková cena",
+        "varies_html": "{{ price_from }} - {{ price_to }}"
+      },
+      "pickup_availability": {
+        "view_store_info": "Zobraziť informácie o obchode",
+        "check_other_stores": "Skontrolovať dostupnosť v ostatných obchodoch",
+        "pick_up_available": "Vyzdvihnutie k dispozícii",
+        "pick_up_available_at_html": "Vyzdvihnutie k dispozícii v lokalite <span class=\"color-foreground\">{{ location_name }}<\/span>",
+        "pick_up_unavailable_at_html": "Vyzdvihnutie nie je momentálne v lokalite <span class=\"color-foreground\">{{ location_name }}<\/span> k dispozícii",
+        "unavailable": "Dostupnosť vyzdvihnutie nebolo možné načítať",
+        "refresh": "Aktualizovať"
+      },
+      "media": {
+        "open_media": "Otvoriť multimédiá {{ index }} v modálnom okne",
+        "play_model": "Prehrať v 3D prehliadači",
+        "play_video": "Prehrať video",
+        "gallery_viewer": "Prehliadač galérie",
+        "load_image": "Načítať obrázok {{ index }} do zobrazenia galérie",
+        "load_model": "Načítať 3D model {{ index }} do zobrazenia galérie",
+        "load_video": "Prehrať video {{ index }} v zobrazení galérie",
+        "image_available": "Obrázok {{ index }} je teraz k dispozícii v zobrazení galérie"
+      },
+      "view_full_details": "Zobraziť všetky podrobnosti",
+      "include_taxes": "Vrátane daní.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Poštovné<\/a> sa vypočíta na pokladni.",
+      "choose_options": "Výber možností"
     }
   }
 }
