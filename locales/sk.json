@@ -13,5 +13,20 @@
     "language_label": "Jazyk",
     "update_language": "Aktualizovat jazyk",
     "update_country": "Aktualizovať krajinu\/oblasť"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Tu je vaša darčeková karta v hodnote {{ value }} pre obchod {{ shop }}!",
+      "subtext": "Váš darčekový poukaz",
+      "gift_card_code": "Kód darčekovej karty",
+      "shop_link": "Pokračovať v nákupe",
+      "remaining_html": "Zostávajúca čiastka: {{ balance }}",
+      "add_to_apple_wallet": "Pridať do Apple Wallet",
+      "qr_image_alt": "QR kód: Po naskenovaní môžete uplatiniť svoju darčekovú kartu",
+      "copy_code": "Kopírovať kód",
+      "expired": "Platnosť vypršala",
+      "copy_code_success": "Kód bol úsešne skopírovaný",
+      "print_gift_card": "Vytlačiť"
+    }
   }
 }
