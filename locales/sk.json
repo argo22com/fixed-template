@@ -395,7 +395,35 @@
       "item_added": "Položka bola pridaná do košíka"
     },
     "share": {
-      "copy_to_clipboard": "Kopírovať odkaz"
+      "copy_to_clipboard": "Kopírovať odkaz",
+      "share_url": "Odkaz",
+      "success_message": "Odkaz bol skopírovaný do schránky",
+      "close": "Zavrieť okno pre zdieľanie"
+    },
+    "slider": {
+      "of": "z",
+      "next_slide": "Snímka vpravo",
+      "previous_slide": "Snímka vľavo",
+      "name": "Posuvník"
+    },
+    "boolean": {
+      "true": "Ano",
+      "false": "Ne"
+    },
+    "shipping_calculator": {
+      "heading": "Kalkulátor dopravy",
+      "errors_heading": "Chyby",
+      "carriers": "Dostupní prepravcovia",
+      "button": "Prepočítať",
+      "do_not_ship": "Do tejto lokality bohužiaľ nezasielame",
+      "delivery_date_one": "{{ count }} pracovný deň",
+      "delivery_date_many": "{{ count }} pracovné dni",
+      "delivery_date_range": "{{ minimum }} až {{ maximum }} pracovných dní"
+    },
+    "countdown": {
+      "days": "dní",
+      "hours": "hodín",
+      "minutes": "minút"
     }
   }
 }
