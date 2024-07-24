@@ -547,7 +547,31 @@
       "title": "Vytvoriť účet",
       "first_name": "Meno",
       "last_name": "Priezvisko",
-      "email": "E-mail"
+      "email": "E-mail",
+      "password": "Heslo",
+      "submit": "Vytvoriť"
+    },
+    "reset_password": {
+      "title": "Resetujte heslo účtu",
+      "subtext": "Zadajte nové heslo",
+      "password": "Heslo",
+      "password_confirm": "Potvrdiť heslo",
+      "submit": "Resetovať heslo"
+    },
+    "order": {
+      "title": "Objednávka {{ name }}",
+      "date_html": "Dátum vytvorenia: {{ date }}",
+      "cancelled_html": "Dátum zrušenia objednávky: {{ date }}",
+      "cancelled_reason": "Dôvod: {{ reason }}",
+      "billing_address": "Fakturačná adresa",
+      "payment_status": "Stav platby",
+      "shipping_address": "Dodacia adresa",
+      "fulfillment_status": "Stav plnenia",
+      "discount": "Zľava",
+      "shipping": "Doprava",
+      "tax": "Daň",
+      "product": "Produkt",
+      "sku": "SKU"
     }
   }
 }
