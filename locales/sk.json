@@ -127,7 +127,19 @@
         "many": "Vybrané: {{ count }}"
       },
       "clear_filter": "Odobrať filter",
-      "filter_selected_accessibility": "{{ type }} (počet vybraných filtrov: {{ count }})"
+      "filter_selected_accessibility": "{{ type }} (počet vybraných filtrov: {{ count }})",
+      "product_count": {
+        "one": "{{ product_count }} z {{ count }} produktu",
+        "other": "{{ product_count }} z {{ count }} produktov",
+        "few": "{{ product_count }} z {{ count }} produktov",
+        "many": "{{ product_count }} z {{ count }} produktov"
+      },
+      "product_count_simple": {
+        "one": "Počet produktov: {{ count }}",
+        "other": "Počet produktov: {{ count }}",
+        "few": "Počet produktov: {{ count }}",
+        "many": "Počet produktov: {{ count }}"
+      }
     }
   }
 }
