@@ -364,8 +364,38 @@
         "tumblr": "Tumblr",
         "snapchat": "Snapchat",
         "youtube": "YouTube",
-        "vimeo": "Vimeo"
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok",
+        "linkedin": "Linkedin"
       }
+    },
+    "continue_shopping": "Pokračovať v nákupe",
+    "pagination": {
+      "label": "Stránkovanie",
+      "page": "Strana {{ number }}",
+      "next": "Ďalšia stránka",
+      "previous": "Predchádzajúca stránka",
+      "load_more": "Načítať viac",
+      "load_previous_items": "Načítať predchádzajúce položky"
+    },
+    "search": {
+      "search": "Vyhľadávanie",
+      "clear": "Vyčistiť",
+      "view_all_results": "Zobraziť všetky výsledky",
+      "type": {
+        "products": "Produkty",
+        "articles": "Články",
+        "collections": "Kolekcia",
+        "pages": "Stránky",
+        "suggestions": "Návrhy"
+      }
+    },
+    "cart": {
+      "view": "Zobraziť košík ({{ count }})",
+      "item_added": "Položka bola pridaná do košíka"
+    },
+    "share": {
+      "copy_to_clipboard": "Kopírovať odkaz"
     }
   }
 }
