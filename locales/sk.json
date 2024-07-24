@@ -571,7 +571,18 @@
       "shipping": "Doprava",
       "tax": "Daň",
       "product": "Produkt",
-      "sku": "SKU"
-    }
+      "sku": "SKU",
+      "price": "Cena",
+      "quantity": "Množstvo",
+      "total": "Celkom",
+      "fulfilled_at_html": "Splnené: {{ date }}",
+      "track_shipment": "Sledovať zásielku",
+      "tracking_url": "Odkaz na sledovanie",
+      "tracking_company": "Dopravca",
+      "tracking_number": "Číslo pre sleodvanie",
+      "subtotal": "Medzisúčet",
+      "total_duties": "Clá"
+    },
+    "back_to_login": "Späť na prihlasovaciu stránku"
   }
 }
