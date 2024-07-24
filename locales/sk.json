@@ -33,5 +33,9 @@
     "label": "E-mail",
     "success": "Ďakujeme za prihlásenie k odberu newslettera",
     "button_label": "Prihlásiť k odberu"
+  },
+  "onboarding": {
+    "product_title": "Vzorový název produktu",
+    "collection_title": "Názov vašej kolekcie"
   }
 }
