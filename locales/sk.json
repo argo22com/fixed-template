@@ -481,5 +481,25 @@
     "complementary_products": "Doplnkové produkty",
     "skip_to_product_grid": "Preskočiť na mriežku produktov",
     "navigation_toggle": "Prepínač navigácie v lepiacej hlavičke"
+  },
+  "customer": {
+    "account_fallback": "Účet",
+    "log_in": "Prihlásiť sa",
+    "log_out": "Odhlásiť sa",
+    "activate_account": {
+      "title": "Aktivovať účet",
+      "subtext": "Vytvorte heslo pre aktiváciu účtu",
+      "password": "Heslo",
+      "password_confirm": "Potvrdiť heslo",
+      "submit": "Aktivovať účet",
+      "cancel": "Odmietnuť pozvánku"
+    },
+    "addresses": {
+      "title": "Adresy",
+      "default": "Predvolené",
+      "add_new": "Pridať novú adresu",
+      "edit_address": "Upraviť adresu",
+      "first_name": "Priezvisko"
+    }
   }
 }
