@@ -793,7 +793,7 @@
         "column_alignment": "left",
         "enable_shadow": true,
         "background_transparent": false,
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "enable_section_box_layout": false,
         "color_scheme": "",
