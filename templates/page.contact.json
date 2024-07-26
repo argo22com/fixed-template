@@ -244,6 +244,74 @@
         "padding_bottom": 0
       }
     },
+    "spacer_zgqJ7Q": {
+      "type": "spacer",
+      "settings": {
+        "height": 36
+      }
+    },
+    "image_with_text_YMQkmf": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HVA3Kx": {
+          "type": "heading",
+          "settings": {
+            "heading": "FIXED zone, a.s.",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_rNQQwk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Budějovická 19, 270 01 Homole<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_wGkbck": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zobraz na mapě",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HVA3Kx",
+        "text_rNQQwk",
+        "button_wGkbck"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#ea5c5c",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
     "page_DRQxNg": {
       "type": "page",
       "settings": {
@@ -259,6 +327,8 @@
     "banner_grid_MMpbFx",
     "form",
     "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f",
+    "spacer_zgqJ7Q",
+    "image_with_text_YMQkmf",
     "page_DRQxNg"
   ]
 }
