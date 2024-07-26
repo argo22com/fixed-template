@@ -63,13 +63,13 @@
     ],
     "back_to_top_button_enable": true,
     "recently_viewed_enable": true,
-    "recently_viewed_image_ratio": "adapt",
+    "recently_viewed_image_ratio": "portrait",
     "recently_viewed_show_secondary_image": true,
     "recently_viewed_show_rating": true,
     "recently_viewed_enable_quick_add": true,
     "recently_viewed_enable_quick_view": true,
     "recently_viewed_columns_mobile": "1",
-    "google_maps_api_key": "AIzaSyAXbEY8zTRx-sKh0bKje_zIHdoFgo2skwA",
+    "google_maps_api_key": "SyAXbEY8zTRx-sKh0bKje_zIHdoFgo2skwA",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",

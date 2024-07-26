@@ -41,6 +41,167 @@
         "padding_bottom": 36
       }
     },
+    "banner_grid_MMpbFx": {
+      "type": "banner-grid",
+      "blocks": {
+        "promotion_text_UEyGhw": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "Fixed",
+            "heading_size": "h1",
+            "text": "<strong>FIXED.zone a.s.                       Centrála:<\/strong>Budějovická 19            370 01, Homole                       Czech Republic <strong>IČO:<\/strong> 26036363,  <strong>DIČ:<\/strong> CZ26036363<em>          Spisová značka: B 2491 vedená u Krajského soudu v Českých Budějovicích<\/em>",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 2,
+            "desktop_row": 2,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#000",
+            "color_background": "#fafafa"
+          }
+        },
+        "promotion_text_gqCayi": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "",
+            "heading_size": "h2",
+            "text": "<strong>Servis a reklamace:                          E-mail:<\/strong> reklamace@FIXED.zone  <strong>GSM<\/strong>: + 420 724 161 817",
+            "text_style": "subtitle",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#000",
+            "color_background": "#fafafa"
+          }
+        },
+        "promotion_text_pEfrbG": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "",
+            "heading_size": "h2",
+            "text": "<strong>Objednávky E-shop:E-mail:<\/strong> podpora@FIXED.zone<strong>GSM:<\/strong> +420 267 317 817<strong>Po – Pá<\/strong>: 8:00 – 16:00",
+            "text_style": "subtitle",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#000",
+            "color_background": "#fafafa"
+          }
+        },
+        "promotion_text_iFwmYe": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1",
+            "text": "<strong>Zákaznická podpora:                      E-mail:<\/strong> podpora@FIXED.zone    <strong>GSM:<\/strong> +420 267 317 817               <strong>Po – Pá<\/strong>: 8:00 – 16:00 <strong>Whistleblowing:E-mail: <\/strong><a href=\"mailto:WB@fixed.zone\">WB@fixed.zone<\/a><strong>Telefon (<\/strong>pro zanechání záznamu<strong>) : +420 <\/strong>385 310120",
+            "text_style": "subtitle",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#000",
+            "color_background": "#fafafa"
+          }
+        },
+        "promotion_text_b8CKKM": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1",
+            "text": "<strong>Výroba v Prostějově:Po – Pá: <\/strong>8:00 – 14:00<strong>FIXED.zone a.s.<\/strong>Žeranovská 8796 01 Prostějov",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#000",
+            "color_background": "#fafafa"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_text_UEyGhw",
+        "promotion_text_gqCayi",
+        "promotion_text_pEfrbG",
+        "promotion_text_iFwmYe",
+        "promotion_text_b8CKKM"
+      ],
+      "settings": {
+        "layout": "grid",
+        "desktop_row_height": 30,
+        "desktop_gap": 30,
+        "mobile_gap": 10,
+        "hide_when_empty_content": true,
+        "enable_section_box_layout": false,
+        "media_border_thickness": 1,
+        "media_border_opacity": 5,
+        "media_radius": 15,
+        "enable_shadow": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f": {
       "type": "maps",
       "blocks": {
@@ -53,7 +214,7 @@
         "c580f205-257a-41c7-9377-71176d742903": {
           "type": "physical_address",
           "settings": {
-            "title": "Kubatova 6, 370 04 České Budějovice, Czech republic"
+            "title": "Budějovická 19, 370 01 Homole"
           }
         }
       },
@@ -67,6 +228,7 @@
         "heading_size": "h2",
         "description": "",
         "badge": "",
+        "image": "shopify:\/\/shop_images\/homole_mapa.jpg",
         "overlapping_content_layout": true,
         "color_scheme": "background-2",
         "api_library": "embed",
@@ -88,57 +250,6 @@
         "height": 40
       }
     },
-    "newsletter_BUjiNr": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_zQCKNF": {
-          "type": "heading",
-          "settings": {
-            "heading": "ZŮSTAŇTE V OBRAZE",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_y9NyUc": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce.<\/p>"
-          }
-        },
-        "email_form_Rh4dWj": {
-          "type": "email_form",
-          "settings": {
-          }
-        },
-        "social_icons_ABPQJe": {
-          "type": "social_icons",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "heading_zQCKNF",
-        "paragraph_y9NyUc",
-        "email_form_Rh4dWj",
-        "social_icons_ABPQJe"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "colors_text": "#ffffff",
-        "colors_input": "#64748b",
-        "overlay_color": "#1e40af",
-        "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "custom_liquid_m79bJK": {
       "type": "custom-liquid",
       "settings": {
@@ -148,76 +259,44 @@
         "padding_bottom": 52
       }
     },
-    "multicolumn_97UDA8": {
-      "type": "multicolumn",
+    "rich_text_6kDnHf": {
+      "type": "rich-text",
       "blocks": {
-        "column_3jNbTG": {
-          "type": "column",
+        "heading_K6Geqr": {
+          "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Jan_Moravec.jpg",
-            "icon": "check",
-            "title": "Jan Moravec",
-            "text": "<p>CEO<\/p><p><a href=\"mailto:jan.moravec@fixed.zone\" target=\"_blank\" title=\"mailto:jan.moravec@fixed.zone\">jan.moravec@fixed.zone<\/a><\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#212c4d",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#ffffff",
-            "card_color_background_gradient": ""
+            "heading": "<h3>Provozovatel<\/h3>",
+            "heading_size": "h2"
           }
         },
-        "column_MMpTFk": {
-          "type": "column",
+        "text_3QjC7a": {
+          "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Martin_Kubac.jpg",
-            "icon": "none",
-            "title": "Martin Kubáč",
-            "text": "<p>PR Manažer<\/p><p><a href=\"mailto:martin.kubac@fixed.zone\" target=\"_blank\" title=\"mailto:martin.kubac@fixed.zone\">martin.kubac@fixed.zone<\/a><\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "card_color_text": "#000000",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#ffffff",
-            "card_color_background_gradient": ""
+            "text": "<p>Výrobcem, dovozcem a distributorem produktů značky FIXED je společnost FIXED.zone a.s..<\/p><p>Budějovická 19, 370 01, Homole<\/p><p>Czech Republic<\/p><p><strong>IČ:<\/strong> 26036363, <strong>DIČ:<\/strong> CZ26036363<\/p><p><strong>Bankovní spojení<\/strong>:<br\/><strong>CZK<\/strong> 8724732 \/ 0800 Česká spořitelna, a.s.<br\/><strong>EUR IBAN<\/strong> CZ8108000000000008866992, SWIFT: GIBACZPXXXX<\/p><p><strong>Spisová značka<\/strong>: C 10575 vedená u Krajského soudu v Českých Budějovicích<\/p>"
           }
         }
       },
       "block_order": [
-        "column_3jNbTG",
-        "column_MMpTFk"
+        "heading_K6Geqr",
+        "text_3QjC7a"
       ],
       "settings": {
-        "title": "Kontakty pro média",
-        "subtitle": "",
-        "heading_size": "h1",
-        "media_type": "image",
-        "media_width_desktop": "30",
-        "image_ratio": "portrait",
-        "text_position": "bottom",
-        "columns_desktop": 2,
-        "columns_tablet": 3,
-        "desktop_gap": 30,
-        "auto_fit": false,
-        "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": false,
-        "button_label": "Button label",
-        "button_link": "",
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
-        "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
-        "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "page_DRQxNg": {
+      "type": "page",
+      "settings": {
+        "page": "provozovatel",
+        "heading_size": "h2",
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -225,10 +304,11 @@
   },
   "order": [
     "form",
+    "banner_grid_MMpbFx",
     "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f",
     "3e50a7fa-ef6f-4125-90d4-609ab7b2f2b5",
-    "newsletter_BUjiNr",
     "custom_liquid_m79bJK",
-    "multicolumn_97UDA8"
+    "rich_text_6kDnHf",
+    "page_DRQxNg"
   ]
 }
