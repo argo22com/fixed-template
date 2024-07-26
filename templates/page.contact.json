@@ -272,7 +272,7 @@
           "type": "button",
           "settings": {
             "button_label": "Zobraz na mapě",
-            "button_link": "",
+            "button_link": "https:\/\/www.google.com\/maps\/place\/FIXED.zone+a.s.\/@48.9391816,14.423225,17z\/data=!3m1!4b1!4m6!3m5!1s0x47734fd37d3113b3:0x25305ec44acc022c!8m2!3d48.9391781!4d14.4257999!16s%2Fg%2F1trpk08k?entry=ttu",
             "button_style": "solid"
           }
         }
