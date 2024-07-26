@@ -1,0 +1,257 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "grid",
+        "content_alignment": "left",
+        "color_scheme": "background-2",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "image_with_text_AwNNQH": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xi6Qgt": {
+          "type": "heading",
+          "settings": {
+            "heading": "nějaký nadpis?",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_M496Hi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam faucibus mi quis velit. Etiam bibendum elit eget erat. Fusce suscipit libero eget elit. Nullam rhoncus aliquam metus. Integer pellentesque quam vel velit. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Pellentesque ipsum. Nullam at arcu a est sollicitudin euismod. Aliquam erat volutpat. Mauris elementum mauris vitae tortor. Pellentesque sapien. Maecenas libero.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_DxhqAz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Seznamte se s FIXED",
+            "button_link": "shopify:\/\/pages\/seznamte-se-s-fixed",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xi6Qgt",
+        "text_M496Hi",
+        "button_DxhqAz"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/img_249cf445-3318-4524-830e-f613f104316a.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "collapsible_content_AHHHxy": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_fkqnBp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2024",
+            "icon": "pencil",
+            "row_content": "",
+            "page": "2024"
+          }
+        },
+        "collapsible_row_JJcMaG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2023",
+            "icon": "pencil",
+            "row_content": "",
+            "page": "2023"
+          }
+        },
+        "collapsible_row_DgkEEC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2022",
+            "icon": "pencil",
+            "row_content": "",
+            "page": "2022"
+          }
+        },
+        "collapsible_row_tQYjN3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2021",
+            "icon": "pencil",
+            "row_content": "",
+            "page": "2021"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_fkqnBp",
+        "collapsible_row_JJcMaG",
+        "collapsible_row_DgkEEC",
+        "collapsible_row_tQYjN3"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "title": "Tiskové centrum",
+        "subtitle": "",
+        "heading_size": "h1",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "hide_image_on_mobile": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_Crb7hb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Vcfa68": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>Kontakty pro média<\/strong><\/h3>",
+            "heading_size": "h2"
+          }
+        },
+        "text_AH3Vtt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>fotky a maily - tak tenhle blok zatím nemáme, čekáme na Magexo až dodělají, takže sem zatím dávám jen text, že se tu s tím počítá.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Vcfa68",
+        "text_AH3Vtt"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_Gp6UAE": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_XWMNVK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_XPmVWn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_8WT4cR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_EWXCdc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_XWMNVK",
+        "collapsible_row_XPmVWn",
+        "collapsible_row_8WT4cR",
+        "collapsible_row_EWXCdc"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "title": "Dokumenty ke stažení",
+        "subtitle": "",
+        "heading_size": "h1",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "hide_image_on_mobile": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "graph_cVdgJT": {
+      "type": "graph",
+      "settings": {
+        "heading1": "Vývoj obratu",
+        "description1": "Celkový obrat v Kč",
+        "heading2": "Počet zaměstnanců",
+        "description2": "S růstem firmy roste počet zaměstnanců"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_AwNNQH",
+    "collapsible_content_AHHHxy",
+    "rich_text_Crb7hb",
+    "collapsible_content_Gp6UAE",
+    "graph_cVdgJT"
+  ]
+}
