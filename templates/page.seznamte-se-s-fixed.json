@@ -675,30 +675,13 @@
             "card_color_background_gradient": ""
           }
         },
-        "column_qAcxGh": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
-            "icon": "check",
-            "title": "TISKOVÉ CENTRUM",
-            "text": "<p>Váš zdroj aktuálních informací od FIXED.<\/p>",
-            "link_label": "NAVŠTIVTE TISKOVÉ CENTRUM",
-            "link": "",
-            "button_style": "link",
-            "card_color_text": "#166534",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#effdf4",
-            "card_color_background_gradient": ""
-          }
-        },
         "column_9Kbmbi": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
             "icon": "check",
             "title": "MEDIÁLNÍ CENTRUM",
-            "text": "<p>Stáhněte si naše loga, obrázky produktů či další materiály.<\/p>",
+            "text": "<p>Stáhněte si naše loga, obrázky produktů či další materiály jako jsou tiskové zprávy apod.<\/p>",
             "link_label": "NAVŠTIVTE MEDIÁLNÍ CENTRUM",
             "link": "",
             "button_style": "link",
@@ -709,14 +692,48 @@
             "card_color_background_gradient": ""
           }
         },
+        "column_jfXPbR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+            "icon": "check",
+            "title": "UDRŽITELNOST",
+            "text": "<p>Prohlédněte si náš ESG report.<\/p>",
+            "link_label": "CERTIFIKACE",
+            "link": "",
+            "button_style": "link",
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_qAcxGh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+            "icon": "check",
+            "title": "BLOG",
+            "text": "<p>Nahlédněte pod pokličku FIXED.<\/p>",
+            "link_label": "NAVŠTIVTE BLOG",
+            "link": "",
+            "button_style": "link",
+            "card_color_text": "#166534",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#effdf4",
+            "card_color_background_gradient": ""
+          }
+        },
         "column_Lt8Ctd": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
             "icon": "check",
-            "title": "KONTAKT",
-            "text": "<p>Kontaktní údaje naší společnosti a zákaznické podpory<\/p>",
-            "link_label": "KONTAKT",
+            "title": "PODPORA",
+            "text": "<p>Vyhledejte si potřebné kontakty nebo se přímo spojte s naší zákaznickou podporou.<\/p>",
+            "link_label": "NAVŠTIVTE FIXED PODPORU",
             "link": "",
             "button_style": "link",
             "card_color_text": "#a06207",
@@ -731,26 +748,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
             "icon": "check",
-            "title": "COMPLIANCE",
-            "text": "<p>Vyhledejte compliance dokumenty pro váš produkt podle názvu produktu<\/p>",
-            "link_label": "NAVŠTIVTE COMPLIANCE",
-            "link": "",
-            "button_style": "link",
-            "card_color_text": "#121212",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#f8fafc",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_jfXPbR": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
-            "icon": "check",
-            "title": "CERTIFIKACE",
-            "text": "<p>Jsme držitelé certifikátů xy. <\/p>",
-            "link_label": "CERTIFIKACE",
+            "title": "KARIÉRA",
+            "text": "<p>Připoj se do našeho týmu, prohlédni si aktuální volné pozice, nebo napiš jen tak.<\/p>",
+            "link_label": "NAVŠTIVTE FIXED HR",
             "link": "",
             "button_style": "link",
             "card_color_text": "#121212",
@@ -763,11 +763,11 @@
       },
       "block_order": [
         "column_yCyFpe",
-        "column_qAcxGh",
         "column_9Kbmbi",
+        "column_jfXPbR",
+        "column_qAcxGh",
         "column_Lt8Ctd",
-        "column_Jghrea",
-        "column_jfXPbR"
+        "column_Jghrea"
       ],
       "settings": {
         "title": "Promotion cards",
