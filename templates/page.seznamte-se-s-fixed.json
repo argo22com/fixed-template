@@ -95,6 +95,245 @@
         "padding_bottom": 0
       }
     },
+    "image_with_text_dfmzED": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YgeAAE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stojíme na pevných základech",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_XQf8HX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Skvělé produkty a služby mají základ v dobře fungující firmě. U nás se při jejich vývoji a následné péči řídíme naší vizí, hodnotami, znalostmi zákazníka, osobním přístupem a sny. Tyto kvality současně tvoří silné kořeny, na kterých vyrůstá firma s potenciálem a silná značka FIXED.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YgeAAE",
+        "text_XQf8HX"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/koreny_znacky.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "image_with_text_xkUAjh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hKMVWb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Identita definující tonalitu značky",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_JPYh4L": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FIXED je nejlepší přítel s kreativní myslí. Co jste možná sami neviděli, dokáže posunout dále. Můžete se spolehnout, že vymyslí řešení, dá dobrou radu. Nenechává se jen vést, sám ovlivňuje věci kolem a přetváří je k lepšímu. K tomu samému pomáhá i vám.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_mf9GiE": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hKMVWb",
+        "text_JPYh4L",
+        "button_mf9GiE"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/kreativni_mysl.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "image_with_text_Uh3NT9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_BMa3bm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_JUrCbK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_LFHFh7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BMa3bm",
+        "text_JUrCbK",
+        "button_LFHFh7"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/produktove_inovace.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "image_with_text_fnD44p": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_69M8Pm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sledujte příběh naší značky",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_aCQinV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FIXED je na trhu od roku 2001. Od té doby rok co rok rosteme, díky čemuž vám můžeme přinášet stále nové možnosti. Přidejte se k naší komunitě a seznamte se s našimi produkty a kampaněmi a nezapomeňte se přihlásit k odběru našich novinek.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_T83m4M": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_69M8Pm",
+        "text_aCQinV",
+        "button_T83m4M"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/pribeh_fixed.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
     "timeline_ccWkJE": {
       "type": "timeline",
       "blocks": {
@@ -345,6 +584,10 @@
   "order": [
     "main",
     "image_banner_HtGAm3",
+    "image_with_text_dfmzED",
+    "image_with_text_xkUAjh",
+    "image_with_text_Uh3NT9",
+    "image_with_text_fnD44p",
     "timeline_ccWkJE"
   ]
 }
