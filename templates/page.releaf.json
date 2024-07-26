@@ -20,13 +20,67 @@
         "padding_bottom": 40
       }
     },
+    "image_banner_x8BxCc": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_76DBMV": {
+          "type": "heading",
+          "settings": {
+            "heading": "FIXED Sustainibility",
+            "size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_76DBMV"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "image_with_text_AwNNQH": {
       "type": "image-with-text",
       "blocks": {
         "heading_xi6Qgt": {
           "type": "heading",
           "settings": {
-            "heading": "nějaký nadpis?",
+            "heading": "We make living with smart devices better. Sustainably",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -34,7 +88,7 @@
         "text_M496Hi": {
           "type": "text",
           "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam faucibus mi quis velit. Etiam bibendum elit eget erat. Fusce suscipit libero eget elit. Nullam rhoncus aliquam metus. Integer pellentesque quam vel velit. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Pellentesque ipsum. Nullam at arcu a est sollicitudin euismod. Aliquam erat volutpat. Mauris elementum mauris vitae tortor. Pellentesque sapien. Maecenas libero.<\/p>",
+            "text": "<p>For us ad FIXED sustainability is not just a buzzword. We implement it in every step of our process. From minimising waste and environmental footprint, choosing better ways of transportation and ethically sourced materials and optimising you supply chain, all the way to figuring yout better process for recycling our products. <\/p><p>We believe that businesses have a responsibility to contribute positively to the world around them<\/p>",
             "text_style": "body"
           }
         },
@@ -54,9 +108,9 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/img_249cf445-3318-4524-830e-f613f104316a.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
+        "image": "shopify:\/\/shop_images\/restory_releaf.png",
+        "height": "small",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -66,20 +120,98 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
-        "color_heading": "#000",
+        "color_heading": "#000000",
         "gradient_heading": "",
-        "color_text": "#000",
-        "color_highlight_text": "#DA2127",
-        "color_caption": "#000",
-        "color_countdown": "#000",
-        "color_button_text": "#fff",
-        "color_button": "#000",
-        "background_container": "#fff",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
         "gradient_background_container": "",
-        "background_section": "#fff",
+        "background_section": "#ffffff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
+      }
+    },
+    "text_icons_RqeWT9": {
+      "type": "text-icons",
+      "blocks": {
+        "text_icon_Q7jzti": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "title": "Icon",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_473Nmg": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "title": "Icon",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_6yrhbC": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "title": "Icon",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_9PTbb4": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "title": "Icon",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_icon_Q7jzti",
+        "text_icon_473Nmg",
+        "text_icon_6yrhbC",
+        "text_icon_9PTbb4"
+      ],
+      "settings": {
+        "title": "We make living with smart devices better. Sustainably",
+        "subtitle": "",
+        "heading_size": "h1",
+        "icon_width_desktop": 30,
+        "text_position": "bottom",
+        "enable_heading_in_box": false,
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "auto_fit": false,
+        "column_alignment": "center",
+        "highlight_icon": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "border_width": 1,
+        "border_opacity": 0,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "square",
+        "blur_background": false,
+        "columns_mobile": "1",
+        "icon_width_mobile": 30,
+        "border_spacing_mobile": 0,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "collapsible_content_AHHHxy": {
@@ -248,7 +380,9 @@
   },
   "order": [
     "main",
+    "image_banner_x8BxCc",
     "image_with_text_AwNNQH",
+    "text_icons_RqeWT9",
     "collapsible_content_AHHHxy",
     "rich_text_Crb7hb",
     "collapsible_content_Gp6UAE",
