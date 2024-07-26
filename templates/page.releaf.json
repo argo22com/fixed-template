@@ -108,7 +108,6 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/restory_releaf.png",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -142,38 +141,38 @@
         "text_icon_Q7jzti": {
           "type": "text-icon",
           "settings": {
-            "icon": "check",
-            "title": "Icon",
+            "icon": "laptop",
+            "title": "Products and certification",
             "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
         },
-        "text_icon_473Nmg": {
+        "text_icon_E7yGiP": {
           "type": "text-icon",
           "settings": {
-            "icon": "check",
-            "title": "Icon",
+            "icon": "box",
+            "title": "Transportation and packaging",
             "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
         },
-        "text_icon_6yrhbC": {
+        "text_icon_JiUnk8": {
           "type": "text-icon",
           "settings": {
-            "icon": "check",
-            "title": "Icon",
+            "icon": "map",
+            "title": "Company and operations",
             "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
         },
-        "text_icon_9PTbb4": {
+        "text_icon_Lry4NP": {
           "type": "text-icon",
           "settings": {
-            "icon": "check",
-            "title": "Icon",
+            "icon": "emoji_happy",
+            "title": "Social and governance",
             "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
@@ -182,18 +181,18 @@
       },
       "block_order": [
         "text_icon_Q7jzti",
-        "text_icon_473Nmg",
-        "text_icon_6yrhbC",
-        "text_icon_9PTbb4"
+        "text_icon_E7yGiP",
+        "text_icon_JiUnk8",
+        "text_icon_Lry4NP"
       ],
       "settings": {
-        "title": "We make living with smart devices better. Sustainably",
+        "title": "",
         "subtitle": "",
         "heading_size": "h1",
         "icon_width_desktop": 30,
         "text_position": "bottom",
         "enable_heading_in_box": false,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "columns_tablet": 3,
         "auto_fit": false,
         "column_alignment": "center",
@@ -209,6 +208,237 @@
         "columns_mobile": "1",
         "icon_width_mobile": 30,
         "border_spacing_mobile": 0,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_hKVxPM": {
+      "type": "rich-text",
+      "blocks": {
+        "text_reczzb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Innovation is at the heart of our sustainability efforts. We´re constantly exploring new ways to incorporate renewable materials, improve resource efficiency, and develop products that meet the needs of our customers without compromising the planet´s future. Our commitment to sustainability isn´t just a checkbox.; it´s a driving force behind our quest for continuous improvement and innovation.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_reczzb"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_WYH4FU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fmTPUb": {
+          "type": "heading",
+          "settings": {
+            "heading": "PRODUCTS AND CERTIFICATION",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_fazkwC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Choosing sustainable products is essential for preserving our planetˇs health and securing a better future for all.<\/p><p>By opting for certified sustainable products, conumers can trust that their purchases meet rigorous environmental and social standards. <\/p><p>These certifications not only ensure transparency and accountability but also empower individuals to make informed chices that align with their values, ultimately driving positive change toward a more sustainable world.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_9mThT7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fmTPUb",
+        "text_fazkwC",
+        "button_9mThT7"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/sustainability.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "gallery_Jr8d99": {
+      "type": "gallery",
+      "blocks": {
+        "text_overlay_image_LLxJ7R": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sustainability.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Global Recycled Standard",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_9w3YpK": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sustainability.jpg",
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "ISCC",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_fDMQU6": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "text_overlay_image_GhAcLq": {
+          "type": "text-overlay-image",
+          "settings": {
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#fff",
+            "caption_color": "#fff",
+            "button_foreground": "#000",
+            "button_background": "#fff",
+            "overlay_color": "#000",
+            "overlay_opacity": 50
+          }
+        },
+        "button_zQWiBH": {
+          "type": "button",
+          "settings": {
+            "button_label": "see all certificates",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "content_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_LLxJ7R",
+        "text_overlay_image_9w3YpK",
+        "text_overlay_image_fDMQU6",
+        "text_overlay_image_GhAcLq",
+        "button_zQWiBH"
+      ],
+      "settings": {
+        "title": "Gallery",
+        "heading_size": "h1",
+        "flexible_columns_layout": "grid",
+        "columns_desktop": 4,
+        "columns_tablet": "3",
+        "full_width": false,
+        "auto_fit": false,
+        "disable_item_space": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
@@ -383,6 +613,9 @@
     "image_banner_x8BxCc",
     "image_with_text_AwNNQH",
     "text_icons_RqeWT9",
+    "rich_text_hKVxPM",
+    "image_with_text_WYH4FU",
+    "gallery_Jr8d99",
     "collapsible_content_AHHHxy",
     "rich_text_Crb7hb",
     "collapsible_content_Gp6UAE",
