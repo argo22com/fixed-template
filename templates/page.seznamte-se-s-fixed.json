@@ -580,6 +580,15 @@
         "padding_bottom": 36
       }
     },
+    "graph_wrK7F9": {
+      "type": "graph",
+      "settings": {
+        "heading1": "Vývoj obratu",
+        "description1": "Celkový obrat v Kč",
+        "heading2": "Počet zaměstnanců",
+        "description2": "S růstem firmy roste počet zaměstnanců"
+      }
+    },
     "newsletter_a3YF6J": {
       "type": "newsletter",
       "blocks": {
@@ -810,6 +819,7 @@
     "image_with_text_Uh3NT9",
     "image_with_text_fnD44p",
     "timeline_ccWkJE",
+    "graph_wrK7F9",
     "newsletter_a3YF6J",
     "rich_text_Agfkr4",
     "multicolumn_ADgaBQ"
