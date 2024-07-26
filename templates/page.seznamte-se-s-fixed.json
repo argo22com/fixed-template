@@ -59,7 +59,7 @@
         "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
         "image_mobile": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
         "image_overlay_opacity": 20,
-        "image_height": "large",
+        "image_height": "medium",
         "image_height_mobile": "medium-mobile",
         "desktop_content_position": "bottom-left",
         "desktop_content_alignment": "left",
