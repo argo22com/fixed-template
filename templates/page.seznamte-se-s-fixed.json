@@ -11,12 +11,88 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "section_width": "grid",
         "content_alignment": "left",
         "color_scheme": "background-1",
         "padding_top": 0,
         "padding_bottom": 16
+      }
+    },
+    "image_banner_HtGAm3": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_CzBm3w": {
+          "type": "heading",
+          "settings": {
+            "heading": "Seznamte se s FIXED",
+            "size": "h0"
+          }
+        },
+        "text_3XXkNR": {
+          "type": "text",
+          "settings": {
+            "text": "Značka FIXED přináší na trh neotřelá řešení pro smartphony a tablety. Výrobky značky FIXED vynikají praktičností a jsou vyvíjeny s důrazem na kvalitu a jednoduchost použití. Zjistěte o nás více.",
+            "text_style": "body"
+          }
+        },
+        "buttons_cbMKz6": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CzBm3w",
+        "text_3XXkNR",
+        "buttons_cbMKz6"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "large",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "timeline_ccWkJE": {
@@ -268,6 +344,7 @@
   },
   "order": [
     "main",
+    "image_banner_HtGAm3",
     "timeline_ccWkJE"
   ]
 }
