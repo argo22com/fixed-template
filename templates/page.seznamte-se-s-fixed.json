@@ -334,6 +334,81 @@
         "overlay_color": "#1E40AF"
       }
     },
+    "newsletter_a3YF6J": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_QhrWgK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zůstaňte v obraze",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph_GVcxng": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce.<\/p>"
+          }
+        },
+        "email_form_YD9eHt": {
+          "type": "email_form",
+          "settings": {
+          }
+        },
+        "social_icons_3X3XHV": {
+          "type": "social_icons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_QhrWgK",
+        "paragraph_GVcxng",
+        "email_form_YD9eHt",
+        "social_icons_3X3XHV"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#fff",
+        "colors_input": "#64748B",
+        "overlay_color": "#1E40AF",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_Agfkr4": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Q3iQYU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Přečtěte si naše <a href=\"https:\/\/obchod.fixed.zone\/ochrana-osobnich-udaju-a-zasilani-obchodnich-sdeleni\/\" target=\"_blank\">zásady ochrany osobních údajů<\/a>.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Q3iQYU"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "timeline_ccWkJE": {
       "type": "timeline",
       "blocks": {
@@ -588,6 +663,8 @@
     "image_with_text_xkUAjh",
     "image_with_text_Uh3NT9",
     "image_with_text_fnD44p",
+    "newsletter_a3YF6J",
+    "rich_text_Agfkr4",
     "timeline_ccWkJE"
   ]
 }
