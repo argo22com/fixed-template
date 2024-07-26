@@ -234,7 +234,7 @@
         "heading_fmTPUb": {
           "type": "heading",
           "settings": {
-            "heading": "PRODUCTS AND CERTIFICATION",
+            "heading": "Products and certifications",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -261,7 +261,7 @@
         "button_9mThT7"
       ],
       "settings": {
-        "grid_layout": "grid",
+        "grid_layout": "full_bleed",
         "image": "shopify:\/\/shop_images\/sustainability.jpg",
         "height": "small",
         "desktop_image_width": "small",
@@ -345,66 +345,16 @@
             "overlay_opacity": 50
           }
         },
-        "text_overlay_image_fDMQU6": {
-          "type": "text-overlay-image",
-          "settings": {
-            "link": "",
-            "keep_ltr": false,
-            "text": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "heading": "Our collection",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "",
-            "button_style": "primary",
-            "button_size": "normal",
-            "button_pin_bottom": false,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "heading_color": "#ffffff",
-            "caption_color": "#ffffff",
-            "button_foreground": "#000000",
-            "button_background": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 50
-          }
-        },
-        "text_overlay_image_GhAcLq": {
-          "type": "text-overlay-image",
-          "settings": {
-            "link": "",
-            "keep_ltr": false,
-            "text": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "heading": "Our collection",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "",
-            "button_style": "primary",
-            "button_size": "normal",
-            "button_pin_bottom": false,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "heading_color": "#ffffff",
-            "caption_color": "#ffffff",
-            "button_foreground": "#000000",
-            "button_background": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 50
-          }
-        },
         "button_zQWiBH": {
           "type": "button",
           "settings": {
             "button_label": "see all certificates",
             "button_link": "",
-            "button_style_1": "primary",
+            "button_style_1": "link",
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_2": "primary",
-            "content_alignment": "center",
+            "button_style_2": "link",
+            "content_alignment": "right",
             "padding_top": 0,
             "padding_bottom": 0
           }
@@ -413,12 +363,10 @@
       "block_order": [
         "text_overlay_image_LLxJ7R",
         "text_overlay_image_9w3YpK",
-        "text_overlay_image_fDMQU6",
-        "text_overlay_image_GhAcLq",
         "button_zQWiBH"
       ],
       "settings": {
-        "title": "Gallery",
+        "title": "",
         "heading_size": "h1",
         "flexible_columns_layout": "grid",
         "columns_desktop": 4,
@@ -426,106 +374,294 @@
         "full_width": false,
         "auto_fit": false,
         "disable_item_space": false,
-        "enable_section_box_layout": false,
+        "enable_section_box_layout": true,
         "color_scheme": "",
-        "image_ratio": "adapt",
+        "image_ratio": "landscape",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
-    "collapsible_content_AHHHxy": {
-      "type": "collapsible-content",
+    "image_with_text_xJeJhz": {
+      "type": "image-with-text",
       "blocks": {
-        "collapsible_row_fkqnBp": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "2024",
-            "icon": "pencil",
-            "row_content": "",
-            "page": "2024"
-          }
-        },
-        "collapsible_row_JJcMaG": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "2023",
-            "icon": "pencil",
-            "row_content": "",
-            "page": "2023"
-          }
-        },
-        "collapsible_row_DgkEEC": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "2022",
-            "icon": "pencil",
-            "row_content": "",
-            "page": "2022"
-          }
-        },
-        "collapsible_row_tQYjN3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "2021",
-            "icon": "pencil",
-            "row_content": "",
-            "page": "2021"
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_fkqnBp",
-        "collapsible_row_JJcMaG",
-        "collapsible_row_DgkEEC",
-        "collapsible_row_tQYjN3"
-      ],
-      "settings": {
-        "section_width": "grid",
-        "title": "Tiskové centrum",
-        "subtitle": "",
-        "heading_size": "h1",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "hide_image_on_mobile": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_Crb7hb": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Vcfa68": {
+        "heading_JwCL79": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>Kontakty pro média<\/strong><\/h3>",
-            "heading_size": "h2"
+            "heading": "Transportation and packaging",
+            "heading_size": "h1",
+            "enable_bold_heading": true
           }
         },
-        "text_AH3Vtt": {
+        "text_eXkGF8": {
           "type": "text",
           "settings": {
-            "text": "<p>fotky a maily - tak tenhle blok zatím nemáme, čekáme na Magexo až dodělají, takže sem zatím dávám jen text, že se tu s tím počítá.<\/p>"
+            "text": "<p>we prioritize sustainable transportation and packaging to minimize our environmental footprint. From electric vehicles to recyclable materials.<\/p><p>Reduces environmental impact: Sustainable packaging and transportation methods minimize carbon emissions and waste. <\/p><p>Supports circular economy: Using recyclable, biodegradable, or reusable materials promotes resource and reduces reliance on virgin resources. <\/p><p>Builds brand trust: Demonstrating commitment to sustainability enhances corporate reputation and appeals to environmentally conscious consumers.<\/p>",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_Vcfa68",
-        "text_AH3Vtt"
+        "heading_JwCL79",
+        "text_eXkGF8"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "grid_layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/sustainability.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "image_banner_rLBVLa": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_hKaMXE": {
+          "type": "heading",
+          "settings": {
+            "heading": "tady bude nějakej graf",
+            "size": "h0"
+          }
+        },
+        "text_kghYgA": {
+          "type": "text",
+          "settings": {
+            "text": "Usage of enviromentally friendly transport",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hKaMXE",
+        "text_kghYgA"
+      ],
+      "settings": {
+        "layout": "grid",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_ByiydJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_FjeEfN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Company and operations",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_wFrbMc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In our office, sustainability is more than just a concept: it´s a way of operating that guides our daily practices. We prioritize energy efficiency by using LED lighting, smart thermostats, and powering down electronics when not in use. Recycling and composting programs are integral to our waste reduction efforts, while digitalization and telecommunting options minimize our carbon footprint. By embracing sustainable oparations, we´re not only reducing our environmental impact, but also creating a healthier, more responsible workplace for our employees.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FjeEfN",
+        "text_wFrbMc"
+      ],
+      "settings": {
+        "grid_layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/sustainability.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "image_banner_UbPiFf": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_w8BEj4": {
+          "type": "heading",
+          "settings": {
+            "heading": "tady bude druhej graf",
+            "size": "h0"
+          }
+        },
+        "text_DTMQat": {
+          "type": "text",
+          "settings": {
+            "text": "Carbon footprint derease of FIXED operations",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_w8BEj4",
+        "text_DTMQat"
+      ],
+      "settings": {
+        "layout": "grid",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_ExU8Ph": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GQhQWJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Social and governance",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_cdDYd6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Social Responsibility: We prioritize inclusivity, diversity, and community engagement, fostering a supportive workplace and contributing to societal well-being.<\/p><p>Governance Excellence: We uphold transparency, integrity, and accountability in all operations, ensuring ethical decision-making and maintaining stakeholder trust.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GQhQWJ",
+        "text_cdDYd6"
+      ],
+      "settings": {
+        "grid_layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/img_88bf5d60-9f55-4ad4-a111-fc9f07886e79.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "collapsible_content_Gp6UAE": {
@@ -534,7 +670,7 @@
         "collapsible_row_XWMNVK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "2023",
             "icon": "emoji_happy",
             "row_content": "",
             "page": ""
@@ -543,7 +679,7 @@
         "collapsible_row_XPmVWn": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "2022",
             "icon": "emoji_happy",
             "row_content": "",
             "page": ""
@@ -552,7 +688,7 @@
         "collapsible_row_8WT4cR": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "2021",
             "icon": "emoji_happy",
             "row_content": "",
             "page": ""
@@ -561,7 +697,7 @@
         "collapsible_row_EWXCdc": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "2020",
             "icon": "emoji_happy",
             "row_content": "",
             "page": ""
@@ -588,15 +724,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "graph_cVdgJT": {
-      "type": "graph",
-      "settings": {
-        "heading1": "Vývoj obratu",
-        "description1": "Celkový obrat v Kč",
-        "heading2": "Počet zaměstnanců",
-        "description2": "S růstem firmy roste počet zaměstnanců"
-      }
     }
   },
   "order": [
@@ -607,9 +734,11 @@
     "rich_text_hKVxPM",
     "image_with_text_WYH4FU",
     "gallery_Jr8d99",
-    "collapsible_content_AHHHxy",
-    "rich_text_Crb7hb",
-    "collapsible_content_Gp6UAE",
-    "graph_cVdgJT"
+    "image_with_text_xJeJhz",
+    "image_banner_rLBVLa",
+    "image_with_text_ByiydJ",
+    "image_banner_UbPiFf",
+    "image_with_text_ExU8Ph",
+    "collapsible_content_Gp6UAE"
   ]
 }
