@@ -590,7 +590,7 @@
             "link_label": "NAVŠTIVTE INVESTORSKÉ CENTRUM",
             "link": "",
             "button_style": "link",
-            "card_color_text": "#121212",
+            "card_color_text": "#000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "rgba(0,0,0,0)",
