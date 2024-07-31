@@ -28,6 +28,7 @@ card-product-colors {
   bottom: var(--outline-distance);
   inset-inline: var(--outline-distance);
   z-index: -1;
+  border: 1px solid rgb(var(--color-foreground),.2);
   border-radius: var(--card-product-color-radius);
 }
 

@@ -424,8 +424,10 @@ class DrawerFixed extends HTMLElement {
 
 // FIXME done like this due to unknown error in this file. Should be done as web component
 document.addEventListener('change', (e) => {
-  if (e.target.classList.contains('product-form__input__radio')) {
-    const description = e.target.getAttribute('data-desc')
+  if (e.target.classList.contains('product-form__input__radio') || e.target.classList.contains('js-select-product')) {
+    const infoElement = e.target.classList.contains('js-select-product') ? e.target.options[e.target.selectedIndex] : e.target;
+
+    const description = infoElement.getAttribute('data-desc')
 
     if (document.querySelector('truncate-text .truncate-text__content')) {
       document.querySelector('truncate-text .truncate-text__content').innerHTML = description
@@ -433,7 +435,7 @@ document.addEventListener('change', (e) => {
     if (document.querySelector('#ProductInfo-quickview-quick-view .product__description')) {
       document.querySelector('#ProductInfo-quickview-quick-view .product__description').innerHTML = description
     }
-    const title = e.target.getAttribute('data-title')
+    const title = infoElement.getAttribute('data-title')
 
     if (document.querySelector('.product__title h1')) {
       document.querySelector('.product__title h1').innerHTML = title
@@ -719,11 +721,6 @@ class VariantSelects extends HTMLElement {
   constructor() {
     super();
     this.addEventListener('change', this.onVariantChange);
-
-    const showMoreButton = document.querySelector('.js-show-more');
-    if (showMoreButton) {
-      showMoreButton.addEventListener('click', this.showMoreVariants)
-    }
   }
 
   onVariantChange(event) {
@@ -733,7 +730,7 @@ class VariantSelects extends HTMLElement {
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
     this.removeErrorMessage();
-    
+
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
@@ -752,9 +749,7 @@ class VariantSelects extends HTMLElement {
 
   updateMasterId() {
     this.currentVariant = this.getVariantData().find((variant) => {
-      return !variant.options.map((option, index) => {
-        return this.options[index] === option;
-      }).includes(false);
+      return variant.options.some(option => this.options.includes(option));
     });
   }
 
@@ -935,16 +930,6 @@ class VariantSelects extends HTMLElement {
         }
       });
   }
-
-  showMoreVariants(event) {
-    event.preventDefault();
-
-    this.style.display = "none";
-    document.querySelectorAll('.variant-flex-item.hidden-more').forEach(variantSelect => {
-      variantSelect.classList.remove('hidden-more');
-    })
-  }
-
   toggleAddButton(disable = true, text, modifyClass = true) {
     const productForm = document.getElementById(`product-form-${this.dataset.section}`);
     if (!productForm) return;
@@ -999,6 +984,12 @@ class VariantRadios extends VariantSelects {
     this.optionSelector = 'fieldset';
     this.optionValuesSelector = 'label';
     this.soldOutClass = 'soldout';
+
+
+    const showMoreButton = document.querySelector('.js-show-more');
+    if (showMoreButton) {
+      showMoreButton.addEventListener('click', this.showMoreVariants)
+    }
   }
 
   updateOptions() {
@@ -1006,6 +997,15 @@ class VariantRadios extends VariantSelects {
     this.options = fieldsets.map((fieldset) => {
       return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
     });
+  }
+
+  showMoreVariants(event) {
+    event.preventDefault();
+
+    this.style.display = "none";
+    document.querySelectorAll('.variant-flex-item.hidden-more').forEach(variantSelect => {
+      variantSelect.classList.remove('hidden-more');
+    })
   }
 
   connectedCallback() {
