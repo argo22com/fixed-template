@@ -46,6 +46,10 @@
   margin-right: 5px;
 }
 
+.color-swatch-icon svg {
+  filter: drop-shadow(-0.1rem -0.1rem 0px white) drop-shadow(0.1rem -0.1rem 0px white) drop-shadow(0.1rem 0.1rem 0px white) drop-shadow(-0.1rem 0.1rem 0px white);
+}
+
 .product-download-link:hover {
   background-color: rgba(var(--color-foreground), 0.1);
   transition: background-color 0.3s linear;
@@ -371,10 +375,6 @@ button.shopify-payment-button__button--unbranded {
   border-radius: calc(var(--variants-pills-color-radius));
 }
 
-.product-form__input__radio-label--color .icon-checkmark {
-  display: none;
-}
-
 .product-form__input__radio-label:after {
   content: "";
   position: absolute;
@@ -457,6 +457,7 @@ button.shopify-payment-button__button--unbranded {
   border: 0.1rem solid rgb(var(--color-check-icon), 0.3);
   border-radius: var(--variants-pills-color-radius);
   background: linear-gradient(to top left, rgba(var(--color-check-icon), 0) 0%, rgba(var(--color-check-icon), 0) calc(50% - 0.1rem), rgb(var(--color-check-icon), 0.5) 50%, rgba(var(--color-check-icon), 0) calc(50% + 0.1rem), rgba(var(--color-check-icon), 0) 100%),linear-gradient(to top right, rgba(var(--color-check-icon), 0) 0%, rgba(var(--color-check-icon), 0) calc(50% - 0.1rem), rgb(var(--color-check-icon), 0.5) 50%, rgba(var(--color-check-icon), 0) calc(50% + 0.1rem), rgba(var(--color-check-icon), 0) 100%);
+  filter: drop-shadow(-0.01rem -0.01rem 0px white) drop-shadow(0.01rem -0.01rem 0px white) drop-shadow(0.01rem 0.01rem 0px white) drop-shadow(-0.01rem 0.01rem 0px white);
 }
 
 .product-form__input__radio:checked + label::selection {
