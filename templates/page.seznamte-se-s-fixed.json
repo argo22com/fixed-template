@@ -590,7 +590,7 @@
             "link_label": "NAVŠTIVTE INVESTORSKÉ CENTRUM",
             "link": "",
             "button_style": "link",
-            "card_color_text": "#000",
+            "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "rgba(0,0,0,0)",
@@ -607,7 +607,7 @@
             "link_label": "NAVŠTIVTE MEDIÁLNÍ CENTRUM",
             "link": "",
             "button_style": "link",
-            "card_color_text": "#000",
+            "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "rgba(0,0,0,0)",
@@ -624,7 +624,7 @@
             "link_label": "CERTIFIKACE",
             "link": "",
             "button_style": "link",
-            "card_color_text": "#000",
+            "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "rgba(0,0,0,0)",
@@ -641,7 +641,7 @@
             "link_label": "NAVŠTIVTE BLOG",
             "link": "shopify:\/\/blogs\/news",
             "button_style": "link",
-            "card_color_text": "#000",
+            "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "rgba(0,0,0,0)",
@@ -658,7 +658,7 @@
             "link_label": "NAVŠTIVTE FIXED PODPORU",
             "link": "shopify:\/\/pages\/podpora",
             "button_style": "link",
-            "card_color_text": "#000",
+            "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "rgba(0,0,0,0)",
@@ -736,7 +736,7 @@
         "paragraph_GVcxng": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce.<\/p>"
+            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce. <\/p><p>Přečtěte si naše <a href=\"https:\/\/obchod.fixed.zone\/ochrana-osobnich-udaju-a-zasilani-obchodnich-sdeleni\/\" target=\"_blank\">zásady ochrany osobních údajů<\/a>.<\/p>"
           }
         },
         "email_form_YD9eHt": {
@@ -774,30 +774,6 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "rich_text_Agfkr4": {
-      "type": "rich-text",
-      "blocks": {
-        "text_Q3iQYU": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Přečtěte si naše <a href=\"https:\/\/obchod.fixed.zone\/ochrana-osobnich-udaju-a-zasilani-obchodnich-sdeleni\/\" target=\"_blank\">zásady ochrany osobních údajů<\/a>.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_Q3iQYU"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "background-2",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -810,7 +786,6 @@
     "timeline_ccWkJE",
     "graph_wrK7F9",
     "multicolumn_ADgaBQ",
-    "newsletter_a3YF6J",
-    "rich_text_Agfkr4"
+    "newsletter_a3YF6J"
   ]
 }
