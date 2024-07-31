@@ -547,26 +547,6 @@
             "color_scheme": "inverse"
           }
         },
-        "mega_menu_promotion_BXBaFy": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "N+co",
-            "image_ratio": "adapt",
-            "caption": "",
-            "heading_text": "New collection",
-            "subheading": "50% off",
-            "button_label": "Shop now",
-            "button_style": "solid",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "",
-            "position": "first",
-            "overlay_text_enable": true,
-            "overlay_opacity": 50,
-            "color_scheme": "inverse"
-          }
-        },
         "3753f6b7-733c-49d7-881c-f8fe4195e49f": {
           "type": "menu_label",
           "settings": {
@@ -689,7 +669,6 @@
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_Bh4wzD",
         "mega_menu_promotion_9KBrbX",
-        "mega_menu_promotion_BXBaFy",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "mega_menu_promotion_9HJwDd",
         "mega_menu_promotion_ya4VNA",
