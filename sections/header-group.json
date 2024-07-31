@@ -224,6 +224,27 @@
             "brand_link_10": ""
           }
         },
+        "mega_menu_promotion_UdqXan": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Produkty",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/armor.199_701113f1-3361-430b-ae9d-bc176bb90b64.jpg",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "Armor",
+            "subheading": "Ultra odolné krycí sklo",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
         "mega_menu_product_brand_UrkzTe": {
           "type": "mega_menu_product_brand",
           "settings": {
@@ -312,27 +333,6 @@
             "brand_link_9": "",
             "brand_10": "",
             "brand_link_10": ""
-          }
-        },
-        "mega_menu_promotion_UdqXan": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Produkty",
-            "title": "",
-            "image": "shopify:\/\/shop_images\/armor.199_701113f1-3361-430b-ae9d-bc176bb90b64.jpg",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "Armor",
-            "subheading": "Ultra odolné krycí sklo",
-            "button_label": "Objevit",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 50,
-            "color_scheme": "inverse"
           }
         },
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
@@ -656,10 +656,10 @@
         "mega_menu_product_brand_9PcMhc",
         "mega_menu_product_brand_zNPCm4",
         "mega_menu_product_brand_cqVA4H",
+        "mega_menu_promotion_UdqXan",
         "mega_menu_product_brand_UrkzTe",
         "mega_menu_product_brand_43GajV",
         "mega_menu_product_brand_4Tp9gJ",
-        "mega_menu_promotion_UdqXan",
         "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
         "mega_menu_product_brand_eMcj9n",
         "mega_menu_product_brand_KBhfXH",
