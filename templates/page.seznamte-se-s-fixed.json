@@ -593,7 +593,7 @@
             "card_color_text": "#121212",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#f8fafc",
+            "card_color_background": "rgba(0,0,0,0)",
             "card_color_background_gradient": ""
           }
         },
@@ -607,10 +607,10 @@
             "link_label": "NAVŠTIVTE MEDIÁLNÍ CENTRUM",
             "link": "",
             "button_style": "link",
-            "card_color_text": "#981c1b",
+            "card_color_text": "#000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#fef2f2",
+            "card_color_background": "rgba(0,0,0,0)",
             "card_color_background_gradient": ""
           }
         },
@@ -627,7 +627,7 @@
             "card_color_text": "#121212",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#f8fafc",
+            "card_color_background": "rgba(0,0,0,0)",
             "card_color_background_gradient": ""
           }
         },
@@ -641,10 +641,10 @@
             "link_label": "NAVŠTIVTE BLOG",
             "link": "shopify:\/\/blogs\/news",
             "button_style": "link",
-            "card_color_text": "#166534",
+            "card_color_text": "#000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#effdf4",
+            "card_color_background": "rgba(0,0,0,0)",
             "card_color_background_gradient": ""
           }
         },
@@ -658,10 +658,10 @@
             "link_label": "NAVŠTIVTE FIXED PODPORU",
             "link": "shopify:\/\/pages\/podpora",
             "button_style": "link",
-            "card_color_text": "#a06207",
+            "card_color_text": "#000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
+            "card_color_background": "rgba(0,0,0,0)",
             "card_color_background_gradient": ""
           }
         },
@@ -678,7 +678,7 @@
             "card_color_text": "#121212",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#f8fafc",
+            "card_color_background": "rgba(0,0,0,0)",
             "card_color_background_gradient": ""
           }
         }
@@ -704,7 +704,7 @@
         "desktop_gap": 30,
         "auto_fit": false,
         "column_alignment": "left",
-        "enable_shadow": true,
+        "enable_shadow": false,
         "background_transparent": false,
         "button_label": "",
         "button_link": "",
