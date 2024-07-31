@@ -794,7 +794,7 @@
           "background": "#00aae9",
           "gradient_background": "",
           "background_input": "#fafafa",
-          "solid_button_label_primary": "#e94200",
+          "solid_button_label_primary": "#dc2626",
           "solid_button_background_primary": "#ffffff",
           "review_stars": "#fbbf24",
           "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
