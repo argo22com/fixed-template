@@ -577,82 +577,6 @@
         "description2": "S růstem firmy roste počet zaměstnanců"
       }
     },
-    "newsletter_a3YF6J": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_QhrWgK": {
-          "type": "heading",
-          "settings": {
-            "heading": "Zůstaňte v obraze",
-            "heading_size": "h2"
-          }
-        },
-        "paragraph_GVcxng": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce.<\/p>"
-          }
-        },
-        "email_form_YD9eHt": {
-          "type": "email_form",
-          "settings": {
-          }
-        },
-        "social_icons_3X3XHV": {
-          "type": "social_icons",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "heading_QhrWgK",
-        "paragraph_GVcxng",
-        "email_form_YD9eHt",
-        "social_icons_3X3XHV"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "scheme-93d0b4d7-0fb9-4886-b4bf-c2a0b0dd1c82",
-        "background_image_section": "shopify:\/\/shop_images\/bg.jpg",
-        "enable_parallax_scrolling_effect": true,
-        "colors_text": "#ffffff",
-        "colors_input": "#64748b",
-        "overlay_color": "rgba(0,0,0,0)",
-        "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_Agfkr4": {
-      "type": "rich-text",
-      "blocks": {
-        "text_Q3iQYU": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Přečtěte si naše <a href=\"https:\/\/obchod.fixed.zone\/ochrana-osobnich-udaju-a-zasilani-obchodnich-sdeleni\/\" target=\"_blank\">zásady ochrany osobních údajů<\/a>.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_Q3iQYU"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "background-2",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "multicolumn_ADgaBQ": {
       "type": "multicolumn",
       "blocks": {
@@ -798,6 +722,82 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "newsletter_a3YF6J": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_QhrWgK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zůstaňte v obraze",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph_GVcxng": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce.<\/p>"
+          }
+        },
+        "email_form_YD9eHt": {
+          "type": "email_form",
+          "settings": {
+          }
+        },
+        "social_icons_3X3XHV": {
+          "type": "social_icons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_QhrWgK",
+        "paragraph_GVcxng",
+        "email_form_YD9eHt",
+        "social_icons_3X3XHV"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "scheme-93d0b4d7-0fb9-4886-b4bf-c2a0b0dd1c82",
+        "background_image_section": "shopify:\/\/shop_images\/bg.jpg",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#ffffff",
+        "colors_input": "#64748b",
+        "overlay_color": "rgba(0,0,0,0)",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_Agfkr4": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Q3iQYU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Přečtěte si naše <a href=\"https:\/\/obchod.fixed.zone\/ochrana-osobnich-udaju-a-zasilani-obchodnich-sdeleni\/\" target=\"_blank\">zásady ochrany osobních údajů<\/a>.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Q3iQYU"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -809,8 +809,8 @@
     "image_with_text_fnD44p",
     "timeline_ccWkJE",
     "graph_wrK7F9",
+    "multicolumn_ADgaBQ",
     "newsletter_a3YF6J",
-    "rich_text_Agfkr4",
-    "multicolumn_ADgaBQ"
+    "rich_text_Agfkr4"
   ]
 }
