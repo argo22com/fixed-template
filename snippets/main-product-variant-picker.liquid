@@ -89,7 +89,7 @@
             assign indexOption = 'option' | append: option.position
             assign available_option_values = available_variants | map: indexOption
           -%}
-          <fieldset class="js product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
+          <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
             <legend class="product-form__input__form-label text-small margin-bottom-1rem">
               {{ option.name | capitalize }}:
               {% if option.name == 'color' %}
@@ -154,18 +154,36 @@
                       -%}
 
                       <li>
+                        {% liquid
+                          if is_color_swatches
+                            assign current_value = product_variation.options_by_name['color'].values | first
+                          else
+                            assign current_value = product_variation.title
+                          endif
+
+                        %}
                         <a href="{{ product_variation.url }}"
                            class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if out_of_stock and is_color_swatches == false %} soldout{% endif %}"
                                 {% if is_color_swatches %}
-                                  {%- assign color_option = product_variation.options_by_name['color'].values | first  -%}
-                                  {%- assign color_handle = 'color-code-' | append: color_option -%}
-                                  data-color="{{ product_variation.options_by_name['color'].values | first | handleize }}"
+                                  {%- assign color_handle = 'color-code-' | append: current_value -%}
+                                  data-color="{{ current_value | handleize }}"
                                   style="--color-swatch-background: {{ shop.metaobjects['color_codes_hex'][color_handle].color_hex_list.value | first | color_to_rgb | remove_first: 'rgb(' | remove_last: ')' }};{% if selected %} border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));{% endif %} %}"
                                   {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
                                     style="--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }})"
                                   {%- endif -%}
                                 {% endif %}
                         >
+                          <input
+                                  type="radio"
+                                  id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                  name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+                                  value="{{ current_value | escape }}"
+                                  form="{{ product_form_id }}"
+                                  style="display: none;"
+                                  {% if selected %}
+                                    checked="checked"
+                                  {% endif %}
+                          >
                           {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
                             <span
                                     class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"
@@ -266,7 +284,7 @@
                 data-hide-unavailable-options="true"
               {% endif %}
       >
-          <div class="product-form__input product-form__input--dropdown{% unless forloop.first %} element-small-margin-top{% endunless %}">
+          <div class="js-product-form-input product-form__input product-form__input--dropdown{% unless forloop.first %} element-small-margin-top{% endunless %}">
             <label
                     class="form__label product-form__input__form-label"
                     for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
