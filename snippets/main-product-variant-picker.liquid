@@ -88,7 +88,6 @@
             endunless
             assign indexOption = 'option' | append: option.position
             assign available_option_values = available_variants | map: indexOption
-            assign is_first_option = forloop.first
           -%}
           <fieldset class="js product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
             <legend class="product-form__input__form-label text-small margin-bottom-1rem">
@@ -103,6 +102,8 @@
             <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
               {%- for value in option.values -%}
                 {% liquid
+                  assign is_first_option = forloop.first
+
                   assign out_of_stock = false
                   if settings.hide_unavailable_options
                     unless instock_option_values contains value
@@ -185,7 +186,7 @@
                   {% comment %}  {% endcomment %}
                   <li
                           {% unless is_first_option %}
-                            class="variant-flex-item dynamic-option{% if settings.hide_unavailable_options %}{% unless available_option_values contains value %} hidden{% endunless %}{% endif %}{% if forloop.index0 < total_visible_items %} hidden-more{% endif %}"
+                            class="variant-flex-item dynamic-option{% if settings.hide_unavailable_options %}{% unless available_option_values contains value %} hidden{% endunless %}{% endif %}{% if forloop.index >= total_visible_items %} hidden-more{% endif %}"
                           {% else %}
                             class="variant-flex-item{% if forloop.index >= total_visible_items %} hidden-more{% endif %}"
                           {% endunless %}
