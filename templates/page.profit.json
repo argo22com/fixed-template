@@ -180,14 +180,12 @@
             "size_chart_link_label": "Size chart",
             "size_chart_page": "",
             "quantity_selector_enable": true,
-            "show_dynamic_checkout": true
-          }
-        },
-        "description_eeWKmF": {
-          "type": "description",
-          "settings": {
-            "truncate_description": 0,
-            "read_more_button": "Read more"
+            "show_dynamic_checkout": true,
+            "option_name": "",
+            "option_value_metafield": "",
+            "products": [
+
+            ]
           }
         },
         "share_cwpWDQ": {
@@ -207,11 +205,10 @@
         "title_9M6TcH",
         "price_TUf9z6",
         "sale_box_RdgPgJ",
-        "description_eeWKmF",
         "share_cwpWDQ"
       ],
       "settings": {
-        "product": "",
+        "product": "kozene-pouzdro-typu-kniha-fixed-profit-pro-apple-iphone-15-pro-modre",
         "section_width": "page-width",
         "use_background_input": true,
         "auto_scroll_up_mobile": false,
