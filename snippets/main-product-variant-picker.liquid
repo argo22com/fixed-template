@@ -102,6 +102,18 @@
             </legend>
             <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
               {%- for value in option.values -%}
+                {% liquid
+                  assign out_of_stock = false
+                  if settings.hide_unavailable_options
+                    unless instock_option_values contains value
+                      assign out_of_stock = true
+                    endunless
+                  elsif available_option_values contains value
+                    unless instock_option_values contains value
+                      assign out_of_stock = true
+                    endunless
+                  endif
+                %}
                 {% comment %}  {% endcomment %}
                 {%- assign variant = product.variants
                         | where: attribute, value
@@ -142,7 +154,7 @@
 
                       <li>
                         <a href="{{ product_variation.url }}"
-                           class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if settings.hide_unavailable_options %}{% unless instock_option_values contains value %} soldout{% endunless %}{% elsif available_option_values contains value %}{% unless instock_option_values contains value %} soldout{% endunless %}{% endif %}"
+                           class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if out_of_stock and is_color_swatches == false %} soldout{% endif %}"
                                 {% if is_color_swatches %}
                                   {%- assign color_option = product_variation.options_by_name['color'].values | first  -%}
                                   {%- assign color_handle = 'color-code-' | append: color_option -%}
@@ -162,7 +174,7 @@
                             {{ product_variation.title }}
                           {%- else -%}
                             <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index: 10">{{ product_variation.title }}</span>
-                            {% if selected %}{%- render 'icon-checkmark' -%}{% endif %}
+                            {% if out_of_stock %}{% render 'icon-close' %}{% elsif selected %}{%- render 'icon-checkmark' -%}{% endif %}
                           {%- endunless -%}
                         </a>
                       </li>
@@ -190,15 +202,13 @@
                             {% if option.selected_value == value %}
                               checked="checked"
                             {% endif %}
-                            {% if settings.hide_unavailable_options %}
-                                {% unless instock_option_values contains value %}disabled="disabled"{% endunless %}
-                            {% elsif available_option_values contains value %}
-                                {% unless instock_option_values contains value %}disabled="disabled"{% endunless %}
+                            {% if out_of_stock %}
+                              disabled="disabled"
                             {% endif %}
                     >
                     <label
                             for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                            class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if settings.hide_unavailable_options %}{% unless instock_option_values contains value %} soldout{% endunless %}{% elsif available_option_values contains value %}{% unless instock_option_values contains value %} soldout{% endunless %}{% endif %}"
+                            class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if out_of_stock and is_color_swatches == false %} soldout{% endif %}"
                             {% if is_color_swatches %}
                               data-color="{{ value | handleize }}"
                               {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
@@ -215,7 +225,11 @@
                         {{ value }}
                       {%- else -%}
                         <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index: 10">{{ value }}</span>
-                        {% if selected %}{%- render 'icon-checkmark' -%}{% endif %}
+                        {% if out_of_stock %}
+                          {% render 'icon-close' %}
+                        {% elsif selected %}
+                          {%- render 'icon-checkmark' -%}
+                        {% endif %}
                       {%- endunless -%}
                     </label>
                   </li>
