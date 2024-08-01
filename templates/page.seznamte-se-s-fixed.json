@@ -531,6 +531,15 @@
             "link_text": "Ukaž mi více",
             "description": "<p>V rámci našeho závazku a přípravy k plnění cílů ESG jsme prošli první certifikací GRS. Global Recycled Standard dává jednotný pohled a požadavky na firemní procesy a práci s produkty.<\/p>\n\n<p>Koncem září jsme obdrželi GRS certifikát.<\/p>"
           }
+        },
+        "timeline_block_hwUBEr": {
+          "type": "timeline_block",
+          "settings": {
+            "year": 2024,
+            "title": "ISCC Plus certifikace",
+            "link_text": "Ukaž mi víc",
+            "description": "Zahájili jsme výrobu recyklovaných pouzder ReStory a zároveň jsme prošli certifikací ISCC Plus."
+          }
         }
       },
       "block_order": [
@@ -556,16 +565,17 @@
         "timeline_block_FW6Pg9",
         "timeline_block_TdKicb",
         "timeline_block_RM6EpU",
-        "timeline_block_8qttDJ"
+        "timeline_block_8qttDJ",
+        "timeline_block_hwUBEr"
       ],
       "settings": {
         "title": "FIXED Timeline",
         "subtitle": "Historické milníky na časové ose od založení firmy až do současnosti.",
         "heading_size": "h2",
         "ordering": "asc",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "color_scheme": "background-2",
+        "padding_top": 12,
+        "padding_bottom": 16
       }
     },
     "graph_wrK7F9": {
