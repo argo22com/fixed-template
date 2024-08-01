@@ -352,9 +352,7 @@
             "show_dynamic_checkout": false,
             "option_name": "color",
             "option_value_metafield": "product_variants_grouping.variation_value",
-            "products": [
-
-            ]
+            "products": "{{ section.settings.product.metafields.product_variants_grouping.variation_products.value }}"
           }
         }
       },
