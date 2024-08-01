@@ -257,13 +257,8 @@
                   <li class="variant-flex-item js-show-more">
                     <label
                             for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                            class="product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if settings.hide_unavailable_options %}{% unless instock_option_values contains value %} soldout{% endunless %}{% elsif available_option_values contains value %}{% unless instock_option_values contains value %} soldout{% endunless %}{% endif %}"
+                            class="product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}"
                     >
-                      {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
-                        <span
-                                class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"
-                        ></span>
-                      {%- endif -%}
                       {{ 'products.product.show_more' | t }}
                     </label>
                   </li>
