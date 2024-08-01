@@ -331,7 +331,7 @@
                   {%-liquid
                     assign option_name_downcase = option.name | downcase
                     assign is_first_option = forloop.first
-                    assign variant = product.variants | where: 'option1', value | first
+                    assign variant = product.variants | where: indexOption, value | first
                   -%}
                   <option
                           class="js-select-product-option"
