@@ -349,7 +349,10 @@
             "size_chart_link_label": "Size chart",
             "size_chart_page": "",
             "quantity_selector_enable": true,
-            "show_dynamic_checkout": false
+            "show_dynamic_checkout": false,
+            "option_name": "color",
+            "option_value_metafield": "product_variants_grouping.variation_value",
+            "products": "{{ section.settings.product.metafields.product_variants_grouping.variation_products.value }}"
           }
         }
       },
