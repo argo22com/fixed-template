@@ -265,10 +265,6 @@
                 data-hide-unavailable-options="true"
               {% endif %}
       >
-          {%-liquid
-            assign option_name_downcase = option.name | downcase
-            assign is_first_option = forloop.first
-          -%}
           <div class="product-form__input product-form__input--dropdown{% unless forloop.first %} element-small-margin-top{% endunless %}">
             <label
                     class="form__label product-form__input__form-label"
@@ -308,6 +304,8 @@
                 -%}
                 {%- for value in option.values -%}
                   {%-liquid
+                    assign option_name_downcase = option.name | downcase
+                    assign is_first_option = forloop.first
                     assign variant = product.variants | where: 'option1', value | first
                   -%}
                   <option
@@ -322,19 +320,22 @@
                           data-desc="{{ variant.metafields['product_texts']['descriptionHtml'].value | escape }}"
                           data-title="{{ variant.metafields['product_texts']['title'].value | escape }}"
                   >
+                    {% liquid
+                      assign display_value = value
+                      if option.name == 'phone'
+                        assign phone_handle = 'phone-code-' | append: value
+                        assign display_value = shop.metaobjects['phone_properties'][phone_handle].model.value | default: value
+                      endif
+                    %}
+
                     {%- unless settings.hide_unavailable_options -%}
                       {%- if available_option_values contains value -%}
-                        {{- value -}}
+                        {{- display_value -}}
                       {%- else -%}
-                        {{- 'products.product.value_unavailable' | t: option_value: value -}}
+                        {{- 'products.product.value_unavailable' | t: option_value: display_value -}}
                       {%- endif -%}
                     {%- else -%}
-                      {% if option.name == 'phone' %}
-                        {% assign phone_handle = 'phone-code-' | append: value %}
-                        <span class="product-form__input__option-value font-body-bold"> {{ shop.metaobjects['phone_properties'][phone_handle].model.value | default: value }}</span>
-                      {% else %}
-                        {{- value -}}
-                      {% endif %}
+                      {{ display_value }}
                     {%- endunless -%}
                   </option>
                 {%- endfor -%}
