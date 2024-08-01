@@ -723,6 +723,23 @@ class VariantSelects extends HTMLElement {
     this.addEventListener('change', this.onVariantChange);
   }
 
+  connectedCallback() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const phoneId = urlParams.get('phoneId');
+    const selectElements = this.querySelectorAll('select');
+    selectElements.forEach((select) => {
+      const options = Array.from(select.options);
+      options.forEach((option) => {
+        if (option.value === phoneId) {
+          option.selected = true;
+          setTimeout(() => {
+            select.dispatchEvent(new Event('change', { bubbles: true })); 
+          }, 1000)
+        }
+      });
+    });
+  }
+
   onVariantChange(event) {
     this.updateVariantStatuses();
     this.updateOptions();
@@ -769,6 +786,12 @@ class VariantSelects extends HTMLElement {
   updateURL() {
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
     window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+
+    document.querySelectorAll('a.color-swatch-icon').forEach((swatch) => {
+      const url = new URL(swatch.href);
+      url.searchParams.set('phoneId', this.querySelector('option:checked').value);
+      swatch.href = url.toString();
+    });
   }
 
   updateShareUrl() {
