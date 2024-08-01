@@ -192,8 +192,19 @@
                           {%- unless is_color_swatches -%}
                             {{ product_variation.title }}
                           {%- else -%}
+                            {% liquid
+                              assign product_variation_available = product_variation.variants | where: 'available'
+                              assign option_index = 'option' | append: option.position
+                              assign color_out_of_stock = true
+                              for pva in product_variation_available
+                                if pva[option_index] == current_value
+                                  assign color_out_of_stock = false
+                                  break
+                                endif
+                              endfor
+                            %}
                             <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index: 10">{{ product_variation.title }}</span>
-                            {% if out_of_stock %}{% render 'icon-close' %}{% elsif selected %}{%- render 'icon-checkmark' -%}{% endif %}
+                            {% if color_out_of_stock %}{% render 'icon-close' %}{% elsif selected %}{%- render 'icon-checkmark' -%}{% endif %}
                           {%- endunless -%}
                         </a>
                       </li>
