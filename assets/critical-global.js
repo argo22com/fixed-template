@@ -742,6 +742,23 @@ class VariantSelects extends HTMLElement {
     }
   }
 
+  connectedCallback() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectElement = this.querySelector('select');
+    const variantValue = urlParams.get(`query-${selectElement.name}`);
+
+    if (!variantValue) {
+      return;
+    }
+
+    [...selectElement.options].forEach(option => {
+      if (option.value === variantValue) {
+        option.selected = true;
+        selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+  }
+
   updateOptions() {
     const inputWrappers = [...document.querySelectorAll('.js-product-form-input')]
     this.options = [...inputWrappers.flatMap(container => [...container.querySelectorAll('input[type="radio"]:checked, option:checked')])].map(element => element.value);
@@ -771,6 +788,13 @@ class VariantSelects extends HTMLElement {
   updateURL() {
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
     window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+
+    document.querySelectorAll('a.color-swatch-icon').forEach((swatch) => {
+      const url = new URL(swatch.href);
+      const input = this.querySelector('option:checked, input[type="radio"]:checked');
+      url.searchParams.set(`query-${input.name}`, input.value);
+      swatch.href = url.toString();
+    });
   }
 
   updateShareUrl() {
@@ -1005,6 +1029,26 @@ class VariantRadios extends VariantSelects {
 
   connectedCallback() {
     this.loadBackgroundColorSwatches();
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const inputElements = this.querySelectorAll(`input[type="radio"]`);
+
+    if (!inputElements) {
+      return;
+    }
+
+    const variantValue = urlParams.get(`query-${inputElements[0].name}`);
+
+    if (!variantValue) {
+      return;
+    }
+
+
+    const correctInput = [...inputElements].find(input => input.value === variantValue);
+    if (correctInput) {
+      correctInput.checked = true;
+      correctInput.dispatchEvent(new Event('change', { bubbles: true }));
+    }
   }
 
   onVariantChange(event) {
