@@ -1020,25 +1020,7 @@ class VariantRadios extends VariantSelects {
   connectedCallback() {
     this.loadBackgroundColorSwatches();
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const inputElements = this.querySelectorAll(`input[type="radio"]`);
-
-    if (!inputElements) {
-      return;
-    }
-
-    const variantValue = urlParams.get(`query-${inputElements[0].name}`);
-
-    if (!variantValue) {
-      return;
-    }
-
-
-    const correctInput = [...inputElements].find(input => input.value === variantValue);
-    if (correctInput) {
-      correctInput.checked = true;
-      correctInput.dispatchEvent(new Event('change', { bubbles: true }));
-    }
+    
   }
 
   onVariantChange(event) {
