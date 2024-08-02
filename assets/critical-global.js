@@ -722,7 +722,6 @@ class VariantSelects extends HTMLElement {
     super();
     this.addEventListener('change', this.onVariantChange);
   }
-
   onVariantChange(event) {
     this.updateVariantStatuses();
     this.updateOptions();
@@ -743,13 +742,33 @@ class VariantSelects extends HTMLElement {
     }
   }
 
+  connectedCallback() {
+    this.updateUrlsOnVariationProductsSwitchers();
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectElement = this.querySelector('select');
+    const variantValue = urlParams.get(`query-${selectElement.name}`);
+    if (!variantValue) {
+      return;
+    }
+
+    [...selectElement.options].forEach(option => {
+      if (option.value === variantValue) {
+        option.selected = true;
+        selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+  }
+
   updateOptions() {
-    this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
+    const inputWrappers = [...document.querySelectorAll('.js-product-form-input')]
+    this.options = [...inputWrappers.flatMap(container => [...container.querySelectorAll('input[type="radio"]:checked, option:checked')])].map(element => element.value);
   }
 
   updateMasterId() {
     this.currentVariant = this.getVariantData().find((variant) => {
-      return variant.options.some(option => this.options.includes(option));
+      return !variant.options.map((option, index) => {
+        return this.options[index] === option;
+      }).includes(false);
     });
   }
 
@@ -769,6 +788,19 @@ class VariantSelects extends HTMLElement {
   updateURL() {
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
     window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+
+    this.updateUrlsOnVariationProductsSwitchers();
+  }
+
+  updateUrlsOnVariationProductsSwitchers() {
+    console.log("selectingColorsAndHrefs");
+    document.querySelectorAll('a.color-swatch-icon').forEach((swatch) => {
+      const url = new URL(swatch.href);
+      const input = this.querySelector('option:checked, input[type="radio"]:checked');
+      const inputName = input.getAttribute('name') || input.getAttribute('data-name');
+      url.searchParams.set(`query-${inputName}`, input.value);
+      swatch.href = url.toString();
+    })
   }
 
   updateShareUrl() {
@@ -787,10 +819,10 @@ class VariantSelects extends HTMLElement {
   }
 
   updateVariantStatuses() {
-    const selectedInputs = [...this.querySelectorAll('input[type="radio"]:checked, option:checked')];
+    const inputWrappers = [...document.querySelectorAll('.js-product-form-input')]
+    const selectedInputs = [...inputWrappers.flatMap(container => [...container.querySelectorAll('input[type="radio"]:checked, option:checked')])];
     let selectedOptionValues = [];
     selectedInputs.forEach(selectedValueTag => selectedOptionValues.push(selectedValueTag.value));
-    const inputWrappers = [...this.querySelectorAll('.product-form__input')];
     inputWrappers.forEach((option, index) => {
       const optionInputs = [...option.querySelectorAll('input[type="radio"], option')];
       let availableOptionInputsValue;
@@ -992,13 +1024,6 @@ class VariantRadios extends VariantSelects {
     }
   }
 
-  updateOptions() {
-    const fieldsets = Array.from(this.querySelectorAll('fieldset'));
-    this.options = fieldsets.map((fieldset) => {
-      return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
-    });
-  }
-
   showMoreVariants(event) {
     event.preventDefault();
 
@@ -1010,6 +1035,26 @@ class VariantRadios extends VariantSelects {
 
   connectedCallback() {
     this.loadBackgroundColorSwatches();
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const inputElements = this.querySelectorAll(`input[type="radio"]`);
+
+    if (!inputElements) {
+      return;
+    }
+
+    const variantValue = urlParams.get(`query-${inputElements[0].name}`);
+
+    if (!variantValue) {
+      return;
+    }
+
+
+    const correctInput = [...inputElements].find(input => input.value === variantValue);
+    if (correctInput) {
+      correctInput.checked = true;
+      correctInput.dispatchEvent(new Event('change', { bubbles: true }));
+    }
   }
 
   onVariantChange(event) {
@@ -1045,17 +1090,16 @@ class VariantRadios extends VariantSelects {
   }
 
   updateOptionLabel(event) {
-    this.querySelectorAll('.product-form__input__option-value').forEach((element, index) => {
-      element.textContent = this.currentVariant.options[index];
-    });
+    this.querySelector('.product-form__input__option-value').textContent = event.target.value;
   }
 
   updateSoldoutValues() {
-    const instocktVariants = this.getInstockVariants();
-    const currentSelectedValues = this.querySelectorAll('input[type="radio"]:checked');
-    if(instocktVariants.length > 0) {
-      this.querySelectorAll(this.optionSelector).forEach((option, index) => {
-        const instocktVariantsForOption = instocktVariants.filter(variant => {
+    const instockVariants = this.getInstockVariants();
+    const inputWrappers = [...document.querySelectorAll('.js-product-form-input')]
+    const currentSelectedValues = [...inputWrappers.flatMap(container => [...container.querySelectorAll('input[type="radio"]:checked, option:checked')])];
+    if(instockVariants.length > 0) {
+      document.querySelectorAll(`.js-product-form-input`).forEach((option, index) => {
+        const instocktVariantsForOption = instockVariants.filter(variant => {
           let result = true;
           currentSelectedValues.forEach((selectedValueTag, indexOption) => {
             if(indexOption < index && selectedValueTag.value != variant.options[indexOption]) {
