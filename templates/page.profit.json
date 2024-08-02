@@ -173,9 +173,9 @@
           "settings": {
             "show_free_shipping_bar": false,
             "enable_compare": true,
-            "picker_type": "dropdown",
+            "picker_type": "button",
             "enable_color_swatches": true,
-            "color_swatches_style": "variant",
+            "color_swatches_style": "custom",
             "size_chart_enable": true,
             "size_chart_link_label": "Size chart",
             "size_chart_page": "",
@@ -184,7 +184,10 @@
             "option_name": "",
             "option_value_metafield": "",
             "products": [
-
+              "kozene-pouzdro-typu-kniha-fixed-profit-pro-apple-iphone-15-pro-max-cerne",
+              "kozene-pouzdro-typu-kniha-fixed-profit-pro-apple-iphone-15-pro-hnede",
+              "kozene-pouzdro-typu-kniha-fixed-profit-pro-apple-iphone-15-pro-modre",
+              "kozene-pouzdro-typu-kniha-fixed-profit-pro-apple-iphone-15-pro-cervene"
             ]
           }
         },
