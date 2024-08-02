@@ -743,10 +743,10 @@ class VariantSelects extends HTMLElement {
   }
 
   connectedCallback() {
+    this.updateUrlsOnVariationProductsSwitchers();
     const urlParams = new URLSearchParams(window.location.search);
     const selectElement = this.querySelector('select');
     const variantValue = urlParams.get(`query-${selectElement.name}`);
-
     if (!variantValue) {
       return;
     }
@@ -789,12 +789,18 @@ class VariantSelects extends HTMLElement {
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
     window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
 
+    this.updateUrlsOnVariationProductsSwitchers();
+  }
+
+  updateUrlsOnVariationProductsSwitchers() {
+
     document.querySelectorAll('a.color-swatch-icon').forEach((swatch) => {
       const url = new URL(swatch.href);
       const input = this.querySelector('option:checked, input[type="radio"]:checked');
-      url.searchParams.set(`query-${input.name}`, input.value);
+      const inputName = input.getAttribute('name') || input.getAttribute('data-name');
+      url.searchParams.set(`query-${inputName}`, input.value);
       swatch.href = url.toString();
-    });
+    })
   }
 
   updateShareUrl() {
