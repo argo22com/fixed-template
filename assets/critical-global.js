@@ -747,7 +747,6 @@ class VariantSelects extends HTMLElement {
     const urlParams = new URLSearchParams(window.location.search);
     const selectElement = this.querySelector('select');
     const variantValue = urlParams.get(`query-${selectElement.name}`);
-    
     if (!variantValue) {
       return;
     }
@@ -794,6 +793,7 @@ class VariantSelects extends HTMLElement {
   }
 
   updateUrlsOnVariationProductsSwitchers() {
+    console.log("selectingColorsAndHrefs");
     document.querySelectorAll('a.color-swatch-icon').forEach((swatch) => {
       const url = new URL(swatch.href);
       const input = this.querySelector('option:checked, input[type="radio"]:checked');
