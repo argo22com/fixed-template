@@ -140,7 +140,7 @@
         "gallery_layout": "thumbnail_slider",
         "thumbnail_position": "left",
         "media_size": "small",
-        "image_ratio": "square",
+        "image_ratio": "landscape",
         "image_fit": true,
         "disable_images_lightbox": false,
         "mobile_thumbnails": "hide",
