@@ -742,25 +742,6 @@ class VariantSelects extends HTMLElement {
     }
   }
 
-  connectedCallback() {
-    this.updateUrlsOnVariationProductsSwitchers();
-    const urlParams = new URLSearchParams(window.location.search);
-    const selectElement = this.querySelector('select');
-    const variantValue = urlParams.get(`query-${selectElement.name}`);
-    if (!variantValue) {
-      return;
-    }
-
-    [...selectElement.options].forEach(option => {
-      if (option.value === variantValue) {
-        option.selected = true;
-        setTimeout(() => {
-          this.onVariantChange()
-        }, 1000);
-        
-      }
-    });
-  }
 
   updateOptions() {
     const inputWrappers = [...document.querySelectorAll('.js-product-form-input')]
