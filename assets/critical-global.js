@@ -754,7 +754,10 @@ class VariantSelects extends HTMLElement {
     [...selectElement.options].forEach(option => {
       if (option.value === variantValue) {
         option.selected = true;
-        this.onVariantChange()
+        setTimeout(() => {
+          this.onVariantChange()
+        }, 1000);
+        
       }
     });
   }
