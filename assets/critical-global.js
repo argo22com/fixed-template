@@ -747,17 +747,15 @@ class VariantSelects extends HTMLElement {
     const urlParams = new URLSearchParams(window.location.search);
     const selectElement = this.querySelector('select');
     const variantValue = urlParams.get(`query-${selectElement.name}`);
+    
     if (!variantValue) {
       return;
     }
 
     [...selectElement.options].forEach(option => {
       if (option.value === variantValue) {
-        console.log("test", option.value === variantValue);
         option.selected = true;
-        setTimeout(() => {
-          select.dispatchEvent(new Event('change', { bubbles: true })); 
-        }, 1000)
+        selectElement.dispatchEvent(new Event('change', { bubbles: true }));
       }
     });
   }
@@ -796,7 +794,6 @@ class VariantSelects extends HTMLElement {
   }
 
   updateUrlsOnVariationProductsSwitchers() {
-    console.log("selectingColorsAndHrefs");
     document.querySelectorAll('a.color-swatch-icon').forEach((swatch) => {
       const url = new URL(swatch.href);
       const input = this.querySelector('option:checked, input[type="radio"]:checked');
