@@ -1019,8 +1019,6 @@ class VariantRadios extends VariantSelects {
 
   connectedCallback() {
     this.loadBackgroundColorSwatches();
-
-    
   }
 
   onVariantChange(event) {
