@@ -354,7 +354,7 @@
                     assign display_value = value
                     if option.name == 'phone'
                       assign phone_handle = 'phone-code-' | append: value
-                      assign display_value_raw = shop.metaobjects.phone_properties[phone_handle].model.value
+                      assign display_value_raw = shop.metaobjects.phone_properties[phone_handle].model.value | default: value
                       assign display_value = shop.metaobjects.phone_properties[phone_handle].model.value | default: value
                     endif
                   %}
@@ -367,6 +367,8 @@
                     {%- endif -%}
                   {%- else -%}
                     {{ display_value_raw }}
+                    {{ phone_handle }}
+                    {{ display_value }}
                   {%- endunless -%}
                 </option>
               {%- endfor -%}
