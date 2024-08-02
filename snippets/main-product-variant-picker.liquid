@@ -365,6 +365,7 @@
                       {{- 'products.product.value_unavailable' | t: option_value: display_value -}}
                     {%- endif -%}
                   {%- else -%}
+                    {{ phone_handle }}
                     {{ display_value }}
                   {%- endunless -%}
                 </option>
