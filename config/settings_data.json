@@ -26,7 +26,7 @@
     "page_heading_blog_image_height": "15",
     "page_heading_other_image_height": "15",
     "enable_breadcrumns": true,
-    "hide_unavailable_options": true,
+    "hide_unavailable_options": false,
     "color_swatches_shape": "circle",
     "card_text_alignment": "left",
     "card_border_radius": 0,
