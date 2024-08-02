@@ -754,7 +754,7 @@ class VariantSelects extends HTMLElement {
     [...selectElement.options].forEach(option => {
       if (option.value === variantValue) {
         option.selected = true;
-        selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+        this.onVariantChange()
       }
     });
   }
