@@ -581,7 +581,7 @@
           "thumbnail_position": "left",
           "image_ratio": "square",
           "image_fit": true,
-          "disable_images_lightbox": false,
+          "disable_images_lightbox": true,
           "hide_variants": false,
           "enable_video_looping": false
         }
