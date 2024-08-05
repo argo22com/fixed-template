@@ -35,7 +35,7 @@
   {%- endif -%}
 
   {% for option in product.options_with_values %}
-    {%- if block.settings.picker_type == 'button' and option.name != 'phone' -%}
+    {%- if block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
       {%- liquid
         assign color_name = settings.color_name | downcase
         unless settings.hide_unavailable_options
@@ -92,7 +92,7 @@
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ option.name | capitalize }}:
-            {% if option.name == 'barva' %}
+            {% if option.name == color_name %}
               {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
               <span class="product-form__input__option-value font-body-bold">
                 {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize -}}
@@ -352,7 +352,7 @@
                 >
                   {% liquid
                     assign display_value = value
-                    if option.name == 'phone'
+                    if option.name == settings.phone_name
                       assign phone_handle = 'phone-code-' | append: value
                       assign display_value = shop.metaobjects.phone_properties[phone_handle].model.value | default: value
                     endif

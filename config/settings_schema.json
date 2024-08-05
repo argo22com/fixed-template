@@ -506,7 +506,13 @@
         "type": "text",
         "id": "color_name",
         "label": "t:settings_schema.product_options.settings.color_name.label",
-        "default": "Color"
+        "default": "color"
+      },
+      {
+        "type": "text",
+        "id": "phone_name",
+        "label": "t:settings_schema.product_options.settings.phone_name.label",
+        "default": "phone"
       },
       {
         "type": "select",

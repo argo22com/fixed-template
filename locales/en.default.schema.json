@@ -403,6 +403,9 @@
         "color_name": {
           "label": "Name of color option"
         },
+        "phone_name": {
+          "label": "Name of phone option"
+        },
         "color_swatches_shape": {
           "label": "Color swatches shape",
           "option_1": {
