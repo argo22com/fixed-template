@@ -293,7 +293,7 @@
       "settings": {
         "title": "Ukázky realizací",
         "heading_size": "h2",
-        "max_rows": 2,
+        "max_rows": 1,
         "color_scheme": "scheme-ed30eab5-ffda-4ed0-95af-80a522aeb93f",
         "padding_top": 48,
         "padding_bottom": 32,
