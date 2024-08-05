@@ -158,18 +158,21 @@
 .swiper-slide .block {
     width: 100%;
     text-align: center;
-    margin-top: -55px;
+    margin-top: -73px;
     cursor: pointer;
     position: absolute;
     display: flex;
     top: 50%;
     transform: translateY(-50%);
     flex-direction: column;
+    justify-content: end;
+    min-height: 175px;
 }
 
 .block.reverse {
     flex-direction: column-reverse;
     margin-top: 55px;
+    min-height: unset;
 }
 
 .block h3 {
@@ -188,6 +191,10 @@
     color: rgb(var(--color-text-message-success));
     text-decoration: underline;
     margin-bottom: 8px;
+}
+
+.block.reverse .block-text {
+    height: 75px;
 }
 
 .block .date {
