@@ -96,9 +96,9 @@
         "category_filter_icon_BQfNEa"
       ],
       "settings": {
-        "products_per_page": 16,
-        "columns_desktop": 4,
-        "pagination_style": "numbers",
+        "products_per_page": 25,
+        "columns_desktop": 5,
+        "pagination_style": "infinite",
         "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -110,7 +110,7 @@
         "show_color_swatches": true,
         "color_swatches_style": "custom",
         "enable_filtering": true,
-        "filter_type": "vertical",
+        "filter_type": "drawer",
         "filter_include_group_name": true,
         "enable_sorting": true,
         "categories_filter": "",
