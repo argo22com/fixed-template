@@ -575,7 +575,7 @@
         "settings": {
           "use_background_input": true,
           "enable_sticky_info": true,
-          "gallery_layout": "thumbnail_slider",
+          "gallery_layout": "thumbnail_slider_vertical",
           "default_image": "variant_image",
           "media_position": "left",
           "thumbnail_position": "left",
