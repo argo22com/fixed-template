@@ -64,7 +64,9 @@
                 alt="{{ card_product.title | escape }} - {{ color | escape }}"
               >
             {%- endif -%}
-            <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ color_metaobject.search_words | first }}</span>
+            <span class="bt-tooltip__inner bt-tooltip__inner--top">
+              {{- color_metaobject.search_words.value | first | capitalize -}}
+            </span>
           </a>
         </li>
       {%- endfor -%}
