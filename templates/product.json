@@ -228,7 +228,7 @@
         "full_width": false,
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": true,
@@ -240,7 +240,7 @@
         "columns_tablet": "3",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 40,
+        "padding_top": 72,
         "padding_bottom": 40
       }
     },
