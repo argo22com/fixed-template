@@ -33,9 +33,9 @@
           endif
         -%}
         <li>
-          {%-
+          {%- liquid
             assign color_handle = 'color-code-' | append: color
-            assign color_metaobject = shop.metaobjects['color_codes_hex'][color_handle]
+            assign color_metaobject = shop.metaobjects.color_codes_hex[color_handle]
           -%}
           <a
             href="{{ variant_color.url }}"
