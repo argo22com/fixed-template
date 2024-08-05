@@ -225,7 +225,7 @@
         "heading_size": "h2",
         "products_to_show": 10,
         "columns_desktop": 5,
-        "full_width": false,
+        "full_width": true,
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "square",
