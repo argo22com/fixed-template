@@ -304,7 +304,7 @@
           <div class="select">
             <select
               id="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
-              class="js-select-product select__select{% unless is_first_option %} dynamic-option{% endunless %}"
+              class="js-select-product select__select{% unless is_first_option %} dynamic-option{% endunless %} select__select-lower"
               name="options[{{ option.name | escape }}]"
               form="{{ product_form_id }}"
             >
@@ -353,7 +353,7 @@
                   {% liquid
                     assign display_value = value
                     if option.name == settings.phone_name
-                      assign phone_handle = 'phone-code-' | append: value
+                      assign phone_handle = 'phone-code-' | append: value | strip
                       assign display_value = shop.metaobjects.phone_properties[phone_handle].model.value | default: value
                     endif
                   %}

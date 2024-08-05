@@ -1915,6 +1915,11 @@ slider-component {
   box-shadow: inset 0 0.1rem 0.2rem rgb(var(--color-foreground), 0.1);
 }
 
+.select__select-lower {
+  min-height: 5rem;
+  padding: 1rem 2rem;
+}
+
 .field__input,
 .select__select,
 textarea {
