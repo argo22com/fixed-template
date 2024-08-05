@@ -11046,7 +11046,7 @@
         resizeDuration: 350, // default was 700
         showImageNumberLabel: false, // default was true
         wrapAround: true, // default was false
-        disableScrolling: false,
+        disableScrolling: true,
         /*
     Sanitize Title
     If the caption data is trusted, for example you are hardcoding it in, then leave this to false.
