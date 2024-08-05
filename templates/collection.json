@@ -108,7 +108,7 @@
         "enable_compare": true,
         "enable_quick_view": true,
         "show_color_swatches": true,
-        "color_swatches_style": "variant",
+        "color_swatches_style": "custom",
         "enable_filtering": true,
         "filter_type": "vertical",
         "filter_include_group_name": true,
