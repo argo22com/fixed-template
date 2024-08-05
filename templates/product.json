@@ -60,7 +60,7 @@
             "enable_compare": true,
             "picker_type": "button",
             "enable_color_swatches": true,
-            "color_swatches_style": "custom",
+            "color_swatches_style": "variant",
             "size_chart_enable": true,
             "size_chart_link_label": "Tabulka velikostí",
             "size_chart_page": "tabulka-velikosti-univerzalni-pouzdra",
