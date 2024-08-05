@@ -757,7 +757,7 @@
           "background_input": "#ffffff",
           "solid_button_label_primary": "#fff",
           "solid_button_background_primary": "#dc4405",
-          "review_stars": "#e94200",
+          "review_stars": "#fbbf24",
           "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
           "text_message_success": "#94a3b8",
           "background_message_success": "#effdf4",
