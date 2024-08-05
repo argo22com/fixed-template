@@ -113,7 +113,7 @@
     transform: translateY(-50%);
     left: 0;
     height: 2px;
-    background-image: linear-gradient(90deg,transparent,transparent 50%,#fff 50%,#fff 100%),linear-gradient(90deg,#069ec6,#3ac48e);
+    background-image: linear-gradient(90deg,transparent,transparent 50%,#fff 50%,#fff 100%),var(--free-shipping-tracking-background);
     background-size: 5px 5px,100% 8px;
     z-index: 1;
 }
@@ -126,7 +126,7 @@
     top: 50%;
     margin-top: -25px;
     border: 2px solid transparent;
-    background: linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,#069ec6,#3ac48e) border-box;
+    background: linear-gradient(#fff,#fff) padding-box,rgb(var(--color-button)) border-box;
     z-index: 9;
     border-radius: 100%;
     cursor: pointer;
@@ -148,6 +148,7 @@
     transform: translate(-50%,-50%);
     width: 7px;
     height: 13px;
+    color: rgb(var(--color-button-text));
 }
 
 .swiper-button-disabled {
@@ -157,18 +158,21 @@
 .swiper-slide .block {
     width: 100%;
     text-align: center;
-    margin-top: -55px;
+    margin-top: -73px;
     cursor: pointer;
     position: absolute;
     display: flex;
     top: 50%;
     transform: translateY(-50%);
     flex-direction: column;
+    justify-content: end;
+    min-height: 175px;
 }
 
 .block.reverse {
     flex-direction: column-reverse;
     margin-top: 55px;
+    min-height: unset;
 }
 
 .block h3 {
@@ -184,9 +188,13 @@
     font-size: 1.8rem;
     display: inline-block;
     position: relative;
-    color: #000;
+    color: rgb(var(--color-text-message-success));
     text-decoration: underline;
     margin-bottom: 8px;
+}
+
+.block.reverse .block-text {
+    height: 75px;
 }
 
 .block .date {
@@ -195,7 +203,7 @@
     text-transform: uppercase;
     display: inline-block;
     position: relative;
-    background: -webkit-linear-gradient(90deg,#069ec6,#3ac48e);
+    background: rgb(var(--color-review-stars));
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -211,7 +219,7 @@
 }
 
 .plus-dot {
-    background: -webkit-linear-gradient(90deg,#069ec6,#3ac48e);
+    background: rgb(var(--color-review-stars));
     color: white;
     font-size: 25px;
     border-radius: 100%;
