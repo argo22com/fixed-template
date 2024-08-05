@@ -98,7 +98,7 @@
       "settings": {
         "products_per_page": 25,
         "columns_desktop": 5,
-        "pagination_style": "infinite",
+        "pagination_style": "more",
         "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -124,8 +124,8 @@
         "read_more_button": "Read more",
         "columns_tablet": "3",
         "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 44,
+        "padding_bottom": 44
       }
     },
     "71a8c881-bbb2-43fc-8755-1c19de3ab3fb": {
