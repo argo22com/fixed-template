@@ -544,13 +544,13 @@
           "2961e62f-c3f6-4c1a-a2f3-16550bf5d57f": {
             "type": "price",
             "settings": {
-              "variant_price": false
+              "variant_price": true
             }
           },
           "c23b6d41-96d0-4988-8c67-db14307e7b03": {
             "type": "sale_box",
             "settings": {
-              "show_free_shipping_bar": true,
+              "show_free_shipping_bar": false,
               "enable_compare": true,
               "picker_type": "button",
               "enable_color_swatches": true,
