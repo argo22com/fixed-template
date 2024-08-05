@@ -153,20 +153,11 @@
             "text": "<p>FIXED je nejlepší přítel s kreativní myslí. Co jste možná sami neviděli, dokáže posunout dále. Můžete se spolehnout, že vymyslí řešení, dá dobrou radu. Nenechává se jen vést, sám ovlivňuje věci kolem a přetváří je k lepšímu. K tomu samému pomáhá i vám.<\/p>",
             "text_style": "body"
           }
-        },
-        "button_mf9GiE": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid"
-          }
         }
       },
       "block_order": [
         "heading_hKMVWb",
-        "text_JPYh4L",
-        "button_mf9GiE"
+        "text_JPYh4L"
       ],
       "settings": {
         "grid_layout": "grid",
@@ -215,20 +206,11 @@
             "text": "<p>Usilujeme o to, aby naše produkty byly vašimi každodenními pomocníky a mohli jste se na ně spolehnout. Produkty vylepšujeme, designujeme, vyvíjíme a testujeme. V rámci našeho závazku k udržitelné budoucnosti také částečně vyrábíme v České republice a zabýváme se projekty na recyklaci a využití obnovitelných zdrojů.<\/p>",
             "text_style": "body"
           }
-        },
-        "button_LFHFh7": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid"
-          }
         }
       },
       "block_order": [
         "heading_BMa3bm",
-        "text_JUrCbK",
-        "button_LFHFh7"
+        "text_JUrCbK"
       ],
       "settings": {
         "grid_layout": "grid",
@@ -277,20 +259,11 @@
             "text": "<p>FIXED je na trhu od roku 2001. Od té doby rok co rok rosteme, díky čemuž vám můžeme přinášet stále nové možnosti. Přidejte se k naší komunitě a seznamte se s našimi produkty a kampaněmi a nezapomeňte se přihlásit k odběru našich novinek.<\/p>",
             "text_style": "body"
           }
-        },
-        "button_T83m4M": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid"
-          }
         }
       },
       "block_order": [
         "heading_69M8Pm",
-        "text_aCQinV",
-        "button_T83m4M"
+        "text_aCQinV"
       ],
       "settings": {
         "grid_layout": "grid",
