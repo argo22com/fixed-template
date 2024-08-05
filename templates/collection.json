@@ -110,7 +110,7 @@
         "show_color_swatches": true,
         "color_swatches_style": "custom",
         "enable_filtering": true,
-        "filter_type": "drawer",
+        "filter_type": "horizontal",
         "filter_include_group_name": true,
         "enable_sorting": true,
         "categories_filter": "",
