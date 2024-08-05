@@ -155,7 +155,7 @@
                     <li>
                       {% liquid
                         if is_color_swatches
-                          assign current_value = product_variation.options_by_name.color.values | first
+                          assign current_value = product_variation.options_by_name[color_name].values | first
                         else
                           assign current_value = product_variation.title
                         endif
