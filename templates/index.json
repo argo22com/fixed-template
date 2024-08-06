@@ -505,7 +505,7 @@
           "type": "text-overlay-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/OCHRANA.1384.jpg",
-            "link": "",
+            "link": "shopify:\/\/collections\/ochrana",
             "keep_ltr": true,
             "text": "Pouzdra, tvrzená skla, folie...",
             "text_style": "subtitle",
@@ -531,7 +531,7 @@
           "type": "text-overlay-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/FIXPDS.1463.jpg",
-            "link": "",
+            "link": "shopify:\/\/collections\/hudba",
             "keep_ltr": false,
             "text": "Bezdrátová sluchátka, sluchátka s kabelem...",
             "text_style": "subtitle",
@@ -557,7 +557,7 @@
           "type": "text-overlay-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/nabijecky.1472.jpg",
-            "link": "",
+            "link": "shopify:\/\/collections\/nabijeni",
             "keep_ltr": false,
             "text": "Nabíječky, cestovní adaptéry, powerbanky, kabely...",
             "text_style": "subtitle",
@@ -583,7 +583,7 @@
           "type": "text-overlay-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/drzaky.jpg",
-            "link": "",
+            "link": "shopify:\/\/collections\/drzaky-a-stojanky",
             "keep_ltr": false,
             "text": "Do auta, na kolo i motorku...",
             "text_style": "subtitle",
