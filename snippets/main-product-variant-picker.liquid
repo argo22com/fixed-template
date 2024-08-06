@@ -17,6 +17,16 @@
     assign total_visible_items = max_rows | times: items_per_row
     assign current_variant = product.selected_or_first_available_variant
     assign first_selected_variant = current_variant | default: product.variants[0]
+
+    assign color_name = settings.color_name | downcase
+    assign option_color_position = nil
+    for option in product.options_with_values
+      assign option_name_downcase = option.name | downcase
+
+      if option_name_downcase == color_name
+        assign option_color_position = 'option' | append: option.position
+      endif
+    endfor
   -%}
   {% style %}
     .variant-flex-item {
@@ -37,7 +47,6 @@
   {% for option in product.options_with_values %}
     {%- if block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
       {%- liquid
-        assign color_name = settings.color_name | downcase
         unless settings.hide_unavailable_options
           assign instock_variants = product.variants | where: 'available'
         endunless
@@ -202,7 +211,7 @@
                               endif
                             endfor
                           %}
-                          <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index: 10">
+                          <span class="js-title-tooltip bt-tooltip__inner bt-tooltip__inner--top" style="z-index: 10">
                             {{- product_variation.title -}}
                           </span>
                           {% if color_out_of_stock -%}
@@ -239,6 +248,14 @@
                     {% if out_of_stock %}
                       disabled="disabled"
                     {% endif %}
+                    {% for product_variation in block.settings.products %}
+                      {% assign option_color_variant = product_variation.variants | where: index_option, value | first %}
+                      {% if option_color_variant and option_color_position != nil %}
+                        {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
+                        data-{{ current_color_code }}-url="{{ option_color_variant.url }}"
+                        data-{{ current_color_code }}-title="{{ option_color_variant.metafields['product_texts']['title'].value | escape }}"
+                      {% endif %}
+                    {% endfor %}
                   >
                   <label
                     for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
