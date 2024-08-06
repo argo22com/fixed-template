@@ -777,13 +777,20 @@ class VariantSelects extends HTMLElement {
   }
 
   updateUrlsOnVariationProductsSwitchers() {
-
+    const checkedInput = this.querySelector(`input[type="radio"]:checked, option:checked`);
     document.querySelectorAll('a.color-swatch-icon').forEach((swatch) => {
-      const url = new URL(swatch.href);
-      const input = this.querySelector('option:checked, input[type="radio"]:checked');
-      const inputName = input.getAttribute('name') || input.getAttribute('data-name');
-      url.searchParams.set(`query-${inputName}`, input.value);
-      swatch.href = url.toString();
+      const colorCode = swatch.dataset.color;
+      const colorUrl = checkedInput.getAttribute(`data-${colorCode}-url`);
+
+      // variant may be missing for some products
+      if (colorUrl) {
+        const colorTitle = checkedInput.getAttribute(`data-${colorCode}-title`);
+        swatch.href = colorUrl;
+        const tooltip = swatch.querySelector('.js-title-tooltip');
+        if (tooltip) {
+          tooltip.innerHTML = colorTitle;
+        }
+      }
     })
   }
 
