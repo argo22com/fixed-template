@@ -159,6 +159,23 @@
                       else
                         assign selected = false
                       endif
+
+                      assign current_variant = product.selected_or_first_available_variant
+                      assign product_current_variation = product_variation
+                      assign product_variation_variants = product_variation.variants
+
+                      for option in product.options_with_values
+                        assign option_index = 'option' | append: option.position
+                        if option_index == option_color_position
+                          continue
+                        endif
+
+                        assign product_variation_variants = product_variation_variants | where: option_index, current_variant[option_index]
+                      endfor
+
+                      if product_variation_variants.size != 0
+                        assign product_current_variation = product_variation_variants | first
+                      endif
                     -%}
 
                     <li>
@@ -170,7 +187,7 @@
                         endif
                       %}
                       <a
-                        href="{{ product_variation.url }}"
+                        href="{{ product_current_variation.url }}"
                         class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if out_of_stock and is_color_swatches == false %} soldout{% endif %}"
                         {% if is_color_swatches %}
                           {%- assign color_handle = 'color-code-' | append: current_value -%}
@@ -198,7 +215,7 @@
                           ></span>
                         {%- endif -%}
                         {%- unless is_color_swatches -%}
-                          {{ product_variation.title }}
+                          {{ product_current_variation.metafields['product_texts']['title'].value | default: product_current_variation.title }}
                         {%- else -%}
                           {% liquid
                             assign product_variation_available = product_variation.variants | where: 'available'
@@ -212,7 +229,7 @@
                             endfor
                           %}
                           <span class="js-title-tooltip bt-tooltip__inner bt-tooltip__inner--top" style="z-index: 10">
-                            {{- product_variation.title -}}
+                            {{- product_current_variation.metafields['product_texts']['title'].value | default: product_current_variation.title -}}
                           </span>
                           {% if color_out_of_stock -%}
                             {%- render 'icon-close' -%}
