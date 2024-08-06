@@ -137,7 +137,7 @@
         "auto_scroll_up_mobile": false,
         "default_image": "product_featured_image",
         "media_position": "left",
-        "gallery_layout": "thumbnail_slider_vertical",
+        "gallery_layout": "thumbnail_slider",
         "thumbnail_position": "left",
         "media_size": "small",
         "image_ratio": "square",
