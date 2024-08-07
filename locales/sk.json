@@ -592,5 +592,20 @@
       "return": "Vrátiť sa k podrobnostiam účtu",
       "welcome_html": "Welcome back, <strong>{{ first_name }}<\/strong>!"
     }
+  },
+  "customer_accounts": {
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Skryť ponuku Účet",
+        "label": "Účet",
+        "show_accessibility_label": "Zobraziť ponuku Účet",
+        "nav_accessibility_label": "Navigácia v účte",
+        "open_menu_accessibility_label": "Otvoriť navigáciu účtu",
+        "close_menu_accessibility_label": "Zavrieť navigáciu účtu",
+        "loading_message": "Načítava sa navigácia účtu"
+      },
+      "dismiss_toast": "Zavrieť",
+      "document_title": "{{sectionName}} – {{shopName}} – Účet"
+    }
   }
 }
