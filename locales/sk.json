@@ -620,6 +620,13 @@
         "empty_state_order_source_description": "Tu sa zobrazia len objednávky zadané cez e-mail {{email}}.",
         "pagination": {
           "nav_accessibility_label": "Navigačné tlačidlá objednávok"
+        },
+        "estimated_shortform": "Približne {{date}}",
+        "payment_status": {
+          "list_view": {
+            "due_without_date": "Splatnosť",
+            "due_on_fulfillment": "Splatnosť platby pri plnení"
+          }
         }
       }
     }
