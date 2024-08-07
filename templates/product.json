@@ -172,8 +172,7 @@
           "type": "page_content",
           "settings": {
             "title": "Související produkty",
-            "page": "",
-            "allowed_skus": ""
+            "page": ""
           }
         },
         "files_dWmtVg": {
@@ -191,8 +190,7 @@
           "type": "page_content",
           "settings": {
             "title": "Výběr správné velikosti pouzdra",
-            "page": "jak-si-vybrat-spravnou-velikost-uni-pouzdra",
-            "allowed_skus": "FIXPOH-,FIXPOH2-,RPPOH-,RPSFH-,RPSFM-,RPSOS-,FIXPOM-,FIXPOM2-,FIXAB-,FIXCL-,FIXSOS-"
+            "page": "jak-si-vybrat-spravnou-velikost-uni-pouzdra"
           }
         }
       },

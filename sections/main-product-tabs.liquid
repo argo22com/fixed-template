@@ -30,20 +30,6 @@
                                 assign available_tab = false
                             endif
                         when 'page_content'
-                            if block.settings.allowed_skus != blank
-                                assign sku_exists = false
-                                assign sku_list = block.settings.allowed_skus | split: ','
-                                for sku in sku_list
-                                    if product.selected_or_first_available_variant.sku contains sku
-                                        assign sku_exists = true
-                                        break
-                                    endif
-                                endfor
-
-                                if sku_exists == false
-                                    assign available_tab = false
-                                endif
-                            endif
                             if block.settings.page == blank
                                 assign available_tab = false
                             endif
@@ -1347,12 +1333,6 @@
           "type": "page",
           "id": "page",
           "label": "t:sections.main-product-tabs.blocks.page_content.settings.page.label"
-        },
-        {
-          "type": "text",
-          "id": "allowed_skus",
-          "label": "t:sections.main-product-tabs.blocks.page_content.settings.allowed_skus.label",
-          "info": "t:sections.main-product-tabs.blocks.page_content.settings.allowed_skus.info"
         }
       ]
     },
