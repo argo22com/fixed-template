@@ -179,7 +179,9 @@
                                 {% when '@app' %}
                                     {% render block %}
                                 {% when 'size_chart_page' %}
-                                  {{ product_detail_tab_page.content }}
+                                  <div class="rte">
+                                    {{ product_detail_tab_page.content }}
+                                  </div>
                                 {%- when 'metafields' -%}
                                     {%- if block.settings.namespace_key != blank -%}
                                         {%- assign metafield_parts = block.settings.namespace_key | split: '.' -%}
