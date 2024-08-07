@@ -750,6 +750,13 @@
         "no_locations_found": "Neboli nájdené žiadne lokality",
         "search": "Vyhľadajte lokalitu",
         "search_location_title": "Vyberte lokalitu"
+      },
+      "orders": {
+        "draft_order_list": {
+          "pagination": {
+            "nav_accessibility_label": "Navigačné tlačidlá revidovaných objednávok"
+          }
+        }
       }
     }
   }
