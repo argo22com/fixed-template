@@ -719,6 +719,10 @@
       "delete_confirmation_button_accessibility_label": "Odstrániť adresu {{address}}",
       "edit_button_accessibility_label": "Upraviť adresu {{address}}",
       "edit_section_accessibility_label": "Upraviť adresu {{address}}"
+    },
+    "address_form": {
+      "loading_add_form_accessibility_message": "Načíta sa formulár pre novú adresu",
+      "loading_edit_form_accessibility_message": "Načíta sa formulár na úpravu adresy"
     }
   }
 }
