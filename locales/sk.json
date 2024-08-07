@@ -617,7 +617,10 @@
     },
     "orders": {
       "order_list": {
-        "empty_state_order_source_description": "Tu sa zobrazia len objednávky zadané cez e-mail {{email}}."
+        "empty_state_order_source_description": "Tu sa zobrazia len objednávky zadané cez e-mail {{email}}.",
+        "pagination": {
+          "nav_accessibility_label": "Navigačné tlačidlá objednávok"
+        }
       }
     }
   }
