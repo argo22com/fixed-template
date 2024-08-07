@@ -755,6 +755,22 @@
         "draft_order_list": {
           "pagination": {
             "nav_accessibility_label": "Navigačné tlačidlá revidovaných objednávok"
+          },
+          "pending_orders_count_more_than_pagination_length": "Viac ako {{count}}"
+        },
+        "order_list_column_headers_location": "Lokalita",
+        "removed_company_contact_tooltip": "Odobrané zo spoločnosti"
+      },
+      "draft_order_details": {
+        "payment_status": {
+          "draft": {
+            "submitted": {
+              "description": "Odošlite platbu, aby ste potvrdili túto objednávku."
+            }
+          },
+          "paid": {
+            "description": "Vaša objednávka je plne uhradená.",
+            "title_with_date": "Zaplatené dňa {{date}}"
           }
         }
       }
