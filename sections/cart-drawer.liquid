@@ -1,3 +1,9 @@
+<script src="{{ 'card-product-colors.js' | asset_url }}" defer="defer"></script>
+<link rel="stylesheet" href="{{ 'component-card-product-colors.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-tooltip.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-tooltip.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-card-product-colors.css' | asset_url | stylesheet_tag }}</noscript>
+
 <cart-drawer class="flex drawer drawer--cart{% if cart == empty %} is-empty{% endif %} h100">
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay"class="cart-drawer__overlay drawer__overlay"></div>
@@ -95,10 +101,19 @@
                               <dl>
                                 {%- if item.product.has_only_default_variant == false -%}
                                   {%- for option in item.options_with_values -%}
-                                    <div class="product-option light">
-                                      <dt>{{ option.name }}: </dt>
-                                      <dd>{{ option.value }}</dd>
-                                    </div>
+                                      {% if option.name == settings.color_name %}
+                                        <div class="product-option light">
+                                          <dt>{{ option.name }}: </dt>
+                                          <dd class="pl-1">
+                                            {% render 'card-product-colors', only_specific_color: option.value %}
+                                          </dd>
+                                        </div>
+                                      {% else %}
+                                        <div class="product-option light">
+                                          <dt>{{ option.name }}: </dt>
+                                          <dd>{{ option.value }}</dd>
+                                        </div>
+                                      {% endif %}
                                   {%- endfor -%}
                                 {%- endif -%}
 

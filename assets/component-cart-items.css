@@ -129,6 +129,8 @@
 }
 
 .product-option {
+  display: flex;
+  align-items: center;
   font-size: 1.4rem;
   word-break: break-all;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
@@ -184,8 +186,11 @@ cart-remove-button .link {
 }
 
 .product-option * {
-  display: inline;
   margin: 0;
+}
+
+.pl-1 {
+  padding-left: 1rem;
 }
 
 .cart-items thead th {
