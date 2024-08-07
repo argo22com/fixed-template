@@ -9,7 +9,12 @@
 <script src="{{ 'details-accordion.js' | asset_url }}" defer="defer"></script>
 {%- if section.settings.show_shipping_calculator or request.design_mode -%}
   <script src="{{ 'shipping-calculator.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}  
+{%- endif -%}
+<script src="{{ 'card-product-colors.js' | asset_url }}" defer="defer"></script>
+<link rel="stylesheet" href="{{ 'component-card-product-colors.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-tooltip.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-tooltip.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-card-product-colors.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -83,7 +88,7 @@
                               <p class="caption light cart-item__vendor">{{ item.product.vendor }}</p>
                             {%- endif -%}
 
-                            <a href="{{ item.url }}" class="cart-item__name h4 font-heading-bold">{{ item.product.selected_or_first_available_variant.metafields.product_texts.title | escape }}</a>
+                            <a href="{{ item.url }}" class="cart-item__name h4 font-heading-bold">{{ item.variant.metafields.product_texts.title | escape }}</a>
 
                             {%- if item.original_price != item.final_price -%}
                               <div class="cart-item__discounted-prices small-hide medium-hide">
@@ -111,8 +116,20 @@
                                 {%- if item.product.has_only_default_variant == false -%}
                                   {%- for option in item.options_with_values -%}
                                     <div class="product-option light">
+                                    {% if option.name == settings.color_name %}
+                                      <dt>{{ option.name }}: </dt>
+                                      <dd class="pl-1">
+                                        {% render 'card-product-colors', only_specific_color: option.value %}
+                                      </dd>
+                                    {% elsif option.name == settings.phone_name %}
+                                      {% assign phone_code = option.value | strip %}
+                                      {% assign phone_handle = 'phone-code-' | append: phone_code %}
+                                      <dt>{{ option.name }}: </dt>
+                                      <dd>{{ shop.metaobjects.phone_properties[phone_handle].model.value }}</dd>
+                                    {% else %}
                                       <dt>{{ option.name }}: </dt>
                                       <dd>{{ option.value }}</dd>
+                                    {% endif %}
                                     </div>
                                   {%- endfor -%}
                                 {%- endif -%}
