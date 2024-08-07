@@ -606,6 +606,10 @@
       },
       "dismiss_toast": "Zavrieť",
       "document_title": "{{sectionName}} – {{shopName}} – Účet"
+    },
+    "account_information": {
+      "loading_accessibility_message": "Načítají se informace o účtu",
+      "loading_finished_accessibility_message": "Informácie o účte boli načítané"
     }
   }
 }
