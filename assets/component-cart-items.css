@@ -130,6 +130,7 @@
 
 .product-option {
   display: flex;
+  gap: 1rem;
   align-items: center;
   font-size: 1.4rem;
   word-break: break-all;
@@ -187,10 +188,6 @@ cart-remove-button .link {
 
 .product-option * {
   margin: 0;
-}
-
-.pl-1 {
-  padding-left: 1rem;
 }
 
 .cart-items thead th {
