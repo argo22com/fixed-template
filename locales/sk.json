@@ -798,6 +798,10 @@
           "expand_events_accessibility_label": "Zobraziť podrobnosti návrhu objednávky",
           "hide_events_accessibility_label": "Skryť podrobnosti návrhu objednávky"
         }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "Pridajte číslo nákupnej objednávky",
+        "add_modal_title": "Pridajte číslo nákupnej objednávky"
       }
     }
   }
