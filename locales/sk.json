@@ -666,6 +666,20 @@
       "group_title_label": "Súčasť balíčka: {{groupTitle}}",
       "let_us_know": "Dajte nám o tom vedieť",
       "if_you_didnt_receive_this": "Ak ste tovar nedostali,"
+    },
+    "order_details": {
+      "payment": {
+        "status_in_review": "Platba splatná po  kontrole",
+        "status_unpaid": "Splatnosť: {{date}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "Zaplatené pomocou Splátok Shop Pay",
+          "view_schedule": "Zobraziť splátkový kalendár"
+        },
+        "manual_payment_methods": {
+          "money_order": "Poštová poukážka\/zloženka: {{formatted Transaction Amount}}",
+          "bank_deposit": "Bankový prevod: {{formattedTransactionAmount}}"
+        }
+      }
     }
   }
 }
