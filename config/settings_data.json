@@ -859,7 +859,7 @@
           "solid_button_background_primary": "#00a9e0",
           "review_stars": "#dc4405",
           "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(0, 169, 224, 1) 0.05%, rgba(0, 169, 224, 1) 99.95%)",
-          "text_message_success": "#76787b",
+          "text_message_success": "#00a9e0",
           "background_message_success": "#effdf4",
           "text_message_warning": "#a06207",
           "background_message_warning": "#fefce8",
