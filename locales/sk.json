@@ -687,6 +687,20 @@
       "returns": {
         "ineligible_return_message": "Žiadne položky v tejto objednávke nespĺňajú podmienky pre vrátenie.",
         "ineligible_return_message_when_returned": "Žiadne ďalšie položky v tejto objednávke nespĺňajú podmienky pre vrátenie."
+      },
+      "no_data_provided_accessibility_label": "Pole {{fieldName}} je prázdne.",
+      "marketing_checkbox_label": "Posielajte mi informácie o novinkách a ponuky e-mailom",
+      "marketing_checkmark_label": "Prihlásili ste sa na odber e-mailových noviniek a ponúk",
+      "image_gallery": {
+        "product_name_and_quantity": "Množstvo produktu {{productName}}: {{quantity}}"
+      },
+      "shop_order_tracking": {
+        "download_shop_to_track": "Stiahnite si aplikáciu Shop umožňujúcu sledovanie balíčka",
+        "track_order_with_shop": "Sledovať objednávku cez Shop",
+        "real_time_delivery_updates": "Aplikácia Shop vám bude po vyexpedovaní objednávky posielať aktuálne informácie o doručení v reálnom čase."
+      },
+      "shop_pay": {
+        "learn_more": "Zistiť viac"
       }
     }
   }
