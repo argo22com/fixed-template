@@ -43,6 +43,16 @@
                             assign available_tab = true
                         when 'recommendations'
                             assign available_tab = true
+                        when 'size_chart_page'
+                          assign available_tab = false
+
+                          assign size_chart = product.metafields.size_charts.size_chart.value | first
+                          if size_chart != blank
+                            assign product_detail_tab_page = size_chart.metafields.page_attributes.product_detail_tab_page.value
+                            if product_detail_tab_page != blank
+                              assign available_tab = true
+                            endif
+                          endif
                         else
                             if block.settings.namespace_key == blank
                                 assign available_tab = false
@@ -168,6 +178,8 @@
                                     {% comment %}App block will be used only for reviews{% endcomment %}
                                 {% when '@app' %}
                                     {% render block %}
+                                {% when 'size_chart_page' %}
+                                  {{ product_detail_tab_page.content }}
                                 {%- when 'metafields' -%}
                                     {%- if block.settings.namespace_key != blank -%}
                                         {%- assign metafield_parts = block.settings.namespace_key | split: '.' -%}
@@ -1333,6 +1345,18 @@
           "type": "page",
           "id": "page",
           "label": "t:sections.main-product-tabs.blocks.page_content.settings.page.label"
+        }
+      ]
+    },
+    {
+      "type": "size_chart_page",
+      "name": "t:sections.main-product-tabs.blocks.size_chart_page.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Page content",
+          "label": "t:sections.main-product-tabs.blocks.all.settings.title.label"
         }
       ]
     },

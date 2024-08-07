@@ -5651,6 +5651,9 @@
             }
           }
         },
+        "size_chart_page": {
+          "name": "Size chart page"
+        },
         "files": {
           "name": "Files"
         },
