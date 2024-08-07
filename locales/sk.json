@@ -771,6 +771,19 @@
           "paid": {
             "description": "Vaša objednávka je plne uhradená.",
             "title_with_date": "Zaplatené dňa {{date}}"
+          },
+          "pending": {
+            "banner_overdue": {
+              "other": "Vaša platba je {{count}} dní po splatnost",
+              "few": "Vaša platba je {{count}} dní po splatnost",
+              "many": "Vaša platba je {{count}} dní po splatnost"
+            },
+            "banner_due": {
+              "other": "Vaša platba je splatná za {{count}} dní",
+              "few": "Vaša platba je splatná za {{count}} dní",
+              "many": "Vaša platba je splatná za {{count}} dní"
+            },
+            "title_due_on_fulfillment": "Splatnosť platby pri plnení"
           }
         }
       }
