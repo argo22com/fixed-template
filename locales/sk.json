@@ -709,7 +709,13 @@
         "desktop_qr_code_content": {
           "title": "Vyhľadať pripomenutie"
         }
+      },
+      "fees": {
+        "return_shipping_fee": "Doprava vráteného tovaru"
       }
+    },
+    "addresses": {
+      "cancel_deletion_button_accessibility_label": "Zrušiť odstraňovanie adresy {{address}}"
     }
   }
 }
