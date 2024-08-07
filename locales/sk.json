@@ -701,6 +701,14 @@
       },
       "shop_pay": {
         "learn_more": "Zistiť viac"
+      },
+      "pickup": {
+        "pickup_point": "Odberné miesto"
+      },
+      "paid_with_shop_pay_installments_card": {
+        "desktop_qr_code_content": {
+          "title": "Vyhľadať pripomenutie"
+        }
       }
     }
   }
