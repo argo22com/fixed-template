@@ -499,7 +499,7 @@
       "default": "Predvolené",
       "add_new": "Pridať novú adresu",
       "edit_address": "Upraviť adresu",
-      "first_name": "Priezvisko",
+      "first_name": "Meno",
       "company": "Spoločnosť",
       "address1": "Adresa 1",
       "address2": "Adresa 2",
@@ -514,7 +514,8 @@
       "cancel": "Zrušiť",
       "edit": "Upraviť",
       "delete": "Odstrániť",
-      "delete_confirm": "Naozaj chcete túto adresu odstrániť?"
+      "delete_confirm": "Naozaj chcete túto adresu odstrániť?",
+      "last_name": "Priezvisko"
     },
     "login_page": {
       "cancel": "Zrušiť",
