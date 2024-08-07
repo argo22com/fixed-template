@@ -784,7 +784,19 @@
               "many": "Vaša platba je splatná za {{count}} dní"
             },
             "title_due_on_fulfillment": "Splatnosť platby pri plnení"
-          }
+          },
+          "refund": {
+            "title": "Vrátené peniaze",
+            "title_with_date": "Dátum vrátenia peňazí: {{date}}",
+            "description_full_refund": "Za túto objednávku vám boli vrátené peniaze v plnej výške.",
+            "description_single_refund": "Za túto objednávku vám boli čiastočne vrátené peniaze.",
+            "description_multiple_refunds": "Za túto objednávku vám boli čiastočne vrátené peniaze."
+          },
+          "pay_now_accessibility_label": "Zaplatiť hneď za objednávku {{orderName}}"
+        },
+        "order_timeline": {
+          "expand_events_accessibility_label": "Zobraziť podrobnosti návrhu objednávky",
+          "hide_events_accessibility_label": "Skryť podrobnosti návrhu objednávky"
         }
       }
     }
