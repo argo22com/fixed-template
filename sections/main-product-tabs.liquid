@@ -30,20 +30,6 @@
                                 assign available_tab = false
                             endif
                         when 'page_content'
-                            if block.settings.allowed_skus != blank
-                                assign sku_exists = false
-                                assign sku_list = block.settings.allowed_skus | split: ','
-                                for sku in sku_list
-                                    if product.selected_or_first_available_variant.sku contains sku
-                                        assign sku_exists = true
-                                        break
-                                    endif
-                                endfor
-
-                                if sku_exists == false
-                                    assign available_tab = false
-                                endif
-                            endif
                             if block.settings.page == blank
                                 assign available_tab = false
                             endif
@@ -57,6 +43,16 @@
                             assign available_tab = true
                         when 'recommendations'
                             assign available_tab = true
+                        when 'size_chart_page'
+                          assign available_tab = false
+
+                          assign size_chart = product.metafields.size_charts.size_chart.value | first
+                          if size_chart != blank
+                            assign product_detail_tab_page = size_chart.metafields.page_attributes.product_detail_tab_page.value
+                            if product_detail_tab_page != blank
+                              assign available_tab = true
+                            endif
+                          endif
                         else
                             if block.settings.namespace_key == blank
                                 assign available_tab = false
@@ -182,6 +178,10 @@
                                     {% comment %}App block will be used only for reviews{% endcomment %}
                                 {% when '@app' %}
                                     {% render block %}
+                                {% when 'size_chart_page' %}
+                                  <div class="rte">
+                                    {{ product_detail_tab_page.content }}
+                                  </div>
                                 {%- when 'metafields' -%}
                                     {%- if block.settings.namespace_key != blank -%}
                                         {%- assign metafield_parts = block.settings.namespace_key | split: '.' -%}
@@ -1347,12 +1347,18 @@
           "type": "page",
           "id": "page",
           "label": "t:sections.main-product-tabs.blocks.page_content.settings.page.label"
-        },
+        }
+      ]
+    },
+    {
+      "type": "size_chart_page",
+      "name": "t:sections.main-product-tabs.blocks.size_chart_page.name",
+      "settings": [
         {
           "type": "text",
-          "id": "allowed_skus",
-          "label": "t:sections.main-product-tabs.blocks.page_content.settings.allowed_skus.label",
-          "info": "t:sections.main-product-tabs.blocks.page_content.settings.allowed_skus.info"
+          "id": "title",
+          "default": "Page content",
+          "label": "t:sections.main-product-tabs.blocks.all.settings.title.label"
         }
       ]
     },

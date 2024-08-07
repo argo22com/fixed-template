@@ -172,8 +172,7 @@
           "type": "page_content",
           "settings": {
             "title": "Související produkty",
-            "page": "",
-            "allowed_skus": ""
+            "page": ""
           }
         },
         "files_dWmtVg": {
@@ -187,12 +186,10 @@
           "settings": {
           }
         },
-        "page_content_g4T3PM": {
-          "type": "page_content",
+        "size_chart_page_h8pBMk": {
+          "type": "size_chart_page",
           "settings": {
-            "title": "Výběr správné velikosti pouzdra",
-            "page": "jak-si-vybrat-spravnou-velikost-uni-pouzdra",
-            "allowed_skus": "FIXPOH-,FIXPOH2-,RPPOH-,RPSFH-,RPSFM-,RPSOS-,FIXPOM-,FIXPOM2-,FIXAB-,FIXCL-,FIXSOS-"
+            "title": "Výběr správné velikosti pouzdra"
           }
         }
       },
@@ -202,7 +199,7 @@
         "cbb96b5f-f683-42e5-b865-6ac18e11645e",
         "files_dWmtVg",
         "judge_me_reviews_review_widget_8VjJfr",
-        "page_content_g4T3PM"
+        "size_chart_page_h8pBMk"
       ],
       "settings": {
         "grid_layout": "grid",
