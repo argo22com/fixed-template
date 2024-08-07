@@ -723,6 +723,21 @@
     "address_form": {
       "loading_add_form_accessibility_message": "Načíta sa formulár pre novú adresu",
       "loading_edit_form_accessibility_message": "Načíta sa formulár na úpravu adresy"
+    },
+    "B2B": {
+      "locations": {
+        "payment_details_title": "Podrobnosti platby",
+        "permissions_label": "Vaše oprávnenie",
+        "permissions_title": "Oprávnenie",
+        "section_title": "Lokalita",
+        "shipping_address_required": "Pridajte do tejto lokality dodaciu adresu, aby bolo možné začať zadávať objednávky.",
+        "tax_id": "DIČ",
+        "pagination": {
+          "load_more_accessibility_label": "Načítať ďalšie lokality"
+        },
+        "staff_and_permissions_title": "Zamestnanci a oprávnenia",
+        "location_picker_accessibility_label": "Názov lokality: {{locationName}}"
+      }
     }
   }
 }
