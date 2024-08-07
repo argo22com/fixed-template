@@ -683,7 +683,11 @@
       "shipping": {
         "one_time": "Doprava pre jednorazový nákup"
       },
-      "fully_refunded_label": "VRÁTENÉ PENIAZE"
+      "fully_refunded_label": "VRÁTENÉ PENIAZE",
+      "returns": {
+        "ineligible_return_message": "Žiadne položky v tejto objednávke nespĺňajú podmienky pre vrátenie.",
+        "ineligible_return_message_when_returned": "Žiadne ďalšie položky v tejto objednávke nespĺňajú podmienky pre vrátenie."
+      }
     }
   }
 }
