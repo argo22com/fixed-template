@@ -652,6 +652,12 @@
             "end_date": "Koncový dátum"
           }
         }
+      },
+      "order_status": {
+        "canceled_description": "Vaša objednávka bola zrušená dňa {{date}}.",
+        "company_tracking_number": "{{company}} – číslo na sledovanie:",
+        "estimated_delivery": "Očakávaný dátum doručenia: {{date}}",
+        "in_review_description": "Ak budeme potrebovať ďalšie informácie alebo keď bude vaša objednávka potvrdená, dáme vám vedieť."
       }
     }
   }
