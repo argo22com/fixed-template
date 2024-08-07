@@ -657,7 +657,9 @@
         "canceled_description": "Vaša objednávka bola zrušená dňa {{date}}.",
         "company_tracking_number": "{{company}} – číslo na sledovanie:",
         "estimated_delivery": "Očakávaný dátum doručenia: {{date}}",
-        "in_review_description": "Ak budeme potrebovať ďalšie informácie alebo keď bude vaša objednávka potvrdená, dáme vám vedieť."
+        "in_review_description": "Ak budeme potrebovať ďalšie informácie alebo keď bude vaša objednávka potvrdená, dáme vám vedieť.",
+        "out_for_delivery_label": "Vyexpedované",
+        "out_for_delivery_title": "Vaša zásielka bola vyexpedovaná"
       }
     }
   }
