@@ -715,7 +715,10 @@
       }
     },
     "addresses": {
-      "cancel_deletion_button_accessibility_label": "Zrušiť odstraňovanie adresy {{address}}"
+      "cancel_deletion_button_accessibility_label": "Zrušiť odstraňovanie adresy {{address}}",
+      "delete_confirmation_button_accessibility_label": "Odstrániť adresu {{address}}",
+      "edit_button_accessibility_label": "Upraviť adresu {{address}}",
+      "edit_section_accessibility_label": "Upraviť adresu {{address}}"
     }
   }
 }
