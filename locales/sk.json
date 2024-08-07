@@ -679,7 +679,11 @@
           "money_order": "Poštová poukážka\/zloženka: {{formatted Transaction Amount}}",
           "bank_deposit": "Bankový prevod: {{formattedTransactionAmount}}"
         }
-      }
+      },
+      "shipping": {
+        "one_time": "Doprava pre jednorazový nákup"
+      },
+      "fully_refunded_label": "VRÁTENÉ PENIAZE"
     }
   }
 }
