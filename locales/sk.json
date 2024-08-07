@@ -737,6 +737,19 @@
         },
         "staff_and_permissions_title": "Zamestnanci a oprávnenia",
         "location_picker_accessibility_label": "Názov lokality: {{locationName}}"
+      },
+      "location_selection": {
+        "list_accessibility_label": "Zoznam lokalít",
+        "list_loading_accessibility_message": "Načíta sa zoznam lokalít",
+        "list_loading_address_accessibility_message": "Načíta sa adresa pre lokalitu {{locationName}}",
+        "list_loading_finished_accessibility_message": "Načítal sa zoznam lokalít",
+        "selection_confirmation_button": "Zvoliť lokalitu",
+        "title": "Pre ktorú lokalitu nakupujete?",
+        "no_location_title": "Iba osobné objednávky",
+        "no_location_description": "Nemáte už oprávnenie na zadávanie objednávok pre spoločnosť {{company}}. Môžete ale naďalej zadávať osobné objednávky.",
+        "no_locations_found": "Neboli nájdené žiadne lokality",
+        "search": "Vyhľadajte lokalitu",
+        "search_location_title": "Vyberte lokalitu"
       }
     }
   }
