@@ -395,8 +395,19 @@
                   {% liquid
                     assign display_value = value
                     if option.name == settings.phone_name
-                      assign phone_handle = 'phone-code-' | append: value | strip
-                      assign display_value = shop.metaobjects.phone_properties[phone_handle].model.value | default: value
+                      assign phone_code = value | strip
+
+                      paginate shop.metaobjects.phone_properties.values by 10000
+                        assign phone_properties = shop.metaobjects.phone_properties.values
+
+                        if phone_properties
+                          for phone_property in phone_properties
+                            if phone_property.code == phone_code
+                              assign display_value = phone_property.model.value | default: value
+                            endif
+                          endfor
+                        endif
+                      endpaginate
                     endif
                   %}
 
