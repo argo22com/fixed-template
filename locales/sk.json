@@ -659,7 +659,9 @@
         "estimated_delivery": "Očakávaný dátum doručenia: {{date}}",
         "in_review_description": "Ak budeme potrebovať ďalšie informácie alebo keď bude vaša objednávka potvrdená, dáme vám vedieť.",
         "out_for_delivery_label": "Vyexpedované",
-        "out_for_delivery_title": "Vaša zásielka bola vyexpedovaná"
+        "out_for_delivery_title": "Vaša zásielka bola vyexpedovaná",
+        "delivered": "Dodanie: {{date}}",
+        "status_timestamp": "Aktualizácia: {{date}}"
       }
     }
   }
