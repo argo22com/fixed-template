@@ -3031,6 +3031,40 @@
         "max_rows": {
           "label": "Maximum rows",
           "info": "The maximum number of rows to show before user needs to click a button. Leave empty to show all rows."
+        },
+        "button_header": {
+          "content": "Load more button"
+        },
+        "show_more_text": {
+          "label": "Button label"
+        },
+        "button_size": {
+          "label": "Button size",
+          "options_1": {
+            "label": "Small"
+          },
+          "options_2": {
+            "label": "Normal"
+          },
+          "info": "Not apply for the link style."
+        },
+        "button_style": {
+          "label": "Button style",
+          "options_1": {
+            "label": "Solid"
+          },
+          "options_2": {
+            "label": "Outline"
+          },
+          "options_3": {
+            "label": "Link"
+          }
+        },
+        "button_margin_top": {
+          "label": "Button top margin"
+        },
+        "button_margin_bottom": {
+          "label": "Button bottom margin"
         }
       },
       "blocks": {

@@ -438,9 +438,6 @@
       "list": "Gallery items",
       "item_id_label": "Gallery item #{{ item_number }}"
     },
-    "gallery_lightbox": {
-      "load_more": "Nahrát více fotek"
-    },
     "product_tabs": {
       "reviews": {
         "title": "Hodnocení"

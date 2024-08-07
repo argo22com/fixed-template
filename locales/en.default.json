@@ -384,9 +384,6 @@
       "list": "Gallery items",
       "item_id_label": "Gallery item #{{ item_number }}"
     },
-    "gallery_lightbox": {
-      "load_more": "Load more pictures"
-    },
     "collection_list": {
       "view_all": "View all"
     },
