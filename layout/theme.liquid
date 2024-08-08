@@ -202,8 +202,77 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    <script type="text/javascript">
-      (function () {     var scr = document.createElement('script');     scr.type = 'text/javascript';     scr.charset = 'UTF-8';     scr.async = true;     scr.src = '//app.mluvii.com/widget/OOWidget.js';     scr.$owidgetOnLoad = function (owidget) {       if (!owidget.isSupported) { return; }       owidget.init(["8703a057-c4b9-4f1c-abc1-eb987962f4b4",715], "FIXED");       owidget.connectToServer();     };     var ffs = document.getElementsByTagName('script')[0];     ffs.parentNode.insertBefore(scr, ffs);   })();
+    <script defer src="https://static.cdn-apple.com/businesschat/start-chat-button/2/index.js"></script>
+
+    <script
+      type="text/javascript"
+    >
+                const mluviiServer = "//app.mluvii.com/widget/OOWidget.js";
+                const widgetGuid = "8703a057-c4b9-4f1c-abc1-eb987962f4b4";
+                const appleBussinessID = "0af3daf7-5f90-4c5e-8a5a-64a6c88b2ed1";
+                const appleIntent = "mluvii";
+                const widgetName = "FIXED";
+                const iconScale = 1.5;
+                const marginBottom = 20;
+                const marginRight = 20;
+                const widgetColor = "#ffffff";
+                const widgetBackgroundColor = "#00aae9";
+
+                // Kontrola podpory Apple Business Chat
+                function isAppleBusinessChatSupported() {
+                    return window.appleBusinessChat && window.appleBusinessChat.isSupported();
+                }
+
+                    console.log('Apple Business Chat supported:', isAppleBusinessChatSupported());
+
+                // Načtení mluvii nebo Apple Business Chat widgetu
+                if (!window.appleBusinessChat || !window.appleBusinessChat.isSupported()) { //if (!isAppleBusinessChatSupported()) {
+                    loadMluviiWidget();
+                    console.log('Webchat widget loaded!');
+                } else {
+                    loadAppleBusinessChat();
+                    console.log('Apple widget loaded!');
+                }
+
+
+                // Funkce pro načtení mluvii widgetu
+                function loadMluviiWidget() {
+                    let script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.charset = 'UTF-8';
+                    script.async = true;
+                    script.src = mluviiServer;
+                    script.$owidgetOnLoad = function (owidget) {
+                        if (!owidget.isSupported) return;
+                        owidget.init(widgetGuid, widgetName);
+                        owidget.connectToServer();
+                    };
+                    let firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
+                }
+                // Funkce pro načtení Apple Business Chat widgetu
+                function loadAppleBusinessChat() {
+                    let container = document.createElement('div');
+                    container.style.cssText = `position: fixed; bottom: ${marginBottom}px; right: ${marginRight}px; width: ${45 * iconScale}px; height: ${45 * iconScale}px; float: right; z-index: 9999;`;
+                    let widget = document.createElement('div');
+                    widget.className = 'apple-business-chat-message-container';
+                    widget.setAttribute('data-apple-business-id', appleBussinessID);
+                    widget.setAttribute('data-apple-business-intent-id', appleIntent);
+                    widget.setAttribute('data-apple-icon-scale', iconScale.toString());
+                    widget.setAttribute('data-apple-icon-color', widgetColor);
+                    widget.setAttribute('data-apple-icon-background-color', widgetBackgroundColor);
+                    container.appendChild(widget);
+                    console.log(container);
+                    document.body.appendChild(container);
+                }
+                // Funkce pro otevření chatu na základě zařízení
+                function openChatBasedOnDevice() {
+                    if (typeof $owidget !== 'undefined') {
+                        $owidget.openChat();
+                    } else {
+                        window.location.href = `https://bcrw.apple.com/urn:biz:${appleBussinessID}?biz-intent-id=${appleIntent}`;
+                    }
+                }
     </script>
   </head>
 
