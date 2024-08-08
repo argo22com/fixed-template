@@ -328,7 +328,7 @@
           data-hide-unavailable-options="true"
         {% endif %}
       >
-        <div class="js-product-form-input product-form__input product-form__input--dropdown{% unless forloop.first %} element-small-margin-top{% endunless %}">
+        <div class="js-product-form-input product-form__input product-form__input--dropdown product-form__input--larger{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <label
             class="form__label product-form__input__form-label"
             for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"

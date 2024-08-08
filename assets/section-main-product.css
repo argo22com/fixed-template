@@ -312,6 +312,10 @@ button.shopify-payment-button__button--unbranded {
   max-width: 25rem;
 }
 
+.product-form__input--larger {
+  max-width: 33rem;
+}
+
 .product-form__input--dropdown select {
   text-transform: capitalize;
 }
