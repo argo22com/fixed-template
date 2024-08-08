@@ -98,7 +98,7 @@
       "settings": {
         "products_per_page": 25,
         "columns_desktop": 5,
-        "pagination_style": "more",
+        "pagination_style": "numbers",
         "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,
