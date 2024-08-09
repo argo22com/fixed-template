@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-.cart-items td,
+.cart-items td:not(.alert),
 .cart-items th {
   padding: 0;
   border: none;
@@ -160,7 +160,7 @@ cart-remove-button .link {
 }
 
 .cart-item__error {
-  grid-row: end;
+  margin: 0;
   grid-column: 1 / end;
 }
 
@@ -172,7 +172,7 @@ cart-remove-button .link {
 .cart-item__error svg {
   flex-shrink: 0;
   width: 1.2rem;
-  margin-inline-end: 0.7rem;
+  margin-inline-end: 0.3rem;
 }
 
 .cart-item__error-text:empty + svg {

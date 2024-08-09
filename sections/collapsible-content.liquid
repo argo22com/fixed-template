@@ -46,7 +46,7 @@
           {%- for block in section.blocks -%}
             <details-accordion class="accordion db collapsible-content__item" {{ block.shopify_attributes }}>
               <details id="Details-{{ block.id }}-{{ section.id }}"{% if section.settings.open_first_collapsible_row and forloop.first %} open{% endif %}>
-                <summary class="summary-accordion summary-accordion--has-hover flex justify-space-between align-center por">
+                <summary class="summary-accordion summary-accordion--has-hover flex justify-space-between align-center por" id="Summary-{{ block.id }}-{{ section.id }}">
                   <div class="summary__title flex align-center flex-grow-1">
                     {% render 'icon-accordion', icon: block.settings.icon %}
                     <h2 class="h6 accordion__title font-heading-bold margin0">

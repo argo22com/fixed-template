@@ -72,6 +72,8 @@ function reloadSlideshow(event) {
       const parentMenu = event.target.closest('header-menu');
       parentMenu.classList.add('ignore-close');
       parentMenu.open();
+      const sectionHeader = event.target.closest('.section-header');
+      sectionHeader.classList.add('focus-by-admin');
     } else {
       const headerDrawer = document.getElementById('header-drawer-menu-mobile');
       const summaryElement = headerDrawer.querySelector('.header__icon--summary');
@@ -125,6 +127,8 @@ function reloadSlideshow(event) {
     const parentMenu = event.target.closest('header-menu');
     parentMenu.classList.remove('ignore-close');
     parentMenu.close();
+    const sectionHeader = event.target.closest('.section-header');
+    sectionHeader.classList.remove('focus-by-admin');
   }
 
   const blockSelectedIsRegionSupport = event.target.classList.contains('header__customer-support-region__region');

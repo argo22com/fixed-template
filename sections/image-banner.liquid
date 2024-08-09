@@ -170,7 +170,7 @@
               endif
             -%}
             {%- unless preload -%}
-              {{ section.settings.image | image_url: width: 1500 | image_tag:
+              {{ section.settings.image | image_url: width: 3840 | image_tag:
                 loading: 'lazy',
                 width: section.settings.image.width,
                 height: image_height,
@@ -179,7 +179,7 @@
                 widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
               }}
             {%- else -%}
-              {{ section.settings.image | image_url: width: 1500 | image_tag:
+              {{ section.settings.image | image_url: width: 3840 | image_tag:
                 preload: true,
                 fetchpriority: 'high',
                 width: section.settings.image.width,
@@ -243,13 +243,13 @@
             {%- when 'buttons' -%}
               <div class="banner__buttons{% unless forloop.first %} element-small-margin-top{% endunless %}{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %} align-center" {{ block.shopify_attributes }}>
                 {%- if block.settings.button_label_1 != blank -%}
-                  <a{% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% endif %} class="button-1--{{ section.id }}{% if block.settings.button_style_1 != 'link' %} button button--{{ block.settings.button_style_1 }}{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
+                  <a{% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% if block.settings.button_open_new_tab_1 %} target="_blank"{% endif %}{% endif %} class="button-1--{{ section.id }}{% if block.settings.button_style_1 != 'link' %} button button--{{ block.settings.button_style_1 }}{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
                     <span>{{ block.settings.button_label_1 | escape }}</span>
                     {%- if block.settings.button_style_1 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
                   </a>
                 {%- endif -%}
                 {%- if block.settings.button_label_2 != blank -%}
-                  <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button button-2--{{ section.id }}{% if block.settings.button_style_2 != 'link' %} button button--{{ block.settings.button_style_2 }}{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
+                  <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% if block.settings.button_open_new_tab_2 %} target="_blank"{% endif %}{% endif %} class="button button-2--{{ section.id }}{% if block.settings.button_style_2 != 'link' %} button button--{{ block.settings.button_style_2 }}{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
                     <span>{{ block.settings.button_label_2 | escape }}</span>
                     {%- if block.settings.button_style_2 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
                   </a>
@@ -772,6 +772,12 @@
           "default": "primary"
         },
         {
+          "type": "checkbox",
+          "id": "button_open_new_tab_1",
+          "label": "t:sections.all.open_link_in_new_tab.label",
+          "default": false
+        },
+        {
           "type": "text",
           "id": "button_label_2",
           "default": "Button label",
@@ -802,6 +808,12 @@
             }
           ],
           "default": "primary"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_open_new_tab_2",
+          "label": "t:sections.all.open_link_in_new_tab.label",
+          "default": false
         }
       ]
     },

@@ -6,7 +6,7 @@
         <h2 class="drawer__heading margin0 h4 font-heading-bold">{{ 'sections.cart.title' | t }}</h2>
         <button class="drawer__close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
       </div>
-      {%- if section.settings.show_free_shipping_bar -%}
+      {%- if section.settings.show_free_shipping_bar and settings.free_shipping_enable -%}
         <div>
           {%- render 'free-shipping-bar', wrapper_classes: 'cart-drawer__free-shipping-bar', no_progress_margin: true -%}
         </div>
@@ -57,7 +57,7 @@
               {%- if cart != empty -%}
                 <div class="drawer__cart-items-wrapper">
                   <table class="cart-items cart-items--drawer" role="table">
-                  <tbody role="rowgroup">
+                    <tbody role="rowgroup">
                       {%- for item in cart.items -%}
                         <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item{% unless forloop.first %} cart-item--border{% endunless %}" role="row">
                           <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
@@ -138,14 +138,20 @@
                             <div class="cart-item__quantity-wrapper w100 flex justify-space-between align-center por">
                               <quantity-input class="quantity flex align-center color-foreground por">
                                 <input class="quantity__input flex-grow-1 center background-input"
-                                    type="number"
-                                    name="updates[]"
-                                    value="{{ item.quantity }}"
-                                    id="Drawer-quantity-{{ item.index | plus: 1 }}"
-                                    min="0"
-                                    aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
-                                    data-index="{{ item.index | plus: 1 }}"
-                                  >
+                                  type="number"
+                                  data-quantity-variant-id="{{ item.variant.id }}"
+                                  name="updates[]"
+                                  value="{{ item.quantity }}"
+                                  id="Drawer-quantity-{{ item.index | plus: 1 }}"
+                                  min="0"
+                                  data-min="{{ item.variant.quantity_rule.min }}"
+                                  {% if item.variant.quantity_rule.max != null %}
+                                    max="{{ item.variant.quantity_rule.max }}"
+                                  {% endif %}
+                                  step="{{ item.variant.quantity_rule.increment }}"
+                                  aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
+                                  data-index="{{ item.index | plus: 1 }}"
+                                >
                                 <div class="quantity__buttons flex flex-column flex-grow-1 small-hide">    
                                   <button class="quantity__button flex justify-center align-center no-js-hidden w100 color-foreground" name="plus" type="button">
                                     <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
@@ -155,7 +161,7 @@
                                   </button>
                                   <button class="quantity__button flex justify-center align-center no-js-hidden w100 color-foreground" name="minus" type="button">
                                     <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
-                                    {%- unless item.quantity == 1 -%}
+                                    {%- unless item.quantity == item.variant.quantity_rule.increment -%}
                                       <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.6666 1.16663L5.99992 5.83329L1.33325 1.16663" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                                       </svg>
@@ -180,7 +186,7 @@
                             </div>
                           </td>
 
-                          <td class="cart-item__totals flex justify-space-between align-center flex-wrap" role="cell" headers="CartDrawer-ColumnTotal">
+                          <td class="cart-drawer__item-total cart-item__totals flex justify-space-between align-center flex-wrap" role="cell" headers="CartDrawer-ColumnTotal">
                             <div class="cart-item__price-wrapper">
                               {%- if item.original_line_price != item.final_line_price -%}
                                 <div class="cart-item__discounted-prices">
@@ -198,9 +204,9 @@
                                   </strong>
                                 </div>
                               {%- else -%}
-                              <span class="price price--end">
-                                {%- render 'price-format', price: item.original_line_price -%}
-                              </span>
+                                <span class="price price--start">
+                                  {%- render 'price-format', price: item.original_line_price -%}
+                                </span>
                               {%- endif -%}
 
                               {%- if item.variant.available and item.unit_price_measurement -%}
@@ -216,6 +222,7 @@
                                 </div>
                               {%- endif -%}
                             </div>
+                            {%- render 'cart-item-volume-pricing', item: item, show_note: true, in_drawer: true -%}
                           </td>
                           <td id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}" class="cart-item__error alert alert--error hidden margin-top-1rem alert--small flex align-start" role="alert">
                             <small class="cart-item__error-text"></small>
@@ -342,7 +349,7 @@
             {%- case block.type -%}
               {%- when 'subtotal' -%}
                 <div class="cart-drawer__footer cart-drawer__footer--subtotal" {{ block.shopify_attributes }}>
-                  <div class="totals flex justify-space-between align-end" role="status">
+                  <div class="totals flex justify-space-between align-end flex-wrap" role="status">
                     <h2 class="totals__subtotal font-heading-bold uppercase h4">{{ 'sections.cart.subtotal' | t }}</h2>
                     <p class="totals__subtotal-value price font-body-semi-bold">
                       {%- render 'price-format', price: cart.total_price -%}
@@ -433,6 +440,9 @@
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'cart-product-recommendation.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'cart-drawer-product-recommendation-item.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+{%- if customer.b2b? -%}
+  <link rel="stylesheet" href="{{ 'component-volume-pricing.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
 {% schema %}

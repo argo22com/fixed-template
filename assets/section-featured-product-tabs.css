@@ -28,6 +28,7 @@
   inset-inline: 0;
   max-height: 100%;
   overflow: hidden;
+  height: 1px;
 }
 
 .fpt__bottom-actions {

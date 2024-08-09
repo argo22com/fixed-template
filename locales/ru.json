@@ -156,6 +156,7 @@
     "product": {
       "add_to_cart": "Добавить в корзину",
       "description": "Описание",
+      "pre_order": "Pre-order",
       "on_sale": "Распродажа",
       "product_variants": "Варианты товара",
       "share": "Поделиться этим продуктом",
@@ -169,7 +170,14 @@
         "label": "Количество",
         "input_label": "Количество: {{ product }}",
         "increase": "Увеличить количество {{ product }}",
-        "decrease": "Уменьшить количество {{ product }}"
+        "decrease": "Уменьшить количество {{ product }}",
+        "minimum_of": "Минимум {{ quantity }}",
+        "maximum_of": "Максимум {{ quantity }}",
+        "multiples_of": "Прирост: {{ quantity }}",
+        "in_cart_html": "В корзине: <strong class=\"quantity-cart\">{{ quantity }}</strong>",
+        "note": "Просмотреть правила количества позиций",
+        "min_of": "Мин. {{ quantity }}",
+        "max_of": "Макс. {{ quantity }}"
       },
       "price": {
         "from_price_html": "От {{ price }}",
@@ -202,17 +210,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Стоимость доставки</a> рассчитывается при оформлении заказа.",
       "choose_options": "Выберите варианты",
       "choose_product_options": "Выберите варианты для {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} — Недоступно",
+      "variant_sold_out_or_unavailable": "Вариант распродан или недоступен",
+      "inventory_in_stock": "В наличии",
+      "inventory_in_stock_show_count": "В наличии: {{ quantity }}",
+      "inventory_low_stock": "Заканчивается",
+      "inventory_low_stock_show_count": "Заканчивается. Осталось: {{ quantity }}",
+      "inventory_out_of_stock": "Нет в наличии",
+      "inventory_out_of_stock_continue_selling": "В наличии",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Оптовая цена",
+        "note": "Доступны оптовые цены",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "{{ price }}/кажд.",
+        "price_range": "{{ minimum }} — {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

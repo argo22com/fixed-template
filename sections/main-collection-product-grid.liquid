@@ -49,7 +49,7 @@
   if section.settings.enable_filtering and collection.filters.size > 0
     assign has_sidebar = true
   endif
-  if section.settings.categories_filter != blank
+  if section.settings.categories_filter != blank and section.settings.categories_filter.links.size > 0
     assign has_sidebar = true
   endif
 -%}
@@ -58,8 +58,6 @@
     @media screen and (max-width: 989px) {
       body {
         padding-bottom: 6rem;
-      }
-      body .floating-element {
         --floating-element-position: 7rem;
       }
     }
@@ -67,9 +65,9 @@
     @media screen and (max-width: 749px) {
       body {
         padding-bottom: 6rem;
+        --floating-element-position: 7rem;
       }
       body .floating-element {
-        --floating-element-position: 7rem;
       }
     }  
   {%- endif -%}  
@@ -128,6 +126,7 @@
     assign include_collection = false  
   endif
   assign promotion_tile_blocks = section.blocks | where: "type", "promotion_tile"
+  assign count_index = 0
 -%}
 
 <div class="section-{{ section.id }}-padding">
@@ -220,7 +219,12 @@
                       for index_str in promo_ids_at_position
                         assign index_int = index_str | plus: 0
                         if promotion_tile_blocks[index_int] != blank
-                          render 'main-collection-product-grid-promotion-tile', promo_block: promotion_tile_blocks[index_int]
+                          assign count_index = count_index | plus: 1
+                          assign use_animate = true
+                          if count_index < 3
+                            assign use_animate = false
+                          endif  
+                          render 'main-collection-product-grid-promotion-tile', promo_block: promotion_tile_blocks[index_int], use_animate: use_animate
                         endif
                       endfor
                       assign used_ids = ids | join: ',' | append: ';' | prepend: index_key
@@ -230,9 +234,14 @@
                 -%}
                 <li class="grid__item">
                   {%-liquid
-                    assign no_lazy_load = true
-                    if forloop.index > 1
-                      assign no_lazy_load = false
+                    assign no_lazy_load = false
+                    if section.settings.preload_first_image and count_index == 1
+                      assign no_lazy_load = true
+                    endif
+                    assign count_index = count_index | plus: 1
+                    assign use_animate = true
+                    if count_index < 3
+                      assign use_animate = false
                     endif  
                   -%} 
                   {%- render 'card-product',
@@ -251,7 +260,7 @@
                     include_collection: include_collection,
                     full_on_mobile: full_on_mobile,
                     small_space_on_large_screen: small_space_on_large_screen,
-                    allow_effect: true
+                    allow_effect: use_animate
                   -%}
                 </li>
               {%- endfor -%}
@@ -263,7 +272,12 @@
                     for index_str in promo_ids_at_position
                       assign index_int = index_str | plus: 0
                       if promotion_tile_blocks[index_int] != blank
-                        render 'main-collection-product-grid-promotion-tile', promo_block: promotion_tile_blocks[index_int]
+                        assign count_index = count_index | plus: 1
+                        assign use_animate = true
+                        if count_index < 3
+                          assign use_animate = false
+                        endif  
+                        render 'main-collection-product-grid-promotion-tile', promo_block: promotion_tile_blocks[index_int], use_animate: use_animate
                       endif
                     endfor
                   endfor
@@ -277,7 +291,9 @@
                   {% render 'pagination', paginate: paginate, anchor: '' %}
                 </collection-pagination-numbers>
               {%- else -%}
-                <script src="{{ 'collection-infinite-more.js' | asset_url }}" defer="defer"></script>
+                {%- unless request.design_mode -%}
+                  <script src="{{ 'collection-infinite-more.js' | asset_url }}" defer="defer"></script>
+                {%- endunless -%}
                 {%- if paginate.next -%}
                   <div class="w100 flex justify-center">
                     {%- if section.settings.pagination_style == 'infinite' -%}
@@ -350,6 +366,9 @@
     {%- endfor -%}
   {% endstyle %}
 {%- endif -%}  
+{%- if request.design_mode -%}
+  <script src="{{ 'collection-infinite-more.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 
 {% schema %}
 {
@@ -360,7 +379,7 @@
       "type": "range",
       "id": "products_per_page",
       "min": 8,
-      "max": 36,
+      "max": 48,
       "step": 1,
       "default": 16,
       "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
@@ -393,6 +412,12 @@
         }
       ],
       "default": "numbers"
+    },
+    {
+      "type": "checkbox",
+      "id": "preload_first_image",
+      "label": "t:sections.main-collection-product-grid.settings.preload_first_image.label",
+      "default": true
     },
     {
       "type": "header",

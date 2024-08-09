@@ -71,6 +71,10 @@ button.cart-drawer__recommendation-item__button.loading .loading-overlay__spinne
   margin: 1.6rem -2rem;
 }
 
+.cart-drawer__item-total {
+  gap: 1rem;
+}
+
 .cart-drawer__recommendation__slider-buttons {
   column-gap: 1.5rem;
 }
@@ -89,13 +93,16 @@ button.cart-drawer__recommendation-item__button.loading .loading-overlay__spinne
     overflow: auto;
   }
 
-  cart-drawer.busy .drawer__inner {
-    overflow: hidden;
-  }
-
   .cart-drawer__footer__action-content.appear  {
     max-height: 100vh;
   }
+}
+
+@media screen and (min-height: 651px) {
+  cart-drawer .drawer__inner {
+    overflow: hidden;
+  }
+  
 }
 
 .cart-drawer .cart-items thead {

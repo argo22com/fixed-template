@@ -114,6 +114,7 @@
 		--product-card-shadow-distance: {% if settings.card_buttons == 'hover' %}8rem{% else %}1.5rem{% endif %};
 		
 		--collection-card-text-alignment: var(--{{ settings.collection_card_text_alignment }}-holder);
+		--collection-card-border-radius: {% unless settings.collection_show_text_below %}1.6{% else %}1.2{% endunless %}rem;
 		
 		--color-sale-badge-foreground: {{ settings.sale_badge_text_color.red }}, {{ settings.sale_badge_text_color.green }}, {{ settings.sale_badge_text_color.blue }};
 		--color-sale-badge-background: {{ settings.sale_badge_background.red }}, {{ settings.sale_badge_background.green }}, {{ settings.sale_badge_background.blue }};
@@ -223,6 +224,14 @@
 			row-gap: 0rem;
 		}
 	{%- endif -%}
+	{%- if settings.card_image_fit != 'cover' -%}
+		.card--product .media, .cart-item__media .media {
+  		background-color: transparent;
+  	}
+		.card--product .media > img, .cart-item__media .media > img {
+			object-fit: contain;
+		}
+	{%- endif -%}
 	{%- if settings.enable_appear_effect -%}
 		.js appear-animate-single {
 			transform: scale(1.5);
@@ -246,11 +255,17 @@
 			overflow: hidden;
 		}
 	{%- endif -%}
-	{%- if settings.collection_card_enable_overlay -%}
-		.card__heading--collection a:before {
-			content: "";
-		}
-	{%- endif -%}
+	{%- unless settings.collection_show_text_below -%}
+		{%- if settings.collection_card_enable_overlay -%}
+			.card__heading--collection a:before {
+				content: "";
+			}
+		{%- endif -%}
+	{%- else -%}
+		.card--collection {
+			row-gap: 1.6rem;
+		}	
+	{%- endunless -%}	
 	{%- if settings.card_buttons == 'hover' -%}
 		@media(hover: hover) and (min-width: 990px) {
 			.card__quick-buttons {

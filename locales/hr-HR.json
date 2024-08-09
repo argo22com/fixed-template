@@ -155,6 +155,7 @@
     "product": {
       "add_to_cart": "Dodaj u košaricu",
       "description": "Opis",
+      "pre_order": "Pre-order",
       "on_sale": "Rasprodaja",
       "product_variants": "Varijante proizvoda",
       "share": "Podijelite ovaj proizvod",
@@ -168,7 +169,14 @@
         "label": "Količina",
         "input_label": "Količina proizvoda {{ product }}",
         "increase": "Povećaj količinu proizvoda {{ product }}",
-        "decrease": "Smanji količinu proizvoda {{ product }}"
+        "decrease": "Smanji količinu proizvoda {{ product }}",
+        "minimum_of": "Minimalno {{ quantity }}",
+        "maximum_of": "Maksimalno {{ quantity }}",
+        "multiples_of": "Povećanje od {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> u košarici",
+        "note": "Prikaži pravila o količini",
+        "min_of": "Min. {{ quantity }}",
+        "max_of": "Maks. {{ quantity }}"
       },
       "price": {
         "from_price_html": "Od {{ price }}",
@@ -201,17 +209,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Poštarina </a> se obračunava prilikom završetka kupnje.",
       "choose_options": "Odaberite opcije",
       "choose_product_options": "Odaberite željene opcije za {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} – nedostupno",
+      "variant_sold_out_or_unavailable": "Model je prodan ili nedostupan",
+      "inventory_in_stock": "Dostupno",
+      "inventory_in_stock_show_count": "Br. dostupnih komada: {{ quantity }}",
+      "inventory_low_stock": "Preostalo malo komada",
+      "inventory_low_stock_show_count": "Preostalo malo komada: samo {{ quantity }}",
+      "inventory_out_of_stock": "Nema na zalihama",
+      "inventory_out_of_stock_continue_selling": "Dostupno",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Popust na količinu",
+        "note": "Dostupan je popust na količinu",
+        "minimum": "Više od {{ quantity }}",
+        "price_at_each": "{{ price }}/ea",
+        "price_range": "{{ minimum }} – {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

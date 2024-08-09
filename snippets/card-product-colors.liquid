@@ -6,11 +6,15 @@
       {%- assign color_size = card_product.options_by_name[color_name].values.size -%}	
       {%- for color in card_product.options_by_name[color_name].values limit: 5 -%}
         {%- liquid
-          assign variants = card_product.variants | where: attribute, color
-          assign variant_color = variants | where: 'featured_image' | first
-          unless variant_color
-            assign variant_color = variants | first
+          assign variant_color = color.variant
+          unless variant_color and variant_color.featured_image
+            assign variants = card_product.variants | where: attribute, color
+            assign variant_color = variants | where: 'featured_image' | first
+            unless variant_color
+              assign variant_color = variants | first
+            endunless
           endunless
+          
           assign srcset = ''
           if variant_color.featured_image != blank
             if variant_color.featured_image.width >= 165

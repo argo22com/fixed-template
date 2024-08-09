@@ -668,6 +668,7 @@ sticky-header header {
   background-color: rgb(var(--color-background));
   box-shadow: 0px 0px 5px 0px rgb(var(--color-foreground), 0.15);
   margin-inline-start: -0.9rem;
+  min-width: 13rem;
 }
 
 .global-settings-popup {
@@ -798,7 +799,7 @@ details[open] > summary > .icon-caret {
 /* Component scroll over image */
 
 .js appear-animate-list .card-wrapper--product {
-  transition: border 500ms ease;
+  transition: border,transform 500ms ease;
 }
 
 @media(min-width: 750px) {
@@ -1165,16 +1166,6 @@ back-to-top .icon {
     visibility: visible;
     pointer-events: auto;
   }
-}
-
-.card__heading a:after, .full-link:after {
-  bottom: 0.5rem;
-  content: "";
-  inset-inline: 0.5rem;
-  position: absolute;
-  top: 0.5rem;
-  z-index: 1;
-  outline-offset: 0.3rem;
 }
 
 .card__heading a:focus:after, .full-link:focus:after {

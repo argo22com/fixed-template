@@ -18,12 +18,38 @@
   elsif section.settings.media_size == 'small'
     assign media_width = 0.45
   endif
+  assign product_form_id = 'product-form-' | append: section.id
+  assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
+
+  assign check_against_inventory = true
+  assign quantity_rule_soldout = false
+  if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+    assign check_against_inventory = false
+  endif
+  if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+    assign quantity_rule_soldout = true
+  endif
+
+  assign has_qty_rules = false
+  if product.selected_or_first_available_variant.quantity_rule.increment > 1 or product.selected_or_first_available_variant.quantity_rule.min > 1 or product.selected_or_first_available_variant.quantity_rule.max != null
+    assign has_qty_rules = true
+  endif
+
+  assign has_vol_pricing = false
+  if product.selected_or_first_available_variant.quantity_price_breaks.size > 0
+    assign has_vol_pricing = true
+  endif
 -%}
 <quick-add-drawer class="flex drawer h100">
   {{ 'section-quick-add.css' | asset_url | stylesheet_tag }}
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+  
+  {%- if customer.b2b? -%}
+    {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+  {%- endif -%}
+
   <div id="QuickAddDrawer" class="quick-add-drawer {% if section.settings.image_fit %}quick-add-drawer--fit-media{% else %}quick-add-drawer--nofit-media{% endif %}">
     <div id="QuickAddDrawer-Overlay"class="drawer__overlay"></div>
     <div class="drawer__inner drawer__inner--small" role="dialog" aria-modal="true" aria-label=" {{ 'products.product.choose_options' | t | escape }}" tabindex="-1">
@@ -31,7 +57,13 @@
         <h2 class="drawer__heading margin0 h5 font-heading-bold">{{ 'products.product.choose_options' | t }}</h2>
         <button class="drawer__close" type="button" onclick="this.closest('.drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
       </div>
-      <div class="quick-add-main-product" data-section="{{ section.id }}">
+      <product-info
+        id="Quick-Add-{{ section.id }}"
+        class="quick-add-main-product" data-section="{{ section.id }}"
+        data-section="{{ section.id }}"
+        data-url="{{ product.url }}"
+        data-update-url="false"
+      >
         <div class="quick-add__main-info">
           <media-gallery id="MediaGallery-{{ section.id }}" role="region" class="product__media-gallery" aria-label="{{ 'products.product.media.gallery_viewer' | t }}">
             <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
@@ -71,11 +103,18 @@
           </media-gallery>
           <div class="quick-add__information">
             <a class="h4 link link--text font-heading-bold" href="{{ product.url }}">{{ product.title | escape }}</a>
-            <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center' -%}
+            <div class="no-js-hidden" id="price-{{ section.id }}" role="status">
+              {%-liquid
+                unless product.price_varies
+                  render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center'
+                else
+                  render 'main-product-price-per-item', product: product, section: section, price_classes: 'price price--large flex align-center'  
+                endunless
+              -%}
             </div>
+            {%- render 'main-product-volume-pricing-note', product: product, section_id: section.id, no_shadow: true -%}
             {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-              <div class="product__tax caption rte">
+              <div class="product__tax caption rte margin-top-1rem">
                 {%- if cart.taxes_included -%}
                   {{ 'products.product.include_taxes' | t }}
                 {%- endif -%}
@@ -84,7 +123,7 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
-            <div>
+            <div class="margin-top-1rem">
               {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
               {%- form 'product', product, id: product_form_installment_id, class: 'installment text-small' -%}
                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
@@ -94,8 +133,8 @@
           </div>
         </div>
         <div class="quick-add__actions small-margin-top product__sale-box product__info-box flex flex-column" id="ProductInfo-{{ section.id }}">
-          {%- render 'main-product-variant-picker', product: product, block: section, product_form_id: product_form_id -%}
-          <div class="product__sale-box__actions small-margin-top overflow-hidden">
+          {%- render 'main-product-variant-picker', product: product, block: section, product_form_id: product_form_id, picker_type: section.settings.picker_type, enable_color_swatches: section.settings.enable_color_swatches, color_swatches_style: section.settings.color_swatches_style -%}
+          <div class="product__sale-box__actions overflow-hidden product__sale-box__actions--quick-add">
             <product-form class="product-form">
               <div class="product-form__error-message-wrapper alert alert--error alert--small" role="alert" hidden>
                 <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
@@ -107,24 +146,26 @@
                 <span class="product-form__error-message"></span>
               </div>
 
-              {%- assign product_form_id = 'product-form-' | append: section.id -%}
               {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-            
-                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
-                <div class="quick-add__product-form-buttons flex flex-wrap {% if section.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}product-form__buttons-group{% else %}product-form__buttons-single{% endif %}">
+                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"{% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %} disabled{% endif %} class="product-variant-id">
+                <div class="quick-add__product-form-buttons product-form__buttons--input flex flex-wrap product-form__quantity-wrapper{% if has_qty_rules or has_vol_pricing %} product-form__wholesale{% endif %}{% unless section.settings.quantity_selector_enable %} product-form__buttons--no-quantity{% endunless %} {% if section.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}product-form__buttons-group{% else %}product-form__buttons-single{% endif %}" id="Quantity-Form-{{ section.id }}">
                   {%- if section.settings.quantity_selector_enable -%}
+                    {%- render 'main-product-quantity-label', cart_qty: cart_qty, section_id: section.id -%}
                     <div class="product-form__input product-form__quantity">
-                      <label class="form__label visually-hidden" for="Quantity-{{ section.id }}">
-                        {{ 'products.product.quantity.label' | t }}
-                      </label>
-        
                       <quantity-input class="quantity flex align-center color-foreground por">
                         <input class="quantity__input flex-grow-1 center background-input"
                             type="number"
                             name="quantity"
                             id="Quantity-{{ section.id }}"
-                            min="1"
-                            value="1"
+                            data-cart-quantity="{{ cart_qty }}"
+                            data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                            min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                            {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
+                              data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                              max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                            {% endif %}
+                            step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
+                            value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                             form="{{ product_form_id }}"
                           >
                         <div class="quantity__buttons flex flex-column flex-grow-1">    
@@ -148,34 +189,46 @@
                     type="submit"
                     name="add"
                     class="product-form__submit button flex flex-grow-1"
-                  {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                  {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %}
+                  {% if product.selected_or_first_available_variant.inventory_management == 'shopify' and product.selected_or_first_available_variant.inventory_quantity < product.selected_or_first_available_variant.quantity_rule.min and product.selected_or_first_available_variant.inventory_policy == 'continue' and settings.enable_pre_order_text %}data-pre-order="true"{% endif %}
                   >
-                      <span>
-                        {%- if product.selected_or_first_available_variant.available -%}
+                    <span>
+                      {%- if product.selected_or_first_available_variant.available and quantity_rule_soldout == false -%}
+                        {%- unless product.selected_or_first_available_variant.inventory_management == 'shopify' and product.selected_or_first_available_variant.inventory_quantity < product.selected_or_first_available_variant.quantity_rule.min and product.selected_or_first_available_variant.inventory_policy == 'continue' and settings.enable_pre_order_text -%}
                           {{ 'products.product.add_to_cart' | t }}
                         {%- else -%}
-                          {{ 'products.product.sold_out' | t }}
-                        {%- endif -%}
-                      </span>
-                      <div class="loading-overlay__spinner hidden">
-                        {%- render 'icon-cart-loading' -%}  
-                      </div>
+                          {{ 'products.product.pre_order' | t }}
+                        {%- endunless -%}  
+                      {%- else -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- endif -%}
+                    </span>
+                    <div class="loading-overlay__spinner hidden">
+                      {%- render 'icon-cart-loading' -%}  
+                    </div>
                   </button>
                   {%- if section.settings.show_dynamic_checkout -%}
                     {{ form | payment_button }}
                   {%- endif -%}
+                  {%- render 'main-product-quantity-rules', product: product, section_id: section.id -%}
+                  {%- render 'main-product-volume-pricing', product: product, section: section -%}
                 </div>
               {%- endform -%}
             </product-form>
           </div>
         </div>
-      </div>
+        {%- if product.quantity_price_breaks_configured? -%}
+          <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
+          <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
+        {%- endif -%}
+        {%- if product.media.size > 0 -%}
+          <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+          <link rel="stylesheet" href="{{ 'photoswipe.css' | asset_url }}" media="print" onload="this.media='all'">
+        {%- endif -%}
+      </product-info>
     </div>
   </div>
-  {%- if product.images.size > 0 -%}
-    <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
-    <link rel="stylesheet" href="{{ 'photoswipe.css' | asset_url }}" media="print" onload="this.media='all'">
-  {%- endif -%}
+  <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
 </quick-add-drawer>
 {% schema %}
 {

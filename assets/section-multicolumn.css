@@ -99,6 +99,19 @@
   height: min-content;
 }
 
+.multicolumn-card__link, .multicolumn-card__info__text a {
+  z-index: 2;
+}
+
+.multicolumn-card__info__text a {
+  position: relative;
+}
+
+.multicolumn-card__full-link:empty {
+  display: block;
+  margin-top: 0;
+}
+
 @media(max-width: 749px) {
   .multicolumn-list {
     margin: 0;

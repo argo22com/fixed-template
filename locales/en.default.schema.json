@@ -96,6 +96,16 @@
         "truncate_heading": {
           "label": "Number of truncated lines",
           "info": "Adjust the number of lines of the product heading you want to display. Leave zero to display the full heading."
+        },
+        "image_fit": {
+          "label": "Image fit",
+          "info": "Specify how an product image should be resized to fit its container.",
+          "options__1": {
+            "label": "Cover"
+          },
+          "options__2": {
+            "label": "Contain"
+          }
         }
       }
     },
@@ -113,6 +123,10 @@
         },
         "enable_overlay": {
           "label": "Enable overlay"
+        },
+        "show_text_below": {
+          "label": "Show collection content below images",
+          "info": "If enabled, the overlay and color scheme in collection cards will be ignored."
         }
       }
     },
@@ -161,6 +175,9 @@
           },
           "option_3": {
             "label": "Discount amount"
+          },
+          "option_4": {
+            "label": "None"
           }
         },
         "sold_out_badge_header": {
@@ -577,7 +594,7 @@
       "name": "Page heading banner",
       "settings": {
         "instruction": {
-          "content": "Not apply on the home page and product page."
+          "content": "Not applicable on the home page and product page."
         },
         "banner_image": {
           "label": "Banner image"
@@ -725,6 +742,17 @@
         },
         "show_inventory_quantity": {
           "label": "Show inventory count"
+        }
+      }
+    },
+    "pre_order_text": {
+      "name": "Pre-order text",
+      "settings": {
+        "enable_pre_order_text": {
+          "label": "Enable Pre-order text"
+        },
+        "description": {
+          "content": "When the selected variant is out of stock and is configured to continue selling when it is out of stock, the Add to cart button will display the Pre-order text instead of \"Add to cart\". Not applicable to the Add to Cart button in product cards."
         }
       }
     }
@@ -1605,6 +1633,9 @@
         "label": "Enable parallax scrolling effect",
         "info": "Only works when an image is presented.",
         "info_for_background": "Only works with the background image."
+      },
+      "open_link_in_new_tab": {
+        "label": "Open link in a new tab"
       }
     },
     "announcement-bar": {
@@ -2207,6 +2238,11 @@
         "show_content_first_in_desktop": {
           "label": "Show content first on desktop",
           "info": "Content first is always the default mobile and tablet layout"
+        },
+        "accessibility": {
+          "content": "Accessibility",
+          "label": "Section description",
+          "info": "Describe the section for customers using screen readers."
         }
       },
       "blocks": {
@@ -3187,6 +3223,10 @@
         "color_scheme_bottom": {
           "label": "Bottom color scheme",
           "info": "If the bottom color scheme has the same footer color scheme, the input field background will be used as the background color to make a difference."
+        },
+        "auto_fit": {
+          "label": "Automatically expand columns on desktop and tablet",
+          "info": "Only works when the number of columns is less than 4"
         }
       }
     },
@@ -3322,6 +3362,10 @@
         "show_go_to_link": {
           "label": "Add \"Go to\" links to dropdown menus on touch devices.",
           "info": "Add the link of a parent item in the submenu."
+        },
+        "always_use_standard_menu": {
+          "label": "Always use the standard dropdown menu when mega menu blocks are absent",
+          "info": "Not applicable when there are more than 10 secondary-level items."
         }
       },
       "blocks": {
@@ -3834,6 +3878,9 @@
             },
             "button_2_background": {
               "label": "Button 2 background"
+            },
+            "image_overlay_opacity": {
+              "label": "Video overlay opacity"
             }
           }
         }
@@ -4200,6 +4247,10 @@
           },
           "label": "Mobile content alignment"
         },
+        "color_icon": {
+          "label": "Icon",
+          "info": "Not applicable in the custom icon."
+        },
         "color_button_text": {
           "label": "Solid button label"
         },
@@ -4353,6 +4404,15 @@
               "option_4": {
                 "label": "Link"
               }
+            }
+          }
+        },
+        "icon": {
+          "name": "Icon",
+          "settings": {
+            "custom_icon": {
+              "label": "Custom icon",
+              "info": "Recommended size: 90x90 pixels or larger on the same ratio."
             }
           }
         }
@@ -4613,6 +4673,28 @@
         "collection_tree_data": {
           "label": "Collection tree data",
           "info": "Use Shopify Navigation to display dynamic subcollections based on the current viewing collection."
+        },
+        "preload_background_image": {
+          "label": "Preload background image"
+        },
+        "icon_size": {
+          "label": "Icon size",
+          "options__1": {
+            "label": "Small"
+          },
+          "options__2": {
+            "label": "Large"
+          }
+        },
+        "icon_border_shape": {
+          "label": "Icon border shape",
+          "info": "Only apply on custom icons.",
+          "options__1": {
+            "label": "Square"
+          },
+          "options__2": {
+            "label": "Circle"
+          }
         }
       },
       "blocks": {
@@ -4623,7 +4705,8 @@
               "label": "Collection"
             },
             "custom_icon": {
-              "label": "Custom icon"
+              "label": "Custom icon",
+              "info": "Recommended size: 130x130 or larger in the same ratio."
             }
           }
         },
@@ -4638,7 +4721,8 @@
               "info": "Pick a collection you want to insert icon"
             },
             "custom_icon": {
-              "label": "Custom icon"
+              "label": "Custom icon",
+              "info": "Recommended size: 130x130 or larger in the same ratio."
             }
           }
         }
@@ -4807,6 +4891,9 @@
         "read_more_button": {
           "label": "Read more button label",
           "info": "Visible when the description is not displayed in full."
+        },
+        "preload_first_image": {
+          "label": "Preload the first product image"
         }
       },
       "blocks": {
@@ -5404,10 +5491,6 @@
         "image_fit": {
           "label": "Image fit container"
         },
-        "enable_shopify_reviews_app_css": {
-          "label": "Enable custom styles for Shopify Product Reviews app",
-          "info": "For performance, turn off this setting when you don't use Shopify Product Reviews app."
-        },
         "auto_scroll_up_mobile": {
           "label": "Scroll up when changing options on mobile"
         },
@@ -5528,6 +5611,12 @@
               "label": "Icon label"
             }
           }
+        }
+      },
+      "settings": {
+        "enable_accordion_layout": {
+          "label": "Enable accordion content layout",
+          "info": "If enabled, product descriptions will be displayed separately."
         }
       },
       "presets": {
@@ -6350,6 +6439,9 @@
         },
         "notification_text": {
           "label": "Notification text"
+        },
+        "tick_notification_by_default": {
+          "label": "Tick the notification checkbox by default"
         },
         "content_position": {
           "label": "Content position",

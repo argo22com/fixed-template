@@ -43,6 +43,12 @@ if (!customElements.get('appear-animate-list')) {
         });
       });
     }
+
+    reset() {
+      if(!window.appearAnimate) return;
+      this.items = this.querySelectorAll('.appear-animate-item-in-list:not(.done)');
+      this.showElements();
+    }
   };
   
   customElements.define('appear-animate-list', AppearAnimateList);

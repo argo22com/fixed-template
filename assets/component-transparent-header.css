@@ -8,11 +8,11 @@
   background: var(--gradient-background);
   background-attachment: fixed;
   opacity: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .section-header .header__inner:before {
-  top: 0;
+  bottom: 0;
 }
 
 .header__menu-labels {

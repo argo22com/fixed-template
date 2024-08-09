@@ -73,7 +73,7 @@
           -%}
           <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
             {%- for block in section.blocks -%}
-              <{% if section.settings.enable_collapse and block.settings.heading != blank %}footer-collapse-block{% if section.settings.open_first_collapsible_row and forloop.first %} open{% endif %}{% else %}div{% endif %} class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+              <{% if section.settings.enable_collapse and block.settings.heading != blank %}footer-collapse-block{% if section.settings.open_first_collapsible_row and forloop.first %} open{% endif %}{% else %}div{% endif %} class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if section.settings.auto_fit %} flex-grow-1{% endif %}" {{ block.shopify_attributes }}>
                 {%- if block.type == 'store_information' and block.settings.footer_logo_enable -%}
                   <div class="footer__logo{% unless forloop.first %} footer__logo--margin-top-mobile{% endunless %} {{ block.settings.footer_logo_alignment }}">
                     {%- if block.settings.footer_logo != blank -%}
@@ -523,6 +523,13 @@
       "default": "background-1",
       "label": "t:sections.footer.settings.color_scheme_bottom.label",
       "info": "t:sections.footer.settings.color_scheme_bottom.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_fit",
+      "label": "t:sections.footer.settings.auto_fit.label",
+      "info": "t:sections.footer.settings.auto_fit.info",
+      "default": false
     },
     {
       "type": "header",

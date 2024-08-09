@@ -154,13 +154,21 @@
     "product": {
       "add_to_cart": "Læg i indkøbskurv",
       "description": "Beskrivelse",
+      "pre_order": "Pre-order",
       "on_sale": "Udsalg",
       "product_variants": "Produktvarianter",
       "quantity": {
         "label": "Antal",
         "input_label": "Antal for {{ product }}",
         "increase": "Øg antallet for {{ product }}",
-        "decrease": "Reducer antallet for {{ product }}"
+        "decrease": "Reducer antallet for {{ product }}",
+        "minimum_of": "Minimum på {{ quantity }}",
+        "maximum_of": "Maksimum på {{ quantity }}",
+        "multiples_of": "Intervaller på {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> i indkøbskurven",
+        "note": "Se mængderegler",
+        "min_of": "Min. {{ quantity }}",
+        "max_of": "Maks. {{ quantity }}"
       },
       "price": {
         "from_price_html": "Fra {{ price }}",
@@ -200,17 +208,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Levering</a> beregnes ved betaling.",
       "choose_options": "Vælg muligheder",
       "choose_product_options": "Vælg muligheder for {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} - Ikke tilgængelig",
+      "variant_sold_out_or_unavailable": "Varianten er udsolgt eller utilgængelig",
+      "inventory_in_stock": "På lager",
+      "inventory_in_stock_show_count": "{{ quantity }} på lager",
+      "inventory_low_stock": "Lav lagerbeholdning",
+      "inventory_low_stock_show_count": "Lav lagerbeholdning: {{ quantity }} tilbage",
+      "inventory_out_of_stock": "Ikke på lager",
+      "inventory_out_of_stock_continue_selling": "På lager",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Mængderabat",
+        "note": "Mængderabat tilgængelig",
+        "minimum": "Mere end {{ quantity }}",
+        "price_at_each": "{{ price }}/stk",
+        "price_range": "{{ minimum }} – {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

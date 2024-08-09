@@ -1,12 +1,13 @@
 <div class="flex collection-icon__item por"{% if icon_collection != blank %} aria-label="{{ icon_collection.title | escape }}"{% endif %}>
   {%- if custom_icon != blank -%}
+    {%- assign image_width = icon_size | times: 2 -%}
     {{
       custom_icon
-      | image_url: width: 50
-      | image_tag: class: 'icon collection-icon__item__custom-icon', loading: 'lazy'
+      | image_url: width: image_width, height: image_width
+      | image_tag: class: 'collection-icon__item__custom-icon', loading: 'lazy'
     }}
   {%- elsif icon -%}
-    {%- render 'icon-picker', icon: icon, icon_width: 34 -%}
+    {%- render 'icon-picker', icon: icon, icon_width: icon_size -%}
   {%- endif -%}
   <div class="flex flex-column collection-icon__item__info">
     {%- if icon_collection != blank -%}

@@ -154,13 +154,21 @@
     "product": {
       "add_to_cart": "Lägg i varukorgen",
       "description": "Beskrivning",
+      "pre_order": "Pre-order",
       "on_sale": "Rea",
       "product_variants": "Produktvarianter",
       "quantity": {
         "label": "Kvantitet",
         "input_label": "Kvantitet för {{ product }}",
         "increase": "Öka kvantitet för {{ product }}",
-        "decrease": "Minska kvantitet för {{ product }}"
+        "decrease": "Minska kvantitet för {{ product }}",
+        "minimum_of": "Minimum på {{ quantity }}",
+        "maximum_of": "Maximum på {{ quantity }}",
+        "multiples_of": "Ökningar i steg om {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> i varukorg",
+        "note": "Visa kvantitetsregler",
+        "min_of": "Min. {{ quantity }}",
+        "max_of": "Max. {{ quantity }}"
       },
       "price": {
         "from_price_html": "Från {{ price }}",
@@ -200,17 +208,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Frakt</a> beräknas i kassan.",
       "choose_options": "Välj alternativ",
       "choose_product_options": "Välj alternativ för {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} – inte tillgängligt",
+      "variant_sold_out_or_unavailable": "Varianten är slutsåld eller inte tillgänglig",
+      "inventory_in_stock": "I lager",
+      "inventory_in_stock_show_count": "{{ quantity }} i lager",
+      "inventory_low_stock": "Låg lagernivå",
+      "inventory_low_stock_show_count": "Låg lagernivå: {{ quantity }} kvar",
+      "inventory_out_of_stock": "Slut i lager",
+      "inventory_out_of_stock_continue_selling": "I lager",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Volymprissättning",
+        "note": "Volymprissättning är tillgängligt",
+        "minimum": "Fler än {{ quantity }}",
+        "price_at_each": "{{ price }}/styck",
+        "price_range": "{{ minimum }}–{{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

@@ -167,14 +167,14 @@
 
               {%- if block.settings.mobile_image == blank and forloop.first -%}
                 {%- if need_preload -%}
-                  {{ block.settings.image | image_url: width: 1500 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, preload: true, fetchpriority: 'high' }}
+                  {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, preload: true, fetchpriority: 'high' }}
                 {%- else -%}
-                  {{ block.settings.image | image_url: width: 1500 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy' }}  
+                  {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy' }}  
                 {%- endif -%}  
               {%- elsif block.settings.mobile_image -%}
-                {{ block.settings.image | image_url: width: 1500 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy', class: 'small-hide' }}
+                {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy', class: 'small-hide' }}
               {%- else -%}
-                {{ block.settings.image | image_url: width: 1500 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy' }}  
+                {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy' }}  
               {%- endif -%}  
               
               {%- if block.settings.mobile_image != blank -%}
@@ -228,7 +228,7 @@
               {%- endif -%}
               {%- if block.settings.button_label != blank -%}
                 <div class="banner__buttons{% if block.settings.text != blank or block.settings.heading != blank %} element-small-margin-top{% endif %}"> 
-                  <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button--{{ section.id }}-{{ block.id }}{% if block.settings.button_style != 'link' %} button button--{{ block.settings.button_style }} banner__button button--large button--bold{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
+                  <a{% if block.settings.link %} href="{{ block.settings.link }}"{% if block.settings.button_open_new_tab %} target="_blank"{% endif %}{% else %} role="link" aria-disabled="true"{% endif %} class="button--slideshow button--{{ section.id }}-{{ block.id }}{% if block.settings.button_style != 'link' %} button button--{{ block.settings.button_style }} banner__button button--large button--bold{% else %} link link-with-icon link-effect-no-underline align-center{% endif %}">
                     <span>
                       {%- capture price -%}
                         {%- if block.settings.price != blank -%}
@@ -242,11 +242,11 @@
                   </a>
                 </div>
               {%- endif -%}
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}" class="banner__full-link w100 h100" aria-labelledby="banner-heading-{{ section.id }}-{{ block.id }} banner-text-{{ section.id }}-{{ block.id }}"{% if block.settings.button_open_new_tab %} target="_blank"{% endif %}></a>
+              {%- endif -%}  
             </div>
           </div>
-          {%- if block.settings.link != blank and block.settings.button_label == blank -%}
-            <a href="{{ block.settings.link }}" class="banner__full-link w100 h100" aria-labelledby="banner-heading-{{ section.id }}-{{ block.id }} banner-text-{{ section.id }}-{{ block.id }}"></a>
-          {%- endif -%}  
         </div>
       {%- endfor -%}
     </div>
@@ -475,7 +475,7 @@
     {
       "type": "slide",
       "name": "t:sections.slideshow.blocks.slide.name",
-      "limit": 5,
+      "limit": 10,
       "settings": [
         {
           "type": "image_picker",
@@ -549,6 +549,12 @@
             }
           ],
           "default": "primary"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_open_new_tab",
+          "label": "t:sections.all.open_link_in_new_tab.label",
+          "default": false
         },
         {
           "type": "select",

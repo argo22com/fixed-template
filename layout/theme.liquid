@@ -138,6 +138,14 @@
         window.recentlyViewedStrings = {
           empty: {{ 'general.floating_bar.recently_viewed_empty' | t | json }}
         };
+        window.recentlyViewedLimit = {{ settings.recently_viewed_products_to_show }};
+        {%- if request.page_type == 'product' and product -%}
+          window.currentProduct = {
+            id: {{ product.id | json }},
+            url: {{ product.url | json }},
+            image: {{ product.featured_media | image_url: width: 100 | json }}
+          };
+        {%- endif -%}
       {%- endif -%}  
 
       {%- if settings.enable_product_compare -%}
@@ -154,6 +162,7 @@
       window.loadedBackgroundColorSwatches = {%- if request.design_mode or template.name == 'collection' or template.name == 'search' -%}true{%- else -%}false{%- endif -%};
       window.currencyMain = {{ shop.currency | json }};
       window.appearAnimate = {% if settings.enable_appear_effect %}true{% else %}false{% endif %};
+      window.hideUnavailableOptions = {{ settings.hide_unavailable_options | json }};
     </script>
     {%- if settings.google_maps_api_key != blank -%}
       <script>
@@ -173,6 +182,13 @@
 
     {{ 'critical-base.css' | asset_url | stylesheet_tag: preload: true }}
     <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+    {%- if customer.b2b? -%}
+      {%- unless request.page_type == 'collection' or request.page_type == 'product' or request.page_type == 'search' -%}
+        <link rel="stylesheet" href="{{ 'component-volume-pricing-note.css' | asset_url }}" media="print" onload="this.media='all'">
+      {%- else -%}
+        {{ 'component-volume-pricing-note.css' | asset_url | stylesheet_tag }}
+      {%- endunless -%}  
+    {%- endif -%}  
    
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
@@ -328,6 +344,11 @@
       {{ 'component-card.css' | asset_url | stylesheet_tag }}
       {%- if settings.predictive_search_enabled -%}
         {{ 'component-predictive-search.css' | asset_url | stylesheet_tag }}
+      {%- endif -%}  
+      {%- if customer.b2b? -%}
+        {%- unless request.page_type == 'collection' or request.page_type == 'product' or request.page_type == 'search' -%}
+          {{ 'component-volume-pricing-note.css' | asset_url | stylesheet_tag }}
+        {%- endunless -%}  
       {%- endif -%}  
       {{ 'no-js.css' | asset_url | stylesheet_tag }}
     </noscript>

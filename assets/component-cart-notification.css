@@ -1,3 +1,7 @@
+.cart-notification-modal[open] {
+  z-index: 102;
+}
+
 .cart-notification-modal__content {
   top: 50%;
   transform: translate(calc(var(--transform-direction) * 50%), -50%);

@@ -33,7 +33,7 @@
           endif
         endif
       -%}
-      <div class="media w100 media--{{ section.settings.thumbnail_ratio }}{% if section.settings.thumbnail_ratio == 'adapt' %} ratio{% endif %}{% unless section.settings.thumbnail_ratio == 'circle' %} card-radius{% endunless %}"{% if section.settings.thumbnail_ratio == 'adapt' and block.settings.image != blank %} style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"{% endif %}>       
+      <{% unless block.settings.link != blank %}div{% else %}a href="{{ block.settings.link }}"{% endunless %} class="media w100 media--{{ section.settings.thumbnail_ratio }}{% if section.settings.thumbnail_ratio == 'adapt' %} ratio{% endif %}{% unless section.settings.thumbnail_ratio == 'circle' %} card-radius{% endunless %}"{% if section.settings.thumbnail_ratio == 'adapt' and block.settings.image != blank %} style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"{% endif %}>       
         {%- if block.settings.image != blank -%}
           {{ block.settings.image | image_url: width: 1420 | image_tag:
             loading: 'lazy',
@@ -43,7 +43,7 @@
         {%- else -%}  
           {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg w100 h100' }}
         {%- endif -%}  
-      </div>
+      </{% unless block.settings.link != blank %}div{% else %}a{% endunless %}>
     </div>
   {%- endif -%}  
   </li>

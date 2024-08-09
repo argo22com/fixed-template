@@ -32,6 +32,7 @@ a.banner__full-link {
   top: 0;
   z-index: 2;
   display: block;
+  margin-top: 0;
   --outline-focus-offset: -0.3rem;
 }
 
@@ -207,10 +208,6 @@ a.banner__full-link {
     border: none;
     border-radius: 0;
     box-shadow: none;
-  }
-
-  .banner::before {
-    display: none !important;
   }
 }
 

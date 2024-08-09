@@ -155,6 +155,7 @@
     "product": {
       "add_to_cart": "Adăugați în coș",
       "description": "Descriere",
+      "pre_order": "Pre-order",
       "on_sale": "Vânzare",
       "product_variants": "Variante de produse",
       "share": "Distribuiți acest produs",
@@ -168,7 +169,14 @@
         "label": "Cantitate",
         "input_label": "Cantitate pentru {{ product }}",
         "increase": "Creșteți cantitatea pentru {{ product }}",
-        "decrease": "Reduceți cantitatea pentru {{ product }}"
+        "decrease": "Reduceți cantitatea pentru {{ product }}",
+        "minimum_of": "Minimum {{ quantity }}",
+        "maximum_of": "Maximum {{ quantity }}",
+        "multiples_of": "Incrementuri de {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> în coș",
+        "note": "Vezi regulile legate de cantitate",
+        "min_of": "Minimum {{ quantity }}",
+        "max_of": "Maximum {{ quantity }}"
       },
       "price": {
         "from_price_html": "Începând cu {{ price }}",
@@ -201,17 +209,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Taxele de expediere</a> sunt calculate la finalizarea comenzii.",
       "choose_options": "Alege opțiunile",
       "choose_product_options": "Alege opțiunile pentru {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Indisponibil",
-      "inventory_in_stock": "In stoc",
-      "inventory_in_stock_show_count": "{{ quantity }} in stoc",
+      "value_unavailable": "{{ option_value }} – Indisponibil",
+      "variant_sold_out_or_unavailable": "Varianta are stocul epuizat sau este indisponibilă",
+      "inventory_in_stock": "În stoc",
+      "inventory_in_stock_show_count": "{{ quantity }} în stoc",
       "inventory_low_stock": "Stoc redus",
-      "inventory_low_stock_show_count": "Stoc redus: {{ quantity }} ramase",
-      "inventory_out_of_stock": "Lipsa stoc",
-      "inventory_out_of_stock_continue_selling": "Is stoc",
+      "inventory_low_stock_show_count": "Stoc redus: doar {{ quantity }} articole rămase",
+      "inventory_out_of_stock": "Nu există în stoc",
+      "inventory_out_of_stock_continue_selling": "În stoc",
       "quick_view": "Vizualizare rapida produs",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} recenzie",
         "other": "{{ count }} recenzii"
+      },
+      "volume_pricing": {
+        "title": "Stabilire preț per volum",
+        "note": "Stabilirea prețului per volum este disponibilă",
+        "minimum": "Peste {{ quantity }}",
+        "price_at_each": "{{ price }}/buc.",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "by_vendor_html": "<span>De</span> {{ vendor }}"
     },
