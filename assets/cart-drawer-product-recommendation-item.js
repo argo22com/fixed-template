@@ -51,6 +51,15 @@ if (!customElements.get("cart-drawer-product-recommendation-item")) {
             if (buttonSource.hasAttribute("disabled")) {
               buttonDestination.setAttribute("disabled", "disabled");
             }
+
+            const quantityDestination = this.querySelector(
+              ".cart-drawer__recommendation-item__quantity-wrapper"
+            );
+            const quantitytySource = html.querySelector(
+              ".cart-drawer__recommendation-item__quantity-wrapper"
+            );
+            if (quantitytySource && quantityDestination)
+              quantityDestination.innerHTML = quantitytySource.innerHTML;
           });
       }
 

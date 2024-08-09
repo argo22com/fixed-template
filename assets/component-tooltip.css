@@ -52,7 +52,7 @@
   bottom: auto;
   inset-inline-end: -1rem;
   inset-inline-start: auto;
-  transform:translate(calc(var(--transform-direction) * 100%), -50%);
+  transform:translate(calc(var(--transform-direction) * 100% * (-1)), -50%);
 }
 .bt-tooltip__inner--right:after {
   inset-inline-start: -0.3rem;

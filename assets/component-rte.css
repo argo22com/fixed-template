@@ -71,3 +71,9 @@
 .rte iframe:not([height]) {
   height: auto;
 }
+
+.rte :is(iframe[src*="youtube"], iframe[src*="youtu.be"], iframe[src*="vimeo"]) {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+}

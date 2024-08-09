@@ -261,6 +261,7 @@
       "choose_options": "اختر الخيارات",
       "choose_product_options": "اختر خيارات ل {{ product_name }}",
       "description": "وصف",
+      "pre_order": "Pre-order",
       "on_sale": "أُوكَازيُون",
       "product_variants": "متغيرات المنتج",
       "media": {
@@ -277,7 +278,14 @@
         "label": "كمية",
         "input_label": "الكمية ل {{ product }}",
         "increase": "زيادة الكمية ل {{ product }}",
-        "decrease": "تقليل الكمية ل {{ product }}"
+        "decrease": "تقليل الكمية ل {{ product }}",
+        "minimum_of": "الحد الأدنى {{ quantity }}",
+        "maximum_of": "الحد الأقصى {{ quantity }}",
+        "multiples_of": "زيادات {{ quantity }}",
+        "min_of": "الحد الأدنى {{ quantity }}",
+        "max_of": "ماكس {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> في سلة التسوق",
+        "note": "عرض قواعد الكمية"
       },
       "pickup_availability": {
         "view_store_info": "عرض معلومات المتجر",
@@ -299,13 +307,14 @@
       "sold_out": "نفذ",
       "unavailable": "غير متوفره",
       "vendor": "بائع",
-      "value_unavailable": "{{ option_value }} - غير متوفره",
       "video_exit_message": "{{ title }} يفتح فيديو بملء الشاشة في نفس النافذة.",
       "view_full_details": "عرض التفاصيل الكاملة",
       "xr_button": "عرض في المساحة الخاصة بك",
       "xr_button_label": "عرض في المساحة الخاصة بك، وتحميل العنصر في نافذة الواقع المعزز",
       "include_taxes": "شامل الضريبة.",
       "shipping_policy_html": "<a href=\"{{ link }}\">شحن</a> تحسب عند الخروج.",
+      "value_unavailable": "{{ option_value }} - غير متوفره",
+      "variant_sold_out_or_unavailable": "تم بيع البديل أو غير متوفر",
       "inventory_in_stock": "في الأوراق المالية",
       "inventory_in_stock_show_count": "{{ quantity }} في الأوراق المالية",
       "inventory_low_stock": "الأسهم منخفضة",
@@ -313,9 +322,19 @@
       "inventory_out_of_stock": "إنتهى من المخزن",
       "inventory_out_of_stock_continue_selling": "في الأوراق المالية",
       "quick_view": "عرض سريع للمنتج",
+      "quick_view_button": "نظرة سريعة",
+"view_product": "عرض المنتج",
       "number_of_reviews": {
         "one": "{{ count }} مراجعة",
         "other": "{{ count }} المراجعات"
+      },
+      "volume_pricing": {
+        "title": "تسعير الحجم",
+        "note": "تسعير الحجم متاح",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "{{ price }}/ea",
+        "price_range": "{{ minimum }} - {{ maximum }}",
+        "each": "{{ money }}/ea"
       },
       "by_vendor_html": "<span>بواسطة</span> {{ vendor }}"
     },

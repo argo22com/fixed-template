@@ -1,3 +1,6 @@
+.totals {
+  row-gap: 1rem;
+}
 
 .totals > * {
   font-size: 1.6rem;

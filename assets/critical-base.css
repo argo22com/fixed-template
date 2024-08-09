@@ -20,6 +20,7 @@
   --buttons-radius: 0.6rem;
   --color-overlay: 0, 0, 0;
   --color-shadow: 43, 43, 43;
+  --floating-element-position: 1.5rem;
 }
 
 .color-text {
@@ -734,16 +735,11 @@ summary::-webkit-details-marker {
   --color-button-text-outline: var(--color-foreground);
 }
 
-.title__heading--before-line {
-  min-width: fit-content;
-}
-
 @media screen and (max-width: 749px) {
   .title__gap--full-buttons-mobile {
     flex-wrap: wrap;
   }
-
-  .title__buttons--full-on-mobile {
+  .title__buttons--full {
     width: 100%;
   }
 }
@@ -751,10 +747,6 @@ summary::-webkit-details-marker {
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .title__gap--full-buttons-tablet {
     flex-wrap: wrap;
-  }
-
-  .title__buttons--full-on-tablet {
-    width: 100%;
   }
 }
 
@@ -931,6 +923,10 @@ summary::-webkit-details-marker {
   .grid--peek.slider--mobile.grid--2-col .grid__item {
     width: calc(50% - max(var(--grid-horizontal-spacing), 1rem) - 1.5rem);
   }
+
+  .card__content--product {
+    overflow: hidden;
+  }
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
@@ -1081,7 +1077,7 @@ button.shopify-payment-button__button--unbranded,
 }
 
 .button--small {
-  padding: 0.5rem 1.5rem;
+  padding: 0.8rem 1.4rem;
 }
 
 .button--medium {
@@ -1246,7 +1242,6 @@ button.shopify-payment-button__button--unbranded,
 
 .header__heading-logo {
   height: auto;
-  width: 100%;
 }
 
 .back-button-menu {
@@ -2037,6 +2032,16 @@ textarea {
   margin: 0 auto;
 }
 
+.card__heading a:after, .full-link:after {
+  bottom: 0.5rem;
+  content: "";
+  inset-inline: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  z-index: 1;
+  outline-offset: 0.3rem;
+}
+
 /* Component tooltip */
 
 .bt-tooltip__inner {
@@ -2175,7 +2180,6 @@ appear-animate-single {
 /* Component floating bar */
 
 .floating-element {
-  --floating-element-position: 1.5rem;
   position: fixed;
   inset-inline-end: 1.5rem;
   bottom: var(--floating-element-position);

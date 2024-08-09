@@ -155,13 +155,21 @@
     "product": {
       "add_to_cart": "Aggiungi al carrello",
       "description": "Descrizione",
+      "pre_order": "Ordine prestabilito",
       "on_sale": "In offerta",
       "product_variants": "Varianti di prodotto",
       "quantity": {
         "label": "Quantità",
         "input_label": "Quantità per {{ product }}",
         "increase": "Aumenta quantità per {{ product }}",
-        "decrease": "Diminuisci quantità per {{ product }}"
+        "decrease": "Diminuisci quantità per {{ product }}",
+        "minimum_of": "Minimo di {{ quantity }}",
+        "maximum_of": "Massimo di {{ quantity }}",
+        "multiples_of": "Incrementi di {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> nel carrello",
+        "note": "Visualizza regole sulla quantità",
+        "min_of": "Min {{ quantity }}",
+        "max_of": "Max {{ quantity }}"
       },
       "price": {
         "from_price_html": "Da {{ price }}",
@@ -174,7 +182,6 @@
       "sold_out": "Esaurito",
       "unavailable": "Non disponibile",
       "vendor": "Fornitore",
-      "value_unavailable": "{{ option_value }} - Non disponibile",
       "video_exit_message": "{{ title }} apre un video a schermo intero nella stessa finestra.",
       "xr_button": "Visualizza nel tuo spazio",
       "xr_button_label": "Visualizza nel tuo spazio, carica l'articolo nella finestra della realtà aumentata",
@@ -203,15 +210,26 @@
       "choose_options": "Scegli opzioni",
       "choose_product_options": "Scegli opzioni per {{ product_name }}",
       "quick_view": "Visualizzare rapidamente un prodotto",
-      "inventory_in_stock": "In magazzino",
-      "inventory_in_stock_show_count": "{{ quantity }} in magazzino",
-      "inventory_low_stock": "Stock basso",
-      "inventory_low_stock_show_count": "Scorte in esaurimento: {{ quantity }} rimanenti",
+      "quick_view_button": "Occhiata veloce",
+      "view_product": "Visualizza il prodotto",
+      "value_unavailable": "{{ option_value }} - Non disponibile",
+      "variant_sold_out_or_unavailable": "Variante esaurita o non disponibile",
+      "inventory_in_stock": "Disponibile",
+      "inventory_in_stock_show_count": "{{ quantity }} disponibile/i",
+      "inventory_low_stock": "Scorte ridotte",
+      "inventory_low_stock_show_count": "Scorte ridotte: ne restano {{ quantity }}",
       "inventory_out_of_stock": "Esaurito",
-      "inventory_out_of_stock_continue_selling": "In magazzino",
+      "inventory_out_of_stock_continue_selling": "Disponibile",
       "number_of_reviews": {
         "one": "{{ count }} recensione",
         "other": "{{ count }} recensioni"
+      },
+      "volume_pricing": {
+        "title": "Prezzi basati sui volumi",
+        "note": "Prezzi basati sui volumi disponibili",
+        "minimum": "Più di {{ quantity }}",
+        "price_at_each": "{{ price }}/ciascuno",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "by_vendor_html": "<span>Di</span> {{ vendor }}"
     },

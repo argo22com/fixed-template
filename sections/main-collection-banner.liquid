@@ -45,6 +45,10 @@
       endif
     endfor
   endif
+  assign icon_size = 34
+  if section.settings.icon_size == 'large'
+    assign icon_size = 65
+  endif
 -%}
 {%-liquid
   if has_transparent 
@@ -80,8 +84,9 @@
       opacity: 0.7;
     }
     .collection-icon__item__custom-icon {
-      width: 3.4rem;
-      height: 3.4rem;
+      width: {{ icon_size | divided_by: 10.0 }}rem;
+      height: {{ icon_size | divided_by: 10.0 }}rem;
+      border-radius: {%- if section.settings.icon_border_shape == 'square' -%}5px{%- else -%}50%{%- endif -%};
     }
     .collection-icon__item__info {
       gap: 0.5rem;
@@ -144,7 +149,7 @@
   {%- endif -%}  
 {%- endstyle -%}
 <div class="section-{{ section.id }}">
-  {%- render 'page-title', heading_title: collection.title, banner_image: banner_image, has_transparent: has_transparent, enable_parallax_scrolling_effect: section.settings.enable_parallax_scrolling_effect -%}
+  {%- render 'page-title', heading_title: collection.title, banner_image: banner_image, has_transparent: has_transparent, enable_parallax_scrolling_effect: section.settings.enable_parallax_scrolling_effect, preload_background_image: section.settings.preload_background_image -%}
 
   {%- if total_item_size > 0 -%}
     <div class="page-width collection-icon-wrapper por">
@@ -162,12 +167,12 @@
                         assign sub_icon_block = subcollection_icons[sub_icon_block_index]
                         assign sub_icon = sub_icon_block.settings.icon
                         assign sub_custom_icon = sub_icon_block.settings.custom_icon
-                        render 'main-collection-banner-icon', icon_collection: link, icon: sub_icon, custom_icon: sub_custom_icon, products_count: link.object.all_products_count
+                        render 'main-collection-banner-icon', icon_collection: link, icon: sub_icon, custom_icon: sub_custom_icon, products_count: link.object.all_products_count, icon_size: icon_size
                       else  
-                        render 'main-collection-banner-icon', icon_collection: link, products_count: link.object.all_products_count
+                        render 'main-collection-banner-icon', icon_collection: link, products_count: link.object.all_products_count, icon_size: icon_size
                       endif
                     else
-                      render 'main-collection-banner-icon', icon_collection: link, products_count: link.object.all_products_count  
+                      render 'main-collection-banner-icon', icon_collection: link, products_count: link.object.all_products_count, icon_size: icon_size  
                     endif
                   -%}
                 </li>  
@@ -175,7 +180,7 @@
             {%- endif -%}  
             {%- for block in collection_icons -%}
               <li id="Slide-{{ section.id }}-{{ forloop.index | plus: dynamic_sub_collection_size }}" class="grid__item slider__slide flex-grow-1">
-                {%- render 'main-collection-banner-icon', icon_collection: block.settings.collection, icon: block.settings.icon, custom_icon: block.settings.custom_icon, products_count: block.settings.collection.all_products_count -%}
+                {%- render 'main-collection-banner-icon', icon_collection: block.settings.collection, icon: block.settings.icon, custom_icon: block.settings.custom_icon, products_count: block.settings.collection.all_products_count, icon_size: icon_size -%}
               </li>
             {%- endfor -%}  
           </ul>
@@ -221,6 +226,12 @@
     },
     {
       "type": "checkbox",
+      "id": "preload_background_image",
+      "label": "t:sections.main-collection-icon.settings.preload_background_image.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
       "id": "enable_parallax_scrolling_effect",
       "label": "t:sections.all.enable_parallax_scrolling_effect.label",
       "info": "t:sections.all.enable_parallax_scrolling_effect.info",
@@ -231,6 +242,39 @@
       "id": "show_number_of_products",
       "label": "t:sections.main-collection-icon.settings.show_number_of_products.label",
       "default": true
+    },
+    {
+      "type": "select",
+      "id": "icon_size",
+      "label": "t:sections.main-collection-icon.settings.icon_size.label",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:sections.main-collection-icon.settings.icon_size.options__1.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.main-collection-icon.settings.icon_size.options__2.label"
+        }
+      ],
+      "default": "small"
+    },
+    {
+      "type": "select",
+      "id": "icon_border_shape",
+      "label": "t:sections.main-collection-icon.settings.icon_border_shape.label",
+      "info": "t:sections.main-collection-icon.settings.icon_border_shape.info",
+      "options": [
+        {
+          "value": "square",
+          "label": "t:sections.main-collection-icon.settings.icon_border_shape.options__1.label"
+        },
+        {
+          "value": "circle",
+          "label": "t:sections.main-collection-icon.settings.icon_border_shape.options__2.label"
+        }
+      ],
+      "default": "square"
     },
     {
       "type": "color_scheme",
@@ -1225,7 +1269,8 @@
         {
           "type": "image_picker",
           "id": "custom_icon",
-          "label": "t:sections.main-collection-icon.blocks.collection_icon.settings.custom_icon.label"
+          "label": "t:sections.main-collection-icon.blocks.collection_icon.settings.custom_icon.label",
+          "info": "t:sections.main-collection-icon.blocks.collection_icon.settings.custom_icon.info"
         }
       ]
     },
@@ -2202,7 +2247,8 @@
         {
           "type": "image_picker",
           "id": "custom_icon",
-          "label": "t:sections.main-collection-icon.blocks.subcollection_icon.settings.custom_icon.label"
+          "label": "t:sections.main-collection-icon.blocks.subcollection_icon.settings.custom_icon.label",
+          "info": "t:sections.main-collection-icon.blocks.subcollection_icon.settings.custom_icon.info"
         }
       ]
     }

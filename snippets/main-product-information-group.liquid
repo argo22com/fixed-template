@@ -12,7 +12,7 @@
         <span class="information__value font-body-semi-bold text-small inventory-{{ section.id }}">
           {%- liquid
           if product.selected_or_first_available_variant.inventory_management == 'shopify'
-            if product.selected_or_first_available_variant.inventory_quantity > 0
+            if product.selected_or_first_available_variant.inventory_quantity >= product.selected_or_first_available_variant.quantity_rule.min
               if product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold
                 if block.settings.show_inventory_quantity
                   echo 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity

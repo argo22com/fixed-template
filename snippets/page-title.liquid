@@ -9,10 +9,6 @@
       assign banner_image = settings.page_heading_other_banner_image
       assign image_height = settings.page_heading_other_image_height
   endcase
-  assign preload = true
-  if enable_parallax_scrolling_effect
-    assign preload = false
-  endif
 -%}
 <{% if banner_image != blank %}parallax-element{% else %}div{% endif %} class="db page-title por background-input color-{{ settings.page_heading_color_scheme }} isolate{% if banner_image != blank %} page-title--with-image{% if settings.page_heading_overlay_color != blank and settings.page_heading_overlay_color.alpha > 0 %} background-overlay{% endif %}{% endif %} overflow-hidden{% if settings.enable_appear_effect and banner_image != blank %} {% endif %}" data-speed="0.5" style="--speed: 0.5;"{% unless enable_parallax_scrolling_effect %} data-turn-off="true"{% endunless %}>
   {%- if banner_image != blank -%}
@@ -51,10 +47,10 @@
         endif
         assign widths = widths | append: collection.image.width
       -%}
-      {%- if preload -%}
-        {{ banner_image | image_url: width: banner_image.width | image_tag: sizes: sizes, widths: widths, width: banner_image.width, height: banner_image.height, preload: preload, fetchpriority: 'high' }}
+      {%- if preload_background_image -%}
+        {{ banner_image | image_url: width: banner_image.width | image_tag: sizes: sizes, widths: widths, width: banner_image.width, height: banner_image.height, preload: true, fetchpriority: 'high' }}
       {%- else -%}
-        {{ banner_image | image_url: width: banner_image.width | image_tag: sizes: sizes, widths: widths, width: banner_image.width, height: banner_image.height, preload: preload }}  
+        {{ banner_image | image_url: width: banner_image.width | image_tag: sizes: sizes, widths: widths, width: banner_image.width, height: banner_image.height, preload: false }}  
       {%- endif -%}
     </appear-animate-single>
   {%- endif -%}

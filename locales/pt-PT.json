@@ -155,13 +155,21 @@
     "product": {
       "add_to_cart": "Adicionar ao carrinho",
       "description": "Descrição",
+      "pre_order": "Pre-order",
       "on_sale": "Em promoção",
       "product_variants": "Variantes de produtos",
       "quantity": {
         "label": "Quantidade",
         "input_label": "Quantidade de {{ product }}",
         "increase": "Aumentar a quantidade de {{ product }}",
-        "decrease": "Diminuir a quantidade de {{ product }}"
+        "decrease": "Diminuir a quantidade de {{ product }}",
+        "minimum_of": "Mínimo de {{ quantity }}",
+        "maximum_of": "Máximo de {{ quantity }}",
+        "multiples_of": "Incrementos de {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> no carrinho",
+        "note": "Ver regras de quantidade",
+        "min_of": "Mín. de {{ quantity }}",
+        "max_of": "Máx. de {{ quantity }}"
       },
       "price": {
         "from_price_html": "A partir de {{ price }}",
@@ -201,17 +209,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Envio</a> calculado na finalização da compra.",
       "choose_options": "Escolher opções",
       "choose_product_options": "Escolha opções para {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} - Indisponível",
+      "variant_sold_out_or_unavailable": "Variante esgotada ou indisponível",
+      "inventory_in_stock": "Em stock",
+      "inventory_in_stock_show_count": "{{ quantity }} em stock",
+      "inventory_low_stock": "Stock reduzido",
+      "inventory_low_stock_show_count": "Stock reduzido: {{ quantity }} restantes",
+      "inventory_out_of_stock": "Esgotado",
+      "inventory_out_of_stock_continue_selling": "Em stock",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Preços por volume",
+        "note": "Preços por volume disponível",
+        "minimum": "{{ quantity }} ou mais",
+        "price_at_each": "{{ price }}/ea",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

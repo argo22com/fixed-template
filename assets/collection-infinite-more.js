@@ -24,6 +24,12 @@ class CollectionLoadingButton extends HTMLElement
 				} else {
 					Array.from(responseProductItems).reverse().forEach(element => productGrid.prepend(element));
 				}
+				if(window.appearAnimate) {
+					const appear_animate_list = this.closest('appear-animate-list');
+					if(appear_animate_list) {
+						appear_animate_list.reset();
+					}
+				}
 			}
 
 			const newButton = responseHTML.querySelector(`.collection__loading-button[data-loading-type="${this.dataset.loadingType}"]`);

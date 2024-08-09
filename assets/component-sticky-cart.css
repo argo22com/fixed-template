@@ -53,32 +53,20 @@ button.sticky-cart__submit {
     display: grid;
     grid-template-columns: auto 1fr auto;
   }
-  .disclosure__list-wrapper--sticky-variant-mobile {
-    inset-inline-start: calc(50% - 10rem);
-    width: 20rem;
-  }
-  sticky-cart details-disclosure > details {
-    position: static;
-  }
   .sticky-cart__submit {
     font-size: 1.4rem;
     padding: 1rem;
   }
 }
 
-.stick-cart__variant-select-mobile__button {
+.stick-cart__variant-select-mobile-button {
   margin-bottom: 0;
   white-space: normal;
   padding-inline-start: 1.5rem;
 }
 
-button.stick-cart__variant-select-mobile__button .icon {
+button.stick-cart__variant-select-mobile-button .icon {
   min-width: 1.6rem;
-}
-
-.sticky-cart__variant-select-mobile__link[aria-current="true"] {
-  text-decoration: underline;
-  text-underline-offset: 0.7rem;
 }
 
 @media screen and (min-width: 750px) {

@@ -39,13 +39,13 @@
           {%- when 'button' -%}
               <div class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
                 {%- if block.settings.button_label != blank -%}
-                  <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="{% if block.settings.button_style_1 != 'link' %}button button--{{ block.settings.button_style_1 }}{% else %}link link-with-icon align-center{% endif %}">
+                  <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% if block.settings.button_open_new_tab_1 %} target="_blank"{% endif %}{% endif %} class="{% if block.settings.button_style_1 != 'link' %}button button--{{ block.settings.button_style_1 }}{% else %}link link-with-icon align-center{% endif %}">
                     <span>{{ block.settings.button_label | escape }}</span>
                     {%- if block.settings.button_style_1 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
                   </a>
                 {%- endif -%}
                 {%- if block.settings.button_label_2 != blank -%}
-                  <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="{% if block.settings.button_style_2 != 'link' %}button button--{{ block.settings.button_style_2 }}{% else %}link link-with-icon align-center{% endif %}">
+                  <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% if block.settings.button_open_new_tab_2 %} target="_blank"{% endif %}{% endif %} class="{% if block.settings.button_style_2 != 'link' %}button button--{{ block.settings.button_style_2 }}{% else %}link link-with-icon align-center{% endif %}">
                     <span>{{ block.settings.button_label_2 | escape }}</span>
                     {%- if block.settings.button_style_2 == 'link' -%}{%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}{%- endif -%}
                   </a>
@@ -283,6 +283,12 @@
           "default": "primary"
         },
         {
+          "type": "checkbox",
+          "id": "button_open_new_tab_1",
+          "label": "t:sections.all.open_link_in_new_tab.label",
+          "default": false
+        },
+        {
           "type": "text",
           "id": "button_label_2",
           "label": "t:sections.rich-text.blocks.buttons.settings.button_label_2.label",
@@ -312,6 +318,12 @@
             }
           ],
           "default": "primary"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_open_new_tab_2",
+          "label": "t:sections.all.open_link_in_new_tab.label",
+          "default": false
         }
       ]
     }

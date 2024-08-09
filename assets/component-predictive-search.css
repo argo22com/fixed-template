@@ -161,7 +161,7 @@ a.predictive-search__item {
 .predictive-search[open] > form,
 .predictive-search[open] > [data-predictive-search],
 .header__search--has-predictive > details[open] .search--header {
-  z-index: 2;
+  z-index: 4;
 }
 
 .predictive-search[open] .predictive-search__overlay,

@@ -40,7 +40,7 @@
       endcase
     endfor
   endif
-  if last_level_group_size >= 4 and last_level_group_size <= 12
+  if last_level_group_size >= 4 and last_level_group_size <= 12 and section.settings.always_use_standard_menu == false
     assign use_mega_linklist = true
   endif    
   if last_level_group_size >= 2

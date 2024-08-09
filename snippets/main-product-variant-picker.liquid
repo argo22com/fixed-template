@@ -1,14 +1,14 @@
 {% comment %}
-  Renders product options on the product page or featured product section.
+    Renders product options on the product page or featured product section.
 
-  Accepts:
-  - product: {Object} Product object
-  - block: {Object} Block object when browse section.blocks array.
-  - product_form_id: {String} the HTML ID of the product form.
-  - prefix_variant: {String} used to render a custom elements which extends from the variant-radios or variant-selects elements
+    Accepts:
+    - product: {Object} Product object
+    - block: {Object} Block object when browse section.blocks array.
+    - product_form_id: {String} the HTML ID of the product form.
+    - prefix_variant: {String} used to render a custom elements which extends from the variant-radios or variant-selects elements
 
-  Usage:
-  {% render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+    Usage:
+    {% render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
   {%- liquid

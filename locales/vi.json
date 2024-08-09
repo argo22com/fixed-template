@@ -154,13 +154,21 @@
     "product": {
       "add_to_cart": "Thêm vào giỏ hàng",
       "description": "Mô tả",
+      "pre_order": "Pre-order",
       "on_sale": "Giảm giá",
       "product_variants": "Mẫu mã sản phẩm",
       "quantity": {
         "label": "Số lượng",
         "input_label": "Số lượng của {{ product }}",
         "increase": "Tăng số lượng của {{ product }}",
-        "decrease": "Giảm số lượng của {{ product }}"
+        "decrease": "Giảm số lượng của {{ product }}",
+        "minimum_of": "Tối thiểu {{ quantity }}",
+        "maximum_of": "Tối đa {{ quantity }}",
+        "multiples_of": "Số lượng gia tăng {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> trong giỏ hàng",
+        "note": "Xem quy tắc số lượng",
+        "min_of": "Tối thiểu {{ quantity }}",
+        "max_of": "Tối đa {{ quantity }}"
       },
       "price": {
         "from_price_html": "Từ {{ price }}",
@@ -200,17 +208,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Phí vận chuyển</a> được tính khi thanh toán.",
       "choose_options": "Chọn các tùy chọn",
       "choose_product_options": "Chọn tùy chọn cho {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} - Không khả dụng",
+      "variant_sold_out_or_unavailable": "Mẫu mã đã bán hết hoặc không còn hàng",
+      "inventory_in_stock": "Còn hàng",
+      "inventory_in_stock_show_count": "Còn {{ quantity }} hàng lưu kho",
+      "inventory_low_stock": "Sắp hết hàng",
+      "inventory_low_stock_show_count": "Sắp hết hàng: Còn {{ quantity }}",
+      "inventory_out_of_stock": "Hết hàng",
+      "inventory_out_of_stock_continue_selling": "Còn hàng",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Định giá theo số lượng",
+        "note": "Có sẵn định giá theo số lượng",
+        "minimum": "Hơn {{ quantity }}",
+        "price_at_each": "{{ price }}/chiếc",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

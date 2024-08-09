@@ -81,10 +81,12 @@
             {%- endif -%}
             --banner-gap: {{ block.settings.elements_gap_mobile }}rem;
           }
-          {%- if block.type == 'promotion-banner' and block.settings.image_overlay_opacity > 0 -%}
-            #Banner-{{ section.id }}-{{ block.id }}::after {
-              opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
-            }
+          {%- if block.type == 'promotion-banner' or block.type == 'video-background' -%}
+            {%- if block.settings.image_overlay_opacity > 0 -%}
+              #Banner-{{ section.id }}-{{ block.id }}::after {
+                opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
+              }
+            {%- endif -%}
           {%- endif -%}
           {%- if block.type == 'video-background' -%}
             {%- if block.settings.button_label != blank or request.design_mode -%}
@@ -1501,6 +1503,16 @@
             }
           ],
           "default": "box"
+        },
+        {
+          "type": "range",
+          "id": "image_overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%",
+          "label": "t:sections.banner-grid.blocks.video-background.settings.image_overlay_opacity.label",
+          "default": 0
         },
         {
           "type": "header",

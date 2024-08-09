@@ -134,7 +134,7 @@
 }
 
 .image-with-text--overlap .image-with-text__content {
-  width: 90%;
+  width: calc(100% - 3rem);
   margin: -3rem auto 0;
 }
 
@@ -169,6 +169,10 @@
   font-size: calc(1.8rem * var(--font-body-scale));
 }
 
+.image-with-text_icon {
+  width: 4.5rem;
+}
+
 @media screen and (min-width: 750px) {
   .image-with-text__grid--reverse .image-with-text__content {
     margin-inline-start: auto;
@@ -199,22 +203,54 @@
     text-align: center;
   }
 
+  .image-with-text--overlap {
+    --overlap-value: 4rem;
+    --overlap-media-margin: calc(var(--overlap-value) * (-1));
+    --overlap-text-margin: calc(var(--overlap-value) * (-1));
+  }
+
   .image-with-text--overlap .image-with-text__text-item {
     display: flex;
     padding: 3rem 0;
   }
 
+  .image-with-text--overlap .image-with-text__media-item > * {
+    width: calc(100% + var(--overlap-value));
+    margin-inline-end: var(--overlap-media-margin);
+  }
+
   .image-with-text--overlap .image-with-text__content {
+    --padding-page-width: 1.5rem;
     height: auto;
-    width: calc(100% + 4rem);
-    min-width: calc(100% + 4rem);
+    width: calc(100% + var(--overlap-value));
     margin-top: 0;
-    margin-inline-start: -4rem;
+    margin-inline-start: var(--overlap-text-margin);
+  }
+
+  .image-with-text--overlap > div:not(.page-width):not(.page-width--full) .image-with-text__content {
+    margin-inline-end: max(var(--padding-page-width), calc(50vw - (var(--page-width) / 2) + var(--padding-page-width)));
+  } 
+
+  .image-with-text--overlap > .page-width--full .image-with-text__content {
+    margin-inline-end: max(0rem, calc(50vw - (var(--page-width) / 2)));
+  }
+
+  .image-with-text--overlap .image-with-text__grid--reverse .image-with-text__media-item > * {
+    margin-inline-start: var(--overlap-text-margin);
+    margin-inline-end: 0;
   }
 
   .image-with-text--overlap .image-with-text__grid--reverse .image-with-text__content {
-    margin-inline-start: 0;
-    margin-inline-end: -4rem;
+    margin-inline-end: var(--overlap-text-margin);
+  }
+
+  .image-with-text--overlap > div:not(.page-width):not(.page-width--full) .image-with-text__grid--reverse .image-with-text__content {
+    margin-inline-start: max(var(--padding-page-width), calc(50vw - (var(--page-width) / 2) + var(--padding-page-width)));
+    margin-inline-end: var(--overlap-text-margin);
+  } 
+
+  .image-with-text--overlap > .page-width--full .image-with-text__grid--reverse .image-with-text__content {
+    margin-inline-start: max(0rem, calc(50vw - (var(--page-width) / 2)));
   }
 
   .image-with-text--overlap .image-with-text__grid--reverse .image-with-text__text-item {
@@ -249,6 +285,26 @@
 @media screen and (min-width: 990px) {
   .image-with-text__content {
     padding: 6rem 7rem 6rem;
+  }
+
+  .image-with-text--overlap {
+    --overlap-value: 7rem;
+  }
+
+  .image-with-text--overlap .image-with-text__content {
+    --padding-page-width: 5rem;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .image-with-text--overlap.image-with-text--media-large {
+    --overlap-text-margin: calc(var(--overlap-value) * (-1) - 5rem);
+  }
+}
+
+@media screen and (min-width: 2300px) {
+  .image-with-text--overlap.image-with-text--media-large {
+    --overlap-text-margin: calc(var(--overlap-value) * (-1) - 10rem);
   }
 }
 

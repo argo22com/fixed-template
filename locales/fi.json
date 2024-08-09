@@ -154,13 +154,21 @@
     "product": {
       "add_to_cart": "Lisää ostoskoriin",
       "description": "Kuvaus",
+      "pre_order": "Pre-order",
       "on_sale": "Alennusmyynti",
       "product_variants": "Tuoteversiot",
       "quantity": {
         "label": "Määrä",
         "input_label": "Tuotteen {{ product }} määrä",
         "increase": "Lisää tuotteen {{ product }} määrää",
-        "decrease": "Vähennä tuotteen {{ product }} määrää"
+        "decrease": "Vähennä tuotteen {{ product }} määrää",
+        "minimum_of": "Vähimmäismäärä {{ quantity }}",
+        "maximum_of": "Enimmäismäärä {{ quantity }}",
+        "multiples_of": "Lisäysten koko: {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> ostoskorissa",
+        "note": "Katso määräsäännöt",
+        "min_of": "Väh. {{ quantity }}",
+        "max_of": "Enint. {{ quantity }}"
       },
       "price": {
         "from_price_html": "Alkaen {{ price }}",
@@ -200,17 +208,26 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Toimituskulut</a> lasketaan kassalla.",
       "choose_options": "Valitse vaihtoehdot",
       "choose_product_options": "Valitse vaihtoehtoja tuotteelle {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} – Ei ole käytettävissä",
+      "variant_sold_out_or_unavailable": "Versio on loppuunmyyty tai ei saatavilla",
+      "inventory_in_stock": "Varastossa",
+      "inventory_in_stock_show_count": "{{ quantity }} varastossa",
+      "inventory_low_stock": "Varasto vähissä",
+      "inventory_low_stock_show_count": "Varasto vähissä: {{ quantity }} jäljellä",
+      "inventory_out_of_stock": "Loppunut varastosta",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Volyymihinnoittelu",
+        "note": "Volyymihinnoittelu saatavilla",
+        "minimum": "Yli {{ quantity }}",
+        "price_at_each": "{{ price }}/kpl",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

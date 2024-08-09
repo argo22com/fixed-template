@@ -154,13 +154,21 @@
     "product": {
       "add_to_cart": "Tambahkan ke keranjang",
       "description": "Deskripsi",
+      "pre_order": "Pre-order",
       "on_sale": "Obral",
       "product_variants": "Varian produk",
       "quantity": {
         "label": "Jumlah",
         "input_label": "Jumlah untuk {{ product }}",
         "increase": "Tambah jumlah untuk {{ product }}",
-        "decrease": "Kurangi jumlah untuk {{ product }}"
+        "decrease": "Kurangi jumlah untuk {{ product }}",
+        "minimum_of": "Minimum {{ quantity }}",
+        "maximum_of": "Maksimum {{ quantity }}",
+        "multiples_of": "Nilai peningkatan {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> di keranjang",
+        "note": "Lihat aturan kuantitas",
+        "min_of": "Min. {{ quantity }}",
+        "max_of": "Maks. {{ quantity }}"
       },
       "price": {
         "from_price_html": "Dari {{ price }}",
@@ -200,17 +208,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Biaya pengiriman</a> dihitung saat checkout.",
       "choose_options": "Pilih opsi",
       "choose_product_options": "Pilih opsi untuk {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} - Tidak tersedia",
+      "variant_sold_out_or_unavailable": "Varian terjual habis atau tidak tersedia",
+      "inventory_in_stock": "Tersedia",
+      "inventory_in_stock_show_count": "{{ quantity }} tersedia",
+      "inventory_low_stock": "Stok sedikit",
+      "inventory_low_stock_show_count": "Stok sedikit: {{ quantity }} tersisa",
+      "inventory_out_of_stock": "Habis",
+      "inventory_out_of_stock_continue_selling": "Tersedia",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Harga Volume",
+        "note": "Harga volume tersedia",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "{{ price }}/satuan",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },
