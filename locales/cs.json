@@ -36,8 +36,8 @@
       "page": "Strana {{ number }}",
       "next": "Další stránka",
       "previous": "Předchozí stránka",
-      "load_more": "Load more",
-      "load_previous_items": "Load previous items"
+      "load_more": "Načíst více",
+      "load_previous_items": "Načíst předchodzí"
     },
     "search": {
       "search": "Hledání",
