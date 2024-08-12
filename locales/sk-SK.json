@@ -156,6 +156,7 @@
     "product": {
       "add_to_cart": "Pridať do košíka",
       "description": "Popis",
+      "pre_order": "Pre-order",
       "on_sale": "Zľava",
       "product_variants": "Varianty produktu",
       "share": "Zdieľať tento produkt",
@@ -169,7 +170,14 @@
         "label": "Množstvo",
         "input_label": "Množstvo pre {{ product }}",
         "increase": "Zvýšiť množstvo pre {{ product }}",
-        "decrease": "Znížiť množstvo pre {{ product }}"
+        "decrease": "Znížiť množstvo pre {{ product }}",
+        "minimum_of": "Minimálne {{ quantity }} ks",
+        "maximum_of": "Maximálne {{ quantity }} ks",
+        "multiples_of": "Prírastky po {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> ks v košíku",
+        "note": "Zobrazenie pravidiel týkajúcich sa množstva",
+        "min_of": "Min. {{ quantity }}",
+        "max_of": "Max. {{ quantity }}"
       },
       "price": {
         "from_price_html": "Od {{ price }}",
@@ -202,17 +210,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Doprava</a> sa vypočíta pri platbe.",
       "choose_options": "Vybrať možnosti",
       "choose_product_options": "Vyberte možnosti pre: {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} – nedostupné",
+      "variant_sold_out_or_unavailable": "Variant je vypredaný alebo nedostupný",
+      "inventory_in_stock": "Skladom",
+      "inventory_in_stock_show_count": "{{ quantity }} skladom",
+      "inventory_low_stock": "Nízky stav zásob",
+      "inventory_low_stock_show_count": "Nízky stav zásob: zostáva {{ quantity }}",
+      "inventory_out_of_stock": "Vypredané",
+      "inventory_out_of_stock_continue_selling": "Skladom",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Objemové ceny",
+        "note": "Dostupné objemové ceny",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "{{ price }}/kus",
+        "price_range": "{{ minimum }} – {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

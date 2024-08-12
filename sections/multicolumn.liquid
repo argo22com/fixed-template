@@ -146,16 +146,19 @@
               {%- endif -%}
               <div class="multicolumn-card__info {% if section.settings.text_position != 'bottom' %}multicolumn-card__info--onside multicolumn-card__info--onside-{{ section.settings.text_position }}{% else %}multicolumn-card__info--bottom{% endif %}">
                 {%- if block.settings.title != blank -%}
-                  <h3 class="font-heading-extra-bold h4">{{ block.settings.title | escape }}</h3>
+                  <h3 class="font-heading-extra-bold h4" id="column-card-heading-{{ section.id }}-{{ block.id }}">{{ block.settings.title | escape }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte color-foreground break">{{ block.settings.text }}</div>
+                  <div class="rte color-foreground break multicolumn-card__info__text" id="column-card-text-{{ section.id }}-{{ block.id }}">{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
-                  <a class="multicolumn-card__link element-small-margin-top {% unless block.settings.button_style == 'link' %}button button--{{ block.settings.button_style }}{% else %}link link-with-icon link-effect-no-underline{% endunless %} align-center text-small" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}>
+                  <a class="multicolumn-card__link element-small-margin-top {% unless block.settings.button_style == 'link' %}button button--{{ block.settings.button_style }}{% else %}link link-with-icon link-effect-no-underline{% endunless %} align-center text-small" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% if block.settings.button_open_new_tab %} target="_blank"{% endif %}{% endif %}>
                     <span>{{ block.settings.link_label | escape }}</span>
                     {%- render 'icon-picker', icon: 'chevron_double_right', icon_width: 12 -%}
                   </a>
+                {%- endif -%}
+                {%- if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}" class="full-link w100 h100 multicolumn-card__full-link" aria-labelledby="column-card-heading-{{ section.id }}-{{ block.id }} column-card-text-{{ section.id }}-{{ block.id }}"></a>
                 {%- endif -%}
               </div>
             </div>
@@ -165,7 +168,7 @@
 
       <div class="center element-small-margin-top element-margin">
         {%- if section.settings.button_label != blank -%}
-          <a class="button button--primary"{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %}>
+          <a class="button button--primary"{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% if section.settings.button_open_new_tab %} target="_blank"{% endif %}{% endif %}>
             <span>{{ section.settings.button_label | escape }}</span>
           </a>
         {%- endif -%}
@@ -369,6 +372,12 @@
       "type": "url",
       "id": "button_link",
       "label": "t:sections.promotion-cards.settings.button_link.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_open_new_tab",
+      "label": "t:sections.all.open_link_in_new_tab.label",
+      "default": false
     },
     {
       "type": "checkbox",
@@ -1545,6 +1554,12 @@
           ],
           "default": "solid",
           "label": "t:sections.all.button_style.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_open_new_tab",
+          "label": "t:sections.all.open_link_in_new_tab.label",
+          "default": false
         },
         {
           "type": "header",

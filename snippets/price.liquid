@@ -37,7 +37,7 @@
   {%- if compare_at_price > price %} price--on-sale {% endif -%}
   {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif %}
   {%- if show_in_card %} price--in-card{% endif %}
-  {%- if show_badges %} price--show-badge{% endif %}{% unless show_in_card %} price--out-card{% endunless %}">
+  {%- if show_badges and settings.sale_badge_label != 'none' %} price--show-badge{% endif %}{% unless show_in_card %} price--out-card{% endunless %}">
   <div class="price__container{% if compare_at_price > price and show_in_card %} break{% endif %}">
     {%- comment -%}
       Explanation of description list:
@@ -62,7 +62,7 @@
             {% endif %}
           </s>
           
-          {%- if show_badges and show_in_card and target.price < target.compare_at_price -%}
+          {%- if show_badges and show_in_card and target.price < target.compare_at_price and settings.sale_badge_label != 'none' -%}
             <span class="price__badge price__badge--in-card lh1 color-foreground">
               {%- if settings.sale_badge_label == 'text' -%}
                 {{ 'products.product.on_sale' | t }}
@@ -101,7 +101,7 @@
     </small>
     {%- endunless -%}
   </div>
-  {%- if show_badges and show_in_card == false and target.price < target.compare_at_price -%}
+  {%- if show_badges and show_in_card == false and target.price < target.compare_at_price and settings.sale_badge_label != 'none' -%}
     <span class="price__badge lh1 color-foreground">
       {%- if settings.sale_badge_label == 'text' -%}
         {{ 'products.product.on_sale' | t }}

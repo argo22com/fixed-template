@@ -154,13 +154,21 @@
     "product": {
       "add_to_cart": "카트에 추가",
       "description": "설명",
+      "pre_order": "Pre-order",
       "on_sale": "할인",
       "product_variants": "제품 이형 상품",
       "quantity": {
         "label": "수량",
         "input_label": "{{ product }} 수량",
         "increase": "{{ product }} 수량 늘림",
-        "decrease": "{{ product }} 수량 줄임"
+        "decrease": "{{ product }} 수량 줄임",
+        "minimum_of": "최소 {{ quantity }}개",
+        "maximum_of": "최대 {{ quantity }}개",
+        "multiples_of": "{{ quantity }}개씩 증가",
+        "in_cart_html": "카트 내 <strong class=\"quantity-cart\">{{ quantity }}</strong>개",
+        "note": "수량 규칙 보기",
+        "min_of": "최소 {{ quantity }}개",
+        "max_of": "최대 {{ quantity }}개"
       },
       "price": {
         "from_price_html": "{{ price }}에서",
@@ -200,17 +208,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">배송료</a>는 결제 시 계산됩니다.",
       "choose_options": "옵션 선택하기",
       "choose_product_options": "{{ product_name }}의 옵션 선택",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} - 사용할 수 없음",
+      "variant_sold_out_or_unavailable": "품절이거나 구매할 수 없는 이형 상품",
+      "inventory_in_stock": "재고 있음",
+      "inventory_in_stock_show_count": "재고 {{ quantity }}개",
+      "inventory_low_stock": "재고 부족",
+      "inventory_low_stock_show_count": "재고 부족: {{ quantity }}개 남음",
+      "inventory_out_of_stock": "품절",
+      "inventory_out_of_stock_continue_selling": "재고 있음",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "수량별 가격 책정",
+        "note": "수량별 가격 책정 사용 가능",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "개당 {{ price }}",
+        "price_range": "{{ minimum }} ~ {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

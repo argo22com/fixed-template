@@ -10,7 +10,9 @@ if (!customElements.get('card-product-colors')) {
 			}
 
 			this.card = this.closest('.card');
-			this.primaryImage = this.card.querySelector('.media img:first-child');
+			if (this.card) {
+				this.primaryImage = this.card.querySelector('.media img:first-child');
+			}
 
 			this.onColorHoverHandler = this.onColorHover.bind(this);
 			this.onColorClickHandler = this.onColorClick.bind(this);

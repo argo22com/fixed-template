@@ -154,13 +154,21 @@
     "product": {
       "add_to_cart": "加入購物車",
       "description": "說明",
+      "pre_order": "Pre-order",
       "on_sale": "銷售額",
       "product_variants": "產品子類",
       "quantity": {
         "label": "數量",
         "input_label": "{{ product }} 數量",
         "increase": "{{ product }} 數量增加",
-        "decrease": "{{ product }} 數量減少"
+        "decrease": "{{ product }} 數量減少",
+        "minimum_of": "最少 {{ quantity }} 個",
+        "maximum_of": "最多 {{ quantity }} 個",
+        "multiples_of": "{{ quantity }} 的倍數",
+        "in_cart_html": "購物車中有 <strong class=\"quantity-cart\">{{ quantity }}</strong> 個",
+        "note": "檢視數量規則",
+        "min_of": "最少 {{ quantity }} 個",
+        "max_of": "最多 {{ quantity }} 個"
       },
       "price": {
         "from_price_html": "從 {{ price }} 起",
@@ -200,17 +208,27 @@
       "shipping_policy_html": "結帳時計算<a href=\"{{ link }}\">運費</a>。",
       "choose_options": "選擇選項",
       "choose_product_options": "選擇 {{ product_name }} 的選項",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} (無法供貨)",
+      "variant_sold_out_or_unavailable": "子類已售罄或無法供貨",
+      "inventory_in_stock": "有庫存",
+      "inventory_in_stock_show_count": "有 {{ quantity }} 件庫存",
+      "inventory_low_stock": "庫存不足",
+      "inventory_low_stock_show_count": "庫存不足：剩餘 {{ quantity }} 件",
+      "inventory_out_of_stock": "無庫存",
+      "inventory_out_of_stock_continue_selling": "有庫存",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "批發價",
+        "note": "提供批發價",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "{{ price }}/每項",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

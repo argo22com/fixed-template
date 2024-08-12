@@ -1,7 +1,7 @@
 {%- if request.design_mode -%}
   {%- if request.page_type == 'product' -%}
     <link rel="stylesheet" href="{{ 'quick-view.css' | asset_url }}" media="print" onload="this.media='all'">
-  <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
     <quick-view-modal-opener data-modal="#QuickView-Modal" class="visually-hidden">
       <button
         type="button"
@@ -24,60 +24,80 @@
     <button id="ModalClose-QuickView" type="button" class="popup-modal__toggle quick-view-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
     <div id="QuickViewInfo-QuickView" class="quick-view-modal__content-info popup-modal__content-info flex">
     {%- endif -%}
-      <section id="MainProductQuickView-{{ section.id }}" class="product-section section-{{ section.id }}-padding{% if request.design_mode %} hidden{% endif %}" data-section="{{ section.id }}">
-      {%- liquid
-        unless product.selected_variant
-          if section.settings.default_image == 'product_featured_image'
-            assign featured_media = product.featured_media  
-          else
-            if product.selected_or_first_available_variant.featured_media != null
-              assign featured_media = product.selected_or_first_available_variant.featured_media
+      <product-info
+        id="ProductQuickView-{{ section.id }}"
+        class="product-section section-{{ section.id }}-padding w100 db{% if section.settings.use_background_input %} background-input{% endif %}{% if request.design_mode %} hidden{% endif %}{% if section.settings.use_background_input %} has-background-input{% endif %}"
+        data-section="{{ section.id }}"
+        data-url="{{ product.url }}"
+        data-update-url="false"
+        {% if settings.recently_viewed_enable %}
+          data-product-id="{{ product.id }}"
+          data-product-url="{{ product.url }}"
+          data-product-image="{{ product.featured_media | image_url: width: 100 }}"
+        {% endif %}
+        >
+        {%- liquid
+          unless product.selected_variant
+            if section.settings.default_image == 'product_featured_image'
+              assign featured_media = product.featured_media
             else
-              assign featured_media = product.featured_media  
+              if product.selected_or_first_available_variant.featured_media != null
+                assign featured_media = product.selected_or_first_available_variant.featured_media
+              else
+                assign featured_media = product.featured_media
+              endif
             endif
-          endif  
-        else
-          if product.selected_variant.featured_media != null
-            assign featured_media = product.selected_variant.featured_media
           else
-            assign featured_media = product.featured_media  
+            if product.selected_variant.featured_media != null
+              assign featured_media = product.selected_variant.featured_media
+            else
+              assign featured_media = product.featured_media
+            endif
+          endunless
+
+          assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
+          assign media_count = product.media.size
+          if section.settings.hide_variants and media_count > 1 and variant_images.size > 0
+            assign media_count = media_count | minus: variant_images.size | plus: 1
           endif
-        endunless
 
-        assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
-        assign media_count = product.media.size
-        if section.settings.hide_variants and media_count > 1 and variant_images.size > 0
-          assign media_count = media_count | minus: variant_images.size | plus: 1
-        endif
+          assign media_width = 0.45
 
-        assign media_width = 0.45
+          assign is_vertical = false
+          if section.settings.gallery_layout == 'thumbnail_slider_vertical' and media_count > 1
+            assign is_vertical = true
+          endif
 
-        assign is_vertical = false
-        if section.settings.gallery_layout == 'thumbnail_slider_vertical' and media_count > 1
-          assign is_vertical = true
-        endif
+          assign threshold_media_desktop = 4
 
-        assign threshold_media_desktop = 4
+          assign has_countdown = false
 
-        assign has_countdown = false
+          assign only_use_variant_price = false
+          assign price_block = section.blocks | where: "type", "price" | first
+          if price_block
+            assign only_use_variant_price = price_block.settings.variant_price
+          endif
+          assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
+        -%}
 
-        assign only_use_variant_price = false
-        assign price_block = section.blocks | where: "type", "price" | first
-        if price_block
-          assign only_use_variant_price = price_block.settings.variant_price
-        endif
-      -%}
+        {%- style -%}
+          #MediaGallery-{{ section.id }}{
+            --object-fit:{%- if section.settings.image_fit -%}cover{%- else -%}contain{%- endif -%};
+          }
+        {%- endstyle -%}
 
-      {%- style -%}
-        #MediaGallery-{{ section.id }}{
-          --object-fit:{%- if section.settings.image_fit -%}cover{%- else -%}contain{%- endif -%};
-        }  
-      {%- endstyle -%}
+        <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+        {%- if product.quantity_price_breaks_configured? -%}
+          <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
+          <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
+        {%- endif -%}
+        {%- if request.design_mode -%}
+          <script src="{{ 'countdown.js' | asset_url }}" defer="defer"></script>
+        {%- endif -%}
 
-      <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-      {%- if request.design_mode -%}
-        <script src="{{ 'countdown.js' | asset_url }}" defer="defer"></script>
-      {%- endif -%}    
+        {%- if customer.b2b? -%}
+          {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+        {%- endif -%}
 
       {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
       {%- if first_3d_model -%}
@@ -252,14 +272,21 @@
                     <div id="price-top-{{ section.id }}" {{ block.shopify_attributes }}>
                       {%- unless product.price_varies and only_use_variant_price == false -%}
                         <div class="no-js-hidden" id="price-{{ section.id }}" role="status">
-                          {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center', show_in_card: false -%}
+                          {%-liquid
+                            unless product.quantity_price_breaks_configured?
+                              render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center', show_in_card: false
+                            else
+                              render 'main-product-price-per-item', product: product, section: section, price_classes: 'price price--large'
+                            endunless
+                          -%}
                         </div>
                       {%- else -%}
                         {%- render 'price-varies', target: product -%}  
                       {%- endunless -%}
                     </div>
+                    {%- render 'main-product-volume-pricing-note', product: product, section_id: section.id, on_background_input: section.settings.use_background_input -%}
                     {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-                      <div class="product__tax caption rte">
+                      <div class="product__tax caption rte margin-top-1rem">
                         {%- if cart.taxes_included -%}
                           {{ 'products.product.include_taxes' | t }}
                         {%- endif -%}
@@ -269,7 +296,7 @@
                       </div>
                     {%- endif -%}
                     {%- if product != blank -%}
-                      <div>
+                      <div class="margin-top-1rem">
                         {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                         {%- form 'product', product, id: product_form_installment_id, class: 'installment text-small' -%}
                           <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
@@ -375,7 +402,7 @@
                               {%- endif -%}
                             </div>
                           {%- endform -%}
-                        </product-form>  
+                        </product-form>
                       </div>
                       {%-liquid
                         if block.settings.enable_compare and settings.enable_product_compare
@@ -388,7 +415,7 @@
                         <div class="product__sale-box__footer por flex">
                           {%- render 'product-compare-button-main' -%}
                         </div>
-                      {%- endif -%}  
+                      {%- endif -%}
                     </div>
                   {%- when 'rating' -%}
                     {%- render 'main-product-rating', product: product, block: block, allow_anchor: false -%}
@@ -407,8 +434,8 @@
                             else
                               assign final_countdown_value = countdown_individual_value.value | date: '%Y-%m-%d %H:%M:%S%z'
                             endif
-                          endif  
-                        endif  
+                          endif
+                        endif
                       -%}
                       {%- if final_countdown_value != blank -%}
                         {%- assign has_countdown = true -%}
@@ -420,7 +447,7 @@
                             {%- render 'countdown-tpl-simple' -%}
                           </div>
                         </count-down>
-                      {%- endif -%} 
+                      {%- endif -%}
                     {%- elsif request.design_mode -%}
                       <div class="product__info-box flex product__countdown countdown-simple" {{ block.shopify_attributes }}>
                         <div class="countdown-simple__inner flex align-center flex-wrap">
@@ -429,7 +456,7 @@
                           {%- endif -%}
                           {%- render 'countdown-tpl-simple', use_design_mode: true -%}
                         </div>
-                      </div>   
+                      </div>
                     {%- endif -%}
                   {%- when 'information_group' -%}
                     {%- render 'main-product-information-group', section: section, block: block, product: product -%}
@@ -470,7 +497,8 @@
         {%- if collapsible_tabs.size > 0 -%}
           <script src="{{ 'details-accordion.js' | asset_url }}" defer="defer"></script>
         {%- endif -%}
-      </section>
+      </product-info>
+      <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
       {%- if request.design_mode -%}
     </div>
   </div>

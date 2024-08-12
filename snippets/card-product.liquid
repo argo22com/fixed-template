@@ -226,6 +226,12 @@
             {%- else -%}
               {% render 'price', product: card_product, show_in_card: true, price_class: 'margin-top-1rem', show_badges: true %}    
             {%- endif -%}
+
+            {%- if card_product.quantity_price_breaks_configured? -%}
+              <div class="volume-pricing-note volume-pricing-note--large align-center caption margin-top-1rem background-input">
+                <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+              </div>
+            {%- endif -%}
           </div>
         </div>
 
@@ -238,17 +244,17 @@
             {%- if show_quick_add -%}
               {%-liquid
                 unless settings.cart_button_text == 'visible'
-                  assign cartTextClasses = 'medium-hide'
+                  assign cart_text_classes = 'medium-hide'
                   if small_space_on_large_screen
-                    assign cartTextClasses = cartTextClasses | append: ' large-up-hide'
-                    assign cartIconClasses = ''
+                    assign cart_text_classes = cart_text_classes | append: ' large-up-hide'
+                    assign cart_icon_classes = ''
                   else
-                    assign cartIconClasses = 'large-up-hide'  
+                    assign cart_icon_classes = 'large-up-hide'  
                   endif
                   unless full_on_mobile
-                    assign cartTextClasses = cartTextClasses | append: ' small-hide'
+                    assign cart_text_classes = cart_text_classes | append: ' small-hide'
                   else
-                    assign cartIconClasses = cartIconClasses | append: ' small-hide'  
+                    assign cart_icon_classes = cart_icon_classes | append: ' small-hide'  
                   endunless
                 endunless  
               -%}
@@ -270,8 +276,8 @@
                       >
                         {%- unless settings.cart_button_text == 'visible' -%}
                           {%- if enable_compare or full_on_mobile != true -%}
-                            <span class="{{ cartTextClasses }}">{{ "products.product.add_to_cart" | t }}</span>
-                            {%- render 'icon-cart-in-card', add_classes: cartIconClasses -%}
+                            <span class="{{ cart_text_classes }}">{{ "products.product.add_to_cart" | t }}</span>
+                            {%- render 'icon-cart-in-card', add_classes: cart_icon_classes -%}
                           {%- else -%}
                             <span>{{ "products.product.add_to_cart" | t }}</span>
                           {%- endif -%}
@@ -297,8 +303,8 @@
                     >
                       {%- unless settings.cart_button_text == 'visible' -%}
                         {%- if enable_compare or full_on_mobile != true -%}
-                          <span class="{{ cartTextClasses }}">{{ "products.product.add_to_cart" | t }}</span>
-                          {%- render 'icon-cart-in-card', add_classes: cartIconClasses -%}
+                          <span class="{{ cart_text_classes }}">{{ "products.product.add_to_cart" | t }}</span>
+                          {%- render 'icon-cart-in-card', add_classes: cart_icon_classes -%}
                         {%- else -%}
                           <span>{{ "products.product.add_to_cart" | t }}</span>
                         {%- endif -%}
@@ -325,8 +331,8 @@
                   >
                     {%- unless settings.cart_button_text == 'visible' -%}
                       {%- if enable_compare or full_on_mobile != true -%}
-                        <span class="{{ cartTextClasses }}">{{ "products.product.add_to_cart" | t }}</span>
-                        {%- render 'icon-cart-in-card', add_classes: cartIconClasses -%}
+                        <span class="{{ cart_text_classes }}">{{ "products.product.add_to_cart" | t }}</span>
+                        {%- render 'icon-cart-in-card', add_classes: cart_icon_classes -%}
                       {%- else -%}
                         <span>{{ "products.product.add_to_cart" | t }}</span>
                       {%- endif -%}

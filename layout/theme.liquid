@@ -29,7 +29,7 @@
 
         assign body_font_large_weight = body_font.weight | plus: 200 | at_most: 600 | at_least: body_font.weight | append: ''
         assign body_font_large = body_font | font_modify: 'weight', body_font_large_weight
-
+        
         assign heading_font_bold_weight = heading_font.weight | plus: 300 | at_most: 1000 | append: ''
         assign heading_font_bold = heading_font | font_modify: 'weight', heading_font_bold_weight
         unless heading_font_bold
@@ -37,23 +37,23 @@
         endunless
 
         assign heading_font_bold_rte = heading_font_bold
-
+        
         assign heading_font_medium_weight = heading_font.weight | plus: 100 | at_most: 600 | at_least: heading_font.weight | append: ''
         assign heading_font_medium = heading_font | font_modify: 'weight', heading_font_medium_weight
-
+        
         assign heading_font_semi_bold_weight = heading_font.weight | plus: 200 | at_most: 600 | at_least: heading_font.weight | append: ''
         assign heading_font_semi_bold = heading_font | font_modify: 'weight', heading_font_semi_bold_weight
       else
         assign body_font_medium = body_font
         assign body_font_large = body_font
-
+        
         assign heading_font_bold = heading_font
 
         assign heading_font_bold_rte = heading_font | font_modify: 'weight', 'bold'
         assign heading_font_medium = heading_font
-
+        
         assign heading_font_semi_bold = heading_font
-      endif
+      endif  
     %}
 
     {% # theme-check-disable AssetPreload %}
@@ -68,10 +68,7 @@
       {%- if heading_font != body_font and heading_font != body_font_bold -%}
         <link rel="preload" as="font" href="{{ heading_font | font_url }}" type="font/woff2" crossorigin>
       {%- endif -%}
-      {%- if heading_font_bold != body_font_bold
-        and heading_font_bold != body_font
-        and heading_font_bold != heading_font
-      -%}
+      {%- if heading_font_bold != body_font_bold and heading_font_bold != body_font and heading_font_bold != heading_font -%}
         <link rel="preload" as="font" href="{{ heading_font_bold | font_url }}" type="font/woff2" crossorigin>
       {%- endif -%}
     {%- endunless -%}
@@ -89,10 +86,7 @@
       {% endif %}
     {%- else -%}
       <title>{{ settings.collections_list_meta_title | default: page_title }}</title>
-      <meta
-        name="description"
-        content="{{ settings.collections_list_meta_description | default: page_description | escape }}"
-      >
+      <meta name="description" content="{{ settings.collections_list_meta_description | default: page_description | escape }}">
     {%- endunless -%}
 
     {%- render 'meta-tags' -%}
@@ -144,7 +138,15 @@
         window.recentlyViewedStrings = {
           empty: {{ 'general.floating_bar.recently_viewed_empty' | t | json }}
         };
-      {%- endif -%}  
+        window.recentlyViewedLimit = {{ settings.recently_viewed_products_to_show }};
+        {%- if request.page_type == 'product' and product -%}
+          window.currentProduct = {
+            id: {{ product.id | json }},
+            url: {{ product.url | json }},
+            image: {{ product.featured_media | image_url: width: 100 | json }}
+          };
+        {%- endif -%}
+      {%- endif -%}
 
       {%- if settings.enable_product_compare -%}
         window.addedCompareStrings = {
@@ -160,6 +162,7 @@
       window.loadedBackgroundColorSwatches = {%- if request.design_mode or template.name == 'collection' or template.name == 'search' -%}true{%- else -%}false{%- endif -%};
       window.currencyMain = {{ shop.currency | json }};
       window.appearAnimate = {% if settings.enable_appear_effect %}true{% else %}false{% endif %};
+      window.hideUnavailableOptions = {{ settings.hide_unavailable_options | json }};
     </script>
     {%- if settings.google_maps_api_key != blank -%}
       <script>
@@ -176,109 +179,108 @@
     <script src="{{ 'motion.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
 
-    {%- render 'critical-inline-styles',
-      body_font: body_font,
-      body_font_bold: body_font_bold,
-      body_font_medium: body_font_medium,
-      body_font_large: body_font_large,
-      body_font_italic: body_font_italic,
-      body_font_bold_italic: body_font_bold_italic,
-      heading_font: heading_font,
-      heading_font_bold: heading_font_bold,
-      heading_font_medium: heading_font_medium,
-      heading_font_semi_bold: heading_font_semi_bold,
-      heading_font_bold_rte: heading_font_bold_rte,
-      only_variables: false,
-      direction: direction
-    -%}
+    {%- render 'critical-inline-styles', body_font: body_font, body_font_bold: body_font_bold, body_font_medium: body_font_medium, body_font_large: body_font_large, body_font_italic: body_font_italic, body_font_bold_italic: body_font_bold_italic, heading_font: heading_font, heading_font_bold: heading_font_bold, heading_font_medium: heading_font_medium, heading_font_semi_bold: heading_font_semi_bold, heading_font_bold_rte: heading_font_bold_rte, only_variables: false, direction: direction -%}
 
     {{ 'critical-base.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
     <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+    {%- if customer.b2b? -%}
+      {%- unless request.page_type == 'collection' or request.page_type == 'product' or request.page_type == 'search' -%}
+        <link rel="stylesheet" href="{{ 'component-volume-pricing-note.css' | asset_url }}" media="print" onload="this.media='all'">
+      {%- else -%}
+        {{ 'component-volume-pricing-note.css' | asset_url | stylesheet_tag }}
+      {%- endunless -%}
+    {%- endif -%}
+
+    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    if (Shopify.designMode) {
+      document.documentElement.classList.add('shopify-design-mode');
+    }
+    </script>
 
     <script>
-      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-      if (Shopify.designMode) {
-        document.documentElement.classList.add('shopify-design-mode');
-      }
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        if (Shopify.designMode) {
+            document.documentElement.classList.add('shopify-design-mode');
+        }
     </script>
     <script defer src="https://static.cdn-apple.com/businesschat/start-chat-button/2/index.js"></script>
 
     <script
-      type="text/javascript"
+            type="text/javascript"
     >
-                const mluviiServer = "//app.mluvii.com/widget/OOWidget.js";
-                const widgetGuid = "8703a057-c4b9-4f1c-abc1-eb987962f4b4";
-                const appleBussinessID = "0af3daf7-5f90-4c5e-8a5a-64a6c88b2ed1";
-                const appleIntent = "mluvii";
-                const widgetName = "FIXED";
-                const iconScale = 1.5;
-                const marginBottom = 20;
-                const marginRight = 20;
-                const widgetColor = "#ffffff";
-                const widgetBackgroundColor = "#00aae9";
+        const mluviiServer = "//app.mluvii.com/widget/OOWidget.js";
+        const widgetGuid = "8703a057-c4b9-4f1c-abc1-eb987962f4b4";
+        const appleBussinessID = "0af3daf7-5f90-4c5e-8a5a-64a6c88b2ed1";
+        const appleIntent = "mluvii";
+        const widgetName = "FIXED";
+        const iconScale = 1.5;
+        const marginBottom = 20;
+        const marginRight = 20;
+        const widgetColor = "#ffffff";
+        const widgetBackgroundColor = "#00aae9";
 
-                // Kontrola podpory Apple Business Chat
-                function isAppleBusinessChatSupported() {
-                    return window.appleBusinessChat && window.appleBusinessChat.isSupported();
-                }
+        // Kontrola podpory Apple Business Chat
+        function isAppleBusinessChatSupported() {
+            return window.appleBusinessChat && window.appleBusinessChat.isSupported();
+        }
 
-                    console.log('Apple Business Chat supported:', isAppleBusinessChatSupported());
+        console.log('Apple Business Chat supported:', isAppleBusinessChatSupported());
 
-                // Načtení mluvii nebo Apple Business Chat widgetu
-                if (!window.appleBusinessChat || !window.appleBusinessChat.isSupported()) { //if (!isAppleBusinessChatSupported()) {
-                    loadMluviiWidget();
-                    console.log('Webchat widget loaded!');
-                } else {
-                    loadAppleBusinessChat();
-                    console.log('Apple widget loaded!');
-                }
+        // Načtení mluvii nebo Apple Business Chat widgetu
+        if (!window.appleBusinessChat || !window.appleBusinessChat.isSupported()) { //if (!isAppleBusinessChatSupported()) {
+            loadMluviiWidget();
+            console.log('Webchat widget loaded!');
+        } else {
+            loadAppleBusinessChat();
+            console.log('Apple widget loaded!');
+        }
 
 
-                // Funkce pro načtení mluvii widgetu
-                function loadMluviiWidget() {
-                    let script = document.createElement('script');
-                    script.type = 'text/javascript';
-                    script.charset = 'UTF-8';
-                    script.async = true;
-                    script.src = mluviiServer;
-                    script.$owidgetOnLoad = function (owidget) {
-                        if (!owidget.isSupported) return;
-                        owidget.init(widgetGuid, widgetName);
-                        owidget.connectToServer();
-                    };
-                    let firstScriptTag = document.getElementsByTagName('script')[0];
-                    firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
-                }
-                // Funkce pro načtení Apple Business Chat widgetu
-                function loadAppleBusinessChat() {
-                    let container = document.createElement('div');
-                    container.style.cssText = `position: fixed; bottom: ${marginBottom}px; right: ${marginRight}px; width: ${45 * iconScale}px; height: ${45 * iconScale}px; float: right; z-index: 9999;`;
-                    let widget = document.createElement('div');
-                    widget.className = 'apple-business-chat-message-container';
-                    widget.setAttribute('data-apple-business-id', appleBussinessID);
-                    widget.setAttribute('data-apple-business-intent-id', appleIntent);
-                    widget.setAttribute('data-apple-icon-scale', iconScale.toString());
-                    widget.setAttribute('data-apple-icon-color', widgetColor);
-                    widget.setAttribute('data-apple-icon-background-color', widgetBackgroundColor);
-                    container.appendChild(widget);
-                    console.log(container);
-                    document.body.appendChild(container);
-                }
-                // Funkce pro otevření chatu na základě zařízení
-                function openChatBasedOnDevice() {
-                    if (typeof $owidget !== 'undefined') {
-                        $owidget.openChat();
-                    } else {
-                        window.location.href = `https://bcrw.apple.com/urn:biz:${appleBussinessID}?biz-intent-id=${appleIntent}`;
-                    }
-                }
+        // Funkce pro načtení mluvii widgetu
+        function loadMluviiWidget() {
+            let script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.charset = 'UTF-8';
+            script.async = true;
+            script.src = mluviiServer;
+            script.$owidgetOnLoad = function (owidget) {
+                if (!owidget.isSupported) return;
+                owidget.init(widgetGuid, widgetName);
+                owidget.connectToServer();
+            };
+            let firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
+        }
+        // Funkce pro načtení Apple Business Chat widgetu
+        function loadAppleBusinessChat() {
+            let container = document.createElement('div');
+            container.style.cssText = `position: fixed; bottom: ${marginBottom}px; right: ${marginRight}px; width: ${45 * iconScale}px; height: ${45 * iconScale}px; float: right; z-index: 9999;`;
+            let widget = document.createElement('div');
+            widget.className = 'apple-business-chat-message-container';
+            widget.setAttribute('data-apple-business-id', appleBussinessID);
+            widget.setAttribute('data-apple-business-intent-id', appleIntent);
+            widget.setAttribute('data-apple-icon-scale', iconScale.toString());
+            widget.setAttribute('data-apple-icon-color', widgetColor);
+            widget.setAttribute('data-apple-icon-background-color', widgetBackgroundColor);
+            container.appendChild(widget);
+            console.log(container);
+            document.body.appendChild(container);
+        }
+        // Funkce pro otevření chatu na základě zařízení
+        function openChatBasedOnDevice() {
+            if (typeof $owidget !== 'undefined') {
+                $owidget.openChat();
+            } else {
+                window.location.href = `https://bcrw.apple.com/urn:biz:${appleBussinessID}?biz-intent-id=${appleIntent}`;
+            }
+        }
     </script>
   </head>
 
   <body class="gradient">
     <a class="skip-to-content-link skip-to-content-link--all button visually-hidden" href="#MainContent">
-      <span>{{ 'accessibility.skip_to_text' | t }}</span>
+      <span>{{ "accessibility.skip_to_text" | t }}</span>
     </a>
 
     {%- render 'symbols' -%}
@@ -315,7 +317,7 @@
       {{ 'component-truncate-text.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
-    {%- if settings.cart_type == 'drawer' and request.page_type != 'cart' -%}
+    {%- if settings.cart_type == "drawer" and request.page_type != 'cart' -%}
       <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
       {%- section 'cart-drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
@@ -324,29 +326,16 @@
     <link rel="stylesheet" href="{{ 'lightbox.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'component-popup.css' | asset_url }}" media="print" onload="this.media='all'">
 
-    {%- if settings.cart_type == 'notification' and request.page_type != 'cart' -%}
+    {%- if settings.cart_type == "notification" and request.page_type != 'cart' -%}
       <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
       <modal-dialog id="Cart-Notification-Modal" class="popup-modal cart-notification-modal" hidden>
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label="{{ 'templates.compare.popup' | t | escape }}"
-          class="popup-modal__content cart-notification-modal__content"
-          tabindex="-1"
-        >
+        <div role="dialog" aria-modal="true" aria-label="{{ 'templates.compare.popup' | t | escape }}" class="popup-modal__content cart-notification-modal__content" tabindex="-1">
           <div class="cart-notification__header por flex justify-space-between align-center">
             <h2 class="text-body flex align-center margin0">
               {%- render 'icon-checkmark', add_classes: 'cart-notification__header__checkmark' -%}
               <span>{{ 'general.cart.item_added' | t }}</span>
             </h2>
-            <button
-              id="ModalClose-Cart-Notification"
-              type="button"
-              class="cart-notification-modal__toggle flex justify-center align-center color-foreground"
-              aria-label="{{ 'accessibility.close' | t }}"
-            >
-              {% render 'icon-close', icon_width: 22 %}
-            </button>
+            <button id="ModalClose-Cart-Notification" type="button" class="cart-notification-modal__toggle flex justify-center align-center color-foreground" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close', icon_width: 22 %}</button>
           </div>
           <cart-notification class="cart-notification-modal__content-info flex flex-column por empty cart-items">
             <div id="cart-notification-product" class="cart-notification-product cart-item"></div>
@@ -365,23 +354,13 @@
                 </button>
               </form>
               <div class="cart-notification__continue-wrapper center">
-                <button
-                  class="cart-notification__continue unstyled-button link light link--text underlined-link lh1"
-                  type="button"
-                >
-                  {{ 'general.continue_shopping' | t }}
-                </button>
+                <button class="cart-notification__continue unstyled-button link light link--text underlined-link lh1" type="button">{{ 'general.continue_shopping' | t }}</button>
               </div>
             </div>
           </cart-notification>
         </div>
       </modal-dialog>
-      <link
-        rel="stylesheet"
-        href="{{ 'component-cart-notification.css' | asset_url }}"
-        media="print"
-        onload="this.media='all'"
-      >
+      <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
     {%- endif -%}
 
     <script src="{{ 'parallax-element.js' | asset_url }}" defer="defer"></script>
@@ -398,21 +377,8 @@
     {%- if settings.enable_product_compare -%}
       <script src="{{ 'compare-products.js' | asset_url }}" defer="defer"></script>
       <modal-dialog id="Compare-Modal" class="popup-modal compare-modal" hidden>
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label="{{ 'templates.compare.popup' | t | escape }}"
-          class="popup-modal__content compare-modal__content"
-          tabindex="-1"
-        >
-          <button
-            id="ModalClose-Compare"
-            type="button"
-            class="popup-modal__toggle compare-modal__toggle"
-            aria-label="{{ 'accessibility.close' | t }}"
-          >
-            {% render 'icon-close' %}
-          </button>
+        <div role="dialog" aria-modal="true" aria-label="{{ 'templates.compare.popup' | t | escape }}" class="popup-modal__content compare-modal__content" tabindex="-1">
+          <button id="ModalClose-Compare" type="button" class="popup-modal__toggle compare-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
           <div id="compare-modal-assets"></div>
           <compare-popup class="compare-modal__content-info popup-modal__content-info flex flex-column template-popup por empty">
             <div class="compare-modal__empty compare-modal__message w100">
@@ -449,27 +415,22 @@
     {%- endif -%}
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-      <link
-        rel="stylesheet"
-        href="{{ 'component-predictive-search.css' | asset_url }}"
-        media="print"
-        onload="this.media='all'"
-      >
+      <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
     {%- endif -%}
 
     <link rel="stylesheet" href="{{ 'base.css' | asset_url }}" media="print" onload="this.media='all'">
-    <link
-      rel="stylesheet"
-      href="{{ 'component-search-modal.css' | asset_url }}"
-      media="print"
-      onload="this.media='all'"
-    >
+    <link rel="stylesheet" href="{{ 'component-search-modal.css' | asset_url }}" media="print" onload="this.media='all'">
     <noscript>
       {{ 'base.css' | asset_url | stylesheet_tag }}
       {{ 'component-search-modal.css' | asset_url | stylesheet_tag }}
       {{ 'component-card.css' | asset_url | stylesheet_tag }}
       {%- if settings.predictive_search_enabled -%}
         {{ 'component-predictive-search.css' | asset_url | stylesheet_tag }}
+      {%- endif -%}
+      {%- if customer.b2b? -%}
+        {%- unless request.page_type == 'collection' or request.page_type == 'product' or request.page_type == 'search' -%}
+          {{ 'component-volume-pricing-note.css' | asset_url | stylesheet_tag }}
+        {%- endunless -%}
       {%- endif -%}
       {{ 'no-js.css' | asset_url | stylesheet_tag }}
     </noscript>

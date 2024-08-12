@@ -155,13 +155,21 @@
     "product": {
       "add_to_cart": "Agregar al carrito",
       "description": "Descripción",
+      "pre_order": "Hacer un pedido",
       "on_sale": "Oferta",
       "product_variants": "Variantes de producto",
       "quantity": {
         "label": "Cantidad",
         "input_label": "Cantidad para {{ product }}",
         "increase": "Aumentar cantidad para {{ product }}",
-        "decrease": "Reducir cantidad para {{ product }}"
+        "decrease": "Reducir cantidad para {{ product }}",
+        "minimum_of": "Mínimo de {{ quantity }}",
+        "maximum_of": "Máximo de {{ quantity }}",
+        "multiples_of": "Incrementos de {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> en el carrito",
+        "note": "Ver reglas de cantidad",
+        "min_of": "Mín.: {{ quantity }}",
+        "max_of": "Máx.: {{ quantity }}"
       },
       "price": {
         "from_price_html": "A partir de {{ price }}",
@@ -174,7 +182,6 @@
       "sold_out": "Agotado",
       "unavailable": "No disponible",
       "vendor": "Proveedor",
-      "value_unavailable": "{{ option_value }}: no disponible",
       "video_exit_message": "{{ title }} abre el video en pantalla completa en la misma ventana.",
       "xr_button": "Ver en tu espacio",
       "xr_button_label": "Ver en tu espacio, carga el artículo en la ventana de realidad aumentada",
@@ -203,6 +210,10 @@
       "choose_options": "Seleccionar opciones",
       "choose_product_options": "Elegir opciones para {{ product_name }}",
       "quick_view": "Vista rápida de un producto",
+      "quick_view_button": "Vista rápida",
+      "view_product": "Ver el producto",
+      "value_unavailable": "{{ option_value }}: no disponible",
+      "variant_sold_out_or_unavailable": "Variante agotada o no disponible",
       "inventory_in_stock": "En stock",
       "inventory_in_stock_show_count": "{{ quantity }} en stock",
       "inventory_low_stock": "Pocas existencias",
@@ -212,6 +223,13 @@
       "number_of_reviews": {
         "one": "{{ count }} revisión",
         "other": "{{ count }} reseñas"
+      },
+      "volume_pricing": {
+        "title": "Precios por volumen",
+        "note": "Precio por volumen disponible",
+        "minimum": "Más de {{ quantity }}",
+        "price_at_each": "{{ price }} por unidad",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "by_vendor_html": "<span>Por</span> {{ vendor }}"
     },

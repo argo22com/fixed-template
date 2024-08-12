@@ -102,7 +102,7 @@
 
 /* Collection card */
 
-.card__heading__collection-title {
+.card__heading__collection-title-inside {
   position: absolute;
   bottom: 1.5rem;
   inset-inline: 0;
@@ -118,7 +118,7 @@
   background-color: transparent;
 }
 
-.card__heading--collection a:before {
+.card__heading--collection-background a:before {
   position: absolute;
   inset-inline: 0;
   inset-block: 0;
@@ -128,6 +128,10 @@
 
 .card__heading__collection-title-box {
   padding: 0.7rem 1rem;
+}
+
+.card-radius-collection {
+  border-radius: var(--collection-card-border-radius);
 }
 
 @media (max-width: 749px) {

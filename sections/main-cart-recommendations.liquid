@@ -174,7 +174,11 @@
     {%- endif -%}  
   </main-cart-recommendations>
 </div>
-
+{%- style -%}
+#shopify-section-{{ section.id }}:has(cart-product-recommendations.hidden) {
+  display: none;
+}
+{%- endstyle -%}
 {% schema %}
 {
   "name": "t:sections.product-recommendations.name",
@@ -408,11 +412,9 @@
   "disabled_on": {
     "templates": [
       "404",
-      "checkpoint",
       "gift_card",
       "list-collections",
       "password",
-      "queue",
       "search",
       "product",
       "article",

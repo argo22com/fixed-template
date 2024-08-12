@@ -2,7 +2,7 @@
   {
     "name": "theme_info",
     "theme_name": "Woodstock",
-    "theme_version": "1.6.0",
+    "theme_version": "2.0.0",
     "theme_author": "Boostheme",
     "theme_documentation_url": "https:\/\/boostheme.zendesk.com\/hc\/en-us\/categories\/19508100149273-Woodstock",
     "theme_support_url": "https:\/\/boostheme.zendesk.com\/hc\/en-us\/requests\/new"
@@ -289,44 +289,6 @@
     ]
   },
   {
-    "name": "t:settings_schema.reviews.name",
-    "settings": [
-      {
-        "type": "paragraph",
-        "content": "t:sections.main-product.blocks.rating.settings.paragraph.content"
-      },
-      {
-        "type": "select",
-        "id": "read_rating_data_from_app",
-        "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.label",
-        "info": "t:settings_schema.reviews.settings.read_rating_data_from_app.info",
-        "options": [
-          {
-            "value": "standard",
-            "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.options__1.label"
-          },
-          {
-            "value": "loox",
-            "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.options__2.label"
-          },
-          {
-            "value": "okendo",
-            "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.options__3.label"
-          },
-          {
-            "value": "stamped",
-            "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.options__4.label"
-          },
-          {
-            "value": "none",
-            "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.options__5.label"
-          }
-        ],
-        "default": "standard"
-      }
-    ]
-  },
-  {
     "name": "t:settings_schema.page_heading_banner.name",
     "settings": [
       {
@@ -564,6 +526,23 @@
         "label": "t:settings_schema.global.settings.text_alignment.label"
       },
       {
+        "type": "select",
+        "id": "card_image_fit",
+        "label": "t:settings_schema.cards.settings.image_fit.label",
+        "info": "t:settings_schema.cards.settings.image_fit.info",
+        "options": [
+          {
+            "value": "cover",
+            "label": "t:settings_schema.cards.settings.image_fit.options__1.label"
+          },
+          {
+            "value": "contain",
+            "label": "t:settings_schema.cards.settings.image_fit.options__2.label"
+          }
+        ],
+        "default": "cover"
+      },
+      {
         "type": "checkbox",
         "id": "card_show_border",
         "label": "t:settings_schema.cards.settings.show_border.label",
@@ -640,6 +619,129 @@
     ]
   },
   {
+    "name": "t:settings_schema.reviews.name",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "t:sections.main-product.blocks.rating.settings.paragraph.content"
+      },
+      {
+        "type": "select",
+        "id": "read_rating_data_from_app",
+        "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.label",
+        "info": "t:settings_schema.reviews.settings.read_rating_data_from_app.info",
+        "options": [
+          {
+            "value": "standard",
+            "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.options__1.label"
+          },
+          {
+            "value": "loox",
+            "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.options__2.label"
+          },
+          {
+            "value": "okendo",
+            "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.options__3.label"
+          },
+          {
+            "value": "stamped",
+            "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.options__4.label"
+          },
+          {
+            "value": "none",
+            "label": "t:settings_schema.reviews.settings.read_rating_data_from_app.options__5.label"
+          }
+        ],
+        "default": "standard"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.pre_order_text.name",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_pre_order_text",
+        "label": "t:settings_schema.pre_order_text.settings.enable_pre_order_text.label",
+        "default": false
+      },
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.pre_order_text.settings.description.content"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.product_compare.name",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_product_compare",
+        "label": "t:settings_schema.product_compare.settings.enable_product_compare.label",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "inventory_threshold_product_compare",
+        "label": "t:settings_schema.product_compare.settings.inventory_threshold.label",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "info": "t:settings_schema.product_compare.settings.inventory_threshold.info",
+        "default": 10
+      },
+      {
+        "type": "checkbox",
+        "id": "show_inventory_quantity_product_compare",
+        "label": "t:settings_schema.product_compare.settings.show_inventory_quantity.label",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "t:sections.product-compare.blocks.options.name"
+      },
+      {
+        "type": "select",
+        "id": "picker_type_compare",
+        "options": [
+          {
+            "value": "dropdown",
+            "label": "t:sections.product-compare.blocks.options.settings.picker_type.options__1.label"
+          },
+          {
+            "value": "button",
+            "label": "t:sections.product-compare.blocks.options.settings.picker_type.options__2.label"
+          }
+        ],
+        "default": "button",
+        "label": "t:sections.product-compare.blocks.options.settings.picker_type.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_color_swatches_compare",
+        "label": "t:sections.product-compare.blocks.options.settings.enable_color_swatches.label",
+        "info": "t:sections.product-compare.blocks.options.settings.enable_color_swatches.info",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "color_swatches_style_compare",
+        "label": "t:sections.product-compare.blocks.options.settings.color_swatches_style.label",
+        "options": [
+          {
+            "value": "variant",
+            "label": "t:sections.product-compare.blocks.options.settings.color_swatches_style.option_1.label"
+          },
+          {
+            "value": "custom",
+            "label": "t:sections.product-compare.blocks.options.settings.color_swatches_style.option_2.label"
+          }
+        ],
+        "default": "variant"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.collection_cards.name",
     "settings": [
       {
@@ -659,6 +761,13 @@
         "id": "collection_card_color_scheme",
         "default": "background-2",
         "label": "t:sections.all.colors.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "collection_show_text_below",
+        "label": "t:settings_schema.collection_cards.settings.show_text_below.label",
+        "info": "t:settings_schema.collection_cards.settings.show_text_below.info",
+        "default": false
       }
     ]
   },
@@ -685,6 +794,10 @@
           {
             "value": "amount",
             "label": "t:settings_schema.badges.settings.sale_badge_label.option_3.label"
+          },
+          {
+            "value": "none",
+            "label": "t:settings_schema.badges.settings.sale_badge_label.option_4.label"
           }
         ],
         "default": "text"
@@ -1217,33 +1330,6 @@
             "label": "t:settings_schema.recently_viewed_products.settings.columns_mobile.options__2.label"
           }
         ]
-      }
-    ]
-  },
-  {
-    "name": "t:settings_schema.product_compare.name",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "enable_product_compare",
-        "label": "t:settings_schema.product_compare.settings.enable_product_compare.label",
-        "default": true
-      },
-      {
-        "type": "range",
-        "id": "inventory_threshold_product_compare",
-        "label": "t:settings_schema.product_compare.settings.inventory_threshold.label",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "info": "t:settings_schema.product_compare.settings.inventory_threshold.info",
-        "default": 10
-      },
-      {
-        "type": "checkbox",
-        "id": "show_inventory_quantity_product_compare",
-        "label": "t:settings_schema.product_compare.settings.show_inventory_quantity.label",
-        "default": true
       }
     ]
   },

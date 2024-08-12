@@ -1,16 +1,20 @@
 {%- if block.settings.quantity_selector_enable -%}
+  {%- render 'main-product-quantity-label', cart_qty: cart_qty, section_id: section.id -%}
   <div class="product-form__input product-form__quantity">
-    <label class="form__label visually-hidden" for="Quantity-{{ section.id }}">
-      {{ 'products.product.quantity.label' | t }}
-    </label>
-
     <quantity-input class="quantity flex align-center color-foreground por">
       <input class="quantity__input flex-grow-1 center background-input"
           type="number"
           name="quantity"
           id="Quantity-{{ section.id }}"
-          min="1"
-          value="1"
+          data-cart-quantity="{{ cart_qty }}"
+          data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+          min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+          {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
+            data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+            max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+          {% endif %}
+          step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
+          value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
         >
       <div class="quantity__buttons flex flex-column flex-grow-1">    
         <button class="quantity__button flex justify-center align-center no-js-hidden w100 color-foreground" name="plus" type="button">

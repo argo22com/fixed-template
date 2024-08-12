@@ -154,13 +154,21 @@
     "product": {
       "add_to_cart": "Sepete ekle",
       "description": "Açıklama",
+      "pre_order": "Pre-order",
       "on_sale": "İndirim",
       "product_variants": "Ürün varyasyonları",
       "quantity": {
         "label": "Adet",
         "input_label": "{{ product }} için adet",
         "increase": "{{ product }} için adedi artırın",
-        "decrease": "{{ product }} için adedi azaltın"
+        "decrease": "{{ product }} için adedi azaltın",
+        "minimum_of": "Minimum: {{ quantity }}",
+        "maximum_of": "Maksimum: {{ quantity }}",
+        "multiples_of": "Artış değeri: {{ quantity }}",
+        "in_cart_html": "Sepette: <strong class=\"quantity-cart\">{{ quantity }}</strong>",
+        "note": "Adet kurallarını görüntüle",
+        "min_of": "Minimum {{ quantity }}",
+        "max_of": "Maksimum {{ quantity }}"
       },
       "price": {
         "from_price_html": "Başlangıç fiyatı: {{ price }}",
@@ -200,17 +208,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Kargo</a>, ödeme sayfasında hesaplanır.",
       "choose_options": "Seçenekleri belirle",
       "choose_product_options": "{{ product_name }} için seçenekleri belirle",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} - Kullanılamıyor",
+      "variant_sold_out_or_unavailable": "Varyasyon tükendi veya kullanılamıyor",
+      "inventory_in_stock": "Stokta",
+      "inventory_in_stock_show_count": "Stokta {{ quantity }} adet mevcut",
+      "inventory_low_stock": "Stok düzeyi düşük",
+      "inventory_low_stock_show_count": "Stok düzeyi düşük: {{ quantity }} adet kaldı",
+      "inventory_out_of_stock": "Stokta yok",
+      "inventory_out_of_stock_continue_selling": "Stokta",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Toplu Alım Bazlı Fiyatlandırma",
+        "note": "Toplu alım bazlı fiyatlandırma kullanılabilir",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "{{ price }}/adet",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

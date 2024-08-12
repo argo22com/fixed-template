@@ -1,7 +1,7 @@
 .background-color-swatches__inner {
 	position: fixed;
 	top: 0;
-	inset-inline-start: 0;
+	inset-inline: 0;
 	transform: translateY(100%);
 	transition: transform 300ms ease, opacity 100ms;
 	opacity: 0;

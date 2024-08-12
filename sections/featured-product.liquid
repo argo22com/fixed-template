@@ -21,7 +21,8 @@
   {%- liquid
     assign product = section.settings.product
     assign media_count = 0
-    if product != blank 
+    assign variant_images = nil
+    if product != blank
       if section.settings.default_image == 'product_featured_image'
         assign featured_media = product.featured_media  
       else
@@ -66,6 +67,7 @@
     if price_block
       assign only_use_variant_price = price_block.settings.variant_price
     endif
+    assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
   -%}
   {%- if product != blank and product.media.size == 0 -%}
     {{ 'section-main-product-no-media.css' | asset_url | stylesheet_tag }}
@@ -88,6 +90,15 @@
       --object-fit:{%- if section.settings.image_fit -%}cover{%- else -%}contain{%- endif -%};
     }
   {%- endstyle -%}
+  <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+  {%- if product.quantity_price_breaks_configured? or request.design_mode -%}
+    <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+
+  {%- if customer.b2b? -%}
+    {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+  {%- endif -%}
 
   <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -98,7 +109,7 @@
     <link id="ModelViewerOverride-{{ section.id }}" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
 
-  <section class="product-section color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding {% if section.settings.use_background_input %}background-input{% else %}gradient{% endif %}">
+  <section class="product-section color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding {% if section.settings.use_background_input %}background-input has-background-input{% else %}gradient{% endif %}">
     <div class="{{ section.settings.section_width }}">
       {%- if section.settings.gallery_layout == 'thumbnail_slider_compact' -%}
       <media-gallery id="MediaGallery-{{ section.id }}" role="region" class="product__media-gallery{% if is_vertical %} product__media-gallery--vertical product__media-gallery--vertical-{{ section.settings.thumbnail_position }}{% endif %}" aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}"{% if section.settings.auto_scroll_up_mobile %} data-scroll-up-mobile="true"{% endif %}{% if section.settings.disable_images_lightbox %} data-disable-lightbox="true"{% endif %}>
@@ -140,8 +151,8 @@
                     <div class="w100 product__media media media--{{ section.settings.image_ratio | replace: 'adapt', 'square' }}">
                       {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg w100 h100' }}
                     </div>
-                  </li>  
-                {%- endif -%}  
+                  </li>
+                {%- endif -%}
               </ul>
               {%- if media_count > 1 -%}
                 <div class="slider-buttons no-js-hidden{% if section.settings.gallery_layout == 'stacked' or section.settings.gallery_layout == 'thumbnail' or section.settings.gallery_layout == 'columns' %} medium-hide large-up-hide{% endif %} flex justify-center align-center">
@@ -260,7 +271,13 @@
           {%- endif -%}
         </div>
         <div class="product__info-wrapper product__info-wrapper-media-{{ section.settings.media_position }} grid__item por">
-          <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %}{% if section.settings.gallery_layout == 'stacked' or section.settings.gallery_layout == 'columns' %} product__sticky{% endif %}{% endif %}">
+          <product-info
+            id="ProductInfo-{{ section.id }}"
+            class="product__info-container{% if section.settings.enable_sticky_info %}{% if section.settings.gallery_layout == 'stacked' or section.settings.gallery_layout == 'columns' %} product__sticky{% endif %}{% endif %}"
+            data-section="{{ section.id }}"
+            data-url="{{ product.url }}"
+            data-update-url="false"
+          >
             {%- assign product_form_id = 'product-form-' | append: section.id -%}
             {%- for block in section.blocks -%}
               {%- case block.type -%}
@@ -390,34 +407,43 @@
                   {%- endif -%}
                 {%- endif -%}
               {%- when 'price' -%}
-                <div id="price-top-{{ section.id }}" {{ block.shopify_attributes }}>
-                  {%- unless product.price_varies and only_use_variant_price == false -%}
-                    <div class="no-js-hidden" id="price-{{ section.id }}" role="status">
-                      {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center', show_in_card: false -%}
+                <div {{ block.shopify_attributes }}>
+                  <div id="price-top-{{ section.id }}">
+                    {%- unless product.price_varies and only_use_variant_price == false -%}
+                      <div class="no-js-hidden" id="price-{{ section.id }}" role="status">
+                        {%-liquid
+                          unless product.quantity_price_breaks_configured?
+                            render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center', show_in_card: false
+                          else
+                            render 'main-product-price-per-item', product: product, section: section, price_classes: 'price price--large'
+                          endunless
+                        -%}
+                      </div>
+                    {%- else -%}
+                      {%- render 'price-varies', target: product -%}
+                    {%- endunless -%}
+                  </div>
+                  {%- render 'main-product-volume-pricing-note', product: product, section_id: section.id, on_background_input: section.settings.use_background_input -%}
+                  {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                    <div class="product__tax caption rte margin-top-1rem">
+                      {%- if cart.taxes_included -%}
+                        {{ 'products.product.include_taxes' | t }}
+                      {%- endif -%}
+                      {%- if shop.shipping_policy.body != blank -%}
+                        {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                      {%- endif -%}
                     </div>
-                  {%- else -%}
-                    {%- render 'price-varies', target: product -%}  
-                  {%- endunless -%}
+                  {%- endif -%}
+                  {%- if product != blank -%}
+                    <div class="margin-top-1rem">
+                      {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+                      {%- form 'product', product, id: product_form_installment_id, class: 'installment text-small' -%}
+                        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                        {{ form | payment_terms }}
+                      {%- endform -%}
+                    </div>
+                  {%- endif -%}
                 </div>
-                {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-                  <div class="product__tax caption rte">
-                    {%- if cart.taxes_included -%}
-                      {{ 'products.product.include_taxes' | t }}
-                    {%- endif -%}
-                    {%- if shop.shipping_policy.body != blank -%}
-                      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                    {%- endif -%}
-                  </div>
-                {%- endif -%}
-                {%- if product != blank -%}  
-                  <div>
-                    {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
-                    {%- form 'product', product, id: product_form_installment_id, class: 'installment text-small' -%}
-                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                      {{ form | payment_terms }}
-                    {%- endform -%}  
-                  </div>
-                {%- endif -%}
               {%- when 'description' -%}
                 {%- render 'main-product-description', product: product, section: section, block: block -%}
               {%- when 'custom_liquid' -%}
@@ -458,15 +484,21 @@
                 {%- assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin -%}
                 {%- render 'main-product-share', share_url: share_url, title: product.selected_or_first_available_variant.metafields.product_texts.title, block: block, featured_media: featured_media -%}
               {%- when 'sale_box' -%}
-                <div class="product__sale-box product__info-box flex flex-column" {{ block.shopify_attributes }}>
-                  {%- render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id -%}
+                <div class="product__sale-box product__info-box flex flex-column{% if block.settings.picker_type == 'button' %} overflow-hidden{% endif %}" {{ block.shopify_attributes }}>
+                  {%- render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id, picker_type: block.settings.picker_type, enable_color_swatches: block.settings.enable_color_swatches, color_swatches_style: block.settings.color_swatches_style -%}
                   {%- if product.price_varies and only_use_variant_price == false -%}
                     <div class="no-js-hidden" id="price-{{ section.id }}" role="status">
-                      {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center', show_in_card: false -%}
+                      {%-liquid
+                        unless product.quantity_price_breaks_configured?
+                          render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large flex align-center', show_in_card: false
+                        else
+                          render 'main-product-price-per-item', product: product, section: section, price_classes: 'price price--large'
+                        endunless
+                      -%}
                     </div>
                   {%- endif -%}
                   {%-liquid
-                    if block.settings.show_free_shipping_bar
+                    if block.settings.show_free_shipping_bar and settings.free_shipping_enable
                       assign should_show_free_shipping_bar = true
                       if settings.free_shipping_exclude_products != blank and settings.free_shipping_exclude_products.count > 0
                         assign exclude_product_ids = settings.free_shipping_exclude_products | map: 'id'
@@ -478,7 +510,25 @@
                         render 'free-shipping-bar', wrapper_classes: 'product__free-shipping-bar'
                       endif
                     endif
-                -%}
+                    assign check_against_inventory = true
+                    assign quantity_rule_soldout = false
+                    if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+                      assign check_against_inventory = false
+                    endif
+                    if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+                      assign quantity_rule_soldout = true
+                    endif
+
+                    assign has_qty_rules = false
+                    if product.selected_or_first_available_variant.quantity_rule.increment > 1 or product.selected_or_first_available_variant.quantity_rule.min > 1 or product.selected_or_first_available_variant.quantity_rule.max != null
+                      assign has_qty_rules = true
+                    endif
+
+                    assign has_vol_pricing = false
+                    if product.selected_or_first_available_variant.quantity_price_breaks.size > 0
+                      assign has_vol_pricing = true
+                    endif
+                  -%}
                   <div class="product__sale-box__actions">
                     {%- if product != blank -%}
                       <product-form class="product-form">
@@ -492,18 +542,23 @@
                           <span class="product-form__error-message"></span>
                         </div>                
                         {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
-                          <div class="product-form__buttons product-form__buttons--input {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}product-form__buttons-group{% else %}product-form__buttons-single{% endif %}">
-                            {%- render 'main-product-quantity-selector', product: product, block: block -%}
+                          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"{% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %} disabled{% endif %} class="product-variant-id">
+                          <div class="product-form__buttons product-form__buttons--input product-form__quantity-wrapper{% if has_qty_rules or has_vol_pricing %} product-form__wholesale{% endif %}{% unless block.settings.quantity_selector_enable %} product-form__buttons--no-quantity{% endunless %} {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}product-form__buttons-group{% else %}product-form__buttons-single{% endif %}" id="Quantity-Form-{{ section.id }}">
+                            {%- render 'main-product-quantity-selector', product: product, block: block, cart_qty: cart_qty -%}
                             <button
                               type="submit"
                               name="add"
                               class="product-form__submit button flex w100 cart-submit-button"
-                              {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                              {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %}
+                              {% if product.selected_or_first_available_variant.inventory_management == 'shopify' and product.selected_or_first_available_variant.inventory_quantity < product.selected_or_first_available_variant.quantity_rule.min and product.selected_or_first_available_variant.inventory_policy == 'continue' and settings.enable_pre_order_text %}data-pre-order="true"{% endif %}
                             >
                               <span>
-                                {%- if product.selected_or_first_available_variant.available -%}
-                                  {{ 'products.product.add_to_cart' | t }}
+                                {%- if product.selected_or_first_available_variant.available and quantity_rule_soldout == false -%}
+                                  {%- unless product.selected_or_first_available_variant.inventory_management == 'shopify' and product.selected_or_first_available_variant.inventory_quantity < product.selected_or_first_available_variant.quantity_rule.min and product.selected_or_first_available_variant.inventory_policy == 'continue' and settings.enable_pre_order_text -%}
+                                    {{ 'products.product.add_to_cart' | t }}
+                                  {%- else -%}
+                                    {{ 'products.product.pre_order' | t }}
+                                  {%- endunless -%}
                                 {%- else -%}
                                   {{ 'products.product.sold_out' | t }}
                                 {%- endif -%}
@@ -515,6 +570,8 @@
                             {%- if block.settings.show_dynamic_checkout -%}
                               {{ form | payment_button }}
                             {%- endif -%}
+                            {%- render 'main-product-quantity-rules', product: product, section_id: section.id -%}
+                            {%- render 'main-product-volume-pricing', product: product, section: section -%}
                           </div>
                         {%- endform -%}
                       </product-form>  
@@ -563,7 +620,7 @@
                   {%- if enable_compare or has_size_chart -%}
                     <div class="product__sale-box__footer por flex">
                       {%- if enable_compare -%}
-                          {%- render 'product-compare-button-main' -%}
+                          {%- render 'product-compare-button-main', product: product -%}
                       {%- endif -%}
                       {%- if has_size_chart -%}
                         {%- if enable_compare -%}
@@ -638,13 +695,13 @@
                 </a>
               </div>
             {%- endif -%}
-          </div>
+          </product-info>
         </div>
       </div>
       {%- if section.settings.gallery_layout == 'thumbnail_slider_compact' -%}
       </media-gallery>
       {%- endif -%}
-    </div>    
+    </div>
     {%- render 'main-product-popups', section: section, product: product -%}
     {%- render 'main-product-size-chart', section: section, product: product -%}
   </section>

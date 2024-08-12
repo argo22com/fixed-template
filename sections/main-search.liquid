@@ -82,16 +82,12 @@
   {%- if section.settings.filter_type == 'drawer' -%}
     body {
       padding-bottom: 6.5rem;
-    }
-    body .floating-element {
       --floating-element-position: 7rem;
     }
   {%- else -%}
     @media screen and (max-width: 749px) {
       body {
         padding-bottom: 6.5rem;
-      }
-      body .floating-element {
         --floating-element-position: 7rem;
       }
     }  
@@ -318,7 +314,9 @@
                     {% render 'pagination', paginate: paginate %}
                   </collection-pagination-numbers>
                 {%- else -%}
-                  <script src="{{ 'collection-infinite-more.js' | asset_url }}" defer="defer"></script>
+                  {%- unless request.design_mode -%}
+                    <script src="{{ 'collection-infinite-more.js' | asset_url }}" defer="defer"></script>
+                  {%- endunless -%}
                   {%- if paginate.next -%}  
                     <div class="w100 flex justify-center">
                       {%- if section.settings.pagination_style == 'infinite' -%}
@@ -341,6 +339,9 @@
     </div>
   {%- endif -%}
 </div>
+{%- if request.design_mode -%}
+  <script src="{{ 'collection-infinite-more.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 
 {% schema %}
 {

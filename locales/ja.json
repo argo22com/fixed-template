@@ -154,13 +154,21 @@
     "product": {
       "add_to_cart": "カートに追加する",
       "description": "商品説明",
+      "pre_order": "予約注文",
       "on_sale": "セール",
       "product_variants": "商品バリエーション",
       "quantity": {
         "label": "数量",
         "input_label": "{{ product }}の数量",
         "increase": "{{ product }}の数量を増やす",
-        "decrease": "{{ product }}の数量を減らす"
+        "decrease": "{{ product }}の数量を減らす",
+        "minimum_of": "最小{{ quantity }}",
+        "maximum_of": "最大{{ quantity }}",
+        "multiples_of": "{{ quantity }}の増分",
+        "in_cart_html": "カートに<strong class=\"quantity-cart\">{{ quantity }}</strong>",
+        "note": "数量ルールを見る",
+        "min_of": "最小：{{ quantity }}",
+        "max_of": "最大： {{ quantity }}"
       },
       "price": {
         "from_price_html": "{{ price }}から",
@@ -200,17 +208,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">配送料</a>はチェックアウト時に計算されます。",
       "choose_options": "オプションを選択",
       "choose_product_options": "{{ product_name }}のオプションを選択する",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }}は利用できません",
+      "variant_sold_out_or_unavailable": "バリエーションは売り切れているか販売できません",
+      "inventory_in_stock": "在庫あり",
+      "inventory_in_stock_show_count": "{{ quantity }}個の在庫",
+      "inventory_low_stock": "低在庫",
+      "inventory_low_stock_show_count": "低在庫：残り{{ quantity }}個",
+      "inventory_out_of_stock": "在庫切れ",
+      "inventory_out_of_stock_continue_selling": "在庫あり",
       "quick_view": "Quick view a product",
+      "quick_view_button": "クイックビュー",
+      "view_product": "製品を見る",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "量による価格",
+        "note": "量による価格が利用可能",
+        "minimum": "{{ quantity }}個以上",
+        "price_at_each": "{{ price }}/ユニットで",
+        "price_range": "{{ minimum }}～{{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

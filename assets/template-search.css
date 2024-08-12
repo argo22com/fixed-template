@@ -1,4 +1,4 @@
-.template-search__article {
+.template-search__article:not(.template-search__article--empty) {
   display: grid;
   grid-template-columns: min(30vw, 15rem) 1fr;
   gap: 1.5rem;
@@ -13,7 +13,7 @@
 }
 
 @media(min-width: 750px) {
-  .template-search__article {
+  .template-search__article:not(.template-search__article--empty) {
     gap: 3rem;
   }
   

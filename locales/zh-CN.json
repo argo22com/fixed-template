@@ -154,13 +154,21 @@
     "product": {
       "add_to_cart": "添加到购物车",
       "description": "描述",
+      "pre_order": "Pre-order",
       "on_sale": "销售额",
       "product_variants": "产品多属性",
       "quantity": {
         "label": "数量",
         "input_label": "{{ product }} 的数量",
         "increase": "增加 {{ product }} 的数量",
-        "decrease": "减少 {{ product }} 的数量"
+        "decrease": "减少 {{ product }} 的数量",
+        "minimum_of": "最小值为 {{ quantity }}",
+        "maximum_of": "最大值为 {{ quantity }}",
+        "multiples_of": "增量为 {{ quantity }}",
+        "in_cart_html": "购物车中 <strong class=\"quantity-cart\">{{ quantity }}</strong> 件",
+        "note": "查看数量规则",
+        "min_of": "最小值 {{ quantity }}",
+        "max_of": "最大值 {{ quantity }}"
       },
       "price": {
         "from_price_html": "来自 {{ price }}",
@@ -200,17 +208,27 @@
       "shipping_policy_html": "结账时计算的<a href=\"{{ link }}\">运费</a>。",
       "choose_options": "选择选项",
       "choose_product_options": "选择用于 {{ product_name }} 的选项",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} - 不可用",
+      "variant_sold_out_or_unavailable": "多属性已售罄或不可用",
+      "inventory_in_stock": "现货",
+      "inventory_in_stock_show_count": "{{ quantity }} 件存货",
+      "inventory_low_stock": "低库存",
+      "inventory_low_stock_show_count": "低库存：剩余 {{ quantity }}",
+      "inventory_out_of_stock": "缺货",
+      "inventory_out_of_stock_continue_selling": "现货",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "批量定价",
+        "note": "提供批量定价",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "{{ price }}/件",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

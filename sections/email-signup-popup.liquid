@@ -101,7 +101,7 @@
                 {%- endform -%}
                 <div class="email-signup-popup__checkbox-wrapper flex">
                   <div class="por email-signup-popup__checkbox-inner virtual-checkbox">
-                    <input type="checkbox" class="email-signup-popup__checkbox margin0 virtual-checkbox__checkbox" id="email-signup-popup-checkbox-{{ section.id }}">
+                    <input type="checkbox" class="email-signup-popup__checkbox margin0 virtual-checkbox__checkbox" id="email-signup-popup-checkbox-{{ section.id }}"{% if section.settings.tick_notification_by_default %} checked="checked"{% endif %}>
                     <label for="email-signup-popup-checkbox-{{ section.id }}" class="email-signup-popup__label text-small db virtual-checkbox__label">
                       <svg class="email-signup-popup__icon-checkmark icon icon-checkmark virtual-checkbox__icon-checkmark" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.5 4.00002L3.83333 6.33335L8.5 1.66669" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -170,6 +170,12 @@
       "id": "notification_text",
       "label": "t:sections.email-signup-popup.settings.notification_text.label",
       "default": "Don't show this popup again."
+    },
+    {
+      "type": "checkbox",
+      "id": "tick_notification_by_default",
+      "label": "t:sections.email-signup-popup.settings.tick_notification_by_default.label",
+      "default": false
     },
     {
       "type": "select",

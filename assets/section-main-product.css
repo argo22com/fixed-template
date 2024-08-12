@@ -599,11 +599,8 @@ a.product__text {
   }
 }
 
-.product__tax {
-  margin-top: 0rem;
-}
-
 .product-form__buttons--input {
+  --column-quantity-label: span 1;
   display: grid;
   gap: 1.2rem;
   grid-template-columns: 1fr;
@@ -613,6 +610,33 @@ a.product__text {
   margin-inline-end: 0.4rem;
 }
 
+.quantity__label, .product-form__quantity-rules, .product-form__volume-pricing {
+  grid-column: var(--column-quantity-label);
+}
+
+.quantity__rules-cart, .quantity__label__loading {
+  margin-inline-start: .5rem;;
+}
+
+.quantity__rules-cart__number {
+  padding: 0.6rem 1.2rem;
+  border-radius: 10rem;
+  box-shadow: 1px 1px 1px 0px rgb(var(--color-foreground), 0.05) inset;
+}
+
+.quantity__label, .quantity__rules {
+  color: rgb(var(--color-foreground), 0.5);
+}
+
+.quantity__label__loading {
+  display: inline-block;
+  width: 1rem;
+}
+
+.quantity__label__loading:not(.hidden) + .quantity__rules-cart {
+  display: none;
+}
+
 .product-form__submit, .shopify-payment-button button.shopify-payment-button__button--unbranded, .shopify-payment-button__button--branded {
   font-size: 1.6rem;
   height: min-content;
@@ -620,10 +644,13 @@ a.product__text {
 }
 
 .shopify-payment-button button.shopify-payment-button__button--unbranded {
-  padding: 1.2rem 3rem;
+  padding: 1.2rem 1.5rem;
 }
 
 @media((min-width: 375px) and (max-width:549px)) or ((min-width: 860px) and (max-width: 1365px)) {
+  .product-form__buttons--input {
+    --column-quantity-label: span 2;
+  }
   .product-form__buttons--input:not(.product-form__buttons--no-quantity) {
     grid-template-columns: auto 1fr;
   }
@@ -634,10 +661,17 @@ a.product__text {
 
 @media((min-width: 550px) and (max-width: 749px)) or (min-width: 1366px) {
   .product-form__buttons--input {
+    --column-quantity-label: span 3;
+  }
+  .product-form__buttons--input {
     grid-template-columns: auto repeat(2, 1fr);
   }
   .product-form__buttons--no-quantity {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .product-form__buttons--input:not(.product-form__buttons--no-quantity):not(:has(.shopify-payment-button)) .product-form__submit {
+    width: max-content;
+    min-width: 25rem;
   }
 }
 
@@ -911,12 +945,12 @@ a.product__text {
     align-items: center;
   }
 
-  .product__modal-opener {
-    width: 100%;
-  }
-
   .thumbnail-slider {
     gap: 0.5rem;
+  }
+
+  .thumbnail-slider--vertical {
+    margin-top: 2.5rem;
   }
 
   .thumbnail-slider .thumbnail-list.slider {

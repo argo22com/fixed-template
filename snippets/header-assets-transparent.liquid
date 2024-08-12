@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="{{ 'component-transparent-header.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- if request.design_mode -%}
+  <link rel="stylesheet" href="{{ 'component-transparent-header-admin.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}  
 {%- style -%}
 .section-header:not(.shopify-section-header-sticky) .header {
   position: absolute;

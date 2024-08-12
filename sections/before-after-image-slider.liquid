@@ -120,7 +120,7 @@
             <path d="M9 1.16699L9 16.167" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
-        <input type="range" min="0" max="100" value="50" class="ba-image-slider__drag-slider w100 h100 margin0 flex justify-center align-center" name="slider-range">
+        <input type="range" min="0" max="100" value="50" class="ba-image-slider__drag-slider w100 h100 margin0 flex justify-center align-center" name="slider-range" aria-label="{{ section.settings.accessibility_info | escape }}">
       </before-after-image-slider>
     </div>
   </div>
@@ -373,6 +373,17 @@
       "id": "after_text_color",
       "label": "t:sections.before-after-image-slider.settings.after_text.label",
       "default": "#fff"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.before-after-image-slider.settings.accessibility.content"
+    },
+    {
+      "type": "text",
+      "id": "accessibility_info",
+      "label": "t:sections.before-after-image-slider.settings.accessibility.label",
+      "info": "t:sections.before-after-image-slider.settings.accessibility.info",
+      "default": "Before and after images"
     },
     {
       "type": "header",

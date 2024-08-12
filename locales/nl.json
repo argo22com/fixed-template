@@ -154,13 +154,21 @@
     "product": {
       "add_to_cart": "Aan winkelwagen toevoegen",
       "description": "Beschrijving",
+      "pre_order": "Pre-order",
       "on_sale": "Aanbieding",
       "product_variants": "Productvarianten",
       "quantity": {
         "label": "Aantal",
         "input_label": "Aantal voor {{ product }}",
         "increase": "Aantal verhogen voor {{ product }}",
-        "decrease": "Aantal verlagen voor {{ product }}"
+        "decrease": "Aantal verlagen voor {{ product }}",
+        "minimum_of": "Minimum van {{ quantity }}",
+        "maximum_of": "Maximum van {{ quantity }}",
+        "multiples_of": "Stappen van {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> in winkelwagen",
+        "note": "Hoeveelheidsregels bekijken",
+        "min_of": "Min. {{ quantity }}",
+        "max_of": "Max. {{ quantity }}"
       },
       "price": {
         "from_price_html": "Vanaf {{ price }}",
@@ -200,17 +208,27 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Verzendkosten</a> worden berekend bij de checkout.",
       "choose_options": "Opties kiezen",
       "choose_product_options": "Opties kiezen voor {{ product_name }}",
-      "value_unavailable": "{{ option_value }} - Unavailable",
-      "inventory_in_stock": "In stock",
-      "inventory_in_stock_show_count": "{{ quantity }} in stock",
-      "inventory_low_stock": "Low stock",
-      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "value_unavailable": "{{ option_value }} - Niet beschikbaar",
+      "variant_sold_out_or_unavailable": "Variant uitverkocht of niet beschikbaar",
+      "inventory_in_stock": "Op voorraad",
+      "inventory_in_stock_show_count": "{{ quantity }} op voorraad",
+      "inventory_low_stock": "Voorraad laag",
+      "inventory_low_stock_show_count": "Lage voorraad: nog maar {{ quantity }}",
+      "inventory_out_of_stock": "Niet op voorraad",
+      "inventory_out_of_stock_continue_selling": "Op voorraad",
       "quick_view": "Quick view a product",
+      "quick_view_button": "Quick view",
+"view_product": "View product",
       "number_of_reviews": {
         "one": "{{ count }} review",
         "other": "{{ count }} review"
+      },
+      "volume_pricing": {
+        "title": "Volumeprijsstelling",
+        "note": "Volumeprijsstelling beschikbaar",
+        "minimum": "Meer dan {{ quantity }}",
+        "price_at_each": "{{ price }}/st.",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}"
     },

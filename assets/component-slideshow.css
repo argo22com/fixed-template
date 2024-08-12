@@ -117,8 +117,16 @@
   max-width: 54.5rem;
 }
 
+div.slideshow__text {
+  position: static;
+}
+
 .slideshow__text > * {
   max-width: 100%;
+}
+
+.button--slideshow {
+  z-index: 3;
 }
 
 @media screen and (max-width: 749px) {

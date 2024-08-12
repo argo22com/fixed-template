@@ -26,8 +26,11 @@
       "settings": {
         "collection_tree_data": "produkty",
         "title_background_image": "shopify:\/\/shop_images\/img_a6f047dd-0329-4c14-9a30-77b00918c632.jpg",
+        "preload_background_image": false,
         "enable_parallax_scrolling_effect": true,
         "show_number_of_products": true,
+        "icon_size": "small",
+        "icon_border_shape": "square",
         "collection_icon_color_scheme": "background-1",
         "enable_transparent_header": false,
         "text_color_transparent": "#ffffff"
@@ -98,7 +101,8 @@
       "settings": {
         "products_per_page": 25,
         "columns_desktop": 5,
-        "pagination_style": "numbers",
+        "pagination_style": "more",
+        "preload_first_image": true,
         "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,

@@ -5,7 +5,7 @@
   endif
   assign columns_desktop_number = columns_desktop | default: 4
 -%}
-<li class="grid__item appear-animate-item-in-list">
+<li class="grid__item{% if use_animate %} appear-animate-item-in-list{% endif %}">
   <div class="card-wrapper por collection-grid-promo collection-grid-promo--{{ promo_block.id }} h100 appear-animate-item-in-list overflow-hidden">
     {%- if has_wrapper_link -%}
       <a class="full-unstyled-link por h100" href="{{ promo_block.settings.link }}"
