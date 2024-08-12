@@ -211,7 +211,7 @@
         "share_cwpWDQ"
       ],
       "settings": {
-        "product": "kozene-pouzdro-typu-kniha-fixed-profit-pro-apple-iphone-15-pro-modre",
+        "product": "kozene-pouzdro-typu-kniha-fixed-profit-pro-apple-iphone-15-hnede",
         "section_width": "page-width",
         "use_background_input": true,
         "auto_scroll_up_mobile": false,
@@ -336,9 +336,11 @@
             "button_label": "OBJEVIT VŠECHNY MODELY",
             "button_link": "",
             "button_style_1": "primary",
+            "button_open_new_tab_1": false,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_2": "primary"
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
           }
         }
       },
@@ -380,7 +382,8 @@
           "settings": {
             "button_label": "",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -409,6 +412,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -442,7 +446,8 @@
           "settings": {
             "button_label": "",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -471,6 +476,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
