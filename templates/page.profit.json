@@ -221,7 +221,7 @@
         "enable_sticky_info": true,
         "default_image": "variant_image",
         "media_position": "left",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "thumbnail_position": "right",
         "media_size": "small",
         "image_ratio": "square",
