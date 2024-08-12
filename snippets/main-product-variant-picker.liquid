@@ -17,6 +17,7 @@
     assign total_visible_items = max_rows | times: items_per_row
     assign current_variant = product.selected_or_first_available_variant
     assign first_selected_variant = current_variant | default: product.variants[0]
+    assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
     assign color_name = settings.color_name | downcase
     assign option_color_position = nil
@@ -139,21 +140,15 @@
                 {%- liquid
                   assign contains_product = false
 
-                  for product_variation in block.settings.products
+                  for product_variation in variation_products
                     if product_variation == product
                       assign contains_product = true
                     endif
                   endfor
                 -%}
                 {%- if contains_product -%}
-                  {%- assign metafield_parts = block.settings.option_value_metafield | split: '.' -%}
-                  {%- assign metafield_namespace = metafield_parts | first -%}
-                  {%- assign metafield_key = metafield_parts | last -%}
-
-                  {%- for product_variation in block.settings.products -%}
+                  {%- for product_variation in variation_products -%}
                     {%- liquid
-                      assign value = product_variation.metafields[metafield_namespace][metafield_key].value
-
                       if product_variation == product
                         assign selected = true
                       else
@@ -265,7 +260,7 @@
                     {% if out_of_stock %}
                       disabled="disabled"
                     {% endif %}
-                    {% for product_variation in block.settings.products %}
+                    {% for product_variation in variation_products %}
                       {% assign option_color_variant = product_variation.variants | where: index_option, value | first %}
                       {% if option_color_variant and option_color_position != nil %}
                         {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
@@ -403,7 +398,7 @@
                   {% endif %}
                   data-desc="{{ variant.metafields['product_texts']['descriptionHtml'].value | escape }}"
                   data-title="{{ variant.metafields['product_texts']['title'].value | escape }}"
-                  {% for product_variation in block.settings.products %}
+                  {% for product_variation in variation_products %}
                     {% assign option_color_variant = product_variation.variants | where: index_option, value | first %}
                     {% if option_color_variant and option_color_position != nil %}
                       {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
