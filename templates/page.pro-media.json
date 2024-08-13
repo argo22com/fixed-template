@@ -179,7 +179,7 @@
         "button_cqf3py"
       ],
       "settings": {
-        "grid_layout": "grid",
+        "grid_layout": "full_bleed",
         "image": "shopify:\/\/shop_images\/Martin_Kubac_62d60859-2d3a-4a89-b193-512148e1a58a.jpg",
         "height": "small",
         "desktop_image_width": "medium",
@@ -409,7 +409,7 @@
         "column_alignment": "left",
         "enable_shadow": true,
         "background_transparent": false,
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "button_open_new_tab": false,
         "enable_section_box_layout": false,
