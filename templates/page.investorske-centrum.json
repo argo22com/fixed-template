@@ -253,6 +253,16 @@
         "padding_bottom": 36
       }
     },
+    "page_UEwNU4": {
+      "type": "page",
+      "settings": {
+        "page": "projekty",
+        "heading_size": "h2",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 24
+      }
+    },
     "multicolumn_ADgaBQ": {
       "type": "multicolumn",
       "blocks": {
@@ -467,6 +477,7 @@
     "graph_wrK7F9",
     "page_96tHiA",
     "collapsible_content_GjAKAi",
+    "page_UEwNU4",
     "multicolumn_ADgaBQ",
     "newsletter_a3YF6J"
   ]
