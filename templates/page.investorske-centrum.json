@@ -20,44 +20,6 @@
         "padding_bottom": 16
       }
     },
-    "rich_text_jpbEXR": {
-      "type": "rich-text",
-      "blocks": {
-        "text_UjxbGp": {
-          "type": "text",
-          "settings": {
-            "text": "<p>FIXED. zone a.s.<strong>začátkem listopadu 2021 <\/strong>úspěšně vstoupila na trh START pražské burzy. Ve společnosti dnes pracuje bezmála 100 zaměstnanců, má sídlo v Homolích u Českých Budějovic a vlastní výrobu luxusních kožených pouzder v Prostějově.<\/p>"
-          }
-        },
-        "button_xtYQ6F": {
-          "type": "button",
-          "settings": {
-            "button_label": "SEZNAMTE SE S FIXED",
-            "button_link": "shopify:\/\/pages\/seznamte-se-s-fixed",
-            "button_style_1": "primary",
-            "button_open_new_tab_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary",
-            "button_open_new_tab_2": false
-          }
-        }
-      },
-      "block_order": [
-        "text_UjxbGp",
-        "button_xtYQ6F"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "image_banner_HtGAm3": {
       "type": "image-banner",
       "blocks": {
@@ -121,6 +83,76 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_jpbEXR": {
+      "type": "rich-text",
+      "blocks": {
+        "text_UjxbGp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FIXED. zone a.s.<strong>začátkem listopadu 2021 <\/strong>úspěšně vstoupila na trh START pražské burzy. Ve společnosti dnes pracuje bezmála 100 zaměstnanců, má sídlo v Homolích u Českých Budějovic a vlastní výrobu luxusních kožených pouzder v Prostějově.<\/p>"
+          }
+        },
+        "button_xtYQ6F": {
+          "type": "button",
+          "settings": {
+            "button_label": "SEZNAMTE SE S FIXED",
+            "button_link": "shopify:\/\/pages\/seznamte-se-s-fixed",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_UjxbGp",
+        "button_xtYQ6F"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_kbYNC9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LmWyfP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>FIXED v číslech<\/strong><\/h3>",
+            "heading_size": "h1"
+          }
+        },
+        "text_nDTtVT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Podívejte se na historický růst naší firmy v grafech.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LmWyfP",
+        "text_nDTtVT"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "graph_wrK7F9": {
       "type": "graph",
       "settings": {
@@ -128,6 +160,16 @@
         "description1": "Celkový obrat v Kč",
         "heading2": "Počet zaměstnanců",
         "description2": "S růstem firmy roste počet zaměstnanců"
+      }
+    },
+    "page_96tHiA": {
+      "type": "page",
+      "settings": {
+        "page": "tabulka-financnich-ukazatelu",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "multicolumn_ADgaBQ": {
@@ -338,9 +380,11 @@
   },
   "order": [
     "main",
-    "rich_text_jpbEXR",
     "image_banner_HtGAm3",
+    "rich_text_jpbEXR",
+    "rich_text_kbYNC9",
     "graph_wrK7F9",
+    "page_96tHiA",
     "multicolumn_ADgaBQ",
     "newsletter_a3YF6J"
   ]
