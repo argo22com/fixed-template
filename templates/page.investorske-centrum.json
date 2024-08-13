@@ -20,6 +20,44 @@
         "padding_bottom": 16
       }
     },
+    "rich_text_jpbEXR": {
+      "type": "rich-text",
+      "blocks": {
+        "text_UjxbGp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FIXED. zone a.s.<strong>začátkem listopadu 2021 <\/strong>úspěšně vstoupila na trh START pražské burzy. Ve společnosti dnes pracuje bezmála 100 zaměstnanců, má sídlo v Homolích u Českých Budějovic a vlastní výrobu luxusních kožených pouzder v Prostějově.<\/p>"
+          }
+        },
+        "button_xtYQ6F": {
+          "type": "button",
+          "settings": {
+            "button_label": "SEZNAMTE SE S FIXED",
+            "button_link": "shopify:\/\/pages\/seznamte-se-s-fixed",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_UjxbGp",
+        "button_xtYQ6F"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_banner_HtGAm3": {
       "type": "image-banner",
       "blocks": {
@@ -300,6 +338,7 @@
   },
   "order": [
     "main",
+    "rich_text_jpbEXR",
     "image_banner_HtGAm3",
     "graph_wrK7F9",
     "multicolumn_ADgaBQ",
