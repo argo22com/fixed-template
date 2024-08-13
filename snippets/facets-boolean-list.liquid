@@ -81,9 +81,38 @@
                       <path d="M1.5 4.00002L3.83333 6.33335L8.5 1.66669" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </span>
-
-                  <span aria-hidden="true" class="flex facet-checkbox__content flex-grow-1 justify-space-between align-center"><span class="facet-checkbox__content__label caption-large">{{ value.label | escape }}</span><span class="facet-checkbox__content__count flex justify-center align-center lh1">{{ value.count }}</span></span>
-                {%- else -%}
+                  {% if filter_label_downcase == settings.phone_name %}
+                    {%- liquid
+                      assign display_value = value.label
+                        paginate shop.metaobjects.phone_properties.values by 10000
+                          assign phone_properties = shop.metaobjects.phone_properties.values
+                          if phone_properties
+                            for phone_property in phone_properties
+                              assign phone_code = value.label | strip
+                              if phone_property.code == phone_code
+                                assign phone_option_names = "" | append: phone_code | append: ":" | append: phone_property.model.value | append: ";"
+                              endif
+                            endfor
+                          endif
+                        endpaginate
+                      if phone_option_names
+                        assign phone_option_names_list = phone_option_names | split: ";"
+                        for phone_option_name in phone_option_names_list
+                          assign phone_option_name_parts = phone_option_name | split: ":"
+                          assign phone_option_code = phone_option_name_parts[0]
+                          assign phone_option_model = phone_option_name_parts[1]
+                          if phone_option_code == value.label
+                            assign display_value = phone_option_model 
+                          endif
+                        endfor
+                      endif
+                    -%}
+                  {% endif %}
+                  <span aria-hidden="true" class="flex facet-checkbox__content flex-grow-1 justify-space-between align-center">
+                    <span class="facet-checkbox__content__label caption-large">{{ display_value | default: value.label | escape }} </span>
+                    <span class="facet-checkbox__content__count flex justify-center align-center lh1">{{ value.count }}</span>
+                  </span>
+                  {%- else -%}
                   <div class="facets__image-wrapper flex flex-column w100 por">
                     <div class="facets__image-inner">
                       {%- if value.image -%}

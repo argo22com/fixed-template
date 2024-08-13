@@ -125,10 +125,33 @@
                                         {% render 'card-product-colors', only_specific_color: option.value %}
                                       </dd>
                                     {% elsif option.name == settings.phone_name %}
-                                      {% assign phone_code = option.value | strip %}
-                                      {% assign phone_handle = 'phone-code-' | append: phone_code %}
-                                      <dt>{{ option.name }}: </dt>
-                                      <dd>{{ shop.metaobjects.phone_properties[phone_handle].model.value }}</dd>
+                                      {%- liquid
+                                      assign display_value = option.value
+                                          paginate shop.metaobjects.phone_properties.values by 10000
+                                            assign phone_properties = shop.metaobjects.phone_properties.values
+                                            if phone_properties
+                                              for phone_property in phone_properties
+                                                assign phone_code = option.value | strip
+                                                if phone_property.code == phone_code
+                                                  assign phone_option_names = "" | append: phone_code | append: ":" | append: phone_property.model.value | append: ";"
+                                                endif
+                                              endfor
+                                            endif
+                                          endpaginate
+                                        if phone_option_names
+                                          assign phone_option_names_list = phone_option_names | split: ";"
+                                          for phone_option_name in phone_option_names_list
+                                            assign phone_option_name_parts = phone_option_name | split: ":"
+                                            assign phone_option_code = phone_option_name_parts[0]
+                                            assign phone_option_model = phone_option_name_parts[1]
+                                            if phone_option_code == option.value
+                                              assign display_value = phone_option_model 
+                                            endif
+                                          endfor
+                                        endif
+                                      -%}
+                                      <dt>{{ option.name }}:</dt>
+                                      <dd>{{ display_value | default: option.value | escape }}</dd>
                                     {% else %}
                                       <dt>{{ option.name }}: </dt>
                                       <dd>{{ option.value }}</dd>
