@@ -322,10 +322,10 @@
           "type": "column",
           "settings": {
             "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": "",
+            "title": "PODPORA",
+            "text": "<p>Vyhledejte si potřebné kontakty nebo se přímo spojte s naší zákaznickou podporou.<\/p>",
+            "link_label": "NAVŠTIVTE FIXED PODPORU",
+            "link": "shopify:\/\/pages\/podpora",
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
@@ -338,9 +338,10 @@
         "column_w7N9zC": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/zpetna_vazba.png",
             "icon": "check",
             "title": "KARIÉRA",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Připoj se do našeho týmu, prohlédni si aktuální volné pozice, nebo napiš jen tak.<\/p>",
             "link_label": "",
             "link": "https:\/\/www.welcometothejungle.com\/cs\/companies\/fixed\/jobs",
             "button_style": "solid",
