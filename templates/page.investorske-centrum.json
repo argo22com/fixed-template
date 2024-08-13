@@ -166,8 +166,49 @@
       "type": "page",
       "settings": {
         "page": "tabulka-financnich-ukazatelu",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_GjAKAi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_dKfQqV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Aktuální informace",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_Xn8Fdn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Úpis akcií IPO",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_dKfQqV",
+        "collapsible_row_Xn8Fdn"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "title": "FIXED dokumenty",
+        "subtitle": "",
+        "heading_size": "h1",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "hide_image_on_mobile": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -385,6 +426,7 @@
     "rich_text_kbYNC9",
     "graph_wrK7F9",
     "page_96tHiA",
+    "collapsible_content_GjAKAi",
     "multicolumn_ADgaBQ",
     "newsletter_a3YF6J"
   ]
