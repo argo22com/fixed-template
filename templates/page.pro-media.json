@@ -151,7 +151,7 @@
         "heading_66YemH": {
           "type": "heading",
           "settings": {
-            "heading": "Kontakt pro Média",
+            "heading": "Kontakt pro média",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -183,15 +183,15 @@
         "image": "shopify:\/\/shop_images\/Martin_Kubac_62d60859-2d3a-4a89-b193-512148e1a58a.jpg",
         "height": "small",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "hide_when_empty_image": false,
         "preload": false,
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 12,
+        "padding_bottom": 16,
         "color_heading": "#000000",
         "gradient_heading": "",
         "color_text": "#000000",
