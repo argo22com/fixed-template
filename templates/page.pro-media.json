@@ -250,6 +250,23 @@
     "multicolumn_CaLPxP": {
       "type": "multicolumn",
       "blocks": {
+        "column_XNKtCz": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "SEZNAMTE SE S FIXED",
+            "text": "",
+            "link_label": "SEZNAMTE SE S FIXED",
+            "link": "shopify:\/\/pages\/seznamte-se-s-fixed",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fefce8",
+            "card_color_background_gradient": ""
+          }
+        },
         "column_9FU3WC": {
           "type": "column",
           "settings": {
@@ -264,23 +281,6 @@
             "color_button_text": "#fff",
             "color_button": "#fff",
             "card_color_background": "#fff",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_XNKtCz": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "???",
-            "text": "<p>NA STRÁNCE MEDIÁLNÍHO CENTRA NEDÁVÁ SMYSL MÍT ODKAZ NA MEDIÁLNÍ CENTRUM<\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false,
-            "card_color_text": "#000",
-            "color_button_text": "#fff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
             "card_color_background_gradient": ""
           }
         },
@@ -355,8 +355,8 @@
         }
       },
       "block_order": [
-        "column_9FU3WC",
         "column_XNKtCz",
+        "column_9FU3WC",
         "column_Vg8qah",
         "column_nUzdhM",
         "column_c8PRKn",
