@@ -21,7 +21,7 @@
         "heading_DTfPxY": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "FIXED.zone a. s.",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -29,7 +29,7 @@
         "text_PzkdHa": {
           "type": "text",
           "settings": {
-            "text": "<p>Výrobcem, dovozcem a distributorem produktů značky FIXED je společnost FIXED.zone a.s..Budějovická 19, 370 01, Homole, Czech Republic<\/p><p><strong>IČ:<\/strong> 26036363, <strong>DIČ:<\/strong> CZ26036363<\/p><p><strong>Bankovní spojení: <\/strong><\/p><p>CZK 8724732 \/ 0800 Česká spořitelna, a.s.<\/p><p><strong>EUR IBAN<\/strong> CZ8108000000000008866992, <\/p><p>SWIFT: GIBACZPXXXX<\/p><p><strong>Spisová značka:<\/strong> C 10575 vedená u Krajského soudu v Českých Budějovicích<\/p><p><\/p><p><\/p><p><\/p>",
+            "text": "<p>Výrobcem, dovozcem a distributorem produktů značky FIXED je společnost FIXED.zone a.s..Budějovická 19, 370 01, Homole, Czech Republic<\/p><p><strong>IČ:<\/strong> 26036363, <strong>DIČ:<\/strong> CZ26036363<\/p><p><strong>Bankovní spojení:   <\/strong>CZK 8724732 \/ 0800 Česká spořitelna, a.s.<\/p><p><strong>EUR IBAN<\/strong> CZ8108000000000008866992, <\/p><p>S<strong>WIFT: <\/strong>GIBACZPXXXX<\/p><p><strong>Spisová značka:<\/strong> C 10575 vedená u Krajského soudu v Českých Budějovicích<\/p><p><\/p><p><\/p><p><\/p>",
             "text_style": "body"
           }
         },
@@ -38,7 +38,8 @@
           "settings": {
             "button_label": "Button label",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -48,7 +49,7 @@
         "button_PkGjqd"
       ],
       "settings": {
-        "grid_layout": "grid",
+        "grid_layout": "full_bleed",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -66,6 +67,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -334,7 +336,8 @@
           "settings": {
             "button_label": "Zobraz na mapě",
             "button_link": "https:\/\/www.google.com\/maps\/place\/FIXED.zone+a.s.\/@48.9391816,14.423225,17z\/data=!3m1!4b1!4m6!3m5!1s0x47734fd37d3113b3:0x25305ec44acc022c!8m2!3d48.9391781!4d14.4257999!16s%2Fg%2F1trpk08k?entry=ttu",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -363,6 +366,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#ea5c5c",
         "background_container": "#ffffff",
