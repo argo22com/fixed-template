@@ -43,7 +43,8 @@
           "settings": {
             "button_label": "Seznamte se s FIXED",
             "button_link": "shopify:\/\/pages\/seznamte-se-s-fixed",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -66,20 +67,21 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
-        "color_heading": "#000",
+        "color_heading": "#000000",
         "gradient_heading": "",
-        "color_text": "#000",
-        "color_highlight_text": "#DA2127",
-        "color_caption": "#000",
-        "color_countdown": "#000",
-        "color_button_text": "#fff",
-        "color_button": "#000",
-        "background_container": "#fff",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
         "gradient_background_container": "",
-        "background_section": "#fff",
+        "background_section": "#ffffff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "collapsible_content_AHHHxy": {
@@ -244,6 +246,153 @@
         "heading2": "Počet zaměstnanců",
         "description2": "S růstem firmy roste počet zaměstnanců"
       }
+    },
+    "multicolumn_CaLPxP": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_9FU3WC": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "INVESTORSKÉ CENTRUM",
+            "text": "<p>Zde naleznete informace o našich finančních výsledcích a další zprávy týkající se hospodaření naší firmy<\/p>",
+            "link_label": "NAVŠTIVTE INVESTORSKÉ CENTRUM",
+            "link": "",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#fff",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_XNKtCz": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "???",
+            "text": "<p>NA STRÁNCE MEDIÁLNÍHO CENTRA NEDÁVÁ SMYSL MÍT ODKAZ NA MEDIÁLNÍ CENTRUM<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fefce8",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_Vg8qah": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "UDRŽITELNOST",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "CERTIFIKACE",
+            "link": "",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_nUzdhM": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "BLOG",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "NAVŠTIVTE BLOG",
+            "link": "shopify:\/\/blogs\/news",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_c8PRKn": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "Card heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_w7N9zC": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "KARIÉRA",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "https:\/\/www.welcometothejungle.com\/cs\/companies\/fixed\/jobs",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_9FU3WC",
+        "column_XNKtCz",
+        "column_Vg8qah",
+        "column_nUzdhM",
+        "column_c8PRKn",
+        "column_w7N9zC"
+      ],
+      "settings": {
+        "title": "Kam dál?",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -252,6 +401,7 @@
     "collapsible_content_AHHHxy",
     "rich_text_Crb7hb",
     "collapsible_content_Gp6UAE",
-    "graph_cVdgJT"
+    "graph_cVdgJT",
+    "multicolumn_CaLPxP"
   ]
 }
