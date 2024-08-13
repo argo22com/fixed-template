@@ -152,7 +152,7 @@
           "type": "heading",
           "settings": {
             "heading": "Kontakt pro Média",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
@@ -166,10 +166,10 @@
         "button_cqf3py": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "LinkedIn",
+            "button_link": "https:\/\/www.linkedin.com\/in\/martinkubac\/",
             "button_style": "solid",
-            "button_open_new_tab": false
+            "button_open_new_tab": true
           }
         }
       },
@@ -181,7 +181,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/Martin_Kubac_62d60859-2d3a-4a89-b193-512148e1a58a.jpg",
-        "height": "adapt",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -200,45 +200,13 @@
         "color_countdown": "#000000",
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#00a9e0",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
-      }
-    },
-    "rich_text_Crb7hb": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Vcfa68": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h3><strong>Kontakty pro média<\/strong><\/h3>",
-            "heading_size": "h2"
-          }
-        },
-        "text_AH3Vtt": {
-          "type": "text",
-          "settings": {
-            "text": "<p>fotky a maily - tak tenhle blok zatím nemáme, čekáme na Magexo až dodělají, takže sem zatím dávám jen text, že se tu s tím počítá.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Vcfa68",
-        "text_AH3Vtt"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "collapsible_content_Gp6UAE": {
@@ -465,7 +433,6 @@
     "image_with_text_AwNNQH",
     "collapsible_content_AHHHxy",
     "image_with_text_aifGRG",
-    "rich_text_Crb7hb",
     "collapsible_content_Gp6UAE",
     "graph_cVdgJT",
     "multicolumn_CaLPxP"
