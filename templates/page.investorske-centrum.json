@@ -175,11 +175,47 @@
     "collapsible_content_GjAKAi": {
       "type": "collapsible-content",
       "blocks": {
+        "collapsible_row_4gPghX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2024",
+            "icon": "document",
+            "row_content": "",
+            "page": "pro-investory-2024"
+          }
+        },
+        "collapsible_row_E36gHj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2023",
+            "icon": "document",
+            "row_content": "",
+            "page": "pro-investory-2023"
+          }
+        },
+        "collapsible_row_NRBz4F": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2022",
+            "icon": "document",
+            "row_content": "",
+            "page": "pro-investory-2022"
+          }
+        },
+        "collapsible_row_kDmbWF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2021",
+            "icon": "document",
+            "row_content": "",
+            "page": "pro-investory-2021"
+          }
+        },
         "collapsible_row_dKfQqV": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Aktuální informace",
-            "icon": "emoji_happy",
+            "heading": "2020",
+            "icon": "document",
             "row_content": "",
             "page": ""
           }
@@ -188,13 +224,17 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Úpis akcií IPO",
-            "icon": "emoji_happy",
+            "icon": "cash",
             "row_content": "",
             "page": "upis-akcii-ipo"
           }
         }
       },
       "block_order": [
+        "collapsible_row_4gPghX",
+        "collapsible_row_E36gHj",
+        "collapsible_row_NRBz4F",
+        "collapsible_row_kDmbWF",
         "collapsible_row_dKfQqV",
         "collapsible_row_Xn8Fdn"
       ],
