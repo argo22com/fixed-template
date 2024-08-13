@@ -159,7 +159,7 @@
         "text_P63fJn": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<h3><strong>Martin Kubáč<\/strong><\/h3><p>PR Manažer<\/p><p><a href=\"mailto:martin.kubac@fixed.zone\" target=\"_blank\">martin.kubac@fixed.zone<\/a><\/p>",
             "text_style": "body"
           }
         },
@@ -192,21 +192,21 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
-        "color_heading": "#000",
+        "color_heading": "#000000",
         "gradient_heading": "",
-        "color_text": "#000",
-        "color_highlight_text": "#DA2127",
-        "color_caption": "#000",
-        "color_countdown": "#000",
-        "color_icon": "#000",
-        "color_button_text": "#fff",
-        "color_button": "#000",
-        "background_container": "#fff",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
         "gradient_background_container": "",
-        "background_section": "#fff",
+        "background_section": "#ffffff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "rich_text_Crb7hb": {
