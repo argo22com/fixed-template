@@ -4,6 +4,26 @@
 <noscript>{{ 'component-tooltip.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-card-product-colors.css' | asset_url | stylesheet_tag }}</noscript>
 
+{%- liquid
+  assign phone_properties_all = shop.metaobjects.phone_properties.values
+  paginate phone_properties_all by 10000
+    assign phone_properties = phone_properties_all
+    if phone_properties
+      assign phone_option_names = ""
+      for phone_property in phone_properties
+        for item in cart.items
+          for option in item.options_with_values
+            assign phone_code = option.value | strip
+            if phone_property.code == phone_code
+              assign phone_option_names = phone_option_names | append: phone_code | append: ":" | append: phone_property.model.value | append: ";"
+            endif
+          endfor
+        endfor
+      endfor
+    endif
+  endpaginate
+-%}
+
 <cart-drawer class="flex drawer drawer--cart{% if cart == empty %} is-empty{% endif %} h100">
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay"class="cart-drawer__overlay drawer__overlay"></div>
@@ -108,13 +128,25 @@
                                             {% render 'card-product-colors', only_specific_color: option.value %}
                                           </dd>
                                       {% elsif option.name == settings.phone_name %}
-                                          {% assign phone_code = option.value | strip %}
-                                          {% assign phone_handle = 'phone-code-' | append: phone_code %}
-                                          <dt>{{ option.name }}: </dt>
-                                          <dd>{{ shop.metaobjects.phone_properties[phone_handle].model.value }}</dd>
+                                        {%- liquid
+                                          assign display_value = option.value
+                                          if phone_option_names
+                                            assign phone_option_names_list = phone_option_names | split: ";"
+                                            for phone_option_name in phone_option_names_list
+                                              assign phone_option_name_parts = phone_option_name | split: ":"
+                                              assign phone_option_code = phone_option_name_parts[0]
+                                              assign phone_option_model = phone_option_name_parts[1]
+                                              if phone_option_code == option.value
+                                                assign display_value = phone_option_model 
+                                              endif
+                                            endfor
+                                          endif
+                                        -%}
+                                        <dt>{{ option.name }}: </dt>
+                                        <dd>{{ display_value | default: option.value | escape }}</dd>
                                       {% else %}
-                                          <dt>{{ option.name }}: </dt>
-                                          <dd>{{ option.value }}</dd>
+                                        <dt>{{ option.name }}: </dt>
+                                        <dd>{{ option.value }}</dd>
                                       {% endif %}
                                     </div>
                                   {%- endfor -%}

@@ -1,6 +1,25 @@
 <div class="active-facets active-facets-mobile flex flex-wrap w100 small-margin-top">
   {%- liquid
     assign has_active = false
+
+    assign phone_properties_all = shop.metaobjects.phone_properties.values
+    paginate phone_properties_all by 10000
+    assign phone_properties = phone_properties_all
+    if phone_properties
+      assign phone_option_names = ""
+      for phone_property in phone_properties
+        for filter in results.filters
+          for value in filter.active_values
+            assign phone_code = value.label | strip
+            if phone_property.code == phone_code
+              assign phone_option_names = phone_option_names | append: phone_code | append: ":" | append: phone_property.model.value | append: ";"
+            endif
+          endfor
+        endfor
+      endfor
+    endif
+  endpaginate
+
   -%}
   {%- for filter in results.filters -%}
     {% assign filter_label_downcase = filter.label | downcase %}
@@ -17,17 +36,6 @@
               {%- if filter_label_downcase == settings.phone_name -%}
                 {%- liquid
                   assign display_value = value.label
-                  paginate shop.metaobjects.phone_properties.values by 10000
-                    assign phone_properties = shop.metaobjects.phone_properties.values
-                    if phone_properties
-                      for phone_property in phone_properties
-                        assign phone_code = value.label | strip
-                        if phone_property.code == phone_code
-                          assign phone_option_names = "" | append: phone_code | append: ":" | append: phone_property.model.value | append: ";"
-                        endif
-                      endfor
-                    endif
-                  endpaginate
                   if phone_option_names
                     assign phone_option_names_list = phone_option_names | split: ";"
                     for phone_option_name in phone_option_names_list
