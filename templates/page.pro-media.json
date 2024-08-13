@@ -291,7 +291,7 @@
             "title": "UDRŽITELNOST",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "CERTIFIKACE",
-            "link": "",
+            "link": "shopify:\/\/pages\/releaf",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000",
