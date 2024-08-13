@@ -73,7 +73,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -143,6 +143,70 @@
         "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_with_text_aifGRG": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_66YemH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Kontakt pro Média",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_P63fJn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_cqf3py": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_66YemH",
+        "text_P63fJn",
+        "button_cqf3py"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/Martin_Kubac_62d60859-2d3a-4a89-b193-512148e1a58a.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "rich_text_Crb7hb": {
@@ -260,8 +324,8 @@
             "link": "shopify:\/\/pages\/seznamte-se-s-fixed",
             "button_style": "link",
             "button_open_new_tab": false,
-            "card_color_text": "#000",
-            "color_button_text": "#fff",
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fefce8",
             "card_color_background_gradient": ""
@@ -277,10 +341,10 @@
             "link": "shopify:\/\/pages\/investorske-centrum",
             "button_style": "link",
             "button_open_new_tab": false,
-            "card_color_text": "#000",
-            "color_button_text": "#fff",
-            "color_button": "#fff",
-            "card_color_background": "#fff",
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#ffffff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         },
@@ -294,10 +358,10 @@
             "link": "shopify:\/\/pages\/releaf",
             "button_style": "link",
             "button_open_new_tab": false,
-            "card_color_text": "#000",
-            "color_button_text": "#fff",
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         },
@@ -312,7 +376,7 @@
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
@@ -329,7 +393,7 @@
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
@@ -347,7 +411,7 @@
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
@@ -400,6 +464,7 @@
     "main",
     "image_with_text_AwNNQH",
     "collapsible_content_AHHHxy",
+    "image_with_text_aifGRG",
     "rich_text_Crb7hb",
     "collapsible_content_Gp6UAE",
     "graph_cVdgJT",
