@@ -84,7 +84,7 @@
         "column_wh4nX8": {
           "type": "column",
           "settings": {
-            "icon": "support",
+            "icon": "ticket",
             "title": "Servis & reklamace",
             "text": "<p><a href=\"mailto:reklamace@fixed.zone\" target=\"_blank\" title=\"mailto:reklamace@fixed.zone\">reklamace@FIXED.zone  <\/a><br\/>+ 420 724 161 817<\/p>",
             "link_label": "",
