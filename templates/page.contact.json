@@ -120,7 +120,7 @@
           "settings": {
             "icon": "chat",
             "title": "Podpora",
-            "text": "<p><strong>Po – Pá<\/strong>: 8:00 – 16:00 <br\/><a href=\"mailto:podpora@fixed.zone\" target=\"_blank\" title=\"mailto:podpora@fixed.zone\">podpora@FIXED.zone<\/a>    <br\/>+420 267 317 817              <br\/><strong>Whistleblowing:<br\/><\/strong><a href=\"mailto:WB@fixed.zone\">WB@fixed.zone<br\/><\/a>+420 385 310 120 (telefon pro zanechání záznamu<\/p>",
+            "text": "<p><strong>Po – Pá<\/strong>: 8:00 – 16:00 <br\/><a href=\"mailto:podpora@fixed.zone\" target=\"_blank\" title=\"mailto:podpora@fixed.zone\">podpora@FIXED.zone<\/a>    <br\/>+420 267 317 817              <br\/><strong>Whistleblowing:<br\/><\/strong><a href=\"mailto:WB@fixed.zone\">WB@fixed.zone<br\/><\/a>+420 385 310 120 <br\/>(telefon pro zanechání záznamu)<\/p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
