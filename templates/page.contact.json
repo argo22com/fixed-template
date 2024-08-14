@@ -57,7 +57,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -82,9 +82,9 @@
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         },
@@ -99,9 +99,9 @@
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#212c4d",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         },
@@ -110,15 +110,15 @@
           "settings": {
             "icon": "chat",
             "title": "Podpora",
-            "text": "<p><strong>Po – Pá<\/strong>: 8:00 – 16:00 <br\/><a href=\"mailto:podpora@fixed.zone\" target=\"_blank\" title=\"mailto:podpora@fixed.zone\">podpora@FIXED.zone<\/a>    <br\/>+420 267 317 817              <br\/><strong>Whistleblowing:<br\/><\/strong><a href=\"mailto:WB@fixed.zone\">WB@fixed.zone<br\/><\/a>+420 385 310 120 <br\/>(telefon pro zanechání záznamu)<\/p>",
+            "text": "<p><strong>Po – Pá<\/strong>: 8:00 – 16:00 <br\/><a href=\"mailto:podpora@fixed.zone\" target=\"_blank\" title=\"mailto:podpora@fixed.zone\">podpora@FIXED.zone<\/a>    <br\/>+420 267 317 817              <br\/><strong><br\/><\/strong><\/p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#212c4d",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         },
@@ -133,9 +133,26 @@
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#212c4d",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_GDembi": {
+          "type": "column",
+          "settings": {
+            "icon": "speakerphone",
+            "title": "Whistleblowing",
+            "text": "<p><a href=\"mailto:WB@fixed.zone\">WB@fixed.zone<br\/><\/a>+420 385 310 120 <br\/>(telefon pro zanechání záznamu)<\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
             "color_button_text": "#fff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
           }
         }
@@ -144,7 +161,8 @@
         "column_wh4nX8",
         "column_4naCn6",
         "column_NDpDk7",
-        "column_Gr8YRz"
+        "column_Gr8YRz",
+        "column_GDembi"
       ],
       "settings": {
         "title": "Kontaktujte nás",
@@ -154,7 +172,7 @@
         "media_width_desktop": "50",
         "image_ratio": "adapt",
         "text_position": "bottom",
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "columns_tablet": 3,
         "desktop_gap": 30,
         "auto_fit": false,
@@ -306,7 +324,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#ea5c5c",
         "background_container": "#ffffff",
