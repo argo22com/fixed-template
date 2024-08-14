@@ -111,7 +111,14 @@
       "by_vendor_html": "<span>Od<\/span> {{ vendor }}",
       "variant_sold_out_or_unavailable": " 34 \/ 5 000 Vypredaný alebo nedostupný variant",
       "quick_view_button": "Rýchly pohľad",
-      "view_product": "Zobraziť produkt"
+      "view_product": "Zobraziť produkt",
+      "volume_pricing": {
+        "title": "Ceny s objemovou zľavou",
+        "note": "Ceny s objemovou zľavou k dispozícii",
+        "minimum": "{{ množstvo }} a viac",
+        "price_at_each": "{{ cena }} \/ ks",
+        "price_range": "{{ minimum }} – {{ maximum }}"
+      }
     },
     "modal": {
       "label": "Galéria multimédií"
