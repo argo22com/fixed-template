@@ -226,83 +226,6 @@
         "include_margins": true
       }
     },
-    "banner_grid_HVJWGi": {
-      "type": "banner-grid",
-      "blocks": {
-        "promotion_text_FyP9bd": {
-          "type": "promotion-text",
-          "settings": {
-            "heading": "hokus pokus",
-            "heading_size": "h1",
-            "text": "<p>a tady je text<\/p>",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "desktop_column": 1,
-            "desktop_row": 1,
-            "desktop_content_position": "middle-center",
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#000000",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#000000",
-            "color_background": "#fafafa"
-          }
-        },
-        "promotion_text_A3GRxB": {
-          "type": "promotion-text",
-          "settings": {
-            "heading": "Druhý pokkus",
-            "heading_size": "h1",
-            "text": "<ul><li>odrátky<\/li><\/ul><ol><li>číslování<\/li><\/ol><p><strong>tučně<\/strong><\/p><p><em>kruzíva<\/em><\/p><p><a href=\"https:\/\/www.kamkoli.cz\" title=\"https:\/\/www.kamkoli.cz\">odkaz<\/a><\/p>",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "desktop_column": 2,
-            "desktop_row": 2,
-            "desktop_content_position": "middle-center",
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#000",
-            "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#000",
-            "color_background": "#fafafa"
-          }
-        }
-      },
-      "block_order": [
-        "promotion_text_FyP9bd",
-        "promotion_text_A3GRxB"
-      ],
-      "settings": {
-        "layout": "grid",
-        "desktop_row_height": 30,
-        "desktop_gap": 30,
-        "mobile_gap": 10,
-        "hide_when_empty_content": true,
-        "enable_section_box_layout": false,
-        "media_border_thickness": 1,
-        "media_border_opacity": 5,
-        "media_radius": 15,
-        "enable_shadow": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text_RPc8kt": {
       "type": "rich-text",
       "blocks": {
@@ -994,7 +917,6 @@
   "order": [
     "518b8ced-997b-408e-84d5-64fe5082a6a1",
     "17225355129c0ff813",
-    "banner_grid_HVJWGi",
     "rich_text_RPc8kt",
     "multicolumn_Liefqw",
     "collection_list_ndxz9L",
