@@ -59,7 +59,11 @@
         "decrease": "Znížiť množstvo produktu {{ product }}",
         "minimum_of": "Minimum: {{ quantity }}",
         "maximum_of": "Maximum: {{ quantity }}",
-        "multiples_of": "Prírastky: {{ quantity }}"
+        "multiples_of": "Prírastky: {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}<\/strong> v košíku",
+        "note": "Zobraziť pravidlá množstva",
+        "min_of": "Minimum {{ quantity }}",
+        "max_of": "Maximum {{ quantity }}"
       },
       "price": {
         "from_price_html": "Od {{ price }}",
