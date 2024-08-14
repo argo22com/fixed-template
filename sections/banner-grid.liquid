@@ -351,7 +351,7 @@
                   {%- endif -%}
                   {%- if block.settings.text != blank -%}
                     <div class="banner__text banner-grid__item__text rte {{ block.settings.text_style }}{% if block.settings.text_style == 'subtitle' %} subtitle--medium{% endif %}" {{ block.shopify_attributes }}>
-                      {{ block.settings.text }}
+                      {{ block.settings.text | richtext }}
                     </div>
                   {%- endif -%}
                   {%- unless block.type == 'video-background' -%}
@@ -682,9 +682,9 @@
           "label": "t:sections.all.heading_size.label"
         },
         {
-          "type": "richtext",
-          "id": "richtext",
-          "default": "<p>Give customers details about the banner image(s) or content on the template.</p>",
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Give customers details about the banner image(s) or content on the template",
           "label": "t:sections.banner-grid.blocks.all.settings.text.label"
         },
         {
@@ -987,7 +987,7 @@
         },
         {
           "type": "richtext",
-          "id": "richtext",
+          "id": "text",
           "default": "<p>Give customers details about the banner image(s) or content on the template.</p>",
           "label": "t:sections.banner-grid.blocks.all.settings.text.label"
         },
@@ -1394,9 +1394,9 @@
           "label": "t:sections.all.heading_size.label"
         },
         {
-          "type": "richtext",
-          "id": "richtext",
-          "default": "<p>Give customers details about the banner image(s) or content on the template.</p>",
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Give customers details about the banner image(s) or content on the template.",
           "label": "t:sections.banner-grid.blocks.all.settings.text.label"
         },
         {
