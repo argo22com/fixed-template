@@ -229,11 +229,12 @@
     "banner_grid_HVJWGi": {
       "type": "banner-grid",
       "blocks": {
-        "promotion_text_7bLzFH": {
+        "promotion_text_FyP9bd": {
           "type": "promotion-text",
           "settings": {
-            "heading": "Pokusný naadpis",
+            "heading": "Text-only banner heading",
             "heading_size": "h1",
+            "text": "<p>Give customers details about the banner image(s) or content on the template.<\/p>",
             "text_style": "body",
             "button_label": "",
             "button_style": "primary",
@@ -257,7 +258,7 @@
         }
       },
       "block_order": [
-        "promotion_text_7bLzFH"
+        "promotion_text_FyP9bd"
       ],
       "settings": {
         "layout": "grid",
