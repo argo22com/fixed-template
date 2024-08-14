@@ -1,14 +1,58 @@
 <div class="active-facets active-facets-mobile flex flex-wrap w100 small-margin-top">
-  {%- liquid 
-    assign has_active = false 
+  {%- liquid
+    assign has_active = false
+
+    assign phone_properties_all = shop.metaobjects.phone_properties.values
+    paginate phone_properties_all by 10000
+    assign phone_properties = phone_properties_all
+    if phone_properties
+      assign phone_option_names = ""
+      for phone_property in phone_properties
+        for filter in results.filters
+          for value in filter.active_values
+            assign phone_code = value.label | strip
+            if phone_property.code == phone_code
+              assign phone_option_names = phone_option_names | append: phone_code | append: ":" | append: phone_property.model.value | append: ";"
+            endif
+          endfor
+        endfor
+      endfor
+    endif
+  endpaginate
+
   -%}
   {%- for filter in results.filters -%}
+    {% assign filter_label_downcase = filter.label | downcase %}
     {%- if filter.active_values.size > 0 -%}
       {%- for value in filter.active_values -%}
         {%- assign has_active = true -%}
         <facet-remove>
-          <a href="{{ value.url_to_remove }}" class="active-facets__button flex justify-center align-center color-foreground facets__button button button--secondary">
-            <span>{%- if section.settings.filter_include_group_name -%}{{ filter.label }}: {% endif %}{{ value.label | escape }}</span>
+          <a
+            href="{{ value.url_to_remove }}"
+            class="active-facets__button flex justify-center align-center color-foreground facets__button button button--secondary"
+          >
+            <span>
+              {%- if section.settings.filter_include_group_name -%}{{ filter.label }}: {% endif -%}
+              {%- if filter_label_downcase == settings.phone_name -%}
+                {%- liquid
+                  assign display_value = value.label
+                  if phone_option_names
+                    assign phone_option_names_list = phone_option_names | split: ";"
+                    for phone_option_name in phone_option_names_list
+                      assign phone_option_name_parts = phone_option_name | split: ":"
+                      assign phone_option_code = phone_option_name_parts[0]
+                      assign phone_option_model = phone_option_name_parts[1]
+                      if phone_option_code == value.label
+                        assign display_value = phone_option_model 
+                      endif
+                    endfor
+                  endif
+                -%}
+                {{ display_value | default: value.label | escape }}
+              {%- else -%}
+                {{- value.label | escape -}}
+              {%- endif -%}
+            </span>
             {%- render 'icon-close', icon_width: 12 -%}
             <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
           </a>
