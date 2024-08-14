@@ -92,8 +92,8 @@
           "type": "column",
           "settings": {
             "icon": "shopping_cart",
-            "title": "Objednávky",
-            "text": "<p><strong>E-shop:<\/strong><\/p><p><strong>Po – Pá<\/strong>: 8:00 – 16:00<strong><br\/><\/strong><a href=\"mailto:podpora@FIXED.zone\" target=\"_blank\" title=\"mailto:podpora@FIXED.zone\">podpora@FIXED.zone<\/a><br\/>+420 267 317 817<br\/><\/p>",
+            "title": "E-shop objednávky",
+            "text": "<p><strong>Po – Pá<\/strong>: 8:00 – 16:00<strong><br\/><\/strong><a href=\"mailto:podpora@FIXED.zone\" target=\"_blank\" title=\"mailto:podpora@FIXED.zone\">podpora@FIXED.zone<\/a><br\/>+420 267 317 817<br\/><\/p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
