@@ -675,6 +675,14 @@
         "manual_payment_methods": {
           "money_order": "Poštová poukážka\/zloženka: {{formatted Transaction Amount}}",
           "bank_deposit": "Bankový prevod: {{formattedTransactionAmount}}"
+        },
+        "transactions": {
+          "hide_emv_details": "Skryť podrobnosti EMV"
+        },
+        "emv_details": {
+          "auth": "OVERENIE",
+          "aid": "ID APLIKÁCIA",
+          "source": "ZDROJ"
         }
       },
       "shipping": {
