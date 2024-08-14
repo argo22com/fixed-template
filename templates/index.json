@@ -232,9 +232,9 @@
         "promotion_text_FyP9bd": {
           "type": "promotion-text",
           "settings": {
-            "heading": "Text-only banner heading",
+            "heading": "hokus pokus",
             "heading_size": "h1",
-            "text": "<p>Give customers details about the banner image(s) or content on the template.<\/p>",
+            "text": "<p>a tady je text<\/p>",
             "text_style": "body",
             "button_label": "",
             "button_style": "primary",
@@ -248,11 +248,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#000",
+            "color_text": "#000000",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#000000",
             "color_background": "#fafafa"
           }
         }
@@ -866,7 +866,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#dc4405",
         "background_container": "#ffffff",
