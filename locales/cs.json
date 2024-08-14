@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "general": {
     "password_page": {
@@ -175,7 +184,7 @@
         "minimum_of": "Minimum: {{ quantity }}",
         "maximum_of": "Maximum: {{ quantity }}",
         "multiples_of": "Přírůstky: {{ quantity }}",
-        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> v košíku",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}<\/strong> v košíku",
         "note": "Zobrazit pravidla množství",
         "min_of": "Minimum {{ quantity }}",
         "max_of": "Maximum {{ quantity }}"
@@ -229,10 +238,11 @@
         "title": "Ceny s objemovou slevou",
         "note": "Ceny s objemovou slevou k dispozici",
         "minimum": "{{ quantity }} a více",
-        "price_at_each": "{{ price }} / ks",
+        "price_at_each": "{{ price }} \/ ks",
         "price_range": "{{ minimum }}–{{ maximum }}"
       },
-      "by_vendor_html": "<span>By</span> {{ vendor }}"
+      "by_vendor_html": "<span>By<\/span> {{ vendor }}",
+      "inventory_out_of_stock_continue_selling": "Na skladě"
     },
     "modal": {
       "label": "Galerie multimédií"
@@ -450,6 +460,9 @@
       "reviews": {
         "title": "Hodnocení"
       }
+    },
+    "gallery_lightbox": {
+      "load_more": "Načíst další obrázky"
     }
   },
   "localization": {
