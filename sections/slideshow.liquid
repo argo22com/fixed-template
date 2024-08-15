@@ -161,20 +161,23 @@
                 if block.settings.image.width >= 3840
                   assign widths = widths | append: '3840,'
                 endif
+                if block.settings.image.width >= 5000
+                  assign widths = widths | append: '5000,'
+                endif
                 assign widths = widths | append: block.settings.image.width
                 assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
               -%}
 
               {%- if block.settings.mobile_image == blank and forloop.first -%}
                 {%- if need_preload -%}
-                  {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, preload: true, fetchpriority: 'high' }}
+                  {{ block.settings.image | image_url: width: 5000 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, preload: true, fetchpriority: 'high' }}
                 {%- else -%}
-                  {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy' }}  
+                  {{ block.settings.image | image_url: width: 5000 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy' }}  
                 {%- endif -%}  
               {%- elsif block.settings.mobile_image -%}
-                {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy', class: 'small-hide' }}
+                {{ block.settings.image | image_url: width: 5000 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy', class: 'small-hide' }}
               {%- else -%}
-                {{ block.settings.image | image_url: width: 3840 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy' }}  
+                {{ block.settings.image | image_url: width: 5000 | image_tag: widths: widths, sizes: '100vw', width: block.settings.image.width, height: height, loading: 'lazy' }}  
               {%- endif -%}  
               
               {%- if block.settings.mobile_image != blank -%}

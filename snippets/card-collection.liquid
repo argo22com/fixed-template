@@ -36,7 +36,7 @@
         {%- if featured_image -%}
           <{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %} class="media media--hover-effect card-radius-collection w100 media--hover-effect media--{{ media_aspect_ratio }}{% if media_aspect_ratio == 'adapt' %} ratio{% endif %}"{% if media_aspect_ratio == 'adapt' %} style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"{% endif %}>
             {{ featured_image | image_url: width: featured_image.width | 
-              image_tag: sizes: sizes, width: featured_image.width, height: featured_image.height, widths: '165,330,535,750,1000,1500,3000', class: 'motion-reduce', loading: 'lazy' }}
+              image_tag: sizes: sizes, width: featured_image.width, height: featured_image.height, widths: '165,330,535,750,1000,1500,3000,5000', class: 'motion-reduce', loading: 'lazy' }}
           </{% if settings.enable_appear_effect %}use-animate{% else %}div{% endif %}>
         {%- elsif card_collection == blank -%}
           {{ placeholder_image | default: 'collection-apparel-1' | placeholder_svg_tag: 'placeholder-svg w100 h100 card-radius-collection' }}  

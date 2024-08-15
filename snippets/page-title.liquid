@@ -45,6 +45,9 @@
         if collection.image.width >= 3840
           assign widths = widths | append: '3840,'
         endif
+        if collection.image.width >= 5000
+          assign widths = widths | append: '5000,'
+        endif
         assign widths = widths | append: collection.image.width
       -%}
       {%- if preload_background_image -%}
