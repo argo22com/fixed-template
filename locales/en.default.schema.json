@@ -4587,6 +4587,275 @@
         "name": "Image with text"
       }
     },
+    "video-with-text": {
+      "name": "Video with text",
+      "settings": {
+        "video": {
+          "label": "Video"
+        },
+        "second_image": {
+          "label": "Second image"
+        },
+        "preload": {
+          "label": "Preload first image"
+        },
+        "height": {
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Small"
+          },
+          "options__3": {
+            "label": "Large"
+          },
+          "label": "Image height"
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "Small"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Large"
+          },
+          "label": "Desktop image width",
+          "info": "Image is automatically optimized for mobile."
+        },
+        "layout": {
+          "options__1": {
+            "label": "Image first"
+          },
+          "options__2": {
+            "label": "Image second"
+          },
+          "label": "Desktop image placement",
+          "info": "Image first is the default mobile layout."
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+          "label": "Desktop content alignment"
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "Top"
+          },
+          "options__2": {
+            "label": "Middle"
+          },
+          "options__3": {
+            "label": "Bottom"
+          },
+          "label": "Desktop content position"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "No overlap"
+          },
+          "options__2": {
+            "label": "Overlap"
+          },
+          "options__3": {
+            "label": "Separate"
+          },
+          "label": "Content layout"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+          "label": "Mobile content alignment"
+        },
+        "color_icon": {
+          "label": "Icon",
+          "info": "Not applicable in the custom icon."
+        },
+        "color_button_text": {
+          "label": "Solid button label"
+        },
+        "color_button": {
+          "label": "Solid button background",
+          "info": "Also used for outline button text."
+        },
+        "background_container": {
+          "label": "Background container"
+        },
+        "gradient_background_container": {
+          "label": "Gradient background container"
+        },
+        "background_section": {
+          "label": "Background section"
+        },
+        "gradient_background_section": {
+          "label": "Gradient background section"
+        },
+        "overlay_color": {
+          "label": "Overlay color",
+          "info": "Only visible when background image section is not blank."
+        },
+        "gradient_heading": {
+          "label": "Gradient heading"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Heading",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "enable_bold_heading": {
+              "label": "Enable bold heading"
+            }
+          }
+        },
+        "caption": {
+          "name": "Caption",
+          "settings": {
+            "text": {
+              "label": "Text"
+            },
+            "text_style": {
+              "label": "Text style",
+              "options__1": {
+                "label": "Subtitle"
+              },
+              "options__2": {
+                "label": "Uppercase"
+              },
+              "options__3": {
+                "label": "Badge"
+              }
+            },
+            "caption_size": {
+              "label": "Text size",
+              "options__1": {
+                "label": "Small"
+              },
+              "options__2": {
+                "label": "Medium"
+              },
+              "options__3": {
+                "label": "Large"
+              }
+            }
+          }
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Content"
+            },
+            "text_style": {
+              "label": "Text style",
+              "options__1": {
+                "label": "Body"
+              },
+              "options__2": {
+                "label": "Subtitle"
+              }
+            }
+          }
+        },
+        "highlight_text": {
+          "name": "Highlight text",
+          "settings": {
+            "text": {
+              "label": "Text"
+            },
+            "text_style": {
+              "label": "Text style",
+              "options__1": {
+                "label": "Body"
+              },
+              "options__2": {
+                "label": "Subtitle"
+              },
+              "options__3": {
+                "label": "Heading"
+              }
+            },
+            "size": {
+              "label": "Text size",
+              "options__1": {
+                "label": "Small"
+              },
+              "options__2": {
+                "label": "Medium"
+              },
+              "options__3": {
+                "label": "Large"
+              }
+            }
+          }
+        },
+        "countdown": {
+          "name": "Countdown",
+          "settings": {
+            "date": {
+              "label": "Date",
+              "info": "Format: yyyy-mm-dd or yyyy-mm-dd hh-ii. Example: 2023-01-15 or 2023-01-15 00:30"
+            }
+          }
+        },
+        "button": {
+          "name": "Button",
+          "settings": {
+            "button_label": {
+              "label": "Button label",
+              "info": "Leave the label blank to hide the button."
+            },
+            "button_link": {
+              "label": "Button link"
+            },
+            "button_style": {
+              "label": "Button style",
+              "option_1": {
+                "label": "Primary solid button"
+              },
+              "option_2": {
+                "label": "Secondary solid button"
+              },
+              "option_3": {
+                "label": "Outline button"
+              },
+              "option_4": {
+                "label": "Link"
+              }
+            }
+          }
+        },
+        "icon": {
+          "name": "Icon",
+          "settings": {
+            "custom_icon": {
+              "label": "Custom icon",
+              "info": "Recommended size: 90x90 pixels or larger on the same ratio."
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Image with text"
+      }
+    },
     "main-account": {
       "name": "Account"
     },
