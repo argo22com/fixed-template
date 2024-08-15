@@ -136,7 +136,9 @@
       "read_more_title": "Read more: {{ title }}",
       "comments": {
         "one": "{{ count }} comment",
-        "other": "{{ count }} comments"
+        "other": "{{ count }} comments",
+        "few": "{{ count }} comments",
+        "many": "{{ count }} comments"
       },
       "author_html": "Posted by <strong>{{ author }}<\/strong>",
       "moderated": "Please note, comments need to be approved before they are published.",
