@@ -183,7 +183,10 @@
         "label": "Quantity",
         "input_label": "Quantity for {{ product }}",
         "increase": "Increase quantity for {{ product }}",
-        "decrease": "Decrease quantity for {{ product }}"
+        "decrease": "Decrease quantity for {{ product }}",
+        "minimum_of": "Minimum: {{ quantity }}",
+        "maximum_of": "Maximum: {{ quantity }}",
+        "multiples_of": "Increments: {{ quantity }}"
       },
       "pickup_availability": {
         "view_store_info": "View store information",
