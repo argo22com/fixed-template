@@ -216,34 +216,7 @@
         "collapsible_row_XWMNVK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_XPmVWn": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_8WT4cR": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_EWXCdc": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
+            "heading": "Loga FIXED",
             "icon": "emoji_happy",
             "row_content": "",
             "page": ""
@@ -251,10 +224,7 @@
         }
       },
       "block_order": [
-        "collapsible_row_XWMNVK",
-        "collapsible_row_XPmVWn",
-        "collapsible_row_8WT4cR",
-        "collapsible_row_EWXCdc"
+        "collapsible_row_XWMNVK"
       ],
       "settings": {
         "section_width": "grid",
