@@ -217,7 +217,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Loga FIXED",
-            "icon": "emoji_happy",
+            "icon": "download",
             "row_content": "",
             "page": "loga"
           }
