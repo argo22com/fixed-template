@@ -352,7 +352,9 @@
       "menu": "Menu",
       "cart_count": {
         "one": "{{ count }} item",
-        "other": "{{ count }} items"
+        "other": "{{ count }} items",
+        "few": "{{ count }} items",
+        "many": "{{ count }} items"
       },
       "breadcrumbs": {
         "home": "Home"
