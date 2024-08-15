@@ -694,7 +694,8 @@
           "bank_deposit": "Bankový prevod: {{formattedTransactionAmount}}"
         },
         "transactions": {
-          "hide_emv_details": "Skryť podrobnosti EMV"
+          "hide_emv_details": "Skryť podrobnosti EMV",
+          "show_emv_details": "Zobraziť podrobnosti EMV"
         },
         "emv_details": {
           "auth": "OVERENIE",
