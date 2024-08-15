@@ -232,7 +232,10 @@
         "other": "{{ count }} reviews"
       },
       "by_vendor_html": "<span>By<\/span> {{ vendor }}",
-      "pre_order": "Pre-order"
+      "pre_order": "Pre-order",
+      "variant_sold_out_or_unavailable": "Sold out or unavailable option",
+      "quick_view_button": "Quick view",
+      "view_product": "View product"
     },
     "modal": {
       "label": "Media gallery"
