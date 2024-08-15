@@ -300,11 +300,15 @@
       "article": "Articles",
       "results_with_count": {
         "one": "{{ count }} result",
-        "other": "{{ count }} results"
+        "other": "{{ count }} results",
+        "few": "{{ count }} results",
+        "many": "{{ count }} results"
       },
       "results_with_count_and_term": {
         "one": "{{ count }} result found for “{{ terms }}”",
-        "other": "{{ count }} results found for “{{ terms }}”"
+        "other": "{{ count }} results found for “{{ terms }}”",
+        "few": "{{ count }} results found for “{{ terms }}”",
+        "many": "{{ count }} results found for “{{ terms }}”"
       },
       "title": "Search results",
       "search_for": "Search for “{{ terms }}”",
