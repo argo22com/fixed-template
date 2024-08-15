@@ -250,7 +250,7 @@
                           height: image_height,
                           class: image_class,
                           sizes: sizes,
-                          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840, 5000'
                         }}
                         {%- if block.settings.image_mobile != blank -%}
                           {%-liquid
@@ -306,10 +306,10 @@
                   >
                     {%- if cover_image != blank -%}
                       {%- assign alt = 'sections.video.load_video' | t: description: block.settings.description | escape -%}
-                      {{ cover_image | image_url: width: 3840 | image_tag:
+                      {{ cover_image | image_url: width: 5000 | image_tag:
                         loading: 'lazy',
                         sizes: '100vw',
-                        widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                        widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840, 5000',
                         alt: alt
                       }}
                     {%- else -%}
@@ -401,10 +401,10 @@
                     <a href="{{ block.settings.video_url }}" class="video-section__poster media media--transparent media--landscape{% if cover_image == blank %} video-section__placeholder{% endif %}">
                       {%- if cover_image != blank -%}
                         {%- assign alt = 'sections.video.load_video' | t: description: block.settings.description | escape -%}
-                        {{ cover_image | image_url: width: 3840 | image_tag:
+                        {{ cover_image | image_url: width: 5000 | image_tag:
                           loading: 'lazy',
                           sizes: '100vw',
-                          widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                          widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840, 5000',
                           alt: alt
                         }}
                       {%- else -%}
@@ -429,10 +429,10 @@
                 >
                   {%- if cover_image != blank -%}
                     {%- assign alt = 'sections.video.load_video' | t: description: block.settings.description | escape -%}
-                    {{ cover_image | image_url: width: 3840 | image_tag:
+                    {{ cover_image | image_url: width: 5000 | image_tag:
                       loading: 'lazy',
                       sizes: '100vw',
-                      widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                      widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840, 5000',
                       alt: alt
                     }}
                   {%- else -%}

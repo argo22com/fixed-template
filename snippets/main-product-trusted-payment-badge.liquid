@@ -24,6 +24,7 @@
           {%- if block.settings.payment_badge.width >= 1500 -%}{{ block.settings.payment_badge | image_url: width: 1500 }} 1500w,{%- endif -%}
           {%- if block.settings.payment_badge.width >= 2200 -%}{{ block.settings.payment_badge | image_url: width: 2200 }} 2200w,{%- endif -%}
           {%- if block.settings.payment_badge.width >= 3000 -%}{{ block.settings.payment_badge | image_url: width: 3000 }} 3000w,{%- endif -%}
+          {%- if block.settings.payment_badge.width >= 5000 -%}{{ block.settings.payment_badge | image_url: width: 5000 }} 5000w,{%- endif -%}
           {{ block.settings.payment_badge | image_url }} {{ block.settings.payment_badge.width }}w"
         src="{{ block.settings.payment_badge | image_url: width: 150 }}"
         sizes="(min-width: 750px) 50vw, 100vw"
