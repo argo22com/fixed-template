@@ -186,7 +186,11 @@
         "decrease": "Decrease quantity for {{ product }}",
         "minimum_of": "Minimum: {{ quantity }}",
         "maximum_of": "Maximum: {{ quantity }}",
-        "multiples_of": "Increments: {{ quantity }}"
+        "multiples_of": "Increments: {{ quantity }}",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}<\/strong> in cart",
+        "note": "View quantity rules",
+        "min_of": "Minimum {{ quantity }}",
+        "max_of": "Maximum {{ quantity }}"
       },
       "pickup_availability": {
         "view_store_info": "View store information",
