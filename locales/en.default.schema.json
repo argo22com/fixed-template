@@ -4590,18 +4590,21 @@
     "video-with-text": {
       "name": "Video with text",
       "settings": {
-        "video": {
-          "label": "Video"
+        "cover_image": {
+          "label": "Cover image"
         },
-        "second_image": {
-          "label": "Second image"
+        "video_hosted": {
+          "label": "A Shopify-hosted video",
+          "info": "Video plays in the page. Leave empty to play the Youtube or Vimeo video."
         },
-        "preload": {
-          "label": "Preload first image"
+        "video_url": {
+          "label": "URL",
+          "placeholder": "Use a YouTube or Vimeo URL",
+          "info": "Video plays in the page."
         },
         "height": {
           "options__1": {
-            "label": "Adapt to image"
+            "label": "Adapt to video"
           },
           "options__2": {
             "label": "Small"
@@ -4609,9 +4612,9 @@
           "options__3": {
             "label": "Large"
           },
-          "label": "Image height"
+          "label": "Video height"
         },
-        "desktop_image_width": {
+        "desktop_video_width": {
           "options__1": {
             "label": "Small"
           },
@@ -4621,18 +4624,18 @@
           "options__3": {
             "label": "Large"
           },
-          "label": "Desktop image width",
-          "info": "Image is automatically optimized for mobile."
+          "label": "Desktop video width",
+          "info": "Video is automatically optimized for mobile."
         },
         "layout": {
           "options__1": {
-            "label": "Image first"
+            "label": "Video first"
           },
           "options__2": {
-            "label": "Image second"
+            "label": "Video second"
           },
-          "label": "Desktop image placement",
-          "info": "Image first is the default mobile layout."
+          "label": "Desktop video placement",
+          "info": "Video first is the default mobile layout."
         },
         "desktop_content_alignment": {
           "options__1": {
@@ -4853,7 +4856,7 @@
         }
       },
       "presets": {
-        "name": "Image with text"
+        "name": "Video with text"
       }
     },
     "main-account": {
