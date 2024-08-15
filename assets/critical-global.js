@@ -769,6 +769,7 @@ class VariantSelects extends HTMLElement {
   constructor() {
     super();
     this.addEventListener('change', this.onVariantChange);
+    this.productInfo = this.closest('product-info');
   }
 
   onVariantChange(event) {
@@ -819,8 +820,8 @@ class VariantSelects extends HTMLElement {
   }
 
   updateURL() {
-    if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
-    window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+    if (!this.currentVariant || this.productInfo.dataset.updateUrl === 'false') return;
+    window.history.replaceState({ }, '', `${this.productInfo.dataset.url}?variant=${this.currentVariant.id}`);
 
     this.updateUrlsOnVariationProductsSwitchers();
   }
