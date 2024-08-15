@@ -118,7 +118,8 @@
         "minimum": "{{ množstvo }} a viac",
         "price_at_each": "{{ cena }} \/ ks",
         "price_range": "{{ minimum }} – {{ maximum }}"
-      }
+      },
+      "pre_order": "Predobjednávka"
     },
     "modal": {
       "label": "Galéria multimédií"
