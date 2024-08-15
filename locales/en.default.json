@@ -235,7 +235,14 @@
       "pre_order": "Pre-order",
       "variant_sold_out_or_unavailable": "Sold out or unavailable option",
       "quick_view_button": "Quick view",
-      "view_product": "View product"
+      "view_product": "View product",
+      "volume_pricing": {
+        "title": "Prices with volume discount",
+        "note": "Volume discount pricing available",
+        "minimum": "{{ quantity }} and more",
+        "price_at_each": "{{ price }} \/ piece",
+        "price_range": "{{ minimum }}–{{ maximum }}"
+      }
     },
     "modal": {
       "label": "Media gallery"
