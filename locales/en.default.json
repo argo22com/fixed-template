@@ -224,7 +224,8 @@
         "one": "{{ count }} review",
         "other": "{{ count }} reviews"
       },
-      "by_vendor_html": "<span>By<\/span> {{ vendor }}"
+      "by_vendor_html": "<span>By<\/span> {{ vendor }}",
+      "pre_order": "Pre-order"
     },
     "modal": {
       "label": "Media gallery"
