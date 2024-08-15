@@ -1927,6 +1927,10 @@ textarea {
   background-color: rgb(var(--color-background));
 }
 
+.d-none {
+  display: none !important;
+}
+
 .text-area,
 .select {
   display: flex;

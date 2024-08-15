@@ -832,13 +832,30 @@ class VariantSelects extends HTMLElement {
       const colorCode = swatch.dataset.color;
       const colorUrl = checkedInput.getAttribute(`data-${colorCode}-url`);
 
-      // variant may be missing for some products
+      const tooltip = swatch.querySelector('.js-title-tooltip');
+      const closeIcon = swatch.querySelector('.js-close-icon');
       if (colorUrl) {
+        // variant exists for this product
         const colorTitle = checkedInput.getAttribute(`data-${colorCode}-title`);
         swatch.href = colorUrl;
-        const tooltip = swatch.querySelector('.js-title-tooltip');
+        swatch.classList.remove('no-stock');
         if (tooltip) {
+          tooltip.classList.remove('d-none');
           tooltip.innerHTML = colorTitle;
+        }
+        if (closeIcon) {
+          closeIcon.classList.add('d-none');
+        }
+      } else {
+        // no variant for this product
+        swatch.href = '#';
+        swatch.classList.add('no-stock');
+        if (tooltip) {
+          tooltip.classList.add('d-none');
+          tooltip.innerHTML = '';
+        }
+        if (closeIcon) {
+            closeIcon.classList.remove('d-none');
         }
       }
     })

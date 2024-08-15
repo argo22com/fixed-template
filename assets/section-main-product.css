@@ -375,6 +375,10 @@ button.shopify-payment-button__button--unbranded {
   inset-inline-end: 0.4rem;
 }
 
+.no-stock {
+  cursor: auto;
+}
+
 .color-swatches-variant--circle {
   border-radius: calc(var(--variants-pills-color-radius));
 }
