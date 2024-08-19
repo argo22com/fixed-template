@@ -6,6 +6,10 @@
   padding-bottom: var(--video-ratio, 56.25%);
 }
 
+.video-section__media img {
+  object-fit: contain;
+}
+
 .video-section__media.deferred-media:after {
   content: none;
 }
