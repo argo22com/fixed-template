@@ -164,6 +164,9 @@
         "column_Gr8YRz",
         "column_GDembi"
       ],
+      "custom_css": [
+        ".multicolumn-card__image-wrapper {box-shadow: 0 0px 0px 0px rgba(var(--color-foreground), .0), 0 0px 0px 0px rgba(var(--color-foreground), .0);}"
+      ],
       "settings": {
         "title": "Kontaktujte nás",
         "subtitle": "",
