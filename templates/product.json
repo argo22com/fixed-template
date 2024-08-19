@@ -50,7 +50,7 @@
             "horizontalPadding": 20,
             "iconTopOffset": 0,
             "addedCssClassNames": "",
-            "addedContainerStyles": ""
+            "addedContainerStyles": "js-wishlist-button"
           }
         },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
@@ -66,10 +66,7 @@
             "size_chart_page": "tabulka-velikosti-univerzalni-pouzdra",
             "quantity_selector_enable": true,
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true,
-            "option_name": "color",
-            "option_value_metafield": "product_variants_grouping.variation_value",
-            "products": "{{ product.metafields.product_variants_grouping.variation_products.value }}"
+            "show_gift_card_recipient": true
           }
         },
         "share": {
@@ -133,7 +130,6 @@
         "enable_sticky_info": true,
         "enable_sticky_cart": true,
         "show_next_prev_products": true,
-        "enable_shopify_reviews_app_css": true,
         "auto_scroll_up_mobile": false,
         "default_image": "product_featured_image",
         "media_position": "left",
