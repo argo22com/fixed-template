@@ -115,6 +115,16 @@
   #MediaGallery-{{ section.id }}{
     --object-fit:{%- if section.settings.image_fit -%}cover{%- else -%}contain{%- endif -%};
   }
+
+  {% if show_successors %}
+    #wishlist-hero-product-page-button {
+      display: none;
+    }
+
+    .wishlisthero-floating-launcher-container {
+      display: none;
+    }
+  {% endif %}
 {%- endstyle -%}
 <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
