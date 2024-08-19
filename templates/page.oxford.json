@@ -381,7 +381,8 @@
           "settings": {
             "button_label": "",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -410,6 +411,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -443,7 +445,8 @@
           "settings": {
             "button_label": "více informací",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -472,6 +475,7 @@
         "color_highlight_text": "#e94200",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#e94200",
         "background_container": "#ffffff",
@@ -480,6 +484,71 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
+      }
+    },
+    "video_with_text_R73aYn": {
+      "type": "video-with-text",
+      "blocks": {
+        "heading_PWCQDT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Video with text - test",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_Vrjfjq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an video to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_KFawrj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PWCQDT",
+        "text_Vrjfjq",
+        "button_KFawrj"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "cover_image": "shopify:\/\/shop_images\/img_c2ce26b3-5306-4da9-9df6-6018b68fede0.jpg",
+        "video_hosted": "shopify:\/\/files\/videos\/Vyroba-kozene-penezenky-Tiny-Wallet-pro-BCPP-Burzu-cennych-papiru-Praha.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "height": "adapt",
+        "desktop_video_width": "medium",
+        "layout": "video_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_video": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "featured_products_tabs_Fy3G9B": {
@@ -567,6 +636,7 @@
     "featured_product_kFbBf8",
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
+    "video_with_text_R73aYn",
     "featured_products_tabs_Fy3G9B",
     "video_XhEQtC"
   ]
