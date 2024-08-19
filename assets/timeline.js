@@ -98,7 +98,7 @@ if (!customElements.get('timeline-section')) {
             });
 
             t.addEventListener("mouseleave", function (event) {
-                if (event.relatedTarget.classList.contains('timeline-hover-block')) {
+                if (event.relatedTarget.classList.contains('timeline-hover-block') || event.relatedTarget.closest('.timeline-hover-block')) {
                     return;
                 }
 
