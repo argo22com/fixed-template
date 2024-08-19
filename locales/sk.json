@@ -108,6 +108,7 @@
         "one": "{{ count }} hodnotenie",
         "other": "{{ count }} hodnotenie"
       },
+      "successor_text": "Na výber {{ count }} produktov",
       "by_vendor_html": "<span>Od<\/span> {{ vendor }}",
       "variant_sold_out_or_unavailable": " 34 \/ 5 000 Vypredaný alebo nedostupný variant",
       "quick_view_button": "Rýchly pohľad",

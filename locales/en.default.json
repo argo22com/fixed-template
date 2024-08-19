@@ -242,7 +242,8 @@
         "minimum": "{{ quantity }} and more",
         "price_at_each": "{{ price }} \/ piece",
         "price_range": "{{ minimum }}–{{ maximum }}"
-      }
+      },
+      "successor_text": "Choose from {{ count }} successors"
     },
     "modal": {
       "label": "Media gallery"

@@ -279,8 +279,29 @@
                  -%}
                   <div class="product__sale-box__actions">
                     {% if show_successors %}
-                      <div>
-                        successors
+                      {% liquid
+                        assign successors = product.metafields.product_lineage.next_in_line_product.value
+                      %}
+
+                      <div class="select">
+                        <div class="select__select successor-select" id="successor-select">
+                          {{ 'products.product.successor_text' | t: count: successors.count }}
+                        </div>
+                        <div class="successor-list">
+                          {% for successor in successors %}
+                            <a href="{{ successor.url }}" class="link">
+                              <div class="flex successor-item justify-center align-center">
+                                <div class="successor-image">
+                                  <img src="{{ successor.featured_media.src | img_url: '300x' }}" alt="{{ successor.featured_media.alt }}">
+                                </div>
+                                <div class="successor-info">
+                                  <p class="successor-title">{{ successor.title }}</p>
+                                  <p class="successor-price">{{ successor.price | money }}</p>
+                                </div>
+                              </div>
+                            </a>
+                          {% endfor %}
+                        </div>
                       </div>
                     {%- elsif product != blank -%}
                       {%- liquid

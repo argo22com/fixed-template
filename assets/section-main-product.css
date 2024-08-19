@@ -375,6 +375,58 @@ button.shopify-payment-button__button--unbranded {
   inset-inline-end: 0.4rem;
 }
 
+.successor-select {
+  position: relative;
+  height: 55px;
+}
+
+.successor-list {
+  position: absolute;
+  top: 56px;
+  margin: 0;
+  width: 100%;
+  background: rgb(var(--color-background));
+  z-index: 1;
+  border: 1px solid rgba(var(--color-foreground), .1);
+  border-top: none;
+  max-height: 300px;
+  overflow: scroll;
+  overscroll-behavior: contain;
+}
+
+.successor-item {
+  height: 100px;
+  padding: 0 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.successor-item:hover {
+  background: rgba(var(--color-foreground), .2);
+}
+
+.successor-image img {
+  height: 70px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.successor-info {
+  padding: 5px 10px;
+}
+
+.successor-info p {
+  margin: 0;
+}
+
+.successor-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.successor-price {
+  font-size: 1.2rem;
+}
+
 .no-stock {
   cursor: auto;
 }
