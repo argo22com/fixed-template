@@ -231,7 +231,7 @@
 }
 
 .timeline-hover-block {
-    transition: all .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
     opacity: 0;
     visibility: hidden;
     width: 415px;

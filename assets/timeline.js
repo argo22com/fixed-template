@@ -62,25 +62,30 @@ if (!customElements.get('timeline-section')) {
             });
 
             document.querySelectorAll('.js-block').forEach(block => {
-                block.addEventListener('mouseenter', this.onHover.bind(this));
+                block.addEventListener('click', this.onHover.bind(this));
             })
         }
 
         onHover(event) {
-            let minusPixels = 50;
+            const MENU_HEIGHT = 100;
 
-            const t = event.target;
+            const t = event.target.closest('.js-block');
             const dataFor = t.dataset.for;
             const section = this;
-            const sectionTop = offset(section).top;
-            const blockTop = offset(t).top;
-            const blockLeft = offset(t).left;
-            if (t.classList.contains("reverse")) {
-                minusPixels = -100;
-            }
-            let absoluteTop = (blockTop - sectionTop) / 2 - minusPixels;
-            let absoluteLeft = blockLeft - 71;
             let element = document.querySelector(".timeline-hover-block#" + dataFor);
+
+            const elementRect = element.getBoundingClientRect();
+            const sectionRect = section.getBoundingClientRect();
+            const targetRect = t.getBoundingClientRect();
+
+            const blockLeft = offset(t).left;
+
+            let absoluteTop = targetRect.top - elementRect.height >= MENU_HEIGHT ? targetRect.top - sectionRect.top - elementRect.height : -sectionRect.top + MENU_HEIGHT + 20;
+            let absoluteLeft = blockLeft - 71;
+
+            if (t.classList.contains("reverse")) {
+                absoluteTop -= 15;
+            }
 
             element.style.top = absoluteTop + "px";
             element.style.left = absoluteLeft + "px";
@@ -92,16 +97,16 @@ if (!customElements.get('timeline-section')) {
                 }
             });
 
-            t.addEventListener("mouseleave", function () {
+            t.addEventListener("mouseleave", function (event) {
+                if (event.relatedTarget.classList.contains('timeline-hover-block')) {
+                    return;
+                }
+
                 setTimeout(function () {
                     if (!element.classList.contains("active2")) {
                         element.classList.remove("active");
                     }
                 }, 200);
-            });
-
-            element.addEventListener("mouseover", function () {
-                this.classList.add("active2");
             });
 
             element.addEventListener("mouseleave", function () {
