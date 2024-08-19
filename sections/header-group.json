@@ -701,9 +701,74 @@
         "enable_transparent_homepage": false,
         "text_color_transparent": "#ffffff"
       }
+    },
+    "video_with_text_axWj7g": {
+      "type": "video-with-text",
+      "blocks": {
+        "heading_myR69U": {
+          "type": "heading",
+          "settings": {
+            "heading": "Video with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_ckAGMJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an video to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_fwit6Y": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_myR69U",
+        "text_ckAGMJ",
+        "button_fwit6Y"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "cover_image": "shopify:\/\/shop_images\/sablona-na-zed-s-detskym-motivem-144.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=4B6E0mijV5A&list=RDMMI2y6RQFKEsc&index=7&ab_channel=WaxFang",
+        "height": "large",
+        "desktop_video_width": "medium",
+        "layout": "video_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_video": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#dc2626",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "video_with_text_axWj7g"
   ]
 }
