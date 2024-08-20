@@ -245,6 +245,140 @@
         "overlay_color": "#1e40af"
       }
     },
+    "multicolumn_8gTJab": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HyrbFY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/facebook.png",
+            "icon": "none",
+            "title": "Card heading",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#166534",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#effdf4",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_yQfhbN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/instagram-logo.png",
+            "icon": "check",
+            "title": "Card heading",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#a06207",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fefce8",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_PCdLUf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/linkedin.png",
+            "icon": "check",
+            "title": "Card heading",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#981c1b",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fef2f2",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_9mngbp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tik-tok.png",
+            "icon": "check",
+            "title": "Card heading",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#981c1b",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fef2f2",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_iEceAy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/youtube.png",
+            "icon": "check",
+            "title": "Card heading",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#981c1b",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fef2f2",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HyrbFY",
+        "column_yQfhbN",
+        "column_PCdLUf",
+        "column_9mngbp",
+        "column_iEceAy"
+      ],
+      "settings": {
+        "title": "Sledujte příběh naší značky",
+        "subtitle": "",
+        "heading_size": "h2",
+        "media_type": "image",
+        "media_width_desktop": "30",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 5,
+        "columns_tablet": 3,
+        "desktop_gap": 20,
+        "auto_fit": false,
+        "column_alignment": "center",
+        "enable_shadow": false,
+        "background_transparent": true,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "30",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "newsletter_k48KMr": {
       "type": "newsletter",
       "blocks": {
@@ -282,9 +416,9 @@
         "enable_section_box_layout": false,
         "color_scheme": "",
         "enable_parallax_scrolling_effect": true,
-        "colors_text": "#fff",
-        "colors_input": "#64748B",
-        "overlay_color": "#1E40AF",
+        "colors_text": "#ffffff",
+        "colors_input": "#64748b",
+        "overlay_color": "#1e40af",
         "mobile_content_alignment": "left",
         "padding_top": 40,
         "padding_bottom": 52
@@ -767,6 +901,7 @@
     "image_with_text_dfmzED",
     "image_with_text_xkUAjh",
     "image_with_text_Uh3NT9",
+    "multicolumn_8gTJab",
     "newsletter_k48KMr",
     "timeline_ccWkJE",
     "graph_wrK7F9",
