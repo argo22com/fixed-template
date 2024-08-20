@@ -108,7 +108,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/koreny_znacky.png",
+        "image": "shopify:\/\/shop_images\/FIXZENMP-10-LS4.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -117,7 +117,7 @@
         "content_layout": "no-overlap",
         "hide_when_empty_image": false,
         "preload": false,
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36,
         "color_heading": "#000000",
@@ -171,7 +171,7 @@
         "content_layout": "no-overlap",
         "hide_when_empty_image": false,
         "preload": false,
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36,
         "color_heading": "#000000",
@@ -216,7 +216,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/produktove_inovace.png",
+        "image": "shopify:\/\/shop_images\/1B1A1377.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -682,6 +682,9 @@
     },
     "graph_wrK7F9": {
       "type": "graph",
+      "custom_css": [
+
+      ],
       "settings": {
         "heading1": "Vývoj obratu",
         "description1": "Celkový obrat v Kč",
@@ -841,58 +844,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "newsletter_a3YF6J": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_QhrWgK": {
-          "type": "heading",
-          "settings": {
-            "heading": "Zůstaňte v obraze",
-            "heading_size": "h2"
-          }
-        },
-        "paragraph_GVcxng": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce. <\/p><p>Přečtěte si naše <a href=\"https:\/\/obchod.fixed.zone\/ochrana-osobnich-udaju-a-zasilani-obchodnich-sdeleni\/\" target=\"_blank\">zásady ochrany osobních údajů<\/a>.<\/p>"
-          }
-        },
-        "email_form_YD9eHt": {
-          "type": "email_form",
-          "settings": {
-          }
-        },
-        "social_icons_3X3XHV": {
-          "type": "social_icons",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "heading_QhrWgK",
-        "paragraph_GVcxng",
-        "email_form_YD9eHt",
-        "social_icons_3X3XHV"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "scheme-93d0b4d7-0fb9-4886-b4bf-c2a0b0dd1c82",
-        "background_image_section": "shopify:\/\/shop_images\/bg.jpg",
-        "enable_parallax_scrolling_effect": true,
-        "colors_text": "#ffffff",
-        "colors_input": "#64748b",
-        "overlay_color": "rgba(0,0,0,0)",
-        "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -905,7 +856,6 @@
     "multicolumn_8gTJab",
     "timeline_ccWkJE",
     "graph_wrK7F9",
-    "multicolumn_ADgaBQ",
-    "newsletter_a3YF6J"
+    "multicolumn_ADgaBQ"
   ]
 }
