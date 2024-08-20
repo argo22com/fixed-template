@@ -33,7 +33,7 @@
         "text_3XXkNR": {
           "type": "text",
           "settings": {
-            "text": "Značka FIXED přináší na trh neotřelá řešení pro smartphony a tablety. Výrobky značky FIXED vynikají praktičností a jsou vyvíjeny s důrazem na kvalitu a jednoduchost použití. Zjistěte o nás více.",
+            "text": "FIXED je kvalitní a odolné příslušenství pro telefony, tablety a nositelnou elektroniku, které si dává za cíl zlepšit váš život s těmito chytrými zařízeními.Vše, co děláme, podřizujeme této vizi.",
             "text_style": "body"
           }
         }
@@ -126,7 +126,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -180,7 +180,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -234,7 +234,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -288,7 +288,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
