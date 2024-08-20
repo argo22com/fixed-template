@@ -285,7 +285,7 @@
         "colors_text": "#ffffff",
         "colors_input": "#64748b",
         "overlay_color": "#1e40af",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "padding_top": 40,
         "padding_bottom": 52
       }
