@@ -319,17 +319,42 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "title": "Icon",
+            "custom_icon": "shopify:\/\/shop_images\/linkedin_4b68bca5-2509-4774-9dee-e7d7a37464fb.png",
+            "title": "LinkedIn",
             "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
+            "link": "https:\/\/www.linkedin.com\/company\/fixedzone\/",
+            "open_link_in_new_tab": true
+          }
+        },
+        "text_icon_zLpQMx": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/tik-tok_a89ad24c-a0ea-48ce-b142-48ffa8853c5b.png",
+            "title": "TikTok",
+            "subheading": "",
+            "link": "https:\/\/www.tiktok.com\/@fixedcesko",
+            "open_link_in_new_tab": true
+          }
+        },
+        "text_icon_kdbi7N": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/youtube_d706cd54-0753-4a43-b753-812d80d51d7b.png",
+            "title": "YouTube",
+            "subheading": "",
+            "link": "https:\/\/www.youtube.com\/channel\/UCqZqDkRGsTIIVCcqCkfogvw",
+            "open_link_in_new_tab": true
           }
         }
       },
       "block_order": [
         "text_icon_mkHaVg",
         "text_icon_tNYjDn",
-        "text_icon_a7HPiA"
+        "text_icon_a7HPiA",
+        "text_icon_zLpQMx",
+        "text_icon_kdbi7N"
       ],
       "settings": {
         "title": "",
@@ -338,7 +363,7 @@
         "icon_width_desktop": 30,
         "text_position": "bottom",
         "enable_heading_in_box": false,
-        "columns_desktop": 3,
+        "columns_desktop": 5,
         "columns_tablet": 3,
         "auto_fit": false,
         "column_alignment": "center",
