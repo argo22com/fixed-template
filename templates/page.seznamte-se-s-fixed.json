@@ -245,6 +245,51 @@
         "overlay_color": "#1e40af"
       }
     },
+    "newsletter_VhbVj6": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_gb77ek": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sledujte příběh naší značky",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_BBNpic": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><\/p><p>Přidejte se do rodiny spokojených zákazníků a fanoušků značky FIXED na sociálních sítích nebo se zaregistrujte do našeho newsletteru. Budete tak mít jistotu, že vám neuniknou novinky ze světa kvalitního a odolného příslušenství, <br\/>doporučení na produkty nebo další rady, tipy a triky.<\/p>"
+          }
+        },
+        "email_form_7j4jTy": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_gb77ek",
+        "paragraph_BBNpic",
+        "email_form_7j4jTy"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#fff",
+        "colors_input": "#64748B",
+        "overlay_color": "#1E40AF",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "multicolumn_8gTJab": {
       "type": "multicolumn",
       "blocks": {
@@ -347,7 +392,7 @@
         "column_iEceAy"
       ],
       "settings": {
-        "title": "Sledujte příběh naší značky",
+        "title": "",
         "subtitle": "",
         "heading_size": "h2",
         "media_type": "image",
@@ -377,51 +422,6 @@
         "text_boxes_radius": 10,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "newsletter_k48KMr": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_ppLWkr": {
-          "type": "heading",
-          "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_eymJk6": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
-          }
-        },
-        "email_form_RwaFzV": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "heading_ppLWkr",
-        "paragraph_eymJk6",
-        "email_form_RwaFzV"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "colors_text": "#ffffff",
-        "colors_input": "#64748b",
-        "overlay_color": "#1e40af",
-        "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "timeline_ccWkJE": {
@@ -901,8 +901,8 @@
     "image_with_text_dfmzED",
     "image_with_text_xkUAjh",
     "image_with_text_Uh3NT9",
+    "newsletter_VhbVj6",
     "multicolumn_8gTJab",
-    "newsletter_k48KMr",
     "timeline_ccWkJE",
     "graph_wrK7F9",
     "multicolumn_ADgaBQ",
