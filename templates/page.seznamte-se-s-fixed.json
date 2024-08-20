@@ -225,7 +225,7 @@
         "content_layout": "no-overlap",
         "hide_when_empty_image": false,
         "preload": false,
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36,
         "color_heading": "#000000",
