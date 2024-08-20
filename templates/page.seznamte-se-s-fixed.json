@@ -282,9 +282,9 @@
         "enable_section_box_layout": false,
         "color_scheme": "",
         "enable_parallax_scrolling_effect": true,
-        "colors_text": "#fff",
-        "colors_input": "#64748B",
-        "overlay_color": "#1E40AF",
+        "colors_text": "#ffffff",
+        "colors_input": "#64748b",
+        "overlay_color": "#1e40af",
         "mobile_content_alignment": "left",
         "padding_top": 40,
         "padding_bottom": 52
@@ -305,7 +305,7 @@
             "button_style": "solid",
             "button_open_new_tab": true,
             "card_color_text": "#e94200",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#effdf4",
             "card_color_background_gradient": ""
@@ -323,7 +323,7 @@
             "button_style": "solid",
             "button_open_new_tab": true,
             "card_color_text": "#e94200",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fefce8",
             "card_color_background_gradient": ""
@@ -334,14 +334,14 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/linkedin.png",
             "icon": "check",
-            "title": "Linkedin",
+            "title": "LinkedIn",
             "text": "",
             "link_label": "",
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": true,
             "card_color_text": "#e94200",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fef2f2",
             "card_color_background_gradient": ""
@@ -359,7 +359,7 @@
             "button_style": "solid",
             "button_open_new_tab": true,
             "card_color_text": "#e94200",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fef2f2",
             "card_color_background_gradient": ""
@@ -377,7 +377,7 @@
             "button_style": "solid",
             "button_open_new_tab": true,
             "card_color_text": "#e94200",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fef2f2",
             "card_color_background_gradient": ""
