@@ -754,7 +754,7 @@
         "column_yCyFpe": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+            "image": "shopify:\/\/shop_images\/investorske_centrum_obdelnik.jpg",
             "icon": "check",
             "title": "INVESTORSKÉ CENTRUM",
             "text": "<p>Zde naleznete informace o našich finančních výsledcích a další zprávy týkající se hospodaření naší firmy<\/p>",
@@ -772,8 +772,8 @@
         "column_9Kbmbi": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
-            "icon": "check",
+            "image": "shopify:\/\/shop_images\/medialni_centrum_obdelnik_01186230-2ead-4c11-a8f3-bb895c869ae0.jpg",
+            "icon": "none",
             "title": "MEDIÁLNÍ CENTRUM",
             "text": "<p>Stáhněte si naše loga, obrázky produktů či další materiály jako jsou tiskové zprávy apod.<\/p>",
             "link_label": "NAVŠTIVTE MEDIÁLNÍ CENTRUM",
@@ -808,7 +808,7 @@
         "column_qAcxGh": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+            "image": "shopify:\/\/shop_images\/blog_obdelnik_f4c952d7-fee6-4de1-8f28-4fc1bcacf279.jpg",
             "icon": "check",
             "title": "BLOG",
             "text": "<p>Nahlédněte pod pokličku FIXED.<\/p>",
@@ -826,7 +826,7 @@
         "column_Lt8Ctd": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+            "image": "shopify:\/\/shop_images\/podpora_obdelnik.jpg",
             "icon": "check",
             "title": "PODPORA",
             "text": "<p>Vyhledejte si potřebné kontakty nebo se přímo spojte s naší zákaznickou podporou.<\/p>",
