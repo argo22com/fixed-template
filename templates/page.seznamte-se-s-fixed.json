@@ -298,7 +298,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/facebook.png",
             "icon": "none",
-            "title": "facebook",
+            "title": "Facebook",
             "text": "",
             "link_label": "",
             "link": "https:\/\/www.facebook.com\/fixedcesko\/",
@@ -316,7 +316,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/instagram-logo.png",
             "icon": "check",
-            "title": "instagram",
+            "title": "Instagram",
             "text": "",
             "link_label": "",
             "link": "https:\/\/www.instagram.com\/fixedcesko\/",
