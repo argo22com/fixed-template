@@ -110,7 +110,7 @@
         "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/FIXZENMP-10-LS4.jpg",
         "height": "small",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
