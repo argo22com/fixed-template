@@ -143,7 +143,7 @@
         "heading_hKMVWb": {
           "type": "heading",
           "settings": {
-            "heading": "Identita definující tonalitu značky",
+            "heading": "Značka FIXED",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -151,7 +151,7 @@
         "text_JPYh4L": {
           "type": "text",
           "settings": {
-            "text": "<p>FIXED je nejlepší přítel s kreativní myslí. Co jste možná sami neviděli, dokáže posunout dále. Můžete se spolehnout, že vymyslí řešení, dá dobrou radu. Nenechává se jen vést, sám ovlivňuje věci kolem a přetváří je k lepšímu. K tomu samému pomáhá i vám.<\/p>",
+            "text": "<p>Věříme, že silná značka a autentická komunikace z ní vycházející, pomáhá budovat dlouhodobý vztah. Značku FIXED naplňuje její poselství zlepšovat život s chytrými zařízeními a v kombinaci s přátelskou a kreativní komunikací vytváříme jedinečkou, zapamatovatelnou vizualitu a tonalitu.<\/p><p>FIXED jako nejlepší přítel s kreativní myslí vám vždy pomůže vidět o kus dále. Můžete se spolehnout, že vymyslí řešení, dá dobrou radu a podá pomocnou ruku při výběru kvalitního a odolného příslušenství.<\/p>",
             "text_style": "body"
           }
         }
@@ -197,7 +197,7 @@
         "heading_BMa3bm": {
           "type": "heading",
           "settings": {
-            "heading": "Produktové inovace pro každý den",
+            "heading": "Lidé a udržitelnost",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -205,7 +205,7 @@
         "text_JUrCbK": {
           "type": "text",
           "settings": {
-            "text": "<p>Usilujeme o to, aby naše produkty byly vašimi každodenními pomocníky a mohli jste se na ně spolehnout. Produkty vylepšujeme, designujeme, vyvíjíme a testujeme. V rámci našeho závazku k udržitelné budoucnosti také částečně vyrábíme v České republice a zabýváme se projekty na recyklaci a využití obnovitelných zdrojů.<\/p>",
+            "text": "<p>Největší hodnotou jsou lidé. Nasloucháme jejich potřebám a podle toho konáme a to jak uvnitř firmy, tak vůči našemu okolí: zákazníkům, obchodním partnerům, akcionářům a všem ostatním. Zakládáme si na otevřené komunikaci, zpětné vazbě, férovosti a autentičnosti, protože věříme v dlouhodobé vztahy.<\/p><p>Neobětujeme budoucnost kvůli dnešku a tím se stává naše činnost udržitelnější. Chceme totiž zanechat naší planetu v co nejlepším stavu pro další generace.<\/p>",
             "text_style": "body"
           }
         }
