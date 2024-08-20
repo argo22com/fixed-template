@@ -136,11 +136,7 @@
         </tr>
       {%- endfor -%}
       {% if section.settings.show_attribute_set %}
-        <tr>
-          <th>Attribute:</th>
-          <td class="product-compare-{{ c_product.id }}" id="{{ section_id }}-attribute-set-1-{{ forloop.index }}">Attribute value</td>
-          <td class="product-compare-{{ c_product.id }}" id="{{ section_id }}-attribute-set-2-{{ forloop.index }}">Test</td>
-        </tr>
+       {% render 'product-attribute-set', products: search.results, layout: 'table' %}
       {% endif %}
     </table>
   </div>
