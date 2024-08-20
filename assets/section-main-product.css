@@ -380,6 +380,10 @@ button.shopify-payment-button__button--unbranded {
   height: 55px;
 }
 
+.successor-link {
+  width: 100%;
+}
+
 .successor-list {
   position: absolute;
   top: 56px;
@@ -399,7 +403,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .successor-item {
-  height: 100px;
+  min-height: 100px;
   padding: 0 15px;
   transition: all 0.3s ease-in-out;
 }

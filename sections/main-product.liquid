@@ -300,7 +300,7 @@
                         </div>
                         <div class="successor-list js-successor-list hidden">
                           {% for successor in successors %}
-                            <a href="{{ successor.url }}" class="link">
+                            <a href="{{ successor.url }}" class="link successor-link">
                               <div class="flex successor-item justify-center align-center">
                                 <div class="successor-image">
                                   {{ successor.featured_media | image_url: height: 70 | image_tag: height: 70 }}
