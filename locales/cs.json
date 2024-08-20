@@ -234,6 +234,7 @@
         "one": "{{ count }} review",
         "other": "{{ count }} review"
       },
+      "successor_text": "Na výběr {{ count }} nástupců",
       "volume_pricing": {
         "title": "Ceny s objemovou slevou",
         "note": "Ceny s objemovou slevou k dispozici",

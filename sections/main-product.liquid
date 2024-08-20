@@ -12,9 +12,10 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'successor-select.js' | asset_url }}" defer="defer"></script>
 {%- if product.media.size == 0 -%}
   {{ 'section-main-product-no-media.css' | asset_url | stylesheet_tag }}
-{%- endif -%}  
+{%- endif -%}
 
 {%- liquid
   assign selected_variant = product.selected_variant
@@ -25,19 +26,19 @@
   endunless
   unless selected_variant
     if section.settings.default_image == 'product_featured_image'
-      assign featured_media = product.featured_media  
+      assign featured_media = product.featured_media
     else
       if product.selected_or_first_available_variant.featured_media != null
         assign featured_media = product.selected_or_first_available_variant.featured_media
       else
-        assign featured_media = product.featured_media  
+        assign featured_media = product.featured_media
       endif
-    endif  
+    endif
   else
     if selected_variant.featured_media != null
       assign featured_media = selected_variant.featured_media
     else
-      assign featured_media = product.featured_media  
+      assign featured_media = product.featured_media
     endif
   endunless
 
@@ -63,7 +64,7 @@
   assign threshold_media_desktop = 4
   if section.settings.media_size == 'medium'
     assign threshold_media_desktop = 5
-  elsif section.settings.media_size == 'large' 
+  elsif section.settings.media_size == 'large'
     assign threshold_media_desktop = 6
   endif
 
@@ -76,6 +77,10 @@
     assign only_use_variant_price = price_block.settings.variant_price
   endif
   assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
+  assign show_successors = false
+  if product.selected_or_first_available_variant.inventory_quantity == 0 and product.metafields.product_lineage.next_in_line_product.value.count > 0
+    assign show_successors = true
+  endif
 -%}
 
 {%- style -%}
@@ -93,7 +98,7 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-    
+
     .breadcrumb {
 			padding-bottom: 3.2rem;
 		}
@@ -109,7 +114,17 @@
   {%- endif -%}
   #MediaGallery-{{ section.id }}{
     --object-fit:{%- if section.settings.image_fit -%}cover{%- else -%}contain{%- endif -%};
-  }  
+  }
+
+  {% if show_successors %}
+    #wishlist-hero-product-page-button {
+      display: none;
+    }
+
+    .wishlisthero-floating-launcher-container {
+      display: none;
+    }
+  {% endif %}
 {%- endstyle -%}
 <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -135,7 +150,7 @@
           render 'breadcrumbs', no_page_width: false, align_classes: 'flex-wrap'
         else
           render 'breadcrumbs', no_page_width: false
-        endif  
+        endif
       endif
     -%}
     <div class="{{ section.settings.section_width }}">
@@ -162,7 +177,7 @@
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
                   {%- if block.settings.show_vendor_link and product.vendor -%}
-                    <a href="{{ product.vendor | url_for_vendor }}" class="link color-foreground db w100 product__vendor-link font-body-semi-bold break">{{ 'products.product.by_vendor_html' | t: vendor: product.vendor }}</a>  
+                    <a href="{{ product.vendor | url_for_vendor }}" class="link color-foreground db w100 product__vendor-link font-body-semi-bold break">{{ 'products.product.by_vendor_html' | t: vendor: product.vendor }}</a>
                   {%- endif -%}
                   <h1 class="font-heading-extra-bold margin0{% if block.settings.title_size != 'h1' %} {{ block.settings.title_size }}{% endif %}">{{ product.selected_or_first_available_variant.metafields.product_texts.title | escape }}</h1>
                 </div>
@@ -274,13 +289,38 @@
                     endif
                  -%}
                   <div class="product__sale-box__actions">
-                    {%- if product != blank -%}
+                    {% if show_successors %}
+                      {% liquid
+                        assign successors = product.metafields.product_lineage.next_in_line_product.value
+                      %}
+
+                      <successor-select class="select">
+                        <div class="select__select successor-select js-successor-select" id="successor-select">
+                          {{ 'products.product.successor_text' | t: count: successors.count }}
+                        </div>
+                        <div class="successor-list js-successor-list hidden">
+                          {% for successor in successors %}
+                            <a href="{{ successor.url }}" class="link successor-link">
+                              <div class="flex successor-item justify-center align-center">
+                                <div class="successor-image">
+                                  {{ successor.featured_media | image_url: height: 70 | image_tag: height: 70 }}
+                                </div>
+                                <div class="successor-info">
+                                  <p class="successor-title">{{ successor.title }}</p>
+                                  <p class="successor-price">{{ successor.price | money }}</p>
+                                </div>
+                              </div>
+                            </a>
+                          {% endfor %}
+                        </div>
+                      </successor-select>
+                    {%- elsif product != blank -%}
                       {%- liquid
                         assign gift_card_recipient_feature_active = false
                         if block.settings.show_gift_card_recipient and product.gift_card?
                           assign gift_card_recipient_feature_active = true
                         endif
-                  
+
                         assign show_dynamic_checkout = false
                         if block.settings.show_dynamic_checkout and gift_card_recipient_feature_active == false
                           assign show_dynamic_checkout = true
@@ -352,7 +392,7 @@
                             {%- render 'main-product-volume-pricing', product: product, section: section -%}
                           </div>
                         {%- endform -%}
-                      </product-form> 
+                      </product-form>
                     {%- else -%}
                       <div class="product-form__buttons product-form__buttons--input product-form__buttons-single">
                         <button type="button" name="add" class="product-form__submit button flex w100 cart-submit-button" disabled>
@@ -398,11 +438,11 @@
                       {%- if has_size_chart -%}
                         {%- if enable_compare -%}
                           <span class="product__sale-box__footer-sep"></span>
-                        {%- endif -%}  
-                        {%- render 'product-size-chart-button', product: product, block: block -%} 
-                      {%- endif -%}  
+                        {%- endif -%}
+                        {%- render 'product-size-chart-button', product: product, block: block -%}
+                      {%- endif -%}
                     </div>
-                  {%- endif -%}  
+                  {%- endif -%}
                 </div>
                 <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
               {%- when 'rating' -%}
@@ -424,8 +464,8 @@
                         else
                           assign final_countdown_value = countdown_individual_value.value | date: '%Y-%m-%d %H:%M:%S%z'
                         endif
-                      endif  
-                    endif  
+                      endif
+                    endif
                   -%}
                   {%- if final_countdown_value != blank -%}
                     {%- assign has_countdown = true -%}
@@ -446,7 +486,7 @@
                       {%- endif -%}
                       {%- render 'countdown-tpl-simple', use_design_mode: true -%}
                     </div>
-                  </div>      
+                  </div>
                 {%- endif -%}
               {%- when 'information_group' -%}
                 {%- render 'main-product-information-group', section: section, block: block, product: product -%}
@@ -464,10 +504,10 @@
         </div>
       </div>
     </div>
-  </div>  
+  </div>
   {%- render 'main-product-popups', section: section, product: product -%}
   {%- render 'main-product-size-chart', section: section, product: product -%}
-  
+
   {%- if product.media.size > 0 -%}
     <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
     {%- unless section.settings.disable_images_lightbox -%}
@@ -483,12 +523,12 @@
   {%- if has_countdown or request.design_mode -%}
     <script src="{{ 'countdown.js' | asset_url }}" defer="defer"></script>
     <link rel="stylesheet" href="{{ 'component-countdown.css' | asset_url }}" media="print" onload="this.media='all'">
-  {%- endif -%}  
+  {%- endif -%}
 
   {%- assign collapsible_tabs = section.blocks | where: "type", "collapsible_tab" -%}
   {%- if collapsible_tabs.size > 0 -%}
     <script src="{{ 'details-accordion.js' | asset_url }}" defer="defer"></script>
-  {%- endif -%}  
+  {%- endif -%}
 
   {%- render 'main-product-seo', product: product, product_form_id: product_form_id -%}
   {%- render 'main-product-next-prev', section: section, product: product -%}
