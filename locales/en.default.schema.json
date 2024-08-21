@@ -1841,6 +1841,11 @@
     },
     "product-compare": {
       "name": "Product compare",
+      "settings": {
+        "show_attribute_set": {
+          "label": "Show attribute set"
+        }
+      },
       "blocks": {
         "all": {
           "settings": {
