@@ -32,6 +32,23 @@
       endfor
     endif
   endpaginate
+
+  assign color_properties_all = shop.metaobjects.color_codes_hex.values
+  paginate color_properties_all by 10000
+    assign color_properties = color_properties_all
+    if color_properties
+      assign color_option_names = ""
+      for color_property in color_properties
+        assign color_name = color_property.search_words | remove: "[" | remove: "]" | split: "," | first
+        for value in sorted_values
+          assign color_code = value.label | strip
+          if color_property.code == color_code
+            assign color_option_names = color_option_names | append: color_code | append: ":" | append: color_name | append: ";"
+          endif
+        endfor
+      endfor
+    endif
+  endpaginate
 %}
 <{% unless filter_type == 'horizontal' %}details-accordion{% else %}div{% endunless %} class="db facets__item-filter" data-ignore-setup-event="true">
   <details id="Details-{{ filter.param_name | escape | handleize }}-{{ suffix_id }}{{ section.id }}" class="facets__details facets__details--{{ filter_type }} {% if filter_type == 'horizontal' %}disclosure-has-popup por facets__disclosure{% else %} facets__accordion{% endif %} js-filter"{% if section.settings.filter_collapse == 'expand' and filter_type != 'horizontal' %} open{% endif %}>
@@ -107,6 +124,17 @@
                         assign phone_option_model = phone_option_name_parts[1]
                         if phone_option_code == value.label
                           assign display_value = phone_option_model 
+                        endif
+                      endfor
+                    elsif filter_label_downcase == settings.color_name and color_option_names
+                      assign display_value = value.label
+                      assign color_option_names_list = color_option_names | split: ";" 
+                      for color_option_name in color_option_names_list
+                        assign color_option_name_parts = color_option_name | split: ":"
+                        assign color_option_code = color_option_name_parts[0]
+                        assign color_option_label = color_option_name_parts[1]
+                        if color_option_code == value.label
+                          assign display_value = color_option_label | remove: '"'
                         endif
                       endfor
                     endif
