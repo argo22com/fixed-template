@@ -39,7 +39,7 @@
     if color_properties
       assign color_option_names = ""
       for color_property in color_properties
-        assign color_name = color_property.search_words | remove: "[" | remove: "]" | split: "," | first
+        assign color_name = color_property.search_words.value | first | capitalize
         for value in sorted_values
           assign color_code = value.label | strip
           if color_property.code == color_code
@@ -134,7 +134,7 @@
                         assign color_option_code = color_option_name_parts[0]
                         assign color_option_label = color_option_name_parts[1]
                         if color_option_code == value.label
-                          assign display_value = color_option_label | remove: '"'
+                          assign display_value = color_option_label
                         endif
                       endfor
                     endif
