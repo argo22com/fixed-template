@@ -3,6 +3,7 @@
 
     Accepts:
     - products: {Array} Array of products to compare
+    - product - {Object} Product to show
     - layout: {String} Layout to use ('table', 'flex') - flex will be implemented later
 
     Usage:
@@ -29,24 +30,37 @@
 
   assign attribute_names = attribute_names | split: '|'
   assign attribute_keys = attribute_keys | split: '|'
+
+  assign keys_length = attribute_keys.size | minus: 1
 %}
+
 {% if layout == 'table' %}
-  {% assign keys_length = attribute_keys.size | minus: 1 %}
   {% for i in (0..keys_length) %}
     <tr>
       <th>{{ attribute_names[i] | capitalize }}:</th>
       {% for product in products %}
+        {% assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
         <td>
-          {% assign attribute_value = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]].value %}
-          {% if attribute_value == true %}
-            {%- render 'icon-checkmark' -%}
-          {% elsif attribute_value == false %}
-            {% render 'icon-close' %}
-          {% else %}
-            {{ attribute_value }}
-          {% endif %}
+          {% render 'metafield-display', attribute_metafield: attribute_metafield %}
         </td>
       {% endfor %}
     </tr>
   {% endfor %}
+{% elsif layout == 'flex' %}
+  {{ products | json }}
+  <div>
+    {% for product in products %}
+      <div class="grid">
+        {% for i in (0..keys_length)  %}
+          {% assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
+          <div class="grid__item">
+            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] | capitalize }}</h4>
+            <div class="rte">
+              {% render 'metafield-display', attribute_metafield: attribute_metafield %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
 {% endif %}
