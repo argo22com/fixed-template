@@ -14,17 +14,17 @@
   assign attribute_keys = ''
 
   for product in products
-      for collection in product.collections
-        if collection.metafields.product_attributes.product_attribute_set.value != nil
-          for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
-            if attribute_keys contains attribute.metafield_key
-              continue
-            endif
-            assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-            assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
-          endfor
-        endif
-      endfor
+    for collection in product.collections
+      if collection.metafields.product_attributes.product_attribute_set.value != null
+        for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
+          if attribute_keys contains attribute.metafield_key
+            continue
+          endif
+          assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+          assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
+        endfor
+      endif
+    endfor
   endfor
 
   assign attribute_names = attribute_names | split: '|'
@@ -37,7 +37,14 @@
       <th>{{ attribute_names[i] | capitalize }}:</th>
       {% for product in products %}
         <td>
-          {{ product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]].value }}
+          {% assign attribute_value = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]].value %}
+          {% if attribute_value == true %}
+            {%- render 'icon-checkmark' -%}
+          {% elsif attribute_value == false %}
+            {% render 'icon-close' %}
+          {% else %}
+            {{ attribute_value }}
+          {% endif %}
         </td>
       {% endfor %}
     </tr>
