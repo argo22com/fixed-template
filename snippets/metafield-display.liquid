@@ -1,0 +1,25 @@
+{%- unless attribute_metafield.type == 'boolean' -%}
+  {%- unless attribute_metafield.type contains 'list.' and attribute_metafield.type != 'list.single_line_text_field' -%}
+    {% unless attribute_metafield.type contains 'metaobject_reference' %}
+      {{ attribute_metafield | metafield_tag }}
+    {% endunless %}
+  {%- else -%}
+    <ul>
+      {%- for field in attribute_metafield.value -%}
+        <li>
+          {%- if attribute_metafield.type contains 'product_reference' or attribute_metafield.type contains 'variant_reference' -%}
+            <a href="{{ field.url }}">{{ field.title }}</a>
+          {%- else -%}
+            {{ field }}
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endunless -%}
+{%- else -%}
+  {%- if attribute_metafield.value == true -%}
+    {{ 'general.boolean.true' | t }}
+  {%- else -%}
+    {{ 'general.boolean.false' | t }}
+  {%- endif -%}
+{%- endunless -%}

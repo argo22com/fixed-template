@@ -59,45 +59,7 @@
                                 <hr class="margin0 flex-grow-1">
                             </div>
                             <div class="product-attributes__table-item__content product-attributes__table-item__content--specifications text-medium">
-                                {% for collection in product.collections %}
-                                    {% assign attribute_set = collection.metafields.product_attributes.product_attribute_set.value.list.value %}
-                                    {% for attribute in attribute_set %}
-                                        {% if attribute.metafield_key != blank and current_variant.metafields.product_attributes[attribute.metafield_key] != blank %}
-                                            {% assign has_content = true %}
-                                            {% assign attribute_metafield = current_variant.metafields.product_attributes[attribute.metafield_key] %}
-                                            <li class="grid__item">
-                                                <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute.display_name | capitalize }}</h4>
-                                                <div class="rte{% if attribute_metafield.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
-                                                    {%- unless attribute_metafield.type == 'boolean' -%}
-                                                        {%- unless attribute_metafield.type contains 'list.' and attribute_metafield.type != 'list.single_line_text_field' -%}
-                                                            {% unless attribute_metafield.type contains 'metaobject_reference' %}
-                                                                {{ attribute_metafield | metafield_tag }}
-                                                            {% endunless %}
-                                                        {%- else -%}
-                                                            <ul>
-                                                                {%- for field in attribute_metafield.value -%}
-                                                                    <li>
-                                                                        {%- if attribute_metafield.type contains 'product_reference' or attribute_metafield.type contains 'variant_reference' -%}
-                                                                            <a href="{{ field.url }}">{{ field.title }}</a>
-                                                                        {%- else -%}
-                                                                            {{ field }}
-                                                                        {%- endif -%}
-                                                                    </li>
-                                                                {%- endfor -%}
-                                                            </ul>
-                                                        {%- endunless -%}
-                                                    {%- else -%}
-                                                        {%- if attribute_metafield.value == true -%}
-                                                            {{ 'general.boolean.true' | t }}
-                                                        {%- else -%}
-                                                            {{ 'general.boolean.false' | t }}
-                                                        {%- endif -%}
-                                                    {%- endunless -%}
-                                                </div>
-                                            </li>
-                                        {% endif %}
-                                    {% endfor %}
-                                {% endfor %}
+                                {% render 'product-attribute-set', product: product %}
                             </div>
                         </div>
                     </div>
