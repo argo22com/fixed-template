@@ -136,7 +136,7 @@
         </tr>
       {%- endfor -%}
       {% if section.settings.show_attribute_set %}
-       {% render 'product-attribute-set', products: search.results, layout: 'table' %}
+       {% render 'product-attribute-set', products: search.results %}
       {% endif %}
     </table>
   </div>

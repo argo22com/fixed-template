@@ -4,29 +4,39 @@
     Accepts:
     - products: {Array} Array of products to compare
     - product - {Object} Product to show
-    - layout: {String} Layout to use ('table', 'flex') - flex will be implemented later
 
     Usage:
-    {% render 'product-attribute-set', products: products, layout: 'table' %}
+    {% render 'product-attribute-set', products: products %} or {% render 'product-attribute-set', product: product %}
 {% endcomment %}
 
 {% liquid
   assign attribute_names = ''
   assign attribute_keys = ''
 
-  for product in products
+  if products != blank
+    for product in products
+      for collection in product.collections
+        if collection.metafields.product_attributes.product_attribute_set.value != nill
+          for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
+            if attribute_keys contains attribute.metafield_key
+              continue
+            endif
+            assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+            assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
+          endfor
+        endif
+      endfor
+    endfor
+  elsif product != blank
     for collection in product.collections
-      if collection.metafields.product_attributes.product_attribute_set.value != null
+      if collection.metafields.product_attributes.product_attribute_set.value != nill
         for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
-          if attribute_keys contains attribute.metafield_key
-            continue
-          endif
           assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
           assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
         endfor
       endif
     endfor
-  endfor
+  endif
 
   assign attribute_names = attribute_names | split: '|'
   assign attribute_keys = attribute_keys | split: '|'
@@ -34,7 +44,7 @@
   assign keys_length = attribute_keys.size | minus: 1
 %}
 
-{% if layout == 'table' %}
+{% if products != blank %}
   {% for i in (0..keys_length) %}
     <tr>
       <th>{{ attribute_names[i] | capitalize }}:</th>
@@ -46,10 +56,8 @@
       {% endfor %}
     </tr>
   {% endfor %}
-{% elsif layout == 'flex' %}
-  {{ products | json }}
+{% elsif product != blank %}
   <div>
-    {% for product in products %}
       <div class="grid">
         {% for i in (0..keys_length)  %}
           {% assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
@@ -61,6 +69,5 @@
           </div>
         {% endfor %}
       </div>
-    {% endfor %}
   </div>
 {% endif %}
