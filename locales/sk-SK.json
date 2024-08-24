@@ -68,8 +68,8 @@
       "name": "Jazdec"
     },
     "boolean": {
-      "true": "Yes",
-      "false": "No"
+      "true": "Áno",
+      "false": "Nie"
     },
     "shipping_calculator": {
       "heading": "Shipping calculator",

@@ -77,8 +77,8 @@
       "name": "Posuvník"
     },
     "boolean": {
-      "true": "Yes",
-      "false": "No"
+      "true": "Ano",
+      "false": "Ne"
     },
     "shipping_calculator": {
       "heading": "Shipping calculator",
