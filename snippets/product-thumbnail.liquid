@@ -82,6 +82,9 @@
   {%- else -%}
     <deferred-media class="deferred-media gradient media no-js-hidden product__deferred-media w100{% if image_ratio != 'adapt' %} media--{{ image_ratio }}{% endif %}"{% if image_ratio == 'adapt' %} style="--ratio-percent: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;"{% endif %} data-media-id="{{ media.id }}" data-autoplay="1">
   {%- endif -%}
+  <span class="thumbnail__badge thumbnail__badge-large">
+    {%- render 'icon-3d-model' -%}
+  </span>
   <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
     <span class="deferred-media__poster-button motion-reduce">
       {%- if media.media_type == 'model' -%}

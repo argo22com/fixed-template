@@ -1198,9 +1198,31 @@ button.thumbnail:not(.ratio) {
   top: 0.5rem;
 }
 
+.thumbnail__badge-large {
+  z-index: 10;
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
+.thumbnail__badge-large .icon {
+  width: 3rem;
+  height: 3rem;
+}
+
 @media screen and (min-width: 750px) {
   .product--media-right {
     flex-direction: row-reverse;
+  }
+
+  .thumbnail__badge-large {
+    z-index: 10;
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .thumbnail__badge-large .icon {
+    width: 4rem;
+    height: 4rem;
   }
 }
 

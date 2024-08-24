@@ -963,7 +963,7 @@ summary::-webkit-details-marker {
   position: absolute;
 }
 
-.media > *:not(.zoom):not(.deferred-media__poster-button),
+.media > *:not(.zoom):not(.deferred-media__poster-button):not(.thumbnail__badge),
 .media model-viewer {
   display: block;
   max-width: 100%;
