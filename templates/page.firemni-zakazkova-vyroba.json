@@ -523,7 +523,16 @@
           "settings": {
             "title": "Kožená pouzdra",
             "product_list": [
-
+              "horizontalni-kozene-pouzdro-fixed-posh-se-zaviranim-velikost-4xl-hnede",
+              "kozene-pouzdro-fixed-oxford-pro-apple-ipad-pro-11-2018-2022-a-ipad-air-2020-2022-s-klavesnici-folio-cervene",
+              "kozene-pouzdro-fixed-posh-velikost-4xl-modre",
+              "kozene-pouzdro-fixed-pro-cigaretovy-tabak-papirky-a-filtry-cerna-stipenkova-kuze",
+              "kozene-pouzdro-na-karty-fixed-smile-cards-se-smart-trackerem-fixed-smile-pro-cervene",
+              "kozene-pouzdro-typu-kniha-fixed-profit-pro-apple-iphone-7-8-se-2020-2022-hnede",
+              "pouzdro-fixed-case-for-airtag-z-prave-hovezi-kuze-s-karabinou-cerne",
+              "pouzdro-fixed-case-for-tag-z-prave-hovezi-kuze-s-tagem-modre",
+              "pouzdro-na-bryle-fixed-case-for-glasses-s-kapsou-pro-smart-tracker-hnede",
+              "tenke-pouzdro-fixed-slim-vyrobene-z-prave-kuze-pro-apple-iphone-12-12-pro-13-13-pro-cerne"
             ],
             "products_to_show": 4,
             "columns_desktop": 4
@@ -533,7 +542,7 @@
           "type": "featured_collection",
           "settings": {
             "title": "Kožené peněženky",
-            "collection": "",
+            "collection": "penezenky",
             "products_to_show": 4,
             "columns_desktop": 4,
             "show_view_all": true,
@@ -544,7 +553,7 @@
           "type": "featured_collection",
           "settings": {
             "title": "Kožené obaly na telefon",
-            "collection": "",
+            "collection": "na-tablet",
             "products_to_show": 4,
             "columns_desktop": 4,
             "show_view_all": true,
@@ -558,7 +567,7 @@
         "featured_collection_cxCapr"
       ],
       "settings": {
-        "title": "Featured products tabs",
+        "title": "",
         "subtitle": "",
         "heading_size": "h1",
         "full_width": false,
