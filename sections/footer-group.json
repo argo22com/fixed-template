@@ -27,18 +27,18 @@
             "footer_logo_alignment": "left"
           }
         },
-        "footer-0": {
-          "type": "link_list",
-          "settings": {
-            "heading": "FIXED",
-            "menu": "footer"
-          }
-        },
         "footer-1": {
           "type": "link_list",
           "settings": {
             "heading": "Landing pages",
             "menu": "paticka-lp"
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "FIXED",
+            "menu": "footer"
           }
         },
         "e1a58367-ad23-47c0-adf6-953cfbd41867": {
@@ -51,13 +51,14 @@
       },
       "block_order": [
         "7056314e-d7b8-4459-b2d2-281a90976c0a",
-        "footer-0",
         "footer-1",
+        "footer-0",
         "e1a58367-ad23-47c0-adf6-953cfbd41867"
       ],
       "settings": {
         "color_scheme": "background-1",
         "color_scheme_bottom": "background-2",
+        "auto_fit": false,
         "bottom_links": "footer",
         "show_social": true,
         "enable_country_selector": false,
