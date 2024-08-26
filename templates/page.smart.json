@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -95,9 +104,11 @@
             "button_label": "PŘEJÍT NA PRODUKTY",
             "button_link": "",
             "button_style_1": "primary",
+            "button_open_new_tab_1": false,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_2": "primary"
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
           }
         }
       },
@@ -140,7 +151,8 @@
           "settings": {
             "button_label": "Jak přidat lokátor do aplikace Najít",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -169,6 +181,7 @@
         "color_highlight_text": "#e94200",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#e94200",
         "background_container": "#ffffff",
@@ -202,7 +215,8 @@
           "settings": {
             "button_label": "",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -231,6 +245,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -284,6 +299,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -307,6 +323,7 @@
             "link_label": "VÍCE O TAG",
             "link": "",
             "button_style": "secondary",
+            "button_open_new_tab": false,
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#e94200",
@@ -324,6 +341,7 @@
             "link_label": "VÍCE O TAG CARD",
             "link": "",
             "button_style": "secondary",
+            "button_open_new_tab": false,
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#e94200",
@@ -353,6 +371,7 @@
         "background_transparent": false,
         "button_label": "",
         "button_link": "",
+        "button_open_new_tab": false,
         "enable_section_box_layout": false,
         "color_scheme": "",
         "enable_parallax_scrolling_effect": true,
@@ -425,7 +444,7 @@
       "settings": {
         "title": "Všechny produkty SMART",
         "subtitle": "",
-        "collection": "",
+        "collection": "smart-tagy",
         "heading_size": "h1",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -462,9 +481,11 @@
             "button_label": "JAK PŘIDAT FIXED TAG DO APLIKACE NAJÍT",
             "button_link": "shopify:\/\/pages\/jak-pridat-fixed-tag-do-aplikace-najit",
             "button_style_1": "secondary",
+            "button_open_new_tab_1": false,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_2": "secondary"
+            "button_style_2": "secondary",
+            "button_open_new_tab_2": false
           }
         }
       },
