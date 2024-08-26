@@ -521,32 +521,34 @@
         "featured_products_rF64Jb": {
           "type": "featured_products",
           "settings": {
-            "title": "Kožená pouzdra",
+            "title": "Pouzdra",
             "product_list": [
-              "horizontalni-kozene-pouzdro-fixed-posh-se-zaviranim-velikost-4xl-hnede",
               "kozene-pouzdro-fixed-oxford-pro-apple-ipad-pro-11-2018-2022-a-ipad-air-2020-2022-s-klavesnici-folio-cervene",
-              "kozene-pouzdro-fixed-posh-velikost-4xl-modre",
               "kozene-pouzdro-fixed-pro-cigaretovy-tabak-papirky-a-filtry-cerna-stipenkova-kuze",
-              "kozene-pouzdro-na-karty-fixed-smile-cards-se-smart-trackerem-fixed-smile-pro-cervene",
-              "kozene-pouzdro-typu-kniha-fixed-profit-pro-apple-iphone-7-8-se-2020-2022-hnede",
+              "kozene-pouzdro-na-karty-fixed-smile-cards-se-smart-trackerem-fixed-smile-pro-cerne",
+              "pouzdro-na-bryle-fixed-case-for-glasses-s-kapsou-pro-smart-tracker-hnede",
               "pouzdro-fixed-case-for-airtag-z-prave-hovezi-kuze-s-karabinou-cerne",
               "pouzdro-fixed-case-for-tag-z-prave-hovezi-kuze-s-tagem-modre",
-              "pouzdro-na-bryle-fixed-case-for-glasses-s-kapsou-pro-smart-tracker-hnede",
-              "tenke-pouzdro-fixed-slim-vyrobene-z-prave-kuze-pro-apple-iphone-12-12-pro-13-13-pro-cerne"
+              "kozene-pouzdro-fixed-podsleather-pro-apple-airpods-3-hnede"
             ],
             "products_to_show": 4,
             "columns_desktop": 4
           }
         },
-        "featured_collection_epjmTP": {
-          "type": "featured_collection",
+        "featured_products_EJr4we": {
+          "type": "featured_products",
           "settings": {
-            "title": "Kožené peněženky",
-            "collection": "penezenky",
-            "products_to_show": 4,
-            "columns_desktop": 4,
-            "show_view_all": true,
-            "view_all_style": "solid"
+            "title": "Peněženky",
+            "product_list": [
+              "kozena-penezenka-fixed-classic-wallet-for-airtag-z-prave-hovezi-kuze-hneda",
+              "kozena-penezenka-fixed-classic-wallet-z-prave-hovezi-kuze-modra",
+              "kozena-penezenka-fixed-coins-cervena",
+              "kozena-penezenka-fixed-passport-velikost-cestovniho-pasu-hneda",
+              "kozena-penezenka-fixed-smile-coins-se-smart-trackerem-fixed-smile-pro-modra",
+              "kozena-penezenka-fixed-smile-passport-se-smart-trackerem-fixed-smile-motion-velikost-cestovniho-pasu-hneda"
+            ],
+            "products_to_show": 5,
+            "columns_desktop": 5
           }
         },
         "featured_collection_cxCapr": {
@@ -563,7 +565,7 @@
       },
       "block_order": [
         "featured_products_rF64Jb",
-        "featured_collection_epjmTP",
+        "featured_products_EJr4we",
         "featured_collection_cxCapr"
       ],
       "settings": {
