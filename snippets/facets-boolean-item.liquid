@@ -1,0 +1,92 @@
+<li class="facets__item flex align-center{% if forloop_index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}{% if presentation == 'image' %} facets__item--image{% endif %}">
+  <label
+    for="Filter-{{ suffix_id }}{{ filter.param_name | handleize }}-{{ forloop_index }}"
+    class="facet-checkbox flex-grow-1 por flex align-center{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}"
+  >
+    <input
+      type="checkbox"
+      name="{{ value.param_name }}"
+      value="{{ value.value }}"
+      id="Filter-{{ suffix_id }}{{ filter.param_name | handleize }}-{{ forloop_index }}"
+      {% if value.active %}
+        checked
+      {% endif %}
+      {% if value.count == 0 and value.active == false %}
+        disabled
+      {% endif %}
+      class="facets__checkbox-value{% if color_name == filter_label_downcase or presentation == 'swatch' %} facets__checkbox-value--color{% endif %}"
+    >
+    {% liquid
+      if presentation == 'swatch'
+        assign visual_style = ''
+        if value.swatch.image
+          assign color_image_url = value.swatch.image | image_url: width: 100
+          assign visual_style = '--background-image:url(' | append: color_image_url | append: ');'
+          if value.swatch.image.presentation.focal_point
+            assign visual_style = visual_style | append: '--background-position:' | append: value.swatch.image.presentation.focal_point | append: ';'
+          endif
+        else
+          assign visual_style = '--color-swatch-background:' | append: value.swatch.color.red | append: ',' | append: value.swatch.color.green | append: ',' | append: value.swatch.color.blue
+        endif
+      endif
+    %}
+    {%- unless presentation == 'image' -%}
+      <span
+        class="flex justify-center align-center facet-checkbox__box{% if color_name == filter_label_downcase or presentation == 'swatch' %} facet-checkbox__box--color{% endif %}"
+        {% if color_name == filter_label_downcase %}
+          data-color="{{ value.value | handleize }}"
+        {% endif %}
+        {% if presentation == 'swatch' %}
+          style="{{ visual_style }}"
+          {%- if color_name != filter_label_downcase and value.swatch.image %}
+            data-color="{{ value.value | handleize }}"
+          {%- endif -%}
+        {% endif %}
+      >
+        <svg
+          class="facet-checkbox__box__icon icon icon-checkmark{% if presentation == 'swatch' %} facet-checkbox__box__icon--visual{% endif %}"
+          width="10"
+          height="8"
+          viewBox="0 0 10 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1.5 4.00002L3.83333 6.33335L8.5 1.66669" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span aria-hidden="true" class="flex facet-checkbox__content flex-grow-1 justify-space-between align-center">
+        <span class="facet-checkbox__content__label caption-large">
+          {{- display_value | default: value.label | escape }}
+        </span>
+        <span class="facet-checkbox__content__count flex justify-center align-center lh1">{{ value.count }}</span>
+      </span>
+    {%- else -%}
+      <div class="facets__image-wrapper flex flex-column w100 por">
+        <div class="facets__image-inner">
+          {%- if value.image -%}
+            <div class="facets__image media media--square">
+              {{ value.image | image_url: width: 150 | image_tag: class: 'facets__image', alt: value.alt }}
+            </div>
+          {%- else -%}
+            <span class="facets__image media media--square placeholder db"></span>
+          {%- endif -%}
+        </div>
+        <span aria-hidden="true" class="flex-grow-1 center"
+          ><span class="facets__image-label caption font-body-semi-bold">{{ value.label | escape }}</span></span
+        >
+        <span class="facets__image-count flex justify-center align-center lh1 font-body-semi-bold">
+          {{- value.count -}}
+        </span>
+      </div>
+    {%- endunless -%}
+    <span class="visually-hidden">
+      {{- value.label | escape }} (
+      {%- if value.count == 1 -%}
+        {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
+      {%- else -%}
+        {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
+      {%- endif -%}
+      )</span
+    >
+  </label>
+</li>
