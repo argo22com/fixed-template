@@ -399,7 +399,7 @@
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#166534",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#effdf4",
             "card_color_background_gradient": ""
@@ -417,7 +417,7 @@
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#a06207",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fefce8",
             "card_color_background_gradient": ""
@@ -435,7 +435,7 @@
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#a06207",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#fefce8",
             "card_color_background_gradient": ""
@@ -453,7 +453,7 @@
         "heading_size": "h1",
         "media_type": "image",
         "media_width_desktop": "100",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "text_position": "bottom",
         "columns_desktop": 3,
         "columns_tablet": 3,
