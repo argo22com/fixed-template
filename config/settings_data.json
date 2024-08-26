@@ -22,6 +22,7 @@
     "page_heading_size": "h2",
     "page_heading_color_scheme": "background-1",
     "page_heading_overlay_color": "#212c4d",
+    "page_heading_use_collection_image": true,
     "page_heading_collection_image_height": "15",
     "page_heading_blog_image_height": "15",
     "page_heading_other_image_height": "15",
