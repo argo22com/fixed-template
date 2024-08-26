@@ -102,7 +102,7 @@
           "type": "button",
           "settings": {
             "button_label": "PŘEJÍT NA PRODUKTY",
-            "button_link": "",
+            "button_link": "shopify:\/\/collections\/smart",
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
             "button_label_2": "",
@@ -150,7 +150,7 @@
           "type": "button",
           "settings": {
             "button_label": "Jak přidat lokátor do aplikace Najít",
-            "button_link": "",
+            "button_link": "shopify:\/\/pages\/jak-pridat-fixed-tag-do-aplikace-najit",
             "button_style": "solid",
             "button_open_new_tab": false
           }
@@ -181,7 +181,7 @@
         "color_highlight_text": "#e94200",
         "color_caption": "#ffffff",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#e94200",
         "background_container": "#ffffff",
@@ -245,7 +245,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -299,7 +299,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
