@@ -531,8 +531,8 @@
               "pouzdro-fixed-case-for-tag-z-prave-hovezi-kuze-s-tagem-modre",
               "kozene-pouzdro-fixed-podsleather-pro-apple-airpods-3-hnede"
             ],
-            "products_to_show": 4,
-            "columns_desktop": 4
+            "products_to_show": 5,
+            "columns_desktop": 5
           }
         },
         "featured_products_EJr4we": {
@@ -551,22 +551,25 @@
             "columns_desktop": 5
           }
         },
-        "featured_collection_cxCapr": {
-          "type": "featured_collection",
+        "featured_products_PcjbUA": {
+          "type": "featured_products",
           "settings": {
-            "title": "Kožené obaly na telefon",
-            "collection": "na-tablet",
+            "title": "Pouzdra na telefony",
+            "product_list": [
+              "horizontalni-kozene-pouzdro-fixed-posh-se-zaviranim-velikost-4xl-hnede",
+              "kozene-pouzdro-fixed-posh-velikost-4xl-cervene",
+              "kozene-pouzdro-typu-kniha-fixed-profit-pro-samsung-galaxy-a54-5g-modre",
+              "tenke-pouzdro-fixed-slim-vyrobene-z-prave-kuze-pro-apple-iphone-11-pro-xs-x-cerne"
+            ],
             "products_to_show": 4,
-            "columns_desktop": 4,
-            "show_view_all": true,
-            "view_all_style": "solid"
+            "columns_desktop": 4
           }
         }
       },
       "block_order": [
         "featured_products_rF64Jb",
         "featured_products_EJr4we",
-        "featured_collection_cxCapr"
+        "featured_products_PcjbUA"
       ],
       "settings": {
         "title": "Kožené produkty z naší dílny",
