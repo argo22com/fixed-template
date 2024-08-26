@@ -583,7 +583,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "enable_compare": true,
         "enable_quick_view": true,
         "show_color_swatches": true,
