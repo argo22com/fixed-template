@@ -273,6 +273,7 @@
         "column_9FU3WC": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/investorske_centrum_obdelnik.jpg",
             "icon": "check",
             "title": "INVESTORSKÉ CENTRUM",
             "text": "<p>Zde naleznete informace o našich finančních výsledcích a další zprávy týkající se hospodaření naší firmy<\/p>",
@@ -290,9 +291,10 @@
         "column_Vg8qah": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/udrzitelnost_obdelnik.jpg",
             "icon": "check",
             "title": "UDRŽITELNOST",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Prohlédněte si náš ESG report<\/p>",
             "link_label": "CERTIFIKACE",
             "link": "shopify:\/\/pages\/releaf",
             "button_style": "link",
