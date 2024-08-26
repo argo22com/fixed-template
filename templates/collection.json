@@ -25,7 +25,7 @@
       ],
       "settings": {
         "collection_tree_data": "produkty",
-        "preload_background_image": false,
+        "preload_background_image": true,
         "enable_parallax_scrolling_effect": true,
         "show_number_of_products": true,
         "icon_size": "small",
