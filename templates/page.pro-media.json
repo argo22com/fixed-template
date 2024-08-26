@@ -309,6 +309,7 @@
         "column_nUzdhM": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/blog_obdelnik_f4c952d7-fee6-4de1-8f28-4fc1bcacf279.jpg",
             "icon": "check",
             "title": "BLOG",
             "text": "<p>Nahlédněte pod pokličku FIXED<\/p>",
@@ -326,6 +327,7 @@
         "column_c8PRKn": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/podpora_obdelnik.jpg",
             "icon": "check",
             "title": "PODPORA",
             "text": "<p>Vyhledejte si potřebné kontakty nebo se přímo spojte s naší zákaznickou podporou.<\/p>",
@@ -343,7 +345,7 @@
         "column_w7N9zC": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/zpetna_vazba.png",
+            "image": "shopify:\/\/shop_images\/career_obdelnik.jpg",
             "icon": "check",
             "title": "KARIÉRA",
             "text": "<p>Připoj se do našeho týmu, prohlédni si aktuální volné pozice, nebo napiš jen tak.<\/p>",
