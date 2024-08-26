@@ -800,7 +800,7 @@
       "settings": {
         "grid_layout": "full_bleed",
         "image": "shopify:\/\/shop_images\/shutterstock_1778085617_kopie.jpg",
-        "height": "adapt",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
