@@ -89,7 +89,7 @@
             "stock_enable": true,
             "stock_label": "Dostupnost",
             "inventory_threshold": 10,
-            "show_inventory_quantity": true,
+            "show_inventory_quantity": false,
             "sku_enable": true,
             "sku_label": "Produktový kód",
             "tags_enable": true,
