@@ -829,7 +829,7 @@
             "image": "shopify:\/\/shop_images\/podpora_obdelnik.jpg",
             "icon": "check",
             "title": "PODPORA",
-            "text": "<p>Vyhledejte si potřebné kontakty nebo se přímo spojte s naší zákaznickou podporou.<\/p>",
+            "text": "<p>Často kladené dotazy, návody a kontaktní formulář, vše na jednom místě.<\/p>",
             "link_label": "NAVŠTIVTE FIXED PODPORU",
             "link": "shopify:\/\/pages\/podpora",
             "button_style": "link",
