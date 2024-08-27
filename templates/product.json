@@ -35,6 +35,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "variant_price": true
           }
