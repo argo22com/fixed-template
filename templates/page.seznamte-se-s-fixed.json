@@ -792,9 +792,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/udrzitelnost_obdelnik.jpg",
             "icon": "check",
-            "title": "UDRŽITELNOST",
-            "text": "<p>Prohlédněte si náš ESG report.<\/p>",
-            "link_label": "CERTIFIKACE",
+            "title": "UDRŽITELNOST - RELEAF",
+            "text": "<p>Produkty a projekty pro udržitelnou budoucnost.<\/p>",
+            "link_label": "PROZKOUMAT",
             "link": "shopify:\/\/pages\/releaf",
             "button_style": "link",
             "button_open_new_tab": false,
