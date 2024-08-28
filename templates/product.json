@@ -43,7 +43,7 @@
         "custom_liquid_i4QxEF": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{{ product.selected_or_first_available_variant.metafields.product_attributes.price_with_vat | times: 100.0 | round | money_with_currency }}"
+            "custom_liquid": "{% assign rounded_value = product.selected_or_first_available_variant.metafields.product_attributes.price_with_vat | round %}\n{{ rounded_value }} Kč"
           }
         },
         "wishlist_hero_custom_product_button_McnAG4": {
