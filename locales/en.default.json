@@ -862,7 +862,179 @@
           "title": {
             "few": "No delivery available for this number of items: %{count}",
             "many": "No delivery available for this number of items: %{count}"
+          },
+          "message": {
+            "few": "The items in question will be removed from your cart because there are no delivery methods available for your address.",
+            "many": "The items in question will be removed from your cart because there are no delivery methods available for your address."
           }
+        }
+      },
+      "pickup_point": {
+        "paginator": {
+          "header": {
+            "few": "Showing %{first} - %{last} of %{count} points",
+            "many": "Showing %{first} - %{last} of %{count} points"
+          },
+          "selected_pickup_point_label": {
+            "few": "%{pickup_point_index} of %{count} points",
+            "many": "%{pickup_point_index} of %{count} points"
+          },
+          "selected_page": {
+            "few": "%{first} - %{last} of %{count} points",
+            "many": "%{first} - %{last} of %{count} points"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "few": "Pickup locations near your location: %{count}",
+          "many": "Pickup locations near your location: %{count}"
+        }
+      },
+      "local_pickup": {
+        "location_information": {
+          "few": "%{count} business with stock near %{address}",
+          "many": "%{count} business with stock near %{address}"
+        },
+        "paginator": {
+          "label": {
+            "few": "%{first} - %{last} of %{count} stores",
+            "many": "%{first} - %{last} of %{count} stores"
+          }
+        },
+        "reveal_more_label": {
+          "few": "View this number of additional sites: %{count}",
+          "many": "View this number of additional sites: %{count}"
+        }
+      }
+    },
+    "notices": {
+      "order": {
+        "cancel_reason": {
+          "few": "Other",
+          "many": "Other"
+        }
+      }
+    },
+    "page_titles": {
+      "search_results": {
+        "few": "Search: The following number of results were found for the query %{terms}: %{count}",
+        "many": "Search: The following number of results were found for the query %{terms}: %{count}"
+      }
+    }
+  },
+  "customer_accounts": {
+    "orders": {
+      "order_list": {
+        "items": {
+          "few": "{{count}} item",
+          "many": "{{count}} item"
+        }
+      },
+      "order_status": {
+        "delivered_description_gift_card": {
+          "few": "Gift cards have been sent by email.",
+          "many": "Gift cards have been sent by email."
+        },
+        "gift_card_label": {
+          "few": "Gift cards",
+          "many": "Gift cards"
+        },
+        "gift_card_resend": {
+          "few": "Resend emails",
+          "many": "Resend emails"
+        },
+        "gift_card_resend_description": {
+          "few": "If they did not arrive, please resend the emails or",
+          "many": "If they didn't come, please resend the emails or"
+        },
+        "confirmed_gift_card_additional_description": {
+          "few": "Each gift card will be sent in a separate email.",
+          "many": "Each gift card will be sent in a separate email."
+        },
+        "delivered_description_gift_card_text": {
+          "few": "Gift cards were sent via text message.",
+          "many": "Gift cards were sent via text message."
+        },
+        "gift_card_resend_text": {
+          "few": "Resend text messages",
+          "many": "Resend text messages"
+        },
+        "gift_card_resend_description_text": {
+          "few": "If they didn't arrive, send the text messages again or",
+          "many": "If they didn't arrive, send the text messages again or"
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "few": "Each gift card will be sent in a separate text message.",
+          "many": "Each gift card will be sent in a separate text message."
+        },
+        "gift_resend_success": {
+          "few": "Gift cards have been sent again",
+          "many": "Gift cards have been sent again"
+        },
+        "gift_resend_failure": {
+          "few": "There was a problem resending gift cards. Please try again or contact us.",
+          "many": "There was a problem resending gift cards. Please try again or contact us."
+        },
+        "delivered_description_digital": {
+          "few": "These items have completed.",
+          "many": "These items have completed."
+        }
+      },
+      "if_not_received": {
+        "few": "If no delivery,",
+        "many": "If no delivery,"
+      }
+    },
+    "B2B": {
+      "orders": {
+        "draft_order_list": {
+          "pending_tab_accessibility_label": {
+            "pending_orders": {
+              "few": "You have this number of pending orders: {{count}}",
+              "many": "You have this number of pending orders: {{count}}"
+            }
+          }
+        }
+      },
+      "draft_order_details": {
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "few": "Your payment is this number of days past due: {{count}}",
+              "many": "Your payment is this number of days past due: {{count}}"
+            },
+            "banner_due": {
+              "few": "Your payment is due in this number of days: {{count}}",
+              "many": "Your payment is due in this number of days: {{count}}"
+            }
+          }
+        }
+      }
+    },
+    "errors": {
+      "banner_title": {
+        "few": "{{count}} errors occurred",
+        "many": "{{count}} errors occurred"
+      }
+    },
+    "ui_components": {
+      "autocompleteOptionsAvailable": {
+        "few": "Items available: {{count}}",
+        "many": "Items available: {{count}}"
+      },
+      "month": {
+        "few": "month",
+        "many": "month"
+      },
+      "mapClusterTitle": {
+        "few": "Tag group ( {{number}} )",
+        "many": "Tag group ( {{number}} )"
+      }
+    },
+    "date": {
+      "humanize": {
+        "lessThanOneHourAgo": {
+          "few": "{{count}} minutes ago",
+          "many": "{{count}} minutes ago"
         }
       }
     }
