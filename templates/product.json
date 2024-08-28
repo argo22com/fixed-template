@@ -43,7 +43,7 @@
         "custom_liquid_i4QxEF": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% assign rounded_value = product.selected_or_first_available_variant.metafields.product_attributes.price_with_vat | round %}\n{% if rounded_value %}\n    <p style=\"font-size: 24px; font-weight: bold; color: #000;\">\n        {{ rounded_value }} Kč\n    <\/p>\n{% endif %}\n\n{{ rounded_value }} Kč"
+            "custom_liquid": "{% assign rounded_value = product.selected_or_first_available_variant.metafields.product_attributes.price_with_vat | round %}\n{% if rounded_value %}\n    <p style=\"font-size: 24px; font-weight: bold; color: #000;\">\n        {{ rounded_value }} Kč\n    <\/p>\n{% endif %}"
           }
         },
         "wishlist_hero_custom_product_button_McnAG4": {
