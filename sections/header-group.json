@@ -335,14 +335,6 @@
             "brand_link_10": ""
           }
         },
-        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d": {
-          "type": "store_information",
-          "settings": {
-            "icon": "link",
-            "title": "Informace",
-            "link": ""
-          }
-        },
         "mega_menu_product_brand_eMcj9n": {
           "type": "mega_menu_product_brand",
           "settings": {
@@ -638,14 +630,6 @@
             "overlay_opacity": 50,
             "color_scheme": "inverse"
           }
-        },
-        "store_information_BwwfPB": {
-          "type": "store_information",
-          "settings": {
-            "icon": "document_search",
-            "title": "Budějovická 19, 370 01 Homole",
-            "link": ""
-          }
         }
       },
       "block_order": [
@@ -660,7 +644,6 @@
         "mega_menu_product_brand_UrkzTe",
         "mega_menu_product_brand_43GajV",
         "mega_menu_product_brand_4Tp9gJ",
-        "7b2bd184-cb1b-47bf-8695-3f2bc023c78d",
         "mega_menu_product_brand_eMcj9n",
         "mega_menu_product_brand_KBhfXH",
         "mega_menu_product_brand_mQFGEn",
@@ -673,8 +656,7 @@
         "mega_menu_promotion_9HJwDd",
         "mega_menu_promotion_ya4VNA",
         "mega_menu_promotion_TLTfPK",
-        "mega_menu_promotion_LL7tjW",
-        "store_information_BwwfPB"
+        "mega_menu_promotion_LL7tjW"
       ],
       "custom_css": [
         ".header__heading {margin-top: -27px;}",
