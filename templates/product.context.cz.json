@@ -18,7 +18,8 @@
         ".jdgm-rev-widg__title {display: none;}",
         ".jdgm-rev-widg__summary-text {font-size: 24px; font-weight: bold;}",
         ".jdgm-rev-widg__summary-stars {display: block; margin-top: 10px;}",
-        ".jdgm-rev__header__text img {display: none;}"
+        ".jdgm-rev__icon {display: none;}",
+        ".jdgm-rev__timestamp {float: left; margin-right: 10px;}"
       ],
       "settings": {
       },
