@@ -17,9 +17,9 @@
       "settings": {
       },
       "blocks": {
-        "text_icon_zLpQMx": {
+        "text_icon_mkHaVg": {
           "settings": {
-            "link": "https:\/\/www.tiktok.com\/@fixedslovensko"
+            "link": "https:\/\/www.facebook.com\/fixedslovensko\/"
           }
         },
         "text_icon_tNYjDn": {
@@ -27,14 +27,25 @@
             "link": "https:\/\/www.instagram.com\/fixedslovensko\/"
           }
         },
-        "text_icon_mkHaVg": {
+        "text_icon_zLpQMx": {
           "settings": {
-            "link": "https:\/\/www.facebook.com\/fixedslovensko\/"
+            "link": "https:\/\/www.tiktok.com\/@fixedslovensko"
           }
         },
         "text_icon_kdbi7N": {
           "settings": {
             "link": "https:\/\/www.youtube.com\/@fixedslovensko"
+          }
+        }
+      }
+    },
+    "newsletter_VhbVj6": {
+      "settings": {
+      },
+      "blocks": {
+        "paragraph_BBNpic": {
+          "settings": {
+            "text": "<p>řidejte se do rodiny spokojených zákazníků a fanoušků značky FIXED na sociálních sítích nebo se zaregistrujte do našeho newsletteru. Budete tak mít jistotu, že vám neuniknou novinky ze světa kvalitního a odolného příslušenství, doporučení na produkty nebo další rady, tipy a triky.<\/p>"
           }
         }
       }
