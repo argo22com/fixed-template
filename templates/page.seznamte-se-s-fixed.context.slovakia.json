@@ -13,5 +13,31 @@
     "market": "slovakia"
   },
   "sections": {
+    "text_icons_D3aUPg": {
+      "settings": {
+      },
+      "blocks": {
+        "text_icon_zLpQMx": {
+          "settings": {
+            "link": "https:\/\/www.tiktok.com\/@fixedslovensko"
+          }
+        },
+        "text_icon_tNYjDn": {
+          "settings": {
+            "link": "https:\/\/www.instagram.com\/fixedslovensko\/"
+          }
+        },
+        "text_icon_mkHaVg": {
+          "settings": {
+            "link": "https:\/\/www.facebook.com\/fixedslovensko\/"
+          }
+        },
+        "text_icon_kdbi7N": {
+          "settings": {
+            "link": "https:\/\/www.youtube.com\/@fixedslovensko"
+          }
+        }
+      }
+    }
   }
 }
