@@ -612,5 +612,259 @@
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "map": {
+          "cluster_title": {
+            "few": "Tag group ( {{number}} )",
+            "many": "Tag group ( {{number}} )"
+          }
+        }
+      },
+      "customer_account": {
+        "saved_address_option_description": {
+          "few": "You have this number of saved addresses: {{count}} .",
+          "many": "You have this number of saved addresses: {{count}} ."
+        }
+      },
+      "stock": {
+        "unshippable_product": {
+          "header": {
+            "few": "No delivery available for this number of items: %{count}",
+            "many": "No delivery available for this number of items: %{count}"
+          },
+          "message": {
+            "few": "The items in question will be removed from your cart because there are no delivery methods available for your address.",
+            "many": "The items in question will be removed from your cart because there are no delivery methods available for your address."
+          }
+        },
+        "item_label": {
+          "few": "{{count}} item",
+          "many": "{{count}} item"
+        },
+        "unfulfillable_product": {
+          "message": {
+            "few": "%{delivery_method} is no longer available for these items.",
+            "many": "%{delivery_method} is no longer available for these items."
+          },
+          "default_message": {
+            "few": "The selected delivery method is no longer available for these items.",
+            "many": "The selected delivery method is no longer available for these items."
+          }
+        }
+      },
+      "order_summary": {
+        "expand_component_information": {
+          "few": "Show items (%{count})",
+          "many": "Show items (%{count})"
+        },
+        "collapse_component_information": {
+          "few": "Hide items (%{count})",
+          "many": "Hide items (%{count})"
+        },
+        "discount_discovery": {
+          "merchandise_quantity_label": {
+            "few": "%{count} items",
+            "many": "%{count} items"
+          }
+        },
+        "discount_title_stacking": {
+          "few": "Discounts",
+          "many": "Discounts"
+        },
+        "discount_order_stacking": {
+          "few": "Discounts on order",
+          "many": "Discounts on order"
+        }
+      },
+      "shipping": {
+        "estimated_delivery_date": {
+          "few": "%{count} business days",
+          "many": "%{count} business days"
+        },
+        "other_method": {
+          "few": "There are %{count} more methods available from",
+          "many": "There are %{count} more methods available from"
+        },
+        "subscription_delivery_description": {
+          "prepaid_delivery_frequency": {
+            "few": "for %{count} deliveries",
+            "many": "for %{count} deliveries"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "few": "each %{count}. day",
+              "many": "each %{count}. day"
+            },
+            "week": {
+              "few": "each %{count}. week",
+              "many": "each %{count}. week"
+            },
+            "month": {
+              "few": "each %{count}. month",
+              "many": "each %{count}. month"
+            },
+            "year": {
+              "few": "each %{count}. year",
+              "many": "each %{count}. year"
+            }
+          },
+          "first_n_order_free": {
+            "few": "1. %{count} orders. for free",
+            "many": "1. %{count} orders. for free"
+          },
+          "free_for_first_n_order": {
+            "few": "On first %{count} orders",
+            "many": "On first %{count} orders"
+          }
+        },
+        "shipping_method_first_shipment_group_title": {
+          "few": "First shipments",
+          "many": "First shipments"
+        },
+        "shipping_method_recurring_shipments_group_title": {
+          "few": "Repeat Shipments",
+          "many": "Repeat Shipments"
+        }
+      },
+      "payment": {
+        "order_covered_by_gift_cards_notice": {
+          "few": "Your order is paid for with gift cards.",
+          "many": "Your order is paid for with gift cards."
+        },
+        "card_fields_unavailable_html": {
+          "few": "Credit and debit card payments are not available at this time.<br> <a href=\"%{current_url}\">Please refresh this page<\/a> or try another payment method.",
+          "many": "Credit and debit card payments are not available at this time.<br> <a href=\"%{current_url}\">Please refresh this page<\/a> or try another payment method."
+        },
+        "expired_cards_info": {
+          "few": "There are the following number of expired cards that you can view and edit in your account: %{count}.",
+          "many": "There are the following number of expired cards that you can view and edit in your account: %{count}."
+        },
+        "order_edit_banner_items_added": {
+          "few": "Added: %{count}",
+          "many": "Added: %{count}"
+        }
+      },
+      "shipping_errors": {
+        "shipping_method_not_available_generic": {
+          "few": "Some items in the cart cannot be shipped to the address you entered. Please check the address is correct and try again. Alternatively, enter a different address.",
+          "many": "Some items in the cart cannot be shipped to the address you entered. Please check the address is correct and try again. Alternatively, enter a different address."
+        },
+        "shipping_method_not_available_updated": {
+          "few": "One or more of the added items cannot be delivered to your location. Please remove them before proceeding to checkout or contact the store.",
+          "many": "One or more of the added items cannot be delivered to your location. Please remove them before proceeding to checkout or contact the store."
+        }
+      },
+      "processing": {
+        "wait": {
+          "medium": {
+            "few": "Your order is being processed. Probable waiting time is %{count} min.",
+            "many": "Your order is being processed. Probable waiting time is %{count} min."
+          }
+        }
+      },
+      "thank_you": {
+        "login_reorder_link_text": {
+          "few": "you can buy these products",
+          "many": "you can buy these products"
+        },
+        "gift_card_confirmation_by_text_typ": {
+          "few": "You will receive a text message with the gift cards within a few minutes.",
+          "many": "You will receive a text message with the gift cards within a few minutes."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "few": "You will receive an email with the gift cards within a few minutes.",
+          "many": "You will receive an email with the gift cards within a few minutes."
+        },
+        "gift_card_email_title": {
+          "few": "Gift cards have been sent by email",
+          "many": "Gift cards have been sent by email"
+        },
+        "gift_card_text_title": {
+          "few": "Gift cards were sent via text message",
+          "many": "Gift cards were sent via text message"
+        },
+        "gift_card_resent_confirmation": {
+          "few": "Gift cards have been sent again.",
+          "many": "Gift cards have been sent again."
+        },
+        "gift_card_resend_failure": {
+          "few": "There was a problem resending gift cards. Please try again or contact us.",
+          "many": "There was a problem resending gift cards. Please try again or contact us."
+        }
+      },
+      "order_payment_collection": {
+        "changes_summary": {
+          "added": {
+            "few": "Added: %{count}",
+            "many": "Added: %{count}"
+          }
+        }
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "few": "Buy product %{product_name} and this number of other items: %{count}",
+          "many": "Buy product %{product_name} and this number of other items: %{count}"
+        }
+      },
+      "subscriptions": {
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "few": "First payments (count: %{count}): %{total_price} (1 payment)",
+            "many": "First payments (count: %{count}): %{total_price} (1 payment)"
+          }
+        },
+        "recurring_total_intervals": {
+          "week": {
+            "few": "%{count} weeks",
+            "many": "%{count} weeks"
+          },
+          "month": {
+            "few": "%{count} months",
+            "many": "%{count} months"
+          },
+          "year": {
+            "few": "%{count} years",
+            "many": "%{count} years"
+          }
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "few": ", then additional payments (total %{count}), each amounting to %{total_price}",
+            "many": ", then additional payments (total %{count}), each amounting to %{total_price}"
+          }
+        }
+      },
+      "contextual_availability": {
+        "title": {
+          "few": "Unavailable products",
+          "many": "Unavailable products"
+        },
+        "products_not_available": {
+          "few": "These products will be removed from your cart as they are not available in your country\/region.",
+          "many": "These products will be removed from your cart as they are not available in your country\/region."
+        },
+        "all_products_in_cart_unavailable": {
+          "few": "These products are not available in your country\/region.",
+          "many": "These products are not available in your country\/region."
+        }
+      },
+      "throttle": {
+        "estimated_wait_time": {
+          "few": "Probable waiting time: {{count}} min",
+          "many": "Probable waiting time: {{count}} min"
+        }
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "few": "No delivery available for this number of items: %{count}",
+            "many": "No delivery available for this number of items: %{count}"
+          }
+        }
+      }
+    }
   }
 }
