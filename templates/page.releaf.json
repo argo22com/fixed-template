@@ -416,119 +416,23 @@
         "padding_bottom": 0
       }
     },
-    "image_with_text_ByiydJ": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_FjeEfN": {
-          "type": "heading",
-          "settings": {
-            "heading": "Company and operations",
-            "heading_size": "h2",
-            "enable_bold_heading": true
-          }
-        },
-        "text_wFrbMc": {
-          "type": "text",
-          "settings": {
-            "text": "<p>In our office, sustainability is more than just a concept: it´s a way of operating that guides our daily practices. We prioritize energy efficiency by using LED lighting, smart thermostats, and powering down electronics when not in use. Recycling and composting programs are integral to our waste reduction efforts, while digitalization and telecommunting options minimize our carbon footprint. By embracing sustainable oparations, we´re not only reducing our environmental impact, but also creating a healthier, more responsible workplace for our employees.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_FjeEfN",
-        "text_wFrbMc"
-      ],
+    "video_PkWUBz": {
+      "type": "video",
       "settings": {
-        "grid_layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/sustainability.jpg",
-        "height": "small",
-        "desktop_image_width": "small",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
+        "title": "Video",
+        "subtitle": "",
+        "heading_size": "h1",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#000000",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
-      }
-    },
-    "image_banner_UbPiFf": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_w8BEj4": {
-          "type": "heading",
-          "settings": {
-            "heading": "tady bude druhej graf",
-            "size": "h0"
-          }
-        },
-        "text_DTMQat": {
-          "type": "text",
-          "settings": {
-            "text": "Carbon footprint derease of FIXED operations",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_w8BEj4",
-        "text_DTMQat"
-      ],
-      "settings": {
-        "layout": "grid",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_height_mobile": "medium-mobile",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "keep_ltr": false,
-        "hide_when_empty_image": false,
-        "preload": false,
-        "enable_parallax_scrolling_effect": false,
-        "mobile_content_alignment": "center",
-        "show_text_below_image": true,
-        "color_text": "#ffffff",
-        "gradient_heading_desktop": "",
-        "color_button_text_1": "#000000",
-        "color_button_1": "#ffffff",
-        "color_button_text_2": "#000000",
-        "color_button_2": "#ffffff",
-        "colors_badge_foreground": "#ffffff",
-        "colors_badge_background": "#f87171",
-        "color_countdown_foreground": "#000000",
-        "color_countdown_background": "#ffffff",
-        "color_text_mobile": "#ffffff",
-        "gradient_heading_mobile": "",
-        "color_button_text_1_mobile": "#000000",
-        "color_button_1_mobile": "#ffffff",
-        "color_button_text_2_mobile": "#000000",
-        "color_button_2_mobile": "#ffffff",
-        "colors_badge_foreground_mobile": "#ffffff",
-        "colors_badge_background_mobile": "#f87171",
-        "color_countdown_foreground_mobile": "#000000",
-        "color_countdown_background_mobile": "#ffffff",
-        "background_container_mobile": "#565656",
-        "gradient_background_container_mobile": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 36
       }
     },
     "collapsible_content_Gp6UAE": {
@@ -603,8 +507,7 @@
     "image_banner_DVAQgg",
     "rich_text_4J3ddB",
     "image_banner_mFjjn8",
-    "image_with_text_ByiydJ",
-    "image_banner_UbPiFf",
+    "video_PkWUBz",
     "collapsible_content_Gp6UAE"
   ]
 }
