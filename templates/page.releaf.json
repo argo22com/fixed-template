@@ -29,10 +29,18 @@
             "heading": "FIXED Sustainibility",
             "size": "h0"
           }
+        },
+        "text_wMAP9F": {
+          "type": "text",
+          "settings": {
+            "text": "Ve společnosti FIXED vnímáme změnu směrem k regeneračnímujako nevyhnutelný krok pro udržitelnou budoucnost.",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
-        "heading_76DBMV"
+        "heading_76DBMV",
+        "text_wMAP9F"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -42,7 +50,7 @@
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
         "desktop_content_position": "middle-left",
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "keep_ltr": false,
         "hide_when_empty_image": false,
         "preload": false,
@@ -81,25 +89,35 @@
         "heading_xi6Qgt": {
           "type": "heading",
           "settings": {
-            "heading": "We make living with smart devices better. Sustainably",
+            "heading": "Zlepšujeme život s chytrými zařízeními. Udržitelně",
             "heading_size": "h2",
             "enable_bold_heading": true
+          }
+        },
+        "caption_kjQWhJ": {
+          "type": "caption",
+          "settings": {
+            "caption": "FIXED RELEAF",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
           }
         },
         "text_M496Hi": {
           "type": "text",
           "settings": {
-            "text": "<p>For us ad FIXED sustainability is not just a buzzword. We implement it in every step of our process. From minimising waste and environmental footprint, choosing better ways of transportation and ethically sourced materials and optimising you supply chain, all the way to figuring yout better process for recycling our products. <\/p><p>We believe that businesses have a responsibility to contribute positively to the world around them<\/p>",
+            "text": "<p>Výrobky a projekty pro udržitelnou budoucnost jsou označeny logem ReLeaf, inspirovaným naší národní lípou s listy ve tvaru srdce.<\/p>",
             "text_style": "body"
           }
         }
       },
       "block_order": [
         "heading_xi6Qgt",
+        "caption_kjQWhJ",
         "text_M496Hi"
       ],
       "settings": {
         "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/releaf_1.png",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -109,7 +127,7 @@
         "hide_when_empty_image": false,
         "preload": false,
         "mobile_content_alignment": "left",
-        "padding_top": 36,
+        "padding_top": 24,
         "padding_bottom": 36,
         "color_heading": "#000000",
         "gradient_heading": "",
