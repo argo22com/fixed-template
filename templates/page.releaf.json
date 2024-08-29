@@ -94,25 +94,16 @@
             "enable_bold_heading": true
           }
         },
-        "caption_kjQWhJ": {
-          "type": "caption",
-          "settings": {
-            "caption": "FIXED RELEAF",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "large"
-          }
-        },
         "text_M496Hi": {
           "type": "text",
           "settings": {
-            "text": "<p>Výrobky a projekty pro udržitelnou budoucnost jsou označeny logem ReLeaf, inspirovaným naší národní lípou s listy ve tvaru srdce.<\/p>",
+            "text": "<p><strong>FIXED ReLEAF<\/strong><\/p><p>Výrobky a projekty pro udržitelnou budoucnost jsou označeny logem ReLeaf, inspirovaným naší národní lípou s listy ve tvaru srdce.<\/p><p><strong>Žádný greenwashing<\/strong><\/p><p>Všechny produkty nebo činnosti ReLeaf jsou podloženy konkrétními opatřeními a\/nebo uznávanými certifikáty, jako jsou GRS, ISCC a další.<\/p>",
             "text_style": "body"
           }
         }
       },
       "block_order": [
         "heading_xi6Qgt",
-        "caption_kjQWhJ",
         "text_M496Hi"
       ],
       "settings": {
@@ -144,108 +135,6 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
-      }
-    },
-    "text_icons_RqeWT9": {
-      "type": "text-icons",
-      "blocks": {
-        "text_icon_Q7jzti": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "laptop",
-            "title": "Products and certification",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_E7yGiP": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "box",
-            "title": "Transportation and packaging",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_JiUnk8": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "map",
-            "title": "Company and operations",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_Lry4NP": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "emoji_happy",
-            "title": "Social and governance",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "text_icon_Q7jzti",
-        "text_icon_E7yGiP",
-        "text_icon_JiUnk8",
-        "text_icon_Lry4NP"
-      ],
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h1",
-        "icon_width_desktop": 30,
-        "text_position": "bottom",
-        "enable_heading_in_box": false,
-        "columns_desktop": 4,
-        "columns_tablet": 3,
-        "auto_fit": false,
-        "column_alignment": "center",
-        "highlight_icon": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "border_width": 1,
-        "border_opacity": 0,
-        "border_spacing": 0,
-        "highlight_border": false,
-        "border_shape": "square",
-        "blur_background": false,
-        "columns_mobile": "1",
-        "icon_width_mobile": 30,
-        "border_spacing_mobile": 0,
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_hKVxPM": {
-      "type": "rich-text",
-      "blocks": {
-        "text_reczzb": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Innovation is at the heart of our sustainability efforts. We´re constantly exploring new ways to incorporate renewable materials, improve resource efficiency, and develop products that meet the needs of our customers without compromising the planet´s future. Our commitment to sustainability isn´t just a checkbox.; it´s a driving force behind our quest for continuous improvement and innovation.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_reczzb"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "image_with_text_WYH4FU": {
@@ -283,157 +172,10 @@
       ],
       "settings": {
         "grid_layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/sustainability.jpg",
+        "image": "shopify:\/\/shop_images\/sustainability_logos.png",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000",
-        "color_button_text": "#ffffff",
-        "color_button": "#000000",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
-      }
-    },
-    "gallery_Jr8d99": {
-      "type": "gallery",
-      "blocks": {
-        "text_overlay_image_LLxJ7R": {
-          "type": "text-overlay-image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/sustainability.jpg",
-            "link": "",
-            "keep_ltr": false,
-            "text": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "heading": "Global Recycled Standard",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "",
-            "button_style": "primary",
-            "button_size": "normal",
-            "button_pin_bottom": false,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "heading_color": "#ffffff",
-            "caption_color": "#ffffff",
-            "button_foreground": "#000000",
-            "button_background": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 50
-          }
-        },
-        "text_overlay_image_9w3YpK": {
-          "type": "text-overlay-image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/sustainability.jpg",
-            "link": "",
-            "keep_ltr": false,
-            "text": "",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
-            "heading": "ISCC",
-            "heading_size": "h2",
-            "heading_uppercase": false,
-            "button_label": "",
-            "button_style": "primary",
-            "button_size": "normal",
-            "button_pin_bottom": false,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "heading_color": "#ffffff",
-            "caption_color": "#ffffff",
-            "button_foreground": "#000000",
-            "button_background": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 50
-          }
-        },
-        "button_zQWiBH": {
-          "type": "button",
-          "settings": {
-            "button_label": "see all certificates",
-            "button_link": "",
-            "button_style_1": "link",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "link",
-            "content_alignment": "right",
-            "padding_top": 0,
-            "padding_bottom": 0
-          }
-        }
-      },
-      "block_order": [
-        "text_overlay_image_LLxJ7R",
-        "text_overlay_image_9w3YpK",
-        "button_zQWiBH"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "flexible_columns_layout": "grid",
-        "columns_desktop": 4,
-        "columns_tablet": "3",
-        "full_width": false,
-        "auto_fit": false,
-        "disable_item_space": false,
-        "enable_section_box_layout": true,
-        "color_scheme": "",
-        "image_ratio": "landscape",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
-    "image_with_text_xJeJhz": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_JwCL79": {
-          "type": "heading",
-          "settings": {
-            "heading": "Transportation and packaging",
-            "heading_size": "h1",
-            "enable_bold_heading": true
-          }
-        },
-        "text_eXkGF8": {
-          "type": "text",
-          "settings": {
-            "text": "<p>we prioritize sustainable transportation and packaging to minimize our environmental footprint. From electric vehicles to recyclable materials.<\/p><p>Reduces environmental impact: Sustainable packaging and transportation methods minimize carbon emissions and waste. <\/p><p>Supports circular economy: Using recyclable, biodegradable, or reusable materials promotes resource and reduces reliance on virgin resources. <\/p><p>Builds brand trust: Demonstrating commitment to sustainability enhances corporate reputation and appeals to environmentally conscious consumers.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_JwCL79",
-        "text_eXkGF8"
-      ],
-      "settings": {
-        "grid_layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/sustainability.jpg",
-        "height": "small",
-        "desktop_image_width": "small",
-        "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -755,11 +497,7 @@
     "main",
     "image_banner_x8BxCc",
     "image_with_text_AwNNQH",
-    "text_icons_RqeWT9",
-    "rich_text_hKVxPM",
     "image_with_text_WYH4FU",
-    "gallery_Jr8d99",
-    "image_with_text_xJeJhz",
     "image_banner_rLBVLa",
     "image_with_text_ByiydJ",
     "image_banner_UbPiFf",
