@@ -374,32 +374,13 @@
         "padding_bottom": 52
       }
     },
-    "image_banner_rLBVLa": {
+    "image_banner_mFjjn8": {
       "type": "image-banner",
-      "blocks": {
-        "heading_hKaMXE": {
-          "type": "heading",
-          "settings": {
-            "heading": "tady bude nějakej graf",
-            "size": "h0"
-          }
-        },
-        "text_kghYgA": {
-          "type": "text",
-          "settings": {
-            "text": "Usage of enviromentally friendly transport",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_hKaMXE",
-        "text_kghYgA"
-      ],
       "settings": {
         "layout": "grid",
+        "image": "shopify:\/\/shop_images\/restory_graf.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "adapt",
         "image_height_mobile": "medium-mobile",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
@@ -409,26 +390,26 @@
         "enable_parallax_scrolling_effect": false,
         "mobile_content_alignment": "center",
         "show_text_below_image": true,
-        "color_text": "#ffffff",
+        "color_text": "#fff",
         "gradient_heading_desktop": "",
-        "color_button_text_1": "#000000",
-        "color_button_1": "#ffffff",
-        "color_button_text_2": "#000000",
-        "color_button_2": "#ffffff",
-        "colors_badge_foreground": "#ffffff",
-        "colors_badge_background": "#f87171",
-        "color_countdown_foreground": "#000000",
-        "color_countdown_background": "#ffffff",
-        "color_text_mobile": "#ffffff",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
         "gradient_heading_mobile": "",
-        "color_button_text_1_mobile": "#000000",
-        "color_button_1_mobile": "#ffffff",
-        "color_button_text_2_mobile": "#000000",
-        "color_button_2_mobile": "#ffffff",
-        "colors_badge_foreground_mobile": "#ffffff",
-        "colors_badge_background_mobile": "#f87171",
-        "color_countdown_foreground_mobile": "#000000",
-        "color_countdown_background_mobile": "#ffffff",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
         "background_container_mobile": "#565656",
         "gradient_background_container_mobile": "",
         "padding_top": 0,
@@ -621,7 +602,7 @@
     "image_with_text_MG4e48",
     "image_banner_DVAQgg",
     "rich_text_4J3ddB",
-    "image_banner_rLBVLa",
+    "image_banner_mFjjn8",
     "image_with_text_ByiydJ",
     "image_banner_UbPiFf",
     "collapsible_content_Gp6UAE"
