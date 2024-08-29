@@ -147,7 +147,6 @@ input[type='checkbox'].facets__checkbox-value--color {
 }
 
 .facet-checkbox__content {
-  text-transform: capitalize;
   transition: font-weight 300ms ease;
   word-break: break-word;
 }
