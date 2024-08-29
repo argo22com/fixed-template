@@ -95,7 +95,7 @@
 
 <div class="color-{{ color_scheme }} gradient no-js-hidden">
     <product-recommendations class="product-recommendations section-{{ id }}-padding{% if full_width == false %} page-width{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ id }}&product_id={{ product.id }}&limit={{ products_to_show }}">
-        {% if recommendations.performed and recommendations.products_count > 0 %}
+    {% if recommendations.performed and recommendations.products_count > 0 %}
             {%- liquid
                 assign products_to_display = recommendations.products.size
 
@@ -116,7 +116,7 @@
             -%}
             {%- render 'section-heading', title: title, full_width: full_width, show_desktop_slider: show_desktop_slider, show_tablet_slider: show_tablet_slider, show_mobile_slider: show_mobile_slider, include_page_width: true -%}
             <slider-component class="por slider-mobile-gutter{% if full_width %} page-width--full{% endif %}{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %}{% if full_width %} slider-component-full-width{% endif %}{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if show_tablet_slider %} slider-component-tablet{% endif %}{% if show_mobile_slider %} slider-component-mobile{% endif %}" data-outside-prev-button-id="Slider-{{ id }}-prev-button" data-outside-next-button-id="Slider-{{ id }}-next-button">
-                <ul id="Slider-{{ id }}" class="recommendation-list grid product-grid contains-card contains-card--product grid--{{ columns_tablet }}-col-tablet grid--{{ gs.columns_desktop }}-col-desktop grid--{{ columns_mobile }}-col{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %} slider{% if full_width %} grid--peek{% endif %}{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_tablet_slider %} slider--tablet{% endif %}{% if show_mobile_slider %} slider--mobile{% endif %}{% endif %}" role="list" aria-label="{{ 'sections.featured_collection.slider' | t }}">
+                <ul id="Slider-{{ id }}" class="recommendation-list grid product-grid contains-card contains-card--product grid--{{ columns_tablet }}-col-tablet grid--{{ columns_desktop }}-col-desktop grid--{{ columns_mobile }}-col{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %} slider{% if full_width %} grid--peek{% endif %}{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_tablet_slider %} slider--tablet{% endif %}{% if show_mobile_slider %} slider--mobile{% endif %}{% endif %}" role="list" aria-label="{{ 'sections.featured_collection.slider' | t }}">
                     {% for recommendation in recommendations.products %}
                         <li id="Slide-{{ id }}-{{ forloop.index }}" class="grid__item{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %} slider__slide{% endif %}">
                             {% render 'card-product',
