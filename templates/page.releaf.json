@@ -126,7 +126,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -180,7 +180,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -205,7 +205,7 @@
         "text_zrMzfU": {
           "type": "text",
           "settings": {
-            "text": "<p>Výběr udržitelných výrobků je zásadní pro zachování zdraví naší planety a zajištění lepší budoucnosti pro všechny. <\/p><p>Ve společnosti FIXED jsme hrdí na to, že můžeme nabízet výrobky s certifikací GRS a ISCC PLUS, což zaručuje, že naše nabídka splňuje nejvyšší ekologické a sociální standardy. <\/p><p>Pokud se spotřebitelé rozhodnou pro naše certifikované udržitelné výrobky, mohou věřit, že jejich nákupy přispívají k transparentnějšímu a odpovědnějšímu dodavatelskému řetězci. Tyto certifikace umožňují jednotlivcům činit informovaná rozhodnutí, která jsou v souladu s jejich hodnotami, a podporují pozitivní změny směrem k udržitelnějšímu světu.<\/p>",
+            "text": "<p>Abychom zachovali náš firemní cíl, uplatňujeme udržitelné myšlení v každém kroku našeho procesu. Od minimalizace odpadu a naší ekologické stopy, přes výběr lepších dopravních metod a etických materiálů, optimalizaci našeho dodavatelského řetězce až po hledání lepších způsobů recyklace našich výrobků.<br\/><br\/>Věříme, že firmy mají povinnost pozitivně přispívat k okolnímu světu, a chceme zanechat planetu v co nejlepším stavu pro naše děti.<br\/><br\/>V současné době vytváříme základní údaje o uhlíkové stopě, sbíráme data a provádíme systémové změny, abychom mohli brzy zveřejnit naši první zprávu ESG.<\/p>",
             "text_style": "body"
           }
         }
@@ -234,7 +234,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -288,7 +288,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -403,7 +403,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
