@@ -95,7 +95,7 @@
 
 <div class="color-{{ color_scheme }} gradient no-js-hidden">
     <product-recommendations class="product-recommendations section-{{ id }}-padding{% if full_width == false %} page-width{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ id }}&product_id={{ product.id }}&limit={{ products_to_show }}">
-    {% if recommendations.performed and recommendations.products_count > 0 %}
+        {% if recommendations.performed and recommendations.products_count > 0 %}
             {%- liquid
                 assign products_to_display = recommendations.products.size
 
