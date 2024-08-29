@@ -274,7 +274,7 @@
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "hide_when_empty_image": false,
@@ -297,6 +297,81 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
+      }
+    },
+    "image_banner_DVAQgg": {
+      "type": "image-banner",
+      "settings": {
+        "layout": "grid",
+        "image": "shopify:\/\/shop_images\/restory_facts_4bef2712-6ba1-4d4a-928d-4eb114b278cd.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/restory_facts.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_height_mobile": "adapt-mobile",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_4J3ddB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HdDjq8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Pouzdro ReStory splňuje nejpřísnější ekologické normy a nabízí řadu výhod.<\/p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_tCNjeN": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Vyrobeno a zabaleno v Evropské unii<\/li><li>Vyrobeno z recyklovaných materiálů pocházejících ze starých, neprodaných skladových obalů TPU<\/li><li>Nižší uhlíková stopa (podloženo univerzitní studií)<\/li><li>Výrobek s certifikací ISCC<\/li><li>Kvalita a cena srovnatelná s panenskými pouzdry TPU vyrobenými v Asii<\/li><li>Účinné složení proti UV záření vyvinuté společností FIXED<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HdDjq8",
+        "text_tCNjeN"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "medium",
+        "content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "image_banner_rLBVLa": {
@@ -544,6 +619,8 @@
     "image_with_text_WYH4FU",
     "image_with_text_KATQ6D",
     "image_with_text_MG4e48",
+    "image_banner_DVAQgg",
+    "rich_text_4J3ddB",
     "image_banner_rLBVLa",
     "image_with_text_ByiydJ",
     "image_banner_UbPiFf",
