@@ -165,7 +165,7 @@
         "image": "shopify:\/\/shop_images\/sustainability_logos.png",
         "height": "small",
         "desktop_image_width": "small",
-        "layout": "text_first",
+        "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -219,7 +219,7 @@
         "image": "shopify:\/\/shop_images\/people-holding-earth-their-hands.png",
         "height": "small",
         "desktop_image_width": "small",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -251,7 +251,7 @@
         "heading_MijtqT": {
           "type": "heading",
           "settings": {
-            "heading": "Produkty a certifikace",
+            "heading": "Myšlenka za recyklací obalů",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -259,7 +259,7 @@
         "text_An3YRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Výběr udržitelných výrobků je zásadní pro zachování zdraví naší planety a zajištění lepší budoucnosti pro všechny. <\/p><p>Ve společnosti FIXED jsme hrdí na to, že můžeme nabízet výrobky s certifikací GRS a ISCC PLUS, což zaručuje, že naše nabídka splňuje nejvyšší ekologické a sociální standardy. <\/p><p>Pokud se spotřebitelé rozhodnou pro naše certifikované udržitelné výrobky, mohou věřit, že jejich nákupy přispívají k transparentnějšímu a odpovědnějšímu dodavatelskému řetězci. Tyto certifikace umožňují jednotlivcům činit informovaná rozhodnutí, která jsou v souladu s jejich hodnotami, a podporují pozitivní změny směrem k udržitelnějšímu světu.<\/p>",
+            "text": "<p><\/p><p><\/p><p><\/p><p><\/p><p>Každý rok jsou vyřazeny miliony obalů na telefony z TPU (termoplastický polyuretan), což přispívá k rostoucí ekologické krizi. <\/p><p>Tento nadměrný odpad představuje značný problém, protože TPU není biologicky rozložitelný, což vede k dlouhodobému znečištění. Co kdybychom však tento problém mohli proměnit v příležitost? <\/p><p>Recyklací těchto pouzder můžeme vytvořit nové výrobky, které si zachovají vysokou kvalitu a designové standardy, a zároveň díky místní výrobě snížit naši uhlíkovou stopu.<\/p>",
             "text_style": "body"
           }
         }
@@ -270,10 +270,10 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/sustainability_logos.png",
-        "height": "small",
+        "image": "shopify:\/\/shop_images\/restory_like_the_other.png",
+        "height": "adapt",
         "desktop_image_width": "small",
-        "layout": "text_first",
+        "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
