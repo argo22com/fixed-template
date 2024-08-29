@@ -143,7 +143,7 @@
         "heading_fmTPUb": {
           "type": "heading",
           "settings": {
-            "heading": "Products and certifications",
+            "heading": "Produkty a certifikace",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -151,24 +151,14 @@
         "text_fazkwC": {
           "type": "text",
           "settings": {
-            "text": "<p>Choosing sustainable products is essential for preserving our planetˇs health and securing a better future for all.<\/p><p>By opting for certified sustainable products, conumers can trust that their purchases meet rigorous environmental and social standards. <\/p><p>These certifications not only ensure transparency and accountability but also empower individuals to make informed chices that align with their values, ultimately driving positive change toward a more sustainable world.<\/p>",
+            "text": "<p>Výběr udržitelných výrobků je zásadní pro zachování zdraví naší planety a zajištění lepší budoucnosti pro všechny. <\/p><p>Ve společnosti FIXED jsme hrdí na to, že můžeme nabízet výrobky s certifikací GRS a ISCC PLUS, což zaručuje, že naše nabídka splňuje nejvyšší ekologické a sociální standardy. <\/p><p>Pokud se spotřebitelé rozhodnou pro naše certifikované udržitelné výrobky, mohou věřit, že jejich nákupy přispívají k transparentnějšímu a odpovědnějšímu dodavatelskému řetězci. Tyto certifikace umožňují jednotlivcům činit informovaná rozhodnutí, která jsou v souladu s jejich hodnotami, a podporují pozitivní změny směrem k udržitelnějšímu světu.<\/p>",
             "text_style": "body"
-          }
-        },
-        "button_9mThT7": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_fmTPUb",
-        "text_fazkwC",
-        "button_9mThT7"
+        "text_fazkwC"
       ],
       "settings": {
         "grid_layout": "full_bleed",
