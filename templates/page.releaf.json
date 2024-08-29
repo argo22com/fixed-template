@@ -219,6 +219,60 @@
         "image": "shopify:\/\/shop_images\/sustainability_logos.png",
         "height": "small",
         "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_MG4e48": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_MijtqT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Produkty a certifikace",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_An3YRn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Výběr udržitelných výrobků je zásadní pro zachování zdraví naší planety a zajištění lepší budoucnosti pro všechny. <\/p><p>Ve společnosti FIXED jsme hrdí na to, že můžeme nabízet výrobky s certifikací GRS a ISCC PLUS, což zaručuje, že naše nabídka splňuje nejvyšší ekologické a sociální standardy. <\/p><p>Pokud se spotřebitelé rozhodnou pro naše certifikované udržitelné výrobky, mohou věřit, že jejich nákupy přispívají k transparentnějšímu a odpovědnějšímu dodavatelskému řetězci. Tyto certifikace umožňují jednotlivcům činit informovaná rozhodnutí, která jsou v souladu s jejich hodnotami, a podporují pozitivní změny směrem k udržitelnějšímu světu.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MijtqT",
+        "text_An3YRn"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/sustainability_logos.png",
+        "height": "small",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -489,6 +543,7 @@
     "image_with_text_AwNNQH",
     "image_with_text_WYH4FU",
     "image_with_text_KATQ6D",
+    "image_with_text_MG4e48",
     "image_banner_rLBVLa",
     "image_with_text_ByiydJ",
     "image_banner_UbPiFf",
