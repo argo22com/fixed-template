@@ -683,9 +683,19 @@
         "enable_transparent_homepage": false,
         "text_color_transparent": "#ffffff"
       }
+    },
+    "custom_liquid_69rLNk": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% assign rounded_value = product.selected_or_first_available_variant.metafields.product_attributes.price_with_vat | round %}\n{% if rounded_value %}\n    <p style=\"font-size: 24px; font-weight: bold; color: #000;\">\n        {{ rounded_value }} Kč\n    <\/p>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "custom_liquid_69rLNk"
   ]
 }
