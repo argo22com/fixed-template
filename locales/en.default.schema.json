@@ -794,7 +794,10 @@
           "label": "Primary inverse"
         },
         "label": "Color scheme",
-        "has_cards_info": "To change the card color scheme, update your theme settings."
+        "has_cards_info": "To change the card color scheme, update your theme settings.",
+        "ul_li_marker": {
+          "label": "List item marker color"
+        }
       },
       "heading_size": {
         "label": "Heading size",
