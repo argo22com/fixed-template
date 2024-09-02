@@ -109,7 +109,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/armo-rgb_5342e53c-627a-4328-aa69-1e5076503540.png",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "top",
