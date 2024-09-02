@@ -262,6 +262,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/armor_antidust.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -293,7 +294,7 @@
     "video_jrq3tR": {
       "type": "video",
       "settings": {
-        "title": "Video",
+        "title": "Podívejte se jak se sklo testuje",
         "subtitle": "",
         "heading_size": "h1",
         "video_url": "https:\/\/www.youtube.com\/watch?v=CTj7KDOKWL8&t=21s",
