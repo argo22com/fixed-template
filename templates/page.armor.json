@@ -311,11 +311,11 @@
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "Přejít na produkty",
             "link": "shopify:\/\/products\/premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-samsung-galaxy-a54-5g-cerne",
-            "button_style": "secondary",
+            "button_style": "solid",
             "button_open_new_tab": true,
             "card_color_text": "#000",
             "color_button_text": "#fff",
-            "color_button": "#2563eb",
+            "color_button": "#00aae9",
             "card_color_background": "#effdf4",
             "card_color_background_gradient": ""
           }
@@ -329,11 +329,11 @@
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "Přejít na Heureku",
             "link": "https:\/\/tvrzena-skla-pro-mobilni-telefony.heureka.cz\/fixed-armor-ultra-odolne-sklo-s-aplikatorem-pro-apple-iphone-14-13-13-pro-fixga-928-bk\/#prehled\/",
-            "button_style": "link",
+            "button_style": "solid",
             "button_open_new_tab": true,
             "card_color_text": "#000",
             "color_button_text": "#fff",
-            "color_button": "#2563eb",
+            "color_button": "#00aae9",
             "card_color_background": "#fefce8",
             "card_color_background_gradient": ""
           }
