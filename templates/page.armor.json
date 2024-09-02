@@ -143,24 +143,14 @@
         "text_FgxdBE": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<ul><li>Extrémně vysoká pevnost skla – až 2x vyšší než u běžných skel​<\/li><li>o 30 % vyšší pružnost, která absorbuje případné nárazy a  odolává téměř všem běžným pádům​<\/li><li>Parametry testovány ve FIXED<\/li><\/ul>",
             "text_style": "body"
-          }
-        },
-        "button_3nqefc": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_TJjMV3",
-        "text_FgxdBE",
-        "button_3nqefc"
+        "text_FgxdBE"
       ],
       "settings": {
         "grid_layout": "grid",
@@ -199,7 +189,7 @@
         "heading_J8hx6t": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Antireflexní vrstva",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -207,27 +197,18 @@
         "text_PQARFT": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<ul><li>Nejvyšší propustnost světla na trhu – více než 94% zajistí významný pozitivní rozdíl v čitelnosti displeje​<\/li><li>Antireflexní vrstva zlepšuje čitelnost displeje, zejména na slunci nebo pod umělým osvětlením. ​<\/li><li>Parametry testovány ve FIXED<\/li><\/ul>",
             "text_style": "body"
-          }
-        },
-        "button_irTpwy": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_J8hx6t",
-        "text_PQARFT",
-        "button_irTpwy"
+        "text_PQARFT"
       ],
       "settings": {
         "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/armor_antireflex.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -262,7 +243,7 @@
         "heading_HKnxPM": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Anti-dust aplikátor",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -270,24 +251,14 @@
         "text_Bn9ejK": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<ul><li>Aplikátor druhé generace pro dokonale přesné umístění ARMOR skla na displej​<\/li><li>Anti-dust folie pro snadné a dokonalé odstranění všech částeček prachu​<\/li><li>Výsledkem je perfektně nalepené sklo bez vzduchových bublin za méně než minutu.​<\/li><\/ul>",
             "text_style": "body"
-          }
-        },
-        "button_LBi4gL": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_HKnxPM",
-        "text_Bn9ejK",
-        "button_LBi4gL"
+        "text_Bn9ejK"
       ],
       "settings": {
         "grid_layout": "grid",
