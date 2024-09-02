@@ -135,8 +135,8 @@
         "heading_TJjMV3": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1",
+            "heading": "Ultra odolnost díky vysoké pružnosti",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
@@ -164,6 +164,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/armor_pruznost.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
