@@ -47,7 +47,7 @@
         "image": "shopify:\/\/shop_images\/armor_desktop.jpg",
         "image_mobile": "shopify:\/\/shop_images\/Armor_mobile.jpg",
         "image_overlay_opacity": 20,
-        "image_height": "small",
+        "image_height": "medium",
         "image_height_mobile": "medium-mobile",
         "desktop_content_position": "bottom-left",
         "desktop_content_alignment": "left",
