@@ -36,25 +36,11 @@
             "text": "Nejlepší ochrana displeje na trhu",
             "text_style": "caption-with-letter-spacing"
           }
-        },
-        "buttons_pKdbPr": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_1": "primary",
-            "button_open_new_tab_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_2": "primary",
-            "button_open_new_tab_2": false
-          }
         }
       },
       "block_order": [
         "heading_AbkTRp",
-        "text_UDYABY",
-        "buttons_pKdbPr"
+        "text_UDYABY"
       ],
       "settings": {
         "layout": "stretched_grid",
@@ -97,36 +83,58 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_GnRiqE": {
-      "type": "rich-text",
+    "image_with_text_rRBN9q": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_UWbDfX": {
+        "heading_Mf43cQ": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>OCHRANNÁ SKLA ARMOR<\/h3>",
-            "heading_size": "h2"
+            "heading": "OCHRANNÁ SKLA ARMOR",
+            "heading_size": "h2",
+            "enable_bold_heading": true
           }
         },
-        "text_PTb6yL": {
+        "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Technologie a design bez kompromisů, promyšlené zevnitř ​i navenek, fungující skvěle v náročnějších situacích běžného života ​a zaručující vysokou odolnost, funkčnost a skvělý vzhled produktů.​<\/p>"
+            "text": "<p>Technologie a design bez kompromisů, promyšlené zevnitř ​i navenek, fungující skvěle v náročnějších situacích běžného života ​a zaručující vysokou odolnost, funkčnost a skvělý vzhled produktů.​<\/p>",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_UWbDfX",
-        "text_PTb6yL"
+        "heading_Mf43cQ",
+        "text_Rc9KRn"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "grid_layout": "grid",
+        "image": "shopify:\/\/shop_images\/armo-rgb_5342e53c-627a-4328-aa69-1e5076503540.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "image_with_text_h7EAQW": {
@@ -357,7 +365,7 @@
   "order": [
     "main",
     "image_banner_7GGLw8",
-    "rich_text_GnRiqE",
+    "image_with_text_rRBN9q",
     "image_with_text_h7EAQW",
     "image_with_text_x39Mgh",
     "image_with_text_bXVgiV",
