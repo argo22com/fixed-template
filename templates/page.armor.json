@@ -315,7 +315,7 @@
             "button_open_new_tab": true,
             "card_color_text": "#000",
             "color_button_text": "#fff",
-            "color_button": "#00aae9",
+            "color_button": "#e94200",
             "card_color_background": "#fefce8",
             "card_color_background_gradient": ""
           }
@@ -333,7 +333,7 @@
             "button_open_new_tab": true,
             "card_color_text": "#000",
             "color_button_text": "#fff",
-            "color_button": "#00aae9",
+            "color_button": "#e94200",
             "card_color_background": "#effdf4",
             "card_color_background_gradient": ""
           }
@@ -356,7 +356,7 @@
         "desktop_gap": 30,
         "auto_fit": false,
         "column_alignment": "left",
-        "enable_shadow": false,
+        "enable_shadow": true,
         "background_transparent": true,
         "button_label": "",
         "button_link": "",
