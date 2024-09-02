@@ -308,7 +308,7 @@
             "image": "shopify:\/\/shop_images\/HG-Logo_Heureka-Color-2-1024x411.png",
             "icon": "shopping_bag",
             "title": "Nakoupit u partnerů",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Sklo armor je dostupné u široké škály partnerů, stačí si vybrat svůj oblíbený e-shop z výběru na Heurece.<\/p>",
             "link_label": "Přejít na Heureku",
             "link": "https:\/\/tvrzena-skla-pro-mobilni-telefony.heureka.cz\/fixed-armor-ultra-odolne-sklo-s-aplikatorem-pro-apple-iphone-14-13-13-pro-fixga-928-bk\/#prehled\/",
             "button_style": "solid",
@@ -326,7 +326,7 @@
             "image": "shopify:\/\/shop_images\/Logo-FIXED-modra-RGB_d7481ded-02ac-42d4-a057-fb318da3a757.jpg",
             "icon": "shopping_cart",
             "title": "Nakoupit na e-shopu FIXED",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Všechny varianty skla Armor jsou dostupné na našem e-shopu, stačí si vybrat model telefonu.<\/p>",
             "link_label": "Přejít na produkty",
             "link": "shopify:\/\/products\/premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-samsung-galaxy-a54-5g-cerne",
             "button_style": "solid",
@@ -344,7 +344,7 @@
         "column_rQwG6J"
       ],
       "settings": {
-        "title": "Kde nakoupit",
+        "title": "",
         "subtitle": "",
         "heading_size": "h1",
         "media_type": "none",
