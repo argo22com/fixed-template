@@ -355,7 +355,7 @@
         "columns_tablet": 2,
         "desktop_gap": 30,
         "auto_fit": false,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "enable_shadow": true,
         "background_transparent": true,
         "button_label": "",
