@@ -350,7 +350,7 @@
         "media_type": "image",
         "media_width_desktop": "50",
         "image_ratio": "adapt",
-        "text_position": "right",
+        "text_position": "left",
         "columns_desktop": 2,
         "columns_tablet": 2,
         "desktop_gap": 30,
