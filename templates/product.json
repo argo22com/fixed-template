@@ -35,15 +35,8 @@
         },
         "price": {
           "type": "price",
-          "disabled": true,
           "settings": {
             "variant_price": true
-          }
-        },
-        "custom_liquid_i4QxEF": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% assign rounded_value = product.selected_or_first_available_variant.metafields.product_attributes.price_with_vat | round %}\n{% if rounded_value %}\n    <p style=\"font-size: 24px; font-weight: bold; color: #000;\">\n        {{ rounded_value }} Kč\n    <\/p>\n{% endif %}"
           }
         },
         "wishlist_hero_custom_product_button_McnAG4": {
@@ -125,7 +118,6 @@
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "popup_XDycdy",
         "price",
-        "custom_liquid_i4QxEF",
         "wishlist_hero_custom_product_button_McnAG4",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "share",
