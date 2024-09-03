@@ -161,12 +161,6 @@
           "label": "Kostenloser Versand ab Mindestbestellwert",
           "info": "Geben Sie den Betrag in der Hauptwährung Ihres Shops ein."
         },
-        "free_shipping_unreached_message": {
-          "label": "Kostenloser Versand, Nachricht „Nicht erreicht“"
-        },
-        "free_shipping_reached_message": {
-          "label": "Nachricht „Kostenloser Versand erreicht“"
-        },
         "free_shipping_exclude_products": {
           "label": "Produkte ausschließen"
         },

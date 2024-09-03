@@ -162,12 +162,6 @@
           "label": "Importo minimo di spedizione gratuita",
           "info": "Inserisci il valore dell'importo nella valuta principale del tuo negozio."
         },
-        "free_shipping_unreached_message": {
-          "label": "Messaggio di spedizione gratuita non raggiunta"
-        },
-        "free_shipping_reached_message": {
-          "label": "Messaggio di spedizione gratuita raggiunta"
-        },
         "free_shipping_exclude_products": {
           "label": "Escludi prodotti"
         },

@@ -398,7 +398,11 @@
       "shipping": "Doprava",
       "view_cart": "Zobrazit košík",
       "cart_success": "Produkt byl přidán to košíku",
-      "cart_totals": "Celkem"
+      "cart_totals": "Celkem",
+      "free_shipping": {
+        "unreached_message_html": "Nakup ještě za <strong>[remain]</strong> a získej  <strong>dopravu zdarma</strong>!",
+        "reached_message_html": "<strong>Gratulujeme!</strong> Získáváš dopravu zdarma."
+      }
     },
     "footer": {
       "payment": "Platební metody"

@@ -398,7 +398,11 @@
         "title": "Have an account?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in<\/a> to check out faster."
       },
-      "cart_totals": "Cart totals"
+      "cart_totals": "Cart totals",
+      "free_shipping": {
+        "unreached_message_html": "Buy <strong>[remain]</strong> more for <strong>free shipping</strong>!",
+        "reached_message_html": "<strong>Congratulations!</strong> You have free shipping."
+      }
     },
     "footer": {
       "payment": "Payment methods"

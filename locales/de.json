@@ -373,7 +373,11 @@
       "shipping": "Versand",
       "view_cart": "Warenkorb ansehen",
       "cart_success": "Das Produkt wurde dem Warenkorb hinzugefügt.",
-      "cart_totals": "Warenkorbsummen"
+      "cart_totals": "Warenkorbsummen",
+      "free_shipping": {
+        "unreached_message_html": "Kaufen Sie <strong>[remain]</strong> mehr für <strong>kostenlosen Versand</strong>!",
+        "reached_message_html": "<strong>Herzlichen Glückwunsch!</strong> Sie haben kostenlosen Versand."
+      }
     },
     "footer": {
       "payment": "Zahlungsmethoden"

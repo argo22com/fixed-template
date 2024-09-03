@@ -385,12 +385,6 @@
           "label": "Free shipping minimum amount",
           "info": "Enter the amount value in your store main currency."
         },
-        "free_shipping_unreached_message": {
-          "label": "Free shipping unreached message"
-        },
-        "free_shipping_reached_message": {
-          "label": "Free shipping reached message"
-        },
         "free_shipping_exclude_products": {
           "label": "Exclude products"
         },

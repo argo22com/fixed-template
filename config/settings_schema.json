@@ -1124,18 +1124,6 @@
         "default": "1000"
       },
       {
-        "type": "inline_richtext",
-        "id": "free_shipping_unreached_message",
-        "label": "t:settings_schema.cart.settings.free_shipping_unreached_message.label",
-        "default": "Spend <strong>[remain]<\/strong> more to reach <strong>Free Shipping<\/strong>!"
-      },
-      {
-        "type": "inline_richtext",
-        "id": "free_shipping_reached_message",
-        "label": "t:settings_schema.cart.settings.free_shipping_reached_message.label",
-        "default": "Congratulations! You've got free shipping."
-      },
-      {
         "type": "product_list",
         "id": "free_shipping_exclude_products",
         "label": "t:settings_schema.cart.settings.free_shipping_exclude_products.label"

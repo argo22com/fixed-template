@@ -239,12 +239,6 @@
           "label": "Montant minimum de livraison gratuite",
           "info": "Saisissez la valeur du montant dans la devise principale de votre boutique."
         },
-        "free_shipping_unreached_message": {
-          "label": "Message non atteint livraison gratuite"
-        },
-        "free_shipping_reached_message": {
-          "label": "Message de livraison gratuite atteint"
-        },
         "free_shipping_exclude_products": {
           "label": "Exclure des produits"
         },

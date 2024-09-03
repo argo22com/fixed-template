@@ -232,12 +232,6 @@
           "label": "送料無料最低金額",
           "info": "ストアの主要通貨で金額を入力します。"
         },
-        "free_shipping_unreached_message": {
-          "label": "送料無料未到達メッセージ"
-        },
-        "free_shipping_reached_message": {
-          "label": "送料無料メッセージ"
-        },
         "free_shipping_exclude_products": {
           "label": "製品を除外する"
         },
