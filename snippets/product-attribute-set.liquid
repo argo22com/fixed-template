@@ -50,7 +50,7 @@
       <th>{{ attribute_names[i] | capitalize }}:</th>
       {% for product in products %}
         {% assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
-        <td>
+        <td class="product-compare-{{ product.id }}">
           {% render 'metafield-display', attribute_metafield: attribute_metafield %}
         </td>
       {% endfor %}
