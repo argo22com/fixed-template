@@ -50,14 +50,14 @@
     },
     "search": {
       "search": "Hledání",
-      "clear": "Clear",
-      "view_all_results": "View all results",
+      "clear": "Vymazat",
+      "view_all_results": "Zobrazit všechny výsledky",
       "type": {
-        "products": "Products",
-        "articles": "Articles",
-        "collections": "Collections",
-        "pages": "Pages",
-        "suggestions": "Suggestions"
+        "products": "Produkty",
+        "articles": "Články",
+        "collections": "Kolekce",
+        "pages": "Stránky",
+        "suggestions": "Návrhy"
       }
     },
     "cart": {
@@ -81,28 +81,28 @@
       "false": "Ne"
     },
     "shipping_calculator": {
-      "heading": "Shipping calculator",
-      "errors_heading": "Errors",
-      "carriers": "Available shipping carriers",
-      "button": "Calculate",
-      "do_not_ship": "We do not ship to this destination.",
-      "delivery_date_one": "{{ count }} business day",
-      "delivery_date_many": "{{ count }} business days",
-      "delivery_date_range": "{{ minimum }} to {{ maximum }} business days"
+      "heading": "Kalkulačka přepravy",
+      "errors_heading": "Chyby",
+      "carriers": "Dostupní přepravci",
+      "button": "Výpočet",
+      "do_not_ship": "Do této destinace nezasíláme.",
+      "delivery_date_one": "{{ count }} pracovní den",
+      "delivery_date_many": "{{ count }} pracovních dní",
+      "delivery_date_range": "{{ minimum }} do {{ maximum }} pracovních dní"
     },
     "countdown": {
-      "days": "Days",
-      "hours": "Hours",
-      "minutes": "Minutes",
-      "seconds": "Seconds",
-      "error_msg": "Wrong syntax. Please enter the date with the syntax: yyyy-mm-dd or yyyy-mm-dd hh:ii. Example: 2023-01-15 or 2023-01-15 23:00.",
-      "expired_msg": "The countdown timer has been expired."
+      "days": "Dny",
+      "hours": "Hodiny",
+      "minutes": "Minuty",
+      "seconds": "Sekundy",
+      "error_msg": "Špatná syntaxe. Zadejte prosím datum se syntaxí: rrrr-mm-dd nebo rrrr-mm-dd hh:ii. Příklad: 2023-01-15 nebo 2023-01-15 23:00.",
+      "expired_msg": "Časovač odpočítávání vypršel."
     },
     "floating_bar": {
-      "recently_viewed": "Recently viewed",
-      "recently_viewed_empty": "There are no recently viewed products.",
-      "recently_viewed_open": "Open recently viewed box",
-      "back_to_top": "Back to top"
+      "recently_viewed": "Nedávno zobrazené",
+      "recently_viewed_empty": "Nejsou žádné nedávno zobrazené produkty.",
+      "recently_viewed_open": "Otevřít nedávno zobrazené",
+      "back_to_top": "Zpět nahoru"
     }
   },
   "newsletter": {
@@ -127,8 +127,8 @@
     "star_reviews_info": "{{ rating_value }} z {{ rating_max }} hvězdiček",
     "collapsible_content_title": "Sbalitelný obsah",
     "complementary_products": "Doplňkové produkty",
-    "skip_to_product_grid": "Skip to product grid",
-    "navigation_toggle": "Navigation toggle in sticky header"
+    "skip_to_product_grid": "Přejít na mřížku produktů",
+    "navigation_toggle": "Přepnout navigaci"
   },
   "blogs": {
     "article": {
@@ -227,8 +227,8 @@
       "inventory_low_stock": "Skladové zásoby docházejí",
       "inventory_low_stock_show_count": "Skladové zásoby docházejí, zbývající množství: {{ quantity }}",
       "inventory_out_of_stock": "Není skladem",
-      "quick_view": "Quick view a product",
-      "quick_view_button": "Quick view",
+      "quick_view": "Zobrazit rychlý náhled",
+      "quick_view_button": "Rychlý náhled",
       "view_product": "Zobrazit produkt",
       "number_of_reviews": {
         "one": "{{ count }} review",
@@ -284,9 +284,9 @@
       "filter_selected_accessibility": "{{ type }} (počet vybraných filtrů: {{ count }})",
       "show_more": "Zobrazit více",
       "show_less": "Zobrazit méně",
-      "show_filter": "Show filter",
-      "hide_filter": "Hide filter",
-      "categories_block_label": "Categories"
+      "show_filter": "Zobrazit filtr",
+      "hide_filter": "Skrýt filtr",
+      "categories_block_label": "Kategorie"
     }
   },
   "templates": {
@@ -308,12 +308,12 @@
         "few": "Pro dotaz {{ terms }} byl nalezen tento počet výsledků: {{ count }}",
         "many": "Pro dotaz {{ terms }} byl nalezen tento počet výsledků: {{ count }}"
       },
-      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "article": "Articles",
-      "suggestions": "Suggestions"
+      "no_products": "Nebyly nalezeny žádné produkty pro „{{ terms }}“. Zkontrolujte pravopis nebo zadejte jiné slovo či slovní spojení.",
+      "no_articles": "Nebyly nalezeny žádné články pro „{{ terms }}“. Zkontrolujte pravopis nebo zadejte jiné slovo či slovní spojení.",
+      "no_pages": "Nebyly nalezeny žádné stránky pro „{{ terms }}“. Zkontrolujte pravopis nebo zadejte jiné slovo či slovní spojení.",
+      "no_collections": "Nebyly nalezeny žádné kolekce pro „{{ terms }}“. Zkontrolujte pravopis nebo zadejte jiné slovo či slovní spojení.",
+      "article": "Článek",
+      "suggestions": "Návrhy"
     },
     "cart": {
       "cart": "Košík"
@@ -330,10 +330,10 @@
         "title": "Kontaktní formulář"
       },
       "address": {
-        "heading": "Our address"
+        "heading": "Kontaktní informace"
       },
       "opening_hour": {
-        "heading": "Opening hour"
+        "heading": "Otevírací doba"
       }
     },
     "404": {
@@ -341,14 +341,14 @@
       "subtext": "404"
     },
     "compare": {
-      "header_icon": "Product compare",
-      "add_button": "Add {{ product_title }} to the comparison list",
-      "add_to_compare": "Add to compare",
-      "popup": "Product compare popup",
-      "empty": "There are no products in comparison list.",
-      "warning": "Please select at least 2 products to compare.",
-      "success": "Added to the comparison list.",
-      "remove": "Remove"
+      "header_icon": "Porovnat",
+      "add_button": "Přidat {{ product_title }} do porovnávacího seznamu",
+      "add_to_compare": "Přidat do porovnávacího seznamu",
+      "popup": "Porovnávací seznam",
+      "empty": "Porovnávací seznam je prázdný",
+      "warning": "Pro porovnání vyberte alespoň 2 produkty.",
+      "success": "Produkt byl přidán do porovnávacího seznamu",
+      "remove": "Odstránit"
     }
   },
   "sections": {
@@ -357,14 +357,14 @@
       "menu": "Nabídka",
       "cart_count": {
         "one": "{{ count }} položka",
-        "other": "{{ count }} polož.",
-        "few": "{{ count }} polož.",
-        "many": "{{ count }} polož."
+        "other": "{{ count }} položek.",
+        "few": "{{ count }} položek.",
+        "many": "{{ count }} položek."
       },
       "breadcrumbs": {
         "home": "Home"
       },
-      "go_to_link": "Go to {{ title }}"
+      "go_to_link": "Jdi na {{ title }}"
     },
     "cart": {
       "title": "Váš košík",
@@ -393,12 +393,12 @@
         "title": "Máte účet?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Přihlaste se<\/a>, abyste si urychlili proces pokladny."
       },
-      "note_drawer": "Note",
-      "apply": "Apply",
-      "shipping": "Shipping",
-      "view_cart": "View cart",
-      "cart_success": "The product has been added to the cart.",
-      "cart_totals": "Cart totals"
+      "note_drawer": "Poznámka",
+      "apply": "Použít",
+      "shipping": "Doprava",
+      "view_cart": "Zobrazit košík",
+      "cart_success": "Produkt byl přidán to košíku",
+      "cart_totals": "Celkem"
     },
     "footer": {
       "payment": "Platební metody"
@@ -437,25 +437,25 @@
       "title": "Název stránky"
     },
     "background-color-swatches": {
-      "preview_title": "Preview color swatches",
+      "preview_title": "Náhled vzorků barev",
       "preview_description": "This preview is only visible on the Theme Editor page to help you add\/edit\/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
-      "group_item": "Group #{{ index }}"
+      "group_item": "Skupina #{{ index }}"
     },
     "collection_banner": {
-      "load_collection_icon": "Collection with icon",
-      "slider": "Slider"
+      "load_collection_icon": "Kolekce s ikonou",
+      "slider": "Posuvník"
     },
     "cookies_banner": {
-      "accept": "Accept",
-      "decline": "Decline"
+      "accept": "Přijmout",
+      "decline": "Zamítnout"
     },
     "google_maps": {
       "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates<\/a>.",
       "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key<\/a>."
     },
     "gallery": {
-      "list": "Gallery items",
-      "item_id_label": "Gallery item #{{ item_number }}"
+      "list": "Položky galerie",
+      "item_id_label": "Položka galerie #{{ item_number }}"
     },
     "product_tabs": {
       "reviews": {
@@ -478,7 +478,7 @@
       "details": "Podrobnosti účtu",
       "view_addresses": "Zobrazit adresy",
       "return": "Vrátit se k podrobnostem účtu",
-      "welcome_html": "Welcome back, <strong>{{ first_name }}<\/strong>!"
+      "welcome_html": "Vítejte zpět, <strong>{{ first_name }}<\/strong>!"
     },
     "account_fallback": "Účet",
     "log_in": "Přihlásit se",
@@ -586,7 +586,7 @@
   "gift_cards": {
     "issued": {
       "title": "Zde je vaše dárková karta v hodnotě {{ value }} pro obchod {{ shop }}!",
-      "subtext": "Вашият ваучер за подарък",
+      "subtext": "Vaše dárková karta",
       "gift_card_code": "Kód dárkové karty",
       "shop_link": "Pokračovat v nákupu",
       "remaining_html": "Zbývající částka: {{ balance }}",
