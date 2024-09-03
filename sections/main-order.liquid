@@ -169,6 +169,7 @@
                 role="cell"
                 data-label="{{ 'customer.order.price' | t }}"
               >
+                {% assign price_with_vat = line_item.variant.metafields.product_attributes.price_with_vat | round | times: 100 %}
                 {%- if line_item.original_price != line_item.final_price or line_item.unit_price_measurement -%}
                   <dl>
                     {%- if line_item.original_price != line_item.final_price -%}
@@ -176,7 +177,7 @@
                         <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                       </dt>
                       <dd class="regular-price">
-                        <s>{%- render 'price-format', price: line_item.original_price -%}</s>
+                        <s>{%- render 'price-format', price: price_with_vat -%}</s>
                       </dd>
                       <dt>
                         <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
@@ -189,7 +190,7 @@
                         <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                       </dt>
                       <dd>
-                        {%- render 'price-format', price: line_item.original_price -%}
+                        {%- render 'price-format', price: price_with_vat -%}
                       </dd>
                     {%- endif -%}
                     {%- if line_item.unit_price_measurement -%}
@@ -228,13 +229,14 @@
                 role="cell"
                 data-label="{{ 'customer.order.total' | t }}"
               >
+                {% assign price_with_vat = price_with_vat | times: line_item.quantity %}
                 {%- if line_item.original_line_price != line_item.final_line_price -%}
                   <dl>
                     <dt>
                       <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                     </dt>
                     <dd class="regular-price">
-                      <s>{%- render 'price-format', price: line_item.original_line_price -%}</s>
+                      <s>{%- render 'price-format', price: price_with_vat -%}</s>
                     </dd>
                     <dt>
                       <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
@@ -244,7 +246,7 @@
                     </dd>
                   </dl>
                 {%- else -%}
-                  {%- render 'price-format', price: line_item.original_line_price -%}
+                  {%- render 'price-format', price: price_with_vat -%}
                 {%- endif -%}
               </td>
             </tr>

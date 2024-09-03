@@ -105,7 +105,8 @@
                 {{ 'products.product.price.regular_price' | t }}
               </span>
               <s class="cart-item__old-price product-option">
-                {%- render 'price-format', price: item.original_line_price -%}
+                {% assign price_with_vat = item.variant.metafields.product_attributes.price_with_vat | round | times: 100 | times: item.quantity %}
+                {%- render 'price-format', price: price_with_vat -%}
               </s>
               <span class="visually-hidden">
                 {{ 'products.product.price.sale_price' | t }}
@@ -116,7 +117,8 @@
             </div>
           {%- else -%}
           <span class="price price--small font-body-semi-bold">
-            {%- render 'price-format', price: item.original_line_price -%}
+            {% assign price_with_vat = item.variant.metafields.product_attributes.price_with_vat | round | times: 100 | times: item.quantity %}
+            {%- render 'price-format', price: price_with_vat -%}
           </span>
           {%- endif -%}
 

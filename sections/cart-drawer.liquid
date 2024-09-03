@@ -238,13 +238,14 @@
 
                           <td class="cart-drawer__item-total cart-item__totals flex justify-space-between align-center flex-wrap" role="cell" headers="CartDrawer-ColumnTotal">
                             <div class="cart-item__price-wrapper">
+                              {% assign price_with_vat = item.variant.metafields.product_attributes.price_with_vat | round | times: 100 | times: item.quantity %}
                               {%- if item.original_line_price != item.final_line_price -%}
                                 <div class="cart-item__discounted-prices">
                                   <span class="visually-hidden">
                                     {{ 'products.product.price.regular_price' | t }}
                                   </span>
                                   <s class="cart-item__old-price product-option">
-                                    {%- render 'price-format', price: item.original_line_price -%}
+                                    {%- render 'price-format', price: price_with_vat -%}
                                   </s>
                                   <span class="visually-hidden">
                                     {{ 'products.product.price.sale_price' | t }}
@@ -255,7 +256,7 @@
                                 </div>
                               {%- else -%}
                                 <span class="price price--start">
-                                  {%- render 'price-format', price: item.original_line_price -%}
+                                  {%- render 'price-format', price: price_with_vat -%}
                                 </span>
                               {%- endif -%}
 

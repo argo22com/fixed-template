@@ -112,13 +112,14 @@ endpaginate
 
                             <a href="{{ item.url }}" class="cart-item__name h4 font-heading-bold">{{ item.variant.metafields.product_texts.title | escape }}</a>
 
+                            {% assign price_with_vat = item.variant.metafields.product_attributes.price_with_vat | round | times: 100 %}
                             {%- if item.original_price != item.final_price -%}
                               <div class="cart-item__discounted-prices small-hide medium-hide">
                                 <span class="visually-hidden">
                                   {{ 'products.product.price.regular_price' | t }}
                                 </span>
                                 <s class="cart-item__old-price product-option">
-                                  {%- render 'price-format', price: item.original_price -%}
+                                  {%- render 'price-format', price: price_with_vat -%}
                                 </s>
                                 <span class="visually-hidden">
                                   {{ 'products.product.price.sale_price' | t }}
@@ -129,7 +130,7 @@ endpaginate
                               </div>
                             {%- else -%}
                               <div class="product-option small-hide medium-hide">
-                                {%- render 'price-format', price: item.original_price -%}
+                                {%- render 'price-format', price: price_with_vat -%}
                               </div>
                             {%- endif -%}
 
@@ -274,6 +275,7 @@ endpaginate
 
                           <td class="cart-item__totals cart-page__item-totals flex justify-space-between align-center">
                             <div class="cart-item__price-wrapper">
+                              {% assign price_with_vat = item.variant.metafields.product_attributes.price_with_vat | round | times: 100 | times: item.quantity %}
                               {%- if item.original_line_price != item.final_line_price -%}
                                 <dl class="cart-item__discounted-prices">
                                   <dt class="visually-hidden">
@@ -281,7 +283,7 @@ endpaginate
                                   </dt>
                                   <dd>
                                     <s class="cart-item__old-price price price--end">
-                                      {%- render 'price-format', price: item.original_line_price -%}
+                                      {%- render 'price-format', price: price_with_vat -%}
                                     </s>
                                   </dd>
                                   <dt class="visually-hidden">
@@ -293,7 +295,7 @@ endpaginate
                                 </dl>
                               {%- else -%}
                                 <span class="price price--end">
-                                  {%- render 'price-format', price: item.original_line_price -%}
+                                  {%- render 'price-format', price: price_with_vat -%}
                                 </span>
                               {%- endif -%}
 
