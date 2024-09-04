@@ -100,7 +100,7 @@
                         <span class="product-form__error-message"></span>
                       </div>
       
-                      {%- render 'product-compare-item-form', section_id: section_id, product: c_product, show_quantity_selector: block.settings.show_quantity_selector, product_form_id: product_form_id -%}
+                      {%- render 'product-compare-item-form', section_id: section_id, product: c_product, show_quantity_selector: block.settings.show_quantity_selector, product_form_id: product_form_id, limit_button: true -%}
                     </product-form>
                   </product-info>
                 {%- when 'rating' -%}

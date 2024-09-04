@@ -1,3 +1,17 @@
+{% style %}
+  @media (max-width: 960px) {
+    .product-form__flex {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .quantity {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
   {%-liquid
     assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
@@ -11,7 +25,7 @@
     endif
   -%}
   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"{% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %} disabled{% endif %} class="product-variant-id">
-  <div class="product-form__buttons product-form__buttons--input product-form__buttons-single product-form__buttons--compare product-form__quantity-wrapper" id="Quantity-Form-{{ section_id }}">
+  <div class="product-form__buttons product-form__buttons--input product-form__buttons-single product-form__buttons--compare product-form__quantity-wrapper product-form__flex" id="Quantity-Form-{{ section_id }}">
     {%- if show_quantity_selector -%}
       {%- render 'main-product-quantity-label', cart_qty: cart_qty, section_id: section_id -%}
       <div class="product-form__input product-form__quantity">
@@ -52,6 +66,7 @@
       name="add"
       class="product-form__submit button flex cart-submit-button"
       {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %}
+      {% if limit_button == true %}style="min-width: 100%;"{% endif %}
     >
       {%- render 'icon-cart' -%}
       <div class="loading-overlay__spinner hidden">
