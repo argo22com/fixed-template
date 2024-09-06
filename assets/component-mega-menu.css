@@ -7,7 +7,7 @@
   overflow-y: auto;
   padding-bottom: 2.4rem;
   padding-top: 2.4rem;
-  transition: opacity 500ms cubic-bezier(.38,.65,.33,1), transform 500ms cubic-bezier(.38,.65,.33,1);
+  transition: opacity 0ms cubic-bezier(.38,.65,.33,1), transform 0ms cubic-bezier(.38,.65,.33,1);
 }
 
 @media screen and (min-width: 990px) {
