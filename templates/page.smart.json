@@ -27,20 +27,28 @@
           "type": "heading",
           "settings": {
             "heading": "FIXED SMART",
-            "size": "h1"
+            "size": "h0"
           }
         },
         "text_zym3RF": {
           "type": "text",
           "settings": {
-            "text": "<strong>CHYTRÉ LOKÁTORY.                                 MĚJTE SVÉ CENNOSTI VŽDY POD KONTROLOU<\/strong>",
+            "text": "<strong>Chytré lokátory<\/strong>",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "multiline_text_UQgPEB": {
+          "type": "multiline_text",
+          "settings": {
+            "text": "<p><strong>Mějte své cennosti vždy pod kontrolou<\/strong><\/p>",
             "text_style": "caption-with-letter-spacing"
           }
         }
       },
       "block_order": [
         "heading_ewtxqN",
-        "text_zym3RF"
+        "text_zym3RF",
+        "multiline_text_UQgPEB"
       ],
       "settings": {
         "layout": "stretched_grid",
