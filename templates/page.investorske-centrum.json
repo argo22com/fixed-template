@@ -249,7 +249,7 @@
         "layout": "grid",
         "image": "shopify:\/\/shop_images\/publicita_na_obrazovku_b44f5e95-a818-43a3-9a52-220e3f87edd4.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "large",
         "image_height_mobile": "medium-mobile",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
