@@ -326,12 +326,12 @@
         "column_yCyFpe": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/investorske_centrum_obdelnik.jpg",
+            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
             "icon": "check",
-            "title": "INVESTORSKÉ CENTRUM",
-            "text": "<p>Zde naleznete informace o našich finančních výsledcích a další zprávy týkající se hospodaření naší firmy<\/p>",
-            "link_label": "NAVŠTIVTE INVESTORSKÉ CENTRUM",
-            "link": "shopify:\/\/pages\/investorske-centrum",
+            "title": "SEZNAMTE SE S FIXED",
+            "text": "<p>Poznejte FIXED a všechny naše hodnoty.<\/p>",
+            "link_label": "SEZNAMTE SE S FIXED",
+            "link": "shopify:\/\/pages\/seznamte-se-s-fixed",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
