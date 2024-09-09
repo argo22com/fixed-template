@@ -20,68 +20,66 @@
         "padding_bottom": 40
       }
     },
-    "image_with_text_AwNNQH": {
-      "type": "image-with-text",
+    "image_banner_kDXK8x": {
+      "type": "image-banner",
       "blocks": {
-        "heading_xi6Qgt": {
+        "heading_wBG9MV": {
           "type": "heading",
           "settings": {
-            "heading": "nějaký nadpis?",
-            "heading_size": "h2",
-            "enable_bold_heading": true
+            "heading": "Mediální centrum",
+            "size": "h0"
           }
         },
-        "text_M496Hi": {
+        "text_8b9jXJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam faucibus mi quis velit. Etiam bibendum elit eget erat. Fusce suscipit libero eget elit. Nullam rhoncus aliquam metus. Integer pellentesque quam vel velit. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Pellentesque ipsum. Nullam at arcu a est sollicitudin euismod. Aliquam erat volutpat. Mauris elementum mauris vitae tortor. Pellentesque sapien. Maecenas libero.<\/p>",
+            "text": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
-          }
-        },
-        "button_DxhqAz": {
-          "type": "button",
-          "settings": {
-            "button_label": "Seznamte se s FIXED",
-            "button_link": "shopify:\/\/pages\/seznamte-se-s-fixed",
-            "button_style": "solid",
-            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
-        "heading_xi6Qgt",
-        "text_M496Hi",
-        "button_DxhqAz"
+        "heading_wBG9MV",
+        "text_8b9jXJ"
       ],
       "settings": {
-        "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/img_249cf445-3318-4524-830e-f613f104316a.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
+        "layout": "grid",
+        "image": "shopify:\/\/shop_images\/office-woman-hands-on-report.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "small",
+        "image_height_mobile": "small-mobile",
+        "desktop_content_position": "middle-center",
         "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "keep_ltr": false,
         "hide_when_empty_image": false,
         "preload": false,
+        "enable_parallax_scrolling_effect": false,
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#000000",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "collapsible_content_AHHHxy": {
@@ -132,7 +130,7 @@
       ],
       "settings": {
         "section_width": "grid",
-        "title": "Tiskové centrum",
+        "title": "Tiskové zprávy",
         "subtitle": "",
         "heading_size": "h1",
         "enable_section_box_layout": false,
@@ -420,7 +418,7 @@
   },
   "order": [
     "main",
-    "image_with_text_AwNNQH",
+    "image_banner_kDXK8x",
     "collapsible_content_AHHHxy",
     "multicolumn_TQEhqY",
     "collapsible_content_Gp6UAE",
