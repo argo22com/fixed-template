@@ -12,8 +12,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "title_background_image": "shopify:\/\/shop_images\/blog_cover.png",
-        "posts_per_page": 6,
+        "title_background_image": "shopify:\/\/shop_images\/podpora_8.png",
+        "posts_per_page": 12,
         "show_tags": true,
         "layout": "collage",
         "show_image": true,
