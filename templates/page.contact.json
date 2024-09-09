@@ -165,7 +165,7 @@
         "text_PzkdHa"
       ],
       "settings": {
-        "grid_layout": "full_bleed",
+        "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/magsafe_42ee34d7-6026-4b23-99cd-3cc6ffc71f2e.png",
         "height": "adapt",
         "desktop_image_width": "small",
