@@ -389,7 +389,7 @@
         "color_highlight_text": "#e94200",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#e94200",
         "background_container": "#ececec",
@@ -431,7 +431,7 @@
         "featured_collection_Ccb8Vb"
       ],
       "settings": {
-        "title": "Další kožené výrobky",
+        "title": "Výrobky z veganské kůže",
         "subtitle": "",
         "heading_size": "h1",
         "full_width": false,
@@ -528,7 +528,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -582,7 +582,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -591,26 +591,6 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
-      }
-    },
-    "video_XhEQtC": {
-      "type": "video",
-      "settings": {
-        "title": "Podívejte se na příběh vzniku koženého produktu od začátku do konce.",
-        "subtitle": "",
-        "heading_size": "h2",
-        "cover_image": "shopify:\/\/shop_images\/rucni_vyroba_video_cover.jpg",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=EtSwUKtAff4",
-        "description": "FIXED ruční výroba v Prostějově",
-        "autoplay": false,
-        "enable_controls": false,
-        "enable_video_looping": false,
-        "full_width": false,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": true,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
@@ -624,7 +604,6 @@
     "featured_products_tabs_AyhByH",
     "rich_text_w69QNV",
     "image_with_text_MUzzfc",
-    "image_with_text_76ABzN",
-    "video_XhEQtC"
+    "image_with_text_76ABzN"
   ]
 }
