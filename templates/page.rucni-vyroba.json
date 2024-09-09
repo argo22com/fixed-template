@@ -23,6 +23,42 @@
     "slideshow_8r6nPV": {
       "type": "slideshow",
       "blocks": {
+        "slide_d3AYiw": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kuze_banner-desktop.jpg",
+            "badge_label": "",
+            "heading": "RUČNÍ VÝROBA",
+            "text": "KOŽENÉ DOPLŇKY PRO VAŠE CHYTRÁ ZAŘÍZENÍ",
+            "hide_text_on_mobile": false,
+            "button_label": "",
+            "price": "",
+            "link": "",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#f87171",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
+            "colors_text_mobile": "#ffffff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
         "slide_68Kgzz": {
           "type": "slide",
           "settings": {
@@ -94,48 +130,12 @@
             "colors_button_text_mobile": "#ffffff",
             "colors_button_mobile": "#000000"
           }
-        },
-        "slide_d3AYiw": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/kuze_banner-desktop.jpg",
-            "badge_label": "",
-            "heading": "RUČNÍ VÝROBA",
-            "text": "KOŽENÉ DOPLŇKY PRO VAŠE CHYTRÁ ZAŘÍZENÍ",
-            "hide_text_on_mobile": false,
-            "button_label": "",
-            "price": "",
-            "link": "",
-            "button_style": "primary",
-            "button_open_new_tab": false,
-            "box_align": "middle-left",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
-            "colors_text": "#ffffff",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#f87171",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
-            "colors_text_mobile": "#ffffff",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
-          }
         }
       },
       "block_order": [
+        "slide_d3AYiw",
         "slide_68Kgzz",
-        "slide_DJbWYU",
-        "slide_d3AYiw"
+        "slide_DJbWYU"
       ],
       "settings": {
         "layout": "stretched_grid",
