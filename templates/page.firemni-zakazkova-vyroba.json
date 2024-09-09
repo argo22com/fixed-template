@@ -58,17 +58,18 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/firemninakupy.jpg",
-        "image_overlay_opacity": 0,
+        "image": "shopify:\/\/shop_images\/oxford_brown.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/oxford_brown.jpg",
+        "image_overlay_opacity": 40,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
         "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "keep_ltr": false,
         "hide_when_empty_image": false,
         "preload": false,
         "enable_parallax_scrolling_effect": false,
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "show_text_below_image": true,
         "color_text": "#ffffff",
         "gradient_heading_desktop": "",
@@ -337,7 +338,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/100520221652157110-1024x683.jpg",
             "row": 1,
-            "gradient": "top",
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -347,7 +348,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/IMG_7359-1024x768.jpg",
             "row": 1,
-            "gradient": "top",
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -357,7 +358,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/100520221652156074-1024x683.jpg",
             "row": 1,
-            "gradient": "top",
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -367,7 +368,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/FIXSMS-C2-BR_003-1024x1024.jpg",
             "row": 2,
-            "gradient": "bottom",
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -377,7 +378,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/uni-1-1024x1024.jpg",
             "row": 2,
-            "gradient": "bottom",
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -387,7 +388,16 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/FIXSMS-STN2-BL_004-1024x1024.jpg",
             "row": 2,
-            "gradient": "bottom",
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_A3AJ4B": {
+          "type": "gallery-image",
+          "settings": {
+            "row": 1,
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -399,13 +409,14 @@
         "gallery_image_LmTch6",
         "gallery_image_q48CHi",
         "gallery_image_tfEHAf",
-        "gallery_image_fnw7PW"
+        "gallery_image_fnw7PW",
+        "gallery_image_A3AJ4B"
       ],
       "settings": {
         "title": "Prohlédněte si další produkty z kožené kolekce",
         "heading_size": "h2",
         "max_rows": 2,
-        "color_scheme": "scheme-ed30eab5-ffda-4ed0-95af-80a522aeb93f",
+        "color_scheme": "background-1",
         "show_more_text": "Load more pictures",
         "button_style": "primary",
         "button_size": "normal",
