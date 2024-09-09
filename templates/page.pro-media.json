@@ -182,7 +182,7 @@
         "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/Martin_Kubac_62d60859-2d3a-4a89-b193-512148e1a58a.jpg",
         "height": "small",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
