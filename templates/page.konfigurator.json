@@ -159,7 +159,6 @@
       "settings": {
         "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/config-side-01.jpg",
-        "second_image": "shopify:\/\/shop_images\/config-side-01.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
