@@ -347,7 +347,7 @@
             "title": "FIXED Tag Card",
             "text": "<p>Chytrý lokátor ve tvaru kreditní karty, skvěle zapadne do peněženky, kabelky či jiného zavazadla, která jsou pak vždy hlídané.<\/p><p>Tag Card se dá bezdrátově nabíjet, jedno nabití vydrží až 3 měsíce. Odolné zpracování karty z tvrzeného plastu a certifikace IP67 chrání kartu před vlhkostí a prachem.<\/p>",
             "link_label": "VÍCE O TAG CARD",
-            "link": "",
+            "link": "shopify:\/\/products\/smart-tracker-fixed-tag-card-s-podporou-find-my-bezdratove-nabijeni-oranzovy",
             "button_style": "secondary",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -356,11 +356,30 @@
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
+        },
+        "column_wNf6b7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tag_reflector.jpg",
+            "icon": "check",
+            "title": "FIXED Tag Reflector",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "VÍCE O TAG REFLECTOR",
+            "link": "shopify:\/\/products\/smart-tracker-fixed-tag-reflector-s-podporou-find-my-cerny",
+            "button_style": "secondary",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#e94200",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
         }
       },
       "block_order": [
         "column_639AQA",
-        "column_YGyC9A"
+        "column_YGyC9A",
+        "column_wNf6b7"
       ],
       "settings": {
         "title": "",
@@ -370,7 +389,7 @@
         "media_width_desktop": "100",
         "image_ratio": "adapt",
         "text_position": "bottom",
-        "columns_desktop": 2,
+        "columns_desktop": 3,
         "columns_tablet": 3,
         "desktop_gap": 30,
         "auto_fit": false,
