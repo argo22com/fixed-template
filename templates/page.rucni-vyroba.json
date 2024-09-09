@@ -408,10 +408,12 @@
           "settings": {
             "title": "Novinky",
             "product_list": [
-
+              "tasticka-pres-rameno-s-kapsou-fixed-verona-s-cernou-snurkou-pro-mobilni-telefony-do-7-broskvova",
+              "pouzdro-fixed-siena-pro-notebooky-a-tablety-o-uhlopricce-do-13-svetle-tyrkysove",
+              "pouzdro-fixed-york-pro-notebooky-o-uhlopricce-do-13-svetle-zlute"
             ],
-            "products_to_show": 4,
-            "columns_desktop": 4
+            "products_to_show": 3,
+            "columns_desktop": 3
           }
         },
         "featured_collection_Ccb8Vb": {
