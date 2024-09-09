@@ -202,28 +202,6 @@
         "padding_bottom": 36
       }
     },
-    "contact_form_n3Vh8f": {
-      "type": "contact-form",
-      "blocks": {
-        "social_media_icons_BJmiQa": {
-          "type": "social_media_icons",
-          "settings": {
-            "title": "Sledujte nás"
-          }
-        }
-      },
-      "block_order": [
-        "social_media_icons_BJmiQa"
-      ],
-      "settings": {
-        "title": "Napište nám",
-        "subtitle": "",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "text_icons_pUPhQy": {
       "type": "text-icons",
       "blocks": {
@@ -231,6 +209,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "fast_forward",
+            "custom_icon": "shopify:\/\/shop_images\/facebook.png",
             "title": "Facebook",
             "subheading": "",
             "link": "https:\/\/www.facebook.com\/fixedcesko",
@@ -241,6 +220,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/instagram-logo.png",
             "title": "Instagram",
             "subheading": "",
             "link": "https:\/\/www.instagram.com\/fixedcesko\/",
@@ -251,6 +231,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/youtube.png",
             "title": "Youtube",
             "subheading": "",
             "link": "https:\/\/www.youtube.com\/channel\/UCqZqDkRGsTIIVCcqCkfogvw",
@@ -261,6 +242,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/tik-tok.png",
             "title": "Tiktok",
             "subheading": "",
             "link": "https:\/\/www.tiktok.com\/@fixedcesko",
@@ -271,6 +253,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
+            "custom_icon": "shopify:\/\/shop_images\/linkedin.png",
             "title": "Linkedin",
             "subheading": "",
             "link": "https:\/\/www.linkedin.com\/company\/fixedzone\/mycompany\/",
@@ -533,7 +516,6 @@
     "image_banner_kDXK8x",
     "collapsible_content_AHHHxy",
     "multicolumn_TQEhqY",
-    "contact_form_n3Vh8f",
     "text_icons_pUPhQy",
     "collapsible_content_Gp6UAE",
     "graph_cVdgJT",
