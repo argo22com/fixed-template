@@ -33,8 +33,8 @@
         "text_8b9jXJ": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "text": "",
+            "text_style": "caption-with-letter-spacing"
           }
         }
       },
