@@ -43,11 +43,11 @@
         "text_3XXkNR"
       ],
       "settings": {
-        "layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+        "layout": "stretched_grid",
+        "image": "shopify:\/\/shop_images\/making-a-budget-tracking-finances.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/making-a-budget-tracking-finances.jpg",
         "image_overlay_opacity": 20,
-        "image_height": "medium",
+        "image_height": "small",
         "image_height_mobile": "medium-mobile",
         "desktop_content_position": "bottom-left",
         "desktop_content_alignment": "left",
