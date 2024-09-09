@@ -145,6 +145,64 @@
         "padding_bottom": 36
       }
     },
+    "multicolumn_TQEhqY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PTFjer": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Martin_Kubac.jpg",
+            "icon": "check",
+            "title": "Kontakt pro média",
+            "text": "<h3><strong>Martin Kubáč<\/strong><\/h3><p>PR Manažer<\/p><p><a href=\"mailto:martin.kubac@fixed.zone\" target=\"_blank\">Martin.Kubac@fixed.zone<\/a><\/p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_PTFjer"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "right",
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_aifGRG": {
       "type": "image-with-text",
       "blocks": {
@@ -407,6 +465,7 @@
     "main",
     "image_with_text_AwNNQH",
     "collapsible_content_AHHHxy",
+    "multicolumn_TQEhqY",
     "image_with_text_aifGRG",
     "collapsible_content_Gp6UAE",
     "graph_cVdgJT",
