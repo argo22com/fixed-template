@@ -40,7 +40,7 @@
         "buttons_jfLw8a": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "ZJISTIT VÍCE",
+            "button_label_1": "",
             "button_link_1": "",
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
