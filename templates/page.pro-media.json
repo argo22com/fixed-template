@@ -224,6 +224,95 @@
         "padding_bottom": 36
       }
     },
+    "text_icons_pUPhQy": {
+      "type": "text-icons",
+      "blocks": {
+        "text_icon_gnD4XG": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "fast_forward",
+            "title": "Facebook",
+            "subheading": "",
+            "link": "https:\/\/www.facebook.com\/fixedcesko",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_BWwWyt": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "title": "Instagram",
+            "subheading": "",
+            "link": "https:\/\/www.instagram.com\/fixedcesko\/",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_C4f6Wt": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "title": "Youtube",
+            "subheading": "",
+            "link": "https:\/\/www.youtube.com\/channel\/UCqZqDkRGsTIIVCcqCkfogvw",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_XFpXyW": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "title": "Tiktok",
+            "subheading": "",
+            "link": "https:\/\/www.tiktok.com\/@fixedcesko",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_xAaQiB": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "title": "Linkedin",
+            "subheading": "",
+            "link": "https:\/\/www.linkedin.com\/company\/fixedzone\/mycompany\/",
+            "open_link_in_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_icon_gnD4XG",
+        "text_icon_BWwWyt",
+        "text_icon_C4f6Wt",
+        "text_icon_XFpXyW",
+        "text_icon_xAaQiB"
+      ],
+      "settings": {
+        "title": "Sledujte nás",
+        "subtitle": "",
+        "heading_size": "h1",
+        "icon_width_desktop": 30,
+        "text_position": "bottom",
+        "enable_heading_in_box": false,
+        "columns_desktop": 5,
+        "columns_tablet": 3,
+        "auto_fit": false,
+        "column_alignment": "center",
+        "highlight_icon": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "border_width": 1,
+        "border_opacity": 0,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "square",
+        "blur_background": false,
+        "columns_mobile": "1",
+        "icon_width_mobile": 30,
+        "border_spacing_mobile": 0,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collapsible_content_Gp6UAE": {
       "type": "collapsible-content",
       "blocks": {
@@ -445,6 +534,7 @@
     "collapsible_content_AHHHxy",
     "multicolumn_TQEhqY",
     "contact_form_n3Vh8f",
+    "text_icons_pUPhQy",
     "collapsible_content_Gp6UAE",
     "graph_cVdgJT",
     "featured_blog_zrC8bP",
