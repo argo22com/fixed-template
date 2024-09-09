@@ -267,30 +267,6 @@
             "custom_title": "POUZDRA NA TABLETY"
           }
         },
-        "featured_collection_JUiHYj": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pouzdra-na-notebooky",
-            "custom_image": "shopify:\/\/shop_images\/pouzdra_na_notebooky.jpg",
-            "custom_title": "POUZDRA NA NOTEBOOKY"
-          }
-        },
-        "featured_collection_yirBDm": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pouzdra-na-telefony",
-            "custom_image": "shopify:\/\/shop_images\/pouzdra_na_telefony.jpg",
-            "custom_title": "POUZDRA NA TELEFONY"
-          }
-        },
-        "featured_collection_8hEV4J": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "penezenky-s-lokatorem-smart",
-            "custom_image": "shopify:\/\/shop_images\/penezenky_s_lokatorem.jpg",
-            "custom_title": "PENĚŽENKA S LOKÁTOREM"
-          }
-        },
         "featured_collection_cGFVCd": {
           "type": "featured_collection",
           "settings": {
@@ -310,14 +286,11 @@
       },
       "block_order": [
         "featured_collection_iXWMGe",
-        "featured_collection_JUiHYj",
-        "featured_collection_yirBDm",
-        "featured_collection_8hEV4J",
         "featured_collection_cGFVCd",
         "featured_collection_pejaJ6"
       ],
       "settings": {
-        "title": "Kategorie kožených výrobků",
+        "title": "Kategorie výrobků z veganské kůže",
         "subtitle": "",
         "heading_size": "h1",
         "image_ratio": "adapt",
