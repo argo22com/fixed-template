@@ -57,26 +57,26 @@
         "enable_parallax_scrolling_effect": false,
         "mobile_content_alignment": "left",
         "show_text_below_image": false,
-        "color_text": "#fff",
+        "color_text": "#ffffff",
         "gradient_heading_desktop": "",
-        "color_button_text_1": "#000",
-        "color_button_1": "#fff",
-        "color_button_text_2": "#000",
-        "color_button_2": "#fff",
-        "colors_badge_foreground": "#fff",
-        "colors_badge_background": "#F87171",
-        "color_countdown_foreground": "#000",
-        "color_countdown_background": "#fff",
-        "color_text_mobile": "#fff",
+        "color_button_text_1": "#000000",
+        "color_button_1": "#ffffff",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#ffffff",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
         "gradient_heading_mobile": "",
-        "color_button_text_1_mobile": "#000",
-        "color_button_1_mobile": "#fff",
-        "color_button_text_2_mobile": "#000",
-        "color_button_2_mobile": "#fff",
-        "colors_badge_foreground_mobile": "#fff",
-        "colors_badge_background_mobile": "#F87171",
-        "color_countdown_foreground_mobile": "#000",
-        "color_countdown_background_mobile": "#fff",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
         "background_container_mobile": "#565656",
         "gradient_background_container_mobile": "",
         "padding_top": 0,
@@ -158,10 +158,10 @@
             "link": "https:\/\/www.linkedin.com\/in\/martinkubac\/",
             "button_style": "link",
             "button_open_new_tab": false,
-            "card_color_text": "#000",
-            "color_button_text": "#fff",
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         }
@@ -198,6 +198,28 @@
         "text_boxes_border_thickness": 0,
         "text_boxes_border_opacity": 0,
         "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form_n3Vh8f": {
+      "type": "contact-form",
+      "blocks": {
+        "social_media_icons_BJmiQa": {
+          "type": "social_media_icons",
+          "settings": {
+            "title": "Sledujte nás"
+          }
+        }
+      },
+      "block_order": [
+        "social_media_icons_BJmiQa"
+      ],
+      "settings": {
+        "title": "Napište nám",
+        "subtitle": "",
+        "heading_size": "h1",
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -422,6 +444,7 @@
     "image_banner_kDXK8x",
     "collapsible_content_AHHHxy",
     "multicolumn_TQEhqY",
+    "contact_form_n3Vh8f",
     "collapsible_content_Gp6UAE",
     "graph_cVdgJT",
     "featured_blog_zrC8bP",
