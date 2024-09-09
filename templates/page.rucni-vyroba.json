@@ -35,6 +35,7 @@
             "price": "",
             "link": "",
             "button_style": "primary",
+            "button_open_new_tab": false,
             "box_align": "middle-left",
             "text_alignment": "left",
             "keep_ltr": false,
@@ -70,6 +71,7 @@
             "price": "",
             "link": "",
             "button_style": "primary",
+            "button_open_new_tab": false,
             "box_align": "middle-left",
             "text_alignment": "left",
             "keep_ltr": false,
@@ -105,6 +107,7 @@
             "price": "",
             "link": "",
             "button_style": "primary",
+            "button_open_new_tab": false,
             "box_align": "middle-left",
             "text_alignment": "left",
             "keep_ltr": false,
@@ -259,7 +262,7 @@
         "featured_collection_iXWMGe": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "pouzdra-na-tablety",
             "custom_image": "shopify:\/\/shop_images\/pouzdra_na_tablety.jpg",
             "custom_title": "POUZDRA NA TABLETY"
           }
@@ -267,7 +270,7 @@
         "featured_collection_JUiHYj": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "pouzdra-na-notebooky",
             "custom_image": "shopify:\/\/shop_images\/pouzdra_na_notebooky.jpg",
             "custom_title": "POUZDRA NA NOTEBOOKY"
           }
@@ -356,7 +359,8 @@
           "settings": {
             "button_label": "Zjistit více",
             "button_link": "shopify:\/\/pages\/pouzdro-profit",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -385,6 +389,7 @@
         "color_highlight_text": "#e94200",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#e94200",
         "background_container": "#ececec",
@@ -523,6 +528,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -576,6 +582,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
