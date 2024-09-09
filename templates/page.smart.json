@@ -52,7 +52,7 @@
       ],
       "settings": {
         "layout": "stretched_grid",
-        "image": "shopify:\/\/shop_images\/banner-desktop_Tag_Card_BL_noAFM.jpg",
+        "image": "shopify:\/\/shop_images\/banner-desktop_Tag_Card_BL_AFM.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
@@ -363,7 +363,7 @@
             "image": "shopify:\/\/shop_images\/tag_reflector.jpg",
             "icon": "check",
             "title": "FIXED Tag Reflector",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pohl<\/p>",
             "link_label": "VÍCE O TAG REFLECTOR",
             "link": "shopify:\/\/products\/smart-tracker-fixed-tag-reflector-s-podporou-find-my-cerny",
             "button_style": "secondary",
