@@ -12,6 +12,7 @@
     "main": {
       "type": "main-blog",
       "settings": {
+        "title_background_image": "shopify:\/\/shop_images\/blog_cover.png",
         "posts_per_page": 6,
         "show_tags": true,
         "layout": "collage",
