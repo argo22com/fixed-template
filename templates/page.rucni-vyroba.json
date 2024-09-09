@@ -420,9 +420,9 @@
           "type": "featured_collection",
           "settings": {
             "title": "Bestsellery",
-            "collection": "",
-            "products_to_show": 4,
-            "columns_desktop": 4,
+            "collection": "veganska-kuze",
+            "products_to_show": 3,
+            "columns_desktop": 3,
             "show_view_all": true,
             "view_all_style": "solid"
           }
