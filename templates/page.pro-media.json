@@ -270,9 +270,10 @@
         "column_XNKtCz": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
             "icon": "check",
             "title": "SEZNAMTE SE S FIXED",
-            "text": "",
+            "text": "<p>Poznejte FIXED a všechny naše hodnoty.<\/p>",
             "link_label": "SEZNAMTE SE S FIXED",
             "link": "shopify:\/\/pages\/seznamte-se-s-fixed",
             "button_style": "link",
