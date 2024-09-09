@@ -155,9 +155,9 @@
             "icon": "check",
             "title": "Kontakt pro média",
             "text": "<h3><strong>Martin Kubáč<\/strong><\/h3><p>PR Manažer<\/p><p><a href=\"mailto:martin.kubac@fixed.zone\" target=\"_blank\">Martin.Kubac@fixed.zone<\/a><\/p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
+            "link_label": "Linkedin",
+            "link": "https:\/\/www.linkedin.com\/in\/martinkubac\/",
+            "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000",
             "color_button_text": "#fff",
@@ -175,16 +175,16 @@
         "subtitle": "",
         "heading_size": "h1",
         "media_type": "image",
-        "media_width_desktop": "100",
-        "image_ratio": "adapt",
-        "text_position": "right",
-        "columns_desktop": 3,
-        "columns_tablet": 3,
+        "media_width_desktop": "50",
+        "image_ratio": "square",
+        "text_position": "left",
+        "columns_desktop": 1,
+        "columns_tablet": 1,
         "desktop_gap": 30,
         "auto_fit": false,
         "column_alignment": "left",
         "enable_shadow": true,
-        "background_transparent": false,
+        "background_transparent": true,
         "button_label": "Button label",
         "button_link": "",
         "button_open_new_tab": false,
@@ -201,71 +201,6 @@
         "text_boxes_radius": 10,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "image_with_text_aifGRG": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_66YemH": {
-          "type": "heading",
-          "settings": {
-            "heading": "Kontakt pro média",
-            "heading_size": "h2",
-            "enable_bold_heading": true
-          }
-        },
-        "text_P63fJn": {
-          "type": "text",
-          "settings": {
-            "text": "<h3><strong>Martin Kubáč<\/strong><\/h3><p>PR Manažer<\/p><p><a href=\"mailto:martin.kubac@fixed.zone\" target=\"_blank\">Martin.Kubac@fixed.zone<\/a><\/p>",
-            "text_style": "body"
-          }
-        },
-        "button_cqf3py": {
-          "type": "button",
-          "settings": {
-            "button_label": "LinkedIn",
-            "button_link": "https:\/\/www.linkedin.com\/in\/martinkubac\/",
-            "button_style": "solid",
-            "button_open_new_tab": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_66YemH",
-        "text_P63fJn",
-        "button_cqf3py"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/Martin_Kubac_62d60859-2d3a-4a89-b193-512148e1a58a.jpg",
-        "height": "small",
-        "desktop_image_width": "small",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 12,
-        "padding_bottom": 16,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#00a9e0",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "background_image_section": "shopify:\/\/shop_images\/podpora_8.png",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#a4a6af"
       }
     },
     "collapsible_content_Gp6UAE": {
@@ -466,7 +401,6 @@
     "image_with_text_AwNNQH",
     "collapsible_content_AHHHxy",
     "multicolumn_TQEhqY",
-    "image_with_text_aifGRG",
     "collapsible_content_Gp6UAE",
     "graph_cVdgJT",
     "multicolumn_CaLPxP"
