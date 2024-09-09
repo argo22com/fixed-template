@@ -1433,20 +1433,3 @@ back-to-top .icon {
 .spurit-simplemodal-data #SNBE_form_email {
   width: 100%!important;
 }
-
-.color-swatch-background {
-  position: relative;
-  height: 100%;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.color-swatch-background span {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  transform-origin: 0% 100%;
-}

@@ -2330,3 +2330,21 @@ parallax-element.background-overlay:before {
 parallax-element.background-overlay .parallax-inner {
   z-index: -2;
 }
+
+.color-swatch-background {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.color-swatch-background span {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+}
