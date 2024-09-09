@@ -9,65 +9,6 @@
 */
 {
   "sections": {
-    "172250355022f3457c": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "image_with_text_CeyKqL": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_DTfPxY": {
-          "type": "heading",
-          "settings": {
-            "heading": "FIXED.zone a. s.",
-            "heading_size": "h1",
-            "enable_bold_heading": true
-          }
-        },
-        "text_PzkdHa": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Výrobcem, dovozcem a distributorem produktů značky FIXED je společnost FIXED.zone a.s..<br\/>Budějovická 19, 370 01, Homole, Czech Republic<\/p><p><strong>IČ:<\/strong> 26036363, <strong>DIČ:<\/strong> CZ26036363<\/p><p><strong>Bankovní spojení:   <\/strong>CZK 8724732 \/ 0800 Česká spořitelna, a.s.<\/p><p><strong>EUR IBAN<\/strong> CZ8108000000000008866992, <\/p><p>S<strong>WIFT: <\/strong>GIBACZPXXXX<\/p><p><strong>Spisová značka:<\/strong> C 10575 vedená u Krajského soudu v Českých Budějovicích<\/p><p><\/p><p><\/p><p><\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_DTfPxY",
-        "text_PzkdHa"
-      ],
-      "settings": {
-        "grid_layout": "full_bleed",
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#000000",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
-      }
-    },
     "multicolumn_jWx9hX": {
       "type": "multicolumn",
       "blocks": {
@@ -165,7 +106,7 @@
         "column_GDembi"
       ],
       "custom_css": [
-        ".multicolumn-card__image-wrapper {box-shadow: 0 0px 0px 0px rgba(var(--color-foreground), .0), 0 0px 0px 0px rgba(var(--color-foreground), .0);}"
+        ".multicolumn-card__image-wrapper {box-shadow: 0 0px 0px 0px rgba(var(--color-foreground), 0), 0 0px 0px 0px rgba(var(--color-foreground), 0);}"
       ],
       "settings": {
         "title": "Kontaktujte nás",
@@ -198,6 +139,60 @@
         "text_boxes_radius": 10,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_with_text_CeyKqL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_DTfPxY": {
+          "type": "heading",
+          "settings": {
+            "heading": "FIXED.zone a. s.",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_PzkdHa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Výrobcem, dovozcem a distributorem produktů značky FIXED je společnost FIXED.zone a.s..<br\/>Budějovická 19, 370 01, Homole, Czech Republic<\/p><p><strong>IČ:<\/strong> 26036363, <strong>DIČ:<\/strong> CZ26036363<\/p><p><strong>Bankovní spojení:   <\/strong>CZK 8724732 \/ 0800 Česká spořitelna, a.s.<\/p><p><strong>EUR IBAN<\/strong> CZ8108000000000008866992, <\/p><p>S<strong>WIFT: <\/strong>GIBACZPXXXX<\/p><p><strong>Spisová značka:<\/strong> C 10575 vedená u Krajského soudu v Českých Budějovicích<\/p><p><\/p><p><\/p><p><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DTfPxY",
+        "text_PzkdHa"
+      ],
+      "settings": {
+        "grid_layout": "full_bleed",
+        "image": "shopify:\/\/shop_images\/magsafe.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
       }
     },
     "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f": {
@@ -340,9 +335,8 @@
     }
   },
   "order": [
-    "172250355022f3457c",
-    "image_with_text_CeyKqL",
     "multicolumn_jWx9hX",
+    "image_with_text_CeyKqL",
     "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f",
     "form",
     "image_with_text_YMQkmf"
