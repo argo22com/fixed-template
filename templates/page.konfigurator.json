@@ -157,7 +157,7 @@
         "text_xnJ6tx"
       ],
       "settings": {
-        "grid_layout": "stretched_grid",
+        "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/config-side-01.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
@@ -211,7 +211,7 @@
         "text_LgN74N"
       ],
       "settings": {
-        "grid_layout": "stretched_grid",
+        "grid_layout": "grid",
         "image": "shopify:\/\/shop_images\/config-side-02.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
