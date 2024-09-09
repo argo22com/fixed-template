@@ -207,7 +207,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/O2_guru_leather-1-1024x807.png",
             "row": 1,
-            "gradient": "top",
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -217,7 +217,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/1B1A4684-1024x683.jpg",
             "row": 1,
-            "gradient": "top",
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -227,7 +227,16 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/03-1024x683.jpg",
             "row": 1,
-            "gradient": "top",
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_tBnJeE": {
+          "type": "gallery-image",
+          "settings": {
+            "row": 1,
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -237,7 +246,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/storage-one-FIXSM-SMMW2-1024x683.jpg",
             "row": 2,
-            "gradient": "bottom",
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -247,7 +256,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/storage-one-FIXSMS-C2-1024x683.jpg",
             "row": 2,
-            "gradient": "bottom",
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -257,7 +266,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/amusnet-1024x682.jpg",
             "row": 2,
-            "gradient": "bottom",
+            "gradient": "none",
             "caption": "",
             "subcaption": ""
           }
@@ -287,6 +296,7 @@
         "gallery_image_Gf63YR",
         "gallery_image_rqQTqF",
         "gallery_image_epDgFJ",
+        "gallery_image_tBnJeE",
         "gallery_image_z6HMJc",
         "gallery_image_U3pajr",
         "gallery_image_tnMBiQ",
@@ -297,7 +307,7 @@
         "title": "Ukázky realizací",
         "heading_size": "h2",
         "max_rows": 2,
-        "color_scheme": "scheme-ed30eab5-ffda-4ed0-95af-80a522aeb93f",
+        "color_scheme": "background-1",
         "show_more_text": "Zobrazit více fotek",
         "button_style": "primary",
         "button_size": "normal",
