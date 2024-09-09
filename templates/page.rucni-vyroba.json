@@ -286,7 +286,7 @@
         "featured_collection_8hEV4J": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "penezenky-s-lokatorem-smart",
             "custom_image": "shopify:\/\/shop_images\/penezenky_s_lokatorem.jpg",
             "custom_title": "PENĚŽENKA S LOKÁTOREM"
           }
@@ -294,15 +294,15 @@
         "featured_collection_cGFVCd": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "penezenky",
             "custom_image": "shopify:\/\/shop_images\/Penezenky_pro_airtag.jpg",
-            "custom_title": "PENĚŽENKY PRO AIRTAG"
+            "custom_title": "PENĚŽENKY"
           }
         },
         "featured_collection_pejaJ6": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "pasovky",
             "custom_image": "shopify:\/\/shop_images\/pasovky.jpg",
             "custom_title": "PASOVKY"
           }
