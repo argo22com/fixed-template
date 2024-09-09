@@ -43,8 +43,9 @@
         "text_8b9jXJ"
       ],
       "settings": {
-        "layout": "grid",
+        "layout": "stretched_grid",
         "image": "shopify:\/\/shop_images\/office-woman-hands-on-report.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/office-woman-hands-on-report.jpg",
         "image_overlay_opacity": 30,
         "image_height": "small",
         "image_height_mobile": "small-mobile",
@@ -55,7 +56,7 @@
         "preload": false,
         "enable_parallax_scrolling_effect": false,
         "mobile_content_alignment": "left",
-        "show_text_below_image": true,
+        "show_text_below_image": false,
         "color_text": "#fff",
         "gradient_heading_desktop": "",
         "color_button_text_1": "#000",
