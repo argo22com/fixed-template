@@ -135,7 +135,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Mohu si u Vás nechat ušít\/ upravit pouzdro na telefon na míru?",
-            "icon": "cellphone",
+            "icon": "arrow_right",
             "row_content": "<p>Obzvláště nás těší jakýkoli zájem o produkty z naší prostějovské dílny. Ačkoli se to nemusí zdát, jakékoli úpravy jednotlivých kusů pouzder, jsou řádově časově náročnější, bohužel není v našich silách požadavky na úpravy naplnit. Snažíme se, abychom většinovou poptávku po pouzdrech naplnili výběrem z portfólia standardně vyráběných pouzder různých velikostí, barev a materiálů.<\/p>",
             "page": ""
           }
@@ -144,7 +144,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Jak vyberu správnou velikost univerzálního pouzdra?",
-            "icon": "question_mark_circle",
+            "icon": "arrow_right",
             "row_content": "",
             "page": "jak-si-vybrat-spravnou-velikost-uni-pouzdra"
           }
@@ -153,7 +153,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Tracker se po určité době odpojí od telefonu, nebo se nepřipojí, když jsem v jeho blízkosti, jak to mohu vyřešit?",
-            "icon": "arrows_expand",
+            "icon": "arrow_right",
             "row_content": "<p>Operační systém Android automaticky potlačuje aplikace běžící na pozadí, které mají nízkou aktivitu. To způsobí, že jakmile běží aplikace Smart na pozadí, je systémem deaktivována, následně trackery nefungují správně. Toto chování systému je možné vyřešit nastavením optimalizace přímo v telefonu.<br\/>Návody pro správné nastavení systému naleznete zde:<\/p><ul><li><a href=\"https:\/\/www.fixed.zone\/manual-pro-optimalizaci-baterie-u-telefonu-samsung\"><strong>SAMSUNG<\/strong><\/a><\/li><li><a href=\"https:\/\/www.fixed.zone\/manual-pro-optimalizaci-baterie-u-telefonu-huawei\/\"><strong>HUAWEI<\/strong><\/a><\/li><li><a href=\"https:\/\/www.fixed.zone\/manual-pro-optimalizaci-baterie-u-telefonu-xiaomi\/\"><strong>XIAOMI<\/strong><\/a><\/li><\/ul>",
             "page": ""
           }
@@ -162,7 +162,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Jak správně nalepit ochranné sklo na mobily Samsung Galaxy S?",
-            "icon": "cellphone",
+            "icon": "arrow_right",
             "row_content": "<p><strong>1. Naskenujte prsty k identifikaci<\/strong><\/p><p>Než se pustíte do lepení skla, nejprve naskenujte (identifikujte) své prsty, ať pak můžete například odemykat obrazovku jednoduše dotekem. Po nalepení ochranného skla už by skenování prstů nebylo možné. Máte-li toto nastavené, pokračujte dále.<\/p><p><strong>2. Zapněte funkci „Dotyková citlivost“<\/strong><\/p><p>U mobilů Samsung Galaxy S se po nalepení skla může stát, že displej nebude na vaše dotyky reagovat tak, jak by měl. Má to snadné řešení – zapněte funkci „Dotyková citlivost“, a to následovně: <\/p><ul><li>Přejděte do nabídky „<em><strong>Nastaven<\/strong><\/em><em>í<\/em>“ a vyberte možnost „<em><strong>Displej<\/strong><\/em>“ <\/li><li>Klikněte na „<em><strong>Dotyková citlivost<\/strong><\/em>“ V tuto chvíli by funkce Dotyková citlivost měla být zapnutá.<\/li><\/ul><p><strong>3. Nalepte sklo na displej<\/strong><\/p><p>Teď už se vrhněte na samotné lepení skla. S řádným nalepením vám pomůže naše <a href=\"https:\/\/www.youtube.com\/watch?v=jc4OqiDGie8\"><span style=\"text-decoration:underline\">video<\/span><\/a><\/p><p><strong>4. Počkejte 10 minut<\/strong><\/p><p>Máte hotovo, nic dalšího dělat nemusíte. Pro bezproblémovou funkčnost displeje je ale potřeba aspoň 10 minut počkat, aby pořádně „uzrálo“ lepidlo na ochranném skle. Po uplynutí 10 minut mobil několikrát odemkněte a zamkněte, pak už by vše mělo fungovat a telefon můžete rovnou používat.<\/p><p><strong>Pokud se vám nalepení ochranného skla FIXED na Samsung Galaxy S nedaří, napište nám do live chatu tady na webu, rádi vám poradíme.<\/strong><\/p><p><\/p>",
             "page": ""
           }
