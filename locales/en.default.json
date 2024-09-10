@@ -400,8 +400,8 @@
       },
       "cart_totals": "Cart totals",
       "free_shipping": {
-        "unreached_message_html": "Buy <strong>[remain]</strong> more for <strong>free shipping</strong>!",
-        "reached_message_html": "<strong>Congratulations!</strong> You have free shipping."
+        "unreached_message_html": "Buy <strong>[remain]<\/strong> more for <strong>free shipping<\/strong>!",
+        "reached_message_html": "<strong>Congratulations!<\/strong> You have free shipping."
       }
     },
     "footer": {
@@ -681,6 +681,10 @@
         "discount_order_stacking": {
           "few": "Discounts on order",
           "many": "Discounts on order"
+        },
+        "subtotal_label_with_quantity": {
+          "few": "Subtotal (number of items: %{count})",
+          "many": "Subtotal (number of items: %{count})"
         }
       },
       "shipping": {
