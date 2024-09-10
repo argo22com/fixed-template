@@ -192,7 +192,7 @@
         "many": "{{ count }} polož."
       },
       "breadcrumbs": {
-        "home": "Home"
+        "home": "Domov"
       },
       "go_to_link": "Prejdi na  {{ title }}"
     },
@@ -230,8 +230,8 @@
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Prihláste sa<\/a>, aby ste si urýchlili proces pokladnice."
       },
       "free_shipping": {
-        "unreached_message_html": "Nakúp ešte za <strong>[remain]</strong> a získaj <strong>dopravu zdarma</strong>!",
-        "reached_message_html": "<strong>Gratulujeme!</strong> Získavaš dopravu zdarma."
+        "unreached_message_html": "Nakúp ešte za <strong>[remain]<\/strong> a získaj <strong>dopravu zdarma<\/strong>!",
+        "reached_message_html": "<strong>Gratulujeme!<\/strong> Získavaš dopravu zdarma."
       }
     },
     "featured_blog": {
