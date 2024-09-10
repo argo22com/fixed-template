@@ -92,7 +92,7 @@
             "show_inventory_quantity": false,
             "sku_enable": true,
             "sku_label": "Produktový kód",
-            "tags_enable": false,
+            "tags_enable": true,
             "tags_label": "Tags",
             "collections_enable": true,
             "collections_label": "Kolekce"
