@@ -36,34 +36,20 @@
             "text": "{{ page.metafields.custom.dynmic_content.value.hero_subtitle.value }}",
             "text_style": "subtitle"
           }
-        },
-        "buttons_8EceKT": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Návody",
-            "button_link_1": "",
-            "button_style_1": "primary",
-            "button_open_new_tab_1": false,
-            "button_label_2": "Často kladené otázky",
-            "button_link_2": "",
-            "button_style_2": "primary",
-            "button_open_new_tab_2": false
-          }
         }
       },
       "block_order": [
         "heading_ewtxqN",
-        "text_zym3RF",
-        "buttons_8EceKT"
+        "text_zym3RF"
       ],
       "settings": {
         "layout": "grid",
         "image": "shopify:\/\/shop_images\/podpora_8.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
-        "image_height_mobile": "medium-mobile",
+        "image_height_mobile": "small-mobile",
         "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "keep_ltr": false,
         "hide_when_empty_image": false,
         "preload": false,
