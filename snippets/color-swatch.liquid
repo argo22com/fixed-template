@@ -44,24 +44,22 @@
     >
   {% elsif has_background %}
       <div class="color-swatch-background">
-        {% if color_size == 1  %}
-          <span style="background: {{ color_metaobject.color_hex_list.value | first | color_to_rgb }}; width: 100%; height: 100%"></span>
-        {% elsif color_size == 2 %}
-          {% for color_value in color_metaobject.color_hex_list.value  %}
+        {% for color_value in color_metaobject.color_hex_list.value %}
+          {% if color_size == 1  %}
+            <span style="background: {{ color_value | color_to_rgb }}; width: 100%; height: 100%"></span>
+          {% elsif color_size == 2 %}
             {% if forloop.index0 == 0 %}
               {% assign left = -50 %}
             {% else %}
               {% assign left = 50 %}
             {% endif %}
             <span style="background: {{ color_value | color_to_rgb }}; width: 100%; height: 100%; left: {{ left }}%"></span>
-          {% endfor %}
-        {% else %}
-          {% for color_value in color_metaobject.color_hex_list.value  %}
+          {% else %}
             {% assign rotation = angle | times: forloop.index0 %}
             {% assign skew = -90 | plus: angle %}
-            <span style="background: {{ color_value | color_to_rgb }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg)"></span>
-          {% endfor %}
-        {% endif %}
+            <span style="background: {{ color_value | color_to_rgb }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);"></span>
+          {% endif %}
+        {% endfor %}
       </div>
   {%- endif -%}
   <span class="bt-tooltip__inner bt-tooltip__inner--top">

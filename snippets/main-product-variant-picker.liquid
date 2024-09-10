@@ -226,24 +226,22 @@
                             endif
                           %}
                           <div class="color-swatch-background">
-                            {% if color_size == 1  %}
-                              <span style="background: {{ color_list | first | color_to_rgb }}; width: 100%; height: 100%"></span>
-                            {% elsif color_size == 2 %}
-                              {% for color_value in color_list  %}
+                            {% for color_value in color_list  %}
+                              {% if color_size == 1  %}
+                                <span style="background: {{ color_value | color_to_rgb }}; width: 100%; height: 100%"></span>
+                              {% elsif color_size == 2 %}
                                 {% if forloop.index0 == 0 %}
                                   {% assign left = -50 %}
                                 {% else %}
                                   {% assign left = 50 %}
                                 {% endif %}
                                 <span style="background: {{ color_value | color_to_rgb }}; width: 100%; height: 100%; left: {{ left }}%"></span>
-                              {% endfor %}
-                            {% else %}
-                              {% for color_value in color_list  %}
+                              {% else %}
                                 {% assign rotation = angle | times: forloop.index0 %}
                                 {% assign skew = -90 | plus: angle %}
-                                <span style="background: {{ color_value | color_to_rgb }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg)"></span>
-                              {% endfor %}
-                            {% endif %}
+                                <span style="background: {{ color_value | color_to_rgb }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if color_size == 3 %}top: -10%; right: -25%; height: 70%; width: 70%{% endif %}"></span>
+                              {% endif %}
+                          {% endfor %}
                           </div>
 
                           <span class="js-title-tooltip bt-tooltip__inner bt-tooltip__inner--top {% if color_out_of_stock %}d-none{% endif %}" style="z-index: 10">
