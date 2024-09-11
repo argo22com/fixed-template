@@ -149,7 +149,6 @@
                 {%- if contains_product -%}
                   {% liquid
                     assign color_option_names = ""
-                    assign testik = ""
                     if option.name == settings.color_name
                       paginate shop.metaobjects.color_codes_hex.values by 10000
                         assign color_codes = shop.metaobjects.color_codes_hex.values
@@ -158,7 +157,7 @@
                           for color_code_hex in color_codes
                             for product_variation in variation_products
                               assign variation_color = product_variation.options_by_name[color_name].values | first
-                              assign testik = testik | append: variation_color | append: ','
+
                               if color_code_hex.code == variation_color
                                 if color_code_hex.image.value
                                   assign colors = color_code_hex.image.value
