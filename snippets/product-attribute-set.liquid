@@ -61,12 +61,14 @@
       <div class="grid">
         {% for i in (0..keys_length)  %}
           {% assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
-          <div class="grid__item">
-            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
-            <div class="rte">
-              {% render 'metafield-display', attribute_metafield: attribute_metafield %}
+          {% if attribute_metafield.value != nill %}
+            <div class="grid__item">
+              <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
+              <div class="rte">
+                {% render 'metafield-display', attribute_metafield: attribute_metafield %}
+              </div>
             </div>
-          </div>
+          {% endif %}
         {% endfor %}
       </div>
   </div>
