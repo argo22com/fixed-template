@@ -100,6 +100,20 @@
                   >
                     {{- c_product.title -}}
                   </a>
+
+                {%- when 'description' -%}
+                  <div class="compare-popup__description rte">{{ c_product.description }}</div>
+                {%- when 'options' -%}
+                  {%- unless c_product.has_only_default_variant -%}
+                    <compare-variants
+                      data-url="{{ product_url }}"
+                      id="compare-variants-loader-{{ section_id }}"
+                      data-section="{{ section_id }}"
+                    >
+                    </compare-variants>
+                  {%- endunless -%}
+                {%- when 'availability' -%}
+                  {%- render 'product-compare-item-inventory', section_id: section_id, product: c_product -%}
                 {%- when 'price' -%}
                   <div class="no-js-hidden" id="price-{{ section_id }}" role="status">
                     {%- liquid
@@ -115,19 +129,6 @@
                     section_id: section_id,
                     no_shadow: true
                   -%}
-                {%- when 'description' -%}
-                  <div class="compare-popup__description rte">{{ c_product.description }}</div>
-                {%- when 'options' -%}
-                  {%- unless c_product.has_only_default_variant -%}
-                    <compare-variants
-                      data-url="{{ product_url }}"
-                      id="compare-variants-loader-{{ section_id }}"
-                      data-section="{{ section_id }}"
-                    >
-                    </compare-variants>
-                  {%- endunless -%}
-                {%- when 'availability' -%}
-                  {%- render 'product-compare-item-inventory', section_id: section_id, product: c_product -%}
                 {%- when 'add_to_cart' -%}
                   <product-info
                     id="ProductInfo-{{ section_id }}"
