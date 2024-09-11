@@ -1433,3 +1433,7 @@ back-to-top .icon {
 .spurit-simplemodal-data #SNBE_form_email {
   width: 100%!important;
 }
+
+.gap-2 {
+  gap: 2rem;
+}
