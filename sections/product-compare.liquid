@@ -3,7 +3,7 @@
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
-  
+
   {%- if customer.b2b? -%}
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
@@ -21,24 +21,35 @@
 {%- capture sizes -%}
   (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)
 {%- endcapture -%}
-<div class="results" data-item-count="{{ search.results.size }}" data-item-ids="{{ search.results | map: 'id' | join: ',' }}" data-block-types="{{ section.blocks | map: 'type' | join: ',' }}" data-section="{{ section.id }}">
+<div
+  class="results"
+  data-item-count="{{ search.results.size }}"
+  data-item-ids="{{ search.results | map: 'id' | join: ',' }}"
+  data-block-types="{{ section.blocks | map: 'type' | join: ',' }}"
+  data-section="{{ section.id }}"
+>
   <div class="compare-popup no-js-hidden">
     <table>
       {%- for block in section.blocks -%}
         <tr>
           <th>{{ block.settings.title }}</th>
           {%- for c_product in search.results -%}
-            {%-liquid
+            {%- liquid
               assign section_id = section.id | append: '-' | append: c_product.id
               assign product_form_id = 'product-form-' | append: section_id
               assign product_url = c_product.url | split: '?' | first
             -%}
-            
+
             <td class="product-compare-{{ c_product.id }}" id="{{ section_id }}-{{ block.type }}-{{ forloop.index }}">
               {%- case block.type -%}
                 {%- when 'featured_image' -%}
                   <div class="compare-popup__media-wrapper">
-                    <a href="{{ product_url }}" class="media media--{{ block.settings.image_ratio }}" id="Featured-Media-{{ section_id }}" aria-labelledby="product-compare-title-{{ section.id }}-{{ c_product.id }}">
+                    <a
+                      href="{{ product_url }}"
+                      class="media media--{{ block.settings.image_ratio }}"
+                      id="Featured-Media-{{ section_id }}"
+                      aria-labelledby="product-compare-title-{{ section.id }}-{{ c_product.id }}"
+                    >
                       {%- liquid
                         assign product_image_url = c_product.featured_media | image_url: width: 50
                         assign srcset = product_image_url | append: ' 50w'
@@ -55,43 +66,91 @@
                           assign srcset = srcset | append: ', ' | append: product_image_url | append: ' 450w'
                         endif
                       -%}
-                      {{ c_product.featured_media | image_url: width: 300 | image_tag: sizes: sizes, srcset: srcset, width: c_product.featured_media.width, height: c_product.featured_media.height, class: 'motion-reduce', loading: 'lazy' }}
+                      {{
+                        c_product.featured_media
+                        | image_url: width: 300
+                        | image_tag:
+                          sizes: sizes,
+                          srcset: srcset,
+                          width: c_product.featured_media.width,
+                          height: c_product.featured_media.height,
+                          class: 'motion-reduce',
+                          loading: 'lazy'
+                      }}
                     </a>
                     <compare-remove-button class="db margin-top-1rem">
-                      <a href="#" class="compare-popup__remove-link link flex justify-center align-center" data-product-id="{{ c_product.id }}">
+                      <a
+                        href="#"
+                        class="compare-popup__remove-link link flex justify-center align-center"
+                        data-product-id="{{ c_product.id }}"
+                      >
                         <span class="underlined-link">{{ 'templates.compare.remove' | t }}</span>
                       </a>
                     </compare-remove-button>
                   </div>
                 {%- when 'vendor' -%}
-                  <a href="{{ c_product.vendor | url_for_vendor }}" class="link color-foreground db w100 link light">{{ 'products.product.by_vendor_html' | t: vendor: c_product.vendor }}</a>  
+                  <a href="{{ c_product.vendor | url_for_vendor }}" class="link color-foreground db w100 link light">
+                    {{- 'products.product.by_vendor_html' | t: vendor: c_product.vendor -}}
+                  </a>
                 {%- when 'title' -%}
-                  <a href="{{ product_url }}" class="h4 link" id="product-compare-title-{{ section.id }}-{{ c_product.id }}">{{ c_product.title }}</a>
+                  <a
+                    href="{{ product_url }}"
+                    class="h6 link"
+                    id="product-compare-title-{{ section.id }}-{{ c_product.id }}"
+                  >
+                    {{- c_product.title -}}
+                  </a>
                 {%- when 'price' -%}
                   <div class="no-js-hidden" id="price-{{ section_id }}" role="status">
-                    {%-liquid
+                    {%- liquid
                       unless c_product.quantity_price_breaks_configured?
                         render 'price', product: c_product, use_variant: true, show_badges: false, price_class: 'price--large flex align-center', show_in_card: false
                       else
-                        render 'main-product-price-per-item', product: c_product, section_id: section_id, price_classes: 'price price--large flex align-center'  
+                        render 'main-product-price-per-item', product: c_product, section_id: section_id, price_classes: 'price price--large flex align-center'
                       endunless
                     -%}
                   </div>
-                  {%- render 'main-product-volume-pricing-note', product: c_product, section_id: section_id, no_shadow: true -%}
+                  {%- render 'main-product-volume-pricing-note',
+                    product: c_product,
+                    section_id: section_id,
+                    no_shadow: true
+                  -%}
                 {%- when 'description' -%}
                   <div class="compare-popup__description rte">{{ c_product.description }}</div>
                 {%- when 'options' -%}
                   {%- unless c_product.has_only_default_variant -%}
-                    <compare-variants data-url="{{ product_url }}" id="compare-variants-loader-{{ section_id }}" data-section="{{ section_id }}">
+                    <compare-variants
+                      data-url="{{ product_url }}"
+                      id="compare-variants-loader-{{ section_id }}"
+                      data-section="{{ section_id }}"
+                    >
                     </compare-variants>
-                  {%- endunless -%}  
+                  {%- endunless -%}
                 {%- when 'availability' -%}
                   {%- render 'product-compare-item-inventory', section_id: section_id, product: c_product -%}
                 {%- when 'add_to_cart' -%}
-                  <product-info id="ProductInfo-{{ section_id }}" data-section="{{ section_id }}" data-original-section="product-compare-item" data-url="{{ product_url }}" data-update-url="false" data-has-outside-elements="true" data-index="{{ forloop.index }}">
+                  <product-info
+                    id="ProductInfo-{{ section_id }}"
+                    data-section="{{ section_id }}"
+                    data-original-section="product-compare-item"
+                    data-url="{{ product_url }}"
+                    data-update-url="false"
+                    data-has-outside-elements="true"
+                    data-index="{{ forloop.index }}"
+                  >
                     <product-form class="product-form">
-                      <div class="product-form__error-message-wrapper alert alert--error alert--small" role="alert" hidden>
-                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                      <div
+                        class="product-form__error-message-wrapper alert alert--error alert--small"
+                        role="alert"
+                        hidden
+                      >
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          role="presentation"
+                          class="icon icon-error"
+                          viewBox="0 0 13 13"
+                        >
                           <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
                           <circle cx="6.5" cy="6.5" r="5.5" fill="currentColor" stroke="currentColor" stroke-width="0.7"/>
                           <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
@@ -99,13 +158,27 @@
                         </svg>
                         <span class="product-form__error-message"></span>
                       </div>
-      
-                      {%- render 'product-compare-item-form', section_id: section_id, product: c_product, show_quantity_selector: block.settings.show_quantity_selector, product_form_id: product_form_id, limit_button: true -%}
+
+                      {%- render 'product-compare-item-form',
+                        section_id: section_id,
+                        product: c_product,
+                        show_quantity_selector: block.settings.show_quantity_selector,
+                        product_form_id: product_form_id,
+                        limit_button: true
+                      -%}
                     </product-form>
                   </product-info>
                 {%- when 'rating' -%}
-                  <div class="rating rating--in-main flex align-center" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: c_product.metafields.reviews.rating.value, rating_max: c_product.metafields.reviews.rating.value.scale_max }}">
-                    <div aria-hidden="true" class="rating-star flex por" style="--rating: {{ c_product.metafields.reviews.rating.value.rating | default: 0 }}; --rating-max: {{ c_product.metafields.reviews.rating.value.scale_max | default: 5 }}; --number-gap: {% if c_product.metafields.reviews.rating.value != blank %}{{ c_product.metafields.reviews.rating.value.scale_max | minus: c_product.metafields.reviews.rating.value.rating | minus: 1.00 | at_least: 0 | ceil }}{% else %}4{% endif %};">
+                  <div
+                    class="rating rating--in-main flex align-center"
+                    role="img"
+                    aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: c_product.metafields.reviews.rating.value, rating_max: c_product.metafields.reviews.rating.value.scale_max }}"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="rating-star flex por"
+                      style="--rating: {{ c_product.metafields.reviews.rating.value.rating | default: 0 }}; --rating-max: {{ c_product.metafields.reviews.rating.value.scale_max | default: 5 }}; --number-gap: {% if c_product.metafields.reviews.rating.value != blank %}{{ c_product.metafields.reviews.rating.value.scale_max | minus: c_product.metafields.reviews.rating.value.rating | minus: 1.00 | at_least: 0 | ceil }}{% else %}4{% endif %};"
+                    >
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 0.44043L11.7816 6.07563L18 6.97923L13.5 11.3652L14.562 17.5596L9 14.6352L3.438 17.5596L4.5 11.3652L0 6.97923L6.2184 6.07563L9 0.44043Z" fill="currentColor"/>
                       </svg>
@@ -128,15 +201,15 @@
                     {%- assign metafield_parts = block.settings.namespace_key | split: '.' -%}
                     {%- if c_product.metafields[metafield_parts[0]][metafield_parts[1]] != blank -%}
                       {{ c_product.metafields[metafield_parts[0]][metafield_parts[1]] | metafield_tag }}
-                    {%- endif -%}  
-                  {%- endif -%}    
-              {%- endcase -%}  
+                    {%- endif -%}
+                  {%- endif -%}
+              {%- endcase -%}
             </td>
-          {%- endfor -%}  
+          {%- endfor -%}
         </tr>
       {%- endfor -%}
       {% if section.settings.show_attribute_set %}
-       {% render 'product-attribute-set', products: search.results %}
+        {% render 'product-attribute-set', products: search.results %}
       {% endif %}
     </table>
   </div>
