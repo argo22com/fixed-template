@@ -194,7 +194,7 @@
                 {{- 'customer.addresses.set_default' | t -}}
               </label>
             </div>
-            <div class="customer-form__buttons flex justify-space-between element-small-margin-top">
+            <div class="customer-form__buttons flex flex-wrap justify-space-between element-small-margin-top">
               <button class="button">
                 <span>{{ 'customer.addresses.add' | t }}</span>
               </button>
@@ -215,26 +215,28 @@
               <h2 class="font-heading-bold">{{ 'customer.addresses.default' | t }}</h2>
             {%- endif -%}
             {{ address | format_address }}
-            <button
-              type="button"
-              id="EditFormButton_{{ address.id }}"
-              class="button"
-              aria-label="{{ 'customer.addresses.edit_address' | t }} {{ forloop.index }}"
-              aria-controls="EditAddress_{{ address.id }}"
-              aria-expanded="false"
-              data-address-id="{{ address.id }}"
-            >
-              <span>{{ 'customer.addresses.edit' | t }}</span>
-            </button>
-            <button
-              type="button"
-              class="button button--secondary"
-              aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
-              data-target="{{ address.url }}"
-              data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
-            >
-              <span>{{ 'customer.addresses.delete' | t }}</span>
-            </button>
+            <div class="flex flex-wrap justify-space-between element-small-margin-top">
+              <button
+                type="button"
+                id="EditFormButton_{{ address.id }}"
+                class="button"
+                aria-label="{{ 'customer.addresses.edit_address' | t }} {{ forloop.index }}"
+                aria-controls="EditAddress_{{ address.id }}"
+                aria-expanded="false"
+                data-address-id="{{ address.id }}"
+              >
+                <span>{{ 'customer.addresses.edit' | t }}</span>
+              </button>
+              <button
+                type="button"
+                class="button button--secondary"
+                aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
+                data-target="{{ address.url }}"
+                data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+              >
+                <span>{{ 'customer.addresses.delete' | t }}</span>
+              </button>
+            </div>
             <div id="EditAddress_{{ address.id }}" class="customer__form-wrapper element-margin-top">
               <h2 class="font-heading-bold margin0">{{ 'customer.addresses.edit_address' | t }}</h2>
               {%- form 'customer_address', address, class: 'element-small-margin-top' -%}
