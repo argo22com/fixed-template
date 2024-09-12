@@ -101,7 +101,7 @@
                     {{- c_product.title -}}
                   </a>
                 {%- when 'price' -%}
-                  <div class="no-js-hidden" id="price-{{ section_id }}" role="status">
+                  <div class="no-js-hidden button--bold flex justify-right" id="price-{{ section_id }}" role="status">
                     {%- liquid
                       unless c_product.quantity_price_breaks_configured?
                         render 'price', product: c_product, use_variant: true, show_badges: false, price_class: 'price--large flex align-start strong', show_in_card: false
