@@ -42,6 +42,9 @@
 {% else %}
   {% if vat_price_rounded %}
     <span class="strong price__vat">
+      {{ vat_price_rounded | money_with_currency }} {{ shop.currency_symbol }}
+    </span>
+    <span class="strong price__vat">
       {{ vat_price_rounded | money_without_trailing_zeros }} {{ shop.currency_symbol }}
     </span>
   {% endif %}
