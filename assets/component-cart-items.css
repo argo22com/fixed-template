@@ -138,6 +138,7 @@
 }
 
 .product-option > dt {
+  align-self: start;
   flex-grow: 2;
   word-break: keep-all;
 }
