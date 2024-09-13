@@ -458,6 +458,14 @@
     "gallery": {
       "list": "Gallery items",
       "item_id_label": "Gallery item #{{ item_number }}"
+    },
+    "product_tabs": {
+      "reviews": {
+        "title": "Ocena"
+      }
+    },
+    "gallery_lightbox": {
+      "load_more": "Załaduj więcej zdjęć"
     }
   },
   "localization": {
