@@ -396,7 +396,11 @@
       "shipping": "Shipping",
       "view_cart": "View cart",
       "cart_success": "The product has been added to the cart.",
-      "cart_totals": "Cart totals"
+      "cart_totals": "Cart totals",
+      "free_shipping": {
+        "unreached_message_html": "Kup za <strong>[remain]<\/strong> i zyskaj <strong>bezpłatną wysyłkę<\/strong>!",
+        "reached_message_html": "Gratulacje! Otrzymujesz bezpłatną wysyłkę."
+      }
     },
     "footer": {
       "payment": "Metody płatności"
