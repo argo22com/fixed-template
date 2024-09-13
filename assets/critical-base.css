@@ -2135,6 +2135,10 @@ card-product-colors {
   font-size: 3rem;
 }
 
+.price__vat__note {
+  font-size: 1.4rem;
+}
+
 .price--sold-out .price__availability,
 .price__regular {
   display: block;
