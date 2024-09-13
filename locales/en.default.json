@@ -207,7 +207,7 @@
         "sale_price": "Sale price",
         "unit_price": "Unit price",
         "varies_html": "{{ price_from }} - {{ price_to }}",
-        "price_with_vat": "Price with VAT"
+        "price_without_vat": "Price with VAT"
       },
       "share": "Share this product",
       "sold_out": "Sold out",
