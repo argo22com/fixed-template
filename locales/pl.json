@@ -391,12 +391,12 @@
         "title": "Masz już konto?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Zaloguj się<\/a>, aby szybciej realizować zakupy."
       },
-      "note_drawer": "Note",
-      "apply": "Apply",
-      "shipping": "Shipping",
-      "view_cart": "View cart",
-      "cart_success": "The product has been added to the cart.",
-      "cart_totals": "Cart totals",
+      "note_drawer": "Notatka",
+      "apply": "Używać",
+      "shipping": "Transport",
+      "view_cart": "Zobacz koszyk",
+      "cart_success": "Produkt został dodany do koszyka.",
+      "cart_totals": "W sumie",
       "free_shipping": {
         "unreached_message_html": "Kup za <strong>[remain]<\/strong> i zyskaj <strong>bezpłatną wysyłkę<\/strong>!",
         "reached_message_html": "Gratulacje! Otrzymujesz bezpłatną wysyłkę."
