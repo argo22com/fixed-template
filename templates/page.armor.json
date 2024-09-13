@@ -299,6 +299,40 @@
         "overlay_color": "#1e40af"
       }
     },
+    "featured_collection_Jbdayq": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Top produkty Armor",
+        "subtitle": "",
+        "collection": "skla-armor",
+        "heading_size": "h1",
+        "products_to_show": 3,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "enable_desktop_slider": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/armor_desktop.jpg",
+        "image_position_desktop": "left",
+        "image_height": "adapt_product_list",
+        "image_height_mobile": "34",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn_XKCb7x": {
       "type": "multicolumn",
       "blocks": {
@@ -446,6 +480,7 @@
     "image_with_text_h7EAQW",
     "image_with_text_x39Mgh",
     "image_with_text_bXVgiV",
+    "featured_collection_Jbdayq",
     "multicolumn_XKCb7x",
     "video_jrq3tR",
     "featured_products_tabs_AyhByH"
