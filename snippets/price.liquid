@@ -36,7 +36,7 @@
 {% assign converted_price = base_price | money_with_currency %}
 <p>
 <span class="strong">
-{{ converted_price }}
+  {{ product.price | money_without_trailing_zeros }} {{ shop.currency_symbol }}
 </span>
   {{ 'products.product.price.price_with_vat' | t }} 
 </p>
