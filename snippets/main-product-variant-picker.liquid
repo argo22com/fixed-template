@@ -147,6 +147,35 @@
                   endfor
                 -%}
                 {%- if contains_product -%}
+                  {% liquid
+                    assign color_option_names = ""
+                    if option.name == settings.color_name
+                      paginate shop.metaobjects.color_codes_hex.values by 10000
+                        assign color_codes = shop.metaobjects.color_codes_hex.values
+
+                        if color_codes
+                          for color_code_hex in color_codes
+                            for product_variation in variation_products
+                              assign variation_color = product_variation.options_by_name[color_name].values | first
+
+                              if color_code_hex.code == variation_color
+                                if color_code_hex.image.value
+                                  assign colors = color_code_hex.image.value
+                                else
+                                  assign colors = "colors_"
+                                  for color in color_code_hex.color_hex_list.value
+                                    assign colors = colors | append: color | append: ","
+                                  endfor
+                                endif
+
+                                assign color_option_names = color_option_names | append: color_code_hex.code | append: ":" | append: colors | append: ";"
+                              endif
+                            endfor
+                          endfor
+                        endif
+                      endpaginate
+                    endif
+                  %}
                   {%- for product_variation in variation_products -%}
                     {%- liquid
                       assign color_out_of_stock = nil
@@ -190,7 +219,6 @@
                       <a href="{% if color_out_of_stock %}#{% else %}{{ product_current_variation.url }}{% endif %}"
                         class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if out_of_stock and is_color_swatches == false %} soldout{% endif %}{% if color_out_of_stock %} no-stock{% endif %}"
                         {% if is_color_swatches %}
-                          {%- assign color_handle = 'color-code-' | append: current_value -%}
                           data-color="{{ current_value | handleize }}"
                           style="{% if selected %} border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));{% endif %}"
                           {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
@@ -218,39 +246,54 @@
                           {{ product_current_variation.metafields['product_texts']['title'].value | default: product_current_variation.title }}
                         {%- else -%}
                           {% liquid
-                            assign color_object = shop.metaobjects['color_codes_hex'][color_handle]
+                            assign current_color_values = ""
+
+                            if color_option_names
+                              assign color_option_names_list = color_option_names | split: ";"
+                              for color_option_name in color_option_names_list
+                                assign color_option_name_parts = color_option_name | split: ":"
+                                assign color_option_code = color_option_name_parts[0]
+                                assign color_option_value = color_option_name_parts[1]
+
+                                if color_option_code == current_value
+                                  assign current_color_values = color_option_value
+                                endif
+                              endfor
+                            endif
                           %}
 
-                          {% if color_object.image.value %}
-                            <div class="color-swatch-background flex justify-center align-center">
-                              {{ color_object.image.value | image_url: width: 40 | image_tag }}
-                            </div>
-                          {% else %}
+                          {% if current_color_values contains 'colors_' %}
                             {% liquid
+                              assign color_object = current_color_values | split: 'colors_'
                               assign angle = 0
-                              assign color_list = color_object.color_hex_list.value
+                              assign color_list = color_object[1] | split: ','
                               assign color_size = color_list.size
                               if color_size > 0
                                 assign angle = 360 | divided_by: color_size
                               endif
                             %}
+
                             <div class="color-swatch-background">
                               {% for color_value in color_list  %}
                                 {% if color_size == 1  %}
-                                  <span style="background: {{ color_value | color_to_rgb }}; width: 100%; height: 100%"></span>
+                                  <span style="background: {{ color_value }}; width: 100%; height: 100%"></span>
                                 {% elsif color_size == 2 %}
                                   {% if forloop.index0 == 0 %}
                                     {% assign left = -50 %}
                                   {% else %}
                                     {% assign left = 50 %}
                                   {% endif %}
-                                  <span style="background: {{ color_value | color_to_rgb }}; width: 100%; height: 100%; left: {{ left }}%"></span>
+                                  <span style="background: {{ color_value }}; width: 100%; height: 100%; left: {{ left }}%"></span>
                                 {% else %}
                                   {% assign rotation = angle | times: forloop.index0 %}
                                   {% assign skew = -90 | plus: angle %}
-                                  <span style="background: {{ color_value | color_to_rgb }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if color_size == 3 %}top: -10%; right: -25%; height: 70%; width: 70%{% endif %}"></span>
+                                  <span style="background: {{ color_value }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if color_size == 3 %}top: -10%; right: -25%; height: 70%; width: 70%{% endif %}"></span>
                                 {% endif %}
                               {% endfor %}
+                            </div>
+                          {% elsif current_color_values %}
+                            <div class="color-swatch-background flex justify-center align-center">
+                              {{ current_color_values | image_url: width: 40 | image_tag }}
                             </div>
                           {% endif %}
 
