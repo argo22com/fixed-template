@@ -2131,6 +2131,10 @@ card-product-colors {
 }
 
 /* Component price */
+.price__vat {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
 
 .price--sold-out .price__availability,
 .price__regular {

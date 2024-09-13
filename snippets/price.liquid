@@ -33,16 +33,14 @@
 {% assign vat_price_string = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat %}
 {% assign vat_price = vat_price_string | times: 100  %}
 {% assign vat_price_rounded = vat_price | round  %}
-{% assign converted_price = vat_price_rounded | money_with_currency %}
-<p>
-  <span class="strong">
-    {{ converted_price }}
+{% if vat_price_rounded %}
+  <p>
+  <span class="strong price__vat">
+    {{ vat_price_rounded | money_without_trailing_zeros }} {{ shop.currency_symbol }}
   </span>
-<span class="strong">
-  {{ vat_price_rounded | money_without_trailing_zeros }} {{ shop.currency_symbol }}
-</span>
-  {{ 'products.product.price.price_with_vat' | t }} 
-</p>
+    {{ 'products.product.price.price_with_vat' | t }} 
+  </p>
+{% endif %}
 <{% unless use_custom_element %}div{% else %}product-price{% endunless %} class="price
   {%- if price_class %} {{ price_class }}{% endif -%}
   {%- if available == false %} price--sold-out {% endif -%}
