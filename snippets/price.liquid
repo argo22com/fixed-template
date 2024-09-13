@@ -30,13 +30,16 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 -%}
-{% assign base_price_string = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat %}
-{% assign base_price = base_price_string | times: 10 | round %}
-
-{% assign converted_price = base_price | money_with_currency %}
+{% assign vat_price_string = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat %}
+{% assign vat_price = vat_price_string | times: 100  %}
+{% assign vat_price_rounded = vat_price | round  %}
+{% assign converted_price = vat_price_rounded | money_with_currency %}
 <p>
+  <span class="strong">
+    {{ converted_price }}
+  </span>
 <span class="strong">
-  {{ product.price | money_without_trailing_zeros }} {{ shop.currency_symbol }}
+  {{ vat_price_rounded | money_without_trailing_zeros }} {{ shop.currency_symbol }}
 </span>
   {{ 'products.product.price.price_with_vat' | t }} 
 </p>
