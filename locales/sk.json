@@ -294,6 +294,9 @@
       "reviews": {
         "title": "Hodnotenie"
       }
+    },
+    "gallery_lightbox": {
+      "load_more": "Načítať ďalšie obrázky"
     }
   },
   "templates": {
