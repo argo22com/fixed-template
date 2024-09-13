@@ -31,7 +31,7 @@
   endif
 -%}
 {% assign base_price_string = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat %}
-{% assign base_price = base_price_string | times: 100 | round %}
+{% assign base_price = base_price_string | times: 10 | round %}
 
 {% assign converted_price = base_price | money_with_currency %}
 <p>
