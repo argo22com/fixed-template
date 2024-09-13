@@ -194,7 +194,8 @@
         "regular_price": "Běžná cena",
         "sale_price": "Výprodejová cena",
         "unit_price": "Jednotková cena",
-        "varies_html": "{{ price_from }} - {{ price_to }}"
+        "varies_html": "{{ price_from }} - {{ price_to }}",
+        "price_with_vat": "Cena včetně DPH",
       },
       "pickup_availability": {
         "view_store_info": "Zobrazit informace o obchodě",
@@ -240,8 +241,7 @@
         "note": "Ceny s objemovou slevou k dispozici",
         "minimum": "{{ quantity }} a více",
         "price_at_each": "{{ price }} \/ ks",
-        "price_range": "{{ minimum }}–{{ maximum }}",
-        "price_with_vat": "Cena včetně DPH",
+        "price_range": "{{ minimum }}–{{ maximum }}"
       },
       "by_vendor_html": "<span>By<\/span> {{ vendor }}",
       "inventory_out_of_stock_continue_selling": "Na skladě"
