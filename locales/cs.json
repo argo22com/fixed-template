@@ -240,7 +240,8 @@
         "note": "Ceny s objemovou slevou k dispozici",
         "minimum": "{{ quantity }} a více",
         "price_at_each": "{{ price }} \/ ks",
-        "price_range": "{{ minimum }}–{{ maximum }}"
+        "price_range": "{{ minimum }}–{{ maximum }}",
+        "price_with_vat": "Cena včetně DPH",
       },
       "by_vendor_html": "<span>By<\/span> {{ vendor }}",
       "inventory_out_of_stock_continue_selling": "Na skladě"
