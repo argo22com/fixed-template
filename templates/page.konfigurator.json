@@ -82,6 +82,11 @@
         "padding_bottom": 0
       }
     },
+    "product_configurator_BMFbCT": {
+      "type": "product-configurator",
+      "settings": {
+      }
+    },
     "rich_text_dWXckk": {
       "type": "rich-text",
       "blocks": {
@@ -383,6 +388,7 @@
   "order": [
     "main",
     "image_banner_xtbneD",
+    "product_configurator_BMFbCT",
     "rich_text_dWXckk",
     "video_4tLTfp",
     "image_with_text_UjPCyz",
