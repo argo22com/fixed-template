@@ -441,23 +441,23 @@
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
       "preview_description": "This preview is only visible on the Theme Editor page to help you add\/edit\/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
-      "group_item": "Group #{{ index }}"
+      "group_item": "Grupa #{{ index }}"
     },
     "collection_banner": {
-      "load_collection_icon": "Collection with icon",
-      "slider": "Slider"
+      "load_collection_icon": "Kolekcja ikon",
+      "slider": "Suwak"
     },
     "cookies_banner": {
-      "accept": "Accept",
-      "decline": "Decline"
+      "accept": "Przyjąć",
+      "decline": "Odrzucić"
     },
     "google_maps": {
-      "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates<\/a>.",
-      "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key<\/a>."
+      "coordinate_empty_error_html": "Wprowadź swoje współrzędne. <a href=\"{{ link }}\">Dowiedz się, jak uzyskać współrzędne swojego adresu<\/a>.",
+      "api_key_empty_error_html": "Wprowadź swój klucz API. Upewnij się, że klucz został uwzględniony w Maps Embed API. <a href=\"{{ link }}\">Dowiedz się, jak uzyskać klucz API<\/a>."
     },
     "gallery": {
-      "list": "Gallery items",
-      "item_id_label": "Gallery item #{{ item_number }}"
+      "list": "Elementy galerii",
+      "item_id_label": "Element galerii #{{ item_number }}"
     },
     "product_tabs": {
       "reviews": {
