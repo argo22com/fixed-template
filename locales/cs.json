@@ -195,7 +195,7 @@
         "sale_price": "Výprodejová cena",
         "unit_price": "Jednotková cena",
         "varies_html": "{{ price_from }} - {{ price_to }}",
-        "price_with_vat": "Cena včetně DPH",
+        "price_with_vat": "Cena včetně DPH"
       },
       "pickup_availability": {
         "view_store_info": "Zobrazit informace o obchodě",
