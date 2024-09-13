@@ -88,6 +88,11 @@
       "settings": {
       }
     },
+    "product_configurator_tpqpJD": {
+      "type": "product-configurator",
+      "settings": {
+      }
+    },
     "rich_text_dWXckk": {
       "type": "rich-text",
       "blocks": {
@@ -371,6 +376,7 @@
     "main",
     "image_banner_xtbneD",
     "product_configurator_BMFbCT",
+    "product_configurator_tpqpJD",
     "rich_text_dWXckk",
     "image_with_text_UjPCyz",
     "image_with_text_MUzzfc",
