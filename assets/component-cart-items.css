@@ -137,6 +137,10 @@
   line-height: calc(1 + 0.5 / var(--font-body-scale));
 }
 
+.product-option > dt {
+  flex-grow: 2
+}
+
 .cart-item__link {
   border-radius: 0.8rem;
 }
