@@ -128,7 +128,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "pouzdra-na-tablety",
-            "custom_image": "shopify:\/\/shop_images\/pouzdra_na_tablety.jpg",
+            "custom_image": "shopify:\/\/shop_images\/tablety_1.jpg",
             "custom_title": ""
           }
         },
@@ -136,7 +136,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "pouzdra-na-notebooky",
-            "custom_image": "shopify:\/\/shop_images\/pouzdra_na_notebooky.jpg",
+            "custom_image": "shopify:\/\/shop_images\/notebooky_1.jpg",
             "custom_title": ""
           }
         },
