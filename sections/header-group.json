@@ -14,24 +14,6 @@
     "header": {
       "type": "header",
       "blocks": {
-        "menu_badge_KaqDYw": {
-          "type": "menu_badge",
-          "settings": {
-            "trigger": "",
-            "text": "Bestseller",
-            "text_color": "#fff",
-            "background_color": "#d9121f"
-          }
-        },
-        "menu_badge_MWcm4z": {
-          "type": "menu_badge",
-          "settings": {
-            "trigger": "Audio",
-            "text": "Audio2",
-            "text_color": "#fff",
-            "background_color": "#d9121f"
-          }
-        },
         "mega_menu_product_brand_JBT6cd": {
           "type": "mega_menu_product_brand",
           "settings": {
@@ -651,8 +633,6 @@
         }
       },
       "block_order": [
-        "menu_badge_KaqDYw",
-        "menu_badge_MWcm4z",
         "mega_menu_product_brand_JBT6cd",
         "mega_menu_product_brand_kjMCTa",
         "mega_menu_product_brand_zgqyNq",
