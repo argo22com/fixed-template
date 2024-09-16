@@ -28,8 +28,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/kuze_banner-desktop.jpg",
             "badge_label": "",
-            "heading": "RUČNÍ VÝROBA",
-            "text": "KOŽENÉ DOPLŇKY PRO VAŠE CHYTRÁ ZAŘÍZENÍ",
+            "heading": "Ruční výroba",
+            "text": "Doplňky z kůže a veganské kůže pro vaše zařízení",
             "hide_text_on_mobile": false,
             "button_label": "",
             "price": "",
@@ -160,7 +160,7 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>LUXUSNÍ KOŽENÉ PŘÍSLUŠENSTVÍ PRO VAŠE ZAŘÍZENÍ<\/h3>",
+            "heading": "<h3>Pečlivě vyrobené doplňky pro vaše zařízení<\/h3>",
             "heading_size": "h2"
           }
         },
