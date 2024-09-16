@@ -14,6 +14,36 @@
     "header": {
       "type": "header",
       "blocks": {
+        "mega_menu_product_type_6ec6tW": {
+          "type": "mega_menu_product_type",
+          "settings": {
+            "trigger": "Produkty",
+            "title": "Audio",
+            "position": "first",
+            "item_label": "",
+            "image_ratio": "circle",
+            "type_1": "Audio",
+            "type_link_1": "shopify:\/\/collections\/hudba",
+            "type_2": "sluchátka",
+            "type_link_2": "shopify:\/\/collections\/sluchatka-a-headsety",
+            "type_3": "",
+            "type_link_3": "",
+            "type_4": "",
+            "type_link_4": "",
+            "type_5": "",
+            "type_link_5": "",
+            "type_6": "",
+            "type_link_6": "",
+            "type_7": "",
+            "type_link_7": "",
+            "type_8": "",
+            "type_link_8": "",
+            "type_9": "",
+            "type_link_9": "",
+            "type_10": "",
+            "type_link_10": ""
+          }
+        },
         "mega_menu_product_brand_JBT6cd": {
           "type": "mega_menu_product_brand",
           "settings": {
@@ -633,6 +663,7 @@
         }
       },
       "block_order": [
+        "mega_menu_product_type_6ec6tW",
         "mega_menu_product_brand_JBT6cd",
         "mega_menu_product_brand_kjMCTa",
         "mega_menu_product_brand_zgqyNq",
