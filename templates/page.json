@@ -22,33 +22,15 @@
     },
     "image_banner_bHWCe3": {
       "type": "image-banner",
-      "blocks": {
-        "heading_qCNfHQ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "size": "h0"
-          }
-        },
-        "text_3EqnNM": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_qCNfHQ",
-        "text_3EqnNM"
-      ],
       "settings": {
         "layout": "grid",
+        "image": "shopify:\/\/shop_images\/onadnes_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/onadnes_1_09b5134b-f3a1-40d7-91c1-bac1b0978d67.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
         "keep_ltr": false,
         "hide_when_empty_image": false,
         "preload": false,
