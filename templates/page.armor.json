@@ -26,15 +26,15 @@
         "heading_AbkTRp": {
           "type": "heading",
           "settings": {
-            "heading": "ULTRA ODOLNÁ SKLA ARMOR",
+            "heading": "Ultraodolná skla Armor",
             "size": "h1"
           }
         },
         "text_UDYABY": {
           "type": "text",
           "settings": {
-            "text": "Nejlepší a nejodolnější ochrana displeje na trhu.",
-            "text_style": "caption-with-letter-spacing"
+            "text": "<strong>Nejlepší a nejodolnější ochrana displeje na trhu.<\/strong>",
+            "text_style": "subtitle"
           }
         }
       },
