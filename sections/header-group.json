@@ -523,7 +523,7 @@
           "settings": {
             "trigger": "Akce",
             "title": "Ona Dnes",
-            "image": "shopify:\/\/shop_images\/onadnes_banner.png",
+            "image": "shopify:\/\/shop_images\/onadnes_banner_2.png",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "",
@@ -535,7 +535,7 @@
             "link": "",
             "position": "last",
             "overlay_text_enable": true,
-            "overlay_opacity": 21,
+            "overlay_opacity": 7,
             "color_scheme": "inverse"
           }
         },
