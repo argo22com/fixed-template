@@ -39,8 +39,10 @@
     "card_buttons": "visible",
     "cart_button_text": "adapt",
     "card_truncate_heading": 3,
+    "read_rating_data_from_app": "standard",
     "inventory_threshold_product_compare": 10,
     "show_inventory_quantity_product_compare": false,
+    "collection_card_text_alignment": "left",
     "collection_card_enable_overlay": true,
     "collection_card_color_scheme": "inverse",
     "sale_badge_label": "percent",
@@ -64,6 +66,7 @@
     "enable_appear_effect": true,
     "favicon": "shopify:\/\/shop_images\/favicon_fixed.png",
     "currency_code_enabled": false,
+    "cart_type": "drawer",
     "free_shipping_threshold": "2000",
     "free_shipping_exclude_products": [
 
@@ -71,7 +74,7 @@
     "back_to_top_button_enable": true,
     "recently_viewed_enable": true,
     "recently_viewed_columns_desktop": 5,
-    "recently_viewed_image_ratio": "portrait",
+    "recently_viewed_image_ratio": "square",
     "recently_viewed_show_secondary_image": true,
     "recently_viewed_show_rating": true,
     "recently_viewed_enable_quick_add": true,
