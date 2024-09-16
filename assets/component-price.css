@@ -46,7 +46,7 @@ product-price {
 }
 
 .price--large {
-  font-size: calc(2rem * var(--font-body-scale));
+  font-size: calc(1.4rem * var(--font-body-scale));
 }
 
 .price--on-sale .price__sale {
