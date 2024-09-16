@@ -214,7 +214,7 @@
         "heading_size": "h1",
         "image_ratio": "adapt",
         "columns_desktop": 3,
-        "full_width": true,
+        "full_width": false,
         "enable_section_box_layout": false,
         "enable_desktop_slider": true,
         "color_scheme": "",
