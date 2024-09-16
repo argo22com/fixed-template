@@ -143,7 +143,8 @@
         "featured_collection_wDV86w": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "penezenky",
+            "custom_image": "shopify:\/\/shop_images\/penezenky_s_lokatorem.jpg",
             "custom_title": ""
           }
         }
@@ -180,8 +181,9 @@
         "featured_collection_DLaaM6": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "collection": "siena",
+            "custom_image": "shopify:\/\/shop_images\/siena.jpg",
+            "custom_title": "Pouzdra na tablety"
           }
         },
         "featured_collection_688Waj": {
