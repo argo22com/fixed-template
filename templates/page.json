@@ -189,15 +189,17 @@
         "featured_collection_688Waj": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "collection": "york",
+            "custom_image": "shopify:\/\/shop_images\/york_ls2.jpg",
+            "custom_title": "Pouzdra York"
           }
         },
         "featured_collection_PDzqLc": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "collection": "verona",
+            "custom_image": "shopify:\/\/shop_images\/FIXVER-LS-1.jpg",
+            "custom_title": "Taštičky na mobil Verona"
           }
         },
         "featured_collection_dzV4Gd": {
