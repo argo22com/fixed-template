@@ -151,7 +151,7 @@
         "text_FgxdBE": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Extrémně vysoká pevnost skla – až 2x vyšší než u běžných skel​<\/li><li>o 30 % vyšší pružnost, která absorbuje případné nárazy a  odolává téměř všem běžným pádům​<\/li><li>Parametry testovány ve FIXED<\/li><\/ul>",
+            "text": "<ul><li>Extrémně vysoká pevnost skla – až 2× vyšší než u běžných skel​<\/li><li>O 30 % vyšší pružnost, která absorbuje případné nárazy a  odolává téměř všem běžným pádům​<\/li><li>Parametry testovány ve FIXED<\/li><\/ul>",
             "text_style": "body"
           }
         }
@@ -205,7 +205,7 @@
         "text_PQARFT": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Nejvyšší propustnost světla na trhu – více než 94% zajistí významný pozitivní rozdíl v čitelnosti displeje​<\/li><li>Antireflexní vrstva zlepšuje čitelnost displeje, zejména na slunci nebo pod umělým osvětlením. ​<\/li><li>Parametry testovány ve FIXED<\/li><\/ul>",
+            "text": "<ul><li>Nejvyšší propustnost světla na trhu – více než 94 % – zajistí významný pozitivní rozdíl v čitelnosti displeje​<\/li><li>Antireflexní vrstva zlepšuje čitelnost displeje, zejména na slunci nebo pod umělým osvětlením<\/li><li>Parametry testovány ve FIXED<\/li><\/ul>",
             "text_style": "body"
           }
         }
