@@ -531,7 +531,7 @@
           "type": "text-overlay-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/FIXPDS.1463.jpg",
-            "link": "shopify:\/\/collections\/hudba",
+            "link": "shopify:\/\/collections\/audio",
             "keep_ltr": false,
             "text": "Bezdrátová sluchátka, sluchátka s kabelem...",
             "text_style": "subtitle",
