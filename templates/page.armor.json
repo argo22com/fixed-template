@@ -446,10 +446,10 @@
       "type": "page",
       "settings": {
         "page": "test-armor-skla",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 20
       }
     },
     "banner_grid_nNa8c6": {
