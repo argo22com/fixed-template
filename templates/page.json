@@ -94,7 +94,7 @@
         "text_ijC46Q": {
           "type": "text",
           "settings": {
-            "text": "<p>Nakup naše produkty z kůže, či veganské kůže s 20 % slevou.<\/p><p>Stačí do košíku přidat kód <strong>ONADNES24<\/strong> a sleva se automaticky započítá.<\/p><p>V případě platby Visa kartou, lze použít ještě kód <strong>VISA5<\/strong> pro dodatečnou slevu 5 %.<\/p>"
+            "text": "<p>Nakup naše produkty z kůže, či veganské kůže s 20 % slevou.<\/p><p>Stačí do košíku přidat kód <strong>ONADNES24<\/strong> a sleva se automaticky započítá (sleva se odečte pouze od produktů, kterých se to týká).<\/p><p>V případě platby Visa kartou, lze použít ještě kód <strong>VISA5<\/strong> pro dodatečnou slevu 5 %.<\/p>"
           }
         }
       },
@@ -119,21 +119,24 @@
         "featured_collection_hEUVet": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "pouzdra-na-telefony",
+            "custom_image": "shopify:\/\/shop_images\/pouzdra_na_telefony.jpg",
             "custom_title": ""
           }
         },
         "featured_collection_HBMhU3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "pouzdra-na-tablety",
+            "custom_image": "shopify:\/\/shop_images\/pouzdra_na_tablety.jpg",
             "custom_title": ""
           }
         },
         "featured_collection_mEV7aL": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "pouzdra-na-notebooky",
+            "custom_image": "shopify:\/\/shop_images\/pouzdra_na_notebooky.jpg",
             "custom_title": ""
           }
         },
