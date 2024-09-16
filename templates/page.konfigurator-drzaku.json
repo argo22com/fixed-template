@@ -26,14 +26,14 @@
         "heading_XeYxmG": {
           "type": "heading",
           "settings": {
-            "heading": "KONFIGURÁTOR",
+            "heading": "Konfigurátor",
             "size": "h0"
           }
         },
         "text_hkRi8i": {
           "type": "text",
           "settings": {
-            "text": "SESTAV SI DRŽÁK PODLE SVÉHO GUSTA",
+            "text": "Sestav si držák podle svého gusta",
             "text_style": "subtitle"
           }
         }
@@ -94,8 +94,8 @@
         "heading_rMyJr8": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>4 SNADNÉ KROKY K VLASTNÍMU DRŽÁKU NA MOBIL<\/strong><\/h3>",
-            "heading_size": "h2"
+            "heading": "<h3><strong>4 snadné kroky k vlastnímu držáku na mobil<\/strong><\/h3>",
+            "heading_size": "h0"
           }
         },
         "text_Y9R7Pt": {

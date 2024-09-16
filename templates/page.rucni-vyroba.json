@@ -28,8 +28,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/kuze_banner-desktop.jpg",
             "badge_label": "",
-            "heading": "RUČNÍ VÝROBA",
-            "text": "KOŽENÉ DOPLŇKY PRO VAŠE CHYTRÁ ZAŘÍZENÍ",
+            "heading": "Ruční výroba",
+            "text": "Doplňky z kůže a veganské kůže pro vaše zařízení",
             "hide_text_on_mobile": false,
             "button_label": "",
             "price": "",
@@ -64,8 +64,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/profit_banner-desktop.jpg",
             "badge_label": "",
-            "heading": "KOŽENÉ POUZDRO  PROFIT",
-            "text": "PRAVÁ ITALSKÁ KŮŽE A DOŽIVOTNÍ ZÁRUKA",
+            "heading": "Kožené pouzdro Profit",
+            "text": "Pravá italská kůže a doživotní záruka",
             "hide_text_on_mobile": false,
             "button_label": "",
             "price": "",
@@ -100,10 +100,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/OXFORD.jpg",
             "badge_label": "",
-            "heading": "KOŽENÉ POUZDRO OXFORD",
-            "text": "360° OCHRANA PRO NOTEBOOKY A TABLETY",
+            "heading": "Kožené pouzdro Oxford",
+            "text": "360° Ochrana pro notebooky a tablety",
             "hide_text_on_mobile": false,
-            "button_label": "Button label",
+            "button_label": "",
             "price": "",
             "link": "",
             "button_style": "primary",
@@ -160,7 +160,7 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>LUXUSNÍ KOŽENÉ PŘÍSLUŠENSTVÍ PRO VAŠE ZAŘÍZENÍ<\/h3>",
+            "heading": "<h3>Pečlivě vyrobené doplňky pro vaše zařízení<\/h3>",
             "heading_size": "h2"
           }
         },

@@ -26,7 +26,7 @@
         "heading_ewtxqN": {
           "type": "heading",
           "settings": {
-            "heading": "FIXED SMART",
+            "heading": "FIXED Smart",
             "size": "h0"
           }
         },
@@ -34,14 +34,14 @@
           "type": "text",
           "settings": {
             "text": "<strong>Chytré lokátory<\/strong>",
-            "text_style": "caption-with-letter-spacing"
+            "text_style": "subtitle"
           }
         },
         "multiline_text_UQgPEB": {
           "type": "multiline_text",
           "settings": {
             "text": "<p><strong>Mějte své cennosti vždy pod kontrolou<\/strong><\/p>",
-            "text_style": "caption-with-letter-spacing"
+            "text_style": "subtitle"
           }
         }
       },
@@ -369,9 +369,9 @@
             "button_style": "secondary",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#e94200",
-            "card_color_background": "#fff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         }

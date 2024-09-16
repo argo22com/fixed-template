@@ -36,25 +36,11 @@
             "text": "Zanechte trvalý dojem u svých obchodních partnerů, klientů a zaměstnanců. Personalizované luxusní kožené doplňky z pravé italské kůže, které přišly na svět v naší dílně v Prostějově, vyrábíme přesně dle vaší představy a požadavků.",
             "text_style": "body"
           }
-        },
-        "buttons_jfLw8a": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_style_1": "primary",
-            "button_open_new_tab_1": false,
-            "button_label_2": "KONTAKT",
-            "button_link_2": "",
-            "button_style_2": "primary",
-            "button_open_new_tab_2": false
-          }
         }
       },
       "block_order": [
         "heading_Jex9x4",
-        "text_KMparF",
-        "buttons_jfLw8a"
+        "text_KMparF"
       ],
       "settings": {
         "layout": "full_bleed",
