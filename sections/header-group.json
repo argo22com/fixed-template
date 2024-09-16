@@ -476,27 +476,6 @@
             "color_scheme": "inverse"
           }
         },
-        "mega_menu_promotion_kURg37": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "Léto s FIXED",
-            "image": "shopify:\/\/shop_images\/1B1A4288_kopie.jpg",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "Léto s FIXED",
-            "subheading": "Vybrali jsmepro vás novinky a bestsellery pro letní sezónu",
-            "button_label": "Objevit",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 50,
-            "color_scheme": "inverse"
-          }
-        },
         "mega_menu_promotion_Bh4wzD": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -505,13 +484,13 @@
             "image": "shopify:\/\/shop_images\/blog_tagcard3.jpg",
             "image_ratio": "landscape",
             "caption": "",
-            "heading_text": "Tag Card",
-            "subheading": "Chytrý lokátor s podporou Apple Find My",
+            "heading_text": "Smart",
+            "subheading": "Chytré lokátory s podporou Apple Find My",
             "button_label": "Objevit",
             "button_style": "link",
             "text_align": "center",
             "text_position": "2",
-            "link": "",
+            "link": "shopify:\/\/pages\/smart",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 50,
@@ -533,6 +512,27 @@
             "text_align": "center",
             "text_position": "2",
             "link": "shopify:\/\/pages\/armor",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_kURg37": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Léto s FIXED",
+            "image": "shopify:\/\/shop_images\/1B1A4288_kopie.jpg",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "Léto s FIXED",
+            "subheading": "Vybrali jsmepro vás novinky a bestsellery pro letní sezónu",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 50,
@@ -649,9 +649,9 @@
         "mega_menu_product_brand_mQFGEn",
         "mega_menu_product_brand_3VPHNd",
         "mega_menu_promotion_YqyFiJ",
-        "mega_menu_promotion_kURg37",
         "mega_menu_promotion_Bh4wzD",
         "mega_menu_promotion_9KBrbX",
+        "mega_menu_promotion_kURg37",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "mega_menu_promotion_9HJwDd",
         "mega_menu_promotion_ya4VNA",
