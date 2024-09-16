@@ -89,7 +89,7 @@
         "heading_Mf43cQ": {
           "type": "heading",
           "settings": {
-            "heading": "ARMOR",
+            "heading": "Armor",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -97,7 +97,7 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Produkty pod značkou Armor se vyznačují zvýšenou odolností, moderním a čistým designem za použití použití pokročilých technologických procesů a prémiových materiálů. Jsou to produkty s vysokými standardy pro funkčnost bez kompromisů.<\/p>",
+            "text": "<p>Produkty pod značkou Armor se vyznačují zvýšenou odolností, moderním a čistým designem za použití pokročilých technologických procesů a prémiových materiálů. Jsou to produkty s vysokými standardy pro funkčnost bez kompromisů.<\/p>",
             "text_style": "body"
           }
         }
@@ -251,7 +251,7 @@
         "heading_HKnxPM": {
           "type": "heading",
           "settings": {
-            "heading": "Anti-dust aplikátor",
+            "heading": "Antidust aplikátor",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -259,7 +259,7 @@
         "text_Bn9ejK": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Aplikátor druhé generace pro dokonale přesné umístění ARMOR skla na displej​<\/li><li>Anti-dust folie pro snadné a dokonalé odstranění všech částeček prachu​<\/li><li>Výsledkem je perfektně nalepené sklo bez vzduchových bublin za méně než minutu.​<\/li><\/ul>",
+            "text": "<ul><li>Aplikátor druhé generace pro dokonale přesné umístění Armor skla na displej​<\/li><li>Antidust folie pro snadné a dokonalé odstranění všech částeček prachu​<\/li><li>Výsledkem je perfektně nalepené sklo bez vzduchových bublin za méně než minutu.​<\/li><\/ul>",
             "text_style": "body"
           }
         }
