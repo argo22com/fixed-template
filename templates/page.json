@@ -201,30 +201,22 @@
             "custom_image": "shopify:\/\/shop_images\/FIXVER-LS-1.jpg",
             "custom_title": "Taštičky na mobil Verona"
           }
-        },
-        "featured_collection_dzV4Gd": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_title": ""
-          }
         }
       },
       "block_order": [
         "featured_collection_DLaaM6",
         "featured_collection_688Waj",
-        "featured_collection_PDzqLc",
-        "featured_collection_dzV4Gd"
+        "featured_collection_PDzqLc"
       ],
       "settings": {
         "title": "Vyber si z produktů z veganské kůže",
         "subtitle": "",
         "heading_size": "h1",
         "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "full_width": false,
+        "columns_desktop": 3,
+        "full_width": true,
         "enable_section_box_layout": false,
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "",
         "show_view_all": false,
         "collection_card_show_title": true,
