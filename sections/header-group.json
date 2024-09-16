@@ -523,7 +523,7 @@
           "settings": {
             "trigger": "Akce",
             "title": "Armor",
-            "image": "shopify:\/\/shop_images\/armor.199_701113f1-3361-430b-ae9d-bc176bb90b64.jpg",
+            "image": "shopify:\/\/shop_images\/armor_5d81f6de-d16d-4d74-8c03-61fc6af4ff32.jpg",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "Armor",
@@ -532,7 +532,7 @@
             "button_style": "link",
             "text_align": "center",
             "text_position": "2",
-            "link": "",
+            "link": "shopify:\/\/pages\/armor",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 50,
