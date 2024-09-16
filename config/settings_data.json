@@ -66,6 +66,7 @@
     ],
     "back_to_top_button_enable": true,
     "recently_viewed_enable": true,
+    "recently_viewed_columns_desktop": 5,
     "recently_viewed_image_ratio": "portrait",
     "recently_viewed_show_secondary_image": true,
     "recently_viewed_show_rating": true,
