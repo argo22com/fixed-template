@@ -259,7 +259,7 @@
         "text_Bn9ejK": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Aplikátor druhé generace pro dokonale přesné umístění skla Armor na displej​<\/li><li>Antidust fólie pro snadné a dokonalé odstranění všech částeček prachu​<\/li><li>Výsledkem je perfektně nalepené sklo bez vzduchových bublin za méně než minutu.​<\/li><\/ul>",
+            "text": "<ul><li>Aplikátor druhé generace pro dokonale přesné umístění skla Armor na displej​<\/li><li>Antidust fólie pro snadné a dokonalé odstranění všech částeček prachu​<\/li><li>Výsledkem je perfektně nalepené sklo bez vzduchových bublin za méně než minutu<\/li><\/ul>",
             "text_style": "body"
           }
         }
@@ -359,8 +359,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Logo-FIXED-modra-RGB_d7481ded-02ac-42d4-a057-fb318da3a757.jpg",
             "icon": "shopping_cart",
-            "title": "Nakoupit na e-shopu FIXED",
-            "text": "<p>Všechny varianty skla Armor jsou dostupné na našem e-shopu, stačí si vybrat model telefonu.<\/p>",
+            "title": "Nakoupit v e-shopu FIXED",
+            "text": "<p>Všechny varianty skla Armor jsou dostupné v našem e-shopu, stačí si vybrat model telefonu.<\/p>",
             "link_label": "Přejít na produkty",
             "link": "shopify:\/\/products\/premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-samsung-galaxy-a54-5g-cerne",
             "button_style": "solid",
@@ -423,7 +423,7 @@
         "text_W7e6H9": {
           "type": "text",
           "settings": {
-            "text": "<p>Abychom si byli kvalitou ochrany jistí, každý aspekt pečlivě testujeme.<\/p><p>Testujeme odolnost skla ale i uživatelský zážitek.<\/p><p>Testů odolnosti existuje několik:<\/p><ul><li>Odolnost vůči pádu na plochu skla - pád ocelové kuličky o váze 64 g na samotné sklo<\/li><li>Odolnost proti poškrábání - rydly různé tvrdosti se zjišťuje tvrdost skla na Mohsově stupnici odolnosti<\/li><li>Odolnost hrany - dopad hrany skla na ostrou špičku<\/li><\/ul><p><\/p><p>Testy pro vylepšení uživatelského zážitku:<\/p><ul><li>Test propustnosti světla - ovlivňuje zejména dobrou viditelnost displeje pod ochranným sklem<\/li><li>Mikroskopický test na kapce destilované vody - takto se testuje oleofobní vrstva, která napomáhá hladkému skluzu po skle a redukuje vznik otisků prstů<\/li><li>Analýza obsahu příslušenství v balení - jednoduchá aplikace skla na telefon<\/li><\/ul><p><\/p>"
+            "text": "<p>Abychom si byli kvalitou ochrany jisti, každý aspekt pečlivě testujeme.<\/p><p>Testujeme odolnost skla, ale i uživatelský zážitek.<\/p><p>Testů odolnosti existuje několik:<\/p><ul><li>Odolnost vůči pádu na plochu skla – pád ocelové kuličky o váze 64 g na samotné sklo<\/li><li>Odolnost proti poškrábání – rydly různé tvrdosti se zjišťuje tvrdost skla na Mohsově stupnici odolnosti<\/li><li>Odolnost hrany – dopad hrany skla na ostrou špičku<\/li><\/ul><p><\/p><p>Testy pro vylepšení uživatelského zážitku:<\/p><ul><li>Test propustnosti světla – ovlivňuje zejména dobrou viditelnost displeje pod ochranným sklem<\/li><li>Mikroskopický test na kapce destilované vody – takto se testuje oleofobní vrstva, která napomáhá hladkému skluzu po skle a redukuje vznik otisků prstů<\/li><li>Analýza obsahu příslušenství v balení – jednoduchá aplikace skla na telefon<\/li><\/ul><p><\/p>"
           }
         }
       },
