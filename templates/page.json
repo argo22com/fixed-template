@@ -144,7 +144,15 @@
           "type": "featured_collection",
           "settings": {
             "collection": "penezenky",
-            "custom_image": "shopify:\/\/shop_images\/penezenky_s_lokatorem.jpg",
+            "custom_image": "shopify:\/\/shop_images\/penezenky_1.jpg",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_jt8QcD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pasovky",
+            "custom_image": "shopify:\/\/shop_images\/pasovky_1.jpg",
             "custom_title": ""
           }
         }
@@ -153,7 +161,8 @@
         "featured_collection_hEUVet",
         "featured_collection_HBMhU3",
         "featured_collection_mEV7aL",
-        "featured_collection_wDV86w"
+        "featured_collection_wDV86w",
+        "featured_collection_jt8QcD"
       ],
       "settings": {
         "title": "Vyber si z kožených produktů",
@@ -198,7 +207,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "verona",
-            "custom_image": "shopify:\/\/shop_images\/FIXVER-LS-1.jpg",
+            "custom_image": "shopify:\/\/shop_images\/verona_1.jpg",
             "custom_title": "Taštičky na mobil Verona"
           }
         }
