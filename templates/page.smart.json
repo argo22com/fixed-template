@@ -471,7 +471,7 @@
       "settings": {
         "title": "Všechny produkty SMART",
         "subtitle": "",
-        "collection": "smart-tagy",
+        "collection": "lokatory-s-findmy",
         "heading_size": "h1",
         "products_to_show": 6,
         "columns_desktop": 6,
