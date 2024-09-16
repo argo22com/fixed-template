@@ -442,6 +442,16 @@
         "padding_bottom": 0
       }
     },
+    "page_xWFHVt": {
+      "type": "page",
+      "settings": {
+        "page": "test-armor-skla",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "banner_grid_nNa8c6": {
       "type": "banner-grid",
       "blocks": {
@@ -468,11 +478,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         },
         "promotion_banner_gnJjAA": {
@@ -498,11 +508,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         },
         "promotion_banner_pMHtCL": {
@@ -528,11 +538,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         },
         "promotion_banner_469axj": {
@@ -558,11 +568,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         },
         "promotion_banner_Ek9Vxr": {
@@ -588,11 +598,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         }
       },
@@ -692,6 +702,7 @@
     "featured_collection_Jbdayq",
     "multicolumn_XKCb7x",
     "rich_text_akQrQY",
+    "page_xWFHVt",
     "banner_grid_nNa8c6",
     "video_jrq3tR",
     "featured_products_tabs_AyhByH"
