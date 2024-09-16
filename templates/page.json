@@ -140,6 +140,14 @@
             "custom_title": ""
           }
         },
+        "featured_collection_iYKYKf": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "venezia",
+            "custom_image": "shopify:\/\/shop_images\/venezia_ls3.jpg",
+            "custom_title": "Taštička na telefon Venezia"
+          }
+        },
         "featured_collection_wDV86w": {
           "type": "featured_collection",
           "settings": {
@@ -161,6 +169,7 @@
         "featured_collection_hEUVet",
         "featured_collection_HBMhU3",
         "featured_collection_mEV7aL",
+        "featured_collection_iYKYKf",
         "featured_collection_wDV86w",
         "featured_collection_jt8QcD"
       ],
@@ -169,7 +178,7 @@
         "subtitle": "",
         "heading_size": "h1",
         "image_ratio": "adapt",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "full_width": false,
         "enable_section_box_layout": false,
         "enable_desktop_slider": false,
