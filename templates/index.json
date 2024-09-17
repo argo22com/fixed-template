@@ -371,7 +371,7 @@
         "featured_collection_emzhYj": {
           "type": "featured_collection",
           "settings": {
-            "collection": "smart-tagy",
+            "collection": "lokatory-s-findmy",
             "custom_image": "shopify:\/\/shop_images\/kolekce2.jpg",
             "custom_title": "Chytré lokátory"
           }
@@ -539,7 +539,7 @@
           "type": "text-overlay-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/FIXPDS.1463.jpg",
-            "link": "shopify:\/\/collections\/hudba",
+            "link": "shopify:\/\/collections\/audio",
             "keep_ltr": false,
             "text": "Bezdrátová sluchátka, sluchátka s kabelem...",
             "text_style": "subtitle",

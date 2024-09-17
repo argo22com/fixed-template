@@ -110,7 +110,7 @@
           "type": "button",
           "settings": {
             "button_label": "PŘEJÍT NA PRODUKTY",
-            "button_link": "shopify:\/\/collections\/smart",
+            "button_link": "shopify:\/\/collections\/lokatory",
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
             "button_label_2": "",
@@ -471,7 +471,7 @@
       "settings": {
         "title": "Všechny produkty SMART",
         "subtitle": "",
-        "collection": "smart-tagy",
+        "collection": "lokatory-s-findmy",
         "heading_size": "h1",
         "products_to_show": 6,
         "columns_desktop": 6,
