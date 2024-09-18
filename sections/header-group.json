@@ -14,64 +14,13 @@
     "header": {
       "type": "header",
       "blocks": {
-        "mega_menu_product_brand_JBT6cd": {
-          "type": "mega_menu_product_brand",
+        "menu_badge_hHknwc": {
+          "type": "menu_badge",
           "settings": {
-            "trigger": "Produkty",
-            "title": "Držáky",
-            "position": "last",
-            "item_label": "Držáky",
-            "image_ratio": "circle",
-            "brand_1": "Konfigurátor držáků",
-            "brand_link_1": "shopify:\/\/pages\/konfigurator",
-            "brand_2": "Do auta",
-            "brand_link_2": "shopify:\/\/collections\/do-auta",
-            "brand_3": "Na stůl",
-            "brand_link_3": "shopify:\/\/collections\/na-stul",
-            "brand_4": "Selfie tyče",
-            "brand_link_4": "shopify:\/\/collections\/selfie-tyce-a-stativy",
-            "brand_5": "",
-            "brand_link_5": "",
-            "brand_6": "",
-            "brand_link_6": "",
-            "brand_7": "",
-            "brand_link_7": "",
-            "brand_8": "",
-            "brand_link_8": "",
-            "brand_9": "",
-            "brand_link_9": "",
-            "brand_10": "",
-            "brand_link_10": ""
-          }
-        },
-        "mega_menu_product_brand_kjMCTa": {
-          "type": "mega_menu_product_brand",
-          "settings": {
-            "trigger": "Produkty",
-            "title": "Nabíjení",
-            "position": "last",
-            "item_label": "Nabíjení",
-            "image_ratio": "circle",
-            "brand_1": "MagSafe nabíječky",
-            "brand_link_1": "shopify:\/\/collections\/magsafe-nabijecky",
-            "brand_2": "Bezdrátové nabíječky",
-            "brand_link_2": "shopify:\/\/collections\/bezdratove-nabijecky",
-            "brand_3": "Síťové nabíječky",
-            "brand_link_3": "shopify:\/\/collections\/sitove-nabijecky",
-            "brand_4": "Kabely",
-            "brand_link_4": "shopify:\/\/collections\/kabely",
-            "brand_5": "Powerbanky",
-            "brand_link_5": "shopify:\/\/collections\/powerbanky",
-            "brand_6": "",
-            "brand_link_6": "",
-            "brand_7": "",
-            "brand_link_7": "",
-            "brand_8": "",
-            "brand_link_8": "",
-            "brand_9": "",
-            "brand_link_9": "",
-            "brand_10": "",
-            "brand_link_10": ""
+            "trigger": "Blog",
+            "text": "Důležité",
+            "text_color": "#fff",
+            "background_color": "#d9121f"
           }
         },
         "mega_menu_product_brand_zgqyNq": {
@@ -633,8 +582,7 @@
         }
       },
       "block_order": [
-        "mega_menu_product_brand_JBT6cd",
-        "mega_menu_product_brand_kjMCTa",
+        "menu_badge_hHknwc",
         "mega_menu_product_brand_zgqyNq",
         "mega_menu_product_type_q8zqCX",
         "mega_menu_product_brand_9PcMhc",
