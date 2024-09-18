@@ -14,45 +14,6 @@
     "header": {
       "type": "header",
       "blocks": {
-        "menu_badge_hHknwc": {
-          "type": "menu_badge",
-          "settings": {
-            "trigger": "Blog",
-            "text": "Důležité",
-            "text_color": "#fff",
-            "background_color": "#d9121f"
-          }
-        },
-        "mega_menu_product_brand_zNPCm4": {
-          "type": "mega_menu_product_brand",
-          "settings": {
-            "trigger": "Produkty",
-            "title": "Ruční výroba",
-            "position": "last",
-            "item_label": "Ruční výroba",
-            "image_ratio": "circle",
-            "brand_1": "Kožená pouzdra na notebooky",
-            "brand_link_1": "shopify:\/\/collections\/pouzdra-na-notebooky",
-            "brand_2": "Kožená pouzdra na tablety",
-            "brand_link_2": "shopify:\/\/collections\/pouzdra-na-tablety",
-            "brand_3": "Kožená pouzdra na telefony",
-            "brand_link_3": "shopify:\/\/collections\/pouzdra-na-telefony",
-            "brand_4": "Ostatní pouzdra",
-            "brand_link_4": "shopify:\/\/collections\/pouzdra-na-bryle",
-            "brand_5": "",
-            "brand_link_5": "",
-            "brand_6": "",
-            "brand_link_6": "",
-            "brand_7": "",
-            "brand_link_7": "",
-            "brand_8": "",
-            "brand_link_8": "",
-            "brand_9": "",
-            "brand_link_9": "",
-            "brand_10": "",
-            "brand_link_10": ""
-          }
-        },
         "mega_menu_promotion_UdqXan": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -72,36 +33,6 @@
             "overlay_text_enable": true,
             "overlay_opacity": 8,
             "color_scheme": "inverse"
-          }
-        },
-        "mega_menu_product_brand_43GajV": {
-          "type": "mega_menu_product_brand",
-          "settings": {
-            "trigger": "Produkty",
-            "title": "Ostatní",
-            "position": "last",
-            "item_label": "Ostatní",
-            "image_ratio": "circle",
-            "brand_1": "Klávesnice",
-            "brand_link_1": "shopify:\/\/collections\/klavesnice",
-            "brand_2": "Stylusy",
-            "brand_link_2": "shopify:\/\/collections\/stylusy",
-            "brand_3": "HUBy",
-            "brand_link_3": "shopify:\/\/collections\/huby",
-            "brand_4": "Sport a outdoor",
-            "brand_link_4": "shopify:\/\/collections\/sport-a-outdoor",
-            "brand_5": "Šňůrky",
-            "brand_link_5": "shopify:\/\/collections\/snurky",
-            "brand_6": "",
-            "brand_link_6": "",
-            "brand_7": "",
-            "brand_link_7": "",
-            "brand_8": "",
-            "brand_link_8": "",
-            "brand_9": "",
-            "brand_link_9": "",
-            "brand_10": "",
-            "brand_link_10": ""
           }
         },
         "mega_menu_product_brand_4Tp9gJ": {
@@ -432,10 +363,7 @@
         }
       },
       "block_order": [
-        "menu_badge_hHknwc",
-        "mega_menu_product_brand_zNPCm4",
         "mega_menu_promotion_UdqXan",
-        "mega_menu_product_brand_43GajV",
         "mega_menu_product_brand_4Tp9gJ",
         "mega_menu_product_brand_eMcj9n",
         "mega_menu_product_brand_KBhfXH",
