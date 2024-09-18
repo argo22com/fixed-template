@@ -41,13 +41,13 @@ endif
 {% if show_in_card %}
 {% if vat_price_rounded %}
   <span class="strong price__vat">
-    {{ vat_price_rounded | money_without_currency  }}
+    {{ vat_price_rounded | money_without_trailing_zeros  }}
   </span>
 {% endif %}
 {% else %}
   {% if vat_price_rounded %}
     <span class="strong price__vat">
-      {{ vat_price_rounded | money_without_currency }}
+      {{ vat_price_rounded | money_without_trailing_zeros }}
     </span>
   {% endif %}
 
