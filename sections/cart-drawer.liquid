@@ -375,12 +375,14 @@
                                   </strong>
                                 </div>
                               {%- else -%}
-                                <span class="price price--start">
-                                  {%- render 'price-format', price: item.original_line_price -%}
-                                </span>
-                                <span class="price__vat__note">
-                                  {{ 'products.product.price.price_without_vat' | t }}
-                                </span>
+                                <div class="flex">
+                                  <span class="price price--start">
+                                    {%- render 'price-format', price: item.original_line_price -%}
+                                  </span>
+                                  <span class="price__vat__note">
+                                    {{ 'products.product.price.price_without_vat' | t }}
+                                  </span>
+                                </div>
                               {%- endif -%}
 
                               {%- if item.variant.available and item.unit_price_measurement -%}
