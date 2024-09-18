@@ -35,7 +35,7 @@ if localization.country.currency.iso_code == 'CZK'
   assign vat_multiplier = 1
 else 
   assign vat_price_string = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat_eur
-  assign vat_multiplier = 1.21
+  assign vat_multiplier = vat_rate_multiplier
 endif
   assign vat_price = vat_price_string | times: vat_multiplier | round : 1
   assign vat_price_rounded = vat_price |times: 100
@@ -44,7 +44,6 @@ endif
 {% if show_in_card %}
 {% if vat_price_rounded %}
   <span class="strong price__vat">
-    {{ vat_rate_multiplier }}
     {{ vat_price_rounded | money_without_trailing_zeros  }}
   </span>
 {% endif %}
