@@ -39,7 +39,7 @@
           "type": "mega_menu_product_brand",
           "settings": {
             "trigger": "Objevujte",
-            "title": "Pro firmy",
+            "title": "Objevujte",
             "position": "last",
             "item_label": "Pro firmy",
             "image_ratio": "circle",
