@@ -33,12 +33,12 @@ assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.
 if localization.country.currency.iso_code == 'CZK'
   assign vat_price_string = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat
   assign vat_multiplier = 1
-  assign vat_price = vat_price_string | times: vat_multiplier
-  assign vat_price_rounded = vat_price | divided_by: 100 | round: 1 | times: 1000
+  assign vat_price = vat_price_string | times: vat_multiplier | round : 1
+  assign vat_price_rounded = vat_price | times: 100
 else 
   assign vat_price_string = product.selected_or_first_available_variant.price 
   assign vat_price = vat_price_string | times: vat_rate_multiplier 
-  assign vat_price_rounded = vat_price | divided_by: 100 | round: 1 | times: 100
+  assign vat_price_rounded = vat_price | divided_by: 100 | round: 2 | times: 100
 endif
   
 -%}
