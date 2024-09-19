@@ -38,7 +38,7 @@ if localization.country.currency.iso_code == 'CZK'
 else 
   assign vat_price_string = product.selected_or_first_available_variant.price 
   assign vat_price = vat_price_string | times: vat_rate_multiplier 
-  assign vat_price_rounded = vat_price | divided_by: 100 | round: 2 | times: 100
+  assign vat_price_rounded = vat_price | divided_by: 100 | round: 1 | times: 100
 endif
   
 -%}
