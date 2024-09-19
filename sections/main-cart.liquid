@@ -556,7 +556,11 @@
                   <div class="totals flex justify-space-between align-end flex-wrap">
                     <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
                     <p class="totals__subtotal-value price font-body-semi-bold">
-                      {%- render 'price-format', price: cart.total_price -%}
+                      {%- liquid
+                        assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
+                        assign total_price_with_vat = cart.total_price | times: vat_rate_multiplier | round: 1
+                      -%}
+                      {%- render 'price-format', price: total_price_with_vat -%}
                     </p>
                   </div>
 
@@ -573,21 +577,28 @@
                       </ul>
                     {%- endif -%}
                   </div>
-
-                  <small class="tax-note text-small rte db margin-top-1rem">
-                    {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
-                      {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                    {%- elsif cart.taxes_included -%}
-                      {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
-                    {%- elsif shop.shipping_policy.body != blank -%}
-                      {{
-                        'sections.cart.taxes_and_shipping_policy_at_checkout_html'
-                        | t: link: shop.shipping_policy.url
-                      }}
-                    {%- else -%}
-                      {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
-                    {%- endif -%}
-                  </small>
+                  <div class="flex">
+                    <small class="tax-note text-small rte db margin-top-1rem">
+                      {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                        {{
+                          'sections.cart.taxes_included_and_shipping_policy_html'
+                          | t: link: shop.shipping_policy.url
+                        }}
+                      {%- elsif cart.taxes_included -%}
+                        {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+                      {%- elsif shop.shipping_policy.body != blank -%}
+                        {{
+                          'sections.cart.taxes_and_shipping_policy_at_checkout_html'
+                          | t: link: shop.shipping_policy.url
+                        }}
+                      {%- else -%}
+                        {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+                      {%- endif -%}
+                    </small>
+                    <small>
+                      {%- render 'price-format', price: cart.total_price -%}
+                    </small>
+                  </div>
                 </div>
               {%- when 'free-shipping-bar' -%}
                 {%- render 'free-shipping-bar', wrapper_classes: 'cart__free-shipping-bar', no_background: true -%}
