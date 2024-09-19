@@ -98,8 +98,8 @@
         "category_filter_icon_BQfNEa"
       ],
       "settings": {
-        "products_per_page": 25,
-        "columns_desktop": 5,
+        "products_per_page": 28,
+        "columns_desktop": 4,
         "pagination_style": "more",
         "preload_first_image": true,
         "image_ratio": "portrait",
