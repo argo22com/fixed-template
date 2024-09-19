@@ -19,6 +19,7 @@
     assign vat_price_rounded = vat_price | divided_by: 100 | round: 1 | times: 100
   endif
 -%}
+{{ variant_vat_metafield }}
 {% if vat_price_rounded %}
   <span class="strong price__vat">
     {{ vat_price_rounded | money_without_trailing_zeros }}
