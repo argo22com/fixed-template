@@ -354,24 +354,10 @@
 
                           <td class="cart-item__totals cart-page__item-totals flex justify-space-between align-center">
                             <div class="cart-item__price-wrapper">
-                              {%- liquid
-                                assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
-                                if localization.country.currency.iso_code == 'CZK'
-                                  assign vat_price_string = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat
-                                  assign vat_multiplier = 1
-                                  assign vat_price = vat_price_string | times: vat_multiplier | round: 1
-                                  assign vat_price_rounded = vat_price | times: 100
-                                else
-                                  assign vat_price_string = item.original_line_price
-                                  assign vat_price = vat_price_string | times: vat_rate_multiplier | round: 1
-                                  assign vat_price_rounded = vat_price
-                                endif
-                              -%}
-                              {% if vat_price_rounded %}
-                                <span class="strong price__vat">
-                                  {{ vat_price_rounded | money_without_trailing_zeros }}
-                                </span>
-                              {% endif %}
+                              {% render 'price-with-vat',
+                                price: item.original_line_price,
+                                variant_vat_metafield: product.selected_or_first_available_variant.metafields.product_texts.price_with_vat
+                              %}
                               {%- if item.original_line_price != item.final_line_price -%}
                                 <dl class="cart-item__discounted-prices">
                                   <dt class="visually-hidden">

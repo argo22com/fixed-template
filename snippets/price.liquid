@@ -44,17 +44,10 @@ endif
 -%}
 
 {% if show_in_card %}
-{% if vat_price_rounded %}
-  <span class="strong price__vat">
-    {{ vat_price_rounded | money_without_trailing_zeros  }}
-  </span>
-{% endif %}
+  {% render 'price-with-vat', price: product.selected_or_first_available_variant.price , variant_vat_metafield: product.selected_or_first_available_variant.metafields.product_texts.price_with_vat %}
 {% else %}
-  {% if vat_price_rounded %}
-    <span class="strong price__vat">
-      {{ vat_price_rounded | money_without_trailing_zeros }}
-    </span>
-  {% endif %}
+{% render 'price-with-vat', price: product.selected_or_first_available_variant.price , variant_vat_metafield: product.selected_or_first_available_variant.metafields.product_texts.price_with_vat %}
+
 
   <{% unless use_custom_element %}div{% else %}product-price{% endunless %} class="price
     {%- if price_class %} {{ price_class }}{% endif -%}
