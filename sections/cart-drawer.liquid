@@ -348,7 +348,7 @@
                                   assign vat_price_string = item.variant.metafields.product_texts.price_with_vat
                                   assign vat_multiplier = 1
                                 else
-                                  assign vat_price_string = item.variant.metafields.product_texts.price_with_vat_eur
+                                  assign vat_price_string = item.original_line_price
                                   assign vat_multiplier = vat_rate_multiplier
                                 endif
                                 assign vat_price = vat_price_string | times: vat_multiplier | round: 1
