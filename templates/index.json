@@ -392,23 +392,31 @@
             "custom_image": "shopify:\/\/shop_images\/kolekce4.jpg",
             "custom_title": "Armor"
           }
+        },
+        "featured_collection_qTq37c": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
         }
       },
       "block_order": [
         "featured_collection_xdJmVL",
         "featured_collection_emzhYj",
         "featured_collection_ejGJRA",
-        "featured_collection_BEHfYD"
+        "featured_collection_BEHfYD",
+        "featured_collection_qTq37c"
       ],
       "custom_css": [
         "h3 {font-size: 2.5rem;}"
       ],
       "settings": {
-        "title": "Kolekce",
+        "title": "Doporučujeme",
         "subtitle": "",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "full_width": false,
         "enable_section_box_layout": false,
         "enable_desktop_slider": false,
