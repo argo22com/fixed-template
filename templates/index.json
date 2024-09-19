@@ -380,7 +380,7 @@
         "featured_collection_ejGJRA": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "bezdratove-nabijecky",
             "custom_image": "shopify:\/\/shop_images\/kolekce3_c2608871-fe82-457b-a948-8f16b1759638.jpg",
             "custom_title": "Bezdrátové nabíjení"
           }
@@ -388,7 +388,7 @@
         "featured_collection_BEHfYD": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "skla-armor",
             "custom_image": "shopify:\/\/shop_images\/kolekce4.jpg",
             "custom_title": "Armor"
           }
@@ -407,7 +407,7 @@
         "title": "Kolekce",
         "subtitle": "",
         "heading_size": "h1",
-        "image_ratio": "landscape",
+        "image_ratio": "square",
         "columns_desktop": 4,
         "full_width": false,
         "enable_section_box_layout": false,
