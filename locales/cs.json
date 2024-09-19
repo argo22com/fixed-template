@@ -381,7 +381,7 @@
       "taxes_and_shipping_policy_at_checkout_html": "Daně a <a href=\"{{ link }}\">poštovné<\/a> se vypočítají na pokladně",
       "taxes_included_but_shipping_at_checkout": "Příslušná daň a poštovné se vypočítají na pokladně",
       "taxes_included_and_shipping_policy_html": "Včetně daně. <a href=\"{{ link }}\">Poštovné<\/a> se vypočítá na pokladně.",
-      "taxes_and_shipping_at_checkout": "Cena bez daně. Poštovné se vypočítá na pokladně.",
+      "taxes_and_shipping_at_checkout": "Poštovné se vypočítá na pokladně, cena bez daně.",
       "update": "Aktualizovat",
       "headings": {
         "product": "Produkt",
