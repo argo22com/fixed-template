@@ -161,7 +161,7 @@
           "type": "parameters",
           "settings": {
             "title": "Parametry",
-            "show_sku": true
+            "show_sku": false
           }
         },
         "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
