@@ -644,8 +644,8 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Je možné do pouzdra vložit tablet včetně klávesnice FOLIO?",
-            "icon": "emoji_happy",
-            "row_content": "<p>Ano, pokud je to výslovně uvedeno v názvu, či popisu produktu např. \"FIXED Oxford kožené pouzdro Apple iPad Pro 11\" (2018\/20\/21) s klávesnicí Folio\"<\/p>",
+            "icon": "folder_open",
+            "row_content": "<p>Ano, pokud je to výslovně uvedeno v názvu, či popisu produktu např. \"FIXED Oxford kožené pouzdro Apple iPad Pro 11\" (2018\/20\/21) s<strong> klávesnicí Folio<\/strong>\"<\/p>",
             "page": ""
           }
         },
@@ -653,7 +653,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Je možné do pouzdra vložit tablet včetně Magic Keyboard?",
-            "icon": "emoji_happy",
+            "icon": "terminal",
             "row_content": "<p>Ano, pokud je to výslovně uvedeno v názvu, či popisu produktu např. \"FIXED Oxford kožené pouzdro Apple iPad Pro 11\" (2018\/20\/21) s<strong> klávesnicí Magic Keyboard<\/strong>\"<\/p>",
             "page": ""
           }
@@ -661,9 +661,9 @@
         "collapsible_row_9UeYr8": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
+            "heading": "Jsou pouzdra Oxford vhodné i pro tablety, či notebooky jiných značek?",
+            "icon": "folder",
+            "row_content": "<p>Přesto, že jsou pouzdra Oxford dedikovaná na jednotlivé modely iPadů a MacBooků, je možné je výjimečně využít také pro zařízení jiných značek. V popisku u každého modelu pouzdra Oxford jsou uvedeny vnitřní rozměry, dle kterých je možné se při výběru orientovat. Pokud je některý z rozměrů vašeho zařízení větší než vnitřní rozměr Oxfordu, nedoporučujeme pouzdro pro zařízení používat.<\/p>",
             "page": ""
           }
         }
