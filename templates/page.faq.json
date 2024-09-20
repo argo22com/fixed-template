@@ -52,7 +52,7 @@
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Bezdrátová TWS sluchátka FIXED Boom Pods (FIXBO-xx)",
+            "heading": "Bezdrátová TWS sluchátka FIXED Boom Pods (FIXBO-HD)",
             "icon": "user",
             "row_content": "<p>Item content<\/p>",
             "page": "faq-fixbo-hd-bk"
@@ -61,37 +61,46 @@
         "fc14f404-14e6-4385-abce-97befddcbc15": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
+            "heading": "FIXBO-JOY",
             "icon": "none",
-            "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "faq-fixbo-joy-bk"
           }
         },
         "ba05d1f2-5171-45c9-8744-83c98696fbde": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
+            "heading": "FIXBO-PDS",
             "icon": "none",
-            "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "faq-fixbo-pds-wh"
           }
         },
         "e5ab997e-65e1-4c61-a822-c7e2462701f5": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
+            "heading": "FIXBO-PDS2",
             "icon": "none",
-            "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "faq-fixbo-pds2-wh"
+          }
+        },
+        "collapsible_row_3UTHRh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXCG100",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixcg100-3cu-wh"
           }
         },
         "3e58aed5-135f-4956-801c-158ebd0bb04d": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
+            "heading": "FIXFL",
             "icon": "none",
-            "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "faq-fixfl"
           }
         },
         "e3750448-5532-4733-9104-23f0b8b88d2a": {
@@ -157,6 +166,7 @@
         "fc14f404-14e6-4385-abce-97befddcbc15",
         "ba05d1f2-5171-45c9-8744-83c98696fbde",
         "e5ab997e-65e1-4c61-a822-c7e2462701f5",
+        "collapsible_row_3UTHRh",
         "3e58aed5-135f-4956-801c-158ebd0bb04d",
         "e3750448-5532-4733-9104-23f0b8b88d2a",
         "71404b50-a2fe-4958-9a5a-245af1c03d2b",
