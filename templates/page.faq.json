@@ -62,7 +62,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Bezdrátová TWS sluchátka FIXED Boom Joy (FIXBO-JOY)",
-            "icon": "play",
+            "icon": "music_note",
             "row_content": "",
             "page": "faq-fixbo-joy-bk"
           }
@@ -71,7 +71,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Bezdrátová TWS sluchátka FIXED Pods (FIXBO-PDS)",
-            "icon": "play",
+            "icon": "music_note",
             "row_content": "",
             "page": "faq-fixbo-pds-wh"
           }
@@ -80,7 +80,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Bezdrátová TWS sluchátka FIXED Pods (FIXBO-PDS2)",
-            "icon": "play",
+            "icon": "music_note",
             "row_content": "",
             "page": "faq-fixbo-pds2-wh"
           }
@@ -89,7 +89,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Síťová GaN nabíječka FIXED s 3xUSB-C a USB výstupem, podpora PD 3.0, 100W (FIXCG100-3CU-WH)",
-            "icon": "emoji_happy",
+            "icon": "plus",
             "row_content": "",
             "page": "faq-fixcg100-3cu-wh"
           }
@@ -98,7 +98,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Zadní kryt FIXED Flow (FIXFL-xx)",
-            "icon": "phone",
+            "icon": "plus_sm",
             "row_content": "",
             "page": "faq-fixfl"
           }
