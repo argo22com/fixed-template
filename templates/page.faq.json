@@ -25,7 +25,7 @@
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-0": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Armband",
+            "heading": "Sportovní pouzdro na ruku FIXED Armband (FIXAB-BK)",
             "icon": "chart_pie",
             "row_content": "",
             "page": "faq-armband"
@@ -35,7 +35,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Miniaturní microUSB OTG adaptér FIXED pro mobilní telefony a tablety s pouzdrem, USB 2.0, (FIXA-MTOAM-BK)",
-            "icon": "none",
+            "icon": "archive",
             "row_content": "",
             "page": "faq-fixa-mtoam-bk"
           }
@@ -43,10 +43,10 @@
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
+            "heading": "Silikonový držák mobilního telefonu na kolo FIXED Bikee (FIXBI-xx)",
             "icon": "none",
-            "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "faq-fixbi-bk"
           }
         },
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-3": {
