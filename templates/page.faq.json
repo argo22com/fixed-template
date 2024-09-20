@@ -44,7 +44,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Silikonový držák mobilního telefonu na kolo FIXED Bikee (FIXBI-xx)",
-            "icon": "none",
+            "icon": "cog",
             "row_content": "",
             "page": "faq-fixbi-bk"
           }
@@ -52,10 +52,10 @@
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
-            "icon": "none",
+            "heading": "Bezdrátová TWS sluchátka FIXED Boom Pods (FIXBO-xx)",
+            "icon": "user",
             "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "page": "faq-fixbo-hd-bk"
           }
         },
         "fc14f404-14e6-4385-abce-97befddcbc15": {
