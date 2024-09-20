@@ -106,8 +106,8 @@
         "e3750448-5532-4733-9104-23f0b8b88d2a": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIXFLT",
-            "icon": "none",
+            "heading": "Voděodolné plovoucí pouzdro na mobil FIXED Float  (FIXFLT-xx)",
+            "icon": "stop",
             "row_content": "",
             "page": "faq-fixflt"
           }
@@ -124,8 +124,8 @@
         "a5e5d28a-c656-4507-9bb4-3e8321294405": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIXGRA",
-            "icon": "none",
+            "heading": "Dotykové pero pro iPady (FIXGRA-BK)",
+            "icon": "pencil_alt",
             "row_content": "",
             "page": "faq-fixgra-bk"
           }
@@ -133,8 +133,8 @@
         "6cff051f-f2fd-403c-a14d-912992fd60a4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIXGRA2",
-            "icon": "none",
+            "heading": "Dotykové pero pro iPady (FIXGRA2 -BK)",
+            "icon": "pencil_alt",
             "row_content": "<p>Item content<\/p>",
             "page": "faq-fixgra2"
           }
