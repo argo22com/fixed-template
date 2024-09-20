@@ -107,7 +107,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Voděodolné plovoucí pouzdro na mobil FIXED Float  (FIXFLT-xx)",
-            "icon": "stop",
+            "icon": "cellphone",
             "row_content": "",
             "page": "faq-fixflt"
           }
@@ -224,7 +224,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FIXPAD-BK",
-            "icon": "emoji_happy",
+            "icon": "cellphone",
             "row_content": "",
             "page": "faq-fixpad-bk"
           }
@@ -269,7 +269,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FIXSS-SNA-BK",
-            "icon": "emoji_happy",
+            "icon": "star",
             "row_content": "",
             "page": "faq-fixss-sna-bk"
           }
@@ -278,7 +278,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FIXSS-SNL-BK",
-            "icon": "emoji_happy",
+            "icon": "star",
             "row_content": "",
             "page": "faq-fixss-snl-bk"
           }
@@ -287,7 +287,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FIXTAB-PASS-BK",
-            "icon": "emoji_happy",
+            "icon": "table",
             "row_content": "",
             "page": "faq-fixtab-pas-bk"
           }
@@ -296,7 +296,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FIXZEN-10-BK",
-            "icon": "emoji_happy",
+            "icon": "box",
             "row_content": "",
             "page": "faq-fixzen-10-bk"
           }
@@ -305,7 +305,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FLEX-BK",
-            "icon": "emoji_happy",
+            "icon": "plus_sm",
             "row_content": "",
             "page": "faq-flex-bk"
           }
