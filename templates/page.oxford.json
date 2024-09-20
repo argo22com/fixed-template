@@ -558,67 +558,6 @@
         "overlay_color": "#1e40af"
       }
     },
-    "collapsible_content_WG64rL": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_4tkfPb": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Je možné do pouzdra vložit tablet včetně klávesnice FOLIO?",
-            "icon": "emoji_happy",
-            "row_content": "<p>Ano, pokud je to výslovně uvedeno v názvu, či popisu produktu např. \"FIXED Oxford kožené pouzdro Apple iPad Pro 11\" (2018\/20\/21) s klávesnicí Folio\"<\/p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_7Je84X": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_9UeYr8": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_NyEeCE": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_4tkfPb",
-        "collapsible_row_7Je84X",
-        "collapsible_row_9UeYr8",
-        "collapsible_row_NyEeCE"
-      ],
-      "settings": {
-        "section_width": "grid",
-        "title": "FAQ",
-        "subtitle": "",
-        "heading_size": "h1",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "hide_image_on_mobile": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "featured_products_tabs_Fy3G9B": {
       "type": "featured-products-tabs",
       "blocks": {
@@ -697,6 +636,57 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_WG64rL": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_4tkfPb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Je možné do pouzdra vložit tablet včetně klávesnice FOLIO?",
+            "icon": "emoji_happy",
+            "row_content": "<p>Ano, pokud je to výslovně uvedeno v názvu, či popisu produktu např. \"FIXED Oxford kožené pouzdro Apple iPad Pro 11\" (2018\/20\/21) s klávesnicí Folio\"<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7Je84X": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Je možné do pouzdra vložit tablet včetně Magic Keyboard?",
+            "icon": "emoji_happy",
+            "row_content": "<p>Ano, pokud je to výslovně uvedeno v názvu, či popisu produktu např. \"FIXED Oxford kožené pouzdro Apple iPad Pro 11\" (2018\/20\/21) s<strong> klávesnicí Magic Keyboard<\/strong>\"<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9UeYr8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_4tkfPb",
+        "collapsible_row_7Je84X",
+        "collapsible_row_9UeYr8"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "title": "FAQ",
+        "subtitle": "",
+        "heading_size": "h1",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "hide_image_on_mobile": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -708,8 +698,8 @@
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
     "video_with_text_R73aYn",
-    "collapsible_content_WG64rL",
     "featured_products_tabs_Fy3G9B",
-    "video_XhEQtC"
+    "video_XhEQtC",
+    "collapsible_content_WG64rL"
   ]
 }
