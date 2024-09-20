@@ -133,28 +133,28 @@
         "6cff051f-f2fd-403c-a14d-912992fd60a4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
+            "heading": "FIXGRA2",
             "icon": "none",
             "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "page": "faq-fixgra2"
           }
         },
         "0abc7a24-3396-474f-8d66-b40b6316278d": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
+            "heading": "FIXHU-CAD-GR",
             "icon": "none",
-            "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "faq-fixhu-cad-gr"
           }
         },
         "523a8a5d-f078-4afc-96ec-8a423da64c77": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
+            "heading": "FIXHU-MN",
             "icon": "none",
-            "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "faq-fixhu-mn"
           }
         }
       },
