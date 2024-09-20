@@ -115,8 +115,8 @@
         "71404b50-a2fe-4958-9a5a-245af1c03d2b": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIFR-WRL",
-            "icon": "none",
+            "heading": "Nabíječka (FIFR-WRL)",
+            "icon": "light_bulb",
             "row_content": "",
             "page": "faq-fixfr-wrl-bk"
           }
@@ -142,8 +142,8 @@
         "0abc7a24-3396-474f-8d66-b40b6316278d": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIXHU-CAD-GR",
-            "icon": "none",
+            "heading": "7-portový hliníkový USB-C FIXED HUB Card pro notebooky a tablety (FIXHU-CAD-GR)",
+            "icon": "chip",
             "row_content": "",
             "page": "faq-fixhu-cad-gr"
           }
@@ -151,8 +151,8 @@
         "523a8a5d-f078-4afc-96ec-8a423da64c77": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIXHU-MN",
-            "icon": "none",
+            "heading": "5-portový hliníkový USB-C FIXED HUB Mini pro notebooky a tablety (FIXHU-MN)",
+            "icon": "chip",
             "row_content": "",
             "page": "faq-fixhu-mn"
           }
@@ -160,8 +160,8 @@
         "collapsible_row_EBWmt4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIXHU",
-            "icon": "emoji_happy",
+            "heading": "FIXED Hub (FIXHU-xx)",
+            "icon": "chip",
             "row_content": "",
             "page": "faq-fixhu"
           }
@@ -170,7 +170,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FIXIX-VENT",
-            "icon": "emoji_happy",
+            "icon": "truck",
             "row_content": "",
             "page": "faq-fixic-vent-bk"
           }
@@ -179,7 +179,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FIXMAT-BK",
-            "icon": "emoji_happy",
+            "icon": "truck",
             "row_content": "",
             "page": "faq-fixmat-bk"
           }
@@ -188,7 +188,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FIXMCLI-BK",
-            "icon": "emoji_happy",
+            "icon": "truck",
             "row_content": "",
             "page": "faq-fixmcli-bk"
           }
@@ -197,7 +197,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FIXMPAD2",
-            "icon": "emoji_happy",
+            "icon": "light_bulb",
             "row_content": "",
             "page": "faq-fixmpad2"
           }
@@ -206,7 +206,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FIXMPOS-BK",
-            "icon": "emoji_happy",
+            "icon": "light_bulb",
             "row_content": "",
             "page": "faq-fixmpos-bk"
           }
@@ -215,7 +215,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "FIXMSD",
-            "icon": "emoji_happy",
+            "icon": "light_bulb",
             "row_content": "",
             "page": "faq-fixmsd"
           }
