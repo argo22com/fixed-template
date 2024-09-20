@@ -156,6 +156,87 @@
             "row_content": "",
             "page": "faq-fixhu-mn"
           }
+        },
+        "collapsible_row_EBWmt4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXHU",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixhu"
+          }
+        },
+        "collapsible_row_b74N4d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXIX-VENT",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixic-vent-bk"
+          }
+        },
+        "collapsible_row_YVFQME": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXMAT-BK",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixmat-bk"
+          }
+        },
+        "collapsible_row_emVJ4z": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXMCLI-BK",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixmcli-bk"
+          }
+        },
+        "collapsible_row_6LKQjG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_jt9xgg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_ijUFEC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_eHFiBk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_VwTbCz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -173,7 +254,16 @@
         "a5e5d28a-c656-4507-9bb4-3e8321294405",
         "6cff051f-f2fd-403c-a14d-912992fd60a4",
         "0abc7a24-3396-474f-8d66-b40b6316278d",
-        "523a8a5d-f078-4afc-96ec-8a423da64c77"
+        "523a8a5d-f078-4afc-96ec-8a423da64c77",
+        "collapsible_row_EBWmt4",
+        "collapsible_row_b74N4d",
+        "collapsible_row_YVFQME",
+        "collapsible_row_emVJ4z",
+        "collapsible_row_6LKQjG",
+        "collapsible_row_jt9xgg",
+        "collapsible_row_ijUFEC",
+        "collapsible_row_eHFiBk",
+        "collapsible_row_VwTbCz"
       ],
       "settings": {
         "section_width": "grid",
