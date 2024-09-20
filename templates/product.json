@@ -188,11 +188,18 @@
             "title": "Výběr správné velikosti pouzdra"
           }
         },
-        "custom_text_VQ69j9": {
-          "type": "custom_text",
+        "page_content_pfVtL9": {
+          "type": "page_content",
           "settings": {
             "title": "FAQ",
-            "custom_text": ""
+            "page": ""
+          }
+        },
+        "metafields_XkQWGr": {
+          "type": "metafields",
+          "settings": {
+            "title": "FAQ",
+            "namespace_key": "custom.faq"
           }
         }
       },
@@ -203,7 +210,8 @@
         "files_dWmtVg",
         "judge_me_reviews_review_widget_8VjJfr",
         "size_chart_page_h8pBMk",
-        "custom_text_VQ69j9"
+        "page_content_pfVtL9",
+        "metafields_XkQWGr"
       ],
       "custom_css": [
         ".jdgm-rev-widg__title {display: none;}",
