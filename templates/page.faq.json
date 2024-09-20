@@ -61,8 +61,8 @@
         "fc14f404-14e6-4385-abce-97befddcbc15": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIXBO-JOY",
-            "icon": "none",
+            "heading": "Bezdrátová TWS sluchátka FIXED Boom Joy (FIXBO-JOY)",
+            "icon": "play",
             "row_content": "",
             "page": "faq-fixbo-joy-bk"
           }
@@ -70,8 +70,8 @@
         "ba05d1f2-5171-45c9-8744-83c98696fbde": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIXBO-PDS",
-            "icon": "none",
+            "heading": "Bezdrátová TWS sluchátka FIXED Pods (FIXBO-PDS)",
+            "icon": "play",
             "row_content": "",
             "page": "faq-fixbo-pds-wh"
           }
@@ -79,8 +79,8 @@
         "e5ab997e-65e1-4c61-a822-c7e2462701f5": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIXBO-PDS2",
-            "icon": "none",
+            "heading": "Bezdrátová TWS sluchátka FIXED Pods (FIXBO-PDS2)",
+            "icon": "play",
             "row_content": "",
             "page": "faq-fixbo-pds2-wh"
           }
@@ -88,7 +88,7 @@
         "collapsible_row_3UTHRh": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIXCG100",
+            "heading": "Síťová GaN nabíječka FIXED s 3xUSB-C a USB výstupem, podpora PD 3.0, 100W (FIXCG100-3CU-WH)",
             "icon": "emoji_happy",
             "row_content": "",
             "page": "faq-fixcg100-3cu-wh"
@@ -97,8 +97,8 @@
         "3e58aed5-135f-4956-801c-158ebd0bb04d": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "FIXFL",
-            "icon": "none",
+            "heading": "Zadní kryt FIXED Flow (FIXFL-xx)",
+            "icon": "phone",
             "row_content": "",
             "page": "faq-fixfl"
           }
@@ -314,7 +314,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Ochranné sklo",
-            "icon": "emoji_happy",
+            "icon": "document_duplicate",
             "row_content": "",
             "page": "faq-ochranne-sklo"
           }
@@ -323,7 +323,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Oxford",
-            "icon": "emoji_happy",
+            "icon": "laptop",
             "row_content": "",
             "page": "faq-oxford"
           }
