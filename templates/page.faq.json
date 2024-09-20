@@ -124,10 +124,10 @@
         "a5e5d28a-c656-4507-9bb4-3e8321294405": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
+            "heading": "FIXGRA",
             "icon": "none",
-            "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "faq-fixgra-bk"
           }
         },
         "6cff051f-f2fd-403c-a14d-912992fd60a4": {
