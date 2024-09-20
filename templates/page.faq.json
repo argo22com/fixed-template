@@ -283,24 +283,6 @@
             "page": "faq-fixss-snl-bk"
           }
         },
-        "collapsible_row_HriXGA": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_PMEmT7": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
-          }
-        },
         "collapsible_row_TKcphw": {
           "type": "collapsible_row",
           "settings": {
@@ -308,6 +290,24 @@
             "icon": "emoji_happy",
             "row_content": "",
             "page": "faq-fixtab-pas-bk"
+          }
+        },
+        "collapsible_row_HriXGA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXZEN-10-BK",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixzen-10-bk"
+          }
+        },
+        "collapsible_row_PMEmT7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FLEX-BK",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-flex-bk"
           }
         }
       },
@@ -341,9 +341,9 @@
         "collapsible_row_UciX9k",
         "collapsible_row_N7BDK8",
         "collapsible_row_mNFJdq",
+        "collapsible_row_TKcphw",
         "collapsible_row_HriXGA",
-        "collapsible_row_PMEmT7",
-        "collapsible_row_TKcphw"
+        "collapsible_row_PMEmT7"
       ],
       "settings": {
         "section_width": "grid",
