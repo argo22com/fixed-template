@@ -106,19 +106,19 @@
         "e3750448-5532-4733-9104-23f0b8b88d2a": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
+            "heading": "FIXFLT",
             "icon": "none",
-            "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "faq-fixflt"
           }
         },
         "71404b50-a2fe-4958-9a5a-245af1c03d2b": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Item heading",
+            "heading": "FIFR-WRL",
             "icon": "none",
-            "row_content": "<p>Item content<\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "faq-fixfr-wrl-bk"
           }
         },
         "a5e5d28a-c656-4507-9bb4-3e8321294405": {
