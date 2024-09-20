@@ -282,6 +282,33 @@
             "row_content": "",
             "page": "faq-fixss-snl-bk"
           }
+        },
+        "collapsible_row_HriXGA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_PMEmT7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_TKcphw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXTAB-PASS-BK",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixtab-pas-bk"
+          }
         }
       },
       "block_order": [
@@ -313,7 +340,10 @@
         "collapsible_row_B4ykhJ",
         "collapsible_row_UciX9k",
         "collapsible_row_N7BDK8",
-        "collapsible_row_mNFJdq"
+        "collapsible_row_mNFJdq",
+        "collapsible_row_HriXGA",
+        "collapsible_row_PMEmT7",
+        "collapsible_row_TKcphw"
       ],
       "settings": {
         "section_width": "grid",
