@@ -223,19 +223,64 @@
         "collapsible_row_eHFiBk": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "FIXPAD-BK",
             "icon": "emoji_happy",
             "row_content": "",
-            "page": ""
+            "page": "faq-fixpad-bk"
+          }
+        },
+        "collapsible_row_9dNQcX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXPOS-BK",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixpos-bk"
           }
         },
         "collapsible_row_VwTbCz": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "FIXRLX",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixrlx"
+          }
+        },
+        "collapsible_row_B4ykhJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXROL2-BK",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixrol2-bk"
+          }
+        },
+        "collapsible_row_UciX9k": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXSPAD",
             "icon": "emoji_happy",
             "row_content": "",
             "page": ""
+          }
+        },
+        "collapsible_row_N7BDK8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXSS-SNA-BK",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixss-sna-bk"
+          }
+        },
+        "collapsible_row_mNFJdq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXSS-SNL-BK",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": "faq-fixss-snl-bk"
           }
         }
       },
@@ -263,7 +308,12 @@
         "collapsible_row_jt9xgg",
         "collapsible_row_ijUFEC",
         "collapsible_row_eHFiBk",
-        "collapsible_row_VwTbCz"
+        "collapsible_row_9dNQcX",
+        "collapsible_row_VwTbCz",
+        "collapsible_row_B4ykhJ",
+        "collapsible_row_UciX9k",
+        "collapsible_row_N7BDK8",
+        "collapsible_row_mNFJdq"
       ],
       "settings": {
         "section_width": "grid",
