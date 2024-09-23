@@ -24,8 +24,8 @@
       "type": "image-banner",
       "settings": {
         "layout": "grid",
-        "image": "shopify:\/\/shop_images\/onadnes_2_25166619-770a-4aa5-b792-b62aef7732d1.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/onadnes_2.jpg",
+        "image": "shopify://shop_images/onadnes_2_25166619-770a-4aa5-b792-b62aef7732d1.jpg",
+        "image_mobile": "shopify://shop_images/onadnes_banner_a83ad92d-b31d-4480-bbb7-c6cc9b954e71.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
@@ -37,26 +37,26 @@
         "enable_parallax_scrolling_effect": false,
         "mobile_content_alignment": "center",
         "show_text_below_image": true,
-        "color_text": "#fff",
+        "color_text": "#ffffff",
         "gradient_heading_desktop": "",
-        "color_button_text_1": "#000",
-        "color_button_1": "#fff",
-        "color_button_text_2": "#000",
-        "color_button_2": "#fff",
-        "colors_badge_foreground": "#fff",
-        "colors_badge_background": "#F87171",
-        "color_countdown_foreground": "#000",
-        "color_countdown_background": "#fff",
-        "color_text_mobile": "#fff",
+        "color_button_text_1": "#000000",
+        "color_button_1": "#ffffff",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#ffffff",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
         "gradient_heading_mobile": "",
-        "color_button_text_1_mobile": "#000",
-        "color_button_1_mobile": "#fff",
-        "color_button_text_2_mobile": "#000",
-        "color_button_2_mobile": "#fff",
-        "colors_badge_foreground_mobile": "#fff",
-        "colors_badge_background_mobile": "#F87171",
-        "color_countdown_foreground_mobile": "#000",
-        "color_countdown_background_mobile": "#fff",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
         "background_container_mobile": "#565656",
         "gradient_background_container_mobile": "",
         "padding_top": 0,
@@ -69,14 +69,14 @@
         "heading_QedC4E": {
           "type": "heading",
           "settings": {
-            "heading": "<p><strong>Nákupy Ona Dnes s FIXED<\/strong><\/p>",
+            "heading": "<p><strong>Nákupy Ona Dnes s FIXED</strong></p>",
             "heading_size": "h1"
           }
         },
         "text_ijC46Q": {
           "type": "text",
           "settings": {
-            "text": "<p>Nakup naše produkty z kůže, či veganské kůže s 20% slevou.<\/p><p>Stačí do košíku zadat kód <strong>ONADNES24 <\/strong>a sleva se automaticky odečte (slevu lze uplatnit pouze na vybranou řadu produktů).<\/p><p>V případě platby Visa kartou, lze použít ještě kód <strong>VISA5<\/strong> pro dodatečnou slevu 5 %.<\/p><p><strong>Akce probíhá od 14.10. do 20.10.<\/strong><\/p>"
+            "text": "<p>Nakup naše produkty z kůže, či veganské kůže s 20% slevou.</p><p>Stačí do košíku zadat kód <strong>ONADNES24 </strong>a sleva se automaticky odečte (slevu lze uplatnit pouze na vybranou řadu produktů).</p><p>V případě platby Visa kartou, lze použít ještě kód <strong>VISA5</strong> pro dodatečnou slevu 5 %.</p><p><strong>Akce probíhá od 14.10. do 20.10.</strong></p>"
           }
         }
       },
@@ -102,7 +102,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "pouzdra-na-telefony",
-            "custom_image": "shopify:\/\/shop_images\/profit_1.jpg",
+            "custom_image": "shopify://shop_images/profit_1.jpg",
             "custom_title": ""
           }
         },
@@ -110,7 +110,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "pouzdra-na-tablety",
-            "custom_image": "shopify:\/\/shop_images\/tablety_1.jpg",
+            "custom_image": "shopify://shop_images/tablety_1.jpg",
             "custom_title": ""
           }
         },
@@ -118,7 +118,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "pouzdra-na-notebooky",
-            "custom_image": "shopify:\/\/shop_images\/notebooky_1.jpg",
+            "custom_image": "shopify://shop_images/notebooky_1.jpg",
             "custom_title": ""
           }
         },
@@ -126,7 +126,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "venezia",
-            "custom_image": "shopify:\/\/shop_images\/venezia_ls3.jpg",
+            "custom_image": "shopify://shop_images/venezia_ls3.jpg",
             "custom_title": "Taštičky na telefon Venezia"
           }
         },
@@ -134,7 +134,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "penezenky",
-            "custom_image": "shopify:\/\/shop_images\/penezenky_1.jpg",
+            "custom_image": "shopify://shop_images/penezenky_1.jpg",
             "custom_title": ""
           }
         },
@@ -142,7 +142,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "pasovky",
-            "custom_image": "shopify:\/\/shop_images\/pasovky_1.jpg",
+            "custom_image": "shopify://shop_images/pasovky_1.jpg",
             "custom_title": ""
           }
         }
@@ -182,7 +182,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "siena",
-            "custom_image": "shopify:\/\/shop_images\/siena.jpg",
+            "custom_image": "shopify://shop_images/siena.jpg",
             "custom_title": "Pouzdra Siena s kapsičkou"
           }
         },
@@ -190,7 +190,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "york",
-            "custom_image": "shopify:\/\/shop_images\/york_ls2.jpg",
+            "custom_image": "shopify://shop_images/york_ls2.jpg",
             "custom_title": "Pouzdra York"
           }
         },
@@ -198,7 +198,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "verona",
-            "custom_image": "shopify:\/\/shop_images\/verona_1_0b2940a3-4031-4311-a5c8-0a149193cb51.jpg",
+            "custom_image": "shopify://shop_images/verona_1_0b2940a3-4031-4311-a5c8-0a149193cb51.jpg",
             "custom_title": "Taštičky na mobil Verona"
           }
         }
