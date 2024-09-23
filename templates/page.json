@@ -24,10 +24,10 @@
       "type": "image-banner",
       "settings": {
         "layout": "grid",
-        "image": "shopify://shop_images/onadnes_2_25166619-770a-4aa5-b792-b62aef7732d1.jpg",
+        "image": "shopify://shop_images/onadnes_2_25166619-770a-4aa5-b792-b62aef7732d1.png",
         "image_mobile": "shopify://shop_images/onadnes_banner_a83ad92d-b31d-4480-bbb7-c6cc9b954e71.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "adapt",
         "image_height_mobile": "medium-mobile",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
