@@ -13,4 +13,4 @@
     assign money_price = price | money_with_currency
   endif
 -%}
-{{ money_price }}
+{{ money_price | money_without_trailing_zeros }}
