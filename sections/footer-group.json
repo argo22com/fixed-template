@@ -20,9 +20,9 @@
             "heading": "Kontaktní informace",
             "address": "Budějovická 19, 370 01 Homole",
             "phone": "(+420) 606 909 990",
-            "email": "<a href=\"mailto:podpora@fixed.zone\">podpora@fixed.zone<\/a>",
+            "email": "<a href=\"mailto:podpora@fixed.zone\">podpora@fixed.zone</a>",
             "footer_logo_enable": true,
-            "footer_logo": "shopify:\/\/shop_images\/fixed_logo_bk_ong.png",
+            "footer_logo": "shopify://shop_images/fixed_logo_bk_ong.png",
             "footer_logo_width": 180,
             "footer_logo_alignment": "left"
           }
@@ -37,7 +37,7 @@
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Landing pages",
+            "heading": "Produkty",
             "menu": "paticka-lp"
           }
         },
