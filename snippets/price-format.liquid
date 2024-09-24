@@ -8,9 +8,9 @@
   {% render 'price-format', price: price %}
 {%- endcomment -%}
 {%- liquid
-  assign money_price = price | money
+  assign money_price = price | money_without_trailing_zeros
   if settings.currency_code_enabled
-    assign money_price = price | money_without_trailing_zeros
+    assign money_price = price | money_with_currency
   endif
 -%}
 {{ money_price }}
