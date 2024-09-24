@@ -16,7 +16,7 @@
       "login_form_password_placeholder": "Your password",
       "login_form_error": "Wrong password!",
       "login_form_submit": "Enter",
-      "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"link underlined-link\">Log in here<\/a>",
+      "admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"link underlined-link\">Log in here</a>",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
     },
     "social": {
@@ -140,7 +140,7 @@
         "few": "{{ count }} comments",
         "many": "{{ count }} comments"
       },
-      "author_html": "Posted by <strong>{{ author }}<\/strong>",
+      "author_html": "Posted by <strong>{{ author }}</strong>",
       "moderated": "Please note, comments need to be approved before they are published.",
       "comment_form_title": "Leave a comment",
       "name": "Name",
@@ -187,7 +187,7 @@
         "minimum_of": "Minimum: {{ quantity }}",
         "maximum_of": "Maximum: {{ quantity }}",
         "multiples_of": "Increments: {{ quantity }}",
-        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}<\/strong> in cart",
+        "in_cart_html": "<strong class=\"quantity-cart\">{{ quantity }}</strong> in cart",
         "note": "View quantity rules",
         "min_of": "Minimum {{ quantity }}",
         "max_of": "Maximum {{ quantity }}"
@@ -196,8 +196,8 @@
         "view_store_info": "View store information",
         "check_other_stores": "Check availability at other stores",
         "pick_up_available": "Pickup available",
-        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}<\/span>",
-        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}<\/span>",
+        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}</span>",
         "unavailable": "Couldn't load pickup availability",
         "refresh": "Refresh"
       },
@@ -220,7 +220,7 @@
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
       "inventory_in_stock": "In stock",
       "inventory_in_stock_show_count": "{{ quantity }} in stock",
       "inventory_low_stock": "Low stock",
@@ -232,7 +232,7 @@
         "one": "{{ count }} review",
         "other": "{{ count }} reviews"
       },
-      "by_vendor_html": "<span>By<\/span> {{ vendor }}",
+      "by_vendor_html": "<span>By</span> {{ vendor }}",
       "pre_order": "Pre-order",
       "variant_sold_out_or_unavailable": "Sold out or unavailable option",
       "quick_view_button": "Quick view",
@@ -241,7 +241,7 @@
         "title": "Prices with volume discount",
         "note": "Volume discount pricing available",
         "minimum": "{{ quantity }} and more",
-        "price_at_each": "{{ price }} \/ piece",
+        "price_at_each": "{{ price }} / piece",
         "price_range": "{{ minimum }}–{{ maximum }}"
       },
       "successor_text": "Choose from {{ count }} successors"
@@ -383,9 +383,9 @@
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
       "cart_success": "The product has been added to the cart.",
-      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout",
       "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
-      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
       "taxes_and_shipping_at_checkout": "Shipping will be calculated at checkout, price without tax",
       "headings": {
         "product": "Product",
@@ -397,12 +397,12 @@
       "update": "Update",
       "login": {
         "title": "Have an account?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in<\/a> to check out faster."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
       },
       "cart_totals": "Cart totals",
       "free_shipping": {
-        "unreached_message_html": "Buy <strong>[remain]<\/strong> more for <strong>free shipping<\/strong>!",
-        "reached_message_html": "<strong>Congratulations!<\/strong> You have free shipping."
+        "unreached_message_html": "Buy <strong>[remain]</strong> more for <strong>free shipping</strong>!",
+        "reached_message_html": "<strong>Congratulations!</strong> You have free shipping."
       }
     },
     "footer": {
@@ -435,7 +435,7 @@
     "collection_template": {
       "empty": "No products found",
       "title": "Collection",
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all<\/a>"
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
     },
     "video": {
       "load_video": "Load video: {{ description }}"
@@ -454,7 +454,7 @@
     },
     "background-color-swatches": {
       "preview_title": "Preview color swatches",
-      "preview_description": "This preview is only visible on the Theme Editor page to help you add\/edit\/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
+      "preview_description": "This preview is only visible on the Theme Editor page to help you add/edit/remove color codes easily. At the storefront, this preview will not be displayed, only color codes will be run.",
       "group_item": "Group #{{ index }}"
     },
     "cookies_banner": {
@@ -462,8 +462,8 @@
       "decline": "Decline"
     },
     "google_maps": {
-      "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates<\/a>.",
-      "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key<\/a>."
+      "coordinate_empty_error_html": "Please enter your coordinate. <a href=\"{{ link }}\">Learn how to get your address coordinates</a>.",
+      "api_key_empty_error_html": "Please enter your API key. Make sure the key has been included Maps Embed API. <a href=\"{{ link }}\">Learn how to get the API key</a>."
     },
     "product_tabs": {
       "reviews": {
@@ -472,10 +472,10 @@
     }
   },
   "localization": {
-    "country_label": "Country\/region",
+    "country_label": "Country/region",
     "language_label": "Language",
     "update_language": "Update language",
-    "update_country": "Update country\/region"
+    "update_country": "Update country/region"
   },
   "customer": {
     "account": {
@@ -483,7 +483,7 @@
       "details": "Account details",
       "view_addresses": "View addresses",
       "return": "Return to Account details",
-      "welcome_html": "Welcome back, <strong>{{ first_name }}<\/strong>!"
+      "welcome_html": "Welcome back, <strong>{{ first_name }}</strong>!"
     },
     "account_fallback": "Account",
     "activate_account": {
@@ -505,9 +505,9 @@
       "address1": "Address 1",
       "address2": "Address 2",
       "city": "City",
-      "country": "Country\/region",
+      "country": "Country/region",
       "province": "Province",
-      "zip": "Postal\/ZIP code",
+      "zip": "Postal/ZIP code",
       "phone": "Phone",
       "set_default": "Set as default address",
       "add": "Add address",
@@ -744,8 +744,8 @@
           "many": "Your order is paid for with gift cards."
         },
         "card_fields_unavailable_html": {
-          "few": "Credit and debit card payments are not available at this time.<br> <a href=\"%{current_url}\">Please refresh this page<\/a> or try another payment method.",
-          "many": "Credit and debit card payments are not available at this time.<br> <a href=\"%{current_url}\">Please refresh this page<\/a> or try another payment method."
+          "few": "Credit and debit card payments are not available at this time.<br> <a href=\"%{current_url}\">Please refresh this page</a> or try another payment method.",
+          "many": "Credit and debit card payments are not available at this time.<br> <a href=\"%{current_url}\">Please refresh this page</a> or try another payment method."
         },
         "expired_cards_info": {
           "few": "There are the following number of expired cards that you can view and edit in your account: %{count}.",
@@ -852,12 +852,12 @@
           "many": "Unavailable products"
         },
         "products_not_available": {
-          "few": "These products will be removed from your cart as they are not available in your country\/region.",
-          "many": "These products will be removed from your cart as they are not available in your country\/region."
+          "few": "These products will be removed from your cart as they are not available in your country/region.",
+          "many": "These products will be removed from your cart as they are not available in your country/region."
         },
         "all_products_in_cart_unavailable": {
-          "few": "These products are not available in your country\/region.",
-          "many": "These products are not available in your country\/region."
+          "few": "These products are not available in your country/region.",
+          "many": "These products are not available in your country/region."
         }
       },
       "throttle": {
@@ -1023,6 +1023,11 @@
       "banner_title": {
         "few": "{{count}} errors occurred",
         "many": "{{count}} errors occurred"
+      },
+      "no_access": {
+        "back_to_authentication_link": "Sign in with a different account",
+        "description": "You are not registered as a B2B customer at {{shopName}}",
+        "title": "No access"
       }
     },
     "ui_components": {
@@ -1044,6 +1049,14 @@
         "lessThanOneHourAgo": {
           "few": "{{count}} minutes ago",
           "many": "{{count}} minutes ago"
+        }
+      }
+    },
+    "order_details": {
+      "image_gallery": {
+        "load_more_items": {
+          "few": "Load more items ( {{count}} )",
+          "many": "Load more items ( {{count}} )"
         }
       }
     }
