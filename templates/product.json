@@ -40,7 +40,7 @@
           }
         },
         "wishlist_hero_custom_product_button_McnAG4": {
-          "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/custom-product-button\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+          "type": "shopify://apps/wishlist-hero/blocks/custom-product-button/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
           "settings": {
             "displayButtonMode": "~",
             "contentAlignment": "center",
@@ -178,7 +178,7 @@
           }
         },
         "judge_me_reviews_review_widget_8VjJfr": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         },
@@ -192,7 +192,7 @@
           "type": "metafields",
           "settings": {
             "title": "FAQ",
-            "namespace_key": "custom.faq"
+            "namespace_key": "custom.faq_page"
           }
         }
       },
