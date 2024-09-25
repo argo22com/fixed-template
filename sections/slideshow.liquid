@@ -331,7 +331,7 @@
                           {%- assign price_int = block.settings.price | times: 100.00 -%}
                           <span class="banner__price" data-price="{{ price_int }}">{%- render 'price-format', price: price_int -%}</span>
                           <span class="strong price__vat">
-                            {{ block.settings.price | money_without_trailing_zeros }}
+                            {{ price_int | money_without_trailing_zeros }}
                           </span>
                         {%- endif -%}
                       {%- endcapture -%}
