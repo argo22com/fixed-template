@@ -67,11 +67,14 @@
                 echo '</span>'
               endcapture
               capture price_to
+                assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
                 assign end_tag = '<span class="facets__price__range-value facets__price__range-value--to" id="Filter-' | append: suffix_id | append: 'Price-Range-Value-To">'
                 echo end_tag
                 if filter.max_value.value
-                  render 'price-format', price: filter.max_value.value
+                  assign total_price_with_vat = filter.max_value.value | times: vat_rate_multiplier | round: 1
+                  render 'price-format', price: total_price_with_vat
                 else
+                  assign total_price_with_vat = filter.range_max | times: vat_rate_multiplier | round: 1
                   render 'price-format', price: filter.range_max
                 endif
                 echo '</span>'
