@@ -329,8 +329,7 @@
                       {%- capture price -%}
                         {%- if block.settings.price != blank -%}
                           {%- assign price_int = block.settings.price | times: 100.00 -%}
-        
-                          <span  data-price="{{ price_int }}" class="strong price__vat">
+                          <span  data-price="{{ price_int }}" class="strong banner__price">
                             {{ price_int | money_without_trailing_zeros }}
                           </span>
                         {%- endif -%}
