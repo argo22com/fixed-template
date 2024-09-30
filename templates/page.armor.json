@@ -33,7 +33,7 @@
         "text_UDYABY": {
           "type": "text",
           "settings": {
-            "text": "<strong>Nejlepší a nejodolnější ochrana displeje na trhu.<\/strong>",
+            "text": "<strong>Nejlepší a nejodolnější ochrana displeje na trhu.</strong>",
             "text_style": "subtitle"
           }
         }
@@ -44,8 +44,8 @@
       ],
       "settings": {
         "layout": "stretched_grid",
-        "image": "shopify:\/\/shop_images\/armor_desktop.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Armor_mobile.jpg",
+        "image": "shopify://shop_images/armor_desktop.jpg",
+        "image_mobile": "shopify://shop_images/Armor_mobile.jpg",
         "image_overlay_opacity": 20,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
@@ -97,7 +97,7 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Produkty pod značkou Armor se vyznačují zvýšenou odolností, moderním a čistým designem za použití pokročilých technologických procesů a prémiových materiálů. Jsou to produkty s vysokými standardy pro funkčnost bez kompromisů.<\/p>",
+            "text": "<p>Produkty pod značkou Armor se vyznačují zvýšenou odolností, moderním a čistým designem za použití pokročilých technologických procesů a prémiových materiálů. Jsou to produkty s vysokými standardy pro funkčnost bez kompromisů.</p>",
             "text_style": "body"
           }
         }
@@ -108,7 +108,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/armo-rgb_5342e53c-627a-4328-aa69-1e5076503540.png",
+        "image": "shopify://shop_images/armo-rgb_5342e53c-627a-4328-aa69-1e5076503540.png",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -151,7 +151,7 @@
         "text_FgxdBE": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Extrémně vysoká pevnost skla – až 2× vyšší než u běžných skel​<\/li><li>O 30 % vyšší pružnost, která absorbuje případné nárazy a  odolává téměř všem běžným pádům​<\/li><li>Parametry testovány ve FIXED<\/li><\/ul>",
+            "text": "<ul><li>Extrémně vysoká pevnost skla – až 3× vyšší než u běžných skel​</li><li>O 30 % vyšší pružnost, která absorbuje případné nárazy a  odolává téměř všem běžným pádům​</li><li>Parametry testovány ve FIXED</li></ul>",
             "text_style": "body"
           }
         }
@@ -162,7 +162,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/armor_pruznost.jpg",
+        "image": "shopify://shop_images/armor_pruznost.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -205,7 +205,7 @@
         "text_PQARFT": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Nejvyšší propustnost světla na trhu – více než 94 % – zajistí významný pozitivní rozdíl v čitelnosti displeje​<\/li><li>Antireflexní vrstva zlepšuje čitelnost displeje, zejména na slunci nebo pod umělým osvětlením<\/li><li>Parametry testovány ve FIXED<\/li><\/ul>",
+            "text": "<ul><li>Nejvyšší propustnost světla na trhu – více než 94 % – zajistí významný pozitivní rozdíl v čitelnosti displeje​</li><li>Antireflexní vrstva zlepšuje čitelnost displeje, zejména na slunci nebo pod umělým osvětlením</li><li>Parametry testovány ve FIXED</li></ul>",
             "text_style": "body"
           }
         }
@@ -216,7 +216,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/armor_antireflex.png",
+        "image": "shopify://shop_images/armor_antireflex.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -259,7 +259,7 @@
         "text_Bn9ejK": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Aplikátor druhé generace pro dokonale přesné umístění skla Armor na displej​<\/li><li>Antidust fólie pro snadné a dokonalé odstranění všech částeček prachu​<\/li><li>Výsledkem je perfektně nalepené sklo bez vzduchových bublin za méně než minutu<\/li><\/ul>",
+            "text": "<ul><li>Aplikátor druhé generace pro dokonale přesné umístění skla Armor na displej​</li><li>Antidust fólie pro snadné a dokonalé odstranění všech částeček prachu​</li><li>Výsledkem je perfektně nalepené sklo bez vzduchových bublin za méně než minutu</li></ul>",
             "text_style": "body"
           }
         }
@@ -270,7 +270,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/armor_antidust.jpg",
+        "image": "shopify://shop_images/armor_antidust.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -313,7 +313,7 @@
         "enable_desktop_slider": false,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/armor_7f57e654-bc50-4751-916f-8e30177dc31a.jpg",
+        "image": "shopify://shop_images/armor_7f57e654-bc50-4751-916f-8e30177dc31a.jpg",
         "image_position_desktop": "right",
         "image_height": "adapt_product_list",
         "image_height_mobile": "34",
@@ -339,12 +339,12 @@
         "column_WFVFtW": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HG-Logo_Heureka-Color-2-1024x411_393073c7-270f-456e-a48a-3d006232d357.png",
+            "image": "shopify://shop_images/HG-Logo_Heureka-Color-2-1024x411_393073c7-270f-456e-a48a-3d006232d357.png",
             "icon": "shopping_bag",
             "title": "Nakoupit u partnerů",
-            "text": "<p>Sklo Armor je dostupné u široké škály partnerů, stačí si vybrat svůj oblíbený e-shop  na Heurece.<\/p>",
+            "text": "<p>Sklo Armor je dostupné u široké škály partnerů, stačí si vybrat svůj oblíbený e-shop  na Heurece.</p>",
             "link_label": "Přejít na Heureku",
-            "link": "https:\/\/tvrzena-skla-pro-mobilni-telefony.heureka.cz\/fixed-armor-ultra-odolne-sklo-s-aplikatorem-pro-apple-iphone-14-13-13-pro-fixga-928-bk\/#prehled\/",
+            "link": "https://tvrzena-skla-pro-mobilni-telefony.heureka.cz/fixed-armor-ultra-odolne-sklo-s-aplikatorem-pro-apple-iphone-14-13-13-pro-fixga-928-bk/#prehled/",
             "button_style": "solid",
             "button_open_new_tab": true,
             "card_color_text": "#000000",
@@ -357,12 +357,12 @@
         "column_rQwG6J": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Logo-FIXED-modra-RGB_d7481ded-02ac-42d4-a057-fb318da3a757.jpg",
+            "image": "shopify://shop_images/Logo-FIXED-modra-RGB_d7481ded-02ac-42d4-a057-fb318da3a757.jpg",
             "icon": "shopping_cart",
             "title": "Nakoupit v e-shopu FIXED",
-            "text": "<p>Všechny varianty skla Armor jsou dostupné v našem e-shopu, stačí si vybrat model telefonu.<\/p>",
+            "text": "<p>Všechny varianty skla Armor jsou dostupné v našem e-shopu, stačí si vybrat model telefonu.</p>",
             "link_label": "Přejít na produkty",
-            "link": "shopify:\/\/products\/premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-samsung-galaxy-a54-5g-cerne",
+            "link": "shopify://products/premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-samsung-galaxy-a54-5g-cerne",
             "button_style": "solid",
             "button_open_new_tab": true,
             "card_color_text": "#000000",
@@ -416,14 +416,14 @@
         "heading_9RkAxL": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Testování odolnosti skel<\/p>",
+            "heading": "<p>Testování odolnosti skel</p>",
             "heading_size": "h1"
           }
         },
         "text_W7e6H9": {
           "type": "text",
           "settings": {
-            "text": "<p>Abychom si byli kvalitou ochrany jisti, každý aspekt pečlivě testujeme.<\/p><p>Testujeme odolnost skla, ale i uživatelský zážitek.<\/p><p>Testů odolnosti existuje několik:<\/p><ul><li>Odolnost vůči pádu na plochu skla – pád ocelové kuličky o váze 64 g na samotné sklo<\/li><li>Odolnost proti poškrábání – rydly různé tvrdosti se zjišťuje tvrdost skla na Mohsově stupnici odolnosti<\/li><li>Odolnost hrany – dopad hrany skla na ostrou špičku<\/li><\/ul><p><\/p><p>Testy pro vylepšení uživatelského zážitku:<\/p><ul><li>Test propustnosti světla – ovlivňuje zejména dobrou viditelnost displeje pod ochranným sklem<\/li><li>Mikroskopický test na kapce destilované vody – takto se testuje oleofobní vrstva, která napomáhá hladkému skluzu po skle a redukuje vznik otisků prstů<\/li><li>Analýza obsahu příslušenství v balení – jednoduchá aplikace skla na telefon<\/li><\/ul><p><\/p>"
+            "text": "<p>Abychom si byli kvalitou ochrany jisti, každý aspekt pečlivě testujeme.</p><p>Testujeme odolnost skla, ale i uživatelský zážitek.</p><p>Testů odolnosti existuje několik:</p><ul><li>Odolnost vůči pádu na plochu skla – pád ocelové kuličky o váze 64 g na samotné sklo</li><li>Odolnost proti poškrábání – rydly různé tvrdosti se zjišťuje tvrdost skla na Mohsově stupnici odolnosti</li><li>Odolnost hrany – dopad hrany skla na ostrou špičku</li></ul><p></p><p>Testy pro vylepšení uživatelského zážitku:</p><ul><li>Test propustnosti světla – ovlivňuje zejména dobrou viditelnost displeje pod ochranným sklem</li><li>Mikroskopický test na kapce destilované vody – takto se testuje oleofobní vrstva, která napomáhá hladkému skluzu po skle a redukuje vznik otisků prstů</li><li>Analýza obsahu příslušenství v balení – jednoduchá aplikace skla na telefon</li></ul><p></p>"
           }
         }
       },
@@ -458,7 +458,7 @@
         "promotion_banner_gDQmxf": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify:\/\/shop_images\/armor_test_1_9a19c26f-07bf-4d44-9b21-235ec376b907.jpg",
+            "image": "shopify://shop_images/armor_test_1_9a19c26f-07bf-4d44-9b21-235ec376b907.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h2",
@@ -488,7 +488,7 @@
         "promotion_banner_gnJjAA": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify:\/\/shop_images\/armor_test_2_ba1ab71a-2a27-40a1-b691-7734593e65c1.jpg",
+            "image": "shopify://shop_images/armor_test_2_ba1ab71a-2a27-40a1-b691-7734593e65c1.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -518,7 +518,7 @@
         "promotion_banner_pMHtCL": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify:\/\/shop_images\/armor_test_4_8c1c2947-e0c6-452e-8301-37e8cfcfffaf.jpg",
+            "image": "shopify://shop_images/armor_test_4_8c1c2947-e0c6-452e-8301-37e8cfcfffaf.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -548,7 +548,7 @@
         "promotion_banner_469axj": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify:\/\/shop_images\/armor_test_7.jpg",
+            "image": "shopify://shop_images/armor_test_7.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -578,7 +578,7 @@
         "promotion_banner_Ek9Vxr": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify:\/\/shop_images\/armor_test_3_fc44549f-1228-43a0-94f0-361bb8f596ca.jpg",
+            "image": "shopify://shop_images/armor_test_3_fc44549f-1228-43a0-94f0-361bb8f596ca.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -634,7 +634,7 @@
         "title": "Podívej se jak se sklo testuje",
         "subtitle": "",
         "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=CTj7KDOKWL8&t=21s",
+        "video_url": "https://www.youtube.com/watch?v=CTj7KDOKWL8&t=21s",
         "description": "",
         "autoplay": false,
         "enable_controls": false,
