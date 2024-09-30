@@ -186,7 +186,12 @@
                   {%- if block.settings.namespace_key != blank -%}
                     {%- assign metafield_parts = block.settings.namespace_key | split: '.' -%}
                     {%- if product.metafields[metafield_parts[0]][metafield_parts[1]] != blank -%}
-                      {{ product.metafields[metafield_parts[0]][metafield_parts[1]] | metafield_tag }}
+                      {% assign current_metafield = product.metafields[metafield_parts[0]][metafield_parts[1]] %}
+                      {% if current_metafield.type == 'page_reference' %}
+                        {{ current_metafield.value.content }}
+                      {% else %}
+                        {{ product.metafields[metafield_parts[0]][metafield_parts[1]] | metafield_tag }}
+                      {% endif %}
                     {%- endif -%}
                   {%- endif -%}
               {%- endcase -%}
