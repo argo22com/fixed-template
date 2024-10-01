@@ -44,8 +44,8 @@
       ],
       "settings": {
         "layout": "stretched_grid",
-        "image": "shopify:\/\/shop_images\/making-a-budget-tracking-finances.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/making-a-budget-tracking-finances.jpg",
+        "image": "shopify://shop_images/making-a-budget-tracking-finances.jpg",
+        "image_mobile": "shopify://shop_images/making-a-budget-tracking-finances.jpg",
         "image_overlay_opacity": 40,
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
@@ -89,14 +89,14 @@
         "text_UjxbGp": {
           "type": "text",
           "settings": {
-            "text": "<p>FIXED. zone a.s.<strong>začátkem listopadu 2021 <\/strong>úspěš ě vstoupila na trh START pražské burzy. Ve společnosti dnes pracuje bezmála 100 zaměstnanců, má sídlo v Homolích u Českých Budějovic a vlastní výrobu luxusních kožených pouzder v Prostějově.<\/p>"
+            "text": "<p>FIXED. zone a. s. <strong>začátkem listopadu 2021 </strong>úspěšně vstoupila na trh START pražské burzy. Ve společnosti dnes pracuje bezmála 100 zaměstnanců, má sídlo v Homolích u Českých Budějovic a vlastní výrobu luxusních kožených pouzder v Prostějově.</p>"
           }
         },
         "button_xtYQ6F": {
           "type": "button",
           "settings": {
             "button_label": "SEZNAMTE SE S FIXED",
-            "button_link": "shopify:\/\/pages\/seznamte-se-s-fixed",
+            "button_link": "shopify://pages/seznamte-se-s-fixed",
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
             "button_label_2": "",
@@ -127,14 +127,14 @@
         "heading_LmWyfP": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>FIXED v číslech<\/strong><\/h3>",
+            "heading": "<h3><strong>FIXED v číslech</strong></h3>",
             "heading_size": "h1"
           }
         },
         "text_nDTtVT": {
           "type": "text",
           "settings": {
-            "text": "<p>Podívejte se na historický růst naší firmy v grafech.<\/p>"
+            "text": "<p>Podívejte se na historický růst naší firmy v grafech.</p>"
           }
         }
       },
@@ -249,7 +249,7 @@
         "heading_NqVVhg": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Podpora projektů <\/p>",
+            "heading": "<p>Podpora projektů </p>",
             "heading_size": "h1"
           }
         }
@@ -272,7 +272,7 @@
       "type": "image-banner",
       "settings": {
         "layout": "grid",
-        "image": "shopify:\/\/shop_images\/publicita_na_obrazovku_b44f5e95-a818-43a3-9a52-220e3f87edd4.png",
+        "image": "shopify://shop_images/publicita_na_obrazovku_b44f5e95-a818-43a3-9a52-220e3f87edd4.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_height_mobile": "adapt-mobile",
@@ -326,12 +326,12 @@
         "column_yCyFpe": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+            "image": "shopify://shop_images/FIXED_SIDLO.jpg",
             "icon": "check",
             "title": "SEZNAMTE SE S FIXED",
-            "text": "<p>Poznejte FIXED a všechny naše hodnoty.<\/p>",
+            "text": "<p>Poznejte FIXED a všechny naše hodnoty.</p>",
             "link_label": "SEZNAMTE SE S FIXED",
-            "link": "shopify:\/\/pages\/seznamte-se-s-fixed",
+            "link": "shopify://pages/seznamte-se-s-fixed",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -344,12 +344,12 @@
         "column_9Kbmbi": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/medialni_centrum_obdelnik.jpg",
+            "image": "shopify://shop_images/medialni_centrum_obdelnik.jpg",
             "icon": "check",
             "title": "MEDIÁLNÍ CENTRUM",
-            "text": "<p>Stáhněte si naše loga, obrázky produktů či další materiály jako jsou tiskové zprávy apod.<\/p>",
+            "text": "<p>Stáhněte si naše loga, obrázky produktů či další materiály jako jsou tiskové zprávy apod.</p>",
             "link_label": "NAVŠTIVTE MEDIÁLNÍ CENTRUM",
-            "link": "shopify:\/\/pages\/pro-media",
+            "link": "shopify://pages/pro-media",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -362,12 +362,12 @@
         "column_jfXPbR": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/udrzitelnost_obdelnik.jpg",
+            "image": "shopify://shop_images/udrzitelnost_obdelnik.jpg",
             "icon": "check",
             "title": "UDRŽITELNOST",
-            "text": "<p>Prohlédněte si náš ESG report.<\/p>",
+            "text": "<p>Prohlédněte si náš ESG report.</p>",
             "link_label": "CERTIFIKACE",
-            "link": "shopify:\/\/pages\/releaf",
+            "link": "shopify://pages/releaf",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -380,12 +380,12 @@
         "column_qAcxGh": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/blog_obdelnik_f4c952d7-fee6-4de1-8f28-4fc1bcacf279.jpg",
+            "image": "shopify://shop_images/blog_obdelnik_f4c952d7-fee6-4de1-8f28-4fc1bcacf279.jpg",
             "icon": "check",
             "title": "BLOG",
-            "text": "<p>Nahlédněte pod pokličku FIXED.<\/p>",
+            "text": "<p>Nahlédněte pod pokličku FIXED.</p>",
             "link_label": "NAVŠTIVTE BLOG",
-            "link": "shopify:\/\/blogs\/news",
+            "link": "shopify://blogs/news",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -398,12 +398,12 @@
         "column_Lt8Ctd": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/podpora_obdelnik.jpg",
+            "image": "shopify://shop_images/podpora_obdelnik.jpg",
             "icon": "check",
             "title": "PODPORA",
-            "text": "<p>Vyhledejte si potřebné kontakty nebo se přímo spojte s naší zákaznickou podporou.<\/p>",
+            "text": "<p>Vyhledejte si potřebné kontakty nebo se přímo spojte s naší zákaznickou podporou.</p>",
             "link_label": "NAVŠTIVTE FIXED PODPORU",
-            "link": "shopify:\/\/pages\/podpora",
+            "link": "shopify://pages/podpora",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -416,12 +416,12 @@
         "column_Jghrea": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/career_obdelnik.jpg",
+            "image": "shopify://shop_images/career_obdelnik.jpg",
             "icon": "check",
             "title": "KARIÉRA",
-            "text": "<p>Připoj se do našeho týmu, prohlédni si aktuální volné pozice, nebo napiš jen tak.<\/p>",
+            "text": "<p>Připoj se do našeho týmu, prohlédni si aktuální volné pozice, nebo napiš jen tak.</p>",
             "link_label": "NAVŠTIVTE FIXED HR",
-            "link": "https:\/\/www.welcometothejungle.com\/cs\/companies\/fixed\/jobs",
+            "link": "https://www.welcometothejungle.com/cs/companies/fixed/jobs",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
@@ -486,7 +486,7 @@
         "paragraph_GVcxng": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce. <\/p><p>Přečtěte si naše <a href=\"https:\/\/obchod.fixed.zone\/ochrana-osobnich-udaju-a-zasilani-obchodnich-sdeleni\/\" target=\"_blank\">zásady ochrany osobních údajů<\/a>.<\/p>"
+            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce. </p><p>Přečtěte si naše <a href=\"https://obchod.fixed.zone/ochrana-osobnich-udaju-a-zasilani-obchodnich-sdeleni/\" target=\"_blank\">zásady ochrany osobních údajů</a>.</p>"
           }
         },
         "email_form_YD9eHt": {
@@ -515,7 +515,7 @@
         "desktop_content_alignment": "center",
         "enable_section_box_layout": false,
         "color_scheme": "scheme-93d0b4d7-0fb9-4886-b4bf-c2a0b0dd1c82",
-        "background_image_section": "shopify:\/\/shop_images\/bg.jpg",
+        "background_image_section": "shopify://shop_images/bg.jpg",
         "enable_parallax_scrolling_effect": true,
         "colors_text": "#ffffff",
         "colors_input": "#64748b",
