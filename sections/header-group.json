@@ -35,6 +35,90 @@
             "color_scheme": "inverse"
           }
         },
+        "mega_menu_promotion_YqyFiJ": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "ReLeaf",
+            "image": "shopify://shop_images/01.jpg",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "ReLeaf",
+            "subheading": "Prozkoumejte naše udržitelné produkty a projekty",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://pages/releaf",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 49,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_Bh4wzD": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Smart",
+            "image": "shopify://shop_images/blog_tagcard3.jpg",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "Smart",
+            "subheading": "Chytré lokátory s podporou Apple Find My",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://pages/smart",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_9KBrbX": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Armor",
+            "image": "shopify://shop_images/armor_5d81f6de-d16d-4d74-8c03-61fc6af4ff32.jpg",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "Armor",
+            "subheading": "Objevte sílu našich ultra odolných krycích skel",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://pages/armor",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_kURg37": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Ona Dnes",
+            "image": "shopify://shop_images/onadnes_banner_2.png",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "",
+            "subheading": "",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "3",
+            "link": "shopify://pages/ona-dnes",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 7,
+            "color_scheme": "inverse"
+          }
+        },
         "mega_menu_product_brand_eMcj9n": {
           "type": "mega_menu_product_brand",
           "settings": {
@@ -155,90 +239,6 @@
             "brand_link_10": ""
           }
         },
-        "mega_menu_promotion_YqyFiJ": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "ReLeaf",
-            "image": "shopify://shop_images/01.jpg",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "ReLeaf",
-            "subheading": "Prozkoumejte naše udržitelné produkty a projekty",
-            "button_label": "Objevit",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "shopify://pages/releaf",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 49,
-            "color_scheme": "inverse"
-          }
-        },
-        "mega_menu_promotion_Bh4wzD": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "Smart",
-            "image": "shopify://shop_images/blog_tagcard3.jpg",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "Smart",
-            "subheading": "Chytré lokátory s podporou Apple Find My",
-            "button_label": "Objevit",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "shopify://pages/smart",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 50,
-            "color_scheme": "inverse"
-          }
-        },
-        "mega_menu_promotion_9KBrbX": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "Armor",
-            "image": "shopify://shop_images/armor_5d81f6de-d16d-4d74-8c03-61fc6af4ff32.jpg",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "Armor",
-            "subheading": "Objevte sílu našich ultra odolných krycích skel",
-            "button_label": "Objevit",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "shopify://pages/armor",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 50,
-            "color_scheme": "inverse"
-          }
-        },
-        "mega_menu_promotion_kURg37": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "Ona Dnes",
-            "image": "shopify://shop_images/onadnes_banner_2.png",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "",
-            "subheading": "",
-            "button_label": "Objevit",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "3",
-            "link": "shopify://pages/ona-dnes",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 7,
-            "color_scheme": "inverse"
-          }
-        },
         "3753f6b7-733c-49d7-881c-f8fe4195e49f": {
           "type": "menu_label",
           "settings": {
@@ -334,14 +334,14 @@
       },
       "block_order": [
         "mega_menu_promotion_UdqXan",
-        "mega_menu_product_brand_eMcj9n",
-        "mega_menu_product_brand_KBhfXH",
-        "mega_menu_product_brand_mQFGEn",
-        "mega_menu_product_brand_3VPHNd",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_Bh4wzD",
         "mega_menu_promotion_9KBrbX",
         "mega_menu_promotion_kURg37",
+        "mega_menu_product_brand_eMcj9n",
+        "mega_menu_product_brand_KBhfXH",
+        "mega_menu_product_brand_mQFGEn",
+        "mega_menu_product_brand_3VPHNd",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "mega_menu_promotion_9HJwDd",
         "mega_menu_promotion_ya4VNA",
