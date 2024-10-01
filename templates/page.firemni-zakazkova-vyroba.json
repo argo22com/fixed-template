@@ -44,8 +44,8 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/oxford_brown.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/oxford_brown.jpg",
+        "image": "shopify://shop_images/oxford_brown.jpg",
+        "image_mobile": "shopify://shop_images/oxford_brown.jpg",
         "image_overlay_opacity": 40,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
@@ -89,14 +89,14 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h2>Výroba kožených produktů na míru Vašim potřebám již od 50 kusů<\/h2>",
+            "heading": "<h2>Výroba kožených produktů na míru Vašim potřebám již od 50 kusů</h2>",
             "heading_size": "h2"
           }
         },
         "text_PTb6yL": {
           "type": "text",
           "settings": {
-            "text": "<p>Kožené produkty FIXED vyrábíme v dílně v Prostějově od jejího zakoupení v roce 2014 a každý z výrobků si našel svého spokojeného zákazníka. Díky kvalitním materiálům, ruční výrobě a pečlivé kontrole jsou naše Prostějovské produkty ten pravý luxus pro Váš mobilní telefon, tablet, notebook a další důležité věci.<\/p>"
+            "text": "<p>Kožené produkty FIXED vyrábíme v dílně v Prostějově od jejího zakoupení v roce 2014 a každý z výrobků si našel svého spokojeného zákazníka. Díky kvalitním materiálům, ruční výrobě a pečlivé kontrole jsou naše Prostějovské produkty ten pravý luxus pro Váš mobilní telefon, tablet, notebook a další důležité věci.</p>"
           }
         }
       },
@@ -122,7 +122,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "annotation",
-            "custom_icon": "shopify:\/\/shop_images\/handmade01.png",
+            "custom_icon": "shopify://shop_images/handmade01.png",
             "title": "Prémiové materiály a kvalita",
             "subheading": "Pro naše pouzdra, peněženky a další produkty jsme vybrali tu nejkvalitnější italskou kůži Torcello od prověřených dodavatelů. Díky vlastnostem pravé kůže pouzdro nestárne, ale zraje. Časem získává jedinečnou patinu a z každého kousku se stává originální a unikátní doplněk pro Vás či Vaše obchodní partnery.",
             "link": "",
@@ -133,7 +133,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/handmade02.png",
+            "custom_icon": "shopify://shop_images/handmade02.png",
             "title": "Personalizace",
             "subheading": "Každý náš prémiový výrobek je možné upravit dle vašich potřeb již od 50 kusů. Pomocí gravírování či ražení přidáme na produkty loga, citaci, či jednoduché obrázky.",
             "link": "",
@@ -144,7 +144,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/handmade03.png",
+            "custom_icon": "shopify://shop_images/handmade03.png",
             "title": "Jak na to",
             "subheading": "Stačí nás kontaktovat pomocí formjuláře níže. Budete kontaktování naším obchodním zástupcem, který Vám poradí s výběrem a mírou personalizace",
             "link": "",
@@ -191,7 +191,7 @@
         "gallery_image_Gf63YR": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/O2_guru_leather-1-1024x807.png",
+            "image": "shopify://shop_images/O2_guru_leather-1-1024x807.png",
             "row": 1,
             "gradient": "none",
             "caption": "",
@@ -201,7 +201,7 @@
         "gallery_image_rqQTqF": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1B1A4684-1024x683.jpg",
+            "image": "shopify://shop_images/1B1A4684-1024x683.jpg",
             "row": 1,
             "gradient": "none",
             "caption": "",
@@ -211,7 +211,7 @@
         "gallery_image_epDgFJ": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/03-1024x683.jpg",
+            "image": "shopify://shop_images/03-1024x683.jpg",
             "row": 1,
             "gradient": "none",
             "caption": "",
@@ -230,7 +230,7 @@
         "gallery_image_z6HMJc": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/storage-one-FIXSM-SMMW2-1024x683.jpg",
+            "image": "shopify://shop_images/storage-one-FIXSM-SMMW2-1024x683.jpg",
             "row": 2,
             "gradient": "none",
             "caption": "",
@@ -240,7 +240,7 @@
         "gallery_image_U3pajr": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/storage-one-FIXSMS-C2-1024x683.jpg",
+            "image": "shopify://shop_images/storage-one-FIXSMS-C2-1024x683.jpg",
             "row": 2,
             "gradient": "none",
             "caption": "",
@@ -250,7 +250,7 @@
         "gallery_image_tnMBiQ": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/amusnet-1024x682.jpg",
+            "image": "shopify://shop_images/amusnet-1024x682.jpg",
             "row": 2,
             "gradient": "none",
             "caption": "",
@@ -260,7 +260,7 @@
         "gallery_image_wUbKfz": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DATART-1024x683.jpg",
+            "image": "shopify://shop_images/DATART-1024x683.jpg",
             "row": 3,
             "gradient": "none",
             "caption": "",
@@ -270,7 +270,7 @@
         "gallery_image_tJAieB": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/BL-1024x683.jpg",
+            "image": "shopify://shop_images/BL-1024x683.jpg",
             "row": 3,
             "gradient": "none",
             "caption": "",
@@ -311,9 +311,9 @@
         "title": "",
         "subtitle": "",
         "heading_size": "h1",
-        "cover_image": "shopify:\/\/shop_images\/010_Loutocky_COM_DS2_2408_exp-scaled.jpg",
-        "video_hosted": "shopify:\/\/files\/videos\/Vyroba-kozene-penezenky-Tiny-Wallet-pro-BCPP-Burzu-cennych-papiru-Praha.mp4",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify://shop_images/010_Loutocky_COM_DS2_2408_exp-scaled.jpg",
+        "video_hosted": "shopify://files/videos/Vyroba-kozene-penezenky-Tiny-Wallet-pro-BCPP-Burzu-cennych-papiru-Praha.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "autoplay": false,
         "enable_controls": true,
@@ -332,7 +332,7 @@
         "gallery_image_qjBiMz": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/100520221652157110-1024x683.jpg",
+            "image": "shopify://shop_images/100520221652157110-1024x683.jpg",
             "row": 1,
             "gradient": "none",
             "caption": "",
@@ -342,7 +342,7 @@
         "gallery_image_M3yXJU": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_7359-1024x768.jpg",
+            "image": "shopify://shop_images/IMG_7359-1024x768.jpg",
             "row": 1,
             "gradient": "none",
             "caption": "",
@@ -352,7 +352,7 @@
         "gallery_image_LmTch6": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/100520221652156074-1024x683.jpg",
+            "image": "shopify://shop_images/100520221652156074-1024x683.jpg",
             "row": 1,
             "gradient": "none",
             "caption": "",
@@ -362,7 +362,7 @@
         "gallery_image_q48CHi": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FIXSMS-C2-BR_003-1024x1024.jpg",
+            "image": "shopify://shop_images/FIXSMS-C2-BR_003-1024x1024.jpg",
             "row": 2,
             "gradient": "none",
             "caption": "",
@@ -372,7 +372,7 @@
         "gallery_image_tfEHAf": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/uni-1-1024x1024.jpg",
+            "image": "shopify://shop_images/uni-1-1024x1024.jpg",
             "row": 2,
             "gradient": "none",
             "caption": "",
@@ -382,7 +382,7 @@
         "gallery_image_fnw7PW": {
           "type": "gallery-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FIXSMS-STN2-BL_004-1024x1024.jpg",
+            "image": "shopify://shop_images/FIXSMS-STN2-BL_004-1024x1024.jpg",
             "row": 2,
             "gradient": "none",
             "caption": "",
@@ -430,7 +430,7 @@
         "heading_jKwymm": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>Nezávazná poptávka<\/strong><\/h3>",
+            "heading": "<h3><strong>Nezávazná poptávka</strong></h3>",
             "heading_size": "h2"
           }
         }
@@ -453,7 +453,7 @@
       "type": "apps",
       "blocks": {
         "hulk_form_builder_form_block_rgQ3YU": {
-          "type": "shopify:\/\/apps\/hulk-form-builder\/blocks\/form-block\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+          "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
           "settings": {
             "form_uuid": "s6wyGiKGSTXLKff7tiRoZg",
             "form_settings": false,
@@ -496,14 +496,14 @@
         "heading_UfM7R3": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>Výběr produktů s možností zakázkové výroby<\/strong><\/h3>",
+            "heading": "<h3><strong>Výběr produktů s možností zakázkové výroby</strong></h3>",
             "heading_size": "h2"
           }
         },
         "text_dbVjGL": {
           "type": "text",
           "settings": {
-            "text": "<p>Prozkoumejte nabídku našich kožených produktů, které můžeme personalizovat pro Vaše potřeby již od 50 kusů<\/p>"
+            "text": "<p>Prozkoumejte nabídku našich kožených produktů, které můžeme personalizovat pro Vaše potřeby již od 50 kusů</p>"
           }
         }
       },
@@ -551,8 +551,11 @@
               "kozena-penezenka-fixed-classic-wallet-z-prave-hovezi-kuze-modra",
               "kozena-penezenka-fixed-coins-cervena",
               "kozena-penezenka-fixed-passport-velikost-cestovniho-pasu-hneda",
-              "kozena-penezenka-fixed-smile-coins-se-smart-trackerem-fixed-smile-pro-modra",
-              "kozena-penezenka-fixed-smile-passport-se-smart-trackerem-fixed-smile-motion-velikost-cestovniho-pasu-hneda"
+              "kozena-penezenka-fixed-tiny-wallet-z-prave-hovezi-kuze-cervena",
+              "kozena-penezenka-fixed-tiny-wallet-for-airtag-z-prave-hovezi-kuze-cerna",
+              "kozena-penezenka-fixed-tiny-wallet-z-prave-hovezi-kuze-cerna",
+              "kozena-penezenka-fixed-wallet-xl-hneda",
+              "kozena-penezenka-fixed-wallet-for-airtag-z-prave-hovezi-kuze-cerna"
             ],
             "products_to_show": 5,
             "columns_desktop": 5
