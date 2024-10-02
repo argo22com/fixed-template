@@ -209,8 +209,18 @@
                   {%- endif -%}
                   {% comment %}App block will be used only for reviews{% endcomment %}
                 {% when '@app' %}
-                  <span>NUMBER OF REVIEWS: {{ product.metafields.reviews.rating_count }}</span>
-                  {% render block %}
+                  {% if product.metafields.reviews.rating_count %}
+                    {% render block %}
+                  {% else %}
+                    <div class="jdgm-rev-widg__summary-inner">
+                      <div class="jdgm-rev-widg__summary-stars" aria-label="Average rating is 0.00 stars" role="img">
+                        <span class="jdgm-star jdgm--off"></span><span class="jdgm-star jdgm--off"></span
+                        ><span class="jdgm-star jdgm--off"></span><span class="jdgm-star jdgm--off"></span
+                        ><span class="jdgm-star jdgm--off"></span>
+                      </div>
+                      <div class="jdgm-rev-widg__summary-text">Tento produkt zatím nikdo nehodnotil.</div>
+                    </div>
+                  {% endif %}
                 {% when 'size_chart_page' %}
                   <div class="rte">
                     {{ product_detail_tab_page.content }}
