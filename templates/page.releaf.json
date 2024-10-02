@@ -434,47 +434,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "collapsible_content_Gp6UAE": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_zWGr8X": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "2024",
-            "icon": "document_download",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_xKhhCU": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "2023",
-            "icon": "document_download",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_zWGr8X",
-        "collapsible_row_xKhhCU"
-      ],
-      "settings": {
-        "section_width": "grid",
-        "title": "Dokumenty ke stažení",
-        "subtitle": "",
-        "heading_size": "h1",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "hide_image_on_mobile": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -487,7 +446,6 @@
     "image_banner_DVAQgg",
     "rich_text_4J3ddB",
     "image_banner_mFjjn8",
-    "video_PkWUBz",
-    "collapsible_content_Gp6UAE"
+    "video_PkWUBz"
   ]
 }
