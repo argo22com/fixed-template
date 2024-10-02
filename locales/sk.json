@@ -292,7 +292,8 @@
     },
     "product_tabs": {
       "reviews": {
-        "title": "Hodnotenie"
+        "title": "Hodnotenie",
+        "no_review": "Zatiaľ neboli zverejnené žiadne recenzie",
       }
     },
     "gallery_lightbox": {

@@ -463,7 +463,8 @@
     },
     "product_tabs": {
       "reviews": {
-        "title": "Auswertung"
+        "title": "Auswertung",
+        "no_review": "Keine Bewertungen",
       }
     },
     "gallery_lightbox": {

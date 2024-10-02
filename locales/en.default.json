@@ -467,7 +467,8 @@
     },
     "product_tabs": {
       "reviews": {
-        "title": "Reviews"
+        "title": "Reviews",
+        "no_review": "No reviews",
       }
     }
   },

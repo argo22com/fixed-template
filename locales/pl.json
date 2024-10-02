@@ -461,7 +461,8 @@
     },
     "product_tabs": {
       "reviews": {
-        "title": "Ocena"
+        "title": "Ocena",
+        "no_review": "Brak recenzji",
       }
     },
     "gallery_lightbox": {

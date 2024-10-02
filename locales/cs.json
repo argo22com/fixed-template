@@ -464,7 +464,8 @@
     },
     "product_tabs": {
       "reviews": {
-        "title": "Hodnocení"
+        "title": "Hodnocení",
+        "no_review": "Tento produkt zatím nikdo nehodnotil"
       }
     },
     "gallery_lightbox": {
