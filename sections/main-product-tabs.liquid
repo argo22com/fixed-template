@@ -25,7 +25,7 @@
                 assign available_tab = false
               endif
             when 'files'
-              assign documents = product.selected_or_first_available_variant.metafields.custom.documents.value
+              assign documents = product.metafields.fixed.documents.value
               if documents == blank or documents.count == 0
                 assign available_tab = false
               endif
@@ -163,7 +163,7 @@
                 {% when 'recommendations' %}
                   {% render 'product-recommendations', id: section.id, title: block.settings.title %}
                 {%- when 'files' -%}
-                  {% assign documents = product.selected_or_first_available_variant.metafields.custom.documents.value %}
+                  {% assign documents = product.metafields.fixed.documents.value %}
                   {%- if documents.count > 0 -%}
                     <div class="element-small-margin-top">
                       <ul class="list-unstyled flex flex-wrap">
