@@ -7,7 +7,8 @@ if (!customElements.get('gallery-lightbox')) {
         }
 
         onItemClick(event) {
-            if (!event.target.classList.contains('js-load-more-button')) {
+            // add a condition for clicking on button span child containing button text
+            if (!event.target.classList.contains('js-load-more-button') && !event.target.parentElement.classList.contains('js-load-more-button')) {
                 return;
             }
 
