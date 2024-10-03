@@ -19,7 +19,7 @@
           "settings": {
             "trigger": "Produkty",
             "title": "",
-            "image": "shopify://shop_images/Ohebnost_820x360_V2.png",
+            "image": "shopify://shop_images/Ohebnost_2560x1440_V2.png",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "Armor",
@@ -27,7 +27,7 @@
             "button_label": "Objevit",
             "button_style": "link",
             "text_align": "left",
-            "text_position": "3",
+            "text_position": "2",
             "link": "shopify://pages/armor",
             "position": "last",
             "overlay_text_enable": true,
