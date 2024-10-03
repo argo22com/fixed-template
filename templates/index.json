@@ -15,14 +15,14 @@
         "slide_T3NJDj": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/slide-kuze.jpg",
+            "image": "shopify://shop_images/slide-kuze.jpg",
             "badge_label": "",
             "heading": "Kožené příslušenství",
             "text": "Nadčasové doplňky pro vaše zařízení",
             "hide_text_on_mobile": false,
             "button_label": "Zjistit více",
             "price": "",
-            "link": "shopify:\/\/collections\/rucni-vyroba",
+            "link": "shopify://collections/rucni-vyroba",
             "button_style": "primary",
             "button_open_new_tab": false,
             "box_align": "middle-left",
@@ -51,14 +51,14 @@
         "slide_VnxEnd": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/armor.199_3e35be8d-341f-4a22-876e-6a9772c6e0f9.jpg",
+            "image": "shopify://shop_images/armor.199_3e35be8d-341f-4a22-876e-6a9772c6e0f9.jpg",
             "badge_label": "Novinka",
             "heading": "Ultra odolná skla Armor",
             "text": "Vysoká tvrdost i ohebnost",
             "hide_text_on_mobile": false,
             "button_label": "Koupit: [price]",
             "price": "699",
-            "link": "shopify:\/\/products\/premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-apple-iphone-7-8-se-2020-2022-cerne",
+            "link": "shopify://products/premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-apple-iphone-7-8-se-2020-2022-cerne",
             "button_style": "primary",
             "button_open_new_tab": false,
             "box_align": "middle-left",
@@ -87,14 +87,14 @@
         "6d524d43-1bde-474f-b4c0-f6b07a06c8be": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/slide-tag-card-2.jpg",
+            "image": "shopify://shop_images/slide-tag-card-2.jpg",
             "badge_label": "Novinka",
             "heading": "Tag Card",
             "text": "Chytrý lokátor s podporou Apple Find My",
             "hide_text_on_mobile": false,
             "button_label": "Koupit: [price]",
             "price": "899",
-            "link": "shopify:\/\/products\/smart-tracker-fixed-tag-card-s-podporou-find-my-bezdratove-nabijeni-modry",
+            "link": "shopify://products/smart-tracker-fixed-tag-card-s-podporou-find-my-bezdratove-nabijeni-modry",
             "button_style": "primary",
             "button_open_new_tab": false,
             "box_align": "middle-left",
@@ -124,14 +124,14 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/roll_desktop_banner_v2.jpg",
+            "image": "shopify://shop_images/roll_desktop_banner_v2.jpg",
             "badge_label": "",
             "heading": "KONFIGURÁTOR DRŽÁKŮ",
             "text": "SESTAVTE SI DRŽÁK PŘESNĚ NA MÍRU VAŠEMU AUTU",
             "hide_text_on_mobile": false,
             "button_label": "KONFIGUROVAT",
             "price": "1300",
-            "link": "shopify:\/\/metaobjects\/landing_page\/seznamte-se-s-fixed",
+            "link": "shopify://metaobjects/landing_page/seznamte-se-s-fixed",
             "button_style": "primary",
             "button_open_new_tab": false,
             "box_align": "top-center",
@@ -189,7 +189,7 @@
       "type": "apps",
       "blocks": {
         "hulk_form_builder_form_block_H7Q4mi": {
-          "type": "shopify:\/\/apps\/hulk-form-builder\/blocks\/form-block\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+          "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
           "settings": {
             "form_uuid": "",
             "form_settings": false,
@@ -232,14 +232,14 @@
         "heading_hh6rpY": {
           "type": "heading",
           "settings": {
-            "heading": "<h2><strong>Hledej příslušenství podle zařízení<\/strong><\/h2>",
+            "heading": "<h2><strong>Hledej příslušenství podle zařízení</strong></h2>",
             "heading_size": "h2"
           }
         },
         "text_jr9xnA": {
           "type": "text",
           "settings": {
-            "text": "<p>Vyber si telefon, hodinky nebo tablet ze seznamu a najdi dostupné příslušenství přesně pro své zařízení.<\/p>"
+            "text": "<p>Vyber si telefon, hodinky nebo tablet ze seznamu a najdi dostupné příslušenství přesně pro své zařízení.</p>"
           }
         }
       },
@@ -265,12 +265,12 @@
         "column_QxJR8a": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1B1A2804_kopie.jpg",
+            "image": "shopify://shop_images/1B1A2804_kopie.jpg",
             "icon": "check",
             "title": "Tag Card",
-            "text": "<p>Chytrý lokátor ve velikosti kreditní karty pro ochranu každé peněženky. Je kompatibilní s iOS a ovládá se v aplikaci Apple Najít. Navíc má i bezdrátové nabíjení.<br\/><\/p>",
+            "text": "<p>Chytrý lokátor ve velikosti kreditní karty pro ochranu každé peněženky. Je kompatibilní s iOS a ovládá se v aplikaci Apple Najít. Navíc má i bezdrátové nabíjení.<br/></p>",
             "link_label": "Zjistit více",
-            "link": "shopify:\/\/pages\/smart",
+            "link": "shopify://pages/smart",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -283,12 +283,12 @@
         "column_GJR9bJ": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1B1A5341_kopie.jpg",
+            "image": "shopify://shop_images/1B1A5341_kopie.jpg",
             "icon": "check",
             "title": "Verona",
-            "text": "<p>Elegantní taštička precizně vyrobená v naší Prostějovské dílně v ČR. Je ideální pro telefony do 6.7\", doklady a další nezbytnosti. Vyrábí se v 11 barevných provedeních.<\/p>",
+            "text": "<p>Elegantní taštička precizně vyrobená v naší Prostějovské dílně v ČR. Je ideální pro telefony do 6.7\", doklady a další nezbytnosti. Vyrábí se v 11 barevných provedeních.</p>",
             "link_label": "Vybrat si tu svou",
-            "link": "shopify:\/\/products\/tasticka-pres-rameno-s-kapsou-fixed-verona-s-cernou-snurkou-pro-mobilni-telefony-do-7-broskvova",
+            "link": "shopify://products/tasticka-pres-rameno-s-kapsou-fixed-verona-s-cernou-snurkou-pro-mobilni-telefony-do-7-broskvova",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -301,12 +301,12 @@
         "column_Ftt4cf": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1B1A5843_kopie.jpg",
+            "image": "shopify://shop_images/1200x1200.jpg",
             "icon": "check",
-            "title": "Léto s FIXED",
-            "text": "<p>Užijte si léto s produkty FIXED. Prohlédněte si produkty, které vám usnadní cestování, ochrání vaše zařízení při sportovních aktivitách, nebo vám zajistí plnou baterku i na dlouhých výletech.<\/p>",
+            "title": "Armor",
+            "text": "<p>Ultraodolná skla Armor jsou tou nejlepší ochranou pro displeje telefonu. Jsou 3x odolnější než běžná skla proti pádům, poškrábání, ale i odleskům slunce.</p>",
             "link_label": "Zjistit více",
-            "link": "shopify:\/\/pages\/uzij-leto-s-fixed",
+            "link": "shopify://pages/armor",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -365,7 +365,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "magsafe-nabijecky",
-            "custom_image": "shopify:\/\/shop_images\/kolekce5_835b509c-d072-4bcc-9bb1-62c954a3709c.jpg",
+            "custom_image": "shopify://shop_images/kolekce5_835b509c-d072-4bcc-9bb1-62c954a3709c.jpg",
             "custom_title": "Magsafe zařízení"
           }
         },
@@ -373,7 +373,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "lokatory-s-findmy",
-            "custom_image": "shopify:\/\/shop_images\/kolekce2.jpg",
+            "custom_image": "shopify://shop_images/kolekce2.jpg",
             "custom_title": "Chytré lokátory"
           }
         },
@@ -381,7 +381,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "bezdratove-nabijecky",
-            "custom_image": "shopify:\/\/shop_images\/kolekce3_c2608871-fe82-457b-a948-8f16b1759638.jpg",
+            "custom_image": "shopify://shop_images/kolekce3_c2608871-fe82-457b-a948-8f16b1759638.jpg",
             "custom_title": "Bezdrátové nabíjení"
           }
         },
@@ -389,7 +389,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "skla-armor",
-            "custom_image": "shopify:\/\/shop_images\/kolekce4.jpg",
+            "custom_image": "shopify://shop_images/kolekce4.jpg",
             "custom_title": "Armor"
           }
         },
@@ -495,7 +495,7 @@
         "enable_desktop_slider": true,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/mix.1495.jpg",
+        "image": "shopify://shop_images/mix.1495.jpg",
         "image_position_desktop": "left",
         "image_height": "adapt_product_list",
         "image_height_mobile": "34",
@@ -521,8 +521,8 @@
         "text_overlay_image_TrcKUU": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/OCHRANA.1384.jpg",
-            "link": "shopify:\/\/collections\/ochrana",
+            "image": "shopify://shop_images/OCHRANA.1384.jpg",
+            "link": "shopify://collections/ochrana",
             "keep_ltr": true,
             "text": "Pouzdra, tvrzená skla, folie...",
             "text_style": "subtitle",
@@ -547,8 +547,8 @@
         "text_overlay_image_QcRW6g": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FIXPDS.1463.jpg",
-            "link": "shopify:\/\/collections\/audio",
+            "image": "shopify://shop_images/FIXPDS.1463.jpg",
+            "link": "shopify://collections/audio",
             "keep_ltr": false,
             "text": "Bezdrátová sluchátka, sluchátka s kabelem...",
             "text_style": "subtitle",
@@ -573,8 +573,8 @@
         "text_overlay_image_kzc9B8": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/nabijecky.1472.jpg",
-            "link": "shopify:\/\/collections\/nabijeni",
+            "image": "shopify://shop_images/nabijecky.1472.jpg",
+            "link": "shopify://collections/nabijeni",
             "keep_ltr": false,
             "text": "Nabíječky, cestovní adaptéry, powerbanky, kabely...",
             "text_style": "subtitle",
@@ -599,8 +599,8 @@
         "text_overlay_image_yq9DWA": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/drzaky.jpg",
-            "link": "shopify:\/\/collections\/drzaky-a-stojanky",
+            "image": "shopify://shop_images/drzaky.jpg",
+            "link": "shopify://collections/drzaky-a-stojanky",
             "keep_ltr": false,
             "text": "Do auta, na kolo i motorku...",
             "text_style": "subtitle",
@@ -661,7 +661,7 @@
         "enable_desktop_slider": false,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/mix3.1460.jpg",
+        "image": "shopify://shop_images/mix3.1460.jpg",
         "image_position_desktop": "right",
         "image_height": "adapt_product_list",
         "image_height_mobile": "34",
@@ -710,16 +710,16 @@
           "settings": {
             "heading": "Nabízíte dopravu zdarma?",
             "icon": "truck",
-            "row_content": "<p>Ano, při nákupu nad 2000 Kč máte dopravu zdarma.<\/p>",
+            "row_content": "<p>Ano, při nákupu nad 2000 Kč máte dopravu zdarma.</p>",
             "page": ""
           }
         },
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Mohu si u Vás nechat ušít\/ upravit pouzdro na telefon na míru?",
+            "heading": "Mohu si u Vás nechat ušít/ upravit pouzdro na telefon na míru?",
             "icon": "book_open",
-            "row_content": "<p>Těší nás váš zájem o produkty z naší prostějovské dílny. Aktuálně nenabízíme možnost zákaznických úprav na míru. <\/p>",
+            "row_content": "<p>Těší nás váš zájem o produkty z naší prostějovské dílny. Aktuálně nenabízíme možnost zákaznických úprav na míru. </p>",
             "page": ""
           }
         },
@@ -728,7 +728,7 @@
           "settings": {
             "heading": "Jak správně nalepit ochranné sklo na mobily Samsung Galaxy S?",
             "icon": "cellphone",
-            "row_content": "<p><strong>1. Naskenujte prsty k identifikaci<\/strong><\/p><p>Než se pustíte do lepení skla, nejprve naskenujte (identifikujte) své prsty, ať pak můžete například odemykat obrazovku jednoduše dotekem. Po nalepení ochranného skla už by skenování prstů nebylo možné. Máte-li toto nastavené, pokračujte dále.<\/p><p><strong>2. Zapněte funkci „Dotyková citlivost“<\/strong><\/p><p>U mobilů Samsung Galaxy S se po nalepení skla může stát, že displej nebude na vaše dotyky reagovat tak, jak by měl. Má to snadné řešení – zapněte funkci „Dotyková citlivost“, a to následovně: <\/p><ul><li>Přejděte do nabídky „<em><strong>Nastaven<\/strong><\/em><em>í<\/em>“ a vyberte možnost „<em><strong>Displej<\/strong><\/em>“ <\/li><li>Klikněte na „<em><strong>Dotyková citlivost<\/strong><\/em>“ V tuto chvíli by funkce Dotyková citlivost měla být zapnutá.<\/li><\/ul><p><strong>3. Nalepte sklo na displej<\/strong><\/p><p>Teď už se vrhněte na samotné lepení skla. S řádným nalepením vám pomůže naše <a href=\"https:\/\/www.youtube.com\/watch?v=jc4OqiDGie8\"><span style=\"text-decoration:underline\">video<\/span><\/a><\/p><p><strong>4. Počkejte 10 minut<\/strong><\/p><p>Máte hotovo, nic dalšího dělat nemusíte. Pro bezproblémovou funkčnost displeje je ale potřeba aspoň 10 minut počkat, aby pořádně „uzrálo“ lepidlo na ochranném skle. Po uplynutí 10 minut mobil několikrát odemkněte a zamkněte, pak už by vše mělo fungovat a telefon můžete rovnou používat.<\/p><p><strong>Pokud se vám nalepení ochranného skla FIXED na Samsung Galaxy S nedaří, napište nám do live chatu tady na webu, rádi vám poradíme.<\/strong><\/p><p><\/p>",
+            "row_content": "<p><strong>1. Naskenujte prsty k identifikaci</strong></p><p>Než se pustíte do lepení skla, nejprve naskenujte (identifikujte) své prsty, ať pak můžete například odemykat obrazovku jednoduše dotekem. Po nalepení ochranného skla už by skenování prstů nebylo možné. Máte-li toto nastavené, pokračujte dále.</p><p><strong>2. Zapněte funkci „Dotyková citlivost“</strong></p><p>U mobilů Samsung Galaxy S se po nalepení skla může stát, že displej nebude na vaše dotyky reagovat tak, jak by měl. Má to snadné řešení – zapněte funkci „Dotyková citlivost“, a to následovně: </p><ul><li>Přejděte do nabídky „<em><strong>Nastaven</strong></em><em>í</em>“ a vyberte možnost „<em><strong>Displej</strong></em>“ </li><li>Klikněte na „<em><strong>Dotyková citlivost</strong></em>“ V tuto chvíli by funkce Dotyková citlivost měla být zapnutá.</li></ul><p><strong>3. Nalepte sklo na displej</strong></p><p>Teď už se vrhněte na samotné lepení skla. S řádným nalepením vám pomůže naše <a href=\"https://www.youtube.com/watch?v=jc4OqiDGie8\"><span style=\"text-decoration:underline\">video</span></a></p><p><strong>4. Počkejte 10 minut</strong></p><p>Máte hotovo, nic dalšího dělat nemusíte. Pro bezproblémovou funkčnost displeje je ale potřeba aspoň 10 minut počkat, aby pořádně „uzrálo“ lepidlo na ochranném skle. Po uplynutí 10 minut mobil několikrát odemkněte a zamkněte, pak už by vše mělo fungovat a telefon můžete rovnou používat.</p><p><strong>Pokud se vám nalepení ochranného skla FIXED na Samsung Galaxy S nedaří, napište nám do live chatu tady na webu, rádi vám poradíme.</strong></p><p></p>",
             "page": ""
           }
         },
@@ -737,7 +737,7 @@
           "settings": {
             "heading": "Tracker se po určité době odpojí od telefonu, nebo se nepřipojí, když jsem v jeho blízkosti, jak to mohu vyřešit?",
             "icon": "arrows_expand",
-            "row_content": "<p>Operační systém Android automaticky potlačuje aplikace běžící na pozadí, které mají nízkou aktivitu. To způsobí, že jakmile běží aplikace Smart na pozadí, je systémem deaktivována, následně trackery nefungují správně. Toto chování systému je možné vyřešit nastavením optimalizace přímo v telefonu.<br\/>Návody pro správné nastavení systému naleznete zde:<\/p><ul><li><a href=\"https:\/\/www.fixed.zone\/manual-pro-optimalizaci-baterie-u-telefonu-samsung\"><strong>SAMSUNG<\/strong><\/a><\/li><li><a href=\"https:\/\/www.fixed.zone\/manual-pro-optimalizaci-baterie-u-telefonu-huawei\/\"><strong>HUAWEI<\/strong><\/a><\/li><li><a href=\"https:\/\/www.fixed.zone\/manual-pro-optimalizaci-baterie-u-telefonu-xiaomi\/\"><strong>XIAOMI<\/strong><\/a><\/li><\/ul>",
+            "row_content": "<p>Operační systém Android automaticky potlačuje aplikace běžící na pozadí, které mají nízkou aktivitu. To způsobí, že jakmile běží aplikace Smart na pozadí, je systémem deaktivována, následně trackery nefungují správně. Toto chování systému je možné vyřešit nastavením optimalizace přímo v telefonu.<br/>Návody pro správné nastavení systému naleznete zde:</p><ul><li><a href=\"https://www.fixed.zone/manual-pro-optimalizaci-baterie-u-telefonu-samsung\"><strong>SAMSUNG</strong></a></li><li><a href=\"https://www.fixed.zone/manual-pro-optimalizaci-baterie-u-telefonu-huawei/\"><strong>HUAWEI</strong></a></li><li><a href=\"https://www.fixed.zone/manual-pro-optimalizaci-baterie-u-telefonu-xiaomi/\"><strong>XIAOMI</strong></a></li></ul>",
             "page": ""
           }
         },
@@ -746,7 +746,7 @@
           "settings": {
             "heading": "Jak vyberu správnou velikost univerzálního pouzdra?",
             "icon": "question_mark_circle",
-            "row_content": "<p>V popisu u každého univerzálního pouzdra FIXED naleznete informaci o vnitřní velikosti pouzdra, dle které se můžete řídit. Tento údaj odpovídá maximální možné velikosti mobiliního telefonu, který můžete s pouzdrem pohodlně používat. Pouzdro by zároveň nemělo být větší než telefon více než o pár milimetrů.<\/p>",
+            "row_content": "<p>V popisu u každého univerzálního pouzdra FIXED naleznete informaci o vnitřní velikosti pouzdra, dle které se můžete řídit. Tento údaj odpovídá maximální možné velikosti mobiliního telefonu, který můžete s pouzdrem pohodlně používat. Pouzdro by zároveň nemělo být větší než telefon více než o pár milimetrů.</p>",
             "page": ""
           }
         }
@@ -787,7 +787,7 @@
         "text_YEFfM9": {
           "type": "text",
           "settings": {
-            "text": "<p>Nenašli jste odpověď na vaší otázku? Kontaktujte naši podporu! <\/p>",
+            "text": "<p>Nenašli jste odpověď na vaší otázku? Kontaktujte naši podporu! </p>",
             "text_style": "body"
           }
         },
@@ -795,7 +795,7 @@
           "type": "button",
           "settings": {
             "button_label": "Zákaznická podpora",
-            "button_link": "shopify:\/\/pages\/contact",
+            "button_link": "shopify://pages/contact",
             "button_style": "solid",
             "button_open_new_tab": false
           }
@@ -808,7 +808,7 @@
       ],
       "settings": {
         "grid_layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/shutterstock_1778085617_kopie.jpg",
+        "image": "shopify://shop_images/shutterstock_1778085617_kopie.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -843,14 +843,14 @@
         "text_ebUx64": {
           "type": "text",
           "settings": {
-            "text": "<p>Nenašli jste odpověď na vaši otázku? Konktaktujte naši podporu!<\/p>"
+            "text": "<p>Nenašli jste odpověď na vaši otázku? Konktaktujte naši podporu!</p>"
           }
         },
         "button_hwHD86": {
           "type": "button",
           "settings": {
             "button_label": "Zákaznická podpora",
-            "button_link": "shopify:\/\/pages\/podpora",
+            "button_link": "shopify://pages/podpora",
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
             "button_label_2": "",
@@ -889,7 +889,7 @@
         "paragraph_rerDNd": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Přidejte se k naší komunitě ať už vám žádné novinky neutečou!<br\/>Přečtěte si naše <a href=\"\/pages\/contact\" title=\"Kontakt\">zásady ochrany osobních údajů<\/a>. <\/p>"
+            "text": "<p>Přidejte se k naší komunitě ať už vám žádné novinky neutečou!<br/>Přečtěte si naše <a href=\"/pages/contact\" title=\"Kontakt\">zásady ochrany osobních údajů</a>. </p>"
           }
         },
         "email_form_FXwgyM": {
@@ -912,7 +912,7 @@
         "desktop_content_alignment": "center",
         "enable_section_box_layout": false,
         "color_scheme": "background-2",
-        "background_image_section": "shopify:\/\/shop_images\/bg.jpg",
+        "background_image_section": "shopify://shop_images/bg.jpg",
         "enable_parallax_scrolling_effect": true,
         "colors_text": "#f5f2f4",
         "colors_input": "#000000",
