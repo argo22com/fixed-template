@@ -31,7 +31,7 @@
             "link": "shopify://pages/ona-dnes",
             "position": "last",
             "overlay_text_enable": true,
-            "overlay_opacity": 8,
+            "overlay_opacity": 26,
             "color_scheme": "inverse"
           }
         },
