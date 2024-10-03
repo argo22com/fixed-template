@@ -27,7 +27,7 @@
             "button_label": "Objevit",
             "button_style": "link",
             "text_align": "center",
-            "text_position": "3",
+            "text_position": "1",
             "link": "shopify://pages/armor",
             "position": "last",
             "overlay_text_enable": true,
