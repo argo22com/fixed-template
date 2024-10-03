@@ -35,6 +35,10 @@ if (!customElements.get('product-form')) {
       }
       config.body = formData;
 
+      for (const [key, value] of formData.entries()) {
+        console.log(`${key}: ${value}`);
+      }
+
       fetch(`${routes.cart_add_url}`, config)
         .then((response) => response.json())
         .then((response) => {
