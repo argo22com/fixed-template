@@ -86,7 +86,7 @@
     {% if max_row_number > max_rows %}
       <div class="flex justify-center w100">
         <button class="load-more-button-{{ section.id }} js-load-more-button {% if section.settings.button_style != 'link' %}button button--{{ section.settings.button_style }} button--{{ section.settings.button_size }}{% else %}link link-with-icon align-center{% endif %}">
-          {{ section.settings.show_more_text }}
+          <span>{{ section.settings.show_more_text }}</span>
         </button>
       </div>
     {% endif %}

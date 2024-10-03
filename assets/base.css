@@ -271,8 +271,7 @@ summary .icon-caret {
 }
 
 .button:not(.ignore-effect):not(:disabled):hover {
-  color: rgb(var(--color-button))!important;
-  display: flex!important;
+  color: rgb(var(--color-button));
 }
 
 .button--secondary:not(.ignore-effect):not(:disabled):hover, .button--tertiary:not(.ignore-effect):not(:disabled):hover {
