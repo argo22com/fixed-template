@@ -46,6 +46,10 @@
   margin-right: 5px;
 }
 
+.color-swatch-icon {
+  border: 1px solid black;
+}
+
 .color-swatch-icon svg {
   position: absolute;
   filter: drop-shadow(-0.1rem -0.1rem 0px white) drop-shadow(0.1rem -0.1rem 0px white) drop-shadow(0.1rem 0.1rem 0px white) drop-shadow(-0.1rem 0.1rem 0px white);
