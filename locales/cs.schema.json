@@ -382,7 +382,10 @@
           "label": "Inverze"
         },
         "label": "Barevné schéma",
-        "has_cards_info": "Pokud chcete změnit barevné schéma karty, aktualizujte nastavení motivu."
+        "has_cards_info": "Pokud chcete změnit barevné schéma karty, aktualizujte nastavení motivu.",
+        "ul_li_marker": {
+          "label": "List item marker color"
+        }
       },
       "heading_size": {
         "label": "Velikost nadpisu",
