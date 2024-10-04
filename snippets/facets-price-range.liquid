@@ -21,6 +21,12 @@
       </div>
     </summary>
     <div id="Facet-{{ filter.param_name | escape | handleize }}-{{ suffix_id }}{{ section.id }}" class="facets__display facets__display--{{ filter_type }}">
+      {% liquid
+         assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value 
+         assign total_max_price_with_vat = filter.max_value.value | times: vat_rate_multiplier | round: 1
+         assign total_max_range_price_with_vat = filter.range_max | times: vat_rate_multiplier | round: 1
+          assign total_min_price_with_vat = filter.min_value.value | times: vat_rate_multiplier | round: 1
+      %}
       <price-range class="facets__price flex flex-wrap" style="--range-used-start-width:{%- if filter.min_value.value -%}{{ filter.min_value.value | times: 100.00 | divided_by: filter.range_max }}%{%- else -%}0{%- endif -%};--range-used-end-width:{%- if filter.max_value.value -%}{{ filter.range_max | minus: filter.max_value.value | times: 100.00 | divided_by: filter.range_max }}%{%- else -%}0{%- endif -%};">
         <div class="range-slider w100 por center no-js-hidden">
           <input type="range" min="0" class="w100 range-slider__input range-slider__input--lower"
@@ -31,8 +37,10 @@
             {%- endif -%}
             max="{{ filter.range_max }}"
             data-input="Filter-{{ suffix_id }}{{ filter.label | escape }}-GTE"
+            data-vat_rate_multiplier="{{ vat_rate_multiplier }}"
             data-range-input="Filter-{{ suffix_id }}range-{{ filter.label | escape }}-LTE"
             data-range-value="Filter-{{ suffix_id }}Price-Range-Value-From"
+            data-range-value-with-vat="Filter-{{ suffix_id }}Price-Range-Value-From-With-Vat"
             id="Filter-{{ suffix_id }}range-{{ filter.label | escape }}-GTE"
             aria-labelledby="lbl-Filter-{{ suffix_id }}-{{ filter.label | escape }}-GTE"
           >
@@ -46,8 +54,10 @@
             {%- endif -%}
             max="{{ filter.range_max }}"
             data-input="Filter-{{ suffix_id }}{{ filter.label | escape }}-LTE"
+            data-vat_rate_multiplier="{{ vat_rate_multiplier }}"
             data-range-input="Filter-{{ suffix_id }}range-{{ filter.label | escape }}-GTE"
             data-range-value="Filter-{{ suffix_id }}Price-Range-Value-To"
+            data-range-value-with-vat="Filter-{{ suffix_id }}Price-Range-Value-To-With-Vat"
             id="Filter-{{ suffix_id }}range-{{ filter.label | escape }}-LTE"
             aria-labelledby="lbl-Filter-{{ suffix_id }}-{{ filter.label | escape }}-LTE"
           />
@@ -57,7 +67,7 @@
           <div class="facets__price__range flex align-center font-body-bold">
             {%-liquid
               capture price_from
-                assign start_tag = '<span class="facets__price__range-value facets__price__range-value--from" id="Filter-' | append: suffix_id | append: 'Price-Range-Value-From">'
+                assign start_tag = '<span class="hidden facets__price__range-value facets__price__range-value--from" id="Filter-' | append: suffix_id | append: 'Price-Range-Value-From">'
                 echo start_tag
                 if filter.min_value.value
                   render 'price-format', price: filter.min_value.value
@@ -65,19 +75,32 @@
                   render 'price-format', price: 0
                 endif
                 echo '</span>'
-              endcapture
-              capture price_to
-                assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
-                assign end_tag = '<span class="facets__price__range-value facets__price__range-value--to" id="Filter-' | append: suffix_id | append: 'Price-Range-Value-To">'
-                echo end_tag
-                if filter.max_value.value
-                  assign total_price_with_vat = filter.max_value.value | times: vat_rate_multiplier | round: 1
-                  render 'price-format', price: total_price_with_vat
+                assign start_tag = '<span class="facets__price__range-value facets__price__range-value--from" id="Filter-' | append: suffix_id | append: 'Price-Range-Value-From-With-Vat">'
+                echo start_tag
+                if filter.min_value.value
+                  render 'price-format', price: total_min_price_with_vat
                 else
-                  assign total_price_with_vat = filter.range_max | times: vat_rate_multiplier | round: 1
-                  render 'price-format', price: total_price_with_vat
+                  render 'price-format', price: 0
                 endif
                 echo '</span>'
+              endcapture
+              capture price_to
+                  assign end_tag = '<span class="hidden facets__price__range-value facets__price__range-value--to" id="Filter-' | append: suffix_id | append: 'Price-Range-Value-To">'
+                  echo end_tag
+                  if filter.max_value.value
+                    render 'price-format', price: filter.max_value.value
+                  else
+                    render 'price-format', price: filter.range_max
+                  endif
+                  echo '</span>'
+                  assign end_tag = '<span class="facets__price__range-value facets__price__range-value--to" id="Filter-' | append: suffix_id | append: 'Price-Range-Value-To-With-Vat">'
+                  echo end_tag
+                  if filter.max_value.value
+                    render 'price-format', price: total_max_price_with_vat
+                  else
+                    render 'price-format', price: total_max_range_price_with_vat
+                  endif
+                  echo '</span>'
               endcapture
             -%}
             {{ 'products.facets.price_from_to_html' | t: price_label: price_label, price_from: price_from, price_to: price_to }}

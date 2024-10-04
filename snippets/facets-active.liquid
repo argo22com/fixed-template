@@ -4,40 +4,40 @@
 
     assign phone_properties_all = shop.metaobjects.phone_properties.values
     paginate phone_properties_all by 10000
-    assign phone_properties = phone_properties_all
-    if phone_properties
-      assign phone_option_names = ""
-      for phone_property in phone_properties
-        for filter in results.filters
-          for value in filter.active_values
-            assign phone_code = value.label | strip
-            if phone_property.code == phone_code
-              assign phone_option_names = phone_option_names | append: phone_code | append: ":" | append: phone_property.model.value | append: ";"
-            endif
+      assign phone_properties = phone_properties_all
+      if phone_properties
+        assign phone_option_names = ''
+        for phone_property in phone_properties
+          for filter in results.filters
+            for value in filter.active_values
+              assign phone_code = value.label | strip
+              if phone_property.code == phone_code
+                assign phone_option_names = phone_option_names | append: phone_code | append: ':' | append: phone_property.model.value | append: ';'
+              endif
+            endfor
           endfor
         endfor
-      endfor
-    endif
-  endpaginate
+      endif
+    endpaginate
 
-  assign color_properties_all = shop.metaobjects.color_codes_hex.values
-  paginate color_properties_all by 10000
-    assign color_properties = color_properties_all
-    if color_properties
-      assign color_option_names = ""
-      for color_property in color_properties
-        assign color_name = color_property.search_words.value | first | capitalize
-        for filter in results.filters
-          for value in filter.active_values
-            assign color_code = value.label | strip
-            if color_property.code == color_code
-              assign color_option_names = color_option_names | append: color_code | append: ":" | append: color_name | append: ";"
-            endif
+    assign color_properties_all = shop.metaobjects.color_codes_hex.values
+    paginate color_properties_all by 10000
+      assign color_properties = color_properties_all
+      if color_properties
+        assign color_option_names = ''
+        for color_property in color_properties
+          assign color_name = color_property.search_words.value | first | capitalize
+          for filter in results.filters
+            for value in filter.active_values
+              assign color_code = value.label | strip
+              if color_property.code == color_code
+                assign color_option_names = color_option_names | append: color_code | append: ':' | append: color_name | append: ';'
+              endif
+            endfor
           endfor
         endfor
-      endfor
-    endif
-  endpaginate
+      endif
+    endpaginate
   -%}
   {%- for filter in results.filters -%}
     {% assign filter_label_downcase = filter.label | downcase %}
@@ -55,13 +55,13 @@
                 {%- liquid
                   assign display_value = value.label
                   if phone_option_names
-                    assign phone_option_names_list = phone_option_names | split: ";"
+                    assign phone_option_names_list = phone_option_names | split: ';'
                     for phone_option_name in phone_option_names_list
-                      assign phone_option_name_parts = phone_option_name | split: ":"
+                      assign phone_option_name_parts = phone_option_name | split: ':'
                       assign phone_option_code = phone_option_name_parts[0]
                       assign phone_option_model = phone_option_name_parts[1]
                       if phone_option_code == value.label
-                        assign display_value = phone_option_model 
+                        assign display_value = phone_option_model
                       endif
                     endfor
                   endif
@@ -70,9 +70,9 @@
                 {%- liquid
                   assign display_value = value.label
                   if color_option_names
-                    assign color_option_names_list = color_option_names | split: ";" 
+                    assign color_option_names_list = color_option_names | split: ';'
                     for color_option_name in color_option_names_list
-                      assign color_option_name_parts = color_option_name | split: ":"
+                      assign color_option_name_parts = color_option_name | split: ':'
                       assign color_option_code = color_option_name_parts[0]
                       assign color_option_label = color_option_name_parts[1]
                       if color_option_code == value.label
@@ -91,15 +91,39 @@
       {%- endfor -%}
     {%- endif -%}
 
-    {%- if filter.type == "price_range" -%}
-      {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+    {%- if filter.type == 'price_range' -%}
+      {%- if filter.min_value.value != null or filter.max_value.value != null -%}
         {%- if filter.min_value.value > 0 or filter.max_value.value != filter.range_max -%}
-          {%- assign has_active = true -%}
+          {%- liquid
+            assign has_active = true
+            assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
+            assign total_max_price_with_vat = filter.max_value.value | times: vat_rate_multiplier | round: 1
+            assign total_max_range_price_with_vat = filter.range_max | times: vat_rate_multiplier | round: 1
+            assign total_min_price_with_vat = filter.min_value.value | times: vat_rate_multiplier | round: 1
+          -%}
           <facet-remove>
-            <a href="{{ filter.url_to_remove }}" class="active-facets__button flex justify-center align-center color-foreground facets__button button button--secondary">
-                <span>{%- if section.settings.filter_include_group_name -%}{{ filter.label }}: {% endif %}<span class="active-facets__button__price">{%- if filter.min_value.value -%}{{ filter.min_value.value | money }}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ filter.max_value.value | money }}{%- else -%}{{ filter.range_max | money }}{%- endif -%}</span></span>
-                {%- render 'icon-close', icon_width: 12 -%}
-                <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
+            <a
+              href="{{ filter.url_to_remove }}"
+              class="active-facets__button flex justify-center align-center color-foreground facets__button button button--secondary"
+            >
+              <span>
+                {%- if section.settings.filter_include_group_name -%}{{ filter.label }}: {% endif -%}
+                <span class="active-facets__button__price">
+                  {%- if filter.min_value.value -%}
+                    {{ total_min_price_with_vat | money }}
+                  {%- else -%}
+                    {{ 0 | money }}
+                  {%- endif -%}
+                  -
+                  {%- if filter.max_value.value -%}
+                    {{ total_max_price_with_vat | money }}
+                  {%- else -%}
+                    {{ total_max_range_price_with_vat | money }}
+                  {%- endif -%}
+                </span></span
+              >
+              {%- render 'icon-close', icon_width: 12 -%}
+              <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
             </a>
           </facet-remove>
         {%- endif -%}
@@ -108,7 +132,10 @@
   {%- endfor -%}
   {%- if has_active -%}
     <facet-remove>
-      <a href="{{ results_url | default: results.url }}" class="active-facets__button active-facets__button-remove flex justify-center align-center color-foreground facets__button button button--secondary">
+      <a
+        href="{{ results_url | default: results.url }}"
+        class="active-facets__button active-facets__button-remove flex justify-center align-center color-foreground facets__button button button--secondary"
+      >
         <span>{{ 'products.facets.clear_all' | t }}</span>
       </a>
     </facet-remove>

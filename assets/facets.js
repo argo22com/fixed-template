@@ -309,7 +309,10 @@ class PriceRange extends HTMLElement {
     document.getElementById(event.target.dataset.input).value = event.target.value / 100;
 
     const rangeValueElement = document.getElementById(event.target.dataset.rangeValue);
+    const rangeValueWithVatElement = document.getElementById(event.target.dataset.rangeValueWithVat);
+    const vatMultiplier = (Number.parseFloat(event.target.dataset.vat_rate_multiplier))
     rangeValueElement.innerHTML = Shopify.showPrice(event.target.value);
+    rangeValueWithVatElement.innerHTML = Shopify.showPrice(event.target.value * vatMultiplier);
   }
 
   onRangeChange(event) {
