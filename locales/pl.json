@@ -552,7 +552,8 @@
       "tracking_company": "Przewoźnik",
       "tracking_number": "Numer śledzenia",
       "subtotal": "Suma częściowa",
-      "total_duties": "Cła"
+      "total_duties": "Cła",
+      "recycling_fee": "Opłata recyklingowa: {{recyclingFee}} ({{unitRecyclingFee}} / szt.)"
     },
     "orders": {
       "title": "Historia zamówień",
