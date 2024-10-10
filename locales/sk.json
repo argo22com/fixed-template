@@ -606,8 +606,7 @@
       "tracking_company": "Dopravca",
       "tracking_number": "Číslo pre sleodvanie",
       "subtotal": "Medzisúčet",
-      "total_duties": "Clá",
-      "recycling_fee": "Recyklačný poplatok: {{recyclingFee}} ({{unitRecyclingFee}} / ks)"
+      "total_duties": "Clá"
     },
     "back_to_login": "Späť na prihlasovaciu stránku",
     "account": {

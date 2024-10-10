@@ -95,17 +95,6 @@
                   {%- else -%}
                     <p id="product-title-{{ forloop.index }}">{{ line_item.title }}</p>
                   {%- endif -%}
-
-                  {%- if order.currency == 'CZK' -%}
-                    {%- assign unit_recycling_fee = line_item.variant.metafields.product_attributes['RECYCLING_FEE'].value | times: 100 -%}
-                    {%- if unit_recycling_fee != blank and unit_recycling_fee > 0 -%}
-                      {%- assign total_recycling_fee = unit_recycling_fee | times: line_item.quantity -%}
-                      {%- assign unit_recycling_fee_with_currency = unit_recycling_fee | money_with_currency -%}
-                      {%- assign total_recycling_fee_with_currency = total_recycling_fee | money_with_currency -%}
-                      <p>{{ 'customer.order.recycling_fee' | t: recyclingFee: total_recycling_fee_with_currency, unitRecyclingFee: unit_recycling_fee_with_currency }}</p>
-                    {%- endif -%}
-                  {%- endif -%}
-
                   {%- assign property_size = line_item.properties | size -%}
                   {%- unless line_item.selling_plan_allocation == nil and property_size == 0 -%}
                     <div class="properties">
