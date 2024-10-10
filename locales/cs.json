@@ -585,8 +585,7 @@
       "tracking_company": "Dopravce",
       "tracking_number": "Číslo pro sledování",
       "subtotal": "Mezisoučet",
-      "total_duties": "Cla",
-      "recycling_fee": "Recyklační poplatek: {{recyclingFee}} ({{unitRecyclingFee}} / ks)"
+      "total_duties": "Cla"
     },
     "back_to_login": "Back to the login page"
   },

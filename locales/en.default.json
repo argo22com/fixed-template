@@ -556,8 +556,7 @@
       "tracking_company": "Carrier",
       "tracking_number": "Tracking number",
       "subtotal": "Subtotal",
-      "total_duties": "Duties",
-      "recycling_fee": "Recycling fee: {{recyclingFee}} ({{unitRecyclingFee}} / pc)"
+      "total_duties": "Duties"
     },
     "orders": {
       "title": "Order history",
