@@ -302,6 +302,7 @@
         "text_rNQQwk",
         "button_wGkbck"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/FIXED_SIDLO.jpg",
