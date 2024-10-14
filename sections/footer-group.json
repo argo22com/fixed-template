@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "Footer Group",
@@ -19,7 +19,7 @@
           "settings": {
             "heading": "Kontaktní informace",
             "address": "Budějovická 19, 370 01 Homole",
-            "phone": "(+420) 606 909 990",
+            "phone": "(+420) 267 317 817",
             "email": "<a href=\"mailto:podpora@fixed.zone\">podpora@fixed.zone</a>",
             "footer_logo_enable": true,
             "footer_logo": "shopify://shop_images/fixed_logo_bk_ong.png",
