@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "Header Group",
@@ -19,11 +19,11 @@
           "settings": {
             "trigger": "Produkty",
             "title": "",
-            "image": "shopify://shop_images/Ohebnost_2560x1440_V2.png",
+            "image": "shopify://shop_images/onadnes_banner_2_a59ab9f6-e095-49a9-bd84-99b2fdfe0eca.png",
             "image_ratio": "landscape",
             "caption": "",
-            "heading_text": "Armor",
-            "subheading": "Ultraodolné sklo",
+            "heading_text": "",
+            "subheading": "",
             "button_label": "Objevit",
             "button_style": "link",
             "text_align": "left",
@@ -31,7 +31,7 @@
             "link": "shopify://pages/armor",
             "position": "last",
             "overlay_text_enable": true,
-            "overlay_opacity": 12,
+            "overlay_opacity": 0,
             "color_scheme": "inverse"
           }
         },
@@ -155,6 +155,27 @@
             "brand_link_10": ""
           }
         },
+        "mega_menu_promotion_kURg37": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Ona Dnes",
+            "image": "shopify://shop_images/onadnes_banner_2.png",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "",
+            "subheading": "",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "3",
+            "link": "shopify://pages/ona-dnes",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 7,
+            "color_scheme": "inverse"
+          }
+        },
         "mega_menu_promotion_YqyFiJ": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -215,27 +236,6 @@
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 50,
-            "color_scheme": "inverse"
-          }
-        },
-        "mega_menu_promotion_kURg37": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "Ona Dnes",
-            "image": "shopify://shop_images/onadnes_banner_2.png",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "",
-            "subheading": "",
-            "button_label": "Objevit",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "3",
-            "link": "shopify://pages/ona-dnes",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 7,
             "color_scheme": "inverse"
           }
         },
@@ -338,10 +338,10 @@
         "mega_menu_product_brand_KBhfXH",
         "mega_menu_product_brand_mQFGEn",
         "mega_menu_product_brand_3VPHNd",
+        "mega_menu_promotion_kURg37",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_Bh4wzD",
         "mega_menu_promotion_9KBrbX",
-        "mega_menu_promotion_kURg37",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "mega_menu_promotion_9HJwDd",
         "mega_menu_promotion_ya4VNA",
