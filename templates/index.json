@@ -1,17 +1,54 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "518b8ced-997b-408e-84d5-64fe5082a6a1": {
       "type": "slideshow",
       "blocks": {
+        "slide_mcYddt": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/onadnes_banner_2.jpg",
+            "mobile_image": "shopify://shop_images/onadnes_banner_a83ad92d-b31d-4480-bbb7-c6cc9b954e71.png",
+            "badge_label": "",
+            "heading": "14. - 20. 10.",
+            "text": "Nakupte produkty z kůže a veganské kůže výroby se slevou",
+            "hide_text_on_mobile": false,
+            "button_label": "Nakupovat",
+            "price": "",
+            "link": "shopify://pages/ona-dnes",
+            "button_style": "primary",
+            "button_open_new_tab": true,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#fff",
+            "colors_badge_foreground": "#fff",
+            "colors_badge_background": "#F87171",
+            "colors_button_text": "#fff",
+            "colors_button": "#e94200",
+            "colors_text_mobile": "#ffffff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#fff",
+            "colors_badge_foreground_mobile": "#fff",
+            "colors_badge_background_mobile": "#F87171",
+            "colors_button_text_mobile": "#fff",
+            "colors_button_mobile": "#e94200"
+          }
+        },
         "slide_T3NJDj": {
           "type": "slide",
           "settings": {
@@ -159,6 +196,7 @@
         }
       },
       "block_order": [
+        "slide_mcYddt",
         "slide_T3NJDj",
         "slide_VnxEnd",
         "6d524d43-1bde-474f-b4c0-f6b07a06c8be",
