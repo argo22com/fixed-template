@@ -415,14 +415,24 @@
         "text_gXWYDt": {
           "type": "text",
           "settings": {
-            "text": "<p>Pečlivě vyrobené designové produkty</p>",
+            "text": "<p>Pečlivě vyrobené produkty z té nejlepší syntetické kůže se šrafováním. Vyber si z široké škály barev a produktů pro různá zařízení.</p>",
             "text_style": "body"
+          }
+        },
+        "button_fcqKMB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Prohlédnout všechny výrobky",
+            "button_link": "shopify://collections/pouzdra-z-umele-kuze",
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_YVgNAz",
-        "text_gXWYDt"
+        "text_gXWYDt",
+        "button_fcqKMB"
       ],
       "settings": {
         "grid_layout": "grid",
@@ -446,7 +456,7 @@
         "color_countdown": "#000",
         "color_icon": "#000",
         "color_button_text": "#fff",
-        "color_button": "#000",
+        "color_button": "#e94200",
         "background_container": "#fff",
         "gradient_background_container": "",
         "background_section": "#fff",
