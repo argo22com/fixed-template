@@ -407,7 +407,7 @@
         "heading_YVgNAz": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Produkty z veganské kůže",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -415,7 +415,7 @@
         "text_gXWYDt": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pečlivě vyrobené designové produkty</p>",
             "text_style": "body"
           }
         }
@@ -426,8 +426,9 @@
       ],
       "settings": {
         "grid_layout": "grid",
+        "image": "shopify://shop_images/1B1A0152.jpg",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
