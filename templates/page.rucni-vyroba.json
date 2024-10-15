@@ -260,6 +260,30 @@
     "collection_list_NekX4X": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_HpmUCG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "venezia",
+            "custom_image": "shopify://shop_images/venezia_ls3_9e1a74e1-b4e0-411b-9180-288e9cb120cb.jpg",
+            "custom_title": "TAŠTIČKY NA TELEFONY"
+          }
+        },
+        "featured_collection_39BEyL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pouzdra-na-telefony",
+            "custom_image": "shopify://shop_images/profit_1.jpg",
+            "custom_title": "POUZDRA NA TELEFONY"
+          }
+        },
+        "featured_collection_MWJN9E": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pouzdra-na-notebooky",
+            "custom_image": "shopify://shop_images/1B1A1377_1e40ff19-5738-4d6a-b0cc-939455e6b6f8.jpg",
+            "custom_title": "POUZDRA NA NOTEBOOKY"
+          }
+        },
         "featured_collection_iXWMGe": {
           "type": "featured_collection",
           "settings": {
@@ -283,38 +307,15 @@
             "custom_image": "shopify://shop_images/pasovky.jpg",
             "custom_title": "PASOVKY"
           }
-        },
-        "featured_collection_MWJN9E": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pouzdra-na-notebooky",
-            "custom_image": "shopify://shop_images/1B1A1377_1e40ff19-5738-4d6a-b0cc-939455e6b6f8.jpg",
-            "custom_title": "POUZDRA NA NOTEBOOKY"
-          }
-        },
-        "featured_collection_39BEyL": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pouzdra-na-telefony",
-            "custom_image": "shopify://shop_images/profit_1.jpg",
-            "custom_title": "POUZDRA NA TELEFONY"
-          }
-        },
-        "featured_collection_HpmUCG": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "custom_title": ""
-          }
         }
       },
       "block_order": [
+        "featured_collection_HpmUCG",
+        "featured_collection_39BEyL",
+        "featured_collection_MWJN9E",
         "featured_collection_iXWMGe",
         "featured_collection_cGFVCd",
-        "featured_collection_pejaJ6",
-        "featured_collection_MWJN9E",
-        "featured_collection_39BEyL",
-        "featured_collection_HpmUCG"
+        "featured_collection_pejaJ6"
       ],
       "settings": {
         "title": "Kategorie výrobků z kůže",
