@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -26,7 +26,7 @@
         "slide_d3AYiw": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/kuze_banner-desktop.jpg",
+            "image": "shopify://shop_images/kuze_banner-desktop.jpg",
             "badge_label": "",
             "heading": "Ruční výroba",
             "text": "Doplňky z kůže a veganské kůže pro vaše zařízení",
@@ -62,7 +62,7 @@
         "slide_68Kgzz": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/profit_banner-desktop.jpg",
+            "image": "shopify://shop_images/profit_banner-desktop.jpg",
             "badge_label": "",
             "heading": "Kožené pouzdro Profit",
             "text": "Pravá italská kůže a doživotní záruka",
@@ -98,7 +98,7 @@
         "slide_DJbWYU": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/OXFORD.jpg",
+            "image": "shopify://shop_images/OXFORD.jpg",
             "badge_label": "",
             "heading": "Kožené pouzdro Oxford",
             "text": "360° Ochrana pro notebooky a tablety",
@@ -160,14 +160,14 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>Pečlivě vyrobené doplňky pro vaše zařízení<\/h3>",
+            "heading": "<h3>Pečlivě vyrobené doplňky pro vaše zařízení</h3>",
             "heading_size": "h2"
           }
         },
         "text_PTb6yL": {
           "type": "text",
           "settings": {
-            "text": "<p>Na každém koženém doplňku si dáváme záležet, jenom tak můžeme dosáhnout té nejvyšší kvality. Od návrhu designu, přípravy kůže, střihu, pečlivé výroby až po důkladnou kontrolu. Tak vzniká dokonalý výrobek s vůní pravé kůže.<\/p>"
+            "text": "<p>Na každém koženém doplňku si dáváme záležet, jenom tak můžeme dosáhnout té nejvyšší kvality. Od návrhu designu, přípravy kůže, střihu, pečlivé výroby až po důkladnou kontrolu. Tak vzniká dokonalý výrobek s vůní pravé kůže.</p>"
           }
         }
       },
@@ -193,7 +193,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/warranty_1.png",
+            "custom_icon": "shopify://shop_images/warranty_1.png",
             "title": "",
             "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
             "link": "",
@@ -204,7 +204,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/natural-material.png",
+            "custom_icon": "shopify://shop_images/natural-material.png",
             "title": "",
             "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
             "link": "",
@@ -215,7 +215,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/top-grain-1.png",
+            "custom_icon": "shopify://shop_images/top-grain-1.png",
             "title": "",
             "subheading": "Na výběru kůže záleží, proto máme jen to nejlepší od italských dodavatelů.",
             "link": "",
@@ -263,7 +263,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "pouzdra-na-tablety",
-            "custom_image": "shopify:\/\/shop_images\/pouzdra_na_tablety.jpg",
+            "custom_image": "shopify://shop_images/pouzdra_na_tablety.jpg",
             "custom_title": "POUZDRA NA TABLETY"
           }
         },
@@ -271,7 +271,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "penezenky",
-            "custom_image": "shopify:\/\/shop_images\/Penezenky_pro_airtag.jpg",
+            "custom_image": "shopify://shop_images/Penezenky_pro_airtag.jpg",
             "custom_title": "PENĚŽENKY"
           }
         },
@@ -279,7 +279,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "pasovky",
-            "custom_image": "shopify:\/\/shop_images\/pasovky.jpg",
+            "custom_image": "shopify://shop_images/pasovky.jpg",
             "custom_title": "PASOVKY"
           }
         }
@@ -323,7 +323,7 @@
         "text_BVLD3r": {
           "type": "text",
           "settings": {
-            "text": "<p>S doživotní zárukou na náš kožený obal ProFit můžete mít jeden obal po celou dobu používání vašeho telefonu.<\/p><ul><li>Ochrání váš telefon ze všech stran<\/li><li>Má praktické kapsy na karty či peníze<\/li><li>Dá se využít i jako stojánek<\/li><\/ul>",
+            "text": "<p>S doživotní zárukou na náš kožený obal ProFit můžete mít jeden obal po celou dobu používání vašeho telefonu.</p><ul><li>Ochrání váš telefon ze všech stran</li><li>Má praktické kapsy na karty či peníze</li><li>Dá se využít i jako stojánek</li></ul>",
             "text_style": "body"
           }
         },
@@ -331,7 +331,7 @@
           "type": "button",
           "settings": {
             "button_label": "Zjistit více",
-            "button_link": "shopify:\/\/pages\/pouzdro-profit",
+            "button_link": "shopify://pages/pouzdro-profit",
             "button_style": "solid",
             "button_open_new_tab": false
           }
@@ -344,7 +344,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/leather.png",
+        "image": "shopify://shop_images/leather.png",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -393,7 +393,7 @@
           "type": "featured_collection",
           "settings": {
             "title": "Bestsellery",
-            "collection": "veganska-kuze",
+            "collection": "pouzdra-z-umele-kuze",
             "products_to_show": 3,
             "columns_desktop": 3,
             "show_view_all": true,
@@ -434,14 +434,14 @@
         "heading_ceCYpX": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>O NAŠÍ VÝROBĚ<\/h3>",
+            "heading": "<h3>O NAŠÍ VÝROBĚ</h3>",
             "heading_size": "h2"
           }
         },
         "text_4UtjNC": {
           "type": "text",
           "settings": {
-            "text": "<p>Od roku 2014 vlastníme a provozujeme tradiční šicí dílnu v Prostějově. Právě tady, ve městě s dlouholetou oděvní tradicí, vznikají dnes módní, praktická a vysoce odolná pouzdra na telefony, tablety či notebooky a peněženky s chytrými lokátory, které již neztratíte.<\/p>"
+            "text": "<p>Od roku 2014 vlastníme a provozujeme tradiční šicí dílnu v Prostějově. Právě tady, ve městě s dlouholetou oděvní tradicí, vznikají dnes módní, praktická a vysoce odolná pouzdra na telefony, tablety či notebooky a peněženky s chytrými lokátory, které již neztratíte.</p>"
           }
         }
       },
@@ -474,7 +474,7 @@
         "text_LgN74N": {
           "type": "text",
           "settings": {
-            "text": "<p>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.<\/p><p>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.<\/p><p>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.<\/p>",
+            "text": "<p>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.</p><p>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.</p><p>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.</p>",
             "text_style": "body"
           }
         }
@@ -485,7 +485,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/rucni_vyroba.jpg",
+        "image": "shopify://shop_images/rucni_vyroba.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -528,7 +528,7 @@
         "text_PjkGfz": {
           "type": "text",
           "settings": {
-            "text": "<p>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu.<\/p><p>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci.<\/p><p>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.<\/p><p>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.<\/p>",
+            "text": "<p>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu.</p><p>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci.</p><p>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.</p><p>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.</p>",
             "text_style": "body"
           }
         }
@@ -539,7 +539,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/rucni_vyroba2.jpg",
+        "image": "shopify://shop_images/rucni_vyroba2.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
