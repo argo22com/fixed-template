@@ -34,7 +34,7 @@
           "settings": {
             "icon": "shopping_cart",
             "title": "E-shop objednávky",
-            "text": "<p><strong>Po – Pá</strong>: 8:00 – 16:00<strong><br/></strong><a href=\"mailto:podpora@FIXED.zone\" target=\"_blank\" title=\"mailto:podpora@FIXED.zone\">podpora@FIXED.zone</a><br/>+420 267 317 817<br/></p>",
+            "text": "<p><strong>Po – Pá</strong>: 8:00 – 16:00<strong><br/></strong><a href=\"mailto:podpora@FIXED.zone\" target=\"_blank\" title=\"mailto:podpora@FIXED.zone\">podpora@FIXED.zone</a><br/>+420 385 510 206 </p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -51,7 +51,7 @@
           "settings": {
             "icon": "chat",
             "title": "Podpora",
-            "text": "<p><strong>Po – Pá</strong>: 8:00 – 16:00 <br/><a href=\"mailto:podpora@fixed.zone\" target=\"_blank\" title=\"mailto:podpora@fixed.zone\">podpora@FIXED.zone</a>    <br/>+420 267 317 817              <br/><strong><br/></strong></p>",
+            "text": "<p><strong>Po – Pá</strong>: 8:00 – 16:00 <br/><a href=\"mailto:podpora@fixed.zone\" target=\"_blank\" title=\"mailto:podpora@fixed.zone\">podpora@FIXED.zone</a>    <br/>+420 385 510 206              <br/><strong><br/></strong></p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
