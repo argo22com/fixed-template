@@ -17,7 +17,8 @@
         "content_alignment": "left",
         "color_scheme": "",
         "padding_top": 80,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "ul_li_marker": "#000"
       }
     },
     "slideshow_8r6nPV": {
@@ -282,15 +283,41 @@
             "custom_image": "shopify://shop_images/pasovky.jpg",
             "custom_title": "PASOVKY"
           }
+        },
+        "featured_collection_MWJN9E": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pouzdra-na-notebooky",
+            "custom_image": "shopify://shop_images/1B1A1377_1e40ff19-5738-4d6a-b0cc-939455e6b6f8.jpg",
+            "custom_title": "POUZDRA NA NOTEBOOKY"
+          }
+        },
+        "featured_collection_39BEyL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pouzdra-na-telefony",
+            "custom_image": "shopify://shop_images/profit_1.jpg",
+            "custom_title": "POUZDRA NA TELEFONY"
+          }
+        },
+        "featured_collection_HpmUCG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
         }
       },
       "block_order": [
         "featured_collection_iXWMGe",
         "featured_collection_cGFVCd",
-        "featured_collection_pejaJ6"
+        "featured_collection_pejaJ6",
+        "featured_collection_MWJN9E",
+        "featured_collection_39BEyL",
+        "featured_collection_HpmUCG"
       ],
       "settings": {
-        "title": "Kategorie výrobků z veganské kůže",
+        "title": "Kategorie výrobků z kůže",
         "subtitle": "",
         "heading_size": "h1",
         "image_ratio": "adapt",
@@ -373,6 +400,112 @@
         "overlay_color": "#1e40af"
       }
     },
+    "image_with_text_VYpWNw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YVgNAz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_gXWYDt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YVgNAz",
+        "text_gXWYDt"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "collection_list_bB4BBc": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_fE9TMM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "verona",
+            "custom_image": "shopify://shop_images/verona-768x512.jpg",
+            "custom_title": "TAŠTIČKY NA TELEFON"
+          }
+        },
+        "featured_collection_WMUJtn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "siena",
+            "custom_image": "shopify://shop_images/1B1A0588.jpg",
+            "custom_title": "OBALY NA TABLETY"
+          }
+        },
+        "featured_collection_4Ge7Ga": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "york",
+            "custom_image": "shopify://shop_images/york_ls2.jpg",
+            "custom_title": "OBALY NA NOTEBOOKY"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_fE9TMM",
+        "featured_collection_WMUJtn",
+        "featured_collection_4Ge7Ga"
+      ],
+      "settings": {
+        "title": "Kategorie výrobků z veganské kůže",
+        "subtitle": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "full_width": false,
+        "enable_section_box_layout": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "show_view_all": false,
+        "collection_card_show_title": true,
+        "show_products_count": false,
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_products_tabs_AyhByH": {
       "type": "featured-products-tabs",
       "blocks": {
@@ -383,7 +516,7 @@
             "product_list": [
               "tasticka-pres-rameno-s-kapsou-fixed-verona-s-cernou-snurkou-pro-mobilni-telefony-do-7-broskvova",
               "pouzdro-fixed-siena-pro-notebooky-a-tablety-o-uhlopricce-do-13-svetle-tyrkysove",
-              "pouzdro-fixed-york-pro-notebooky-o-uhlopricce-do-13-svetle-zlute"
+              "kozena-tasticka-pres-rameno-s-kapsou-fixed-venezia-pro-7-mobilni-telefony-s-cernym-retizkem-cerna"
             ],
             "products_to_show": 3,
             "columns_desktop": 3
@@ -393,8 +526,8 @@
           "type": "featured_collection",
           "settings": {
             "title": "Bestsellery",
-            "collection": "pouzdra-z-umele-kuze",
-            "products_to_show": 3,
+            "collection": "rucni-vyroba",
+            "products_to_show": 6,
             "columns_desktop": 3,
             "show_view_all": true,
             "view_all_style": "solid"
@@ -406,11 +539,11 @@
         "featured_collection_Ccb8Vb"
       ],
       "settings": {
-        "title": "Výrobky z veganské kůže",
+        "title": "Novinky a bestsellery z naší kolekce",
         "subtitle": "",
         "heading_size": "h1",
         "full_width": false,
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "",
         "image_ratio": "adapt",
         "show_secondary_image": true,
@@ -576,6 +709,8 @@
     "text_icons_fictdW",
     "collection_list_NekX4X",
     "image_with_text_zKVCnf",
+    "image_with_text_VYpWNw",
+    "collection_list_bB4BBc",
     "featured_products_tabs_AyhByH",
     "rich_text_w69QNV",
     "image_with_text_MUzzfc",
