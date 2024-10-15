@@ -343,7 +343,7 @@
         "heading_JYcbnb": {
           "type": "heading",
           "settings": {
-            "heading": "Obal, který už nebudete muset měnit.",
+            "heading": "Obal, který už nebudeš muset měnit.",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -351,7 +351,7 @@
         "text_BVLD3r": {
           "type": "text",
           "settings": {
-            "text": "<p>S doživotní zárukou na náš kožený obal ProFit můžete mít jeden obal po celou dobu používání vašeho telefonu.</p><ul><li>Ochrání váš telefon ze všech stran</li><li>Má praktické kapsy na karty či peníze</li><li>Dá se využít i jako stojánek</li></ul>",
+            "text": "<p>S doživotní zárukou na náš kožený obal ProFit můžete mít jeden obal po celou dobu používání tvého telefonu.</p><ul><li>Ochrání tvůj telefon ze všech stran</li><li>Má praktické kapsy na karty či peníze</li><li>Dá se využít i jako stojánek</li></ul>",
             "text_style": "body"
           }
         },
