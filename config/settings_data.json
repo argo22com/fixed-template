@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_scheme_body": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
@@ -57,14 +57,14 @@
     "custom_badge_metafield_3": "badge_blackfriday",
     "custom_badge_metafield_4": "badge_packing",
     "custom_badge_metafield_5": "badge_lastpieces",
-    "social_facebook_link": "https:\/\/www.facebook.com\/fixedcesko",
-    "social_instagram_link": "https:\/\/www.instagram.com\/fixedcesko\/",
-    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCqZqDkRGsTIIVCcqCkfogvw",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@fixedcesko",
-    "social_linkedin_link": "https:\/\/www.linkedin.com\/company\/fixedzone\/mycompany\/",
+    "social_facebook_link": "https://www.facebook.com/fixedcesko",
+    "social_instagram_link": "https://www.instagram.com/fixedcesko/",
+    "social_youtube_link": "https://www.youtube.com/channel/UCqZqDkRGsTIIVCcqCkfogvw",
+    "social_tiktok_link": "https://www.tiktok.com/@fixedcesko",
+    "social_linkedin_link": "https://www.linkedin.com/company/fixedzone/mycompany/",
     "predictive_search_enabled": true,
     "enable_appear_effect": true,
-    "favicon": "shopify:\/\/shop_images\/favicon_fixed.png",
+    "favicon": "shopify://shop_images/favicon_fixed.png",
     "currency_code_enabled": false,
     "cart_type": "drawer",
     "free_shipping_threshold": "2000",
@@ -530,7 +530,7 @@
         "settings": {
           "enable": true,
           "heading": "Používáme cookies",
-          "content": "<p>K poskytování služeb využíváme cookies. Procházením webu vyjadřujete souhlas s jejich používáním.<\/p>",
+          "content": "<p>K poskytování služeb využíváme cookies. Procházením webu vyjadřujete souhlas s jejich používáním.</p>",
           "color_scheme": "background-1"
         }
       },
@@ -703,19 +703,19 @@
     ],
     "blocks": {
       "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {
         }
       },
       "319724205969189013": {
-        "type": "shopify:\/\/apps\/hulk-form-builder\/blocks\/app-embed\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "type": "shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3",
         "disabled": false,
         "settings": {
         }
       },
       "7870687481494312845": {
-        "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/app-embed\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+        "type": "shopify://apps/wishlist-hero/blocks/app-embed/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
         "disabled": false,
         "settings": {
           "additionalWLButtonCssClasses": "",
@@ -723,13 +723,13 @@
         }
       },
       "2127842402487706816": {
-        "type": "shopify:\/\/apps\/spurit-discount-reminder\/blocks\/app-embed\/cbf22c2a-9546-45b8-8db5-60582288cfde",
+        "type": "shopify://apps/spurit-discount-reminder/blocks/app-embed/cbf22c2a-9546-45b8-8db5-60582288cfde",
         "disabled": false,
         "settings": {
         }
       },
       "2102808784413787648": {
-        "type": "shopify:\/\/apps\/kb-back-in-stock\/blocks\/main-app-embed\/147a6f7f-6771-4f9b-8dc6-c14e6b24f32c",
+        "type": "shopify://apps/kb-back-in-stock/blocks/main-app-embed/147a6f7f-6771-4f9b-8dc6-c14e6b24f32c",
         "disabled": false,
         "settings": {
         }
@@ -907,7 +907,7 @@
       "custom_badge_text_color_1": "#16a34a",
       "custom_badge_background_1": "#f0fdf4",
       "predictive_search_enabled": true,
-      "favicon": "shopify:\/\/shop_images\/favicon.png",
+      "favicon": "shopify://shop_images/favicon.png",
       "currency_code_enabled": false,
       "back_to_top_button_enable": true,
       "recently_viewed_enable": true,
