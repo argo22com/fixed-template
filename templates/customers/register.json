@@ -13,7 +13,7 @@
       "type": "main-register",
       "settings": {
         "term_checkbox_enable": true,
-        "term_checkbox_message": "Kliknutím na tlačítko Odeslat souhlasíte s našimi [obchodními podmínkami] a přijímáte je.",
+        "term_checkbox_message": "Kliknutím na tlačítko Odeslat souhlasíte s našimi [link] a přijímáte je.",
         "termm_checkbox_link_label": "obchodními podmínkami",
         "termm_checkbox_link_url": "shopify://pages/obchodni-podminky-b2c",
         "term_checkbox_link_new_tab": true,
