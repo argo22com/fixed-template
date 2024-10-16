@@ -13,11 +13,11 @@
       "type": "main-register",
       "settings": {
         "term_checkbox_enable": true,
-        "term_checkbox_message": "By clicking the submit button, you agreed to and accept [link].",
-        "termm_checkbox_link_label": "our terms and conditions",
+        "term_checkbox_message": "Kliknutím na tlačítko Odeslat souhlasíte s našimi [obchodními podmínkami] a přijímáte je.",
+        "termm_checkbox_link_label": "obchodními podmínkami",
         "termm_checkbox_link_url": "shopify://pages/obchodni-podminky-b2c",
         "term_checkbox_link_new_tab": true,
-        "term_checkbox_error_message": "Please indicate that you accept the Terms and Conditions",
+        "term_checkbox_error_message": "Potvrďte prosím, že souhlasíte se Smluvními podmínkami",
         "padding_top": 80,
         "padding_bottom": 52
       }
