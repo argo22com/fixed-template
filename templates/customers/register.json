@@ -1,1 +1,29 @@
-{"sections":{"main":{"type":"main-register","settings":{"padding_top":80,"padding_bottom":52}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-register",
+      "settings": {
+        "term_checkbox_enable": true,
+        "term_checkbox_message": "By clicking the submit button, you agreed to and accept [link].",
+        "termm_checkbox_link_label": "our terms and conditions",
+        "termm_checkbox_link_url": "shopify://pages/obchodni-podminky-b2c",
+        "term_checkbox_link_new_tab": true,
+        "term_checkbox_error_message": "Please indicate that you accept the Terms and Conditions",
+        "padding_top": 80,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
