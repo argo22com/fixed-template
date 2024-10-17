@@ -544,7 +544,7 @@
                     <p class="totals__subtotal-value price font-body-semi-bold">
                       {%- liquid
                         assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
-                        assign total_price_with_vat = cart.total_price | times: vat_rate_multiplier | round: 1
+                        assign total_price_with_vat = cart.total_price | times: vat_rate_multiplier | divided_by: 100 | round: 1 | times: 100
                       -%}
                       {%- render 'price-format', price: total_price_with_vat -%}
                     </p>
