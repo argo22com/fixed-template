@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -17,7 +17,8 @@
         "content_alignment": "left",
         "color_scheme": "",
         "padding_top": 80,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "ul_li_marker": "#000"
       }
     },
     "image_banner_7GGLw8": {
@@ -631,10 +632,10 @@
     "video_jrq3tR": {
       "type": "video",
       "settings": {
-        "title": "Podívej se jak se sklo testuje",
+        "title": "Mrkni na video o tom jak skla testujeme",
         "subtitle": "",
         "heading_size": "h1",
-        "video_url": "https://www.youtube.com/watch?v=CTj7KDOKWL8&t=21s",
+        "video_url": "https://www.youtube.com/watch?v=qZwXh7jjxJE&t",
         "description": "",
         "autoplay": false,
         "enable_controls": false,
