@@ -359,7 +359,7 @@
           "type": "button",
           "settings": {
             "button_label": "Zjistit více",
-            "button_link": "shopify://pages/pouzdro-profit",
+            "button_link": "shopify://collections/profit",
             "button_style": "solid",
             "button_open_new_tab": false
           }
