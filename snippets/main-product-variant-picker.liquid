@@ -300,9 +300,8 @@
                               {% endfor %}
                             </div>
                           {% elsif current_color_values %}
-                            {{ current_color_values }}
                             <div class="color-swatch-background flex justify-center align-center">
-                              {{ current_color_values | image_url: width: 40 | image_tag }}
+                              {{ current_color_values | strip | image_url: width: 40 | image_tag }}
                             </div>
                           {% endif %}
 
