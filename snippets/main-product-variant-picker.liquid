@@ -161,6 +161,7 @@
                               if color_code_hex.code == variation_color
                                 if color_code_hex.image.value
                                   assign colors = color_code_hex.image.value
+                                  assign color_hex_image = color_code_hex.image.value | image_url: width: 40 | image_tag
                                 else
                                   assign colors = 'colors_'
                                   for color in color_code_hex.color_hex_list.value
@@ -301,7 +302,7 @@
                             </div>
                           {% elsif current_color_values %}
                             <div class="color-swatch-background flex justify-center align-center">
-                              {{ current_color_values | strip | image_url: width: 40 | image_tag }}
+                              {{ color_hex_image }}
                             </div>
                           {% endif %}
 
