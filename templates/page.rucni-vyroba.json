@@ -102,6 +102,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/OXFORD.jpg",
+            "mobile_image": "shopify://shop_images/1B1A5878.jpg",
             "badge_label": "",
             "heading": "Kožené pouzdro Oxford",
             "text": "360° Ochrana pro notebooky a tablety",
@@ -125,7 +126,7 @@
             "colors_badge_background": "#f87171",
             "colors_button_text": "#ffffff",
             "colors_button": "#000000",
-            "colors_text_mobile": "#ffffff",
+            "colors_text_mobile": "#000",
             "gradient_heading_mobile": "",
             "colors_background_mobile": "#ffffff",
             "colors_badge_foreground_mobile": "#ffffff",
