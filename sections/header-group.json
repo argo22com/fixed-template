@@ -19,16 +19,16 @@
           "settings": {
             "trigger": "Produkty",
             "title": "",
-            "image": "shopify://shop_images/onadnes_banner_2_a59ab9f6-e095-49a9-bd84-99b2fdfe0eca.png",
+            "image": "shopify://shop_images/armor_5d81f6de-d16d-4d74-8c03-61fc6af4ff32.jpg",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "",
-            "subheading": "",
+            "subheading": "Ultraodolné sklo armor",
             "button_label": "Objevit",
             "button_style": "link",
             "text_align": "center",
-            "text_position": "3",
-            "link": "shopify://pages/ona-dnes",
+            "text_position": "2",
+            "link": "shopify://pages/armor",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 0,
@@ -157,6 +157,7 @@
         },
         "mega_menu_promotion_kURg37": {
           "type": "mega_menu_promotion",
+          "disabled": true,
           "settings": {
             "trigger": "Akce",
             "title": "Ona Dnes",
