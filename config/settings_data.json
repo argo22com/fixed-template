@@ -527,6 +527,9 @@
       },
       "cookies-banner": {
         "type": "cookies-banner",
+        "custom_css": [
+          ".cookies-banner {bottom: 10rem; }"
+        ],
         "settings": {
           "enable": true,
           "heading": "Používáme cookies",
