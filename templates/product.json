@@ -103,7 +103,7 @@
           "settings": {
             "block_heading": "Mohlo by se vám také líbit",
             "make_collapsible_row": true,
-            "icon": "thumb_up",
+            "icon": "thumb_down",
             "product_list_limit": 3,
             "total_enable": true,
             "total_label": "Celkem",
