@@ -240,6 +240,28 @@
             "color_scheme": "inverse"
           }
         },
+        "mega_menu_promotion_qrrCqd": {
+          "type": "mega_menu_promotion",
+          "disabled": true,
+          "settings": {
+            "trigger": "Akce",
+            "title": "Ruční výroba",
+            "image": "shopify://shop_images/1B1A1377.jpg",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "Ruční výroba",
+            "subheading": "Pouzdra z kůže a veganské kůže",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://pages/skvela-rucni-vyroba",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
         "3753f6b7-733c-49d7-881c-f8fe4195e49f": {
           "type": "menu_label",
           "settings": {
@@ -343,6 +365,7 @@
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_Bh4wzD",
         "mega_menu_promotion_9KBrbX",
+        "mega_menu_promotion_qrrCqd",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "mega_menu_promotion_9HJwDd",
         "mega_menu_promotion_ya4VNA",
