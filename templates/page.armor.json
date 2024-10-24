@@ -18,7 +18,7 @@
         "color_scheme": "",
         "padding_top": 80,
         "padding_bottom": 40,
-        "ul_li_marker": "#000"
+        "ul_li_marker": "#000000"
       }
     },
     "image_banner_7GGLw8": {
@@ -144,7 +144,7 @@
         "heading_TJjMV3": {
           "type": "heading",
           "settings": {
-            "heading": "Ultra odolnost díky vysoké pružnosti",
+            "heading": "Ultraodolnost díky vysoké pružnosti",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
