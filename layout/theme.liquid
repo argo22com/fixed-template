@@ -447,7 +447,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
  'event': 'test',
- 'WP_ID': '{{ product.id }}'
+ 'WP_ID': '{{ product.selected_or_first_available_variant.id }}'
  });
 </script>
   </body>
