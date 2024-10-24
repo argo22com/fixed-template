@@ -242,7 +242,6 @@
         },
         "mega_menu_promotion_qrrCqd": {
           "type": "mega_menu_promotion",
-          "disabled": true,
           "settings": {
             "trigger": "Akce",
             "title": "Ruční výroba",
