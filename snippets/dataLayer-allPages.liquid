@@ -423,6 +423,7 @@ __DL__jQueryinterval = setInterval(function(){
                     'products':[{% for line_item in cart.items %}{
                         'id'       : {{line_item.product_id | json}},
                         'sku'      : {{line_item.sku | json}},
+                        'WP_ID'    : {{line_item.metafields.marketing.woocommerce_id | json}}
                         'variant'  : {{line_item.variant_id | json}},
                         'name'     : {{line_item.title | json}},
                         'price'    : {{line_item.price | money_without_currency | remove: "," | json}},
@@ -450,6 +451,7 @@ __DL__jQueryinterval = setInterval(function(){
                                     return {
                                         'id'       : line_item.product_id,
                                         'sku'      : line_item.sku,
+                                        'WP_ID'    : line_item.metafields.marketing.woocommerce_id
                                         'variant'  : line_item.variant_id,
                                         'name'     : line_item.title,
                                         'price'    : (line_item.price/100),
@@ -490,6 +492,7 @@ __DL__jQueryinterval = setInterval(function(){
                     'id'          : {{line_item.product_id | json}},
                     'sku'         : {{line_item.sku | json}},
                     'variantId'   : {{line_item.variant_id | json}},
+                    'WP_ID'       : {{line_item.metafields.marketing.woocommerce_id | json}}
                     'name'        : {{line_item.title | json}},
                     'productType' : {{line_item.product.type | json}},
                     'price'       : {{line_item.price | money_without_currency | remove: "," | json}},
