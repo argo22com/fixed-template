@@ -101,14 +101,14 @@
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
           "type": "complementary",
           "settings": {
-            "block_heading": "Complementary products",
+            "block_heading": "Mohlo by se vám také líbit",
             "make_collapsible_row": true,
-            "icon": "appliances",
+            "icon": "thumb_up",
             "product_list_limit": 3,
             "total_enable": true,
-            "total_label": "Total:",
+            "total_label": "Celkem",
             "button_enable": true,
-            "button_label": "Add items to cart",
+            "button_label": "Přihodit do košíku",
             "image_ratio": "square"
           }
         }
