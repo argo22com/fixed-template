@@ -65,7 +65,7 @@
             "size_chart_link_label": "Tabulka velikostí",
             "size_chart_page": "tabulka-velikosti-univerzalni-pouzdra",
             "quantity_selector_enable": true,
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
         },
