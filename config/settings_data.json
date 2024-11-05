@@ -71,7 +71,7 @@
     "free_shipping_exclude_products": [
 
     ],
-    "back_to_top_button_enable": true,
+    "back_to_top_button_enable": false,
     "recently_viewed_enable": true,
     "recently_viewed_columns_desktop": 5,
     "recently_viewed_image_ratio": "square",
@@ -528,7 +528,7 @@
       "cookies-banner": {
         "type": "cookies-banner",
         "custom_css": [
-          ".cookies-banner {bottom: 10rem; }"
+          ".cookies-banner {bottom: 10rem;}"
         ],
         "settings": {
           "enable": true,
