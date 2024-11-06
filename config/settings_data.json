@@ -71,7 +71,7 @@
     "free_shipping_exclude_products": [
 
     ],
-    "back_to_top_button_enable": false,
+    "back_to_top_button_enable": true,
     "recently_viewed_enable": true,
     "recently_viewed_columns_desktop": 5,
     "recently_viewed_image_ratio": "square",
