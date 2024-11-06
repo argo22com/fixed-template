@@ -717,14 +717,6 @@
         "settings": {
         }
       },
-      "7870687481494312845": {
-        "type": "shopify://apps/wishlist-hero/blocks/app-embed/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
-        "disabled": false,
-        "settings": {
-          "additionalWLButtonCssClasses": "",
-          "additionalWLCartBubbleCssClasses": ""
-        }
-      },
       "2127842402487706816": {
         "type": "shopify://apps/spurit-discount-reminder/blocks/app-embed/cbf22c2a-9546-45b8-8db5-60582288cfde",
         "disabled": false,
@@ -735,6 +727,17 @@
         "type": "shopify://apps/kb-back-in-stock/blocks/main-app-embed/147a6f7f-6771-4f9b-8dc6-c14e6b24f32c",
         "disabled": false,
         "settings": {
+        }
+      },
+      "7870687481494312845": {
+        "type": "shopify://apps/wishlist-hero/blocks/app-embed/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+        "disabled": false,
+        "settings": {
+          "customThemeName": "~",
+          "additionalWLButtonCssClasses": "",
+          "additionalWLCartBubbleCssClasses": "",
+          "extraHTMLToAppend": "<style> @media only screen and (max-width: 749px) {\n#wishlisthero-floating-launcher-container {display: none !important;}\n}</style>",
+          "disableAutomaticButtonAddition": false
         }
       }
     },
