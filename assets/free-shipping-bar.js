@@ -43,11 +43,11 @@ if (!customElements.get('free-shipping-bar')) {
       fetch(`${routes.cart_url}`, {...fetchConfig('json', 'GET')})
       .then((response) => response.json())
       .then((response) => {
-        let totalPrice = response.total_price;
+        let totalPrice = this.getWithVat(response.total_price)
         if (freeShippingBarExcludeProducts.length > 0 && response.items.length > 0) {
           response.items.forEach((item) => {
             if(freeShippingBarExcludeProducts.includes(item.product_id)) {
-              totalPrice -= item.final_line_price;
+              totalPrice -= this.getWithVat(item.final_line_price)
             }
           });
         }
@@ -75,6 +75,10 @@ if (!customElements.get('free-shipping-bar')) {
     hideReachedMessage() {
       if(!this.reachedMessage) return;
       this.reachedMessage.classList.add('hidden');
+    }
+
+    getWithVat(priceNoVat) {
+      return (priceNoVat * this.dataset.vat / 100).toFixed(1) * 100
     }
   });
 }
