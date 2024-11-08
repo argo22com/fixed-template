@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -17,7 +17,8 @@
         "content_alignment": "left",
         "color_scheme": "",
         "padding_top": 80,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "ul_li_marker": "#000"
       }
     },
     "image_banner_aBk4NA": {
@@ -44,7 +45,7 @@
       ],
       "settings": {
         "layout": "grid",
-        "image": "shopify:\/\/shop_images\/podpora_8.png",
+        "image": "shopify://shop_images/podpora_8.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_height_mobile": "small-mobile",
@@ -88,14 +89,14 @@
         "heading_AkqqtD": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>PRODUKTOVÁ PODPORA<\/strong><\/h3>",
+            "heading": "<h3><strong>PRODUKTOVÁ PODPORA</strong></h3>",
             "heading_size": "h2"
           }
         },
         "text_TChkMN": {
           "type": "text",
           "settings": {
-            "text": "<p>Máte dotaz, ztratili jste návod ke svému produktu, potřebujete vrátit nebo reklamovat zboží?<\/p>"
+            "text": "<p>Máte dotaz, ztratili jste návod ke svému produktu, potřebujete vrátit nebo reklamovat zboží?</p>"
           }
         },
         "button_DmicHy": {
@@ -134,9 +135,9 @@
         "collapsible_row_dWPymJ": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Mohu si u Vás nechat ušít\/ upravit pouzdro na telefon na míru?",
+            "heading": "Mohu si u Vás nechat ušít/ upravit pouzdro na telefon na míru?",
             "icon": "arrow_right",
-            "row_content": "<p>Obzvláště nás těší jakýkoli zájem o produkty z naší prostějovské dílny. Ačkoli se to nemusí zdát, jakékoli úpravy jednotlivých kusů pouzder, jsou řádově časově náročnější, bohužel není v našich silách požadavky na úpravy naplnit. Snažíme se, abychom většinovou poptávku po pouzdrech naplnili výběrem z portfólia standardně vyráběných pouzder různých velikostí, barev a materiálů.<\/p>",
+            "row_content": "<p>Obzvláště nás těší jakýkoli zájem o produkty z naší prostějovské dílny. Ačkoli se to nemusí zdát, jakékoli úpravy jednotlivých kusů pouzder, jsou řádově časově náročnější, bohužel není v našich silách požadavky na úpravy naplnit. Snažíme se, abychom většinovou poptávku po pouzdrech naplnili výběrem z portfólia standardně vyráběných pouzder různých velikostí, barev a materiálů.</p>",
             "page": ""
           }
         },
@@ -154,7 +155,7 @@
           "settings": {
             "heading": "Tracker se po určité době odpojí od telefonu, nebo se nepřipojí, když jsem v jeho blízkosti, jak to mohu vyřešit?",
             "icon": "arrow_right",
-            "row_content": "<p>Operační systém Android automaticky potlačuje aplikace běžící na pozadí, které mají nízkou aktivitu. To způsobí, že jakmile běží aplikace Smart na pozadí, je systémem deaktivována, následně trackery nefungují správně. Toto chování systému je možné vyřešit nastavením optimalizace přímo v telefonu.<br\/>Návody pro správné nastavení systému naleznete zde:<\/p><ul><li><a href=\"https:\/\/www.fixed.zone\/manual-pro-optimalizaci-baterie-u-telefonu-samsung\"><strong>SAMSUNG<\/strong><\/a><\/li><li><a href=\"https:\/\/www.fixed.zone\/manual-pro-optimalizaci-baterie-u-telefonu-huawei\/\"><strong>HUAWEI<\/strong><\/a><\/li><li><a href=\"https:\/\/www.fixed.zone\/manual-pro-optimalizaci-baterie-u-telefonu-xiaomi\/\"><strong>XIAOMI<\/strong><\/a><\/li><\/ul>",
+            "row_content": "<p>Operační systém Android automaticky potlačuje aplikace běžící na pozadí, které mají nízkou aktivitu. To způsobí, že jakmile běží aplikace Smart na pozadí, je systémem deaktivována, následně trackery nefungují správně. Toto chování systému je možné vyřešit nastavením optimalizace přímo v telefonu.<br/>Návody pro správné nastavení systému naleznete zde:</p><ul><li><a href=\"https://www.fixed.zone/manual-pro-optimalizaci-baterie-u-telefonu-samsung\"><strong>SAMSUNG</strong></a></li><li><a href=\"https://www.fixed.zone/manual-pro-optimalizaci-baterie-u-telefonu-huawei/\"><strong>HUAWEI</strong></a></li><li><a href=\"https://www.fixed.zone/manual-pro-optimalizaci-baterie-u-telefonu-xiaomi/\"><strong>XIAOMI</strong></a></li></ul>",
             "page": ""
           }
         },
@@ -163,7 +164,7 @@
           "settings": {
             "heading": "Jak správně nalepit ochranné sklo na mobily Samsung Galaxy S?",
             "icon": "arrow_right",
-            "row_content": "<p><strong>1. Naskenujte prsty k identifikaci<\/strong><\/p><p>Než se pustíte do lepení skla, nejprve naskenujte (identifikujte) své prsty, ať pak můžete například odemykat obrazovku jednoduše dotekem. Po nalepení ochranného skla už by skenování prstů nebylo možné. Máte-li toto nastavené, pokračujte dále.<\/p><p><strong>2. Zapněte funkci „Dotyková citlivost“<\/strong><\/p><p>U mobilů Samsung Galaxy S se po nalepení skla může stát, že displej nebude na vaše dotyky reagovat tak, jak by měl. Má to snadné řešení – zapněte funkci „Dotyková citlivost“, a to následovně: <\/p><ul><li>Přejděte do nabídky „<em><strong>Nastaven<\/strong><\/em><em>í<\/em>“ a vyberte možnost „<em><strong>Displej<\/strong><\/em>“ <\/li><li>Klikněte na „<em><strong>Dotyková citlivost<\/strong><\/em>“ V tuto chvíli by funkce Dotyková citlivost měla být zapnutá.<\/li><\/ul><p><strong>3. Nalepte sklo na displej<\/strong><\/p><p>Teď už se vrhněte na samotné lepení skla. S řádným nalepením vám pomůže naše <a href=\"https:\/\/www.youtube.com\/watch?v=jc4OqiDGie8\"><span style=\"text-decoration:underline\">video<\/span><\/a><\/p><p><strong>4. Počkejte 10 minut<\/strong><\/p><p>Máte hotovo, nic dalšího dělat nemusíte. Pro bezproblémovou funkčnost displeje je ale potřeba aspoň 10 minut počkat, aby pořádně „uzrálo“ lepidlo na ochranném skle. Po uplynutí 10 minut mobil několikrát odemkněte a zamkněte, pak už by vše mělo fungovat a telefon můžete rovnou používat.<\/p><p><strong>Pokud se vám nalepení ochranného skla FIXED na Samsung Galaxy S nedaří, napište nám do live chatu tady na webu, rádi vám poradíme.<\/strong><\/p><p><\/p>",
+            "row_content": "<p><strong>1. Naskenujte prsty k identifikaci</strong></p><p>Než se pustíte do lepení skla, nejprve naskenujte (identifikujte) své prsty, ať pak můžete například odemykat obrazovku jednoduše dotekem. Po nalepení ochranného skla už by skenování prstů nebylo možné. Máte-li toto nastavené, pokračujte dále.</p><p><strong>2. Zapněte funkci „Dotyková citlivost“</strong></p><p>U mobilů Samsung Galaxy S se po nalepení skla může stát, že displej nebude na vaše dotyky reagovat tak, jak by měl. Má to snadné řešení – zapněte funkci „Dotyková citlivost“, a to následovně: </p><ul><li>Přejděte do nabídky „<em><strong>Nastaven</strong></em><em>í</em>“ a vyberte možnost „<em><strong>Displej</strong></em>“ </li><li>Klikněte na „<em><strong>Dotyková citlivost</strong></em>“ V tuto chvíli by funkce Dotyková citlivost měla být zapnutá.</li></ul><p><strong>3. Nalepte sklo na displej</strong></p><p>Teď už se vrhněte na samotné lepení skla. S řádným nalepením vám pomůže naše <a href=\"https://www.youtube.com/watch?v=jc4OqiDGie8\"><span style=\"text-decoration:underline\">video</span></a></p><p><strong>4. Počkejte 10 minut</strong></p><p>Máte hotovo, nic dalšího dělat nemusíte. Pro bezproblémovou funkčnost displeje je ale potřeba aspoň 10 minut počkat, aby pořádně „uzrálo“ lepidlo na ochranném skle. Po uplynutí 10 minut mobil několikrát odemkněte a zamkněte, pak už by vše mělo fungovat a telefon můžete rovnou používat.</p><p><strong>Pokud se vám nalepení ochranného skla FIXED na Samsung Galaxy S nedaří, napište nám do live chatu tady na webu, rádi vám poradíme.</strong></p><p></p>",
             "page": ""
           }
         }
@@ -195,14 +196,14 @@
         "heading_cTz4QP": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>Reklamace a vrácení zboží<\/strong><\/h3>",
+            "heading": "<h3><strong>Reklamace a vrácení zboží</strong></h3>",
             "heading_size": "h2"
           }
         },
         "text_HTrB6U": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Postup pro vrácení zboží a reklamace.<\/strong><\/p><p><em>Některé reklamace je možné posoudit a vyřešit vzdáleně na základě popisu, fotografie, či videa. Prosíme, než nám reklamaci, nebo vratku odešlete, kontaktujte nás skrze online chat v pravém dolním rohu. Posoudíme Váš požadavek nejprve vzdáleně a navrhneme Vám vhodné řešení.<\/em><\/p>"
+            "text": "<p><strong>Postup pro vrácení zboží a reklamace.</strong></p><p><em>Některé reklamace je možné posoudit a vyřešit vzdáleně na základě popisu, fotografie, či videa. Prosíme, než nám reklamaci, nebo vratku odešlete, kontaktujte nás skrze online chat v pravém dolním rohu. Posoudíme Váš požadavek nejprve vzdáleně a navrhneme Vám vhodné řešení.</em></p>"
           }
         }
       },
@@ -221,11 +222,133 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_K4iVcR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MyCfVd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h4><strong>1. Vratný formulář</strong></h4>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Yg7AmB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pro reklamaci produktů zakoupených před <strong>11. 10. 2024 </strong>klikněte na tlačítko níže a dále postupujte podle instrukcí.</p><p>Pokud chcete reklamovat produkty z objednávky po tomto datu nebo pokud svou objednávku v systému nenajdete, kontaktujte prosím naši podporu skrze online chat na této stránce. </p><p></p><p>Kolegové s vámi rádi situaci vyřídí.</p>"
+          }
+        },
+        "button_ppAb4r": {
+          "type": "button",
+          "settings": {
+            "button_label": "Reklamační formulář",
+            "button_link": "https://old.fixed.zone/reklamace-vraceni/",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MyCfVd",
+        "text_Yg7AmB",
+        "button_ppAb4r"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "desktop_content_width": "large",
+        "content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_LWR7Gq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_yBXAWK": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h4><strong>2. Balení</strong></h4>",
+            "heading_size": "h1"
+          }
+        },
+        "text_kT4YiN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Zboží, které chcete vrátit, zabalte tak, aby se při převozu nepoškodil produkt nebo jeho obal. Nezapomeňte do balení vložit vyplněný <strong>Vratný formulář </strong>(viz předchozí bod) a<strong> kopii prodejního dokladu.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yBXAWK",
+        "text_kT4YiN"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "desktop_content_width": "large",
+        "content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_hW9aVe": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BAxhPH": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h4><strong>3. Odeslání</strong></h4>",
+            "heading_size": "h1"
+          }
+        },
+        "text_EDAYnC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kompletní zásilku odešlete na naši adresu. K adrese připište, zda se jedná o reklamaci či vratku. Zásilka se tak snáze dostane na příslušné oddělení.<strong><br/><br/>REKLAMACE / VRATKA<br/>FIXED.zone a.s.<br/>Budějovická 19<br/>370 01 Homole<br/><br/>Upozornění:<br/></strong>Náklady za dopravné při vrácení zboží nese odesílatel.<br/>Za dodání nového, či opravného zboží poštovné nehradíte.<br/>Prodejní doklad slouží také jako záruční list.<br/>Vrátit je možné pouze kompletní, nepoužívané a nepoškozené zboží.</p>"
+          }
+        },
+        "button_KMJ6Jq": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_BAxhPH",
+        "text_EDAYnC",
+        "button_KMJ6Jq"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "desktop_content_width": "large",
+        "content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
     "page_trCqk7": {
       "type": "page",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "page": "reklamace",
         "heading_size": "h2",
@@ -240,14 +363,14 @@
         "heading_kkfr79": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>KONTAKTUJTE NÁS<\/strong><\/h3>",
+            "heading": "<h3><strong>KONTAKTUJTE NÁS</strong></h3>",
             "heading_size": "h2"
           }
         },
         "text_n33pPc": {
           "type": "text",
           "settings": {
-            "text": "<p>Máte dotaz na nás a naše produkty? Neváhejte nás kontaktovat do chatu v pravém dolním rohu stránky, naši operátoři rádi na vaše dotazy odpoví.<\/p>"
+            "text": "<p>Máte dotaz na nás a naše produkty? Neváhejte nás kontaktovat do chatu v pravém dolním rohu stránky, naši operátoři rádi na vaše dotazy odpoví.</p>"
           }
         }
       },
@@ -273,6 +396,9 @@
     "rich_text_WGRr4t",
     "collapsible_content_6mYWW4",
     "rich_text_pEzQib",
+    "rich_text_K4iVcR",
+    "rich_text_LWR7Gq",
+    "rich_text_hW9aVe",
     "page_trCqk7",
     "rich_text_tgLq4X"
   ]
