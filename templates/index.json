@@ -514,9 +514,7 @@
         "featured_products_R8jfLQ"
       ],
       "disabled": true,
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "title": "Novinky v sortimentu",
         "subtitle": "",
@@ -808,6 +806,15 @@
             "row_content": "<p>V popisu u každého univerzálního pouzdra FIXED naleznete informaci o vnitřní velikosti pouzdra, dle které se můžete řídit. Tento údaj odpovídá maximální možné velikosti mobiliního telefonu, který můžete s pouzdrem pohodlně používat. Pouzdro by zároveň nemělo být větší než telefon více než o pár milimetrů.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_EKFCM7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kde najdu manuál pro aplikaci FIXED Smart?",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -815,7 +822,8 @@
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-2",
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-3",
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-4",
-        "f720c224-680e-4598-aa51-f0d9c079f489"
+        "f720c224-680e-4598-aa51-f0d9c079f489",
+        "collapsible_row_EKFCM7"
       ],
       "settings": {
         "section_width": "grid",
@@ -953,8 +961,7 @@
         },
         "email_form_FXwgyM": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
