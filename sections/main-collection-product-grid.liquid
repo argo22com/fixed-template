@@ -10,17 +10,17 @@
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
   {{ 'component-facets.css' | asset_url | stylesheet_tag: preload: true }}
   {%- if section.settings.filter_type == 'vertical' -%}
-    {{ 'component-facets-vertical.css' | asset_url | stylesheet_tag: media: 'screen and (min-width: 750px)' }}  
-  {%- endif -%}  
+    {{ 'component-facets-vertical.css' | asset_url | stylesheet_tag: media: 'screen and (min-width: 750px)' }}
+  {%- endif -%}
   {%- if section.settings.filter_type == 'horizontal' -%}
-    {{ 'component-facets-horizontal.css' | asset_url | stylesheet_tag: media: 'screen and (min-width: 990px)' }}  
-  {%- endif -%}  
+    {{ 'component-facets-horizontal.css' | asset_url | stylesheet_tag: media: 'screen and (min-width: 990px)' }}
+  {%- endif -%}
   <script src="{{ 'details-accordion.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 {%- if section.settings.pagination_style == 'numbers' -%}
   <script src="{{ 'collection-pagination-number.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}  
+{%- endif -%}
 
 {%- if section.settings.enable_quick_add -%}
   <link rel="stylesheet" href="{{ 'component-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -35,7 +35,12 @@
 
 {%- if section.settings.show_color_swatches -%}
   <script src="{{ 'card-product-colors.js' | asset_url }}" defer="defer"></script>
-  <link rel="stylesheet" href="{{ 'component-card-product-colors.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="{{ 'component-card-product-colors.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
   <link rel="stylesheet" href="{{ 'component-tooltip.css' | asset_url }}" media="print" onload="this.media='all'">
   <noscript>{{ 'component-tooltip.css' | asset_url | stylesheet_tag }}</noscript>
   <noscript>{{ 'component-card-product-colors.css' | asset_url | stylesheet_tag }}</noscript>
@@ -69,8 +74,8 @@
       }
       body .floating-element {
       }
-    }  
-  {%- endif -%}  
+    }
+  {%- endif -%}
   .collection__product-grid {
     margin-top: 3rem;
   }
@@ -85,7 +90,7 @@
   {%- endif -%}
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-bottom: {{ section.settings.padding_top }}px;
+      padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
     .collection__product-grid {
@@ -93,7 +98,7 @@
     }
   }
 {%- endstyle -%}
-{%-liquid
+{%- liquid
   if section.settings.enable_compare and settings.enable_product_compare
     assign enable_compare = true
   else
@@ -105,7 +110,7 @@
   if section.settings.enable_filtering and section.settings.filter_type == 'vertical' and section.settings.columns_desktop >= 4
     assign small_space_on_large_screen = true
   endif
-  
+
   if section.settings.enable_filtering
     capture facets_categories
       render 'facets-categories', filter_type: 'drawer', suffix_id: 'Mobile-'
@@ -114,7 +119,7 @@
       capture facets_categories_desktop
         render 'facets-categories', filter_type: section.settings.filter_type
       endcapture
-    endif    
+    endif
   endif
   assign results_url = collection.url
   if collection.sort_by != blank and collection.sort_by != collection.default_sort_by
@@ -123,18 +128,26 @@
   if section.settings.include_collection_in_url and collection.handle != 'all'
     assign include_collection = collection
   else
-    assign include_collection = false  
+    assign include_collection = false
   endif
-  assign promotion_tile_blocks = section.blocks | where: "type", "promotion_tile"
+  assign promotion_tile_blocks = section.blocks | where: 'type', 'promotion_tile'
   assign count_index = 0
 -%}
 
 <div class="section-{{ section.id }}-padding">
-  {%- if section.settings.show_collection_description and section.settings.description_position == 'above' and collection.description != blank -%}
+  {%- if section.settings.show_collection_description
+    and section.settings.description_position == 'above'
+    and collection.description != blank
+  -%}
     <div class="page-width">
-      <truncate-text class="db collection__description"{% if section.settings.truncate_description == 0 %} data-ignore="true"{% endif %}>
+      <truncate-text
+        class="db collection__description"
+        {% if section.settings.truncate_description == 0 %}
+          data-ignore="true"
+        {% endif %}
+      >
         <div class="rte {{ section.settings.description_style }} {{ section.settings.description_alignment }}{% if section.settings.description_style == 'subtitle' %} subtitle--small{% endif %}{% if section.settings.truncate_description > 0 %} truncate-text truncate-text--has-button{% endif %}">
-          <div class="truncate-text__content-wrapper">  
+          <div class="truncate-text__content-wrapper">
             <div class="truncate-text__content rte">
               {{ collection.description }}
             </div>
@@ -142,7 +155,10 @@
         </div>
         {%- if section.settings.truncate_description > 0 -%}
           <div class="center truncate-text__button-wrapper element-small-margin-top por flex justify-center hidden overflow-hidden">
-            <button class="button button--medium button--truncate-text ignore-effect button--truncate-background-page" type="button">
+            <button
+              class="button button--medium button--truncate-text ignore-effect button--truncate-background-page"
+              type="button"
+            >
               {%- if section.settings.read_more_button != blank -%}
                 <span>{{ section.settings.read_more_button }}</span>
               {%- endif -%}
@@ -153,7 +169,7 @@
           </div>
         {%- endif -%}
       </truncate-text>
-    </div>  
+    </div>
     {%- if section.settings.truncate_description > 0 and request.design_mode == false -%}
       <script src="{{ 'truncate-text.js' | asset_url }}" defer="defer"></script>
       {{ 'component-truncate-text.css' | asset_url | stylesheet_tag }}
@@ -162,19 +178,42 @@
   <div class="{% if has_sidebar and section.settings.filter_type == 'vertical' %}facets-vertical page-width flex{% endif %}{% if section.settings.show_collection_description and section.settings.description_position == 'above' and collection.description != blank %} element-margin-top{% endif %}">
     {% if section.settings.filter_type != 'drawer' %}
       <a class="skip-to-content-link button visually-hidden small-hide medium-hide" href="#product-grid">
-        <span>{{ "accessibility.skip_to_product_grid" | t }}</span>
+        <span>{{ 'accessibility.skip_to_product_grid' | t }}</span>
       </a>
     {%- endif -%}
     {%- if has_sidebar or section.settings.enable_sorting -%}
-      <aside aria-labelledby="verticalTitle" class="facets-wrapper facets-wrapper--{{ section.settings.filter_type }}{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type == 'horizontal' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
-        {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type, filter_include_group_name: section.settings.filter_include_group_name, is_collection: true, facets_categories: facets_categories, facets_categories_desktop: facets_categories_desktop %}
+      <aside
+        aria-labelledby="verticalTitle"
+        class="facets-wrapper facets-wrapper--{{ section.settings.filter_type }}{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type == 'horizontal' %} page-width{% endif %}"
+        id="main-collection-filters"
+        data-id="{{ section.id }}"
+      >
+        {% render 'facets',
+          results: collection,
+          enable_filtering: section.settings.enable_filtering,
+          enable_sorting: section.settings.enable_sorting,
+          filter_type: section.settings.filter_type,
+          filter_include_group_name: section.settings.filter_include_group_name,
+          is_collection: true,
+          facets_categories: facets_categories,
+          facets_categories_desktop: facets_categories_desktop
+        %}
       </aside>
     {%- endif -%}
 
-    <div class="product-grid-container{% if section.settings.filter_type == 'drawer' %} element-small-margin-top{% endif %}{% if has_sidebar and section.settings.filter_type == 'vertical' %} flex-grow-1{% endif %}" id="ProductGridContainer">
-      <appear-animate-list class="collection por db{% if collection.products.size == 0 %} collection--empty{% endif %}{% if section.settings.filter_type != 'vertical' or has_sidebar == false %} page-width{% endif %}"{% if collection.products.size == 0 %} id="product-grid" data-id="{{ section.id }}"{% endif %} data-delay="0.1">
+    <div
+      class="product-grid-container{% if section.settings.filter_type == 'drawer' %} element-small-margin-top{% endif %}{% if has_sidebar and section.settings.filter_type == 'vertical' %} flex-grow-1{% endif %}"
+      id="ProductGridContainer"
+    >
+      <appear-animate-list
+        class="collection por db{% if collection.products.size == 0 %} collection--empty{% endif %}{% if section.settings.filter_type != 'vertical' or has_sidebar == false %} page-width{% endif %}"
+        {% if collection.products.size == 0 %}
+          id="product-grid" data-id="{{ section.id }}"
+        {% endif %}
+        data-delay="0.1"
+      >
         <div class="loading-overlay gradient"></div>
-        {%-liquid
+        {%- liquid
           if section.settings.filter_type == 'vertical'
             render 'facets-toolbar', results: collection, is_collection: true, has_sidebar: has_sidebar
           endif
@@ -182,8 +221,8 @@
         -%}
         {%- if collection.products.size > 0 -%}
           {%- paginate collection.products by section.settings.products_per_page -%}
-            {%-liquid
-              assign promotion_tile_ids = ""
+            {%- liquid
+              assign promotion_tile_ids = ''
               if promotion_tile_blocks.size > 0 and collection.products.size > 0
                 for promotion in promotion_tile_blocks
                   if promotion.settings.image != blank or request.design_mode
@@ -201,17 +240,27 @@
             -%}
             {%- if paginate.pages > 1 and section.settings.pagination_style != 'numbers' and paginate.previous -%}
               <div class="w100 flex justify-center element-small-margin-top">
-                <collection-load-more-button data-product-grid="product-grid" data-url="{{ paginate.previous.url }}&section_id={{ section.id }}" data-loading-type="prev" class="collection__loading-button button">
+                <collection-load-more-button
+                  data-product-grid="product-grid"
+                  data-url="{{ paginate.previous.url }}&section_id={{ section.id }}"
+                  data-loading-type="prev"
+                  class="collection__loading-button button"
+                >
                   <span>{{ 'general.pagination.load_previous_items' | t }}</span>
-                </collection-load-more-button>  
+                </collection-load-more-button>
               </div>
-            {%- endif -%} 
-            <ul id="product-grid" class="
-              grid product-grid contains-card--product grid--{{ section.settings.columns_mobile }}-col
-              grid--{{ section.settings.columns_tablet }}-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop element-margin-top collection__product-grid" data-id="{{ section.id }}">
+            {%- endif -%}
+            <ul
+              id="product-grid"
+              class="
+                grid product-grid contains-card--product grid--{{ section.settings.columns_mobile }}-col
+                grid--{{ section.settings.columns_tablet }}-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop element-margin-top collection__product-grid
+              "
+              data-id="{{ section.id }}"
+            >
               {%- for card_product in collection.products -%}
-                {%-liquid
-                   if promotion_tile_ids != ''
+                {%- liquid
+                  if promotion_tile_ids != ''
                     assign index_key = 'position_' | append: forloop.index | append: ':'
                     if promotion_tile_ids contains index_key
                       assign ids = promotion_tile_ids | split: index_key | last | split: ';' | first | split: ','
@@ -223,17 +272,17 @@
                           assign use_animate = true
                           if count_index < 3
                             assign use_animate = false
-                          endif  
+                          endif
                           render 'main-collection-product-grid-promotion-tile', promo_block: promotion_tile_blocks[index_int], use_animate: use_animate
                         endif
                       endfor
                       assign used_ids = ids | join: ',' | append: ';' | prepend: index_key
                       assign promotion_tile_ids = promotion_tile_ids | replace: used_ids, ''
                     endif
-                   endif
+                  endif
                 -%}
                 <li class="grid__item">
-                  {%-liquid
+                  {%- liquid
                     assign no_lazy_load = false
                     if section.settings.preload_first_image and count_index == 1
                       assign no_lazy_load = true
@@ -242,8 +291,8 @@
                     assign use_animate = true
                     if count_index < 3
                       assign use_animate = false
-                    endif  
-                  -%} 
+                    endif
+                  -%}
                   {%- render 'card-product',
                     card_product: card_product,
                     media_aspect_ratio: section.settings.image_ratio,
@@ -264,7 +313,7 @@
                   -%}
                 </li>
               {%- endfor -%}
-              {%-liquid
+              {%- liquid
                 if promotion_tile_ids != ''
                   assign promo_groups = promotion_tile_ids | split: ';'
                   for group in promo_groups
@@ -276,7 +325,7 @@
                         assign use_animate = true
                         if count_index < 3
                           assign use_animate = false
-                        endif  
+                        endif
                         render 'main-collection-product-grid-promotion-tile', promo_block: promotion_tile_blocks[index_int], use_animate: use_animate
                       endif
                     endfor
@@ -297,35 +346,57 @@
                 {%- if paginate.next -%}
                   <div class="w100 flex justify-center">
                     {%- if section.settings.pagination_style == 'infinite' -%}
-                      <collection-infinite-button data-product-grid="product-grid" data-url="{{ paginate.next.url }}&section_id={{ section.id }}" data-loading-type="next" class="collection__loading-button">
+                      <collection-infinite-button
+                        data-product-grid="product-grid"
+                        data-url="{{ paginate.next.url }}&section_id={{ section.id }}"
+                        data-loading-type="next"
+                        class="collection__loading-button"
+                      >
                         {%- render 'icon-loading' -%}
                       </collection-infinite-button>
                     {%- else -%}
-                      <collection-load-more-button data-product-grid="product-grid" data-url="{{ paginate.next.url }}&section_id={{ section.id }}" data-loading-type="next" class="collection__loading-button button">
+                      <collection-load-more-button
+                        data-product-grid="product-grid"
+                        data-url="{{ paginate.next.url }}&section_id={{ section.id }}"
+                        data-loading-type="next"
+                        class="collection__loading-button button"
+                      >
                         <span>{{ 'general.pagination.load_more' | t }}</span>
-                      </collection-load-more-button>  
-                    {%- endif -%}  
+                      </collection-load-more-button>
+                    {%- endif -%}
                   </div>
                 {%- endif -%}
-              {%- endif -%}  
+              {%- endif -%}
             {%- endif -%}
           {%- endpaginate -%}
-        {%- else -%}  
+        {%- else -%}
           <div class="title-wrapper center">
             <h2 class="title title--primary">
-              {{ 'sections.collection_template.empty' | t }}<br>
-              {{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: "underlined-link link" }}
+              {{ 'sections.collection_template.empty' | t -}}
+              <br>
+              {{
+                'sections.collection_template.use_fewer_filters_html'
+                | t: link: collection.url, class: 'underlined-link link'
+              }}
             </h2>
           </div>
         {%- endif -%}
       </appear-animate-list>
     </div>
   </div>
-  {%- if section.settings.show_collection_description and section.settings.description_position == 'below' and collection.description != blank -%}
+  {%- if section.settings.show_collection_description
+    and section.settings.description_position == 'below'
+    and collection.description != blank
+  -%}
     <div class="page-width">
-      <truncate-text class="db collection__description element-margin-top"{% if section.settings.truncate_description == 0 %} data-ignore="true"{% endif %}>
+      <truncate-text
+        class="db collection__description element-margin-top"
+        {% if section.settings.truncate_description == 0 %}
+          data-ignore="true"
+        {% endif %}
+      >
         <div class="rte {{ section.settings.description_style }} {{ section.settings.description_alignment }}{% if section.settings.description_style == 'subtitle' %} subtitle--small{% endif %}{% if section.settings.truncate_description > 0 %} truncate-text truncate-text--has-button{% endif %}">
-          <div class="truncate-text__content-wrapper">  
+          <div class="truncate-text__content-wrapper">
             <div class="truncate-text__content rte">
               {{ collection.description }}
             </div>
@@ -333,7 +404,10 @@
         </div>
         {%- if section.settings.truncate_description > 0 -%}
           <div class="center truncate-text__button-wrapper element-small-margin-top por flex justify-center hidden overflow-hidden">
-            <button class="button button--medium button--truncate-text ignore-effect button--truncate-background-page" type="button">
+            <button
+              class="button button--medium button--truncate-text ignore-effect button--truncate-background-page"
+              type="button"
+            >
               {%- if section.settings.read_more_button != blank -%}
                 <span>{{ section.settings.read_more_button }}</span>
               {%- endif -%}
@@ -344,7 +418,7 @@
           </div>
         {%- endif -%}
       </truncate-text>
-    </div>  
+    </div>
     {%- if section.settings.truncate_description > 0 and request.design_mode == false -%}
       <script src="{{ 'truncate-text.js' | asset_url }}" defer="defer"></script>
       {{ 'component-truncate-text.css' | asset_url | stylesheet_tag }}
@@ -361,11 +435,11 @@
         --color-button-text: {{ promo_block.settings.colors_button_label.red }}, {{ promo_block.settings.colors_button_label.green }}, {{ promo_block.settings.colors_button_label.blue }};
         {%- if promo_block.settings.colors_overlay != blank and promo_block.settings.colors_overlay.alpha > 0 -%}
           --color-overlay: {{ promo_block.settings.colors_overlay.red }}, {{ promo_block.settings.colors_overlay.green }}, {{ promo_block.settings.colors_overlay.blue }};
-        {%- endif -%}  
+        {%- endif -%}
       }
     {%- endfor -%}
   {% endstyle %}
-{%- endif -%}  
+{%- endif -%}
 {%- if request.design_mode -%}
   <script src="{{ 'collection-infinite-more.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
