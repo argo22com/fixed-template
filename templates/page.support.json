@@ -315,25 +315,11 @@
           "settings": {
             "text": "<p>Kompletní zásilku odešlete na naši adresu. K adrese připište, zda se jedná o reklamaci či vratku. Zásilka se tak snáze dostane na příslušné oddělení.<strong><br/><br/>REKLAMACE / VRATKA<br/>FIXED.zone a.s.<br/>Budějovická 19<br/>370 01 Homole<br/><br/>Upozornění:<br/></strong>Náklady za dopravné při vrácení zboží nese odesílatel.<br/>Za dodání nového, či opravného zboží poštovné nehradíte.<br/>Prodejní doklad slouží také jako záruční list.<br/>Vrátit je možné pouze kompletní, nepoužívané a nepoškozené zboží.</p>"
           }
-        },
-        "button_KMJ6Jq": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_1": "primary",
-            "button_open_new_tab_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary",
-            "button_open_new_tab_2": false
-          }
         }
       },
       "block_order": [
         "heading_BAxhPH",
-        "text_EDAYnC",
-        "button_KMJ6Jq"
+        "text_EDAYnC"
       ],
       "settings": {
         "desktop_content_position": "left",
