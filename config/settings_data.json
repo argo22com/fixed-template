@@ -68,9 +68,7 @@
     "currency_code_enabled": false,
     "cart_type": "drawer",
     "free_shipping_threshold": "2000",
-    "free_shipping_exclude_products": [
-
-    ],
+    "free_shipping_exclude_products": [],
     "back_to_top_button_enable": true,
     "recently_viewed_enable": true,
     "recently_viewed_columns_desktop": 5,
@@ -100,8 +98,7 @@
         "blocks": {
           "5680e29a-1672-451b-acab-6b4f2c068892": {
             "type": "subtotal",
-            "settings": {
-            }
+            "settings": {}
           },
           "74e95a49-790a-40ea-af84-0a487b25dd72": {
             "type": "buttons",
@@ -121,9 +118,7 @@
           "show_cart_note": true,
           "show_shipping_calculator": true,
           "show_free_shipping_bar": true,
-          "recommended_collection_list": [
-
-          ],
+          "recommended_collection_list": [],
           "collection_card_show_title": true,
           "product_recommendations_enable": true,
           "product_recommendations_heading": "Doporučené produkty",
@@ -517,13 +512,11 @@
           "a1b786f5-359b-4a68-b141-00e8a969b62b",
           "2ef2c799-8499-4634-b227-96c14543b77d"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "predictive-search": {
         "type": "predictive-search",
-        "settings": {
-        }
+        "settings": {}
       },
       "cookies-banner": {
         "type": "cookies-banner",
@@ -573,8 +566,7 @@
           },
           "4305c2ed-5cf2-473e-9b95-b0e37e575c0f": {
             "type": "description",
-            "settings": {
-            }
+            "settings": {}
           }
         },
         "block_order": [
@@ -701,33 +693,27 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "14060646107696862457": {
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "319724205969189013": {
         "type": "shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "2127842402487706816": {
         "type": "shopify://apps/spurit-discount-reminder/blocks/app-embed/cbf22c2a-9546-45b8-8db5-60582288cfde",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "2102808784413787648": {
         "type": "shopify://apps/kb-back-in-stock/blocks/main-app-embed/147a6f7f-6771-4f9b-8dc6-c14e6b24f32c",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "7870687481494312845": {
         "type": "shopify://apps/wishlist-hero/blocks/app-embed/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
@@ -1086,7 +1072,8 @@
   "platform_customizations": {
     "custom_css": [
       "@media (max-width: 989px) {back-to-top.floating-element, .compare-button-floating.floating-element {display: none; }}",
-      "@media (min-width: 990px) {back-to-top {--floating-element-position: 7.5rem; }}"
+      "@media (min-width: 990px) {back-to-top {--floating-element-position: 7.5rem; }}",
+      "toast-message-manager {bottom: 7rem;}"
     ]
   }
 }
