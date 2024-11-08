@@ -811,8 +811,8 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Kde najdu manuál pro aplikaci FIXED Smart?",
-            "icon": "emoji_happy",
-            "row_content": "",
+            "icon": "download",
+            "row_content": "<p>Manuál pro aplikaci FIXED Smart najdete <a href=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/Manual_pro_FIXED_Smart.pdf?v=1731073449\" title=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/Manual_pro_FIXED_Smart.pdf?v=1731073449\"><strong>zde</strong></a>.</p>",
             "page": ""
           }
         }
