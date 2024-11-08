@@ -18,7 +18,7 @@
         "color_scheme": "",
         "padding_top": 80,
         "padding_bottom": 40,
-        "ul_li_marker": "#000"
+        "ul_li_marker": "#000000"
       }
     },
     "image_banner_aBk4NA": {
@@ -155,7 +155,7 @@
           "settings": {
             "heading": "Tracker se po určité době odpojí od telefonu, nebo se nepřipojí, když jsem v jeho blízkosti, jak to mohu vyřešit?",
             "icon": "arrow_right",
-            "row_content": "<p>Operační systém Android automaticky potlačuje aplikace běžící na pozadí, které mají nízkou aktivitu. To způsobí, že jakmile běží aplikace Smart na pozadí, je systémem deaktivována, následně trackery nefungují správně. Toto chování systému je možné vyřešit nastavením optimalizace přímo v telefonu.<br/>Návody pro správné nastavení systému naleznete zde:</p><ul><li><a href=\"https://www.fixed.zone/manual-pro-optimalizaci-baterie-u-telefonu-samsung\"><strong>SAMSUNG</strong></a></li><li><a href=\"https://www.fixed.zone/manual-pro-optimalizaci-baterie-u-telefonu-huawei/\"><strong>HUAWEI</strong></a></li><li><a href=\"https://www.fixed.zone/manual-pro-optimalizaci-baterie-u-telefonu-xiaomi/\"><strong>XIAOMI</strong></a></li></ul>",
+            "row_content": "<p>Operační systém Android automaticky potlačuje aplikace běžící na pozadí, které mají nízkou aktivitu. To způsobí, že jakmile běží aplikace Smart na pozadí, je systémem deaktivována, následně trackery nefungují správně. Toto chování systému je možné vyřešit nastavením optimalizace přímo v telefonu.<br/>Návody pro správné nastavení systému naleznete zde:</p><ul><li><a href=\"/pages/manual-pro-optimalizaci-baterie-u-telefonu-samsung\" title=\"Manuál pro optimalizaci baterie u telefonu SAMSUNG\"><strong>SAMSUNG</strong></a></li><li><a href=\"/pages/manual-pro-optimalizaci-baterie-u-telefonu-huawei\" title=\"Manuál pro optimalizaci baterie u telefonu HUAWEI\"><strong>HUAWEI</strong></a></li><li><a href=\"/pages/manual-pro-optimalizaci-baterie-u-telefonu-xiaomi\" title=\"Manuál pro optimalizaci baterie u telefonu XIAOMI\"><strong>XIAOMI</strong></a></li></ul>",
             "page": ""
           }
         },
