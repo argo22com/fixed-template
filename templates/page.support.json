@@ -332,17 +332,6 @@
         "padding_bottom": 0
       }
     },
-    "page_trCqk7": {
-      "type": "page",
-      "custom_css": [],
-      "settings": {
-        "page": "reklamace",
-        "heading_size": "h2",
-        "color_scheme": "background-2",
-        "padding_top": 16,
-        "padding_bottom": 20
-      }
-    },
     "rich_text_tgLq4X": {
       "type": "rich-text",
       "blocks": {
@@ -385,7 +374,6 @@
     "rich_text_K4iVcR",
     "rich_text_LWR7Gq",
     "rich_text_hW9aVe",
-    "page_trCqk7",
     "rich_text_tgLq4X"
   ]
 }
