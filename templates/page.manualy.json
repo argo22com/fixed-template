@@ -33,15 +33,6 @@
             "page": "manualy-nabijecky"
           }
         },
-        "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-0": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Hub",
-            "icon": "chart_pie",
-            "row_content": "",
-            "page": ""
-          }
-        },
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-1": {
           "type": "collapsible_row",
           "settings": {
@@ -86,16 +77,25 @@
             "row_content": "",
             "page": ""
           }
+        },
+        "collapsible_row_aBU4Lm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HUB",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "collapsible_row_jBhCpq",
-        "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-0",
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-1",
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-2",
         "collapsible_row_APEfXQ",
         "collapsible_row_V3Hmf7",
-        "collapsible_row_CRFY88"
+        "collapsible_row_CRFY88",
+        "collapsible_row_aBU4Lm"
       ],
       "settings": {
         "section_width": "grid",
