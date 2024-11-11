@@ -28,7 +28,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Nabíječky",
-            "icon": "fast_forward",
+            "icon": "emoji_happy",
             "row_content": "",
             "page": "manualy-nabijecky"
           }
@@ -37,7 +37,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Huby",
-            "icon": "dots_circle_horizontal",
+            "icon": "chart_pie",
             "row_content": "",
             "page": ""
           }
@@ -45,8 +45,8 @@
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Selfie tyče",
-            "icon": "film",
+            "heading": "Selfie",
+            "icon": "archive",
             "row_content": "",
             "page": ""
           }
@@ -55,7 +55,34 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Sluchátka",
-            "icon": "music_note",
+            "icon": "cog",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_APEfXQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Powerbanky",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_V3Hmf7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Stylusy",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_CRFY88": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Smart",
+            "icon": "emoji_happy",
             "row_content": "",
             "page": ""
           }
@@ -65,7 +92,10 @@
         "collapsible_row_jBhCpq",
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-0",
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-1",
-        "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-2"
+        "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-2",
+        "collapsible_row_APEfXQ",
+        "collapsible_row_V3Hmf7",
+        "collapsible_row_CRFY88"
       ],
       "settings": {
         "section_width": "grid",
