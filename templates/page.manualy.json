@@ -11,22 +11,32 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "section_width": "grid",
         "content_alignment": "left",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 0,
-        "ul_li_marker": "#000"
+        "ul_li_marker": "#000000"
       }
     },
     "394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1": {
       "type": "collapsible-content",
       "blocks": {
+        "collapsible_row_jBhCpq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Nabíječky",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-0": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Sportovní pouzdro na ruku FIXED Armband (FIXAB-BK)",
+            "heading": "Huby",
             "icon": "chart_pie",
             "row_content": "",
             "page": "faq-armband"
@@ -35,7 +45,7 @@
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Miniaturní microUSB OTG adaptér FIXED pro mobilní telefony a tablety s pouzdrem, USB 2.0, (FIXA-MTOAM-BK)",
+            "heading": "Selfie tyče",
             "icon": "archive",
             "row_content": "",
             "page": "faq-fixa-mtoam-bk"
@@ -44,7 +54,7 @@
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Silikonový držák mobilního telefonu na kolo FIXED Bikee (FIXBI-xx)",
+            "heading": "Sluchátka",
             "icon": "cog",
             "row_content": "",
             "page": "faq-fixbi-bk"
@@ -331,6 +341,7 @@
         }
       },
       "block_order": [
+        "collapsible_row_jBhCpq",
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-0",
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-1",
         "template--19260354068781__394933a3-c0dd-41e6-86d7-5c7a1cf8f6a1-16852004379e954f2f-2",
