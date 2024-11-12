@@ -27,14 +27,14 @@
         "heading_AbkTRp": {
           "type": "heading",
           "settings": {
-            "heading": "Ultraodolná skla Armor",
+            "heading": "FIXED pro Gaming",
             "size": "h1"
           }
         },
         "text_UDYABY": {
           "type": "text",
           "settings": {
-            "text": "<strong>Nejlepší a nejodolnější ochrana displeje na trhu.</strong>",
+            "text": "<strong>Doplňky pro herní konzole</strong>",
             "text_style": "subtitle"
           }
         }
@@ -45,8 +45,8 @@
       ],
       "settings": {
         "layout": "stretched_grid",
-        "image": "shopify://shop_images/armor_desktop.jpg",
-        "image_mobile": "shopify://shop_images/Armor_mobile.jpg",
+        "image": "shopify://shop_images/1B1A3156.jpg",
+        "image_mobile": "shopify://shop_images/1B1A3197.jpg",
         "image_overlay_opacity": 20,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
@@ -84,58 +84,36 @@
         "padding_bottom": 0
       }
     },
-    "image_with_text_rRBN9q": {
-      "type": "image-with-text",
+    "rich_text_tkEUfQ": {
+      "type": "rich-text",
       "blocks": {
-        "heading_Mf43cQ": {
+        "heading_NJPHdK": {
           "type": "heading",
           "settings": {
-            "heading": "Armor",
-            "heading_size": "h2",
-            "enable_bold_heading": true
+            "heading": "<p>Vylepši svůj zážitek z hraní</p>",
+            "heading_size": "h1"
           }
         },
-        "text_Rc9KRn": {
+        "text_eRtrjq": {
           "type": "text",
           "settings": {
-            "text": "<p>Produkty pod značkou Armor se vyznačují zvýšenou odolností, moderním a čistým designem za použití pokročilých technologických procesů a prémiových materiálů. Jsou to produkty s vysokými standardy pro funkčnost bez kompromisů.</p>",
-            "text_style": "body"
+            "text": "<p>S FIXED doplňky pro herní konzole budou tvoje ovladače už vždycky nabité a připravené na herní odpoledne, využij chladící dokovací stanice a s LED podsvícením se stane konzole luxusním doplňkem televizního stolku. </p>"
           }
         }
       },
       "block_order": [
-        "heading_Mf43cQ",
-        "text_Rc9KRn"
+        "heading_NJPHdK",
+        "text_eRtrjq"
       ],
       "settings": {
-        "grid_layout": "grid",
-        "image": "shopify://shop_images/armo-rgb_5342e53c-627a-4328-aa69-1e5076503540.png",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#000000",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "image_with_text_h7EAQW": {
@@ -144,7 +122,7 @@
         "heading_TJjMV3": {
           "type": "heading",
           "settings": {
-            "heading": "Ultraodolnost díky vysoké pružnosti",
+            "heading": "Doplňky pro PlayStation 5",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -152,18 +130,28 @@
         "text_FgxdBE": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Extrémně vysoká pevnost skla – až 3× vyšší než u běžných skel​</li><li>O 30 % vyšší pružnost, která absorbuje případné nárazy a  odolává téměř všem běžným pádům​</li><li>Parametry testovány ve FIXED</li></ul>",
+            "text": "<ul><li></li></ul>",
             "text_style": "body"
+          }
+        },
+        "button_TdRTni": {
+          "type": "button",
+          "settings": {
+            "button_label": "Přejít na produkty",
+            "button_link": "shopify://collections/herni-prislusenstvi",
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_TJjMV3",
-        "text_FgxdBE"
+        "text_FgxdBE",
+        "button_TdRTni"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/armor_pruznost.jpg",
+        "image": "shopify://shop_images/1B1A3201.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -183,7 +171,7 @@
         "color_countdown": "#000000",
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
@@ -696,7 +684,7 @@
   "order": [
     "main",
     "image_banner_7GGLw8",
-    "image_with_text_rRBN9q",
+    "rich_text_tkEUfQ",
     "image_with_text_h7EAQW",
     "image_with_text_x39Mgh",
     "image_with_text_bXVgiV",
