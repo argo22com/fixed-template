@@ -250,7 +250,7 @@
         "heading_HKnxPM": {
           "type": "heading",
           "settings": {
-            "heading": "Antidust aplikátor",
+            "heading": "Sluchátka Game Pods",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -258,18 +258,28 @@
         "text_Bn9ejK": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Aplikátor druhé generace pro dokonale přesné umístění skla Armor na displej​</li><li>Antidust fólie pro snadné a dokonalé odstranění všech částeček prachu​</li><li>Výsledkem je perfektně nalepené sklo bez vzduchových bublin za méně než minutu</li></ul>",
+            "text": "<ul><li></li></ul>",
             "text_style": "body"
+          }
+        },
+        "button_MJaWxq": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zjistit více",
+            "button_link": "shopify://products/bezdratova-herni-tws-sluchatka-fixed-game-pods-s-radiofrekvencnim-pripojenim-bila",
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_HKnxPM",
-        "text_Bn9ejK"
+        "text_Bn9ejK",
+        "button_MJaWxq"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/armor_antidust.jpg",
+        "image": "shopify://shop_images/FIXPDS-G-LS3.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -289,7 +299,7 @@
         "color_countdown": "#000000",
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
