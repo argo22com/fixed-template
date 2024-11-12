@@ -351,7 +351,7 @@
             "image": "shopify://shop_images/HG-Logo_Heureka-Color-2-1024x411_393073c7-270f-456e-a48a-3d006232d357.png",
             "icon": "shopping_bag",
             "title": "Nakoupit u partnerů",
-            "text": "<p>Sklo Armor je dostupné u široké škály partnerů, stačí si vybrat svůj oblíbený e-shop  na Heurece.</p>",
+            "text": "<p>Nakupte herní příslušenství ve svém oblíbeném e-shopu.</p>",
             "link_label": "Přejít na Heureku",
             "link": "https://tvrzena-skla-pro-mobilni-telefony.heureka.cz/f:22672:7689291;40862:1/",
             "button_style": "solid",
@@ -369,9 +369,9 @@
             "image": "shopify://shop_images/Logo-FIXED-modra-RGB_d7481ded-02ac-42d4-a057-fb318da3a757.jpg",
             "icon": "shopping_cart",
             "title": "Nakoupit v e-shopu FIXED",
-            "text": "<p>Všechny varianty skla Armor jsou dostupné v našem e-shopu, stačí si vybrat model telefonu.</p>",
+            "text": "<p>Všechny produkty jsou dostupné na e-shopu FIXED.</p>",
             "link_label": "Přejít na produkty",
-            "link": "https://fixed-zone-shop.myshopify.com/collections/skla-armor/products/ultra-odolne-tvrzene-sklo-fixed-armor-s-anti-dust-aplikatorem-a-ar-vrstvou-pro-apple-iphone-15-pro-cerne",
+            "link": "shopify://collections/herni-prislusenstvi",
             "button_style": "solid",
             "button_open_new_tab": true,
             "card_color_text": "#000000",
@@ -427,10 +427,10 @@
           "settings": {
             "title": "",
             "product_list": [
-              "ultra-odolne-tvrzene-sklo-fixed-armor-s-anti-dust-aplikatorem-a-ar-vrstvou-pro-apple-iphone-15-pro-cerne",
-              "premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-apple-watch-ultra-49mm-ultra-2-49mm-cerne",
-              "premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-samsung-galaxy-a54-5g-cerne",
-              "premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-apple-iphone-7-8-se-2020-2022-cerne"
+              "dobijeci-stanice-fixed-pro-dva-bezdratove-ovladace-xbox-series-s-x-a-one-cerna",
+              "multifunkcni-stanice-fixed-pro-playstation-5-slim-s-vetraky-a-nabijenim-pro-dva-ovladace-dualsense-cerno-bila",
+              "stojanek-fixed-pro-playstation-5-a-5-slim-s-rgb-led-podsvicenim-bily",
+              "nabijeci-stanice-fixed-pro-playstation-portal-bila"
             ],
             "products_to_show": 4,
             "columns_desktop": 4
@@ -441,7 +441,7 @@
         "featured_products_CX9Rfz"
       ],
       "settings": {
-        "title": "",
+        "title": "Vyber si příslušenství pro svou konzoli",
         "subtitle": "",
         "heading_size": "h1",
         "full_width": false,
