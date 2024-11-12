@@ -186,7 +186,7 @@
         "heading_J8hx6t": {
           "type": "heading",
           "settings": {
-            "heading": "Antireflexní vrstva",
+            "heading": "Doplňky pro Xbox",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -194,18 +194,28 @@
         "text_PQARFT": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Nejvyšší propustnost světla na trhu – více než 94 % – zajistí významný pozitivní rozdíl v čitelnosti displeje​</li><li>Antireflexní vrstva zlepšuje čitelnost displeje, zejména na slunci nebo pod umělým osvětlením</li><li>Parametry testovány ve FIXED</li></ul>",
+            "text": "<ul><li></li></ul>",
             "text_style": "body"
+          }
+        },
+        "button_6af4K8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Přejít na produkty",
+            "button_link": "shopify://collections/herni-prislusenstvi",
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_J8hx6t",
-        "text_PQARFT"
+        "text_PQARFT",
+        "button_6af4K8"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/armor_antireflex.png",
+        "image": "shopify://shop_images/FIXXB-MCS-WH_LS4_947a70b8-4c2a-4ffe-9ef5-c497a7681471.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -302,7 +312,7 @@
         "enable_desktop_slider": false,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "image": "shopify://shop_images/armor_7f57e654-bc50-4751-916f-8e30177dc31a.jpg",
+        "image": "shopify://shop_images/FIXXB-MCS-BK_LS3.jpg",
         "image_position_desktop": "right",
         "image_height": "adapt_product_list",
         "image_height_mobile": "34",
