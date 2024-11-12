@@ -97,7 +97,7 @@
         "text_eRtrjq": {
           "type": "text",
           "settings": {
-            "text": "<p>S FIXED doplňky pro herní konzole budou tvoje ovladače už vždycky nabité a připravené na herní odpoledne, využij chladící dokovací stanice a s LED podsvícením se stane konzole luxusním doplňkem televizního stolku. </p>"
+            "text": "<p>S FIXED doplňky pro herní konzole budou tvoje ovladače už vždycky nabité a připravené na herní maraton, využij chladící dokovací stanice a s LED podsvícením se stane konzole luxusním doplňkem televizního stolku. </p>"
           }
         }
       },
@@ -140,7 +140,7 @@
             "button_label": "Přejít na produkty",
             "button_link": "shopify://collections/herni-prislusenstvi",
             "button_style": "solid",
-            "button_open_new_tab": false
+            "button_open_new_tab": true
           }
         }
       },
