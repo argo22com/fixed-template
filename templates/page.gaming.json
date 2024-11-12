@@ -291,9 +291,9 @@
     "featured_collection_Jbdayq": {
       "type": "featured-collection",
       "settings": {
-        "title": "Top produkty Armor",
+        "title": "Top produkty Gaming",
         "subtitle": "",
-        "collection": "skla-armor",
+        "collection": "herni-prislusenstvi",
         "heading_size": "h1",
         "products_to_show": 3,
         "columns_desktop": 3,
@@ -399,243 +399,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_akQrQY": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_9RkAxL": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Testování odolnosti skel</p>",
-            "heading_size": "h1"
-          }
-        },
-        "text_W7e6H9": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Abychom si byli kvalitou ochrany jisti, každý aspekt pečlivě testujeme.</p><p>Testujeme odolnost skla, ale i uživatelský zážitek.</p><p>Testů odolnosti existuje několik:</p><ul><li>Odolnost vůči pádu na plochu skla – pád ocelové kuličky o váze 64 g na samotné sklo</li><li>Odolnost proti poškrábání – rydly různé tvrdosti se zjišťuje tvrdost skla na Mohsově stupnici odolnosti</li><li>Odolnost hrany – dopad hrany skla na ostrou špičku</li></ul><p></p><p>Testy pro vylepšení uživatelského zážitku:</p><ul><li>Test propustnosti světla – ovlivňuje zejména dobrou viditelnost displeje pod ochranným sklem</li><li>Mikroskopický test na kapce destilované vody – takto se testuje oleofobní vrstva, která napomáhá hladkému skluzu po skle a redukuje vznik otisků prstů</li><li>Analýza obsahu příslušenství v balení – jednoduchá aplikace skla na telefon</li></ul><p></p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_9RkAxL",
-        "text_W7e6H9"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "left",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "page_xWFHVt": {
-      "type": "page",
-      "settings": {
-        "page": "test-armor-skla",
-        "heading_size": "h2",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 20
-      }
-    },
-    "banner_grid_nNa8c6": {
-      "type": "banner-grid",
-      "blocks": {
-        "promotion_banner_gDQmxf": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/armor_test_1_9a19c26f-07bf-4d44-9b21-235ec376b907.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h2",
-            "text": "",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 1,
-            "desktop_content_position": "bottom-left",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#ffffff"
-          }
-        },
-        "promotion_banner_gnJjAA": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/armor_test_2_ba1ab71a-2a27-40a1-b691-7734593e65c1.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "text": "",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 2,
-            "desktop_content_position": "middle-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#ffffff"
-          }
-        },
-        "promotion_banner_pMHtCL": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/armor_test_4_8c1c2947-e0c6-452e-8301-37e8cfcfffaf.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "text": "",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 2,
-            "desktop_content_position": "middle-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#ffffff"
-          }
-        },
-        "promotion_banner_469axj": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/armor_test_7.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "text": "",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 2,
-            "desktop_content_position": "middle-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#ffffff"
-          }
-        },
-        "promotion_banner_Ek9Vxr": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/armor_test_3_fc44549f-1228-43a0-94f0-361bb8f596ca.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "text": "",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 1,
-            "desktop_content_position": "middle-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "promotion_banner_gDQmxf",
-        "promotion_banner_gnJjAA",
-        "promotion_banner_pMHtCL",
-        "promotion_banner_469axj",
-        "promotion_banner_Ek9Vxr"
-      ],
-      "settings": {
-        "layout": "grid",
-        "desktop_row_height": 30,
-        "desktop_gap": 30,
-        "mobile_gap": 10,
-        "hide_when_empty_content": true,
-        "enable_section_box_layout": false,
-        "media_border_thickness": 1,
-        "media_border_opacity": 5,
-        "media_radius": 15,
-        "enable_shadow": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video_jrq3tR": {
-      "type": "video",
-      "settings": {
-        "title": "Mrkni na video o tom, jak skla testujeme",
-        "subtitle": "",
-        "heading_size": "h1",
-        "video_url": "https://www.youtube.com/watch?v=qZwXh7jjxJE&t",
-        "description": "",
-        "autoplay": false,
-        "enable_controls": false,
-        "enable_video_looping": true,
-        "full_width": false,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "featured_products_tabs_AyhByH": {
       "type": "featured-products-tabs",
       "blocks": {
@@ -658,7 +421,7 @@
         "featured_products_CX9Rfz"
       ],
       "settings": {
-        "title": "Vyberte si sklo pro své zařízení",
+        "title": "",
         "subtitle": "",
         "heading_size": "h1",
         "full_width": false,
@@ -690,10 +453,6 @@
     "image_with_text_bXVgiV",
     "featured_collection_Jbdayq",
     "multicolumn_XKCb7x",
-    "rich_text_akQrQY",
-    "page_xWFHVt",
-    "banner_grid_nNa8c6",
-    "video_jrq3tR",
     "featured_products_tabs_AyhByH"
   ]
 }
