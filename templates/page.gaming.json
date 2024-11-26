@@ -422,7 +422,7 @@
     "featured_blog_jrhext": {
       "type": "featured-blog",
       "settings": {
-        "title": "Čtěte náš blog",
+        "title": "Přečti si novinky u nás na blogu",
         "heading_size": "h1",
         "blog": "news",
         "post_limit": 3,
