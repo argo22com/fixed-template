@@ -130,7 +130,7 @@
         "text_FgxdBE": {
           "type": "text",
           "settings": {
-            "text": "<p>Uspořádej si veškeré příslušenství k PlayStation 5 nebo PlayStation 5 Slim s multifunkční dokovací stanicí a měj ovladače DualSlim vždy nabité a připravené k akci. Nebo si užij hru na dálku se vždy nabitým PlayStation Portal.</p>",
+            "text": "<p>Uspořádej si veškeré příslušenství k PlayStation 5 nebo PlayStation 5 Slim s multifunkční dokovací stanicí a měj ovladače DualSlim vždy nabité a připravené k akci. <br/>Nebo si užij hru na dálku se vždy nabitým PlayStation Portal.</p>",
             "text_style": "body"
           }
         },
