@@ -138,7 +138,7 @@
           "type": "button",
           "settings": {
             "button_label": "Přejít na produkty",
-            "button_link": "shopify://collections/herni-prislusenstvi",
+            "button_link": "shopify://collections/playstation",
             "button_style": "solid",
             "button_open_new_tab": true
           }
