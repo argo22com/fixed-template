@@ -34,7 +34,7 @@
         "text_UDYABY": {
           "type": "text",
           "settings": {
-            "text": "Objev příslušenství pro herní konzole Playstation 5, Playstation Portal a Xbox nebo herní sluchátka Game Pods",
+            "text": "Objev příslušenství pro herní konzole Playstation 5, Playstation Portal                                                    a Xbox nebo herní sluchátka Game Pods",
             "text_style": "subtitle"
           }
         }
@@ -45,9 +45,9 @@
       ],
       "settings": {
         "layout": "stretched_grid",
-        "image": "shopify://shop_images/1B1A3156.jpg",
+        "image": "shopify://shop_images/1B1A2868.jpg",
         "image_mobile": "shopify://shop_images/1B1A3197.jpg",
-        "image_overlay_opacity": 20,
+        "image_overlay_opacity": 40,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
         "desktop_content_position": "bottom-left",
