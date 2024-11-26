@@ -419,6 +419,27 @@
         "padding_bottom": 36
       }
     },
+    "featured_blog_jrhext": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "Čtěte náš blog",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "image_height": "medium",
+        "show_view_all": true,
+        "columns_desktop": 3,
+        "enable_section_box_layout": true,
+        "color_scheme": "",
+        "blog_card_text_alignment": "left",
+        "blog_card_color_scheme": "",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_products_tabs_AyhByH": {
       "type": "featured-products-tabs",
       "blocks": {
@@ -440,6 +461,7 @@
       "block_order": [
         "featured_products_CX9Rfz"
       ],
+      "disabled": true,
       "settings": {
         "title": "Vyber si příslušenství pro svou konzoli",
         "subtitle": "",
@@ -473,6 +495,7 @@
     "image_with_text_bXVgiV",
     "featured_collection_Jbdayq",
     "multicolumn_XKCb7x",
+    "featured_blog_jrhext",
     "featured_products_tabs_AyhByH"
   ]
 }
