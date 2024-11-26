@@ -186,7 +186,7 @@
         "heading_J8hx6t": {
           "type": "heading",
           "settings": {
-            "heading": "Doplňky pro Xbox",
+            "heading": "Xbox S/X Series",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -194,7 +194,7 @@
         "text_PQARFT": {
           "type": "text",
           "settings": {
-            "text": "<ul><li></li></ul>",
+            "text": "<p>Multifunkční stanice zajistí odvětrání konzole Xbox, nabije ovladače, najde místo pro odložení sluchátek a doladí atmosféru LED podsvícením. A pokud potřebuješ nabíjet jen ovladače, je tu praktický dok, kde nabiješ dva zároveň.</p>",
             "text_style": "body"
           }
         },
@@ -202,7 +202,7 @@
           "type": "button",
           "settings": {
             "button_label": "Přejít na produkty",
-            "button_link": "shopify://collections/herni-prislusenstvi",
+            "button_link": "shopify://collections/xbox",
             "button_style": "solid",
             "button_open_new_tab": false
           }
