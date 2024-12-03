@@ -238,20 +238,20 @@
         "heading_MyCfVd": {
           "type": "heading",
           "settings": {
-            "heading": "<h4><strong>1. Vratný formulář</strong></h4>",
+            "heading": "<h4><strong>1. Vratný formulář</strong></h4><h5><strong>Reklamace zboží zakoupeného do 11. 10. 2024</strong></h5>",
             "heading_size": "h1"
           }
         },
         "text_Yg7AmB": {
           "type": "text",
           "settings": {
-            "text": "<p>Pro reklamaci produktů zakoupených před <strong>11. 10. 2024 </strong>klikněte na tlačítko níže a dále postupujte podle instrukcí.</p><p>Pokud chcete reklamovat produkty z objednávky po tomto datu nebo pokud svou objednávku v systému nenajdete, kontaktujte prosím naši podporu skrze online chat na této stránce. </p><p></p><p>Kolegové s vámi rádi situaci vyřídí.</p>"
+            "text": "<p>Pro reklamaci produktů zakoupených před <strong>11. 10. 2024 </strong>klikněte na modré tlačítko níže a dále postupujte podle instrukcí.</p><p>(Modré tlačítko \"Reklamovat  starší objednávky\")</p>"
           }
         },
         "button_ppAb4r": {
           "type": "button",
           "settings": {
-            "button_label": "Reklamační formulář",
+            "button_label": "Reklamovat starší objednávky",
             "button_link": "https://old.fixed.zone/reklamace-vraceni/",
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
@@ -272,10 +272,56 @@
         "desktop_content_width": "large",
         "content_alignment": "left",
         "enable_section_box_layout": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-23f306a8-68ab-4175-b71b-505bbda9b2ac",
         "full_width": true,
         "padding_top": 32,
         "padding_bottom": 0
+      }
+    },
+    "rich_text_q3wxrf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CzR4jd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h5><strong>Reklamace zboží zakoupeného od 12. 10. 2024</strong></h5>",
+            "heading_size": "h1"
+          }
+        },
+        "text_cBYEwN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pro reklamaci produktů z objednávek po <strong>12. 10. 2024</strong>, klikněte na oranžové tlačítko níže a dále postupujte podle instrukcí.</p><p>(Oranžové tlačítko \"Reklamovat nebo vrátit zboží\")</p><p>Pokud máte ohledně reklamace dotazy, neváhejte nás kontaktovat třeba do online chatu v levém dolním rohu obrazovky. Kolegové Vám rádi pomohou.</p>"
+          }
+        },
+        "button_n7crNV": {
+          "type": "button",
+          "settings": {
+            "button_label": "Reklamovat nebo vrátit zboží",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CzR4jd",
+        "text_cBYEwN",
+        "button_n7crNV"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "desktop_content_width": "large",
+        "content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_LWR7Gq": {
@@ -382,6 +428,7 @@
     "collapsible_content_6mYWW4",
     "rich_text_pEzQib",
     "rich_text_K4iVcR",
+    "rich_text_q3wxrf",
     "rich_text_LWR7Gq",
     "rich_text_hW9aVe",
     "rich_text_tgLq4X"
