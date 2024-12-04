@@ -81,8 +81,10 @@
                     endfor
                   endif
                 -%}
+              {% else %}
+                {% assign display_value = value.label %}
               {%- endif -%}
-              {{ display_value | default: value.label | escape }}
+              {{ display_value | escape }}
             </span>
             {%- render 'icon-close', icon_width: 12 -%}
             <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
