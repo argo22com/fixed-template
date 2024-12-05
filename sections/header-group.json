@@ -271,6 +271,7 @@
         },
         "mega_menu_promotion_9HJwDd": {
           "type": "mega_menu_promotion",
+          "disabled": true,
           "settings": {
             "trigger": "Blog",
             "title": "Vegan kůže",
@@ -291,6 +292,27 @@
           }
         },
         "mega_menu_promotion_ya4VNA": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Blog",
+            "title": "Gaming",
+            "image": "shopify://shop_images/1B1A3334.jpg",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "Jak vylepšit zážitek z hraní?",
+            "subheading": "Přečti si novinky o našem příslušenství pro hráče.",
+            "button_label": "číst",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "https://fixed.zone/blogs/news/co-te-vzdy-zajimalo-o-technologii-magsafe-ale-bal-ses-zeptat",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_fBdRTY": {
           "type": "mega_menu_promotion",
           "settings": {
             "trigger": "Blog",
@@ -368,6 +390,7 @@
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "mega_menu_promotion_9HJwDd",
         "mega_menu_promotion_ya4VNA",
+        "mega_menu_promotion_fBdRTY",
         "mega_menu_promotion_TLTfPK",
         "mega_menu_promotion_LL7tjW"
       ],
