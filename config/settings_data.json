@@ -870,12 +870,12 @@
       },
       "scheme-bcfa08f7-5852-4351-8180-ec2418e795ce": {
         "settings": {
-          "text": "#000000",
+          "text": "#fff",
           "sale_off_price": "#e94200",
           "compare_at_price": "#16a34a",
-          "background": "#ffffff",
+          "background": "#e94200",
           "gradient_background": "",
-          "background_input": "#f9f9f9",
+          "background_input": "#fff",
           "solid_button_label_primary": "#ffffff",
           "solid_button_background_primary": "#00a9e0",
           "review_stars": "#fbbf24",

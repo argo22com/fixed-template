@@ -442,9 +442,38 @@
         "enable_transparent_homepage": false,
         "text_color_transparent": "#ffffff"
       }
+    },
+    "announcement_bar_prdjQa": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_7rdmrh": {
+          "type": "announcement",
+          "settings": {
+            "text": "Pro doručení produktů do Vánoc doporučujeme objednat nejpozději 17. 12. 2024",
+            "link": ""
+          }
+        },
+        "announcement_QTYLrD": {
+          "type": "announcement",
+          "settings": {
+            "text": "FIXED.zone Vám přeje krásné Vánoce!",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_7rdmrh",
+        "announcement_QTYLrD"
+      ],
+      "settings": {
+        "auto_rotate": true,
+        "change_slides_speed": 7,
+        "color_scheme": "scheme-bcfa08f7-5852-4351-8180-ec2418e795ce"
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "announcement_bar_prdjQa"
   ]
 }
