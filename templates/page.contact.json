@@ -217,9 +217,9 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "title": "FIXED.zone",
+        "title": "Sídlo společnosti",
         "heading_size": "h2",
-        "description": "<p>Budějovická 19, </p>",
+        "description": "",
         "badge": "",
         "image": "shopify://shop_images/FIXED_SIDLO.jpg",
         "overlapping_content_layout": true,
