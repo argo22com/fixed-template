@@ -255,11 +255,19 @@
           "settings": {
             "title": "Sledujte nás"
           }
+        },
+        "custom_text_WV4P8n": {
+          "type": "custom_text",
+          "settings": {
+            "title": "FIXED Services s.r.o.",
+            "content": "<p>Obchodní společnosti<strong> FIXED Services s.r.o.</strong> IČO 098 07 420, se sídlem Budějovická 19, 370 01 Homole, zapsané v obchodním rejstříku vedeném Krajským soudem v Českých Budějovicích, oddíl C, vložka 30586 pro prodej zboží prostřednictvím online obchodu umístěného na internetové adrese <a href=\"http://www.intercom.zone/\" target=\"_blank\" title=\"Intercom.zone\">www.fixed.zone</a></p>"
+          }
         }
       },
       "block_order": [
         "c9e382bc-285f-41fc-a753-956539360c7f",
-        "c17536c2-bac0-4885-834f-6f3efc3850fa"
+        "c17536c2-bac0-4885-834f-6f3efc3850fa",
+        "custom_text_WV4P8n"
       ],
       "settings": {
         "title": "Kontakt",
