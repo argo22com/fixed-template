@@ -242,6 +242,7 @@
       "blocks": {
         "c9e382bc-285f-41fc-a753-956539360c7f": {
           "type": "address",
+          "disabled": true,
           "settings": {
             "name": "Zákaznická podpora",
             "phone": " + 420 385 510 206",
