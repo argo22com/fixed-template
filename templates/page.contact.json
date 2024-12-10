@@ -198,28 +198,28 @@
     "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f": {
       "type": "maps",
       "blocks": {
-        "template--18627972956461__882ae9d2-b3e9-4bb3-b7c2-a3083565f24f-16855376465a7fd714-1": {
-          "type": "working_time",
-          "settings": {
-            "title": "po - pá 8:00 – 16:00"
-          }
-        },
         "c580f205-257a-41c7-9377-71176d742903": {
           "type": "physical_address",
           "settings": {
             "title": "Budějovická 19, 370 01 Homole"
           }
+        },
+        "template--18627972956461__882ae9d2-b3e9-4bb3-b7c2-a3083565f24f-16855376465a7fd714-1": {
+          "type": "working_time",
+          "settings": {
+            "title": "po - pá 8:00 – 16:00"
+          }
         }
       },
       "block_order": [
-        "template--18627972956461__882ae9d2-b3e9-4bb3-b7c2-a3083565f24f-16855376465a7fd714-1",
-        "c580f205-257a-41c7-9377-71176d742903"
+        "c580f205-257a-41c7-9377-71176d742903",
+        "template--18627972956461__882ae9d2-b3e9-4bb3-b7c2-a3083565f24f-16855376465a7fd714-1"
       ],
       "settings": {
         "layout": "full_bleed",
-        "title": "Sídlo společnosti",
+        "title": "FIXED.zone",
         "heading_size": "h2",
-        "description": "",
+        "description": "<p>Budějovická 19, </p>",
         "badge": "",
         "image": "shopify://shop_images/FIXED_SIDLO.jpg",
         "overlapping_content_layout": true,
