@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -35,7 +44,7 @@
       ],
       "settings": {
         "layout": "grid",
-        "image": "shopify:\/\/shop_images\/OXFORD.jpg",
+        "image": "shopify://shop_images/OXFORD.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
@@ -80,7 +89,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/manufacturebox01.png",
+            "custom_icon": "shopify://shop_images/manufacturebox01.png",
             "title": "",
             "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
             "link": "",
@@ -91,7 +100,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/top-grain-1.png",
+            "custom_icon": "shopify://shop_images/top-grain-1.png",
             "title": "",
             "subheading": "Na výběru kůže záleží, proto máme jen tu nejlepší od italských dodavatelů.",
             "link": "",
@@ -102,7 +111,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/natural-material.png",
+            "custom_icon": "shopify://shop_images/natural-material.png",
             "title": "",
             "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
             "link": "",
@@ -149,7 +158,7 @@
         "heading_Mm7XYt": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>V JEDNODUCHOSTI JE KRÁSA<\/strong><\/h3>",
+            "heading": "<h3><strong>V JEDNODUCHOSTI JE KRÁSA</strong></h3>",
             "heading_size": "h2"
           }
         }
@@ -174,7 +183,7 @@
         "text_overlay_image_Mkkd46": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Oxford1.jpg",
+            "image": "shopify://shop_images/Oxford1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -200,7 +209,7 @@
         "text_overlay_image_HwxYBK": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/oxford4.jpg",
+            "image": "shopify://shop_images/oxford4.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -226,7 +235,7 @@
         "text_overlay_image_gYAfpE": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/oxford2.jpg",
+            "image": "shopify://shop_images/oxford2.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -252,7 +261,7 @@
         "text_overlay_image_bqxP4Q": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/oxford3.jpg",
+            "image": "shopify://shop_images/oxford3.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -306,7 +315,7 @@
         "text_TChkMN": {
           "type": "text",
           "settings": {
-            "text": "<p>Zavírání na silné magnety, komplexní ochrana vašeho zařízení s dlouholetou výdrží.<\/p>"
+            "text": "<p>Zavírání na silné magnety, komplexní ochrana vašeho zařízení s dlouholetou výdrží.</p>"
           }
         },
         "button_DmicHy": {
@@ -433,7 +442,7 @@
         "text_LgN74N": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.<\/li><li>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.<\/li><li>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.<\/li><\/ul>",
+            "text": "<ul><li>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.</li><li>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.</li><li>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.</li></ul>",
             "text_style": "body"
           }
         },
@@ -453,7 +462,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/oxford_brown.jpg",
+        "image": "shopify://shop_images/oxford_brown.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -495,7 +504,7 @@
         "text_XpH7fj": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu<\/li><li>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci<\/li><li>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.<\/li><li>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.<\/li><\/ul>",
+            "text": "<ul><li>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu</li><li>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci</li><li>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.</li><li>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.</li></ul>",
             "text_style": "body"
           }
         },
@@ -515,7 +524,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/oxford4.jpg",
+        "image": "shopify://shop_images/oxford4.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -555,7 +564,7 @@
               "horizontalni-kozene-pouzdro-fixed-posh-se-zaviranim-velikost-5xl-hnede",
               "horizontalni-kozene-pouzdro-fixed-posh-se-zaviranim-velikost-5xl-cervene",
               "kozene-pouzdro-fixed-oxford-pro-apple-ipad-9-7-2016-2017-2018-ipad-air-ipad-air-2-ipad-pro-9-7-2016-cerne",
-              "kozene-pouzdro-fixed-posh-velikost-3xl-hnede"
+              "kozene-pouzdro-fixed-posh-hnede"
             ],
             "products_to_show": 6,
             "columns_desktop": 3
@@ -565,9 +574,7 @@
           "type": "featured_products",
           "settings": {
             "title": "Featured products",
-            "product_list": [
-
-            ],
+            "product_list": [],
             "products_to_show": 4,
             "columns_desktop": 4
           }
@@ -606,8 +613,8 @@
         "title": "Péče o kůži",
         "subtitle": "",
         "heading_size": "h2",
-        "cover_image": "shopify:\/\/shop_images\/oxford_video.jpg",
-        "video_url": "https:\/\/youtu.be\/EtSwUKtAff4",
+        "cover_image": "shopify://shop_images/oxford_video.jpg",
+        "video_url": "https://youtu.be/EtSwUKtAff4",
         "description": "FIXED ruční výroba v Prostějově",
         "autoplay": false,
         "enable_controls": false,
