@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -44,7 +44,7 @@
       ],
       "settings": {
         "layout": "grid",
-        "image": "shopify:\/\/shop_images\/OXFORD.jpg",
+        "image": "shopify://shop_images/OXFORD.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
@@ -89,7 +89,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/manufacturebox01.png",
+            "custom_icon": "shopify://shop_images/manufacturebox01.png",
             "title": "",
             "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
             "link": "",
@@ -100,7 +100,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/top-grain-1.png",
+            "custom_icon": "shopify://shop_images/top-grain-1.png",
             "title": "",
             "subheading": "Na výběru kůže záleží, proto máme jen tu nejlepší od italských dodavatelů.",
             "link": "",
@@ -111,7 +111,7 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/natural-material.png",
+            "custom_icon": "shopify://shop_images/natural-material.png",
             "title": "",
             "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
             "link": "",
@@ -158,7 +158,7 @@
         "text_overlay_image_Mkkd46": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Oxford1.jpg",
+            "image": "shopify://shop_images/Oxford1.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -184,7 +184,7 @@
         "text_overlay_image_HwxYBK": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/oxford4.jpg",
+            "image": "shopify://shop_images/oxford4.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -210,7 +210,7 @@
         "text_overlay_image_gYAfpE": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/oxford2.jpg",
+            "image": "shopify://shop_images/oxford2.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -236,7 +236,7 @@
         "text_overlay_image_bqxP4Q": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/oxford3.jpg",
+            "image": "shopify://shop_images/oxford3.jpg",
             "link": "",
             "keep_ltr": false,
             "text": "",
@@ -262,7 +262,7 @@
         "text_AHVB8k": {
           "type": "text",
           "settings": {
-            "text": "<p>Zavírání na silné magnety, komplexní ochrana vašeho zařízení s dlouholetou výdrží.<\/p>",
+            "text": "<p>Zavírání na silné magnety, komplexní ochrana vašeho zařízení s dlouholetou výdrží.</p>",
             "text_alignment": "center",
             "padding_top": 40,
             "padding_bottom": 28
@@ -379,7 +379,7 @@
         "text_LgN74N": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.<\/li><li>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.<\/li><li>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.<\/li><\/ul>",
+            "text": "<ul><li>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.</li><li>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.</li><li>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.</li></ul>",
             "text_style": "body"
           }
         },
@@ -400,7 +400,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/oxford_brown.jpg",
+        "image": "shopify://shop_images/oxford_brown.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -443,7 +443,7 @@
         "text_XpH7fj": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu<\/li><li>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci<\/li><li>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.<\/li><li>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.<\/li><\/ul>",
+            "text": "<ul><li>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu</li><li>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci</li><li>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.</li><li>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.</li></ul>",
             "text_style": "body"
           }
         },
@@ -464,7 +464,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/oxford4.jpg",
+        "image": "shopify://shop_images/oxford4.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -507,7 +507,7 @@
         "text_Vrjfjq": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an video to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an video to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         },
@@ -528,9 +528,9 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "cover_image": "shopify:\/\/shop_images\/img_c2ce26b3-5306-4da9-9df6-6018b68fede0.jpg",
-        "video_hosted": "shopify:\/\/files\/videos\/Vyroba-kozene-penezenky-Tiny-Wallet-pro-BCPP-Burzu-cennych-papiru-Praha.mp4",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify://shop_images/img_c2ce26b3-5306-4da9-9df6-6018b68fede0.jpg",
+        "video_hosted": "shopify://files/videos/Vyroba-kozene-penezenky-Tiny-Wallet-pro-BCPP-Burzu-cennych-papiru-Praha.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "height": "adapt",
         "desktop_video_width": "medium",
         "layout": "text_first",
@@ -584,7 +584,7 @@
               "horizontalni-kozene-pouzdro-fixed-posh-se-zaviranim-velikost-5xl-hnede",
               "horizontalni-kozene-pouzdro-fixed-posh-se-zaviranim-velikost-5xl-cervene",
               "kozene-pouzdro-fixed-oxford-pro-apple-ipad-9-7-2016-2017-2018-ipad-air-ipad-air-2-ipad-pro-9-7-2016-cerne",
-              "kozene-pouzdro-fixed-posh-velikost-3xl-hnede"
+              "kozene-pouzdro-fixed-posh-hnede"
             ],
             "products_to_show": 6,
             "columns_desktop": 5
@@ -624,7 +624,7 @@
         "title": "Péče o kůži",
         "subtitle": "",
         "heading_size": "h2",
-        "video_url": "https:\/\/youtu.be\/EtSwUKtAff4",
+        "video_url": "https://youtu.be/EtSwUKtAff4",
         "description": "FIXED ruční výroba v Prostějově",
         "autoplay": false,
         "enable_controls": false,
@@ -645,7 +645,7 @@
           "settings": {
             "heading": "Je možné do pouzdra vložit tablet včetně klávesnice FOLIO?",
             "icon": "folder_open",
-            "row_content": "<p>Ano, pokud je to výslovně uvedeno v názvu, či popisu produktu např. \"FIXED Oxford kožené pouzdro Apple iPad Pro 11\" (2018\/20\/21) s<strong> klávesnicí Folio<\/strong>\"<\/p>",
+            "row_content": "<p>Ano, pokud je to výslovně uvedeno v názvu, či popisu produktu např. \"FIXED Oxford kožené pouzdro Apple iPad Pro 11\" (2018/20/21) s<strong> klávesnicí Folio</strong>\"</p>",
             "page": ""
           }
         },
@@ -654,7 +654,7 @@
           "settings": {
             "heading": "Je možné do pouzdra vložit tablet včetně Magic Keyboard?",
             "icon": "terminal",
-            "row_content": "<p>Ano, pokud je to výslovně uvedeno v názvu, či popisu produktu např. \"FIXED Oxford kožené pouzdro Apple iPad Pro 11\" (2018\/20\/21) s<strong> klávesnicí Magic Keyboard<\/strong>\"<\/p>",
+            "row_content": "<p>Ano, pokud je to výslovně uvedeno v názvu, či popisu produktu např. \"FIXED Oxford kožené pouzdro Apple iPad Pro 11\" (2018/20/21) s<strong> klávesnicí Magic Keyboard</strong>\"</p>",
             "page": ""
           }
         },
@@ -663,7 +663,7 @@
           "settings": {
             "heading": "Jsou pouzdra Oxford vhodné i pro tablety, či notebooky jiných značek?",
             "icon": "folder",
-            "row_content": "<p>Přesto, že jsou pouzdra Oxford dedikovaná na jednotlivé modely iPadů a MacBooků, je možné je výjimečně využít také pro zařízení jiných značek. V popisku u každého modelu pouzdra Oxford jsou uvedeny vnitřní rozměry, dle kterých je možné se při výběru orientovat. Pokud je některý z rozměrů vašeho zařízení větší než vnitřní rozměr Oxfordu, nedoporučujeme pouzdro pro zařízení používat.<\/p>",
+            "row_content": "<p>Přesto, že jsou pouzdra Oxford dedikovaná na jednotlivé modely iPadů a MacBooků, je možné je výjimečně využít také pro zařízení jiných značek. V popisku u každého modelu pouzdra Oxford jsou uvedeny vnitřní rozměry, dle kterých je možné se při výběru orientovat. Pokud je některý z rozměrů vašeho zařízení větší než vnitřní rozměr Oxfordu, nedoporučujeme pouzdro pro zařízení používat.</p>",
             "page": ""
           }
         }
