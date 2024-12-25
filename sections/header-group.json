@@ -446,13 +446,6 @@
     "announcement_bar_prdjQa": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_7rdmrh": {
-          "type": "announcement",
-          "settings": {
-            "text": "PF 2025",
-            "link": ""
-          }
-        },
         "announcement_QTYLrD": {
           "type": "announcement",
           "settings": {
@@ -462,7 +455,6 @@
         }
       },
       "block_order": [
-        "announcement_7rdmrh",
         "announcement_QTYLrD"
       ],
       "settings": {
