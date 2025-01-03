@@ -27,14 +27,14 @@
         "heading_AbkTRp": {
           "type": "heading",
           "settings": {
-            "heading": "Ultraodolná skla Armor",
+            "heading": "MagSafe příslušenství",
             "size": "h1"
           }
         },
         "text_UDYABY": {
           "type": "text",
           "settings": {
-            "text": "<strong>Nejlepší a nejodolnější ochrana displeje na trhu.</strong>",
+            "text": "<strong>Využij kouzla magnetického příslušenství nejen pro Apple zařízení</strong>",
             "text_style": "subtitle"
           }
         }
@@ -98,7 +98,7 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Kolečko navíc, které ti otevře svět široké nabídky </p>",
+            "text": "<p>Kolečko navíc, které ti otevře svět široké nabídky příslušenství, které využívá technologie MagSafe. (pracovní text)</p>",
             "text_style": "body"
           }
         }
@@ -161,6 +161,7 @@
         "heading_TJjMV3",
         "text_FgxdBE"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/armor_pruznost.jpg",
@@ -215,6 +216,7 @@
         "heading_J8hx6t",
         "text_PQARFT"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/armor_antireflex.png",
@@ -269,6 +271,7 @@
         "heading_HKnxPM",
         "text_Bn9ejK"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/armor_antidust.jpg",
@@ -303,9 +306,9 @@
     "featured_collection_Jbdayq": {
       "type": "featured-collection",
       "settings": {
-        "title": "Top produkty Armor",
+        "title": "Top produkty MagSafe",
         "subtitle": "",
-        "collection": "skla-armor",
+        "collection": "magsafe-nabijecky",
         "heading_size": "h1",
         "products_to_show": 3,
         "columns_desktop": 3,
