@@ -303,6 +303,37 @@
         "overlay_color": "#1e40af"
       }
     },
+    "before_after_image_slider_9zCyyR": {
+      "type": "before-after-image-slider",
+      "settings": {
+        "section_width": "grid",
+        "title": "Before/after image slider",
+        "subtitle": "",
+        "heading_size": "h1",
+        "before_image": "shopify://shop_images/bw_magsafe_samsung.jpg",
+        "after_image": "shopify://shop_images/6d300bcdfafebf2321fb80f92be0fc64.jpg",
+        "image_height": 100,
+        "image_fit": "cover",
+        "before_text": "Before text",
+        "after_text": "After text",
+        "before_text_position": "bottom",
+        "after_text_position": "bottom",
+        "text_size": "h3",
+        "enable_section_box_layout": false,
+        "show_content_first_in_desktop": true,
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "",
+        "drag_cursor_foreground": "#000",
+        "drag_cursor_background": "#fff",
+        "before_text_color": "#fff",
+        "after_text_color": "#fff",
+        "accessibility_info": "Before and after images",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection_Jbdayq": {
       "type": "featured-collection",
       "settings": {
@@ -703,6 +734,7 @@
     "image_with_text_h7EAQW",
     "image_with_text_x39Mgh",
     "image_with_text_bXVgiV",
+    "before_after_image_slider_9zCyyR",
     "featured_collection_Jbdayq",
     "multicolumn_XKCb7x",
     "rich_text_akQrQY",
