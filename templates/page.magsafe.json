@@ -45,7 +45,7 @@
       ],
       "settings": {
         "layout": "stretched_grid",
-        "image": "shopify://shop_images/armor_desktop.jpg",
+        "image": "shopify://shop_images/fixmpl2-bk_006.jpg",
         "image_mobile": "shopify://shop_images/Armor_mobile.jpg",
         "image_overlay_opacity": 20,
         "image_height": "medium",
@@ -90,7 +90,7 @@
         "heading_Mf43cQ": {
           "type": "heading",
           "settings": {
-            "heading": "Armor",
+            "heading": "MagSafe",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -98,7 +98,7 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Produkty pod značkou Armor se vyznačují zvýšenou odolností, moderním a čistým designem za použití pokročilých technologických procesů a prémiových materiálů. Jsou to produkty s vysokými standardy pro funkčnost bez kompromisů.</p>",
+            "text": "<p>Kolečko navíc, které ti otevře svět široké nabídky </p>",
             "text_style": "body"
           }
         }
@@ -109,7 +109,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/armo-rgb_5342e53c-627a-4328-aa69-1e5076503540.png",
+        "image": "shopify://shop_images/magsafe.1559.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
