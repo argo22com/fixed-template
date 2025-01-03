@@ -457,6 +457,7 @@
       "block_order": [
         "announcement_QTYLrD"
       ],
+      "disabled": true,
       "settings": {
         "auto_rotate": true,
         "change_slides_speed": 7,
