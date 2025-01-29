@@ -1,0 +1,52 @@
+{%- assign compatible_devices = product.metafields.product_attributes.compatible_devices.value | reverse | reverse -%}
+
+{%- assign total_items = 0 -%}
+{%- for item in compatible_devices -%}
+  {%- assign total_items = total_items | plus: 1 -%}
+{%- endfor -%}
+
+{%- if compatible_devices != blank -%}
+  <section id="section-{{ section.id }}" class="compatible-devices page-width">
+    {%- if section.settings.title != blank -%}
+      <h3>{{ section.settings.title }}</h3>
+    {%- endif -%}
+    <ul class="compatible-devices__list grid grid--1-col grid--2-col-tablet grid--4-col-desktop">
+      {%- assign items_per_column = 8 -%}
+
+      {%- assign num_columns = total_items | times: 1.0 | divided_by: items_per_column | ceil -%}
+
+      {%- for column_index in (1..num_columns) -%}
+        <div class="compatible-devices__column grid__item">
+          {%- for i in (1..items_per_column) -%}
+            {%- assign device_index = forloop.parentloop.index0 | times: items_per_column | plus: forloop.index0 -%}
+            {%- if device_index < total_items -%}
+              {%- assign device = compatible_devices[device_index] -%}
+              <li class="compatible-devices__item text-small">
+                {{ device.model }}
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
+    </ul>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Compatible Devices",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Kompatibilní zařízení"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Compatible Devices",
+    }
+  ]
+}
+{% endschema %}
