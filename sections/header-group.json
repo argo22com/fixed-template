@@ -161,7 +161,6 @@
           "settings": {
             "trigger": "Akce",
             "title": "Ona Dnes",
-            "image": "shopify://shop_images/onadnes_banner_2.png",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "",
@@ -203,7 +202,6 @@
           "settings": {
             "trigger": "Akce",
             "title": "Gaming",
-            "image": "shopify://shop_images/FIXPDS-G-LS3_7e7ab223-8516-49d7-a34e-82aad7b68c7c.jpg",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "Gaming",
@@ -318,7 +316,6 @@
           "settings": {
             "trigger": "Blog",
             "title": "Gaming",
-            "image": "shopify://shop_images/1B1A3334.jpg",
             "image_ratio": "square",
             "caption": "",
             "heading_text": "Jak vylepšit zážitek z hraní?",
@@ -339,7 +336,6 @@
           "settings": {
             "trigger": "Blog",
             "title": "MagSafe",
-            "image": "shopify://shop_images/magsafe_17b20a20-9e3c-4c61-8125-8c529b881397.png",
             "image_ratio": "square",
             "caption": "",
             "heading_text": "Vše o MagSafe technologii",
@@ -360,7 +356,6 @@
           "settings": {
             "trigger": "Blog",
             "title": "Testování skel",
-            "image": "shopify://shop_images/Ohebnost_2560x1440_V2.jpg",
             "image_ratio": "square",
             "caption": "",
             "heading_text": "Jak testujeme ochranná skla",
@@ -381,7 +376,6 @@
           "settings": {
             "trigger": "Blog",
             "title": "Přejít na blog",
-            "image": "shopify://shop_images/Voyager_2-768x462.jpg",
             "image_ratio": "square",
             "caption": "",
             "heading_text": "Přejít na blog",
@@ -424,10 +418,10 @@
       "settings": {
         "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
         "top_color_scheme": "inverse",
-        "logo": "shopify://shop_images/logo.png",
+        "logo": "shopify://shop_images/Logo-FIXED-modra-RGB_d7481ded-02ac-42d4-a057-fb318da3a757.jpg",
         "logo_width": 170,
         "logo_position": "top-left",
-        "menu": "hlavni-menu",
+        "menu": "",
         "always_use_standard_menu": false,
         "show_go_to_link": true,
         "show_line_separator": false,
