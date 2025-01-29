@@ -418,8 +418,8 @@
       "settings": {
         "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
         "top_color_scheme": "inverse",
-        "logo": "shopify://shop_images/Logo-FIXED-modra-RGB_d7481ded-02ac-42d4-a057-fb318da3a757.jpg",
-        "logo_width": 170,
+        "logo": "shopify://shop_images/Logo-FIXED-modra-RGB_d7481ded-02ac-42d4-a057-fb318da3a757-red.png",
+        "logo_width": 180,
         "logo_position": "top-left",
         "menu": "",
         "always_use_standard_menu": false,
