@@ -287,8 +287,8 @@
       "show_filter": "Filter anzeigen",
       "hide_filter": "Filter ausblenden",
       "categories_block_label": "Categories",
-      "compatible_manufacturers": "Kompatible Hersteller",
-      "compatible_devices": "Kompatible Geräte"
+      "compatible_manufacturers": "Hersteller",
+      "compatible_devices": "Model"
     }
   },
   "templates": {

@@ -213,13 +213,10 @@
         data-delay="0.1"
       >
         <div class="loading-overlay gradient"></div>
+
         {%- liquid
           if section.settings.filter_type == 'vertical'
-            render 'facets-toolbar', results: collection, is_collection: true, has_sidebar: has_sidebar
-          endif
-
-          if section.settings.show_compatible_devices_filters
-            render 'compatible-devices-facets', results: collection
+            render 'facets-toolbar', results: collection, is_collection: true, has_sidebar: has_sidebar, show_compatible_devices_filters: section.settings.show_compatible_devices_filters
           endif
 
           render 'facets-active', results: collection, results_url: results_url

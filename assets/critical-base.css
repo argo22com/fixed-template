@@ -233,6 +233,10 @@
   flex-direction: column;
 }
 
+.shrink-0 {
+  flex-shrink: 0;
+}
+
 .w100 {
   width: 100%;
 }
@@ -873,7 +877,7 @@ summary::-webkit-details-marker {
 @media screen and (min-width: 990px) {
   .grid--8-col-desktop .grid__item {
     width: calc(12.5% - var(--grid-horizontal-spacing) * 7 / 8);
-  }  
+  }
 
   .grid--7-col-desktop .grid__item {
     width: calc(14.28% - var(--grid-horizontal-spacing) * 6 / 7);
@@ -1455,7 +1459,7 @@ details[open] > .header__icon--menu .icon-open-state {
   padding: 2.7rem 1.5rem;
   line-height: calc(1 + 0.3 / var(--font-heading-scale));
   font-weight: var(--font-heading-weight-semi-bold);
-} 
+}
 
 .header__menu-badge {
   display: inline-block;
@@ -1941,7 +1945,7 @@ textarea {
 @media(min-width: 990px) {
   .field__input,
   .select__select {
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
   }
 }
 

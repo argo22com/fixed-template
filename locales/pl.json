@@ -285,8 +285,8 @@
       "show_filter": "Show filter",
       "hide_filter": "Hide filter",
       "categories_block_label": "Categories",
-      "compatible_manufacturers": "Kompatibilne producentów",
-      "compatible_devices": "Kompatibilne urządzenia"
+      "compatible_manufacturers": "Marka urządzenia",
+      "compatible_devices": "Model urządzenia"
     }
   },
   "templates": {

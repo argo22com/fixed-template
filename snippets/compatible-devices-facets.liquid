@@ -51,8 +51,12 @@
 {%- endfor -%}
 
 <style>
-  .compatible-devices-facets {
-    padding-top: 1rem;
+  .compatible-devices-facet-filter {
+    min-width: 20rem;
+  }
+
+  .compatible-devices-facet-filter .select__select {
+    padding: 1.2rem 3.2rem 1.2rem 1.2rem;
   }
 </style>
 
@@ -60,12 +64,7 @@
   <compatible-devices-facet-filters-form>
     <form id="FacetFiltersForm" class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
       {% if manufacturers_filter %}
-        <div class="facets__filter">
-          {% comment %}
-            <label for="Filter-{{ manufacturers_filter.param_name | escape | handleize }}" class="facets__label">
-              {{- manufacturers_filter.label | escape -}}
-            </label>
-          {% endcomment %}
+        <div class="compatible-devices-facet-filter select facets__filter">
           <select
             id="Filter-{{ manufacturers_filter.param_name | escape | handleize }}"
             name="{{ manufacturers_filter.param_name }}"
@@ -80,6 +79,7 @@
             >
               {{ 'products.facets.compatible_manufacturers' | t }}
             </option>
+
             {%- for filter_value in manufacturers_filter.values %}
               <option
                 value="{{ filter_value.value | escape }}"
@@ -91,19 +91,13 @@
               </option>
             {%- endfor %}
           </select>
+
+          {% render 'icon-caret' %}
         </div>
       {% endif %}
 
       {% if manufacturers_and_models_map_filter %}
-        <div class="facets__filter">
-          {% comment %}
-            <label
-              for="Filter-{{ manufacturers_and_models_map_filter.param_name | escape | handleize }}"
-              class="facets__label"
-            >
-              {{- manufacturers_and_models_map_filter.label | escape -}}
-            </label>
-          {% endcomment %}
+        <div class="compatible-devices-facet-filter select facets__filter">
           <select
             id="Filter-{{ manufacturers_and_models_map_filter.param_name | escape | handleize }}"
             name="{{ manufacturers_and_models_map_filter.param_name }}"
@@ -131,6 +125,8 @@
               </option>
             {%- endfor %}
           </select>
+
+          {% render 'icon-caret' %}
         </div>
       {% endif %}
     </form>
@@ -147,7 +143,9 @@ if (!customElements.get('compatible-devices-facet-filters-form')) {
     }
 
     connectedCallback() {
-      this.manufacturers_filter.addEventListener('change', this.onManufacturersFilterChange.bind(this));
+      if (this.manufacturers_filter) {
+        this.manufacturers_filter.addEventListener('change', this.onManufacturersFilterChange.bind(this));
+      }
     }
 
     onManufacturersFilterChange(event) {
@@ -157,5 +155,4 @@ if (!customElements.get('compatible-devices-facet-filters-form')) {
     }
   });
 }
-
 </script>
