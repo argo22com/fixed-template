@@ -217,6 +217,11 @@
           if section.settings.filter_type == 'vertical'
             render 'facets-toolbar', results: collection, is_collection: true, has_sidebar: has_sidebar
           endif
+
+          if section.settings.show_compatible_devices_filters
+            render 'compatible-devices-facets', results: collection
+          endif
+
           render 'facets-active', results: collection, results_url: results_url
         -%}
         {%- if collection.products.size > 0 -%}
@@ -564,6 +569,12 @@
       "id": "enable_quick_view",
       "default": false,
       "label": "t:sections.all.enable_quick_view.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_compatible_devices_filters",
+      "default": false,
+      "label": "Show Compatible Devices Filters"
     },
     {
       "type": "checkbox",

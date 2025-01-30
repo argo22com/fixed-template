@@ -1,0 +1,135 @@
+{% comment %}
+  This snippet expects a 'results' prop to be passed in. The 'results' prop should contain the following structure:
+  {
+    filters: [
+      {
+        param_name: 'filter.p.m.product_compatible_devices.manufacturers',
+        label: 'Manufacturer',
+        values: [
+          { value: 'manufacturer1', label: 'Manufacturer 1', active: false },
+          { value: 'manufacturer2', label: 'Manufacturer 2', active: true }
+        ],
+        active_values: [
+          { value: 'manufacturer2', label: 'Manufacturer 2' }
+        ]
+      },
+      {
+        param_name: 'filter.p.m.product_compatible_devices.manufacturers_and_models_map',
+        label: 'Model',
+        values: [
+          { value: 'manufacturer2_model1', label: 'Manufacturer 2 Model 1', active: false },
+          { value: 'manufacturer2_model2', label: 'Manufacturer 2 Model 2', active: true }
+        ]
+      }
+    ]
+  }
+{% endcomment %}
+
+{% assign manufacturers_filter = results.filters
+  | where: 'param_name', 'filter.p.m.product_compatible_devices.manufacturers'
+  | first
+%}
+
+{% assign manufacturers_and_models_map_filter = results.filters
+  | where: 'param_name', 'filter.p.m.product_compatible_devices.manufacturers_and_models_map'
+  | first
+%}
+
+{%- assign manufacturers_and_models_map_filter_values = '' | split: '' -%}
+
+{%- for value in manufacturers_and_models_map_filter.values %}
+  {% assign value_arr = value.value | split: '_' %}
+
+  {% if manufacturers_filter.active_values.first.value
+    and value_arr[0] == manufacturers_filter.active_values.first.value
+  %}
+    {%- assign manufacturers_and_models_map_filter_values = manufacturers_and_models_map_filter.values
+      | slice: forloop.index0, 1
+      | concat: manufacturers_and_models_map_filter_values
+    -%}
+  {% endif %}
+{%- endfor -%}
+
+<style>
+  .compatible-devices-facets {
+    padding-top: 1rem;
+  }
+</style>
+
+<facet-filters-form>
+  <form id="FacetFiltersForm" class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
+    {% if manufacturers_filter %}
+      <div class="facets__filter">
+        {% comment %}
+          <label for="Filter-{{ manufacturers_filter.param_name | escape | handleize }}" class="facets__label">
+            {{- manufacturers_filter.label | escape -}}
+          </label>
+        {% endcomment %}
+        <select
+          id="Filter-{{ manufacturers_filter.param_name | escape | handleize }}"
+          name="{{ manufacturers_filter.param_name }}"
+          class="facets__select select__select"
+        >
+          <option
+            value=""
+            {% if filter.active_value == blank %}
+              selected
+            {% endif %}
+          >
+            Compatible Manufacturer
+          </option>
+          {%- for filter_value in manufacturers_filter.values %}
+            <option
+              value="{{ filter_value.value | escape }}"
+              {% if filter_value.active %}
+                selected
+              {% endif %}
+            >
+              {{ filter_value.label | escape }}
+            </option>
+          {%- endfor %}
+        </select>
+      </div>
+    {% endif %}
+
+    {% if manufacturers_and_models_map_filter %}
+      <div class="facets__filter">
+        {% comment %}
+          <label
+            for="Filter-{{ manufacturers_and_models_map_filter.param_name | escape | handleize }}"
+            class="facets__label"
+          >
+            {{- manufacturers_and_models_map_filter.label | escape -}}
+          </label>
+        {% endcomment %}
+        <select
+          id="Filter-{{ manufacturers_and_models_map_filter.param_name | escape | handleize }}"
+          name="{{ manufacturers_and_models_map_filter.param_name }}"
+          class="facets__select select__select"
+          {% unless manufacturers_filter.active_values.size > 0 %}
+            disabled
+          {% endunless %}
+        >
+          <option
+            value=""
+            {% if manufacturers_and_models_map_filter.active_value == blank %}
+              selected
+            {% endif %}
+          >
+            Compatible Model
+          </option>
+          {%- for filter_value in manufacturers_and_models_map_filter_values %}
+            <option
+              value="{{ filter_value.value | escape }}"
+              {% if filter_value.active %}
+                selected
+              {% endif %}
+            >
+              {{ filter_value.label | split: '_' | last }}
+            </option>
+          {%- endfor %}
+        </select>
+      </div>
+    {% endif %}
+  </form>
+</facet-filters-form>
