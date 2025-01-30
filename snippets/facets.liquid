@@ -49,16 +49,58 @@
               {% comment %} Filters for both horizontal(next version) and vertical filter {% endcomment %}
               {%- liquid
                 for filter in results.filters
-                  assign total_active_values = total_active_values | plus: filter.active_values.size
-                  case filter.type
-                  when 'boolean' or 'list'
-                    render 'facets-boolean-list', filter: filter, section: section, filter_type: filter_type, color_name: color_name, forloop: forloop, suffix_id: 'Desktop-'
-                  when 'price_range'
-                    render 'facets-price-range', filter: filter, section: section, filter_type: filter_type, forloop: forloop, suffix_id: 'Desktop-'
-                  endcase
+                  if filter.param_name != 'filter.p.m.product_compatible_devices.manufacturers' and filter.param_name != 'filter.p.m.product_compatible_devices.manufacturers_and_models_map'
+                    assign total_active_values = total_active_values | plus: filter.active_values.size
+                    case filter.type
+                    when 'boolean' or 'list'
+                      render 'facets-boolean-list', filter: filter, section: section, filter_type: filter_type, color_name: color_name, forloop: forloop, suffix_id: 'Desktop-'
+                    when 'price_range'
+                      render 'facets-price-range', filter: filter, section: section, filter_type: filter_type, forloop: forloop, suffix_id: 'Desktop-'
+                    endcase
+                  endif
                 endfor
               -%}
-              
+
+              {% assign manufacturers_filter = results.filters | where: 'param_name', 'filter.p.m.product_compatible_devices.manufacturers' | first %}
+              {% assign manufacturers_and_models_map_filter = results.filters | where: 'param_name', 'filter.p.m.product_compatible_devices.manufacturers_and_models_map' | first %}
+
+              {%- assign manufacturers_and_models_map_filter_values = "" | split: "" -%}
+
+              {%- for value in manufacturers_and_models_map_filter.values  %}
+                {% assign value_arr = value.value | split: '_' %}
+
+                {% if manufacturers_filter.active_values.first.value and value_arr[0] == manufacturers_filter.active_values.first.value %}
+                  {%- assign manufacturers_and_models_map_filter_values = manufacturers_and_models_map_filter.values | slice: forloop.index0, 1 | concat: manufacturers_and_models_map_filter_values -%}
+                {% endif %}
+              {%- endfor -%}
+
+              {%- for filter in results.filters  %}
+                {% if filter.param_name == 'filter.p.m.product_compatible_devices.manufacturers' %}
+                  <div class="facets__filter">
+                    <label for="Filter-{{ filter.param_name | escape | handleize }}" class="facets__label">{{ filter.label | escape }}</label>
+                    <select id="Filter-{{ filter.param_name | escape | handleize }}" name="{{ filter.param_name }}" class="facets__select select__select">
+                      <option value="" {% if filter.active_value == blank %}selected{% endif %}>Compatible Manufacturer</option>
+                      {%- for filter_value in filter.values %}
+                        <option value="{{ filter_value.value | escape }}" {% if filter_value.active %}selected{% endif %}>{{ filter_value.label | escape }}</option>
+                      {%- endfor %}
+                    </select>
+                  </div>
+                {% endif %}
+
+                {% if filter.param_name == 'filter.p.m.product_compatible_devices.manufacturers_and_models_map' %}
+
+                  <div class="facets__filter">
+                    <label for="Filter-{{ filter.param_name | escape | handleize }}" class="facets__label">{{ filter.label | escape }}</label>
+                    <select id="Filter-{{ filter.param_name | escape | handleize }}" name="{{ filter.param_name }}" class="facets__select select__select" {% unless manufacturers_filter.active_values.size > 0 %}disabled{% endunless %}>
+                      <option value="" {% if filter.active_value == blank %}selected{% endif %}>Compatible Model</option>
+                      {%- for filter_value in manufacturers_and_models_map_filter_values %}
+                        <option value="{{ filter_value.value | escape }}" {% if filter_value.active %}selected{% endif %}>{{ filter_value.label | split: '_' | last }}</option>
+                      {%- endfor %}
+                    </select>
+                  </div>
+                {% endif %}
+              {%- endfor  %}
+
               <noscript>
                 <button type="submit" class="facets__button-no-js button button--secondary button--small">
                   <span>{{ 'products.facets.filter_button' | t }}</span>
@@ -94,7 +136,7 @@
         </span>
       </h2>
     </div>
-  {%- endif -%}  
+  {%- endif -%}
 
   {% comment %}  Drawer and mobile filter {% endcomment %}
   <menu-drawer class="mobile-facets__wrapper flex{% if filter_type == 'vertical' or filter_type == 'horizontal' %} large-up-hide{% endif %}" data-breakpoint="tablet" data-id="filter-drawer">
@@ -115,7 +157,7 @@
           </span>
           {%- if enable_sorting -%}
             {%- render 'icon-sort', add_classes: 'large-up-hide icon-sort--drawer' -%}
-          {%- endif -%}  
+          {%- endif -%}
           <span class="mobile-facets__open-label small-hide medium-hide">
             {%- if enable_filtering -%}
               {{ 'products.facets.filter_button' | t }}
@@ -141,7 +183,7 @@
                   endfor
                 endif
               %}
-              
+
               {%- if enable_sorting -%}
                 <div class="facets__item-filter mobile-facets__details{% if filter_type == 'drawer' %} large-up-hide{% endif %}" data-index="mobile-{{ forloop.index }}">
                   <div class="mobile-facets__summary">
@@ -194,7 +236,7 @@
     {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
     {%- assign current_sort_object = results.sort_options | where: 'value', sort_by | first -%}
     <facet-filters-form class="facets facets-sort small-hide medium-hide">
-      <form class="facets-sort-form" id="FacetSortForm">      
+      <form class="facets-sort-form" id="FacetSortForm">
         <div class="facet-filters sorting caption">
           <details-disclosure class="facet-filters__field facet-filters__field--disclosure flex align-center no-js-hidden" data-ignore-hover="true">
             <h2 class="facet-filters__label text-small text-body light visually-hidden" id="SortByDesktopLabel">
@@ -212,13 +254,13 @@
                       <button type="button" class="facet-checkbox facet-checkbox--sort-button flex-grow-1 por flex{% if option.value == sort_by %} selected{% endif %}" data-value="{{ option.value | escape }}" onclick="FacetFiltersForm.onClickDropdownSort(this);">
                         {{ option.name | escape }}
                       </button>
-                    </li> 
+                    </li>
                   {%- endfor -%}
                 </ul>
               </div>
             </details>
           </details-disclosure>
-            
+
           <div class="facet-filters__field flex align-center no-js">
             <div class="select">
               <select name="sort_by" class="facet-filters__sort font-body-semi-bold select__select text-small lh1 background-input" id="SortByDesktop" aria-describedby="a11y-refresh-page-message">
@@ -238,7 +280,7 @@
         {% if results.current_vendor or results.current_type %}
           <input type="hidden" name="q" value="{{ results.current_vendor }}{{ results.current_type }}">
         {% endif %}
-    
+
         {%- if results.terms -%}
           <input type="hidden" name="q" value="{{ results.terms | escape }}">
           <input name="options[prefix]" type="hidden" value="last">
