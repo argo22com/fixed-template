@@ -275,7 +275,9 @@
       "show_less": "Zobraziť menej",
       "show_filter": "Show filter",
       "hide_filter": "Hide filter",
-      "categories_block_label": "Categories"
+      "categories_block_label": "Categories",
+      "compatible_manufacturers": "Kompatibilní výrobci",
+      "compatible_devices": "Kompatibilné zariadenia"
     }
   },
   "templates": {

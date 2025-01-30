@@ -1,4 +1,7 @@
-{%- assign compatible_devices = product.metafields.product_attributes.compatible_devices.value | reverse | reverse -%}
+{%- assign compatible_devices = product.metafields[section.settings.compatible_devices_metafield_namespace][section.settings.compatible_devices_metafield_name].value
+  | reverse
+  | reverse
+-%}
 
 {%- assign total_items = 0 -%}
 {%- for item in compatible_devices -%}
@@ -8,7 +11,7 @@
 {%- if compatible_devices != blank -%}
   <section id="section-{{ section.id }}" class="compatible-devices page-width">
     {%- if section.settings.title != blank -%}
-      <h3>{{ section.settings.title }}</h3>
+      <{{ section.settings.title_size }}>{{ section.settings.title }}</{{ section.settings.title_size }}>
     {%- endif -%}
     <ul class="compatible-devices__list grid grid--1-col grid--2-col-tablet grid--4-col-desktop">
       {%- assign items_per_column = 8 -%}
@@ -41,11 +44,35 @@
       "id": "title",
       "label": "Title",
       "default": "Kompatibilní zařízení"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "Title Size",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "text",
+      "id": "compatible_devices_metafield_namespace",
+      "label": "Compatible Devices Metafield Namespace",
+      "default": "product_attributes"
+    },
+    {
+      "type": "text",
+      "id": "compatible_devices_metafield_name",
+      "label": "Compatible Devices Metafield Name",
+      "default": "compatible_devices"
     }
   ],
   "presets": [
     {
-      "name": "Compatible Devices",
+      "name": "Compatible Devices"
     }
   ]
 }

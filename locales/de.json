@@ -286,7 +286,9 @@
       "show_less": "Weniger anzeigen",
       "show_filter": "Filter anzeigen",
       "hide_filter": "Filter ausblenden",
-      "categories_block_label": "Categories"
+      "categories_block_label": "Categories",
+      "compatible_manufacturers": "Kompatible Hersteller",
+      "compatible_devices": "Kompatible Geräte"
     }
   },
   "templates": {

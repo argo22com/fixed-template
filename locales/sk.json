@@ -163,7 +163,9 @@
       "show_less": "Zobraziť menej",
       "show_filter": "Zobraziť filter",
       "hide_filter": "Schovať filter",
-      "categories_block_label": "Kategória"
+      "categories_block_label": "Kategória",
+      "compatible_manufacturers": "Kompatibilní výrobci",
+      "compatible_devices": "Kompatibilné zariadenia"
     }
   },
   "recipient": {
