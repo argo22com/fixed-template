@@ -39,20 +39,6 @@
             "variant_price": true
           }
         },
-        "wishlist_hero_custom_product_button_McnAG4": {
-          "type": "shopify://apps/wishlist-hero/blocks/custom-product-button/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
-          "settings": {
-            "displayButtonMode": "~",
-            "contentAlignment": "center",
-            "buttonAlignment": "center",
-            "buttonFullwidth": true,
-            "removeBoxShadowAndBorder": false,
-            "horizontalPadding": 20,
-            "iconTopOffset": 0,
-            "addedCssClassNames": "",
-            "addedContainerStyles": "js-wishlist-button"
-          }
-        },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
           "type": "sale_box",
           "settings": {
@@ -118,7 +104,6 @@
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "popup_XDycdy",
         "price",
-        "wishlist_hero_custom_product_button_McnAG4",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
@@ -164,11 +149,6 @@
             "show_sku": false
           }
         },
-        "judge_me_reviews_review_widget_8VjJfr": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        },
         "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
           "type": "page_content",
           "settings": {
@@ -199,7 +179,6 @@
       "block_order": [
         "1638dd10-8e33-4e82-b01c-2eb71d6362ba",
         "parameters_GiBjwJ",
-        "judge_me_reviews_review_widget_8VjJfr",
         "cbb96b5f-f683-42e5-b865-6ac18e11645e",
         "size_chart_page_h8pBMk",
         "metafields_XkQWGr",
@@ -217,6 +196,15 @@
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "compatible_devices_RArtVK": {
+      "type": "compatible-devices",
+      "settings": {
+        "title": "Kompatibilní zařízení",
+        "title_size": "h3",
+        "compatible_devices_metafield_namespace": "product_compatible_devices",
+        "compatible_devices_metafield_name": "devices_metaobject"
       }
     },
     "8124c74c-24a1-4cc3-9369-91db0fab3a14": {
@@ -281,6 +269,7 @@
   "order": [
     "main",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
+    "compatible_devices_RArtVK",
     "8124c74c-24a1-4cc3-9369-91db0fab3a14",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
