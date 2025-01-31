@@ -244,10 +244,12 @@
                           ></span>
                         {%- endif -%}
                         {%- unless is_color_swatches -%}
-                          {{
-                            product_current_variation.metafields.product_texts.title.value
-                            | default: product_current_variation.title
-                          }}
+                          {% if product.metafields.product_texts.title %}
+                            {% assign title = product.metafields.product_texts.title %}
+                          {% else %}
+                            {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+                          {% endif %}
+                          {{ title }}
                         {%- else -%}
                           {% liquid
                             assign current_color_values = ''
@@ -309,10 +311,7 @@
                             class="js-title-tooltip bt-tooltip__inner bt-tooltip__inner--top {% if color_out_of_stock %}d-none{% endif %}"
                             style="z-index: 10"
                           >
-                            {{-
-                              product_current_variation.metafields.product_texts.title.value
-                              | default: product_current_variation.title
-                            -}}
+                            {{- product_current_variation.metafields.product_texts.title.value | default: product_current_variation.title -}}
                           </span>
                           {%- if selected %}
                             {%- render 'icon-checkmark' -%}
@@ -337,6 +336,19 @@
                     class="variant-flex-item{% if forloop.index >= total_visible_items %} hidden-more{% endif %}"
                   {% endunless %}
                 >
+
+                  {% if product.metafields.product_texts.title %}
+                    {% assign title = product.metafields.product_texts.title %}
+                  {% else %}
+                    {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+                  {% endif %}
+
+                  {% if product.metafields.product_texts.descriptionHtml %}
+                    {% assign description = product.metafields.product_texts.descriptionHtml.value %}
+                  {% else %}
+                    {% assign description = product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml.value %}
+                  {% endif %}
+
                   <input
                     type="radio"
                     id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -344,8 +356,8 @@
                     class="product-form__input__radio{% unless settings.hide_unavailable_options %}{% unless available_option_values contains value %} disabled{% endunless %}{% endunless %}"
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
-                    data-desc="{{ variant.metafields['product_texts']['descriptionHtml'].value | escape }}"
-                    data-title="{{ variant.metafields['product_texts']['title'].value | escape }}"
+                    data-desc="{{ description | escape }}"
+                    data-title="{{ title | escape }}"
                     {% if option.selected_value == value %}
                       checked="checked"
                     {% endif %}
@@ -481,6 +493,19 @@
                   assign is_first_option = forloop.first
                   assign variant = product.variants | where: index_option, value | first
                 -%}
+
+                {% if product.metafields.product_texts.descriptionHtml %}
+                  {% assign description = product.metafields.product_texts.descriptionHtml.value %}
+                {% else %}
+                  {% assign description = variant.metafields['product_texts']['descriptionHtml'].value %}
+                {% endif %}
+
+                {% if product.metafields.product_texts.title %}
+                  {% assign title = product.metafields.product_texts.title.value %}
+                {% else %}
+                  {% assign title = variant.metafields['product_texts']['title'].value %}
+                {% endif %}
+
                 <option
                   class="js-select-product-option"
                   value="{{ value | escape }}"
@@ -491,14 +516,14 @@
                   {% if settings.hide_unavailable_options and is_first_option == false %}
                     {%- unless available_option_values contains value %} class="hidden"{% endunless -%}
                   {% endif %}
-                  data-desc="{{ variant.metafields['product_texts']['descriptionHtml'].value | escape }}"
-                  data-title="{{ variant.metafields['product_texts']['title'].value | escape }}"
+                  data-desc="{{ description | escape }}"
+                  data-title="{{ title | escape }}"
                   {% for product_variation in variation_products %}
                     {% assign option_color_variant = product_variation.variants | where: index_option, value | first %}
                     {% if option_color_variant and option_color_position != null %}
                       {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
                       data-{{ current_color_code }}-url="{{ option_color_variant.url }}"
-                      data-{{ current_color_code }}-title="{{ option_color_variant.metafields['product_texts']['title'].value | escape }}"
+                      data-{{ current_color_code }}-title="{{ title | escape }}"
                     {% endif %}
                   {% endfor %}
                 >

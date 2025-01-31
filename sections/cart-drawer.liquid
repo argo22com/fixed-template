@@ -165,7 +165,13 @@
                             {%- endif -%}
 
                             <a href="{{ item.url }}" class="cart-item__name h6 link link--text font-heading-bold">
-                              {{- item.variant.metafields.product_texts.title | escape -}}
+                              {% if item.product.metafields.product_texts.title %}
+                                {% assign title = item.product.metafields.product_texts.title %}
+                              {% else %}
+                                {% assign title = item.variant.metafields.product_texts.title %}
+                              {% endif %}
+
+                              {{- title | escape -}}
                             </a>
 
                             {%- if item.product.has_only_default_variant == false
@@ -272,13 +278,14 @@
                                     name="plus"
                                     type="button"
                                   >
+                                    {% if product.metafields.product_texts.title %}
+                                      {% assign title = product.metafields.product_texts.title %}
+                                    {% else %}
+                                      {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+                                    {% endif %}
+
                                     <span class="visually-hidden">
-                                      {{-
-                                        'products.product.quantity.increase'
-                                        | t:
-                                          product: product.selected_or_first_available_variant.metafields.product_texts.title
-                                        | escape
-                                      -}}
+                                      {{- 'products.product.quantity.increase' | t: product: title | escape -}}
                                     </span>
                                     <svg
                                       width="12"
@@ -341,10 +348,16 @@
                             role="cell"
                             headers="CartDrawer-ColumnTotal"
                           >
+                            {% if item.product.metafields.product_texts.price_with_vat%}
+                              {% assign price_with_vat = item.product.metafields.product_texts.price_with_vat %}
+                            {% else %}
+                              {% assign price_with_vat = item.variant.metafields.product_texts.price_with_vat %}
+                            {% endif %}
+
                             <div class="cart-item__price-wrapper">
                               {% render 'price-with-vat',
                                 price: item.original_line_price,
-                                variant_vat_metafield: item.variant.metafields.product_texts.price_with_vat
+                                variant_vat_metafield: price_with_vat
                               %}
                               {%- if item.original_line_price != item.final_line_price -%}
                                 <div class="cart-item__discounted-prices">

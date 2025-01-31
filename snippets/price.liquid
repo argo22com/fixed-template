@@ -30,23 +30,30 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
+
+if product.metafields.product_texts.price_with_vat
+  assign price_with_vat = product.metafields.product_texts.price_with_vat
+else
+  assign price_with_vat = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat
+endif
+
 if localization.country.currency.iso_code == 'CZK'
-  assign vat_price_string = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat
+  assign vat_price_string = price_with_vat
   assign vat_multiplier = 1
   assign vat_price = vat_price_string | times: vat_multiplier | round : 1
   assign vat_price_rounded = vat_price | times: 100
-else 
-  assign vat_price_string = product.selected_or_first_available_variant.price 
-  assign vat_price = vat_price_string | times: vat_rate_multiplier 
+else
+  assign vat_price_string = product.selected_or_first_available_variant.price
+  assign vat_price = vat_price_string | times: vat_rate_multiplier
   assign vat_price_rounded = vat_price | divided_by: 100 | round: 1 | times: 100
 endif
-  
+
 -%}
 
 {% if show_in_card %}
-  {% render 'price-with-vat', price: product.selected_or_first_available_variant.price , variant_vat_metafield: product.selected_or_first_available_variant.metafields.product_texts.price_with_vat %}
+  {% render 'price-with-vat', price: product.selected_or_first_available_variant.price , variant_vat_metafield: price_with_vat %}
 {% else %}
-{% render 'price-with-vat', price: product.selected_or_first_available_variant.price , variant_vat_metafield: product.selected_or_first_available_variant.metafields.product_texts.price_with_vat %}
+{% render 'price-with-vat', price: product.selected_or_first_available_variant.price , variant_vat_metafield: price_with_vat %}
 
 
   <{% unless use_custom_element %}div{% else %}product-price{% endunless %} class="price
@@ -80,7 +87,7 @@ endif
                 {{ compare_at_price | money }}
               {% endif %}
             </s>
-            
+
             {%- if show_badges and show_in_card and target.price < target.compare_at_price and settings.sale_badge_label != 'none' -%}
               <span class="price__badge price__badge--in-card lh1 color-foreground">
                 {%- if settings.sale_badge_label == 'text' -%}
@@ -89,11 +96,11 @@ endif
                   {{ target.price | minus: target.compare_at_price | times: 100.00 | divided_by: target.compare_at_price | round }}%
                 {%- else -%}
                   {%- if settings.currency_code_enabled -%}
-                    -{{ target.compare_at_price | minus: target.price | money_with_currency }}	
+                    -{{ target.compare_at_price | minus: target.price | money_with_currency }}
                   {%- else -%}
-                    -{{ target.compare_at_price | minus: target.price | money }}	
-                  {%- endif -%}	
-                {%- endif -%}	
+                    -{{ target.compare_at_price | minus: target.price | money }}
+                  {%- endif -%}
+                {%- endif -%}
               </span>
             {%- endif -%}
           </span>
@@ -128,11 +135,11 @@ endif
           {{ target.price | minus: target.compare_at_price | times: 100.00 | divided_by: target.compare_at_price | round }}%
         {%- else -%}
           {%- if settings.currency_code_enabled -%}
-            -{{ target.compare_at_price | minus: target.price | money_with_currency }}	
+            -{{ target.compare_at_price | minus: target.price | money_with_currency }}
           {%- else -%}
-            -{{ target.compare_at_price | minus: target.price | money }}	
-          {%- endif -%}	
-        {%- endif -%}	
+            -{{ target.compare_at_price | minus: target.price | money }}
+          {%- endif -%}
+        {%- endif -%}
       </span>
     {%- endif -%}
   </{% unless use_custom_element %}div{% else %}product-price{% endunless %}>

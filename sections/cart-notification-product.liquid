@@ -11,7 +11,7 @@
         {% if item.image %}
           {%- if settings.enable_appear_effect -%}
             <use-animate class="skeleton-box">
-          {%- endif -%}  
+          {%- endif -%}
           {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
           <a href="{{ item.url }}" class="cart-item__link flex media media--square" tabindex="-1" aria-hidden="true">
             <img class="cart-item__image"
@@ -36,7 +36,13 @@
           <p class="caption light cart-item__vendor">{{ item.product.vendor }}</p>
         {%- endif -%}
 
-        <a href="{{ item.url }}" class="cart-item__name h6 link link--text font-heading-bold">{{ item.variant.metafields.product_texts.title | escape }}</a>
+        {% if item.product.metafields.product_texts.title %}
+          {% assign title = item.product.metafields.product_texts.title %}
+        {% else %}
+          {% assign title = item.variant.metafields.product_texts.title %}
+        {% endif %}
+
+        <a href="{{ item.url }}" class="cart-item__name h6 link link--text font-heading-bold">{{ title | escape }}</a>
 
         {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
           <dl>

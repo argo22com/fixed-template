@@ -18,9 +18,16 @@
   <div class="{% unless section.settings.enable_section_box_layout %}section-{{ section.id }}-padding page-width{% else %}color-{{ section.settings.color_scheme }} gradient isolate section__box{% endunless %}">
     {%- render 'section-heading' -%}
     <div class="product-attributes">
-      {%- if section.settings.show_description and product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml != blank -%}
+
+      {% if product.metafields.product_texts.descriptionHtml %}
+        {% assign description = product.metafields.product_texts.descriptionHtml %}
+      {% else %}
+        {% assign description = product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml %}
+      {% endif %}
+
+      {%- if section.settings.show_description and description != blank -%}
 				<div class="product__description rte quick-add-hidden">
-					{{ product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml }}
+					{{ description }}
 				</div>
 			{%- endif -%}
 			{%- if section.blocks.size > 0 -%}
@@ -35,8 +42,14 @@
             endif
           endif
         -%}
-				
-				<{% if has_dynamic_attributes %}product-attributes-table{% else %}div{% endif %} class="product-attributes__table grid grid--1-col grid--2-col-tablet grid--3-col-desktop{% if section.settings.show_description and product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml != blank %} element-margin-top{% endif %}{% if section.settings.table_color_scheme != section.settings.color_scheme %} color-{{ section.settings.table_color_scheme }} gradient product-attributes__table--padding{% endif %}" data-section="{{ section.id }}" data-url="{{ product.url }}">
+
+        {% if product.metafields.product_texts.descriptionHtml %}
+          {% assign description = product.metafields.product_texts.descriptionHtml %}
+        {% else %}
+          {% assign description = product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml %}
+        {% endif %}
+
+				<{% if has_dynamic_attributes %}product-attributes-table{% else %}div{% endif %} class="product-attributes__table grid grid--1-col grid--2-col-tablet grid--3-col-desktop{% if section.settings.show_description and description != blank %} element-margin-top{% endif %}{% if section.settings.table_color_scheme != section.settings.color_scheme %} color-{{ section.settings.table_color_scheme }} gradient product-attributes__table--padding{% endif %}" data-section="{{ section.id }}" data-url="{{ product.url }}">
 					{%- for block in section.blocks -%}
             {%- if block.type != 'specifications' -%}
               <div class="grid__item" {{ block.shopify_attributes }}>
@@ -68,18 +81,18 @@
                       when 'product_weight'
                         if current_variant.weight != blank
                           echo current_variant.weight | weight_with_unit
-                        endif	
+                        endif
                       when 'product_text'
                         if block.settings.content != blank
                           echo block.settings.content
-                        endif	
+                        endif
                       endcase
                     -%}
 									</div>
                 </div>
               </div>
             {%- else -%}
-              {%-liquid 
+              {%-liquid
                 assign has_content = true
                 assign block_content = ''
               -%}
@@ -105,7 +118,7 @@
                               assign item_label = key | replace: '_', ' ' | capitalize
                             else
                               assign item_label = splits[0] | strip
-                            endif 
+                            endif
                           -%}
                           {%- if product.metafields[namespace][key] != blank or request.design_mode -%}
                             <li class="grid__item">
@@ -118,29 +131,29 @@
                                       {{ product.metafields[namespace][key] | metafield_tag }}
                                     {% else %}
                                       {{ product.metafields[namespace][key].value[pair[2]] }}
-                                    {% endunless %}  
-                                  {%- else -%}  
+                                    {% endunless %}
+                                  {%- else -%}
                                     <ul>
                                       {%- for field in product.metafields[namespace][key].value -%}
                                         <li>
                                           {%- if product.metafields[namespace][key].type contains 'product_reference' or product.metafields[namespace][key].type contains 'variant_reference' -%}
                                             <a href="{{ field.url }}">{{ field.title }}</a>
-                                          {%- elsif product.metafields[namespace][key].type contains 'metaobject_reference' -%}  
-                                            {{ field[pair[2]] }}  
+                                          {%- elsif product.metafields[namespace][key].type contains 'metaobject_reference' -%}
+                                            {{ field[pair[2]] }}
                                           {%- else -%}
                                             {{ field }}
                                           {%- endif -%}
                                         </li>
-                                      {%- endfor -%}  
+                                      {%- endfor -%}
                                     </ul>
-                                  {%- endunless -%}  
+                                  {%- endunless -%}
                                 {%- else -%}
                                   {%- if product.metafields[namespace][key].value == true -%}
                                     {{ 'general.boolean.true' | t }}
                                   {%- else -%}
                                     {{ 'general.boolean.false' | t }}
-                                  {%- endif -%}    
-                                {%- endunless -%}   
+                                  {%- endif -%}
+                                {%- endunless -%}
                               </div>
                             </li>
                           {%- endif -%}
@@ -212,17 +225,17 @@
                     </div>
                     <div class="product-attributes__table-item__content product-attributes__table-item__content--specifications text-medium">
                       {{ block_content }}
-									</div>	
-									</div>	
-									</div>	
-								{%- endif -%}	
-            {%- endif -%}  
-					{%- endfor -%}	
+									</div>
+									</div>
+									</div>
+								{%- endif -%}
+            {%- endif -%}
+					{%- endfor -%}
 				</{% if has_dynamic_attributes %}product-attributes-table{% else %}div{% endif %}>
         {%- if has_dynamic_attributes -%}
           <script src="{{ 'component-product-attributes-table.js' | asset_url }}" defer="defer"></script>
-        {%- endif -%}  
-			{%- endif -%}	
+        {%- endif -%}
+			{%- endif -%}
     </div>
   </div>
 </div>
