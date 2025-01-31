@@ -198,15 +198,6 @@
         "padding_bottom": 40
       }
     },
-    "compatible_devices_RArtVK": {
-      "type": "compatible-devices",
-      "settings": {
-        "title": "Kompatibilní zařízení",
-        "title_size": "h3",
-        "compatible_devices_metafield_namespace": "product_compatible_devices",
-        "compatible_devices_metafield_name": "devices_metaobject"
-      }
-    },
     "8124c74c-24a1-4cc3-9369-91db0fab3a14": {
       "type": "spacer",
       "settings": {
@@ -252,6 +243,15 @@
         "padding_bottom": 52
       }
     },
+    "compatible_devices_7BY8g8": {
+      "type": "compatible-devices",
+      "settings": {
+        "title": "Kompatibilní zařízení",
+        "title_size": "h3",
+        "compatible_devices_metafield_namespace": "product_compatible_devices",
+        "compatible_devices_metafield_name": "devices_metaobject"
+      }
+    },
     "0fcf424c-972e-4afd-b20d-49aaed072495": {
       "type": "spacer",
       "disabled": true,
@@ -269,10 +269,10 @@
   "order": [
     "main",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
-    "compatible_devices_RArtVK",
     "8124c74c-24a1-4cc3-9369-91db0fab3a14",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
+    "compatible_devices_7BY8g8",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
     "168088586605a49d77"
   ]
