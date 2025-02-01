@@ -174,6 +174,10 @@
           "settings": {
             "title": "Dokumenty ke stažení"
           }
+        },
+        "judge_me_reviews_review_widget_cd63JP": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
       "block_order": [
@@ -182,7 +186,8 @@
         "cbb96b5f-f683-42e5-b865-6ac18e11645e",
         "size_chart_page_h8pBMk",
         "metafields_XkQWGr",
-        "files_dWmtVg"
+        "files_dWmtVg",
+        "judge_me_reviews_review_widget_cd63JP"
       ],
       "custom_css": [
         ".jdgm-rev-widg__title {display: none;}",
