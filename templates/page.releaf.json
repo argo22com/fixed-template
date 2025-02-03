@@ -18,7 +18,7 @@
         "color_scheme": "background-2",
         "padding_top": 40,
         "padding_bottom": 40,
-        "ul_li_marker": "#000"
+        "ul_li_marker": "#000000"
       }
     },
     "image_banner_x8BxCc": {
@@ -90,7 +90,7 @@
         "heading_xi6Qgt": {
           "type": "heading",
           "settings": {
-            "heading": "Zlepšujeme život s chytrými zařízeními. Udržitelně",
+            "heading": "Zlepšujeme život s chytrými zařízeními. Udržitelně.",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -98,7 +98,7 @@
         "text_M496Hi": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>FIXED ReLEAF</strong></p><p>Výrobky a projekty pro udržitelnou budoucnost jsou označeny logem ReLeaf, inspirovaným naším národním stromem - lípou s listy ve tvaru srdce.</p><p><strong>Žádný greenwashing</strong></p><p>Všechny produkty nebo činnosti ReLeaf jsou podloženy konkrétními opatřeními a/nebo celosvětově uznávanými certifikáty, jako jsou GRS, ISCC a další.</p>",
+            "text": "<p><strong>FIXED ReLeaf</strong></p><p>Výrobky a projekty pro udržitelnou budoucnost jsou označeny logem ReLeaf, inspirovaným naším národním stromem - lípou s listy ve tvaru srdce.</p><p><strong>Žádný greenwashing</strong></p><p>Všechny produkty nebo činnosti ReLeaf jsou podloženy konkrétními opatřeními a/nebo celosvětově uznávanými certifikáty, jako jsou GRS, ISCC a další.</p>",
             "text_style": "body"
           }
         }
@@ -356,7 +356,7 @@
         "text_tCNjeN": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Vyrobeno a zabaleno v Evropské unii</li><li>Vyrobeno z recyklovaných materiálů pocházejících ze starých, neprodaných skladových obalů TPU</li><li>Nižší uhlíková stopa (podloženo univerzitní studií)</li><li>Výrobek s certifikací ISCC Plus</li><li>Kvalita a cena srovnatelná s panenskými pouzdry TPU vyrobenými v Asii</li></ul><p></p>"
+            "text": "<ul><li>Vyrobeno a zabaleno v Evropské unii</li><li>Vyrobeno z recyklovaných materiálů pocházejících ze starých, neprodaných skladových obalů TPU</li><li>Nižší uhlíková stopa (podloženo univerzitní studií)</li><li>Výrobek s certifikací ISCC Plus</li></ul><p></p><p></p>"
           }
         }
       },
@@ -423,7 +423,7 @@
         "title": "Jak probíhá výroba ReStory?",
         "subtitle": "",
         "heading_size": "h1",
-        "video_url": "https://youtu.be/3HqEqEg3brg",
+        "video_url": "https://www.youtube.com/watch?v=Fx_Po1G_j9Y",
         "description": "",
         "autoplay": false,
         "enable_controls": false,
