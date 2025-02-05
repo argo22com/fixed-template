@@ -203,13 +203,7 @@
         "padding_bottom": 40
       }
     },
-    "8124c74c-24a1-4cc3-9369-91db0fab3a14": {
-      "type": "spacer",
-      "settings": {
-        "height": 40
-      }
-    },
-"b861113b-71fc-41c9-bf1f-80084a7d6f04": {
+    "b861113b-71fc-41c9-bf1f-80084a7d6f04": {
       "type": "image-with-text",
       "blocks": {
         "1c8c05ca-c7d8-4489-a553-62bdaf63a430": {
@@ -240,7 +234,8 @@
           "settings": {
             "button_label": "Button label",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -269,12 +264,14 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
         "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
       }
     },
@@ -290,6 +287,8 @@
         "enable_controls": false,
         "enable_video_looping": true,
         "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 40
@@ -326,7 +325,8 @@
           "settings": {
             "button_label": "Button label",
             "button_link": "",
-            "button_style": "solid"
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
@@ -355,13 +355,21 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
+        "color_icon": "#000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
         "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
+      }
+    },
+    "spacer_DJMtQa": {
+      "type": "spacer",
+      "settings": {
+        "height": 40
       }
     },
     "6099b098-2d24-4b53-9488-988cbaa630f3": {
@@ -405,6 +413,7 @@
         "title": "Heading",
         "subtitle": "Subheading",
         "heading_size": "h2",
+        "enable_section_box_layout": false,
         "color_scheme": "background-2",
         "table_color_scheme": "",
         "padding_top": 80,
@@ -427,6 +436,7 @@
             "badge": "",
             "badge_style": "box",
             "url": "",
+            "enable_parallax_scrolling_effect": false,
             "desktop_column": 2,
             "desktop_row": 1,
             "desktop_content_position": "middle-right",
@@ -452,8 +462,12 @@
             "button_label": "",
             "button_style": "primary",
             "url": "",
+            "button_label_2": "",
+            "button_style_2": "primary",
+            "url_2": "",
             "badge": "",
             "badge_style": "box",
+            "image_overlay_opacity": 0,
             "desktop_column": 2,
             "desktop_row": 2,
             "desktop_content_position": "bottom-left",
@@ -462,11 +476,13 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_button_text_2": "#0a0a0a",
+            "color_button_2": "#fafafa",
+            "color_badge": "#ffffff"
           }
         },
         "f021690c-4bfa-4e48-99c0-64dfa7047013": {
@@ -482,6 +498,7 @@
             "badge": "Badge label",
             "badge_style": "underlined",
             "url": "",
+            "enable_parallax_scrolling_effect": false,
             "desktop_column": 2,
             "desktop_row": 2,
             "desktop_content_position": "top-left",
@@ -510,6 +527,7 @@
             "badge": "",
             "badge_style": "box",
             "url": "",
+            "enable_parallax_scrolling_effect": false,
             "desktop_column": 2,
             "desktop_row": 2,
             "desktop_content_position": "middle-center",
@@ -538,6 +556,7 @@
             "badge": "",
             "badge_style": "box",
             "url": "",
+            "enable_parallax_scrolling_effect": false,
             "desktop_column": 2,
             "desktop_row": 1,
             "desktop_content_position": "middle-center",
@@ -566,6 +585,8 @@
         "desktop_row_height": 30,
         "desktop_gap": 30,
         "mobile_gap": 10,
+        "hide_when_empty_content": true,
+        "enable_section_box_layout": false,
         "media_border_thickness": 1,
         "media_border_opacity": 5,
         "media_radius": 10,
@@ -647,6 +668,7 @@
         "auto_fit": false,
         "column_alignment": "center",
         "highlight_icon": false,
+        "enable_section_box_layout": false,
         "color_scheme": "background-2",
         "border_width": 1,
         "border_opacity": 0,
@@ -662,7 +684,12 @@
         "padding_bottom": 80
       }
     },
-    
+    "8124c74c-24a1-4cc3-9369-91db0fab3a14": {
+      "type": "spacer",
+      "settings": {
+        "height": 40
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -731,6 +758,7 @@
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "6524c6b3-5b0c-4c1f-bffa-e9ea1819e293",
+    "spacer_DJMtQa",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
     "96482c8e-18e4-432f-a2aa-323d63bd401b",
     "6925b9d2-abbc-4e33-ad59-0e7408e9fa5c",
