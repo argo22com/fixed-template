@@ -375,6 +375,38 @@
         "height": 40
       }
     },
+    "main_product_attributes_96pJ83": {
+      "type": "main-product-attributes",
+      "blocks": {
+        "product_brand_VHqaeG": {
+          "type": "product_brand",
+          "settings": {
+            "title": "Brand"
+          }
+        },
+        "product_type_TLLnxF": {
+          "type": "product_type",
+          "settings": {
+            "title": "Type"
+          }
+        }
+      },
+      "block_order": [
+        "product_brand_VHqaeG",
+        "product_type_TLLnxF"
+      ],
+      "settings": {
+        "show_description": false,
+        "title": "Product information",
+        "subtitle": "",
+        "heading_size": "h1",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "table_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "6099b098-2d24-4b53-9488-988cbaa630f3": {
       "type": "main-product-attributes",
       "blocks": {
@@ -765,6 +797,7 @@
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "6524c6b3-5b0c-4c1f-bffa-e9ea1819e293",
     "spacer_DJMtQa",
+    "main_product_attributes_96pJ83",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
     "96482c8e-18e4-432f-a2aa-323d63bd401b",
     "6925b9d2-abbc-4e33-ad59-0e7408e9fa5c",
