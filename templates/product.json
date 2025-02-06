@@ -245,6 +245,7 @@
         "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1",
         "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-button-1"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "height": "adapt",
@@ -264,7 +265,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -277,6 +278,7 @@
     },
     "9fea5ba7-31d4-4140-849f-3a727ceb4e8f": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "title": "",
         "subtitle": "",
@@ -336,6 +338,7 @@
         "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-text-1",
         "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-button-1"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "height": "adapt",
@@ -355,7 +358,7 @@
         "color_highlight_text": "#da2127",
         "color_caption": "#000000",
         "color_countdown": "#000000",
-        "color_icon": "#000",
+        "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
         "background_container": "#ffffff",
@@ -408,6 +411,7 @@
         "c2731e6a-27ad-4c71-b114-f2c62da34e42",
         "517e3875-04c8-4ad9-a3de-d00c3d5a9451"
       ],
+      "disabled": true,
       "settings": {
         "show_description": false,
         "title": "Heading",
@@ -580,6 +584,7 @@
         "template--20218412368173__96482c8e-18e4-432f-a2aa-323d63bd401b-promotion-banner-3",
         "15b33dd5-ee65-4ea7-8245-87f31a0e1ca9"
       ],
+      "disabled": true,
       "settings": {
         "layout": "grid",
         "desktop_row_height": 30,
@@ -656,6 +661,7 @@
         "30dc71fe-cc0b-42b9-a7bd-6aa2cf6b75f2",
         "78c4d097-d1bf-491a-bea4-33ee68120df8"
       ],
+      "disabled": true,
       "settings": {
         "title": "Heading",
         "subtitle": "Subheading",
