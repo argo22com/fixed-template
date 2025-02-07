@@ -334,8 +334,30 @@
             "color_scheme": "inverse"
           }
         },
+        "mega_menu_promotion_fXE9Ac": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Blog",
+            "title": "Zdraví baterie",
+            "image": "shopify://shop_images/FIXMPOS-AL2-BK-LSF1.jpg",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "Jak se starat o baterku v telefonu?",
+            "subheading": "Máme pro tebe 11 tipů",
+            "button_label": "číst",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://blogs/news/11-tipu-jak-v-mrazivych-dnech-i-horku-spravne-pecovat-o-baterii-mobilu",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
         "mega_menu_promotion_fBdRTY": {
           "type": "mega_menu_promotion",
+          "disabled": true,
           "settings": {
             "trigger": "Blog",
             "title": "MagSafe",
@@ -413,6 +435,7 @@
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "mega_menu_promotion_9HJwDd",
         "mega_menu_promotion_ya4VNA",
+        "mega_menu_promotion_fXE9Ac",
         "mega_menu_promotion_fBdRTY",
         "mega_menu_promotion_TLTfPK",
         "mega_menu_promotion_LL7tjW"
