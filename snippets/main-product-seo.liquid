@@ -32,11 +32,23 @@
   assign variant_count = product.variants | size
 -%}
 
+{%- if product.metafields.product_texts.title %}
+  {% assign title = product.metafields.product_texts.title %}
+{% else %}
+  {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+{% endif %}
+
+{%- if product.metafields.product_texts.descriptionHtml %}
+  {% assign description = product.metafields.product_texts.descriptionHtml %}
+{% else %}
+  {% assign description = product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml %}
+{% endif %}
+
 <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
     "@type": "Product",
-    "name": {{ product.selected_or_first_available_variant.metafields.product_texts.title | json }},
+    "name": {{ title | json }},
     "url": {{ request.origin | append: product.url | json }},
     "productID": "{{ product.id }}",
     {% if seo_media -%}
@@ -44,17 +56,17 @@
         {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
       ],
     {%- endif %}
-    "description": {{ product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml | strip_html | json }},
+    "description": {{ description | strip_html | json }},
     {% if current_variant.sku != blank -%}
       "sku": {{ current_variant.sku | json }},
     {%- endif %}
     {%- if current_variant.barcode != blank -%}
       {%- if current_variant.barcode.size == 12 -%}
         "gtin12": {{ current_variant.barcode }},
-      {%- elsif current_variant.barcode.size == 13 -%}  
+      {%- elsif current_variant.barcode.size == 13 -%}
         "gtin13": {{ current_variant.barcode }},
-      {%- elsif current_variant.barcode.size == 14 -%}  
-        "gtin14": {{ current_variant.barcode }}, 
+      {%- elsif current_variant.barcode.size == 14 -%}
+        "gtin14": {{ current_variant.barcode }},
       {%- else -%}
         "mpn": {{ current_variant.barcode | json }},
       {%- endif -%}
@@ -69,14 +81,14 @@
           "@type" : "Offer",
           {%- if variant.sku != blank -%}
             "sku": {{ variant.sku | json }},
-          {%- endif -%}  
+          {%- endif -%}
           {%- if variant.barcode != blank -%}
             {%- if variant.barcode.size == 12 -%}
               "gtin12": {{ variant.barcode }},
-            {%- elsif variant.barcode.size == 13 -%}  
+            {%- elsif variant.barcode.size == 13 -%}
               "gtin13": {{ variant.barcode }},
-            {%- elsif variant.barcode.size == 14 -%}  
-              "gtin14": {{ variant.barcode }}, 
+            {%- elsif variant.barcode.size == 14 -%}
+              "gtin14": {{ variant.barcode }},
             {%- else -%}
               "mpn": {{ variant.barcode | json }},
             {%- endif -%}
@@ -90,7 +102,7 @@
             {%- for option in product.options -%}
             ,{{ option | json }}: {{ variant.options[forloop.index0] | json }}
             {%- endfor -%}
-          {%- endif -%}      
+          {%- endif -%}
         }{% unless forloop.last %},{% endunless %}
       {%- endfor -%}
     ]
@@ -113,7 +125,7 @@
           assign rating_count = product.metafields.loox.num_reviews | default: 0 | plus: 0
           if product.metafields.loox.avg_rating.value != blank
             assign has_rating_data = true
-          endif  
+          endif
         when 'okendo'
           assign rating_summary_data = product.metafields.okendo.summaryData
           assign rating_value = rating_summary_data.reviewAverageValue | default: 0 | plus: 0.0
@@ -122,7 +134,7 @@
           assign rating_min = 1.0
           if rating_summary_data != blank
             assign has_rating_data = true
-          endif 
+          endif
         when 'stamped'
           assign rating_value = product.metafields.stamped.reviews_average | default: 0 | plus: 0.0
           assign rating_count = product.metafields.stamped.reviews_count | default: 0 | plus: 0
@@ -130,7 +142,7 @@
           assign rating_min = 1.0
           if product.metafields.stamped.reviews_average != blank
             assign has_rating_data = true
-          endif  
+          endif
         endcase
       -%}
       {%- if has_rating_data -%}
@@ -142,6 +154,6 @@
           "bestRating": "{{ rating_max }}"
         }
       {%- endif -%}
-    {%- endunless -%}  
+    {%- endunless -%}
   }
 </script>

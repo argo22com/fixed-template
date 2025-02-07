@@ -3,12 +3,18 @@
     <link rel="stylesheet" href="{{ 'quick-view.css' | asset_url }}" media="print" onload="this.media='all'">
     <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
     <quick-view-modal-opener data-modal="#QuickView-Modal" class="visually-hidden">
+      {% if product.metafields.product_texts.title %}
+        {% assign title = product.metafields.product_texts.title %}
+      {% else %}
+        {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+      {% endif %}
+
       <button
         type="button"
         class="quick-view__submit button"
         aria-haspopup="dialog"
         data-product-url="{{ product.url }}"
-        aria-label="{{ product.selected_or_first_available_variant.metafields.product_texts.title | escape }}"
+        aria-label="{{ title | escape }}"
       >
         {%- render 'icon-eye' -%}
         <div class="loading-overlay__spinner hidden">
@@ -264,9 +270,16 @@
                   {%- when 'title' -%}
                     <div class="product__title" {{ block.shopify_attributes }}>
                       {%- if block.settings.show_vendor_link and product.vendor -%}
-                        <a href="{{ product.vendor | url_for_vendor }}" class="link color-foreground db w100 product__vendor-link font-body-semi-bold break">{{ 'products.product.by_vendor_html' | t: vendor: product.vendor }}</a>  
+                        <a href="{{ product.vendor | url_for_vendor }}" class="link color-foreground db w100 product__vendor-link font-body-semi-bold break">{{ 'products.product.by_vendor_html' | t: vendor: product.vendor }}</a>
                       {%- endif -%}
-                      <a href="{{ product.url }}" class="{{ block.settings.title_size }} font-heading-extra-bold margin0">{{ product.selected_or_first_available_variant.metafields.product_texts.title | escape }}</a>
+
+                      {% if product.metafields.product_texts.title %}
+                        {% assign title = product.metafields.product_texts.title %}
+                      {% else %}
+                        {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+                      {% endif %}
+
+                      <a href="{{ product.url }}" class="{{ block.settings.title_size }} font-heading-extra-bold margin0">{{ title | escape }}</a>
                     </div>
                   {%- when 'price' -%}
                     <div id="price-top-{{ section.id }}" {{ block.shopify_attributes }}>
@@ -281,7 +294,7 @@
                           -%}
                         </div>
                       {%- else -%}
-                        {%- render 'price-varies', target: product -%}  
+                        {%- render 'price-varies', target: product -%}
                       {%- endunless -%}
                     </div>
                     {%- render 'main-product-volume-pricing-note', product: product, section_id: section.id, on_background_input: section.settings.use_background_input -%}
@@ -305,9 +318,15 @@
                       </div>
                     {%- endif -%}
                   {%- when 'description' -%}
-                    {%- if product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml != blank -%}
+                    {% if product.metafields.product_texts.descriptionHtml %}
+                      {% assign descriptionHtml = product.metafields.product_texts.descriptionHtml %}
+                    {% else %}
+                      {% assign descriptionHtml = product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml %}
+                    {% endif %}
+
+                    {%- if descriptionHtml != blank -%}
                       <div class="product__description rte">
-                        {{ product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml }}
+                        {{ descriptionHtml }}
                       </div>
                     {%- endif -%}
                   {%- when 'custom_liquid' -%}
@@ -341,7 +360,14 @@
                     {%- endif -%}
                   {%- when 'share' -%}
                     {%- assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin -%}
-                    {%- render 'main-product-share', share_url: share_url, title: product.selected_or_first_available_variant.metafields.product_texts.title, block: block, featured_media: featured_media -%}
+
+                    {% if product.metafields.product_texts.title %}
+                      {% assign title = product.metafields.product_texts.title %}
+                    {% else %}
+                      {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+                    {% endif %}
+
+                    {%- render 'main-product-share', share_url: share_url, title: title, block: block, featured_media: featured_media -%}
                   {%- when 'sale_box' -%}
                     <div class="product__sale-box product__info-box flex flex-column{% if block.settings.picker_type == 'button' %} overflow-hidden{% endif %}" {{ block.shopify_attributes }}>
                       {%- render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id -%}
@@ -375,7 +401,7 @@
                             </svg>
                             <span class="product-form__error-message"></span>
                           </div>
-          
+
                           {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                             <div class="product-form__buttons product-form__buttons--input {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}product-form__buttons-group{% else %}product-form__buttons-single{% endif %}">
@@ -491,7 +517,7 @@
         {%- if has_countdown or request.design_mode -%}
             <script src="{{ 'countdown.js' | asset_url }}" defer="defer"></script>
             {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
-        {%- endif -%}  
+        {%- endif -%}
 
         {%- assign collapsible_tabs = section.blocks | where: "type", "collapsible_tab" -%}
         {%- if collapsible_tabs.size > 0 -%}

@@ -49,7 +49,12 @@
       {%- render 'product-thumbnail-img', image: media.preview_image, sizes: sizes, lazy_load: lazy_load -%}
     </div>
     <a href="{% if media.media_type == 'video' %}{{ media.sources[1].url }}{% else %}{{ media | external_video_url }}{% endif %}" class="product__media-toggle">
-      <span class="visually-hidden">{{ 'products.product.video_exit_message' | t: title: product.selected_or_first_available_variant.metafields.product_texts.title | escape }}</span>
+      {% if product.metafields.product_texts.title %}
+        {% assign title = product.metafields.product_texts.title %}
+      {% else %}
+        {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+      {% endif %}
+      <span class="visually-hidden">{{ 'products.product.video_exit_message' | t: title: title | escape }}</span>
     </a>
   </noscript>
 {%- endif -%}
@@ -72,8 +77,8 @@
         {%- render 'product-thumbnail-img', image: media.preview_image, sizes: sizes, lazy_load: lazy_load -%}
       </div>
       {%- render 'icon-cart-loading', add_classes: 'product__media-loading no-js-hidden' -%}
-    </div>  
-  {%- endunless -%}  
+    </div>
+  {%- endunless -%}
 {%- endif -%}
 
 {%- if media.media_type != 'image' -%}
@@ -118,13 +123,20 @@
   {%- if media.media_type == 'model' -%}
     </product-model>
     {%- if xr_button -%}
+
+      {% if product.metafields.product_texts.title %}
+        {% assign title = product.metafields.product_texts.title %}
+      {% else %}
+        {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+      {% endif %}
+
       <button
         class="button flex w100 product__xr-button"
         type="button"
         aria-label="{{ 'products.product.xr_button_label' | t }}"
         data-shopify-xr
         data-shopify-model3d-id="{{ media.id }}"
-        data-shopify-title="{{ product.selected_or_first_available_variant.metafields.product_texts.title | escape }}"
+        data-shopify-title="{{ title | escape }}"
         data-shopify-xr-hidden
         >
         {% render 'icon-3d-model' %}
