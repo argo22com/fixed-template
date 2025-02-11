@@ -271,7 +271,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/restory-black-2.jpg",
+        "image": "shopify://shop_images/restory-black-2cz.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -304,8 +304,8 @@
       "type": "image-banner",
       "settings": {
         "layout": "grid",
-        "image": "shopify://shop_images/restory_black.jpg",
-        "image_mobile": "shopify://shop_images/restory_black.jpg",
+        "image": "shopify://shop_images/restory-black-3cz.jpg",
+        "image_mobile": "shopify://shop_images/restory-black-3cz.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_height_mobile": "adapt-mobile",
@@ -379,7 +379,7 @@
       "type": "image-banner",
       "settings": {
         "layout": "grid",
-        "image": "shopify://shop_images/restory_graf_5fedbabe-72bc-4d3e-b83a-dcae5a5fee1d.jpg",
+        "image": "shopify://shop_images/ReLeaf-cz5.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_height_mobile": "medium-mobile",
