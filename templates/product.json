@@ -166,8 +166,7 @@
         },
         "judge_me_reviews_review_widget_8VjJfr": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "settings": {}
         },
         "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
           "type": "page_content",
@@ -276,6 +275,69 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "image_with_text_6RrDUW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xQxBhe": {
+          "type": "heading",
+          "settings": {
+            "heading": "cokoliv",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_Ar7Tae": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_cg4TAA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xQxBhe",
+        "text_Ar7Tae",
+        "button_cg4TAA"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
     }
   },
   "order": [
@@ -285,6 +347,7 @@
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
-    "168088586605a49d77"
+    "168088586605a49d77",
+    "image_with_text_6RrDUW"
   ]
 }
