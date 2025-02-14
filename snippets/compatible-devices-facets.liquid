@@ -35,20 +35,17 @@
   | first
 %}
 
-{%- assign manufacturers_and_models_map_filter_values = '' | split: '' -%}
+{%- assign manufacturers_and_models_map_filter_values = '' -%}
 
-{%- for value in manufacturers_and_models_map_filter.values %}
-  {% assign value_arr = value.value | split: '_' %}
+{% paginate metaobjects.phone_properties.values by 2000 %}
+  {% for phone_property in metaobjects.phone_properties.values %}
+    {% if manufacturers_filter.active_values[0].value == phone_property.manufacturer.value %}
+      {% assign manufacturers_and_models_map_filter_values = manufacturers_and_models_map_filter_values | append: phone_property.manufacturer.value | append: '_' | append: phone_property.model.value | append: '~' %}
+    {% endif %}
+  {% endfor %}
+{% endpaginate %}
 
-  {% if manufacturers_filter.active_values.first.value
-    and value_arr[0] == manufacturers_filter.active_values.first.value
-  %}
-    {%- assign manufacturers_and_models_map_filter_values = manufacturers_and_models_map_filter.values
-      | slice: forloop.index0, 1
-      | concat: manufacturers_and_models_map_filter_values
-    -%}
-  {% endif %}
-{%- endfor -%}
+{% assign manufacturers_and_models_map_filter_values = manufacturers_and_models_map_filter_values | split: '~' | uniq %}
 
 <style>
   .compatible-devices-facet-filter {
@@ -116,12 +113,12 @@
             </option>
             {%- for filter_value in manufacturers_and_models_map_filter_values %}
               <option
-                value="{{ filter_value.value | escape }}"
-                {% if filter_value.active %}
+                value="{{ filter_value | escape }}"
+                {% if filter_value == manufacturers_and_models_map_filter.active_value %}
                   selected
                 {% endif %}
               >
-                {{ filter_value.label | split: '_' | last }}
+                {{ filter_value | split: '_' | last }}
               </option>
             {%- endfor %}
           </select>
@@ -134,25 +131,30 @@
 </facet-filters-form>
 
 <script>
-if (!customElements.get('compatible-devices-facet-filters-form')) {
-  customElements.define('compatible-devices-facet-filters-form', class extends HTMLElement {
-    constructor() {
-      super();
-      this.manufacturers_filter = this.querySelector('[name=\'{{ manufacturers_filter.param_name }}\']');
-      this.manufacturers_and_models_map_filter = this.querySelector('[name=\'{{ manufacturers_and_models_map_filter.param_name }}\']');
-    }
+  if (!customElements.get('compatible-devices-facet-filters-form')) {
+    customElements.define(
+      'compatible-devices-facet-filters-form',
+      class extends HTMLElement {
+        constructor() {
+          super();
+          this.manufacturers_filter = this.querySelector("[name='{{ manufacturers_filter.param_name }}']");
+          this.manufacturers_and_models_map_filter = this.querySelector(
+            "[name='{{ manufacturers_and_models_map_filter.param_name }}']"
+          );
+        }
 
-    connectedCallback() {
-      if (this.manufacturers_filter) {
-        this.manufacturers_filter.addEventListener('change', this.onManufacturersFilterChange.bind(this));
-      }
-    }
+        connectedCallback() {
+          if (this.manufacturers_filter) {
+            this.manufacturers_filter.addEventListener('change', this.onManufacturersFilterChange.bind(this));
+          }
+        }
 
-    onManufacturersFilterChange(event) {
-      if (this.manufacturers_and_models_map_filter.value) {
-        this.manufacturers_and_models_map_filter.value = '';
+        onManufacturersFilterChange(event) {
+          if (this.manufacturers_and_models_map_filter.value) {
+            this.manufacturers_and_models_map_filter.value = '';
+          }
+        }
       }
-    }
-  });
-}
+    );
+  }
 </script>
