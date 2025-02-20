@@ -35,17 +35,7 @@
   | first
 %}
 
-{%- assign manufacturers_and_models_map_filter_values = '' -%}
-
-{% paginate metaobjects.phone_properties.values by 2000 %}
-  {% for phone_property in metaobjects.phone_properties.values %}
-    {% if manufacturers_filter.active_values[0].value == phone_property.manufacturer.value %}
-      {% assign manufacturers_and_models_map_filter_values = manufacturers_and_models_map_filter_values | append: phone_property.manufacturer.value | append: '_' | append: phone_property.model.value | append: '~' %}
-    {% endif %}
-  {% endfor %}
-{% endpaginate %}
-
-{% assign manufacturers_and_models_map_filter_values = manufacturers_and_models_map_filter_values | split: '~' | uniq %}
+{%- assign manufacturers_and_models_map_filter_values = results.metafields.product_compatible_devices[manufacturers_filter.active_values[0].value].value -%}
 
 <style>
   .compatible-devices-facet-filter {
@@ -57,6 +47,12 @@
   }
 </style>
 
+{% for filter in results.filters %}
+  {{ filter.param_name }}
+{% endfor %}
+
+active filter {{ manufacturers_and_models_map_filter.active_values[0].value }}
+
 <facet-filters-form>
   <compatible-devices-facet-filters-form>
     <form id="FacetFiltersForm" class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
@@ -66,7 +62,6 @@
             id="Filter-{{ manufacturers_filter.param_name | escape | handleize }}"
             name="{{ manufacturers_filter.param_name }}"
             class="facets__select select__select"
-            onchange="if (document.querySelector('[name=\'{{ manufacturers_and_models_map_filter.param_name }}\']').value) { document.querySelector('[name=\'{{ manufacturers_and_models_map_filter.param_name }}\']').value = ''; }"
           >
             <option
               value=""
@@ -93,7 +88,7 @@
         </div>
       {% endif %}
 
-      {% if manufacturers_and_models_map_filter %}
+      {% comment %} {% if manufacturers_and_models_map_filter %} {% endcomment %}
         <div class="compatible-devices-facet-filter select facets__filter">
           <select
             id="Filter-{{ manufacturers_and_models_map_filter.param_name | escape | handleize }}"
@@ -105,7 +100,7 @@
           >
             <option
               value=""
-              {% if manufacturers_and_models_map_filter.active_value == blank %}
+              {% if manufacturers_and_models_map_filter.active_values[0].value == blank %}
                 selected
               {% endif %}
             >
@@ -114,18 +109,18 @@
             {%- for filter_value in manufacturers_and_models_map_filter_values %}
               <option
                 value="{{ filter_value | escape }}"
-                {% if filter_value == manufacturers_and_models_map_filter.active_value %}
+                {% if filter_value == manufacturers_and_models_map_filter.active_values[0].value %}
                   selected
                 {% endif %}
               >
-                {{ filter_value | split: '_' | last }}
+                {{ filter_value }}
               </option>
             {%- endfor %}
           </select>
 
           {% render 'icon-caret' %}
         </div>
-      {% endif %}
+      {% comment %} {% endif %} {% endcomment %}
     </form>
   </compatible-devices-facet-filters-form>
 </facet-filters-form>
