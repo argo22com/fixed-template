@@ -252,7 +252,7 @@
         "heading_wGfDFh": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "{{ product.metafields.custom.premium_heading3.value }}",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -260,28 +260,18 @@
         "text_KXEQAn": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>{{ product.metafields.custom.premium_content3 | metafield_tag }}</p>",
             "text_style": "body"
-          }
-        },
-        "button_rFEKcq": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_wGfDFh",
-        "text_KXEQAn",
-        "button_rFEKcq"
+        "text_KXEQAn"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/FIXNDS-BK-PRODUCT-4.jpg",
+        "image": "{{ product.metafields.custom.premium_picture3.value }}",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
