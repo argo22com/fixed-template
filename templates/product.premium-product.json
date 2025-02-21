@@ -195,18 +195,10 @@
     "6524c6b3-5b0c-4c1f-bffa-e9ea1819e293": {
       "type": "image-with-text",
       "blocks": {
-        "27d89652-d5d6-456a-b13d-3e67d35c2b7d": {
-          "type": "caption",
-          "settings": {
-            "caption": "Caption",
-            "text_style": "image-with-text__badge",
-            "text_size": "small"
-          }
-        },
         "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Your heading text",
+            "heading": "{{ product.metafields.custom.premium_heading2.value }}",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -214,29 +206,18 @@
         "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Your description text</p>",
+            "text": "<p>{{ product.metafields.custom.premium_content_2 | metafield_tag }}</p>",
             "text_style": "body"
-          }
-        },
-        "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
-        "27d89652-d5d6-456a-b13d-3e67d35c2b7d",
         "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-heading-1",
-        "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-text-1",
-        "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-button-1"
+        "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-text-1"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/FIXNDS-BK-PRODUCT-3.jpg",
+        "image": "{{ product.metafields.custom.premium_picture_2.value }}",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
