@@ -164,8 +164,8 @@
       "settings": {
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture1.value }}",
-        "height": "adapt",
-        "desktop_image_width": "medium",
+        "height": "small",
+        "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
@@ -218,7 +218,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture_2.value }}",
-        "height": "adapt",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
