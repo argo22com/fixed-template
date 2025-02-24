@@ -211,6 +211,60 @@
         "overlay_color": "#1E40AF"
       }
     },
+    "image_with_text_i6bPEB": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rwtLYW": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.premium_heading_2.value }}",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_A3kDTx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.premium_content_2 | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rwtLYW",
+        "text_A3kDTx"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "{{ product.metafields.custom.premium_picture_2.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5": {
       "type": "main-product-tabs",
       "blocks": {
@@ -345,6 +399,7 @@
   "order": [
     "main",
     "image_with_text_rVJmD8",
+    "image_with_text_i6bPEB",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "8124c74c-24a1-4cc3-9369-91db0fab3a14",
     "product-recommendations",
