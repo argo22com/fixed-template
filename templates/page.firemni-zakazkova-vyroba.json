@@ -312,14 +312,14 @@
         "heading_nyWzwM": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Možnost vyražení iniciálů na produkty</p>",
+            "heading": "<p>Ražba iniciálů a krátkých textů</p>",
             "heading_size": "h1"
           }
         },
         "text_qWnNBJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Nově jsme pro vás připravili možnost na naše produkty vyrazit iniciály, či krátké texty.<br/>Ražení na produkty je možné dělat pouze na zakázku před samotnou, nikoliv již na hotové produkty.<br/>Maximální počet znaků je 8 - 10 (v závislosti na šířce znaků) a k dispozici jsou všechny znaky české abecedy v doplnění o znaky ., #,@ a &.<br/><br/>Pro objednávku prosíme o vyplnění nezávazné poptávky níže.</p>"
+            "text": "<p>Všechny produkty ruční výroby je možné personalizovat ražbou iniciálů nebo krátkých textů. Ražbu provádíme na zakázku a požadavky na vyhotovení je potřeba zadat předem, protože se provádí na nově vyráběný produkt, aby byl výsledek perfektní. <br/>Maximální počet znaků je 8 - 10 (v závislosti na šířce znaků) a k dispozici jsou všechny znaky české abecedy v doplnění o znaky ., #,@ a &.<br/><br/>Pro objednávku prosíme o vyplnění nezávazné poptávky níže.</p>"
           }
         }
       },
