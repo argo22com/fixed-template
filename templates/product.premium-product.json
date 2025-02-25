@@ -303,25 +303,6 @@
         "overlay_color": "#1e40af"
       }
     },
-    "9fea5ba7-31d4-4140-849f-3a727ceb4e8f": {
-      "type": "video",
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h1",
-        "video_url": "",
-        "description": "",
-        "autoplay": true,
-        "enable_controls": false,
-        "enable_video_looping": true,
-        "full_width": false,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5": {
       "type": "main-product-tabs",
       "blocks": {
@@ -354,13 +335,6 @@
             "title": "Výběr správné velikosti pouzdra"
           }
         },
-        "metafields_XkQWGr": {
-          "type": "metafields",
-          "settings": {
-            "title": "FAQ",
-            "namespace_key": "custom.faq_page"
-          }
-        },
         "files_dWmtVg": {
           "type": "files",
           "settings": {
@@ -377,6 +351,13 @@
             "title": "Metafields",
             "namespace_key": ""
           }
+        },
+        "metafields_XkQWGr": {
+          "type": "metafields",
+          "settings": {
+            "title": "FAQ",
+            "namespace_key": "custom.faq_page"
+          }
         }
       },
       "block_order": [
@@ -384,10 +365,10 @@
         "parameters_GiBjwJ",
         "cbb96b5f-f683-42e5-b865-6ac18e11645e",
         "size_chart_page_h8pBMk",
-        "metafields_XkQWGr",
         "files_dWmtVg",
         "judge_me_reviews_review_widget_cd63JP",
-        "metafields_Ac6RFC"
+        "metafields_Ac6RFC",
+        "metafields_XkQWGr"
       ],
       "custom_css": [
         ".jdgm-rev-widg__title {display: none;}",
@@ -401,12 +382,6 @@
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 40
-      }
-    },
-    "spacer_DJMtQa": {
-      "type": "spacer",
-      "settings": {
-        "height": 40
       }
     },
     "6099b098-2d24-4b53-9488-988cbaa630f3": {
@@ -753,6 +728,102 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "lookbook_zixWNP": {
+      "type": "lookbook",
+      "blocks": {
+        "hotspot_qn7kGz": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "color_scheme": "",
+            "colors_background": "#000",
+            "colors_text": "#fff",
+            "horizontal_axis": 30,
+            "vertical_axis": 30,
+            "horizontal_axis_mobile": 30,
+            "vertical_axis_mobile": 30
+          }
+        },
+        "hotspot_xU8HWP": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "color_scheme": "background-1",
+            "colors_background": "#000",
+            "colors_text": "#fff",
+            "horizontal_axis": 30,
+            "vertical_axis": 30,
+            "horizontal_axis_mobile": 30,
+            "vertical_axis_mobile": 30
+          }
+        },
+        "hotspot_TCTaVH": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "color_scheme": "background-1",
+            "colors_background": "#000",
+            "colors_text": "#fff",
+            "horizontal_axis": 30,
+            "vertical_axis": 30,
+            "horizontal_axis_mobile": 30,
+            "vertical_axis_mobile": 30
+          }
+        },
+        "hotspot_aWqRhY": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "color_scheme": "",
+            "colors_background": "#000",
+            "colors_text": "#fff",
+            "horizontal_axis": 60,
+            "vertical_axis": 60,
+            "horizontal_axis_mobile": 60,
+            "vertical_axis_mobile": 60
+          }
+        },
+        "hotspot_3fbfyi": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "color_scheme": "",
+            "colors_background": "#000",
+            "colors_text": "#fff",
+            "horizontal_axis": 80,
+            "vertical_axis": 30,
+            "horizontal_axis_mobile": 80,
+            "vertical_axis_mobile": 30
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_qn7kGz",
+        "hotspot_xU8HWP",
+        "hotspot_TCTaVH",
+        "hotspot_aWqRhY",
+        "hotspot_3fbfyi"
+      ],
+      "settings": {
+        "caption": "",
+        "title": "",
+        "image": "{{ product.metafields.custom.premium_picture3.value }}",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "hotspot_size": "3",
+        "hotspot_size_desktop": "4",
+        "content_layout": "popup",
+        "full_width": true,
+        "color_scheme": "",
+        "product_image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "enable_quick_view": false,
+        "quick_view_button_text": "View",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -760,9 +831,7 @@
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "6524c6b3-5b0c-4c1f-bffa-e9ea1819e293",
     "image_with_text_8jX66E",
-    "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
-    "spacer_DJMtQa",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
     "96482c8e-18e4-432f-a2aa-323d63bd401b",
     "6925b9d2-abbc-4e33-ad59-0e7408e9fa5c",
@@ -771,6 +840,7 @@
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
     "compatible_devices_7BY8g8",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
-    "168088586605a49d77"
+    "168088586605a49d77",
+    "lookbook_zixWNP"
   ]
 }
