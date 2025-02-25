@@ -176,8 +176,8 @@
         "hide_when_empty_image": false,
         "preload": false,
         "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 16,
+        "padding_bottom": 16,
         "color_heading": "#000000",
         "gradient_heading": "",
         "color_text": "#000000",
@@ -230,8 +230,8 @@
         "hide_when_empty_image": false,
         "preload": false,
         "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 16,
+        "padding_bottom": 16,
         "color_heading": "#000000",
         "gradient_heading": "",
         "color_text": "#000000",
@@ -284,8 +284,8 @@
         "hide_when_empty_image": false,
         "preload": false,
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 16,
+        "padding_bottom": 16,
         "color_heading": "#000000",
         "gradient_heading": "",
         "color_text": "#000000",
@@ -390,6 +390,102 @@
       "type": "spacer",
       "settings": {
         "height": 40
+      }
+    },
+    "multicolumn_MG4Miy": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_NmpX3b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img_6834637e-09a2-4ff1-921b-b419dc9d06a1.jpg",
+            "icon": "check",
+            "title": "Tady je první featura",
+            "text": "<p>a tady je nějaký její popis</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#212c4d",
+            "color_button_text": "#fff",
+            "color_button": "#fff",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_8xXfgP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img_6834637e-09a2-4ff1-921b-b419dc9d06a1.jpg",
+            "icon": "check",
+            "title": "Tady je druhá featura",
+            "text": "<p>A tady je její popis</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#212c4d",
+            "color_button_text": "#fff",
+            "color_button": "#fff",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_6T7mEb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img_6834637e-09a2-4ff1-921b-b419dc9d06a1.jpg",
+            "icon": "check",
+            "title": "Třetí featura",
+            "text": "<p>a zase nějaký popis (případně tu může být i tlačítko s odkazem někam ale to asi nechcem, když chcem aby si to zákazník tady koupil a nikam neutíkal. </p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#212c4d",
+            "color_button_text": "#fff",
+            "color_button": "#fff",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_NmpX3b",
+        "column_8xXfgP",
+        "column_6T7mEb"
+      ],
+      "settings": {
+        "title": "Promotion cards",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "tady je ten button, ale já bych ho sem osobně nedávala",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "6099b098-2d24-4b53-9488-988cbaa630f3": {
@@ -790,6 +886,7 @@
     "image_with_text_8jX66E",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "spacer_DJMtQa",
+    "multicolumn_MG4Miy",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
     "banner_grid_jtF8wQ",
     "product-recommendations",
