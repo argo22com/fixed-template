@@ -634,7 +634,7 @@
       "settings": {
         "title": "Více než xy spokojených zákazníků",
         "subtitle": "",
-        "heading_size": "h0",
+        "heading_size": "h2",
         "icon_width_desktop": 18,
         "text_position": "bottom",
         "enable_heading_in_box": false,
@@ -652,7 +652,7 @@
         "border_shape": "square",
         "blur_background": false,
         "columns_mobile": "2",
-        "icon_width_mobile": 50,
+        "icon_width_mobile": 26,
         "border_spacing_mobile": 0,
         "swipe_on_mobile": true,
         "padding_top": 80,
