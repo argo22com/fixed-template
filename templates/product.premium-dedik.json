@@ -22,7 +22,7 @@
         "2525f94e-add4-418e-b362-bd2bb35545fa": {
           "type": "rating",
           "settings": {
-            "show_if_no_reviews": true
+            "show_if_no_reviews": false
           }
         },
         "price": {
@@ -72,15 +72,6 @@
             "collections_label": "Kolekce"
           }
         },
-        "collapsible_tab_Bwyqg3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check",
-            "content": "{{ block.settings.page.content }}",
-            "page": ""
-          }
-        },
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
           "type": "complementary",
           "settings": {
@@ -93,6 +84,12 @@
             "button_enable": true,
             "button_label": "Přihodit do košíku",
             "image_ratio": "square"
+          }
+        },
+        "text_in_multi_line_TGaNjC": {
+          "type": "text_in_multi_line",
+          "settings": {
+            "text": "{{ product.description }}"
           }
         },
         "share": {
@@ -115,8 +112,8 @@
         "popup_XDycdy",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
-        "collapsible_tab_Bwyqg3",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
+        "text_in_multi_line_TGaNjC",
         "share"
       ],
       "settings": {
