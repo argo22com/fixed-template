@@ -457,6 +457,19 @@
     "96482c8e-18e4-432f-a2aa-323d63bd401b": {
       "type": "banner-grid",
       "blocks": {
+        "promotion_video_DpqjCA": {
+          "type": "promotion-video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "description": "",
+            "autoplay": false,
+            "enable_controls": false,
+            "enable_video_looping": true,
+            "desktop_column": 2,
+            "desktop_row": 2,
+            "image_height_mobile": "medium-mobile"
+          }
+        },
         "template--20218412368173__96482c8e-18e4-432f-a2aa-323d63bd401b-promotion-banner-1": {
           "type": "promotion-banner",
           "settings": {
@@ -579,6 +592,7 @@
         }
       },
       "block_order": [
+        "promotion_video_DpqjCA",
         "template--20218412368173__96482c8e-18e4-432f-a2aa-323d63bd401b-promotion-banner-1",
         "f021690c-4bfa-4e48-99c0-64dfa7047013",
         "template--20218412368173__96482c8e-18e4-432f-a2aa-323d63bd401b-promotion-banner-3",
