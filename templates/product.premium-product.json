@@ -148,18 +148,11 @@
             "text": "<p>{{ product.metafields.custom.premium_content1 | metafield_tag }}</p>",
             "text_style": "body"
           }
-        },
-        "icon_V9JpEP": {
-          "type": "icon",
-          "settings": {
-            "icon": "bookmark_alt"
-          }
         }
       },
       "block_order": [
         "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-heading-1",
-        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1",
-        "icon_V9JpEP"
+        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1"
       ],
       "settings": {
         "grid_layout": "grid",
