@@ -75,7 +75,7 @@
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
           "type": "complementary",
           "settings": {
-            "block_heading": "Mohlo by se vám také líbit",
+            "block_heading": "Mohlo by se také hodit",
             "make_collapsible_row": true,
             "icon": "thumb_down",
             "product_list_limit": 3,
