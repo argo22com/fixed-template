@@ -398,15 +398,15 @@
         "c2731e6a-27ad-4c71-b114-f2c62da34e42": {
           "type": "specifications",
           "settings": {
-            "title": "Produktové parametry",
+            "title": "Vlastnosti a funkce",
             "metafields": "product_attributes.material, product_attributes.material-tlacitek, product_attributes.magsafe, product_attributes.typ-zapinani, product_attributes.urceni"
           }
         },
         "517e3875-04c8-4ad9-a3de-d00c3d5a9451": {
           "type": "specifications",
           "settings": {
-            "title": "Label",
-            "metafields": "custom.metafield_key,custom.metafield_key,custom.metafield_key,custom.metafield_key,custom.metafield_key,custom.metafield_key"
+            "title": "Rozměry",
+            "metafields": "product_attributes.rozmer-y, product_attributes.rozmer-x, product_attributes.sirka"
           }
         }
       },
