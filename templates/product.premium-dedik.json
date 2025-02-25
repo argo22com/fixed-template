@@ -459,6 +459,33 @@
     "banner_grid_jtF8wQ": {
       "type": "banner-grid",
       "blocks": {
+        "promotion_text_6Cgzyg": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "Opus",
+            "heading_size": "h1",
+            "text": "<p>Kvalitní pouzdro pro váš telefon</p>",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#000",
+            "color_background": "#fafafa"
+          }
+        },
         "promotion_banner_7kDiq9": {
           "type": "promotion-banner",
           "settings": {
@@ -475,6 +502,36 @@
             "url": "",
             "enable_parallax_scrolling_effect": false,
             "desktop_column": 2,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#fff",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#fff"
+          }
+        },
+        "promotion_banner_yeUWED": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/FIXOP3-100-BK-PRODUCT-3.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Stojánek",
+            "heading_size": "h1",
+            "text": "Pevný a stabilní",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 1,
             "desktop_row": 1,
             "desktop_content_position": "middle-center",
             "desktop_narrow_content": false,
@@ -519,6 +576,19 @@
             "color_badge": "#fff"
           }
         },
+        "promotion_video_kMFJkX": {
+          "type": "promotion-video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=Nvs2f_NKhZY",
+            "description": "Pouzdra Opus",
+            "autoplay": false,
+            "enable_controls": false,
+            "enable_video_looping": true,
+            "desktop_column": 2,
+            "desktop_row": 1,
+            "image_height_mobile": "medium-mobile"
+          }
+        },
         "promotion_banner_YTQwdh": {
           "type": "promotion-banner",
           "settings": {
@@ -551,8 +621,11 @@
         }
       },
       "block_order": [
+        "promotion_text_6Cgzyg",
         "promotion_banner_7kDiq9",
+        "promotion_banner_yeUWED",
         "promotion_banner_mKTq7M",
+        "promotion_video_kMFJkX",
         "promotion_banner_YTQwdh"
       ],
       "settings": {
