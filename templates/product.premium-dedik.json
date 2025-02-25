@@ -303,25 +303,6 @@
         "overlay_color": "#1e40af"
       }
     },
-    "9fea5ba7-31d4-4140-849f-3a727ceb4e8f": {
-      "type": "video",
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h1",
-        "video_url": "",
-        "description": "",
-        "autoplay": true,
-        "enable_controls": false,
-        "enable_video_looping": true,
-        "full_width": false,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5": {
       "type": "main-product-tabs",
       "blocks": {
@@ -806,7 +787,6 @@
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "6524c6b3-5b0c-4c1f-bffa-e9ea1819e293",
     "image_with_text_8jX66E",
-    "9fea5ba7-31d4-4140-849f-3a727ceb4e8f",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "spacer_DJMtQa",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
