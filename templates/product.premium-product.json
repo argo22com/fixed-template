@@ -25,18 +25,18 @@
             "show_if_no_reviews": true
           }
         },
+        "price": {
+          "type": "price",
+          "settings": {
+            "variant_price": true
+          }
+        },
         "popup_XDycdy": {
           "type": "popup",
           "disabled": true,
           "settings": {
             "text": "Tabulka velikostí",
             "page": "tabulka-velikosti-univerzalni-pouzdra"
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-            "variant_price": true
           }
         },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
@@ -53,18 +53,6 @@
             "quantity_selector_enable": true,
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Sdílet",
-            "enable_floating_layout": false,
-            "share_on_facebook": true,
-            "share_on_twitter": true,
-            "share_on_pinterest": true,
-            "share_on_email": true,
-            "share_link": true
           }
         },
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe": {
@@ -84,6 +72,15 @@
             "collections_label": "Kolekce"
           }
         },
+        "collapsible_tab_Bwyqg3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check",
+            "content": "{{ block.settings.page.content }}",
+            "page": ""
+          }
+        },
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
           "type": "complementary",
           "settings": {
@@ -97,17 +94,30 @@
             "button_label": "Přihodit do košíku",
             "image_ratio": "square"
           }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Sdílet",
+            "enable_floating_layout": false,
+            "share_on_facebook": true,
+            "share_on_twitter": true,
+            "share_on_pinterest": true,
+            "share_on_email": true,
+            "share_link": true
+          }
         }
       },
       "block_order": [
         "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
-        "popup_XDycdy",
         "price",
+        "popup_XDycdy",
         "e592d434-8377-4309-b179-f98d4b3742a2",
-        "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
-        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
+        "collapsible_tab_Bwyqg3",
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
+        "share"
       ],
       "settings": {
         "section_width": "page-width",
