@@ -490,7 +490,7 @@
           "type": "promotion-banner",
           "settings": {
             "image": "shopify://shop_images/FIXOP-483-BK-PRODUCT-4.jpg",
-            "image_overlay_opacity": 50,
+            "image_overlay_opacity": 20,
             "heading": "Chrání a funguje",
             "heading_size": "h2",
             "text": "Multifunkční ochrana vašeho zařízení",
@@ -550,7 +550,7 @@
           "type": "promotion-banner",
           "settings": {
             "image": "shopify://shop_images/FIXST-1033-BK-PRODUCT-4.jpg",
-            "image_overlay_opacity": 30,
+            "image_overlay_opacity": 20,
             "heading": "Přesně pro vaše zařízení",
             "heading_size": "h2",
             "text": "Sedí přesně, je to boží",
@@ -579,6 +579,7 @@
         "promotion_video_kMFJkX": {
           "type": "promotion-video",
           "settings": {
+            "cover_image": "shopify://shop_images/FIXOP3-1085-BK-PRODUCT-2.jpg",
             "video_url": "https://www.youtube.com/watch?v=Nvs2f_NKhZY",
             "description": "Pouzdra Opus",
             "autoplay": false,
@@ -593,7 +594,7 @@
           "type": "promotion-banner",
           "settings": {
             "image": "shopify://shop_images/FIXOP2-689-BK-PRODUCT-2.jpg",
-            "image_overlay_opacity": 70,
+            "image_overlay_opacity": 20,
             "heading": "Elegance  bez kompromisů",
             "heading_size": "h2",
             "text": "Funkční a elegantní pouzdro pro širokou paletu zařízení",
