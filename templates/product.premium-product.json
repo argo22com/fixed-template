@@ -771,19 +771,41 @@
             "caption": "",
             "subcaption": ""
           }
+        },
+        "gallery_image_Vi6e3W": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/FIXTOT-1560-PRODUCT-5.jpg",
+            "row": 2,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_Uey7df": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/FIXPUM-1558-TR-PRODUCT-3.jpg",
+            "row": 2,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
         }
       },
       "block_order": [
         "gallery_image_8RcetV",
         "gallery_image_bkeGEd",
         "gallery_image_pgdntt",
-        "gallery_image_3EJwae"
+        "gallery_image_3EJwae",
+        "gallery_image_Vi6e3W",
+        "gallery_image_Uey7df"
       ],
       "settings": {
-        "title": "Gallery with lightbox",
+        "title": "Galerie fotek pro template",
         "heading_size": "h2",
-        "max_rows": 2,
-        "color_scheme": "",
+        "max_rows": 3,
+        "color_scheme": "inverse",
         "show_more_text": "Load more pictures",
         "button_style": "primary",
         "button_size": "normal",
