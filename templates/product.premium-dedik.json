@@ -635,10 +635,11 @@
         "promotion_banner_7kDiq9": {
           "type": "promotion-banner",
           "settings": {
+            "image": "shopify://shop_images/FIXOP-483-BK-PRODUCT-4.jpg",
             "image_overlay_opacity": 50,
-            "heading": "Image banner heading",
+            "heading": "Chrání a funguje",
             "heading_size": "h1",
-            "text": "Give customers details about the banner image(s) or content on the template",
+            "text": "Multifunkční ochrana vašeho zařízení",
             "text_style": "body",
             "button_label": "",
             "button_style": "primary",
@@ -666,9 +667,9 @@
           "settings": {
             "image": "shopify://shop_images/FIXST-1033-BK-PRODUCT-4.jpg",
             "image_overlay_opacity": 50,
-            "heading": "Image banner heading",
+            "heading": "Přesně pro vaše zařízení",
             "heading_size": "h1",
-            "text": "Give customers details about the banner image(s) or content on the template",
+            "text": "Sedí přesně, je to boží",
             "text_style": "body",
             "button_label": "",
             "button_style": "primary",
@@ -694,10 +695,11 @@
         "promotion_banner_YTQwdh": {
           "type": "promotion-banner",
           "settings": {
+            "image": "shopify://shop_images/FIXOP2-689-BK-PRODUCT-2.jpg",
             "image_overlay_opacity": 50,
-            "heading": "Image banner heading",
+            "heading": "Elegance  bez kompromisů",
             "heading_size": "h1",
-            "text": "Give customers details about the banner image(s) or content on the template",
+            "text": "Funkční a elegantní pouzdro pro širokou paletu zařízení",
             "text_style": "body",
             "button_label": "",
             "button_style": "primary",
