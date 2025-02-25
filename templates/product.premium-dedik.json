@@ -460,7 +460,7 @@
         "template--20218412368173__96482c8e-18e4-432f-a2aa-323d63bd401b-promotion-banner-1": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/FIXNDS-BK-PRODUCT-1.jpg",
+            "image": "{{ product.featured_image }}",
             "image_overlay_opacity": 0,
             "heading": "Image banner heading",
             "heading_size": "h2",
