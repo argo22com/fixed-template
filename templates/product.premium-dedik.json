@@ -395,36 +395,11 @@
     "6099b098-2d24-4b53-9488-988cbaa630f3": {
       "type": "main-product-attributes",
       "blocks": {
-        "template--20050134237485__6099b098-2d24-4b53-9488-988cbaa630f3-16896858800c7f6815-0": {
-          "type": "product_brand",
-          "settings": {
-            "title": "FIXED"
-          }
-        },
-        "product_sku_gtJ94Q": {
-          "type": "product_sku",
-          "settings": {
-            "title": "SKU"
-          }
-        },
-        "product_text_JHCFGc": {
-          "type": "product_text",
-          "settings": {
-            "title": "Dimensions",
-            "content": ""
-          }
-        },
-        "template--20050134237485__6099b098-2d24-4b53-9488-988cbaa630f3-16896858800c7f6815-1": {
-          "type": "product_type",
-          "settings": {
-            "title": "Type"
-          }
-        },
         "c2731e6a-27ad-4c71-b114-f2c62da34e42": {
           "type": "specifications",
           "settings": {
-            "title": "Label",
-            "metafields": "namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key"
+            "title": "Produktové parametry",
+            "metafields": "product_attributes.material, namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key"
           }
         },
         "517e3875-04c8-4ad9-a3de-d00c3d5a9451": {
@@ -436,14 +411,9 @@
         }
       },
       "block_order": [
-        "template--20050134237485__6099b098-2d24-4b53-9488-988cbaa630f3-16896858800c7f6815-0",
-        "product_sku_gtJ94Q",
-        "product_text_JHCFGc",
-        "template--20050134237485__6099b098-2d24-4b53-9488-988cbaa630f3-16896858800c7f6815-1",
         "c2731e6a-27ad-4c71-b114-f2c62da34e42",
         "517e3875-04c8-4ad9-a3de-d00c3d5a9451"
       ],
-      "disabled": true,
       "settings": {
         "show_description": false,
         "title": "Heading",
@@ -454,38 +424,6 @@
         "table_color_scheme": "",
         "padding_top": 80,
         "padding_bottom": 80
-      }
-    },
-    "collapsible_content_VAmPik": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_dJ9CfY": {
-          "type": "collapsible_row",
-          "repeater": "{{ product.metafields.product_compatible_devices.devices_metaobject.value }}",
-          "settings": {
-            "heading": "{{ block.repeater.charging_standard_wireless.value }}",
-            "icon": "emoji_happy",
-            "row_content": "<p>{{ block.repeater.charging_connector_type.value }}</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_dJ9CfY"
-      ],
-      "settings": {
-        "section_width": "grid",
-        "title": "Proč právě Opus?",
-        "subtitle": "",
-        "heading_size": "h1",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "hide_image_on_mobile": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "banner_grid_jtF8wQ": {
@@ -827,7 +765,6 @@
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "spacer_DJMtQa",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
-    "collapsible_content_VAmPik",
     "banner_grid_jtF8wQ",
     "product-recommendations",
     "6925b9d2-abbc-4e33-ad59-0e7408e9fa5c",
