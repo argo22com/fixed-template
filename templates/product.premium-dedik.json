@@ -416,8 +416,8 @@
       ],
       "settings": {
         "show_description": false,
-        "title": "Heading",
-        "subtitle": "Subheading",
+        "title": "Produktové parametry",
+        "subtitle": "",
         "heading_size": "h2",
         "enable_section_box_layout": false,
         "color_scheme": "background-2",
