@@ -448,11 +448,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#000",
+            "color_text": "#000000",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#000000",
             "color_background": "#fafafa"
           }
         },
@@ -479,11 +479,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         },
         "promotion_banner_yeUWED": {
@@ -511,9 +511,9 @@
             "elements_gap_mobile": "1.5",
             "color_text": "#212c4d",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         },
         "promotion_banner_mKTq7M": {
@@ -539,11 +539,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         },
         "promotion_video_kMFJkX": {
@@ -583,11 +583,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         }
       },
@@ -755,6 +755,30 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "17404920969756119e": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_CygpiH": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "yotpo_product_reviews_star_rating_DEqaxU": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_CygpiH",
+        "yotpo_product_reviews_star_rating_DEqaxU"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -773,6 +797,7 @@
     "17404812158d872dfd",
     "compatible_devices_7BY8g8",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
-    "168088586605a49d77"
+    "168088586605a49d77",
+    "17404920969756119e"
   ]
 }
