@@ -90,7 +90,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Podrobný popis produktu",
-            "icon": "check",
+            "icon": "arrow_circle_down",
             "content": "{{ product.description }}",
             "page": ""
           }
