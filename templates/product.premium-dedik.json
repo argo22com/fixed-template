@@ -89,7 +89,7 @@
         "collapsible_tab_iGXJKn": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Popis produktu",
+            "heading": "Podrobný popis produktu",
             "icon": "check",
             "content": "{{ product.description }}",
             "page": ""
