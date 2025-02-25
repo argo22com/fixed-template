@@ -317,7 +317,7 @@
         "text_FgJY6f": {
           "type": "text",
           "settings": {
-            "text": "<p>Video by muselo být nahrané mezi médii v shopify, tento modul neumí pracovat v dynamickém režimu jen s polem ve kterém je vloženo URL videa.</p>",
+            "text": "<p>Video by muselo být nahrané mezi médii v shopify, tento modul neumí pracovat v dynamickém režimu jen s polem ve kterém je vloženo URL videa.</p><p>Cover obrázek videa ale v dynamickém rezimu už být může, tj. každý produkt může mít svůj vlastní.</p>",
             "text_style": "body"
           }
         }
