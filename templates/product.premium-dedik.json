@@ -563,7 +563,7 @@
         "hide_when_empty_content": true,
         "enable_section_box_layout": false,
         "media_border_thickness": 1,
-        "media_border_opacity": 5,
+        "media_border_opacity": 55,
         "media_radius": 15,
         "enable_shadow": true,
         "padding_top": 36,
