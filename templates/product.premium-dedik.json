@@ -456,6 +456,120 @@
         "padding_bottom": 80
       }
     },
+    "banner_grid_jtF8wQ": {
+      "type": "banner-grid",
+      "blocks": {
+        "promotion_banner_7kDiq9": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/FIXOP-483-BK-PRODUCT-4.jpg",
+            "image_overlay_opacity": 50,
+            "heading": "Chrání a funguje",
+            "heading_size": "h1",
+            "text": "Multifunkční ochrana vašeho zařízení",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 2,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#fff",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#fff"
+          }
+        },
+        "promotion_banner_mKTq7M": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/FIXST-1033-BK-PRODUCT-4.jpg",
+            "image_overlay_opacity": 50,
+            "heading": "Přesně pro vaše zařízení",
+            "heading_size": "h1",
+            "text": "Sedí přesně, je to boží",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 2,
+            "desktop_row": 2,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#fff",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#fff"
+          }
+        },
+        "promotion_banner_YTQwdh": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/FIXOP2-689-BK-PRODUCT-2.jpg",
+            "image_overlay_opacity": 50,
+            "heading": "Elegance  bez kompromisů",
+            "heading_size": "h1",
+            "text": "Funkční a elegantní pouzdro pro širokou paletu zařízení",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 2,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#fff",
+            "color_gradient_heading": "",
+            "color_button_text": "#fff",
+            "color_button": "#2563EB",
+            "color_badge": "#fff"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_banner_7kDiq9",
+        "promotion_banner_mKTq7M",
+        "promotion_banner_YTQwdh"
+      ],
+      "settings": {
+        "layout": "grid",
+        "desktop_row_height": 30,
+        "desktop_gap": 30,
+        "mobile_gap": 10,
+        "hide_when_empty_content": true,
+        "enable_section_box_layout": false,
+        "media_border_thickness": 1,
+        "media_border_opacity": 5,
+        "media_radius": 15,
+        "enable_shadow": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -628,120 +742,6 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "banner_grid_jtF8wQ": {
-      "type": "banner-grid",
-      "blocks": {
-        "promotion_banner_7kDiq9": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/FIXOP-483-BK-PRODUCT-4.jpg",
-            "image_overlay_opacity": 50,
-            "heading": "Chrání a funguje",
-            "heading_size": "h1",
-            "text": "Multifunkční ochrana vašeho zařízení",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 1,
-            "desktop_content_position": "middle-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
-            "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
-          }
-        },
-        "promotion_banner_mKTq7M": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/FIXST-1033-BK-PRODUCT-4.jpg",
-            "image_overlay_opacity": 50,
-            "heading": "Přesně pro vaše zařízení",
-            "heading_size": "h1",
-            "text": "Sedí přesně, je to boží",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 2,
-            "desktop_content_position": "middle-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
-            "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
-          }
-        },
-        "promotion_banner_YTQwdh": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/FIXOP2-689-BK-PRODUCT-2.jpg",
-            "image_overlay_opacity": 50,
-            "heading": "Elegance  bez kompromisů",
-            "heading_size": "h1",
-            "text": "Funkční a elegantní pouzdro pro širokou paletu zařízení",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 1,
-            "desktop_content_position": "middle-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
-            "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
-          }
-        }
-      },
-      "block_order": [
-        "promotion_banner_7kDiq9",
-        "promotion_banner_mKTq7M",
-        "promotion_banner_YTQwdh"
-      ],
-      "settings": {
-        "layout": "grid",
-        "desktop_row_height": 30,
-        "desktop_gap": 30,
-        "mobile_gap": 10,
-        "hide_when_empty_content": true,
-        "enable_section_box_layout": false,
-        "media_border_thickness": 1,
-        "media_border_opacity": 5,
-        "media_radius": 15,
-        "enable_shadow": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -752,6 +752,7 @@
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "spacer_DJMtQa",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
+    "banner_grid_jtF8wQ",
     "product-recommendations",
     "6925b9d2-abbc-4e33-ad59-0e7408e9fa5c",
     "8124c74c-24a1-4cc3-9369-91db0fab3a14",
@@ -760,7 +761,6 @@
     "compatible_devices_7BY8g8",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
     "168088586605a49d77",
-    "rich_text_zW4jWQ",
-    "banner_grid_jtF8wQ"
+    "rich_text_zW4jWQ"
   ]
 }
