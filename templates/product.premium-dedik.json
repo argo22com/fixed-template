@@ -777,6 +777,7 @@
         "yotpo_product_reviews_reviews_CygpiH",
         "yotpo_product_reviews_star_rating_DEqaxU"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
