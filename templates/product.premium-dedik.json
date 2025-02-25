@@ -714,8 +714,8 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "title": "Podobné produkty",
-        "subtitle": "mohlo by se také hodit",
+        "title": "Mohlo by se vám líbit",
+        "subtitle": "",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
