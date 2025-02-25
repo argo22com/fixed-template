@@ -456,6 +456,67 @@
         "padding_bottom": 80
       }
     },
+    "collapsible_content_VAmPik": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_dJ9CfY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_eqEMKM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_DXH3Y3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_R66337": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "emoji_happy",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_dJ9CfY",
+        "collapsible_row_eqEMKM",
+        "collapsible_row_DXH3Y3",
+        "collapsible_row_R66337"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "title": "Proč právě Opus?",
+        "subtitle": "",
+        "heading_size": "h1",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "hide_image_on_mobile": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "banner_grid_jtF8wQ": {
       "type": "banner-grid",
       "blocks": {
@@ -795,6 +856,7 @@
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "spacer_DJMtQa",
     "6099b098-2d24-4b53-9488-988cbaa630f3",
+    "collapsible_content_VAmPik",
     "banner_grid_jtF8wQ",
     "product-recommendations",
     "6925b9d2-abbc-4e33-ad59-0e7408e9fa5c",
