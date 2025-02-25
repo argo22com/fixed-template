@@ -399,7 +399,7 @@
           "type": "specifications",
           "settings": {
             "title": "Produktové parametry",
-            "metafields": "product_attributes.material, namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key,namespace.metafield_key"
+            "metafields": "product_attributes.material, product_attributes.material-tlacitek, product_attributes.magsafe, product_attributes.typ-zapinani, product_attributes.urceni"
           }
         },
         "517e3875-04c8-4ad9-a3de-d00c3d5a9451": {
