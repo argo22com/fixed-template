@@ -595,31 +595,21 @@
     "6925b9d2-abbc-4e33-ad59-0e7408e9fa5c": {
       "type": "text-icons",
       "blocks": {
-        "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-1": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "calendar",
-            "title": "Item heading",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-2": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "cellphone",
-            "title": "Item heading",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
         "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-3": {
           "type": "text-icon",
           "settings": {
-            "icon": "chart_bar",
+            "icon": "calculator",
             "title": "Item heading",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-1": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check_circle",
+            "title": "2 letá záruka",
             "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
@@ -628,18 +618,8 @@
         "30dc71fe-cc0b-42b9-a7bd-6aa2cf6b75f2": {
           "type": "text-icon",
           "settings": {
-            "icon": "camera",
-            "title": "Item heading",
-            "subheading": "",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "78c4d097-d1bf-491a-bea4-33ee68120df8": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "calendar",
-            "title": "Item heading",
+            "icon": "phone",
+            "title": "Zákaznická podpora",
             "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
@@ -647,21 +627,19 @@
         }
       },
       "block_order": [
-        "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-1",
-        "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-2",
         "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-3",
-        "30dc71fe-cc0b-42b9-a7bd-6aa2cf6b75f2",
-        "78c4d097-d1bf-491a-bea4-33ee68120df8"
+        "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-1",
+        "30dc71fe-cc0b-42b9-a7bd-6aa2cf6b75f2"
       ],
       "settings": {
-        "title": "Tohle je pecka protože",
-        "subtitle": "blablabla",
+        "title": "Více než xy spokojených zákazníků",
+        "subtitle": "",
         "heading_size": "h0",
-        "icon_width_desktop": 50,
+        "icon_width_desktop": 18,
         "text_position": "bottom",
-        "enable_heading_in_box": true,
-        "columns_desktop": 5,
-        "columns_tablet": 4,
+        "enable_heading_in_box": false,
+        "columns_desktop": 3,
+        "columns_tablet": 3,
         "auto_fit": false,
         "column_alignment": "center",
         "highlight_icon": false,
@@ -690,11 +668,11 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "title": "Doporučené produkty",
-        "subtitle": "",
+        "title": "Doporučené příslušenství",
+        "subtitle": "Must-have produkty, které by se mohly hodit",
         "heading_size": "h2",
-        "products_to_show": 10,
-        "columns_desktop": 5,
+        "products_to_show": 3,
+        "columns_desktop": 3,
         "full_width": false,
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
@@ -716,6 +694,7 @@
     },
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed": {
       "type": "recently-viewed-products",
+      "disabled": true,
       "settings": {
         "title": "Naposledy zobrazené produkty",
         "subtitle": "",
@@ -728,6 +707,7 @@
     },
     "compatible_devices_7BY8g8": {
       "type": "compatible-devices",
+      "disabled": true,
       "settings": {
         "title": "Kompatibilní zařízení",
         "title_size": "h3",
