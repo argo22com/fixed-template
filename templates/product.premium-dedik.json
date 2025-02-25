@@ -167,7 +167,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture1.value }}",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -275,7 +275,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture3.value }}",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
