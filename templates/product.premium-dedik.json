@@ -86,15 +86,6 @@
             "image_ratio": "square"
           }
         },
-        "collapsible_tab_iGXJKn": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Podrobný popis produktu",
-            "icon": "arrow_circle_down",
-            "content": "{{ product.description }}",
-            "page": ""
-          }
-        },
         "share": {
           "type": "share",
           "settings": {
@@ -106,6 +97,15 @@
             "share_on_email": true,
             "share_link": true
           }
+        },
+        "collapsible_tab_iGXJKn": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Podrobný popis produktu",
+            "icon": "arrow_circle_down",
+            "content": "{{ product.description }}",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -116,8 +116,8 @@
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
-        "collapsible_tab_iGXJKn",
-        "share"
+        "share",
+        "collapsible_tab_iGXJKn"
       ],
       "settings": {
         "section_width": "page-width",
@@ -414,6 +414,7 @@
         "c2731e6a-27ad-4c71-b114-f2c62da34e42",
         "517e3875-04c8-4ad9-a3de-d00c3d5a9451"
       ],
+      "disabled": true,
       "settings": {
         "show_description": false,
         "title": "Produktové parametry",
