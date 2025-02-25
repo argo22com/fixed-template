@@ -780,6 +780,59 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "gallery_lightbox_8yQyeN": {
+      "type": "gallery-lightbox",
+      "blocks": {
+        "gallery_image_mALGjH": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "{{ shop.brand.cover_image }}",
+            "row": 1,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_f8h3dg": {
+          "type": "gallery-image",
+          "settings": {
+            "row": 1,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_djcFGb": {
+          "type": "gallery-image",
+          "settings": {
+            "row": 1,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        }
+      },
+      "block_order": [
+        "gallery_image_mALGjH",
+        "gallery_image_f8h3dg",
+        "gallery_image_djcFGb"
+      ],
+      "settings": {
+        "title": "Gallery with lightbox",
+        "heading_size": "h2",
+        "max_rows": 2,
+        "color_scheme": "",
+        "show_more_text": "Load more pictures",
+        "button_style": "primary",
+        "button_size": "normal",
+        "button_margin_top": 0,
+        "button_margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "overlay_color": "#999999",
+        "overlay_opacity": 80
+      }
     }
   },
   "order": [
@@ -799,6 +852,7 @@
     "compatible_devices_7BY8g8",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
     "168088586605a49d77",
-    "rich_text_zW4jWQ"
+    "rich_text_zW4jWQ",
+    "gallery_lightbox_8yQyeN"
   ]
 }
