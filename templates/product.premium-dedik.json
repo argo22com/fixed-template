@@ -68,7 +68,7 @@
             "sku_label": "Produktový kód",
             "tags_enable": false,
             "tags_label": "Tags",
-            "collections_enable": true,
+            "collections_enable": false,
             "collections_label": "Kolekce"
           }
         },
@@ -148,7 +148,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ product.metafields.custom.premium_heading1.value }}",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
@@ -177,7 +177,7 @@
         "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 16,
-        "padding_bottom": 16,
+        "padding_bottom": 0,
         "color_heading": "#000000",
         "gradient_heading": "",
         "color_text": "#000000",
@@ -202,7 +202,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ product.metafields.custom.premium_heading2.value }}",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
@@ -231,7 +231,7 @@
         "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 16,
-        "padding_bottom": 16,
+        "padding_bottom": 0,
         "color_heading": "#000000",
         "gradient_heading": "",
         "color_text": "#000000",
@@ -256,7 +256,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ product.metafields.custom.premium_heading3.value }}",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
@@ -285,7 +285,7 @@
         "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 16,
-        "padding_bottom": 16,
+        "padding_bottom": 0,
         "color_heading": "#000000",
         "gradient_heading": "",
         "color_text": "#000000",
@@ -458,7 +458,7 @@
       "settings": {
         "title": "3 důvody proč si vybrat Opus",
         "subtitle": "",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "media_type": "image",
         "media_width_desktop": "100",
         "image_ratio": "adapt",
