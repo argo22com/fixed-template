@@ -1173,6 +1173,74 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "lookbook_RgVXcH": {
+      "type": "lookbook",
+      "blocks": {
+        "hotspot_xmnAhY": {
+          "type": "hotspot",
+          "settings": {
+            "product": "bezdratova-tws-sluchatka-fixed-boom-joy-cerna",
+            "color_scheme": "",
+            "colors_background": "#000",
+            "colors_text": "#fff",
+            "horizontal_axis": 18,
+            "vertical_axis": 79,
+            "horizontal_axis_mobile": 30,
+            "vertical_axis_mobile": 30
+          }
+        },
+        "hotspot_6dXqU8": {
+          "type": "hotspot",
+          "settings": {
+            "product": "bezdratova-tws-sluchatka-fixed-pods-ruzova",
+            "color_scheme": "",
+            "colors_background": "#000",
+            "colors_text": "#fff",
+            "horizontal_axis": 60,
+            "vertical_axis": 60,
+            "horizontal_axis_mobile": 60,
+            "vertical_axis_mobile": 60
+          }
+        },
+        "hotspot_7Bdwm7": {
+          "type": "hotspot",
+          "settings": {
+            "product": "bezdratova-tws-sluchatka-fixed-buds-bila",
+            "color_scheme": "",
+            "colors_background": "#000",
+            "colors_text": "#fff",
+            "horizontal_axis": 80,
+            "vertical_axis": 30,
+            "horizontal_axis_mobile": 80,
+            "vertical_axis_mobile": 30
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_xmnAhY",
+        "hotspot_6dXqU8",
+        "hotspot_7Bdwm7"
+      ],
+      "settings": {
+        "caption": "a klepnutím na obrázek se zobrazí příslušný produkt - mohly by to být topky dé kategorie například",
+        "title": "obrázek s více produkty",
+        "image": "shopify://shop_images/1B1A3334.jpg",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "hotspot_size": "3",
+        "hotspot_size_desktop": "4",
+        "content_layout": "popup",
+        "full_width": true,
+        "color_scheme": "",
+        "product_image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "enable_quick_view": false,
+        "quick_view_button_text": "View",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -1195,6 +1263,7 @@
     "announcement_bar_JEHEYK",
     "main_product_attributes_rRC6hB",
     "scrolling_text_7bYVaL",
-    "testimonials_7DjRbx"
+    "testimonials_7DjRbx",
+    "lookbook_RgVXcH"
   ]
 }
