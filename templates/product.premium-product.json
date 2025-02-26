@@ -1223,7 +1223,7 @@
         "hotspot_7Bdwm7"
       ],
       "settings": {
-        "caption": "a klepnutím na obrázek se zobrazí příslušný produkt - mohly by to být topky dé kategorie například",
+        "caption": "a klepnutím na obrázek se zobrazí příslušný produkt - mohly by to být topky té kategorie například - tady bych doporučila mít to společné pro template, protože každej obrázek vyžaduje jinou pozici toho puntíku",
         "title": "obrázek s více produkty",
         "image": "shopify://shop_images/1B1A3334.jpg",
         "image_ratio": "adapt",
