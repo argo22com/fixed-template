@@ -3,17 +3,6 @@
   {
     filters: [
       {
-        param_name: 'filter.p.m.product_compatible_devices.manufacturers',
-        label: 'Manufacturer',
-        values: [
-          { value: 'manufacturer1', label: 'Manufacturer 1', active: false },
-          { value: 'manufacturer2', label: 'Manufacturer 2', active: true }
-        ],
-        active_values: [
-          { value: 'manufacturer2', label: 'Manufacturer 2' }
-        ]
-      },
-      {
         param_name: 'filter.p.m.product_compatible_devices.manufacturers_and_models_map',
         label: 'Model',
         values: [
@@ -25,21 +14,14 @@
   }
 {% endcomment %}
 
-{% assign manufacturers_filter = results.filters
-  | where: 'param_name', 'filter.p.m.product_compatible_devices.manufacturers'
-  | first
-%}
-
 {% assign manufacturers_and_models_map_filter = results.filters
   | where: 'param_name', 'filter.p.m.product_compatible_devices.manufacturers_and_models_map'
   | first
 %}
 
-{%- assign manufacturers_and_models_map_filter_values = results.metafields.product_compatible_devices[manufacturers_filter.active_values[0].value].value -%}
-
 <style>
   .compatible-devices-facet-filter {
-    min-width: 20rem;
+    width: 20rem;
   }
 
   .compatible-devices-facet-filter .select__select {
@@ -47,109 +29,94 @@
   }
 </style>
 
-{% for filter in results.filters %}
-  {{ filter.param_name }}
+{% comment %}
+  Find parent collection by iterating over all collections
+{% endcomment %}
+{% assign parent_collection = null %}
+{% for collection in collections %}
+  {% if collection.metafields.custom.subcollections.value %}
+    {% for subcollection in collection.metafields.custom.subcollections.value %}
+      {% if subcollection.url == results.url %}
+        {% assign parent_collection = collection %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% if parent_collection != null %}
+      {% break %}
+    {% endif %}
+  {% endif %}
 {% endfor %}
 
-active filter {{ manufacturers_and_models_map_filter.active_values[0].value }}
+<div class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
+  <div class="compatible-devices-facet-filter select facets__filter">
+    <select
+      class="facets__select select__select"
+      onchange="window.location.href=this.value"
+    >
+      <option
+        value="{{ parent_collection.url | escape }}"
+        {% if filter.active_value == blank %}
+          selected
+        {% endif %}
+      >
+        {{ 'products.facets.compatible_manufacturers' | t }}
+      </option>
 
-<facet-filters-form>
-  <compatible-devices-facet-filters-form>
-    <form id="FacetFiltersForm" class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
-      {% if manufacturers_filter %}
-        <div class="compatible-devices-facet-filter select facets__filter">
-          <select
-            id="Filter-{{ manufacturers_filter.param_name | escape | handleize }}"
-            name="{{ manufacturers_filter.param_name }}"
-            class="facets__select select__select"
+      {% if results.metafields.custom.subcollections.value %}
+        {% for subcollection in results.metafields.custom.subcollections.value %}
+          <option
+            value="{{ subcollection.url | escape }}"
           >
-            <option
-              value=""
-              {% if filter.active_value == blank %}
-                selected
-              {% endif %}
-            >
-              {{ 'products.facets.compatible_manufacturers' | t }}
-            </option>
-
-            {%- for filter_value in manufacturers_filter.values %}
-              <option
-                value="{{ filter_value.value | escape }}"
-                {% if filter_value.active %}
-                  selected
-                {% endif %}
-              >
-                {{ filter_value.label | escape }}
-              </option>
-            {%- endfor %}
-          </select>
-
-          {% render 'icon-caret' %}
-        </div>
+            {{ subcollection.title | split: ' ' | last | escape }}
+          </option>
+        {% endfor %}
+      {% elsif parent_collection != null and parent_collection.metafields.custom.subcollections.value %}
+        {% for subcollection in parent_collection.metafields.custom.subcollections.value %}
+          <option
+            value="{{ subcollection.url | escape }}"
+            {% if subcollection.url == results.url %}
+              selected
+            {% endif %}
+          >
+            {{ subcollection.title | split: ' ' | last | escape }}
+          </option>
+        {% endfor %}
       {% endif %}
+    </select>
 
-      {% comment %} {% if manufacturers_and_models_map_filter %} {% endcomment %}
-        <div class="compatible-devices-facet-filter select facets__filter">
-          <select
-            id="Filter-{{ manufacturers_and_models_map_filter.param_name | escape | handleize }}"
-            name="{{ manufacturers_and_models_map_filter.param_name }}"
-            class="facets__select select__select"
-            {% unless manufacturers_filter.active_values.size > 0 %}
-              disabled
-            {% endunless %}
+    {% render 'icon-caret' %}
+  </div>
+
+  <facet-filters-form>
+    <form id="FacetFiltersForm" class="">
+      <div class="compatible-devices-facet-filter select facets__filter">
+        <select
+          id="Filter-{{ manufacturers_and_models_map_filter.param_name | escape | handleize }}"
+          name="{{ manufacturers_and_models_map_filter.param_name }}"
+          class="facets__select select__select"
+        >
+          <option
+            value=""
+            {% if manufacturers_and_models_map_filter.active_values[0].value == blank %}
+              selected
+            {% endif %}
           >
+            {{ 'products.facets.compatible_devices' | t }}
+          </option>
+          {%- for filter_value in manufacturers_and_models_map_filter.values %}
             <option
-              value=""
-              {% if manufacturers_and_models_map_filter.active_values[0].value == blank %}
+              value="{{ filter_value.value | escape }}"
+              {% if filter_value.value == manufacturers_and_models_map_filter.active_values[0].value %}
                 selected
               {% endif %}
             >
-              {{ 'products.facets.compatible_devices' | t }}
+              {{ filter_value.label }}
             </option>
-            {%- for filter_value in manufacturers_and_models_map_filter_values %}
-              <option
-                value="{{ filter_value | escape }}"
-                {% if filter_value == manufacturers_and_models_map_filter.active_values[0].value %}
-                  selected
-                {% endif %}
-              >
-                {{ filter_value }}
-              </option>
-            {%- endfor %}
-          </select>
+          {%- endfor %}
+        </select>
 
-          {% render 'icon-caret' %}
-        </div>
-      {% comment %} {% endif %} {% endcomment %}
+        {% render 'icon-caret' %}
+      </div>
     </form>
-  </compatible-devices-facet-filters-form>
-</facet-filters-form>
-
-<script>
-  if (!customElements.get('compatible-devices-facet-filters-form')) {
-    customElements.define(
-      'compatible-devices-facet-filters-form',
-      class extends HTMLElement {
-        constructor() {
-          super();
-          this.manufacturers_filter = this.querySelector("[name='{{ manufacturers_filter.param_name }}']");
-          this.manufacturers_and_models_map_filter = this.querySelector(
-            "[name='{{ manufacturers_and_models_map_filter.param_name }}']"
-          );
-        }
-
-        connectedCallback() {
-          if (this.manufacturers_filter) {
-            this.manufacturers_filter.addEventListener('change', this.onManufacturersFilterChange.bind(this));
-          }
-        }
-
-        onManufacturersFilterChange(event) {
-          if (this.manufacturers_and_models_map_filter.value) {
-            this.manufacturers_and_models_map_filter.value = '';
-          }
-        }
-      }
-    );
-  }
-</script>
+  </facet-filters-form>
+</div>

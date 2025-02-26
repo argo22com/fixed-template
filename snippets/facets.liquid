@@ -50,7 +50,7 @@
               {%- liquid
                 for filter in results.filters
                   assign total_active_values = total_active_values | plus: filter.active_values.size
-                  unless filter.param_name == 'filter.p.m.product_compatible_devices.manufacturers' or filter.param_name == 'filter.p.m.product_compatible_devices.manufacturers_and_models_map'
+                  unless filter.param_name == 'filter.p.m.product_compatible_devices.manufacturers_and_models_map'
                     case filter.type
                     when 'boolean' or 'list'
                       render 'facets-boolean-list', filter: filter, section: section, filter_type: filter_type, color_name: color_name, forloop: forloop, suffix_id: 'Desktop-'

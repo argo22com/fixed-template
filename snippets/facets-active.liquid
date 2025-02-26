@@ -83,10 +83,6 @@
                     endfor
                   endif
                 -%}
-              {%- elsif filter.param_name == 'filter.p.m.product_compatible_devices.manufacturers_and_models_map' %}
-                {%- liquid
-                  assign display_value = value.label | split: '_' | last
-                %}
               {% else %}
                 {% assign display_value = value.label %}
               {%- endif -%}
