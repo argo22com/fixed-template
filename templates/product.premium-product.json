@@ -853,7 +853,7 @@
         "15b33dd5-ee65-4ea7-8245-87f31a0e1ca9"
       ],
       "settings": {
-        "layout": "stretched_grid",
+        "layout": "grid",
         "desktop_row_height": 30,
         "desktop_gap": 30,
         "mobile_gap": 10,
