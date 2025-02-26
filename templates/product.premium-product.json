@@ -370,7 +370,7 @@
       "settings": {
         "grid_layout": "full_bleed",
         "image": "{{ product.metafields.custom.premium_picture1.value }}",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -478,7 +478,7 @@
       "settings": {
         "grid_layout": "full_bleed",
         "image": "{{ product.metafields.custom.premium_picture3.value }}",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -621,7 +621,7 @@
         "slide_CtNVU7"
       ],
       "settings": {
-        "layout": "grid",
+        "layout": "full_bleed",
         "slide_height": "medium",
         "slide_height_mobile": "adapt_image_mobile",
         "auto_rotate": false,
