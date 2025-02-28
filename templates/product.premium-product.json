@@ -223,7 +223,7 @@
           "settings": {
             "heading": "Krátký popisek",
             "icon": "document",
-            "content": "{{ block.settings.page.content }}",
+            "content": "<p>Tady by byl krátký popis tahaný z nějakýho konkrétního metafieldu</p>",
             "page": ""
           }
         },
