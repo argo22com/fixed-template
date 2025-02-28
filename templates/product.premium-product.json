@@ -282,91 +282,26 @@
         "padding_bottom": 40
       }
     },
-    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5": {
+    "main_product_tabs_brzbED": {
       "type": "main-product-tabs",
       "blocks": {
-        "1638dd10-8e33-4e82-b01c-2eb71d6362ba": {
+        "description_MWVkiM": {
           "type": "description",
           "settings": {
             "title": "Popis produktu",
             "truncate_description": 0,
-            "read_more_button": "Číst dále"
-          }
-        },
-        "parameters_GiBjwJ": {
-          "type": "parameters",
-          "disabled": true,
-          "settings": {
-            "title": "Parametry",
-            "show_sku": false
-          }
-        },
-        "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
-          "type": "page_content",
-          "disabled": true,
-          "settings": {
-            "title": "Související produkty",
-            "page": ""
-          }
-        },
-        "size_chart_page_h8pBMk": {
-          "type": "size_chart_page",
-          "disabled": true,
-          "settings": {
-            "title": "Výběr správné velikosti pouzdra"
-          }
-        },
-        "files_dWmtVg": {
-          "type": "files",
-          "disabled": true,
-          "settings": {
-            "title": "Dokumenty ke stažení"
-          }
-        },
-        "judge_me_reviews_review_widget_cd63JP": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
-          "settings": {}
-        },
-        "metafields_Ac6RFC": {
-          "type": "metafields",
-          "disabled": true,
-          "settings": {
-            "title": "Metafields",
-            "namespace_key": ""
-          }
-        },
-        "metafields_XkQWGr": {
-          "type": "metafields",
-          "disabled": true,
-          "settings": {
-            "title": "FAQ",
-            "namespace_key": "custom.faq_page"
+            "read_more_button": "Read more"
           }
         }
       },
       "block_order": [
-        "1638dd10-8e33-4e82-b01c-2eb71d6362ba",
-        "parameters_GiBjwJ",
-        "cbb96b5f-f683-42e5-b865-6ac18e11645e",
-        "size_chart_page_h8pBMk",
-        "files_dWmtVg",
-        "judge_me_reviews_review_widget_cd63JP",
-        "metafields_Ac6RFC",
-        "metafields_XkQWGr"
-      ],
-      "custom_css": [
-        ".jdgm-rev-widg__title {display: none;}",
-        ".jdgm-rev-widg__summary-text {font-size: 24px; font-weight: bold;}",
-        ".jdgm-rev-widg__summary-stars {display: block; margin-top: 10px;}",
-        ".jdgm-rev__icon {display: none;}",
-        ".jdgm-rev__timestamp {float: left; margin-right: 10px;}"
+        "description_MWVkiM"
       ],
       "settings": {
         "grid_layout": "grid",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "image_with_text_8jX66E": {
@@ -934,7 +869,7 @@
         "subtitle": "Must-have produkty, které by se mohly hodit",
         "heading_size": "h2",
         "products_to_show": 3,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "full_width": false,
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
@@ -990,65 +925,72 @@
         "include_margins": true
       }
     },
-    "collapsible_content_a6Fcpt": {
-      "type": "collapsible-content",
+    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5": {
+      "type": "main-product-tabs",
       "blocks": {
-        "collapsible_row_HD4iyt": {
-          "type": "collapsible_row",
+        "parameters_GiBjwJ": {
+          "type": "parameters",
+          "disabled": true,
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
+            "title": "Parametry",
+            "show_sku": false
           }
         },
-        "collapsible_row_tHKawi": {
-          "type": "collapsible_row",
+        "size_chart_page_h8pBMk": {
+          "type": "size_chart_page",
+          "disabled": true,
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
+            "title": "Výběr správné velikosti pouzdra"
           }
         },
-        "collapsible_row_cCincF": {
-          "type": "collapsible_row",
+        "files_dWmtVg": {
+          "type": "files",
+          "disabled": true,
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
+            "title": "Dokumenty ke stažení"
           }
         },
-        "collapsible_row_pAtQUM": {
-          "type": "collapsible_row",
+        "judge_me_reviews_review_widget_cd63JP": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "metafields_Ac6RFC": {
+          "type": "metafields",
+          "disabled": true,
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
+            "title": "Metafields",
+            "namespace_key": ""
+          }
+        },
+        "metafields_XkQWGr": {
+          "type": "metafields",
+          "settings": {
+            "title": "FAQ",
+            "namespace_key": "custom.faq_page"
           }
         }
       },
       "block_order": [
-        "collapsible_row_HD4iyt",
-        "collapsible_row_tHKawi",
-        "collapsible_row_cCincF",
-        "collapsible_row_pAtQUM"
+        "parameters_GiBjwJ",
+        "size_chart_page_h8pBMk",
+        "files_dWmtVg",
+        "judge_me_reviews_review_widget_cd63JP",
+        "metafields_Ac6RFC",
+        "metafields_XkQWGr"
+      ],
+      "custom_css": [
+        ".jdgm-rev-widg__title {display: none;}",
+        ".jdgm-rev-widg__summary-text {font-size: 24px; font-weight: bold;}",
+        ".jdgm-rev-widg__summary-stars {display: block; margin-top: 10px;}",
+        ".jdgm-rev__icon {display: none;}",
+        ".jdgm-rev__timestamp {float: left; margin-right: 10px;}"
       ],
       "settings": {
-        "section_width": "grid",
-        "title": "FAQ",
-        "subtitle": "",
-        "heading_size": "h1",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "hide_image_on_mobile": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "grid_layout": "grid",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "main_product_attributes_rRC6hB": {
@@ -1171,7 +1113,7 @@
   "order": [
     "featured_product_EtKMF3",
     "main",
-    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
+    "main_product_tabs_brzbED",
     "image_with_text_8jX66E",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "image_banner_axzhBF",
@@ -1182,7 +1124,7 @@
     "compatible_devices_7BY8g8",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
     "168088586605a49d77",
-    "collapsible_content_a6Fcpt",
+    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "main_product_attributes_rRC6hB",
     "lookbook_RgVXcH"
   ]
