@@ -867,12 +867,48 @@
             "colors_button_text_mobile": "#ffffff",
             "colors_button_mobile": "#000000"
           }
+        },
+        "slide_4iGtn4": {
+          "type": "slide",
+          "settings": {
+            "badge_label": "Badge label",
+            "heading": "Image slide",
+            "text": "Tell your brand's story through images",
+            "hide_text_on_mobile": false,
+            "button_label": "Button label",
+            "price": "1300",
+            "link": "",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-center",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#000",
+            "gradient_heading_desktop": "",
+            "colors_background": "#fff",
+            "colors_badge_foreground": "#fff",
+            "colors_badge_background": "#F87171",
+            "colors_button_text": "#fff",
+            "colors_button": "#000",
+            "colors_text_mobile": "#000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#fff",
+            "colors_badge_foreground_mobile": "#fff",
+            "colors_badge_background_mobile": "#F87171",
+            "colors_button_text_mobile": "#fff",
+            "colors_button_mobile": "#000"
+          }
         }
       },
       "block_order": [
         "slide_LjyT4f",
         "slide_z4cpWm",
-        "slide_CtNVU7"
+        "slide_CtNVU7",
+        "slide_4iGtn4"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -897,7 +933,7 @@
         "title": "Doporučené příslušenství",
         "subtitle": "Must-have produkty, které by se mohly hodit",
         "heading_size": "h2",
-        "products_to_show": 4,
+        "products_to_show": 3,
         "columns_desktop": 4,
         "full_width": false,
         "enable_desktop_slider": true,
