@@ -704,11 +704,6 @@
         "type": "shopify://apps/luigi-s-ai-search-discovery/blocks/lbx-script/e958335d-b7a0-483f-9ab5-a587d1bd4fa9",
         "disabled": false,
         "settings": {}
-      },
-      "7570552984445421165": {
-        "type": "shopify://apps/yotpo-product-photo-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-        "disabled": false,
-        "settings": {}
       }
     },
     "color_schemes": {
