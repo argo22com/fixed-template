@@ -77,7 +77,7 @@
           "settings": {
             "heading": "Krátký popisek",
             "icon": "check",
-            "content": "<p>tady to bude potřeba napojit na konkrétní metafield</p>",
+            "content": "<p>tady to bude potřeba napojit na konkrétní metafield, defaultně to umí načíst jiný data než potřebujeme.</p>",
             "page": ""
           }
         },
