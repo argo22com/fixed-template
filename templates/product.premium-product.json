@@ -207,6 +207,7 @@
         },
         "share_dN3FWC": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share",
             "enable_floating_layout": false,
@@ -220,8 +221,8 @@
         "collapsible_tab_JPaAk4": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Krátký popis",
-            "icon": "emoji_happy",
+            "heading": "Krátký popisek",
+            "icon": "document",
             "content": "{{ block.settings.page.content }}",
             "page": ""
           }
