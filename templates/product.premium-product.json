@@ -561,7 +561,7 @@
           "settings": {
             "image": "shopify://shop_images/FIXNDS-BK-PRODUCT-1.jpg",
             "image_overlay_opacity": 0,
-            "heading": "Image banner heading",
+            "heading": "Nadpis",
             "heading_size": "h2",
             "text": "Your description text",
             "text_style": "body",
@@ -579,7 +579,7 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
+            "color_text": "#dc2626",
             "color_gradient_heading": "",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
@@ -589,6 +589,7 @@
         "promotion_banner_ppE9EE": {
           "type": "promotion-banner",
           "settings": {
+            "image": "shopify://shop_images/FIXOP3-1566-BK-PRODUCT-3.jpg",
             "image_overlay_opacity": 0,
             "heading": "Image banner heading",
             "heading_size": "h1",
@@ -708,6 +709,7 @@
         "promotion_banner_UaP3UF": {
           "type": "promotion-banner",
           "settings": {
+            "image": "shopify://shop_images/FIXMGR-V-BK-PRODUCT-9.jpg",
             "image_overlay_opacity": 0,
             "heading": "Image banner heading",
             "heading_size": "h1",
