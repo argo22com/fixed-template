@@ -27,14 +27,14 @@
         "heading_AbkTRp": {
           "type": "heading",
           "settings": {
-            "heading": "MagSafe příslušenství",
+            "heading": "Chceš o kolečko navíc?",
             "size": "h1"
           }
         },
         "text_UDYABY": {
           "type": "text",
           "settings": {
-            "text": "<strong>Využij kouzla magnetického příslušenství nejen pro Apple zařízení</strong>",
+            "text": "<strong>Využij FIXED MagPlate a otevři si svět do MagSafe kompatibilního příslušenství</strong>",
             "text_style": "subtitle"
           }
         }
@@ -45,7 +45,7 @@
       ],
       "settings": {
         "layout": "stretched_grid",
-        "image": "shopify://shop_images/fixmpl2-bk_006.jpg",
+        "image": "shopify://shop_images/kolecko_ms.png",
         "image_mobile": "shopify://shop_images/Armor_mobile.jpg",
         "image_overlay_opacity": 20,
         "image_height": "medium",
@@ -325,10 +325,10 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "color_scheme": "",
-        "drag_cursor_foreground": "#000",
-        "drag_cursor_background": "#fff",
-        "before_text_color": "#fff",
-        "after_text_color": "#fff",
+        "drag_cursor_foreground": "#000000",
+        "drag_cursor_background": "#ffffff",
+        "before_text_color": "#ffffff",
+        "after_text_color": "#ffffff",
         "accessibility_info": "Before and after images",
         "padding_top": 36,
         "padding_bottom": 36
