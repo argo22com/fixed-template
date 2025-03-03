@@ -154,7 +154,7 @@
         "heading_TJjMV3": {
           "type": "heading",
           "settings": {
-            "heading": "Ultraodolnost díky vysoké pružnosti",
+            "heading": "Co je to MagSafe a jaké zařízení jsou kompatibilní?",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -162,19 +162,28 @@
         "text_FgxdBE": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Extrémně vysoká pevnost skla – až 3× vyšší než u běžných skel​</li><li>O 30 % vyšší pružnost, která absorbuje případné nárazy a  odolává téměř všem běžným pádům​</li><li>Parametry testovány ve FIXED</li></ul>",
+            "text": "<ul><li>MagSafe je technologie, kterou používá firma Apple již dlouhou dobu.</li><li>Nyní se díky rozvoji bezdrátového nabíjení i v android telefonech může využívat v široké škále zařízení.</li><li>Poznej i ty sílu magnetů a používej to nejmodernější příslušenství nezávisle na tom, jestli vlastníš nejmodernější iPhone.</li><li>Chceš vědět více o této technologii? Přečti si náš blog na toto téma.</li></ul>",
             "text_style": "body"
+          }
+        },
+        "button_maLpQX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Chci se dozvědět více",
+            "button_link": "shopify://blogs/news",
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_TJjMV3",
-        "text_FgxdBE"
+        "text_FgxdBE",
+        "button_maLpQX"
       ],
-      "disabled": true,
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/armor_pruznost.jpg",
+        "image": "shopify://shop_images/magsafe_kompatibilita.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -194,7 +203,7 @@
         "color_countdown": "#000000",
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
