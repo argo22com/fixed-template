@@ -1,0 +1,884 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_vendor_link": false,
+            "title_size": "h3"
+          }
+        },
+        "2525f94e-add4-418e-b362-bd2bb35545fa": {
+          "type": "rating",
+          "settings": {
+            "show_if_no_reviews": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "variant_price": true
+          }
+        },
+        "popup_XDycdy": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "Tabulka velikostí",
+            "page": "tabulka-velikosti-univerzalni-pouzdra"
+          }
+        },
+        "e592d434-8377-4309-b179-f98d4b3742a2": {
+          "type": "sale_box",
+          "settings": {
+            "show_free_shipping_bar": false,
+            "enable_compare": false,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatches_style": "custom",
+            "size_chart_enable": true,
+            "size_chart_link_label": "Tabulka velikostí",
+            "size_chart_page": "tabulka-velikosti-univerzalni-pouzdra",
+            "quantity_selector_enable": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "a1934adc-1886-4a20-bdd7-5f9778c59ebe": {
+          "type": "information_group",
+          "settings": {
+            "brand_enable": false,
+            "brand_label": "Brand",
+            "stock_enable": true,
+            "stock_label": "Dostupnost",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": false,
+            "sku_enable": true,
+            "sku_label": "Produktový kód",
+            "tags_enable": false,
+            "tags_label": "Tags",
+            "collections_enable": false,
+            "collections_label": "Kolekce"
+          }
+        },
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Kompatibilní s:",
+            "make_collapsible_row": true,
+            "icon": "thumb_down",
+            "product_list_limit": 3,
+            "total_enable": true,
+            "total_label": "Celkem",
+            "button_enable": true,
+            "button_label": "Přihodit do košíku",
+            "image_ratio": "square"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Sdílet",
+            "enable_floating_layout": false,
+            "share_on_facebook": true,
+            "share_on_twitter": true,
+            "share_on_pinterest": true,
+            "share_on_email": true,
+            "share_link": true
+          }
+        },
+        "collapsible_tab_iGXJKn": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Podrobný popis produktu",
+            "icon": "arrow_circle_down",
+            "content": "{{ product.description }}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "2525f94e-add4-418e-b362-bd2bb35545fa",
+        "price",
+        "popup_XDycdy",
+        "e592d434-8377-4309-b179-f98d4b3742a2",
+        "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
+        "share",
+        "collapsible_tab_iGXJKn"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "use_background_input": true,
+        "enable_sticky_info": true,
+        "enable_sticky_cart": true,
+        "show_next_prev_products": true,
+        "auto_scroll_up_mobile": false,
+        "default_image": "product_featured_image",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
+        "media_size": "small",
+        "image_ratio": "square",
+        "image_fit": true,
+        "disable_images_lightbox": false,
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 8,
+        "padding_bottom": 40
+      }
+    },
+    "b861113b-71fc-41c9-bf1f-80084a7d6f04": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.premium_heading1.value }}",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.premium_content1 | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-heading-1",
+        "template--20218412368173__b861113b-71fc-41c9-bf1f-80084a7d6f04-text-1"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "{{ product.metafields.custom.premium_picture1.value }}",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 16,
+        "padding_bottom": 0,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "6524c6b3-5b0c-4c1f-bffa-e9ea1819e293": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.premium_heading2.value }}",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.premium_content_2 | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-heading-1",
+        "template--20218412368173__6524c6b3-5b0c-4c1f-bffa-e9ea1819e293-text-1"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "{{ product.metafields.custom.premium_picture_2.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 16,
+        "padding_bottom": 0,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_8jX66E": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_wGfDFh": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.premium_heading3.value }}",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_KXEQAn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.premium_content3 | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wGfDFh",
+        "text_KXEQAn"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "{{ product.metafields.custom.premium_picture3.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 16,
+        "padding_bottom": 0,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5": {
+      "type": "main-product-tabs",
+      "blocks": {
+        "1638dd10-8e33-4e82-b01c-2eb71d6362ba": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "title": "Popis produktu",
+            "truncate_description": 0,
+            "read_more_button": "Číst dále"
+          }
+        },
+        "parameters_GiBjwJ": {
+          "type": "parameters",
+          "disabled": true,
+          "settings": {
+            "title": "Parametry",
+            "show_sku": false
+          }
+        },
+        "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
+          "type": "page_content",
+          "settings": {
+            "title": "Související produkty",
+            "page": ""
+          }
+        },
+        "size_chart_page_h8pBMk": {
+          "type": "size_chart_page",
+          "settings": {
+            "title": "Výběr správné velikosti pouzdra"
+          }
+        },
+        "metafields_XkQWGr": {
+          "type": "metafields",
+          "settings": {
+            "title": "FAQ",
+            "namespace_key": "custom.faq_page"
+          }
+        },
+        "files_dWmtVg": {
+          "type": "files",
+          "settings": {
+            "title": "Dokumenty ke stažení"
+          }
+        },
+        "judge_me_reviews_review_widget_cd63JP": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "metafields_Ac6RFC": {
+          "type": "metafields",
+          "settings": {
+            "title": "Metafields",
+            "namespace_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "1638dd10-8e33-4e82-b01c-2eb71d6362ba",
+        "parameters_GiBjwJ",
+        "cbb96b5f-f683-42e5-b865-6ac18e11645e",
+        "size_chart_page_h8pBMk",
+        "metafields_XkQWGr",
+        "files_dWmtVg",
+        "judge_me_reviews_review_widget_cd63JP",
+        "metafields_Ac6RFC"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".jdgm-rev-widg__title {display: none;}",
+        ".jdgm-rev-widg__summary-text {font-size: 24px; font-weight: bold;}",
+        ".jdgm-rev-widg__summary-stars {display: block; margin-top: 10px;}",
+        ".jdgm-rev__icon {display: none;}",
+        ".jdgm-rev__timestamp {float: left; margin-right: 10px;}"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "spacer_DJMtQa": {
+      "type": "spacer",
+      "settings": {
+        "height": 40
+      }
+    },
+    "multicolumn_MG4Miy": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_NmpX3b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img_6834637e-09a2-4ff1-921b-b419dc9d06a1.jpg",
+            "icon": "check",
+            "title": "Tady je první featura",
+            "text": "<p>a tady je nějaký její popis, není dynamicky závislý na produktu, tj. u všech produktů s touto šablonou je stejný. Stejně tak je to i u obrázku - tyhle obrázky budou v šabloně společné pro všechny produkty co tu šablonu budou mít.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#212c4d",
+            "color_button_text": "#fff",
+            "color_button": "#fff",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_8xXfgP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img_6834637e-09a2-4ff1-921b-b419dc9d06a1.jpg",
+            "icon": "check",
+            "title": "Tady je druhá featura",
+            "text": "<p>a tady je nějaký její popis, není dynamicky závislý na produktu, tj. u všech produktů s touto šablonou je stejný</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#212c4d",
+            "color_button_text": "#fff",
+            "color_button": "#fff",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_6T7mEb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img_6834637e-09a2-4ff1-921b-b419dc9d06a1.jpg",
+            "icon": "check",
+            "title": "Třetí featura",
+            "text": "<p>a zase nějaký popis (případně pod tímto blokem může být i tlačítko s odkazem někam ale to asi nechcem, když chcem aby si to zákazník tady koupil a nikam neutíkal. </p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#212c4d",
+            "color_button_text": "#fff",
+            "color_button": "#fff",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_NmpX3b",
+        "column_8xXfgP",
+        "column_6T7mEb"
+      ],
+      "settings": {
+        "title": "3 důvody proč si vybrat Opus - společné pro celou šablonu",
+        "subtitle": "",
+        "heading_size": "h2",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "tady je ten button, ale já bych ho sem osobně nedávala",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "6099b098-2d24-4b53-9488-988cbaa630f3": {
+      "type": "main-product-attributes",
+      "blocks": {
+        "c2731e6a-27ad-4c71-b114-f2c62da34e42": {
+          "type": "specifications",
+          "settings": {
+            "title": "Vlastnosti a funkce",
+            "metafields": "product_attributes.material, product_attributes.material-tlacitek, product_attributes.magsafe, product_attributes.typ-zapinani, product_attributes.urceni"
+          }
+        },
+        "517e3875-04c8-4ad9-a3de-d00c3d5a9451": {
+          "type": "specifications",
+          "settings": {
+            "title": "Rozměry",
+            "metafields": "product_attributes.rozmer-y, product_attributes.rozmer-x, product_attributes.sirka"
+          }
+        }
+      },
+      "block_order": [
+        "c2731e6a-27ad-4c71-b114-f2c62da34e42",
+        "517e3875-04c8-4ad9-a3de-d00c3d5a9451"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_description": false,
+        "title": "Produktové parametry",
+        "subtitle": "",
+        "heading_size": "h2",
+        "enable_section_box_layout": false,
+        "color_scheme": "background-2",
+        "table_color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "banner_grid_jtF8wQ": {
+      "type": "banner-grid",
+      "blocks": {
+        "promotion_text_6Cgzyg": {
+          "type": "promotion-text",
+          "settings": {
+            "heading": "Opus",
+            "heading_size": "h2",
+            "text": "<p>Kvalitní pouzdro pro váš telefon</p>",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#000000",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#000000",
+            "color_background": "#fafafa"
+          }
+        },
+        "promotion_banner_7kDiq9": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/FIXOP-483-BK-PRODUCT-4.jpg",
+            "image_overlay_opacity": 20,
+            "heading": "Chrání a funguje",
+            "heading_size": "h2",
+            "text": "Multifunkční ochrana vašeho zařízení",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 2,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#ffffff",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
+          }
+        },
+        "promotion_banner_yeUWED": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/FIXOP3-100-BK-PRODUCT-3.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Stojánek",
+            "heading_size": "h2",
+            "text": "Pevný a stabilní",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#212c4d",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
+          }
+        },
+        "promotion_banner_mKTq7M": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/FIXST-1033-BK-PRODUCT-4.jpg",
+            "image_overlay_opacity": 20,
+            "heading": "Přesně pro vaše zařízení",
+            "heading_size": "h2",
+            "text": "Sedí přesně, je to boží",
+            "text_style": "subtitle",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 2,
+            "desktop_row": 2,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#ffffff",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
+          }
+        },
+        "promotion_video_kMFJkX": {
+          "type": "promotion-video",
+          "settings": {
+            "cover_image": "shopify://shop_images/FIXOP3-1085-BK-PRODUCT-2.jpg",
+            "video_url": "https://www.youtube.com/watch?v=Nvs2f_NKhZY",
+            "description": "Pouzdra Opus",
+            "autoplay": false,
+            "enable_controls": false,
+            "enable_video_looping": true,
+            "desktop_column": 2,
+            "desktop_row": 1,
+            "image_height_mobile": "medium-mobile"
+          }
+        },
+        "promotion_banner_YTQwdh": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/FIXOP2-689-BK-PRODUCT-2.jpg",
+            "image_overlay_opacity": 20,
+            "heading": "Elegance  bez kompromisů",
+            "heading_size": "h2",
+            "text": "Funkční a elegantní pouzdro pro širokou paletu zařízení",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 2,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#ffffff",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_text_6Cgzyg",
+        "promotion_banner_7kDiq9",
+        "promotion_banner_yeUWED",
+        "promotion_banner_mKTq7M",
+        "promotion_video_kMFJkX",
+        "promotion_banner_YTQwdh"
+      ],
+      "settings": {
+        "layout": "grid",
+        "desktop_row_height": 30,
+        "desktop_gap": 30,
+        "mobile_gap": 10,
+        "hide_when_empty_content": true,
+        "enable_section_box_layout": false,
+        "media_border_thickness": 0,
+        "media_border_opacity": 55,
+        "media_radius": 21,
+        "enable_shadow": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "title": "Mohlo by se vám líbit",
+        "subtitle": "",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 72,
+        "padding_bottom": 40
+      }
+    },
+    "6925b9d2-abbc-4e33-ad59-0e7408e9fa5c": {
+      "type": "text-icons",
+      "blocks": {
+        "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-3": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "calculator",
+            "title": "Item heading",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-1": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check_circle",
+            "title": "2 letá záruka",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "30dc71fe-cc0b-42b9-a7bd-6aa2cf6b75f2": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "phone",
+            "title": "Zákaznická podpora",
+            "subheading": "",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-3",
+        "template--20124663152941__6925b9d2-abbc-4e33-ad59-0e7408e9fa5c-text-icon-1",
+        "30dc71fe-cc0b-42b9-a7bd-6aa2cf6b75f2"
+      ],
+      "settings": {
+        "title": "Více než xy spokojených zákazníků",
+        "subtitle": "",
+        "heading_size": "h2",
+        "icon_width_desktop": 18,
+        "text_position": "bottom",
+        "enable_heading_in_box": false,
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "auto_fit": false,
+        "column_alignment": "center",
+        "highlight_icon": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "background-1",
+        "border_width": 1,
+        "border_opacity": 0,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "square",
+        "blur_background": false,
+        "columns_mobile": "2",
+        "icon_width_mobile": 26,
+        "border_spacing_mobile": 0,
+        "swipe_on_mobile": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "8124c74c-24a1-4cc3-9369-91db0fab3a14": {
+      "type": "spacer",
+      "settings": {
+        "height": 40
+      }
+    },
+    "42ea5b86-e5b3-44b9-8a28-410eec1590ed": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "title": "Naposledy zobrazené produkty",
+        "subtitle": "",
+        "heading_size": "h2",
+        "full_width": false,
+        "color_scheme": "background-2",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "17404812158d872dfd": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "compatible_devices_7BY8g8": {
+      "type": "compatible-devices",
+      "disabled": true,
+      "settings": {
+        "title": "Kompatibilní zařízení",
+        "title_size": "h3",
+        "compatible_devices_metafield_namespace": "product_compatible_devices",
+        "compatible_devices_metafield_name": "devices_metaobject"
+      }
+    },
+    "0fcf424c-972e-4afd-b20d-49aaed072495": {
+      "type": "spacer",
+      "disabled": true,
+      "settings": {
+        "height": 80
+      }
+    },
+    "168088586605a49d77": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17404920969756119e": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b861113b-71fc-41c9-bf1f-80084a7d6f04",
+    "6524c6b3-5b0c-4c1f-bffa-e9ea1819e293",
+    "image_with_text_8jX66E",
+    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
+    "spacer_DJMtQa",
+    "multicolumn_MG4Miy",
+    "6099b098-2d24-4b53-9488-988cbaa630f3",
+    "banner_grid_jtF8wQ",
+    "product-recommendations",
+    "6925b9d2-abbc-4e33-ad59-0e7408e9fa5c",
+    "8124c74c-24a1-4cc3-9369-91db0fab3a14",
+    "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
+    "17404812158d872dfd",
+    "compatible_devices_7BY8g8",
+    "0fcf424c-972e-4afd-b20d-49aaed072495",
+    "168088586605a49d77",
+    "17404920969756119e"
+  ]
+}
