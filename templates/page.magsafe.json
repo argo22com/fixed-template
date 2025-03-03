@@ -90,7 +90,7 @@
         "heading_Mf43cQ": {
           "type": "heading",
           "settings": {
-            "heading": "MagSafe",
+            "heading": "Svět magnetického příslušenství FIXED",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -98,20 +98,30 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Kolečko navíc, které ti otevře svět široké nabídky příslušenství, které využívá technologie MagSafe. (pracovní text)</p>",
+            "text": "<p>Kolečko navíc, které ti otevře svět široké nabídky příslušenství. Vyzkoušej sílu magnetů - ať už chceš využít snadné přichycení na držáky, selfie tyče, nebo peněženky, a nebo chceš využívat benefitů bezdrátového nabíjení. FIXED má produkty přesně pro tebe.</p>",
             "text_style": "body"
+          }
+        },
+        "button_LWYkFn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Objevit magnetické příslušenství",
+            "button_link": "shopify://collections/magsafe-nabijecky",
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_Mf43cQ",
-        "text_Rc9KRn"
+        "text_Rc9KRn",
+        "button_LWYkFn"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/magsafe.1559.jpg",
+        "image": "shopify://shop_images/ecosystem.png",
         "height": "adapt",
-        "desktop_image_width": "small",
+        "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
