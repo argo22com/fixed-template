@@ -398,54 +398,54 @@
         "column_NmpX3b": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/img_6834637e-09a2-4ff1-921b-b419dc9d06a1.jpg",
+            "image": "shopify://shop_images/FIXSTRE-LS2.jpg",
             "icon": "check",
-            "title": "Tady je první featura",
-            "text": "<p>a tady je nějaký její popis, není dynamicky závislý na produktu, tj. u všech produktů s touto šablonou je stejný. Stejně tak je to i u obrázku - tyhle obrázky budou v šabloně společné pro všechny produkty co tu šablonu budou mít.</p>",
+            "title": "Ochrana před zežloutnutím",
+            "text": "<p>Tento obal je vyroben z materiálů pocházejících z odpovědně obhospodařovaných lesů s certifikací FSC®, což zajišťuje jeho šetrnost k životnímu prostředí. Je 100% recyklovatelný a představuje ideální volbu pro ty, kteří chtějí balit ekologicky a odpovědně.</p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#212c4d",
-            "color_button_text": "#fff",
-            "color_button": "#fff",
-            "card_color_background": "#fff",
+            "color_button_text": "#ffffff",
+            "color_button": "#ffffff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         },
         "column_8xXfgP": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/img_6834637e-09a2-4ff1-921b-b419dc9d06a1.jpg",
+            "image": "shopify://shop_images/FIXSTRE-LS1_b880a46d-efc2-44ae-a312-ef9dc73d9c83.jpg",
             "icon": "check",
-            "title": "Tady je druhá featura",
-            "text": "<p>a tady je nějaký její popis, není dynamicky závislý na produktu, tj. u všech produktů s touto šablonou je stejný</p>",
+            "title": "Připravený pro bezdrátové nabíjení",
+            "text": "<p>Tento kryt je navržen tak, aby nebránil bezdrátovému nabíjení vašeho zařízení. Můžete tak pohodlně nabíjet telefon bez nutnosti sundávání krytu.</p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#212c4d",
-            "color_button_text": "#fff",
-            "color_button": "#fff",
-            "card_color_background": "#fff",
+            "color_button_text": "#ffffff",
+            "color_button": "#ffffff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         },
         "column_6T7mEb": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/img_6834637e-09a2-4ff1-921b-b419dc9d06a1.jpg",
+            "image": "shopify://shop_images/FIXTCC-1566-TR-PRODUCT-2.jpg",
             "icon": "check",
-            "title": "Třetí featura",
-            "text": "<p>a zase nějaký popis (případně pod tímto blokem může být i tlačítko s odkazem někam ale to asi nechcem, když chcem aby si to zákazník tady koupil a nikam neutíkal. </p>",
+            "title": "Ekologický obal s certifikací FSC®",
+            "text": "<p>Tento obal je vyroben z materiálů pocházejících z odpovědně obhospodařovaných lesů s certifikací FSC®, což zajišťuje jeho šetrnost k životnímu prostředí. Je 100% recyklovatelný a představuje ideální volbu pro ty, kteří chtějí balit ekologicky a odpovědně.</p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#212c4d",
-            "color_button_text": "#fff",
-            "color_button": "#fff",
-            "card_color_background": "#fff",
+            "color_button_text": "#ffffff",
+            "color_button": "#ffffff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         }
