@@ -25,6 +25,15 @@
             "show_if_no_reviews": true
           }
         },
+        "collapsible_tab_Bwyqg3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Krátký popisek",
+            "icon": "check",
+            "content": "<p>Vypadá jako hamburger, ale umí nabít všechna vaše zařízení. A je tak maličký. </p>",
+            "page": ""
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -72,15 +81,6 @@
             "collections_label": "Kolekce"
           }
         },
-        "collapsible_tab_Bwyqg3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Krátký popisek",
-            "icon": "check",
-            "content": "<p>tady to bude potřeba napojit na konkrétní metafield, defaultně to umí načíst jiný data než potřebujeme.</p>",
-            "page": ""
-          }
-        },
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
           "type": "complementary",
           "settings": {
@@ -111,11 +111,11 @@
       "block_order": [
         "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
+        "collapsible_tab_Bwyqg3",
         "price",
         "popup_XDycdy",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
-        "collapsible_tab_Bwyqg3",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
         "share"
       ],
@@ -552,11 +552,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         },
         "f021690c-4bfa-4e48-99c0-64dfa7047013": {
@@ -672,11 +672,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         }
       },
@@ -830,20 +830,20 @@
             "desktop_image_position": "left",
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center",
-            "colors_text": "#000",
+            "colors_text": "#000000",
             "gradient_heading_desktop": "",
-            "colors_background": "#fff",
-            "colors_badge_foreground": "#fff",
-            "colors_badge_background": "#F87171",
-            "colors_button_text": "#fff",
-            "colors_button": "#000",
-            "colors_text_mobile": "#000",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#f87171",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
+            "colors_text_mobile": "#000000",
             "gradient_heading_mobile": "",
-            "colors_background_mobile": "#fff",
-            "colors_badge_foreground_mobile": "#fff",
-            "colors_badge_background_mobile": "#F87171",
-            "colors_button_text_mobile": "#fff",
-            "colors_button_mobile": "#000"
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
           }
         }
       },
