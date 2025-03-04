@@ -456,7 +456,7 @@
         "column_6T7mEb"
       ],
       "settings": {
-        "title": "3 důvody proč si vybrat Opus - společné pro celou šablonu",
+        "title": "3 důvody, proč si vybrat ReStory",
         "subtitle": "",
         "heading_size": "h2",
         "media_type": "image",
@@ -529,7 +529,7 @@
         "promotion_text_6Cgzyg": {
           "type": "promotion-text",
           "settings": {
-            "heading": "Opus",
+            "heading": "ReStory",
             "heading_size": "h2",
             "text": "<p>Kvalitní pouzdro pro váš telefon</p>",
             "text_style": "body",
@@ -556,7 +556,7 @@
         "promotion_banner_7kDiq9": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/FIXOP-483-BK-PRODUCT-4.jpg",
+            "image": "shopify://shop_images/FIXSTRE-LS2.jpg",
             "image_overlay_opacity": 20,
             "heading": "Chrání a funguje",
             "heading_size": "h2",
@@ -586,11 +586,11 @@
         "promotion_banner_yeUWED": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/FIXOP3-100-BK-PRODUCT-3.jpg",
+            "image": "shopify://shop_images/FIXSTRE-723-PRODUCT-6.jpg",
             "image_overlay_opacity": 0,
-            "heading": "Stojánek",
+            "heading": "",
             "heading_size": "h2",
-            "text": "Pevný a stabilní",
+            "text": "",
             "text_style": "body",
             "button_label": "",
             "button_style": "primary",
@@ -616,7 +616,7 @@
         "promotion_banner_mKTq7M": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/FIXST-1033-BK-PRODUCT-4.jpg",
+            "image": "shopify://shop_images/FIXSTRE-723-PRODUCT-0.jpg",
             "image_overlay_opacity": 20,
             "heading": "Přesně pro vaše zařízení",
             "heading_size": "h2",
@@ -660,7 +660,7 @@
         "promotion_banner_YTQwdh": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/FIXOP2-689-BK-PRODUCT-2.jpg",
+            "image": "shopify://shop_images/FIXSTRE-LS1_b880a46d-efc2-44ae-a312-ef9dc73d9c83.jpg",
             "image_overlay_opacity": 20,
             "heading": "Elegance  bez kompromisů",
             "heading_size": "h2",
