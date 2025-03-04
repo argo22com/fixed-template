@@ -162,7 +162,7 @@
         "text_FgxdBE": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>MagSafe je technologie, kterou používá firma Apple již dlouhou dobu.</li><li>Nyní se díky rozvoji bezdrátového nabíjení i v android telefonech může využívat v široké škále zařízení.</li><li>Poznej i ty sílu magnetů a používej to nejmodernější příslušenství nezávisle na tom, jestli vlastníš nejnovější iPhone.</li><li>Chceš vědět více o této technologii? Přečti si náš blog na toto téma.</li></ul>",
+            "text": "<ul><li>MagSafe je magnetická technologie, kterou používá firma Apple již dlouhou dobu.</li><li>Nyní se díky rozvoji bezdrátového nabíjení i v android telefonech může využívat v široké škále zařízení.</li><li>Poznej i ty sílu magnetů a používej to nejmodernější příslušenství nezávisle na tom, jestli vlastníš nejnovější iPhone.</li><li>Chceš vědět více o této technologii? Přečti si náš blog na toto téma.</li></ul>",
             "text_style": "body"
           }
         },
