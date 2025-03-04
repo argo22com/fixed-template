@@ -420,6 +420,60 @@
         "overlay_color": "#1e40af"
       }
     },
+    "image_with_text_4H8LYF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_EgkjLA": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.premium_heading3.value }}",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_HFkQJm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.premium_content3 | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EgkjLA",
+        "text_HFkQJm"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "{{ product.metafields.custom.premium_picture3.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
     "image_banner_axzhBF": {
       "type": "image-banner",
       "blocks": {
@@ -496,363 +550,8 @@
         "padding_bottom": 0
       }
     },
-    "96482c8e-18e4-432f-a2aa-323d63bd401b": {
-      "type": "banner-grid",
-      "blocks": {
-        "template--20218412368173__96482c8e-18e4-432f-a2aa-323d63bd401b-promotion-banner-1": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/FIXNDS-BK-PRODUCT-1.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "Nadpis",
-            "heading_size": "h2",
-            "text": "Your description text",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 1,
-            "desktop_row": 1,
-            "desktop_content_position": "middle-right",
-            "desktop_narrow_content": true,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#dc2626",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#ffffff"
-          }
-        },
-        "promotion_banner_ppE9EE": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/FIXOP3-1566-BK-PRODUCT-3.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "Image banner heading",
-            "heading_size": "h1",
-            "text": "Give customers details about the banner image(s) or content on the template",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 1,
-            "desktop_row": 1,
-            "desktop_content_position": "middle-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#ffffff"
-          }
-        },
-        "f021690c-4bfa-4e48-99c0-64dfa7047013": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/FIXNDS-BK-PRODUCT-6.jpg",
-            "image_overlay_opacity": 30,
-            "heading": "Image banner heading",
-            "heading_size": "h2",
-            "text": "",
-            "text_style": "caption-with-letter-spacing",
-            "button_label": "",
-            "button_style": "link",
-            "badge": "Badge label",
-            "badge_style": "underlined",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 1,
-            "desktop_content_position": "top-left",
-            "desktop_narrow_content": true,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "left",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#f03840"
-          }
-        },
-        "template--20218412368173__96482c8e-18e4-432f-a2aa-323d63bd401b-promotion-banner-3": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/FIXNDS-BK-PRODUCT-0.jpg",
-            "image_overlay_opacity": 50,
-            "heading": "Image banner heading",
-            "heading_size": "h2",
-            "text": "Your description text",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 1,
-            "desktop_content_position": "middle-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "4",
-            "color_text": "#ffffff",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#ffffff"
-          }
-        },
-        "15b33dd5-ee65-4ea7-8245-87f31a0e1ca9": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/FIXNDS-BK-PRODUCT-8.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "Image banner heading",
-            "heading_size": "h1",
-            "text": "Your description text",
-            "text_style": "subtitle",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 2,
-            "desktop_content_position": "middle-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
-            "color_gradient_heading": "linear-gradient(270deg, rgba(241, 130, 49, 1), rgba(253, 212, 32, 1) 51.04%, rgba(143, 202, 72, 1) 100%)",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#ffffff"
-          }
-        },
-        "promotion_banner_UaP3UF": {
-          "type": "promotion-banner",
-          "settings": {
-            "image": "shopify://shop_images/FIXMGR-V-BK-PRODUCT-9.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "Image banner heading",
-            "heading_size": "h1",
-            "text": "Give customers details about the banner image(s) or content on the template",
-            "text_style": "body",
-            "button_label": "",
-            "button_style": "primary",
-            "badge": "",
-            "badge_style": "box",
-            "url": "",
-            "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
-            "desktop_row": 1,
-            "desktop_content_position": "middle-center",
-            "desktop_narrow_content": false,
-            "elements_gap_desktop": "1.5",
-            "image_height_mobile": "medium-mobile",
-            "mobile_content_alignment": "center",
-            "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
-            "color_gradient_heading": "",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "color_badge": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "template--20218412368173__96482c8e-18e4-432f-a2aa-323d63bd401b-promotion-banner-1",
-        "promotion_banner_ppE9EE",
-        "f021690c-4bfa-4e48-99c0-64dfa7047013",
-        "template--20218412368173__96482c8e-18e4-432f-a2aa-323d63bd401b-promotion-banner-3",
-        "15b33dd5-ee65-4ea7-8245-87f31a0e1ca9",
-        "promotion_banner_UaP3UF"
-      ],
-      "settings": {
-        "layout": "grid",
-        "desktop_row_height": 30,
-        "desktop_gap": 30,
-        "mobile_gap": 10,
-        "hide_when_empty_content": true,
-        "enable_section_box_layout": false,
-        "media_border_thickness": 1,
-        "media_border_opacity": 5,
-        "media_radius": 10,
-        "enable_shadow": true,
-        "padding_top": 80,
-        "padding_bottom": 100
-      }
-    },
     "slideshow_xfpCTD": {
       "type": "slideshow",
-      "blocks": {
-        "slide_LjyT4f": {
-          "type": "slide",
-          "settings": {
-            "badge_label": "Poskládat si tu můžeme cokoli",
-            "heading": "ale pro každej prvek to chce vlastní metafield",
-            "text": "takže čím víc prvků, tím větší rozsekání na jednotlivý části a tím blbějc se to bude udržovat. . A těmi jednotlivými prvky myslím název, popis, obrázek, text na buttonu, odkaz na buttonu apod. V případě tohoto slideru to je teda 6 metafieldů na každou obrazovku slideru.",
-            "hide_text_on_mobile": false,
-            "button_label": "tohle je taky metafield button",
-            "price": "1300",
-            "link": "",
-            "button_style": "primary",
-            "button_open_new_tab": false,
-            "box_align": "middle-center",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
-            "colors_text": "#000000",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#f87171",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
-            "colors_text_mobile": "#000000",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
-          }
-        },
-        "slide_z4cpWm": {
-          "type": "slide",
-          "settings": {
-            "badge_label": "Badge label",
-            "heading": "Image slide",
-            "text": "Tell your brand's story through images",
-            "hide_text_on_mobile": false,
-            "button_label": "Button label",
-            "price": "1300",
-            "link": "",
-            "button_style": "primary",
-            "button_open_new_tab": false,
-            "box_align": "middle-center",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
-            "colors_text": "#000000",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#f87171",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
-            "colors_text_mobile": "#000000",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
-          }
-        },
-        "slide_CtNVU7": {
-          "type": "slide",
-          "settings": {
-            "badge_label": "Badge label",
-            "heading": "Image slide",
-            "text": "Tell your brand's story through images",
-            "hide_text_on_mobile": false,
-            "button_label": "Button label",
-            "price": "1300",
-            "link": "",
-            "button_style": "primary",
-            "button_open_new_tab": false,
-            "box_align": "middle-center",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
-            "colors_text": "#000000",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#f87171",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
-            "colors_text_mobile": "#000000",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
-          }
-        },
-        "slide_4iGtn4": {
-          "type": "slide",
-          "settings": {
-            "badge_label": "Badge label",
-            "heading": "Image slide",
-            "text": "Tell your brand's story through images",
-            "hide_text_on_mobile": false,
-            "button_label": "Button label",
-            "price": "1300",
-            "link": "",
-            "button_style": "primary",
-            "button_open_new_tab": false,
-            "box_align": "middle-center",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
-            "colors_text": "#000000",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#f87171",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
-            "colors_text_mobile": "#000000",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "slide_LjyT4f",
-        "slide_z4cpWm",
-        "slide_CtNVU7",
-        "slide_4iGtn4"
-      ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -918,6 +617,53 @@
         "title_size": "h3",
         "compatible_devices_metafield_namespace": "product_compatible_devices",
         "compatible_devices_metafield_name": "devices_metaobject"
+      }
+    },
+    "main_product_attributes_rRC6hB": {
+      "type": "main-product-attributes",
+      "blocks": {
+        "product_brand_E7miaK": {
+          "type": "product_brand",
+          "settings": {
+            "title": "Brand"
+          }
+        },
+        "product_type_erXxLM": {
+          "type": "product_type",
+          "settings": {
+            "title": "Type"
+          }
+        },
+        "product_sku_F7tYVK": {
+          "type": "product_sku",
+          "settings": {
+            "title": "Produktový kód"
+          }
+        },
+        "specifications_WUjpHE": {
+          "type": "specifications",
+          "settings": {
+            "title": "Produktové parametry",
+            "metafields": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_brand_E7miaK",
+        "product_type_erXxLM",
+        "product_sku_F7tYVK",
+        "specifications_WUjpHE"
+      ],
+      "settings": {
+        "show_description": false,
+        "title": "Produktové parametry",
+        "subtitle": "",
+        "heading_size": "h1",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "table_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "0fcf424c-972e-4afd-b20d-49aaed072495": {
@@ -1001,53 +747,6 @@
         "padding_bottom": 40
       }
     },
-    "main_product_attributes_rRC6hB": {
-      "type": "main-product-attributes",
-      "blocks": {
-        "product_brand_E7miaK": {
-          "type": "product_brand",
-          "settings": {
-            "title": "Brand"
-          }
-        },
-        "product_type_erXxLM": {
-          "type": "product_type",
-          "settings": {
-            "title": "Type"
-          }
-        },
-        "product_sku_F7tYVK": {
-          "type": "product_sku",
-          "settings": {
-            "title": "Produktový kód"
-          }
-        },
-        "specifications_WUjpHE": {
-          "type": "specifications",
-          "settings": {
-            "title": "Produktové parametry",
-            "metafields": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_brand_E7miaK",
-        "product_type_erXxLM",
-        "product_sku_F7tYVK",
-        "specifications_WUjpHE"
-      ],
-      "settings": {
-        "show_description": false,
-        "title": "Produktové parametry",
-        "subtitle": "",
-        "heading_size": "h1",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "table_color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "lookbook_RgVXcH": {
       "type": "lookbook",
       "blocks": {
@@ -1125,15 +824,15 @@
     "image_with_text_8jX66E",
     "b861113b-71fc-41c9-bf1f-80084a7d6f04",
     "image_banner_axzhBF",
-    "96482c8e-18e4-432f-a2aa-323d63bd401b",
+    "image_with_text_4H8LYF",
+    "main_product_attributes_rRC6hB",
     "slideshow_xfpCTD",
+    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
     "compatible_devices_7BY8g8",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
     "168088586605a49d77",
-    "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
-    "main_product_attributes_rRC6hB",
     "lookbook_RgVXcH"
   ]
 }
