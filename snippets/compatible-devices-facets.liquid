@@ -42,8 +42,8 @@
 {% endcomment %}
 {% assign parent_collection = null %}
 {% for collection in collections %}
-  {% if collection.metafields.custom.subcollections.value %}
-    {% for subcollection in collection.metafields.custom.subcollections.value %}
+  {% if collection.metafields.product_compatible_devices.subcollections.value %}
+    {% for subcollection in collection.metafields.product_compatible_devices.subcollections.value %}
       {% if subcollection.url == results.url %}
         {% assign parent_collection = collection %}
         {% break %}
@@ -75,16 +75,16 @@
         {{ 'products.facets.compatible_manufacturers' | t }}
       </option>
 
-      {% if results.metafields.custom.subcollections.value %}
-        {% for subcollection in results.metafields.custom.subcollections.value %}
+      {% if results.metafields.product_compatible_devices.subcollections.value %}
+        {% for subcollection in results.metafields.product_compatible_devices.subcollections.value %}
           <option
             value="{{ subcollection.url | escape }}"
           >
             {{ subcollection.title | split: ' ' | last | escape }}
           </option>
         {% endfor %}
-      {% elsif parent_collection != null and parent_collection.metafields.custom.subcollections.value %}
-        {% for subcollection in parent_collection.metafields.custom.subcollections.value %}
+      {% elsif parent_collection != null and parent_collection.metafields.product_compatible_devices.subcollections.value %}
+        {% for subcollection in parent_collection.metafields.product_compatible_devices.subcollections.value %}
           <option
             value="{{ subcollection.url | escape }}"
             {% if subcollection.url == results.url %}
