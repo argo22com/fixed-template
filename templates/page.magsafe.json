@@ -229,11 +229,21 @@
             "text": "<p>Nevíš, jestli je tvůj telefon kompatibilní s <strong>bezdrátovým nabíjením</strong> a tím pádem může používat i technologii MagSafe za pomoci doplňků od FIXED? Aby nabíjení fungovalo v pořádku, je třeba aby tvůj telefon měl bezdrátové nabíjení se <strong>standardem Qi</strong>, na kterém je zároveň založená i technologie MagSafe.</p><p>Pak už stačí jenom zvolit samostatné <strong>magnetické kolečko</strong>, nebo <strong>kryt</strong>, kde jsou magnety integrované a můžeš si užít ty nejlepší magnetické nabíječky na trhu.</p>",
             "text_style": "body"
           }
+        },
+        "button_REdP9z": {
+          "type": "button",
+          "settings": {
+            "button_label": "Chci to nejlepší příslušenství",
+            "button_link": "shopify://collections/magsafe-nabijecky",
+            "button_style": "solid",
+            "button_open_new_tab": true
+          }
         }
       },
       "block_order": [
         "heading_J8hx6t",
-        "text_PQARFT"
+        "text_PQARFT",
+        "button_REdP9z"
       ],
       "settings": {
         "grid_layout": "grid",
