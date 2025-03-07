@@ -226,7 +226,7 @@
         "text_PQARFT": {
           "type": "text",
           "settings": {
-            "text": "<p>Nevíš, jestli je tvůj telefon kompatibilní s bezdrátovým nabíjením a tím pádem může používat i technologii MagSafe za pomoci doplňků od FIXED? Aby nabíjení fungovalo v pořádku, je třeba aby tvůj telefon měl bezdrátové nabíjení se standardem Qi, na kterém je zároveň založená i technologie MagSafe.</p><p>Pak už stačí jenom zvolit samostatné magnetické kolečko, nebo kryt, kde jsou magnety integrované a můžeš si užít ty nejlepší magnetické nabíječky na trhu.</p>",
+            "text": "<p>Nevíš, jestli je tvůj telefon kompatibilní s bezdrátovým nabíjením a tím pádem může používat i technologii MagSafe za pomoci doplňků od FIXED? Aby nabíjení fungovalo v pořádku, je třeba aby tvůj telefon měl bezdrátové nabíjení se <strong>standardem Qi</strong>, na kterém je zároveň založená i technologie MagSafe.</p><p>Pak už stačí jenom zvolit samostatné <strong>magnetické kolečko</strong>, nebo <strong>kryt</strong>, kde jsou magnety integrované a můžeš si užít ty nejlepší magnetické nabíječky na trhu.</p>",
             "text_style": "body"
           }
         }
@@ -237,8 +237,8 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/armor_antireflex.png",
-        "height": "adapt",
+        "image": "shopify://shop_images/FIXMPOS-RO-LS1.jpg",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
