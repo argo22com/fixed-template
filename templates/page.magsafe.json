@@ -184,7 +184,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/magsafe_kompatibilita.png",
-        "height": "adapt",
+        "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -324,6 +324,7 @@
     },
     "before_after_image_slider_9zCyyR": {
       "type": "before-after-image-slider",
+      "disabled": true,
       "settings": {
         "section_width": "grid",
         "title": "Before/after image slider",
