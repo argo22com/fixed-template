@@ -233,7 +233,7 @@
         "button_REdP9z": {
           "type": "button",
           "settings": {
-            "button_label": "Chci to nejlepší příslušenství",
+            "button_label": "Chci tu nejlepší nabíječku",
             "button_link": "shopify://collections/magsafe-nabijecky",
             "button_style": "solid",
             "button_open_new_tab": true
@@ -290,14 +290,24 @@
         "text_Bn9ejK": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Aplikátor druhé generace pro dokonale přesné umístění skla Armor na displej​</li><li>Antidust fólie pro snadné a dokonalé odstranění všech částeček prachu​</li><li>Výsledkem je perfektně nalepené sklo bez vzduchových bublin za méně než minutu</li></ul>",
+            "text": "<p>Příslušenství kompatibilní s MagSafe technologií není jenom o nabíjení. Jde hlavně o jednoduchost používání - stačí přiložit a telefon je bezpečně uchycený. Ať už použiješ selfie tyč, držák do auta, nebo naší nejnovější peněženku s lokátorem garantujeme ti, že snazší už to být nemůže.</p>",
             "text_style": "body"
+          }
+        },
+        "button_dcLLJg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Chci magnetické příslušenství",
+            "button_link": "shopify://collections/magneticke-prislusenstvi-bez-nabijeni",
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_HKnxPM",
-        "text_Bn9ejK"
+        "text_Bn9ejK",
+        "button_dcLLJg"
       ],
       "settings": {
         "grid_layout": "grid",
@@ -321,7 +331,7 @@
         "color_countdown": "#000000",
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
