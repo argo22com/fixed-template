@@ -106,7 +106,7 @@
           "type": "button",
           "settings": {
             "button_label": "Objevit magnetické příslušenství",
-            "button_link": "shopify://collections/magsafe-nabijecky",
+            "button_link": "shopify://collections/prislusenstvi-kompatibilni-s-magsafe",
             "button_style": "solid",
             "button_open_new_tab": false
           }
@@ -282,8 +282,8 @@
         "heading_HKnxPM": {
           "type": "heading",
           "settings": {
-            "heading": "Antidust aplikátor",
-            "heading_size": "h1",
+            "heading": "Komfort magnetického uchycení",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
@@ -299,11 +299,10 @@
         "heading_HKnxPM",
         "text_Bn9ejK"
       ],
-      "disabled": true,
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/armor_antidust.jpg",
-        "height": "adapt",
+        "image": "shopify://shop_images/FIXMFP-LS6.jpg",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
