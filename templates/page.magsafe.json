@@ -172,7 +172,7 @@
             "button_label": "Chci se dozvědět více",
             "button_link": "shopify://blogs/news",
             "button_style": "solid",
-            "button_open_new_tab": false
+            "button_open_new_tab": true
           }
         }
       },
