@@ -162,7 +162,7 @@
         "text_FgxdBE": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>MagSafe je magnetická technologie nabíjení a držení, kterou používá firma Apple již dlouhou dobu. Je založená na nabíjecím standardu Qi, který je přítomný v telefonech se systémem Android.</li><li>Díky rozvoji bezdrátového nabíjení na nový standard Qi2, který již bude obsahovat i magnety i pro android telefony se příslušenství kompatibilní s MagSafe může využívat v široké škále zařízení.</li><li>Poznej i ty sílu magnetů a používej to nejmodernější příslušenství nezávisle na tom, jestli vlastníš nejnovější iPhone.</li><li>Chceš vědět více o této technologii? Přečti si náš blog na toto téma.</li></ul>",
+            "text": "<ul><li>MagSafe je magnetická technologie nabíjení a držení, kterou používá firma Apple již dlouhou dobu. </li><li>Díky rozvoji bezdrátového nabíjení na nový standard Qi2, který již bude obsahovat i magnety i pro android telefony se příslušenství kompatibilní s MagSafe může využívat v široké škále zařízení.</li><li>Poznej i ty sílu magnetů a používej to nejmodernější příslušenství nezávisle na tom, jestli vlastníš nejnovější iPhone.</li><li>Chceš vědět více o této technologii? Přečti si náš blog na toto téma.</li></ul>",
             "text_style": "body"
           }
         },
