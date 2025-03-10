@@ -27,14 +27,14 @@
         "heading_AbkTRp": {
           "type": "heading",
           "settings": {
-            "heading": "Chceš o kolečko navíc?",
+            "heading": "Jedno kolečko, tisíce možností",
             "size": "h1"
           }
         },
         "text_UDYABY": {
           "type": "text",
           "settings": {
-            "text": "<strong>Využij FIXED MagPlate a otevři si svět do MagSafe kompatibilního příslušenství</strong>",
+            "text": "<strong>Objevuj svět magnetického příslušenství pro Apple i Android telefony</strong>",
             "text_style": "subtitle"
           }
         }
@@ -46,7 +46,7 @@
       "settings": {
         "layout": "stretched_grid",
         "image": "shopify://shop_images/kolecko_ms.png",
-        "image_mobile": "shopify://shop_images/Armor_mobile.jpg",
+        "image_mobile": "shopify://shop_images/kolecko_ms.png",
         "image_overlay_opacity": 20,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
