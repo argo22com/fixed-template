@@ -45,7 +45,7 @@
       ],
       "settings": {
         "layout": "stretched_grid",
-        "image": "shopify://shop_images/kolecko_ms.png",
+        "image": "shopify://shop_images/kolecko_desktop.png",
         "image_mobile": "shopify://shop_images/kolecko_ms.png",
         "image_overlay_opacity": 20,
         "image_height": "medium",
