@@ -108,7 +108,7 @@
             "button_label": "Objevit magnetické příslušenství",
             "button_link": "shopify://collections/prislusenstvi-kompatibilni-s-magsafe",
             "button_style": "solid",
-            "button_open_new_tab": false
+            "button_open_new_tab": true
           }
         }
       },
