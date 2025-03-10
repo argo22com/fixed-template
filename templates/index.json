@@ -343,7 +343,7 @@
             "image": "shopify://shop_images/magsafe.jpg",
             "icon": "check",
             "title": "Magnetické příslušenství",
-            "text": "<p>Pořiď si to nejmodernější a nejvychytanější příslušenství nezávisle na tom, jaký máš telefon. Powerbanky, nabíječky selfie tyče i držáky do auta - to nejlepší jenom pro tebe.</p>",
+            "text": "<p>Pořiď si to nejmodernější a nejvychytanější příslušenství nezávisle na tom, jaký máš telefon. Powerbanky, nabíječky, selfie tyče i držáky do auta - to nejlepší jenom pro tebe.</p>",
             "link_label": "Objevit",
             "link": "shopify://products/tasticka-pres-rameno-s-kapsou-fixed-verona-s-cernou-snurkou-pro-mobilni-telefony-do-7-broskvova",
             "button_style": "link",
@@ -422,9 +422,9 @@
         "featured_collection_xdJmVL": {
           "type": "featured_collection",
           "settings": {
-            "collection": "magsafe-nabijecky",
+            "collection": "prislusenstvi-kompatibilni-s-magsafe",
             "custom_image": "shopify://shop_images/kolekce5_835b509c-d072-4bcc-9bb1-62c954a3709c.jpg",
-            "custom_title": "Magsafe zařízení"
+            "custom_title": "Magnetické příslušenství"
           }
         },
         "featured_collection_emzhYj": {
