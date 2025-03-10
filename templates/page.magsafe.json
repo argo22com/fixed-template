@@ -300,7 +300,7 @@
             "button_label": "Chci magnetické příslušenství",
             "button_link": "shopify://collections/magneticke-prislusenstvi-bez-nabijeni",
             "button_style": "solid",
-            "button_open_new_tab": false
+            "button_open_new_tab": true
           }
         }
       },
