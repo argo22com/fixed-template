@@ -37,6 +37,7 @@
         },
         "mega_menu_promotion_YqyFiJ": {
           "type": "mega_menu_promotion",
+          "disabled": true,
           "settings": {
             "trigger": "Akce",
             "title": "ReLeaf",
@@ -57,6 +58,27 @@
           }
         },
         "mega_menu_promotion_JjNkGB": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Magnetické příslušenství",
+            "image": "shopify://shop_images/kolecko_desktop.png",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "Magnetické příslušenství",
+            "subheading": "",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://pages/magneticke-prislusenstvi-fixed",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 49,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_NP3Wit": {
           "type": "mega_menu_promotion",
           "settings": {
             "trigger": "Akce",
@@ -424,6 +446,7 @@
         "mega_menu_promotion_UdqXan",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_JjNkGB",
+        "mega_menu_promotion_NP3Wit",
         "mega_menu_promotion_Bh4wzD",
         "mega_menu_promotion_9KBrbX",
         "mega_menu_product_brand_eMcj9n",
