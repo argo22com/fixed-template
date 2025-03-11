@@ -111,7 +111,7 @@
         "description_btXENM": {
           "type": "description",
           "settings": {
-            "truncate_description": 0,
+            "truncate_description": 140,
             "read_more_button": "Read more"
           }
         }
