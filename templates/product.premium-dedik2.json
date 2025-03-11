@@ -106,6 +106,13 @@
             "content": "{{ product.description }}",
             "page": ""
           }
+        },
+        "description_PMdKaC": {
+          "type": "description",
+          "settings": {
+            "truncate_description": 0,
+            "read_more_button": "Read more"
+          }
         }
       },
       "block_order": [
@@ -117,7 +124,8 @@
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
         "share",
-        "collapsible_tab_iGXJKn"
+        "collapsible_tab_iGXJKn",
+        "description_PMdKaC"
       ],
       "settings": {
         "section_width": "page-width",
