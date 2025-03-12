@@ -15,17 +15,17 @@
         "slide_T3NJDj": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1B1A3334.jpg",
-            "mobile_image": "shopify://shop_images/1B1A3334.jpg",
+            "image": "shopify://shop_images/kolecko_desktop.png",
+            "mobile_image": "shopify://shop_images/kolecko_ms.png",
             "badge_label": "",
-            "heading": "Herní příslušenství",
-            "text": "Objev příslušenství pro herní konzole PlayStation 5, PlayStation Portal a Xbox nebo herní sluchátka Game Pods",
+            "heading": "Jedno kolečko, tisíce možností",
+            "text": "<strong>Objevuj svět magnetického příslušenství pro Apple i Android telefony</strong>",
             "hide_text_on_mobile": false,
             "button_label": "Zjistit více",
             "price": "",
-            "link": "shopify://pages/gaming",
+            "link": "shopify://pages/magneticke-prislusenstvi-fixed",
             "button_style": "primary",
-            "button_open_new_tab": false,
+            "button_open_new_tab": true,
             "box_align": "bottom-left",
             "text_alignment": "left",
             "keep_ltr": false,
@@ -304,12 +304,12 @@
         "column_GJR9bJ": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/1B1A5341_kopie.jpg",
+            "image": "shopify://shop_images/magsafe.jpg",
             "icon": "check",
-            "title": "Verona",
-            "text": "<p>Elegantní taštička precizně vyrobená v naší Prostějovské dílně v ČR. Je ideální pro telefony do 6.7\", doklady a další nezbytnosti. Vyrábí se v 11 barevných provedeních.</p>",
-            "link_label": "Vybrat si tu svou",
-            "link": "shopify://products/tasticka-pres-rameno-s-kapsou-fixed-verona-s-cernou-snurkou-pro-mobilni-telefony-do-7-broskvova",
+            "title": "Magnetické příslušenství",
+            "text": "<p>Pořiď si to nejmodernější a nejvychytanější příslušenství nezávisle na tom, jaký máš telefon. Powerbanky, nabíječky, selfie tyče i držáky do auta - to nejlepší jenom pro tebe.</p>",
+            "link_label": "Objevit",
+            "link": "shopify://pages/magneticke-prislusenstvi-fixed",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -386,8 +386,9 @@
         "featured_collection_xdJmVL": {
           "type": "featured_collection",
           "settings": {
-            "collection": "magsafe-nabijecky",
-            "custom_title": "Magsafe zařízení"
+            "collection": "prislusenstvi-kompatibilni-s-magsafe",
+            "custom_image": "shopify://shop_images/kolekce5_835b509c-d072-4bcc-9bb1-62c954a3709c.jpg",
+            "custom_title": "Magnetické příslušenství"
           }
         },
         "featured_collection_emzhYj": {

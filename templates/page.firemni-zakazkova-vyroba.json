@@ -17,7 +17,8 @@
         "content_alignment": "left",
         "color_scheme": "",
         "padding_top": 80,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "ul_li_marker": "#000"
       }
     },
     "image_banner_Q7m3KH": {
@@ -305,6 +306,114 @@
         "overlay_opacity": 80
       }
     },
+    "rich_text_bp6AWb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nyWzwM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Ražba iniciálů a krátkých textů</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_qWnNBJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Všechny produkty ruční výroby je možné personalizovat ražbou iniciálů nebo krátkých textů. Ražbu provádíme na zakázku a požadavky na vyhotovení je potřeba zadat předem, protože se provádí na nově vyráběný produkt, aby byl výsledek perfektní. <br/>Maximální počet znaků je 8 - 10 (v závislosti na šířce znaků) a k dispozici jsou všechny znaky české abecedy v doplnění o znaky ., #,@ a &.<br/><br/>Pro objednávku prosíme o vyplnění nezávazné poptávky níže.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nyWzwM",
+        "text_qWnNBJ"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "gallery_lightbox_ymKgwN": {
+      "type": "gallery-lightbox",
+      "blocks": {
+        "gallery_image_gXpKUL": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/2.jpg",
+            "row": 1,
+            "gradient": "none",
+            "caption": "Iniciály na produktu Oxford.",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_t43WHd": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/3.jpg",
+            "row": 1,
+            "gradient": "none",
+            "caption": "Ukázka vyraženého jména na produktu Venezia.",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_xKHPBM": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/1.jpg",
+            "row": 1,
+            "gradient": "none",
+            "caption": "Ukázka vyražených iniciálů na sadě produktů Siena a Verona.",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_rbyjy8": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/4.jpg",
+            "row": 1,
+            "gradient": "none",
+            "caption": "Ukázka vyraženého textu na produktu Small Wallet.",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_rw7WxY": {
+          "type": "gallery-image",
+          "settings": {
+            "row": 1,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        }
+      },
+      "block_order": [
+        "gallery_image_gXpKUL",
+        "gallery_image_t43WHd",
+        "gallery_image_xKHPBM",
+        "gallery_image_rbyjy8",
+        "gallery_image_rw7WxY"
+      ],
+      "settings": {
+        "title": "Ukázky realizací",
+        "heading_size": "h2",
+        "max_rows": 2,
+        "color_scheme": "",
+        "show_more_text": "Load more pictures",
+        "button_style": "primary",
+        "button_size": "normal",
+        "button_margin_top": 0,
+        "button_margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "overlay_color": "#999999",
+        "overlay_opacity": 80
+      }
+    },
     "video_8NNtLE": {
       "type": "video",
       "settings": {
@@ -408,6 +517,7 @@
         "gallery_image_fnw7PW",
         "gallery_image_A3AJ4B"
       ],
+      "disabled": true,
       "settings": {
         "title": "Prohlédněte si další produkty z kožené kolekce",
         "heading_size": "h2",
@@ -528,15 +638,28 @@
         "featured_products_rF64Jb": {
           "type": "featured_products",
           "settings": {
-            "title": "Pouzdra",
+            "title": "Kožená pouzdra",
             "product_list": [
+              "kozene-pouzdro-fixed-oxford-pro-apple-ipad-pro-11-2018-2022-a-ipad-air-2020-2022-s-klavesnici-folio-hnede",
               "kozene-pouzdro-fixed-oxford-pro-apple-ipad-pro-11-2018-2022-a-ipad-air-2020-2022-s-klavesnici-folio-cervene",
-              "kozene-pouzdro-fixed-pro-cigaretovy-tabak-papirky-a-filtry-cerna-stipenkova-kuze",
-              "kozene-pouzdro-na-karty-fixed-smile-cards-se-smart-trackerem-fixed-smile-pro-cerne",
-              "pouzdro-na-bryle-fixed-case-for-glasses-s-kapsou-pro-smart-tracker-hnede",
-              "pouzdro-fixed-case-for-airtag-z-prave-hovezi-kuze-s-karabinou-cerne",
-              "pouzdro-fixed-case-for-tag-z-prave-hovezi-kuze-s-tagem-modre",
-              "kozene-pouzdro-fixed-podsleather-pro-apple-airpods-3-hnede"
+              "kozene-pouzdro-fixed-oxford-pro-apple-ipad-pro-12-9-2018-2020-2021-2022-s-klavesnici-folio-cerne",
+              "kozena-tasticka-pres-rameno-s-kapsou-fixed-venezia-pro-7-mobilni-telefony-s-bezovym-retizkem-kremova",
+              "kozena-tasticka-pres-rameno-s-kapsou-fixed-venezia-pro-7-mobilni-telefony-s-cernym-retizkem-cerna"
+            ],
+            "products_to_show": 5,
+            "columns_desktop": 5
+          }
+        },
+        "featured_products_jUNrhE": {
+          "type": "featured_products",
+          "settings": {
+            "title": "Pouzdra z umělé kůže",
+            "product_list": [
+              "pouzdro-fixed-siena-pro-notebooky-a-tablety-o-uhlopricce-do-13-svetle-tyrkysove",
+              "pouzdro-fixed-siena-pro-notebooky-a-tablety-o-uhlopricce-do-13-cervene",
+              "pouzdro-fixed-york-pro-notebooky-o-uhlopricce-do-13-svetle-zlute",
+              "tasticka-pres-rameno-s-kapsou-fixed-verona-s-cernou-snurkou-pro-mobilni-telefony-do-7-cerna",
+              "tasticka-pres-rameno-s-kapsou-fixed-verona-s-cernou-snurkou-pro-mobilni-telefony-do-7-kavova"
             ],
             "products_to_show": 5,
             "columns_desktop": 5
@@ -579,11 +702,12 @@
       },
       "block_order": [
         "featured_products_rF64Jb",
+        "featured_products_jUNrhE",
         "featured_products_EJr4we",
         "featured_products_PcjbUA"
       ],
       "settings": {
-        "title": "Kožené produkty z naší dílny",
+        "title": "Produkty z naší dílny",
         "subtitle": "",
         "heading_size": "h1",
         "full_width": false,
@@ -633,6 +757,8 @@
     "rich_text_GnRiqE",
     "text_icons_fictdW",
     "gallery_lightbox_dBe4XY",
+    "rich_text_bp6AWb",
+    "gallery_lightbox_ymKgwN",
     "video_8NNtLE",
     "gallery_lightbox_BPB3tU",
     "rich_text_MRRXE6",

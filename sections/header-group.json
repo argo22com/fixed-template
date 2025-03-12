@@ -18,7 +18,7 @@
           "type": "mega_menu_promotion",
           "settings": {
             "trigger": "Produkty",
-            "title": "",
+            "title": "Produkty",
             "image": "shopify://shop_images/armor_5d81f6de-d16d-4d74-8c03-61fc6af4ff32.jpg",
             "image_ratio": "landscape",
             "caption": "",
@@ -32,6 +32,112 @@
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 0,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_YqyFiJ": {
+          "type": "mega_menu_promotion",
+          "disabled": true,
+          "settings": {
+            "trigger": "Akce",
+            "title": "ReLeaf",
+            "image": "shopify://shop_images/01.jpg",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "ReLeaf",
+            "subheading": "Prozkoumejte naše udržitelné produkty a projekty",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://pages/releaf",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 49,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_JjNkGB": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Magnetické příslušenství",
+            "image": "shopify://shop_images/kolecko_desktop.png",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "Magnetické příslušenství",
+            "subheading": "",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://pages/magneticke-prislusenstvi-fixed",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 49,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_NP3Wit": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Gaming",
+            "image": "shopify://shop_images/FIXPDS-G-LS3_7e7ab223-8516-49d7-a34e-82aad7b68c7c.jpg",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "Gaming",
+            "subheading": "Objevte příslušenství pro hráče",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://pages/gaming",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 49,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_Bh4wzD": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Smart",
+            "image": "shopify://shop_images/blog_tagcard3.jpg",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "Smart",
+            "subheading": "Chytré lokátory s podporou Apple Find My",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://pages/smart",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
+        "mega_menu_promotion_9KBrbX": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Armor",
+            "image": "shopify://shop_images/armor_5d81f6de-d16d-4d74-8c03-61fc6af4ff32.jpg",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "Armor",
+            "subheading": "Objevte sílu našich ultra odolných krycích skel",
+            "button_label": "Objevit",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://pages/armor",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
             "color_scheme": "inverse"
           }
         },
@@ -176,89 +282,6 @@
             "color_scheme": "inverse"
           }
         },
-        "mega_menu_promotion_YqyFiJ": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "ReLeaf",
-            "image": "shopify://shop_images/01.jpg",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "ReLeaf",
-            "subheading": "Prozkoumejte naše udržitelné produkty a projekty",
-            "button_label": "Objevit",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "shopify://pages/releaf",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 49,
-            "color_scheme": "inverse"
-          }
-        },
-        "mega_menu_promotion_JjNkGB": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "Gaming",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "Gaming",
-            "subheading": "Objevte příslušenství pro hráče",
-            "button_label": "Objevit",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "shopify://pages/gaming",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 49,
-            "color_scheme": "inverse"
-          }
-        },
-        "mega_menu_promotion_Bh4wzD": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "Smart",
-            "image": "shopify://shop_images/blog_tagcard3.jpg",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "Smart",
-            "subheading": "Chytré lokátory s podporou Apple Find My",
-            "button_label": "Objevit",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "shopify://pages/smart",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 50,
-            "color_scheme": "inverse"
-          }
-        },
-        "mega_menu_promotion_9KBrbX": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "Armor",
-            "image": "shopify://shop_images/armor_5d81f6de-d16d-4d74-8c03-61fc6af4ff32.jpg",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "Armor",
-            "subheading": "Objevte sílu našich ultra odolných krycích skel",
-            "button_label": "Objevit",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "shopify://pages/armor",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 50,
-            "color_scheme": "inverse"
-          }
-        },
         "mega_menu_promotion_qrrCqd": {
           "type": "mega_menu_promotion",
           "disabled": true,
@@ -331,8 +354,30 @@
             "color_scheme": "inverse"
           }
         },
+        "mega_menu_promotion_fXE9Ac": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Blog",
+            "title": "Zdraví baterie",
+            "image": "shopify://shop_images/FIXMPOS-AL2-BK-LSF1.jpg",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "Jak se starat o baterku v telefonu?",
+            "subheading": "Máme pro tebe 11 tipů",
+            "button_label": "číst",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://blogs/news/11-tipu-jak-v-mrazivych-dnech-i-horku-spravne-pecovat-o-baterii-mobilu",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
         "mega_menu_promotion_fBdRTY": {
           "type": "mega_menu_promotion",
+          "disabled": true,
           "settings": {
             "trigger": "Blog",
             "title": "MagSafe",
@@ -394,19 +439,21 @@
       },
       "block_order": [
         "mega_menu_promotion_UdqXan",
+        "mega_menu_promotion_YqyFiJ",
+        "mega_menu_promotion_JjNkGB",
+        "mega_menu_promotion_NP3Wit",
+        "mega_menu_promotion_Bh4wzD",
+        "mega_menu_promotion_9KBrbX",
         "mega_menu_product_brand_eMcj9n",
         "mega_menu_product_brand_KBhfXH",
         "mega_menu_product_brand_mQFGEn",
         "mega_menu_product_brand_3VPHNd",
         "mega_menu_promotion_kURg37",
-        "mega_menu_promotion_YqyFiJ",
-        "mega_menu_promotion_JjNkGB",
-        "mega_menu_promotion_Bh4wzD",
-        "mega_menu_promotion_9KBrbX",
         "mega_menu_promotion_qrrCqd",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "mega_menu_promotion_9HJwDd",
         "mega_menu_promotion_ya4VNA",
+        "mega_menu_promotion_fXE9Ac",
         "mega_menu_promotion_fBdRTY",
         "mega_menu_promotion_TLTfPK",
         "mega_menu_promotion_LL7tjW"

@@ -27,14 +27,14 @@
         "heading_AbkTRp": {
           "type": "heading",
           "settings": {
-            "heading": "MagSafe příslušenství",
+            "heading": "Jedno kolečko, tisíce možností",
             "size": "h1"
           }
         },
         "text_UDYABY": {
           "type": "text",
           "settings": {
-            "text": "<strong>Využij kouzla magnetického příslušenství nejen pro Apple zařízení</strong>",
+            "text": "<strong>Objevuj svět magnetického příslušenství pro Apple i Android telefony</strong>",
             "text_style": "subtitle"
           }
         }
@@ -45,8 +45,8 @@
       ],
       "settings": {
         "layout": "stretched_grid",
-        "image": "shopify://shop_images/fixmpl2-bk_006.jpg",
-        "image_mobile": "shopify://shop_images/Armor_mobile.jpg",
+        "image": "shopify://shop_images/kolecko_desktop.png",
+        "image_mobile": "shopify://shop_images/kolecko_ms.png",
         "image_overlay_opacity": 20,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
@@ -90,7 +90,7 @@
         "heading_Mf43cQ": {
           "type": "heading",
           "settings": {
-            "heading": "MagSafe",
+            "heading": "Svět magnetického příslušenství FIXED",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -98,20 +98,30 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Kolečko navíc, které ti otevře svět široké nabídky příslušenství, které využívá technologie MagSafe. (pracovní text)</p>",
+            "text": "<p>Kolečko navíc, které ti otevře svět široké nabídky příslušenství. Vyzkoušej sílu magnetů - ať už chceš využít snadné přichycení na držáky, selfie tyče, nebo peněženky, a nebo chceš využívat benefitů bezdrátového nabíjení. FIXED má produkty přesně pro tebe.</p>",
             "text_style": "body"
+          }
+        },
+        "button_LWYkFn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Objevit magnetické příslušenství",
+            "button_link": "shopify://collections/prislusenstvi-kompatibilni-s-magsafe",
+            "button_style": "solid",
+            "button_open_new_tab": true
           }
         }
       },
       "block_order": [
         "heading_Mf43cQ",
-        "text_Rc9KRn"
+        "text_Rc9KRn",
+        "button_LWYkFn"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/magsafe.1559.jpg",
+        "image": "shopify://shop_images/ecosystem.png",
         "height": "adapt",
-        "desktop_image_width": "small",
+        "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
@@ -129,7 +139,7 @@
         "color_countdown": "#000000",
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
@@ -144,7 +154,7 @@
         "heading_TJjMV3": {
           "type": "heading",
           "settings": {
-            "heading": "Ultraodolnost díky vysoké pružnosti",
+            "heading": "Co je to MagSafe a jaká zařízení jsou kompatibilní?",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -152,23 +162,32 @@
         "text_FgxdBE": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Extrémně vysoká pevnost skla – až 3× vyšší než u běžných skel​</li><li>O 30 % vyšší pružnost, která absorbuje případné nárazy a  odolává téměř všem běžným pádům​</li><li>Parametry testovány ve FIXED</li></ul>",
+            "text": "<ul><li>MagSafe je magnetická technologie nabíjení a držení, kterou používá firma Apple již dlouhou dobu. </li><li>Díky rozvoji bezdrátového nabíjení na nový standard Qi2, který již bude obsahovat i magnety i pro Android telefony se příslušenství kompatibilní s MagSafe může využívat v široké škále zařízení.</li><li>Poznej i ty sílu magnetů a používej to nejmodernější příslušenství nezávisle na tom, jestli vlastníš nejnovější iPhone.</li><li>Chceš vědět více o této technologii? Přečti si náš blog na toto téma.</li></ul>",
             "text_style": "body"
+          }
+        },
+        "button_maLpQX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Chci se dozvědět více",
+            "button_link": "shopify://blogs/news",
+            "button_style": "solid",
+            "button_open_new_tab": true
           }
         }
       },
       "block_order": [
         "heading_TJjMV3",
-        "text_FgxdBE"
+        "text_FgxdBE",
+        "button_maLpQX"
       ],
-      "disabled": true,
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/armor_pruznost.jpg",
+        "image": "shopify://shop_images/magsafe-v2-cz.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "hide_when_empty_image": false,
@@ -184,7 +203,7 @@
         "color_countdown": "#000000",
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
@@ -199,28 +218,37 @@
         "heading_J8hx6t": {
           "type": "heading",
           "settings": {
-            "heading": "Antireflexní vrstva",
-            "heading_size": "h1",
+            "heading": "Nabíjej pohodlně a kdekoliv",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
         "text_PQARFT": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Nejvyšší propustnost světla na trhu – více než 94 % – zajistí významný pozitivní rozdíl v čitelnosti displeje​</li><li>Antireflexní vrstva zlepšuje čitelnost displeje, zejména na slunci nebo pod umělým osvětlením</li><li>Parametry testovány ve FIXED</li></ul>",
+            "text": "<p>Nevíš, jestli je tvůj telefon kompatibilní s <strong>bezdrátovým nabíjením</strong> a tím pádem může používat i technologii MagSafe za pomoci doplňků od FIXED? Aby nabíjení fungovalo v pořádku, je třeba aby tvůj telefon měl bezdrátové nabíjení se <strong>standardem Qi</strong>, na kterém je zároveň založená i technologie MagSafe.</p><p>Pak už stačí jenom zvolit samostatné <strong>magnetické kolečko</strong>, nebo <strong>kryt</strong>, kde jsou magnety integrované a můžeš si užít ty nejlepší magnetické nabíječky na trhu.</p>",
             "text_style": "body"
+          }
+        },
+        "button_REdP9z": {
+          "type": "button",
+          "settings": {
+            "button_label": "Chci tu nejlepší nabíječku",
+            "button_link": "shopify://collections/magsafe-nabijecky",
+            "button_style": "solid",
+            "button_open_new_tab": true
           }
         }
       },
       "block_order": [
         "heading_J8hx6t",
-        "text_PQARFT"
+        "text_PQARFT",
+        "button_REdP9z"
       ],
-      "disabled": true,
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/armor_antireflex.png",
-        "height": "adapt",
+        "image": "shopify://shop_images/FIXMPOS-RO-LS1.jpg",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
@@ -239,7 +267,7 @@
         "color_countdown": "#000000",
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
@@ -254,28 +282,37 @@
         "heading_HKnxPM": {
           "type": "heading",
           "settings": {
-            "heading": "Antidust aplikátor",
-            "heading_size": "h1",
+            "heading": "Komfort magnetického uchycení",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
         "text_Bn9ejK": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Aplikátor druhé generace pro dokonale přesné umístění skla Armor na displej​</li><li>Antidust fólie pro snadné a dokonalé odstranění všech částeček prachu​</li><li>Výsledkem je perfektně nalepené sklo bez vzduchových bublin za méně než minutu</li></ul>",
+            "text": "<p>Příslušenství kompatibilní s MagSafe technologií není jenom o nabíjení. Jde hlavně o <strong>jednoduchost používání</strong> - stačí přiložit a telefon je bezpečně uchycený. Ať už použiješ selfie tyč, držák do auta, nebo naší nejnovější peněženku s lokátorem garantujeme ti, že snazší už to být nemůže.</p>",
             "text_style": "body"
+          }
+        },
+        "button_dcLLJg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Chci magnetické příslušenství",
+            "button_link": "shopify://collections/magneticke-prislusenstvi-bez-nabijeni",
+            "button_style": "solid",
+            "button_open_new_tab": true
           }
         }
       },
       "block_order": [
         "heading_HKnxPM",
-        "text_Bn9ejK"
+        "text_Bn9ejK",
+        "button_dcLLJg"
       ],
-      "disabled": true,
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/armor_antidust.jpg",
-        "height": "adapt",
+        "image": "shopify://shop_images/FIXMFP-LS6.jpg",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -294,7 +331,7 @@
         "color_countdown": "#000000",
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
@@ -305,6 +342,7 @@
     },
     "before_after_image_slider_9zCyyR": {
       "type": "before-after-image-slider",
+      "disabled": true,
       "settings": {
         "section_width": "grid",
         "title": "Before/after image slider",
@@ -325,10 +363,10 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "color_scheme": "",
-        "drag_cursor_foreground": "#000",
-        "drag_cursor_background": "#fff",
-        "before_text_color": "#fff",
-        "after_text_color": "#fff",
+        "drag_cursor_foreground": "#000000",
+        "drag_cursor_background": "#ffffff",
+        "before_text_color": "#ffffff",
+        "after_text_color": "#ffffff",
         "accessibility_info": "Before and after images",
         "padding_top": 36,
         "padding_bottom": 36
@@ -337,10 +375,10 @@
     "featured_collection_Jbdayq": {
       "type": "featured-collection",
       "settings": {
-        "title": "Top produkty MagSafe",
+        "title": "Nejlepší nabíječky",
         "subtitle": "",
         "collection": "magsafe-nabijecky",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "products_to_show": 3,
         "columns_desktop": 3,
         "full_width": true,
@@ -348,11 +386,11 @@
         "enable_desktop_slider": false,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "image": "shopify://shop_images/armor_7f57e654-bc50-4751-916f-8e30177dc31a.jpg",
+        "image": "shopify://shop_images/1B1A8657.jpg",
         "image_position_desktop": "right",
         "image_height": "adapt_product_list",
-        "image_height_mobile": "34",
-        "image_ratio": "adapt",
+        "image_height_mobile": "28",
+        "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
@@ -412,6 +450,7 @@
         "column_WFVFtW",
         "column_rQwG6J"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "subtitle": "",
@@ -466,6 +505,7 @@
         "heading_9RkAxL",
         "text_W7e6H9"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "large",
@@ -479,6 +519,7 @@
     },
     "page_xWFHVt": {
       "type": "page",
+      "disabled": true,
       "settings": {
         "page": "test-armor-skla",
         "heading_size": "h2",
@@ -648,6 +689,7 @@
         "promotion_banner_469axj",
         "promotion_banner_Ek9Vxr"
       ],
+      "disabled": true,
       "settings": {
         "layout": "grid",
         "desktop_row_height": 30,
@@ -665,6 +707,7 @@
     },
     "video_jrq3tR": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "title": "Mrkni na video o tom, jak skla testujeme",
         "subtitle": "",
@@ -690,13 +733,14 @@
           "settings": {
             "title": "",
             "product_list": [
-              "ultra-odolne-tvrzene-sklo-fixed-armor-s-anti-dust-aplikatorem-a-ar-vrstvou-pro-apple-iphone-15-pro-cerne",
-              "premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-apple-watch-ultra-49mm-ultra-2-49mm-cerne",
-              "premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-samsung-galaxy-a54-5g-cerne",
-              "premiove-ochranne-tvrzene-sklo-fixed-armor-s-aplikatorem-pro-apple-iphone-7-8-se-2020-2022-cerne"
+              "powerbanka-fixed-magzen-10-pro-s-bezdratovym-nabijenim-se-standardem-qi2-a-podporou-magsafe-10-000-mah-cerna",
+              "magsafe-penezenka-s-lokatorem-a-podporou-find-my-fixed-magwallet-bezdratove-nabijeni-cerna",
+              "selfie-stick-s-tripodem-fixed-magsnap-s-podporou-magsafe-a-bezdratovou-spousti-cerny",
+              "flexibilni-drzak-fixed-magfloppy-kompatibilni-s-magsafe-a-uchycenim-na-suchy-zip-cerny-1",
+              "magneticka-nalepka-na-mobilni-telefony-pro-pouziti-technologie-magsafe-fixed-magplate-cerna"
             ],
-            "products_to_show": 4,
-            "columns_desktop": 4
+            "products_to_show": 5,
+            "columns_desktop": 5
           }
         }
       },
@@ -704,7 +748,7 @@
         "featured_products_CX9Rfz"
       ],
       "settings": {
-        "title": "Vyberte si sklo pro své zařízení",
+        "title": "Vyber si z toho nejlepšího příslušenství",
         "subtitle": "",
         "heading_size": "h1",
         "full_width": false,

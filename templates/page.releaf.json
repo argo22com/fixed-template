@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -17,7 +17,8 @@
         "content_alignment": "left",
         "color_scheme": "background-2",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "ul_li_marker": "#000000"
       }
     },
     "image_banner_x8BxCc": {
@@ -89,7 +90,7 @@
         "heading_xi6Qgt": {
           "type": "heading",
           "settings": {
-            "heading": "Zlepšujeme život s chytrými zařízeními. Udržitelně",
+            "heading": "Zlepšujeme život s chytrými zařízeními. Udržitelně.",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -97,7 +98,7 @@
         "text_M496Hi": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>FIXED ReLEAF</strong></p><p>Výrobky a projekty pro udržitelnou budoucnost jsou označeny logem ReLeaf, inspirovaným naším národním stromem - lípou s listy ve tvaru srdce.</p><p><strong>Žádný greenwashing</strong></p><p>Všechny produkty nebo činnosti ReLeaf jsou podloženy konkrétními opatřeními a/nebo celosvětově uznávanými certifikáty, jako jsou GRS, ISCC a další.</p>",
+            "text": "<p><strong>FIXED ReLeaf</strong></p><p>Výrobky a projekty pro udržitelnou budoucnost jsou označeny logem ReLeaf, inspirovaným naším národním stromem - lípou s listy ve tvaru srdce.</p><p><strong>Žádný greenwashing</strong></p><p>Všechny produkty nebo činnosti ReLeaf jsou podloženy konkrétními opatřeními a/nebo celosvětově uznávanými certifikáty, jako jsou GRS, ISCC a další.</p>",
             "text_style": "body"
           }
         }
@@ -270,7 +271,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/restory_like_the_other.png",
+        "image": "shopify://shop_images/restory-black-2cz.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -303,8 +304,8 @@
       "type": "image-banner",
       "settings": {
         "layout": "grid",
-        "image": "shopify://shop_images/restory_facts_4bef2712-6ba1-4d4a-928d-4eb114b278cd.jpg",
-        "image_mobile": "shopify://shop_images/restory_facts.jpg",
+        "image": "shopify://shop_images/restory-black-3cz.jpg",
+        "image_mobile": "shopify://shop_images/restory-black-3cz.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_height_mobile": "adapt-mobile",
@@ -355,7 +356,7 @@
         "text_tCNjeN": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Vyrobeno a zabaleno v Evropské unii</li><li>Vyrobeno z recyklovaných materiálů pocházejících ze starých, neprodaných skladových obalů TPU</li><li>Nižší uhlíková stopa (podloženo univerzitní studií)</li><li>Výrobek s certifikací ISCC Plus</li><li>Kvalita a cena srovnatelná s panenskými pouzdry TPU vyrobenými v Asii</li><li>Účinné složení proti UV záření vyvinuté společností FIXED</li></ul>"
+            "text": "<ul><li>Vyrobeno a zabaleno v Evropské unii</li><li>Vyrobeno z recyklovaných materiálů pocházejících ze starých, neprodaných skladových obalů TPU</li><li>Nižší uhlíková stopa (podloženo univerzitní studií)</li><li>Výrobek s certifikací ISCC Plus</li></ul><p></p><p></p>"
           }
         }
       },
@@ -378,7 +379,7 @@
       "type": "image-banner",
       "settings": {
         "layout": "grid",
-        "image": "shopify://shop_images/restory_graf_5fedbabe-72bc-4d3e-b83a-dcae5a5fee1d.jpg",
+        "image": "shopify://shop_images/ReLeaf-cz5.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_height_mobile": "medium-mobile",
@@ -422,7 +423,7 @@
         "title": "Jak probíhá výroba ReStory?",
         "subtitle": "",
         "heading_size": "h1",
-        "video_url": "https://youtu.be/3HqEqEg3brg",
+        "video_url": "https://www.youtube.com/watch?v=Fx_Po1G_j9Y",
         "description": "",
         "autoplay": false,
         "enable_controls": false,
