@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -98,7 +98,6 @@
         "category_filter_icon_BQfNEa"
       ],
       "settings": {
-        "show_compatible_devices_filters": true,
         "products_per_page": 28,
         "columns_desktop": 4,
         "pagination_style": "more",
@@ -111,6 +110,7 @@
         "enable_quick_add": true,
         "enable_compare": true,
         "enable_quick_view": true,
+        "show_compatible_devices_filters": true,
         "show_color_swatches": true,
         "color_swatches_style": "custom",
         "enable_filtering": true,
