@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "518b8ced-997b-408e-84d5-64fe5082a6a1": {
       "type": "slideshow",
@@ -53,6 +53,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/slide-kuze.jpg",
+            "mobile_image": "shopify://shop_images/slide-kuze.jpg",
             "badge_label": "",
             "heading": "Kožené příslušenství",
             "text": "Nadčasové doplňky pro vaše zařízení",
@@ -125,6 +126,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/slide-tag-card-2.jpg",
+            "mobile_image": "shopify://shop_images/slide-tag-card-2.jpg",
             "badge_label": "Novinka",
             "heading": "Tag Card",
             "text": "Chytrý lokátor s podporou Apple Find My",

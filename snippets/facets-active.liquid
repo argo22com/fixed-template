@@ -44,9 +44,11 @@
     {%- if filter.active_values.size > 0 -%}
       {%- for value in filter.active_values -%}
         {%- assign has_active = true -%}
+        {%- assign url_to_remove = value.url_to_remove -%}
+
         <facet-remove>
           <a
-            href="{{ value.url_to_remove }}"
+            href="{{ url_to_remove }}"
             class="active-facets__button flex justify-center align-center color-foreground facets__button button button--secondary"
           >
             <span>

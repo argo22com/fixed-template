@@ -22,12 +22,12 @@
     assign variant_images = nil
     if product != blank
       if section.settings.default_image == 'product_featured_image'
-        assign featured_media = product.featured_media  
+        assign featured_media = product.featured_media
       else
         if product.selected_or_first_available_variant.featured_media != null
           assign featured_media = product.selected_or_first_available_variant.featured_media
         else
-          assign featured_media = product.featured_media  
+          assign featured_media = product.featured_media
         endif
       endif
 
@@ -36,7 +36,7 @@
       if section.settings.hide_variants and media_count > 1 and variant_images.size > 0
         assign media_count = media_count | minus: variant_images.size | plus: 1
       endif
-    endif  
+    endif
 
     if section.settings.media_size == 'large'
       assign media_width = 0.65
@@ -54,7 +54,7 @@
     assign threshold_media_desktop = 4
     if section.settings.media_size == 'medium'
       assign threshold_media_desktop = 5
-    elsif section.settings.media_size == 'large' 
+    elsif section.settings.media_size == 'large'
       assign threshold_media_desktop = 6
     endif
 
@@ -69,7 +69,7 @@
   -%}
   {%- if product != blank and product.media.size == 0 -%}
     {{ 'section-main-product-no-media.css' | asset_url | stylesheet_tag }}
-  {%- endif -%}  
+  {%- endif -%}
 
   {%- style -%}
     .section-{{ section.id }}-padding {
@@ -136,9 +136,14 @@
                 {%- if block.settings.show_vendor_link and product.vendor -%}
                   <a href="{{ product.vendor | url_for_vendor }}" class="link color-foreground db w100 product__vendor-link font-body-semi-bold break">{{ 'products.product.by_vendor_html' | t: vendor: product.vendor }}</a>
                 {%- endif -%}
+                {% if product.metafields.product_texts.title %}
+                  {% assign title = product.metafields.product_texts.title %}
+                {% else %}
+                  {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+                {% endif %}
                 <h2 class="font-heading-extra-bold margin0 {{ block.settings.title_size }}">
-                  {%- if product.selected_or_first_available_variant.metafields.product_texts.title != blank -%}
-                    {{ product.selected_or_first_available_variant.metafields.product_texts.title | escape }}
+                  {%- if title != blank -%}
+                    {{ title | escape }}
                   {%- else -%}
                     {{ 'onboarding.product_title' | t }}
                   {%- endif -%}
@@ -220,7 +225,12 @@
                   <a href="{{ block.settings.page.url }}" class="popup-modal__button link no-js">{{ block.settings.text }}</a>
               {%- when 'share' -%}
                 {%- assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin -%}
-                {%- render 'main-product-share', share_url: share_url, title: product.selected_or_first_available_variant.metafields.product_texts.title, block: block, featured_media: featured_media -%}
+                {% if product.metafields.product_texts.title %}
+                  {% assign title = product.metafields.product_texts.title %}
+                {% else %}
+                  {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+                {% endif %}
+                {%- render 'main-product-share', share_url: share_url, title: title, block: block, featured_media: featured_media -%}
               {%- when 'sale_box' -%}
                 <div class="product__sale-box product__info-box flex flex-column" {{ block.shopify_attributes }}>
                   {%- render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id, picker_type: block.settings.picker_type, enable_color_swatches: block.settings.enable_color_swatches, color_swatches_style: block.settings.color_swatches_style -%}
@@ -278,7 +288,7 @@
                             <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
                           </svg>
                           <span class="product-form__error-message"></span>
-                        </div>                
+                        </div>
                         {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                           <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"{% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %} disabled{% endif %} class="product-variant-id">
                           <div class="product-form__buttons product-form__buttons--input product-form__quantity-wrapper{% if has_qty_rules or has_vol_pricing %} product-form__wholesale{% endif %}{% unless block.settings.quantity_selector_enable %} product-form__buttons--no-quantity{% endunless %} {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}product-form__buttons-group{% else %}product-form__buttons-single{% endif %}" id="Quantity-Form-{{ section.id }}">
@@ -312,7 +322,7 @@
                             {%- render 'main-product-volume-pricing', product: product, section: section -%}
                           </div>
                         {%- endform -%}
-                      </product-form>  
+                      </product-form>
                     {%- else -%}
                       <div class="product-form__buttons product-form__buttons--input product-form__buttons-single">
                         <button
@@ -363,11 +373,11 @@
                       {%- if has_size_chart -%}
                         {%- if enable_compare -%}
                           <span class="product__sale-box__footer-sep"></span>
-                        {%- endif -%}  
-                        {%- render 'product-size-chart-button', product: product, block: block -%} 
-                      {%- endif -%}  
+                        {%- endif -%}
+                        {%- render 'product-size-chart-button', product: product, block: block -%}
+                      {%- endif -%}
                     </div>
-                  {%- endif -%}  
+                  {%- endif -%}
                 </div>
                 <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
               {%- when 'rating' -%}
@@ -389,8 +399,8 @@
                         else
                           assign final_countdown_value = countdown_individual_value.value | date: '%Y-%m-%d %H:%M:%S%z'
                         endif
-                      endif  
-                    endif  
+                      endif
+                    endif
                   -%}
                   {%- if final_countdown_value != blank -%}
                     {%- assign has_countdown = true -%}
@@ -411,7 +421,7 @@
                       {%- endif -%}
                       {%- render 'countdown-tpl-simple', use_design_mode: true -%}
                     </div>
-                  </div>    
+                  </div>
                 {%- endif -%}
               {%- when 'information_group' -%}
                 {%- render 'main-product-information-group', section: section, block: block, product: product -%}
@@ -462,7 +472,7 @@
   {%- if has_countdown or request.design_mode -%}
     <script src="{{ 'countdown.js' | asset_url }}" defer="defer"></script>
     <link rel="stylesheet" href="{{ 'component-countdown.css' | asset_url }}" media="print" onload="this.media='all'">
-  {%- endif -%}  
+  {%- endif -%}
 
   {%- assign collapsible_tabs = section.blocks | where: "type", "collapsible_tab" -%}
   {%- if collapsible_tabs.size > 0 -%}
@@ -473,7 +483,7 @@
     <script src="{{ 'product-price.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'complementary-products.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
-{%- endunless -%}  
+{%- endunless -%}
 {% schema %}
 {
   "name": "t:sections.featured-product.name",

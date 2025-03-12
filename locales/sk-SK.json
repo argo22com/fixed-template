@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -275,7 +284,9 @@
       "show_less": "Zobraziť menej",
       "show_filter": "Show filter",
       "hide_filter": "Hide filter",
-      "categories_block_label": "Categories"
+      "categories_block_label": "Categories",
+      "compatible_manufacturers": "Výrobca zariadenia",
+      "compatible_devices": "Model zariadenia"
     }
   },
   "templates": {
