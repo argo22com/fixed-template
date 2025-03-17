@@ -483,8 +483,7 @@ document.addEventListener('change', (e) => {
       document.querySelector('#ProductInfo-quickview-quick-view .product__description').innerHTML = description
     }
     const title = infoElement.getAttribute('data-title')
-    console.log(title)
-    console.log(document.querySelector('.product__title h1'))
+
     if (document.querySelector('.product__title h1')) {
       document.querySelector('.product__title h1').innerHTML = title
     }
