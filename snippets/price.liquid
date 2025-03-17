@@ -30,12 +30,8 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
+assign price_with_vat = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat
 
-if product.metafields.product_texts.price_with_vat
-  assign price_with_vat = product.metafields.product_texts.price_with_vat
-else
-  assign price_with_vat = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat
-endif
 
 if localization.country.currency.iso_code == 'CZK'
   assign vat_price_string = price_with_vat

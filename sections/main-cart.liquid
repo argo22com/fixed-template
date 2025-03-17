@@ -135,8 +135,8 @@
                             {%- endif -%}
 
                             <a href="{{ item.url }}" class="cart-item__name h4 font-heading-bold">
-                              {% if item.product.metafields.product_texts.title %}
-                                {% assign title = item.product.metafields.product_texts.title %}
+                              {% if item.product.variants.size == 1 %}
+                                {% assign title = item.product.title %}
                               {% else %}
                                 {% assign title = item.variant.metafields.product_texts.title %}
                               {% endif %}
@@ -270,10 +270,10 @@
                                 </label>
 
                                 <quantity-input class="quantity flex align-center color-foreground por">
-                                  {% if item.product.metafields.product_texts.title %}
-                                    {% assign title = item.product.metafields.product_texts.title %}
+                                  {% if item.product.variants.size == 1 %}
+                                    {% assign title = item.product.title %}
                                   {% else %}
-                                    {% assign title = item.product.selected_or_first_available_variant.metafields.product_texts.title %}
+                                    {% assign title = item.variant.metafields.product_texts.title %}
                                   {% endif %}
 
                                   <input
@@ -365,11 +365,7 @@
 
                           <td class="cart-item__totals cart-page__item-totals flex justify-space-between align-center">
                             <div class="cart-item__price-wrapper">
-                              {% if item.product.metafields.product_texts.price_with_vat %}
-                                {% assign price_with_vat = item.product.metafields.product_texts.price_with_vat %}
-                              {% else %}
-                                {% assign price_with_vat = item.variant.metafields.product_texts.price_with_vat %}
-                              {% endif %}
+                              {% assign price_with_vat = item.variant.metafields.product_texts.price_with_vat %}
 
                               {% render 'price-with-vat',
                                 price: item.original_line_price,

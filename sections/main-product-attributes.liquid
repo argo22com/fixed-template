@@ -19,8 +19,8 @@
     {%- render 'section-heading' -%}
     <div class="product-attributes">
 
-      {% if product.metafields.product_texts.descriptionHtml %}
-        {% assign description = product.metafields.product_texts.descriptionHtml %}
+      {% if product.variants.size == 1 %}
+        {% assign description = product.description %}
       {% else %}
         {% assign description = product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml %}
       {% endif %}
@@ -43,8 +43,8 @@
           endif
         -%}
 
-        {% if product.metafields.product_texts.descriptionHtml %}
-          {% assign description = product.metafields.product_texts.descriptionHtml %}
+        {% if product.variants.size == 1 %}
+          {% assign description = product.description %}
         {% else %}
           {% assign description = product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml %}
         {% endif %}

@@ -1,14 +1,25 @@
 {%- liquid
-  if product.metafields.product_texts.descriptionHtml
-    assign description = product.metafields.product_texts.descriptionHtml
+  if product.variants.size == 1
+    assign description = product.description
   else
     assign description = product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml
   endif
 %}
 
 {%- if description != blank -%}
-  <div{% unless no_shopify_attributes %} {{ block.shopify_attributes }}{% endunless %}>
-    <truncate-text class="db product__description" {% if block.settings.truncate_description > 0 %}style="--truncate-text-length:{{ block.settings.truncate_description }}px;"{% else %}data-ignore="true"{% endif %}>
+  <div
+    {% unless no_shopify_attributes %}
+      {{ block.shopify_attributes -}}
+    {% endunless %}
+  >
+    <truncate-text
+      class="db product__description"
+      {% if block.settings.truncate_description > 0 %}
+        style="--truncate-text-length:{{ block.settings.truncate_description }}px;"
+      {% else %}
+        data-ignore="true"
+      {% endif %}
+    >
       <div class="truncate-text__content-wrapper">
         <div class="truncate-text__content rte autosize-iframe">
           {{ description }}
@@ -16,7 +27,10 @@
       </div>
       {%- if block.settings.truncate_description > 0 -%}
         <div class="center truncate-text__button-wrapper element-small-margin-top por flex justify-center hidden overflow-hidden">
-          <button class="button button--medium button--truncate-text ignore-effect {% if section.settings.use_background_input %}button--truncate-background-input{% else %}button--truncate-background-page{% endif %}" type="button">
+          <button
+            class="button button--medium button--truncate-text ignore-effect {% if section.settings.use_background_input %}button--truncate-background-input{% else %}button--truncate-background-page{% endif %}"
+            type="button"
+          >
             {%- if block.settings.read_more_button != blank -%}
               <span>{{ block.settings.read_more_button }}</span>
             {%- endif -%}
@@ -26,7 +40,7 @@
           </button>
         </div>
       {%- endif -%}
-      </truncate-text>
+    </truncate-text>
     {%- if block.settings.truncate_description > 0 and request.design_mode == false -%}
       <script src="{{ 'truncate-text.js' | asset_url }}" defer="defer"></script>
       {{ 'component-truncate-text.css' | asset_url | stylesheet_tag }}

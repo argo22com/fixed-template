@@ -244,8 +244,8 @@
                           ></span>
                         {%- endif -%}
                         {%- unless is_color_swatches -%}
-                          {% if product.metafields.product_texts.title %}
-                            {% assign title = product.metafields.product_texts.title %}
+                          {% if product.variants.size == 1 %}
+                            {% assign title = product.title %}
                           {% else %}
                             {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
                           {% endif %}
@@ -311,7 +311,10 @@
                             class="js-title-tooltip bt-tooltip__inner bt-tooltip__inner--top {% if color_out_of_stock %}d-none{% endif %}"
                             style="z-index: 10"
                           >
-                            {{- product_current_variation.metafields.product_texts.title.value | default: product_current_variation.title -}}
+                            {{-
+                              product_current_variation.metafields.product_texts.title.value
+                              | default: product_current_variation.title
+                            -}}
                           </span>
                           {%- if selected %}
                             {%- render 'icon-checkmark' -%}
@@ -336,15 +339,14 @@
                     class="variant-flex-item{% if forloop.index >= total_visible_items %} hidden-more{% endif %}"
                   {% endunless %}
                 >
-
-                  {% if product.metafields.product_texts.title %}
-                    {% assign title = product.metafields.product_texts.title %}
+                  {% if product.variants.size == 1 %}
+                    {% assign title = product.title %}
                   {% else %}
                     {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
                   {% endif %}
 
-                  {% if product.metafields.product_texts.descriptionHtml %}
-                    {% assign description = product.metafields.product_texts.descriptionHtml.value %}
+                  {% if product.variants.size == 1 %}
+                    {% assign description = product.description %}
                   {% else %}
                     {% assign description = product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml.value %}
                   {% endif %}
@@ -494,16 +496,16 @@
                   assign variant = product.variants | where: index_option, value | first
                 -%}
 
-                {% if product.metafields.product_texts.descriptionHtml %}
-                  {% assign description = product.metafields.product_texts.descriptionHtml.value %}
+                {% if product.variants.size == 1 %}
+                  {% assign description = product.description %}
                 {% else %}
-                  {% assign description = variant.metafields['product_texts']['descriptionHtml'].value %}
+                  {% assign description = variant.metafields.product_texts.descriptionHtml.value %}
                 {% endif %}
 
-                {% if product.metafields.product_texts.title %}
-                  {% assign title = product.metafields.product_texts.title.value %}
+                {% if product.variants.size == 1 %}
+                  {% assign title = product.title %}
                 {% else %}
-                  {% assign title = variant.metafields['product_texts']['title'].value %}
+                  {% assign title = variant.metafields.product_texts.title.value %}
                 {% endif %}
 
                 <option
