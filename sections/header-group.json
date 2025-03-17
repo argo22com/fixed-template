@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "type": "header",
   "name": "Header Group",
   "sections": {
@@ -379,20 +379,19 @@
         },
         "mega_menu_promotion_fBdRTY": {
           "type": "mega_menu_promotion",
-          "disabled": true,
           "settings": {
             "trigger": "Blog",
             "title": "MagSafe",
-            "image": "shopify://shop_images/magsafe_17b20a20-9e3c-4c61-8125-8c529b881397.png",
+            "image": "shopify://shop_images/magsafe_56178c00-27c1-48a9-aeda-5180c6f4c763.png",
             "image_ratio": "square",
             "caption": "",
-            "heading_text": "Vše o MagSafe technologii",
-            "subheading": "Jak funguje, které iPhony ji podporují a které produkty si k ní pořídit? ",
+            "heading_text": "MagSafe a Android",
+            "subheading": "Jak využít magnetické příslušenství s Android telefony.",
             "button_label": "číst",
             "button_style": "solid",
             "text_align": "center",
             "text_position": "2",
-            "link": "https://fixed.zone/blogs/news/co-te-vzdy-zajimalo-o-technologii-magsafe-ale-bal-ses-zeptat",
+            "link": "shopify://blogs/news/jak-a-k-cemu-vyuzivat-technologii-magsafe-kdyz-mas-mobil-s-androidem",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 50,
@@ -401,6 +400,7 @@
         },
         "mega_menu_promotion_TLTfPK": {
           "type": "mega_menu_promotion",
+          "disabled": true,
           "settings": {
             "trigger": "Blog",
             "title": "Testování skel",
