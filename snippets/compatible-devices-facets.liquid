@@ -80,7 +80,7 @@
           <option
             value="{{ subcollection.url | escape }}"
           >
-            {{ subcollection.title | split: ' ' | last | escape }}
+            {{ subcollection.metafields.product_compatible_devices.manufacturer | escape }}
           </option>
         {% endfor %}
       {% elsif parent_collection != null and parent_collection.metafields.product_compatible_devices.subcollections.value %}
@@ -91,7 +91,7 @@
               selected
             {% endif %}
           >
-            {{ subcollection.title | split: ' ' | last | escape }}
+            {{ subcollection.metafields.product_compatible_devices.manufacturer | escape }}
           </option>
         {% endfor %}
       {% endif %}
