@@ -38,7 +38,7 @@
           "settings": {
             "heading": "Krátký popisek",
             "icon": "check",
-            "content": "",
+            "content": "{{ block.settings.page.content }}",
             "page": ""
           }
         },
@@ -380,7 +380,7 @@
         "button_link": "",
         "button_open_new_tab": false,
         "enable_section_box_layout": false,
-        "color_scheme": "",
+        "color_scheme": "background-1",
         "enable_parallax_scrolling_effect": true,
         "background_image_overlay_color": "button",
         "columns_mobile": "1",
