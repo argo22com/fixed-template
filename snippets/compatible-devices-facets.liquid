@@ -76,7 +76,8 @@
       </option>
 
       {% if results.metafields.product_compatible_devices.subcollections.value %}
-        {% for subcollection in results.metafields.product_compatible_devices.subcollections.value %}
+        {% assign sorted_subcollections = results.metafields.product_compatible_devices.subcollections.value | sort: 'title' %}
+        {% for subcollection in sorted_subcollections %}
           <option
             value="{{ subcollection.url | escape }}"
           >
@@ -84,7 +85,8 @@
           </option>
         {% endfor %}
       {% elsif parent_collection != null and parent_collection.metafields.product_compatible_devices.subcollections.value %}
-        {% for subcollection in parent_collection.metafields.product_compatible_devices.subcollections.value %}
+        {% assign sorted_subcollections = parent_collection.metafields.product_compatible_devices.subcollections.value | sort: 'title' %}
+        {% for subcollection in sorted_subcollections %}
           <option
             value="{{ subcollection.url | escape }}"
             {% if subcollection.url == results.url %}
