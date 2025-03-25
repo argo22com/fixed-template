@@ -38,7 +38,7 @@
           "settings": {
             "heading": "Krátký popisek",
             "icon": "check",
-            "content": "<p>{{ block.settings.page.metafields.custom.kr_tk_popisek | metafield_tag }}</p>",
+            "content": "{{ block.settings.page.content }}",
             "page": ""
           }
         },
