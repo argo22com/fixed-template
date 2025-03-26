@@ -38,7 +38,7 @@
           "settings": {
             "heading": "Krátký popisek",
             "icon": "check",
-            "content": "",
+            "content": "<p>{{ product.metafields.custom.kr_tk_popisek | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -328,7 +328,7 @@
         "grid_layout": "grid",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
