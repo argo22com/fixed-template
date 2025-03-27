@@ -343,9 +343,9 @@
         "column_ihLtUe": {
           "type": "column",
           "settings": {
-            "image": "{{ product.metafields.custom.promotion_card_pictue_2.value }}",
+            "image": "{{ product.metafields.custom.promotion_card_picture_3.value }}",
             "icon": "check",
-            "title": "{{ product.metafields.custom.premium_heading_2.value }}",
+            "title": "{{ product.metafields.custom.premium_heading_3.value }}",
             "text": "<p>{{ product.metafields.custom.premium_content_3 | metafield_tag }}</p>",
             "link_label": "",
             "link": "",
