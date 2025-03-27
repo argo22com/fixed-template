@@ -307,7 +307,7 @@
         "heading_ktanJe": {
           "type": "heading",
           "settings": {
-            "heading": "{{ product.metafields.custom.premium_headind_4.value }}",
+            "heading": "Image with text{{ product.metafields.custom.premium_headind_4.value }}",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
