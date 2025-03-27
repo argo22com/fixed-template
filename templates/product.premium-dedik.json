@@ -327,8 +327,8 @@
           "settings": {
             "image": "{{ product.metafields.custom.promotion_card_pictue_2.value }}",
             "icon": "check",
-            "title": "{{ product.metafields.custom.premium_heading_2.value }}",
-            "text": "<p>{{ product.metafields.custom.premium_content_2 | metafield_tag }}</p>",
+            "title": "{{ product.metafields.custom.promotion_card_heading_2.value }}",
+            "text": "<p>{{ product.metafields.custom.promotion_card_content_2 | metafield_tag }}</p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
