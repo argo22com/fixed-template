@@ -333,10 +333,10 @@
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": false,
-            "card_color_text": "#a06207",
+            "card_color_text": "#000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         },
