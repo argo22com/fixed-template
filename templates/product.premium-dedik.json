@@ -304,13 +304,13 @@
     "multicolumn_7bqrwM": {
       "type": "multicolumn",
       "blocks": {
-        "column_iLPkgN": {
+        "column_43GUjk": {
           "type": "column",
           "settings": {
-            "image": "{{ product.metafields.custom.promotion_card_picture_1.value }}",
+            "image": "{{ product.metafields.custom.promotion_card_pictue_2.value }}",
             "icon": "check",
-            "title": "{{ product.metafields.custom.promotion_card_heading_1.value }}",
-            "text": "<p>{{ product.metafields.custom.promotion_card_content_1 | metafield_tag }}</p>",
+            "title": "{{ product.metafields.custom.promotion_card_heading_2.value }}",
+            "text": "<p>{{ product.metafields.custom.promotion_card_content_2 | metafield_tag }}</p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -322,13 +322,13 @@
             "card_color_background_gradient": ""
           }
         },
-        "column_43GUjk": {
+        "column_iLPkgN": {
           "type": "column",
           "settings": {
-            "image": "{{ product.metafields.custom.promotion_card_pictue_2.value }}",
+            "image": "{{ product.metafields.custom.promotion_card_picture_1.value }}",
             "icon": "check",
-            "title": "{{ product.metafields.custom.promotion_card_heading_2.value }}",
-            "text": "<p>{{ product.metafields.custom.promotion_card_content_2 | metafield_tag }}</p>",
+            "title": "{{ product.metafields.custom.promotion_card_heading_1.value }}",
+            "text": "<p>{{ product.metafields.custom.promotion_card_content_1 | metafield_tag }}</p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -360,8 +360,8 @@
         }
       },
       "block_order": [
-        "column_iLPkgN",
         "column_43GUjk",
+        "column_iLPkgN",
         "column_ihLtUe"
       ],
       "settings": {
