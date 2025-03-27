@@ -325,9 +325,10 @@
         "column_43GUjk": {
           "type": "column",
           "settings": {
+            "image": "{{ product.metafields.custom.promotion_card_pictue_2.value }}",
             "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "{{ product.metafields.custom.premium_heading_2.value }}",
+            "text": "<p>{{ product.metafields.custom.premium_content_2 | metafield_tag }}</p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
