@@ -315,7 +315,7 @@
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": false,
-            "card_color_text": "#166534",
+            "card_color_text": "#000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#effdf4",
