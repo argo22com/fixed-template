@@ -326,6 +326,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
+        "image": "{{ product.metafields.custom.premium_picture_4.value }}",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
