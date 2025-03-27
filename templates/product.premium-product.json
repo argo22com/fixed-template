@@ -375,99 +375,6 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_fhV7Mp": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_dKwqcP": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false,
-            "card_color_text": "#a06207",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fefce8",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_a8cxyq": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false,
-            "card_color_text": "#981c1b",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#fef2f2",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_3hpP8N": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false,
-            "card_color_text": "#121212",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#f8fafc",
-            "card_color_background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_dKwqcP",
-        "column_a8cxyq",
-        "column_3hpP8N"
-      ],
-      "settings": {
-        "title": "Klíčové vlastnosti",
-        "subtitle": "",
-        "heading_size": "h1",
-        "media_type": "image",
-        "media_width_desktop": "100",
-        "image_ratio": "adapt",
-        "text_position": "bottom",
-        "columns_desktop": 3,
-        "columns_tablet": 3,
-        "desktop_gap": 30,
-        "auto_fit": false,
-        "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "button_open_new_tab": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "background-1",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
-        "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
-        "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "main_product_tabs_XdRTBE": {
       "type": "main-product-tabs",
       "blocks": {
@@ -549,7 +456,6 @@
     "image_with_text_meHxRb",
     "image_with_text_nz89Fg",
     "video_GJcT4J",
-    "multicolumn_fhV7Mp",
     "main_product_tabs_XdRTBE",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
