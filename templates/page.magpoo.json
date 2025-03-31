@@ -28,14 +28,14 @@
           "type": "heading",
           "settings": {
             "heading": "MagPoo",
-            "size": "h1"
+            "size": "h0"
           }
         },
         "text_UDYABY": {
           "type": "text",
           "settings": {
-            "text": " Inovativní koncept magnetického držáku mobilu a toaletního papíru",
-            "text_style": "subtitle"
+            "text": "<strong> Inovativní koncept magnetického držáku mobilu a toaletního papíru</strong>",
+            "text_style": "caption-with-letter-spacing"
           }
         }
       },
