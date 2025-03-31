@@ -44,7 +44,7 @@
         "text_UDYABY"
       ],
       "settings": {
-        "layout": "stretched_grid",
+        "layout": "grid",
         "image": "shopify://shop_images/magpoo_desktop.png",
         "image_mobile": "shopify://shop_images/513A8294_2.jpg",
         "image_overlay_opacity": 20,
