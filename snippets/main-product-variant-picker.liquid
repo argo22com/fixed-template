@@ -46,7 +46,9 @@
   {%- endif -%}
 
   {% for option in product.options_with_values %}
-    {%- if block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
+    {%- if option.name == 'barva' -%}
+    {%- continue -%}
+    {%- elsif block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
       {%- liquid
         unless settings.hide_unavailable_options
           assign instock_variants = product.variants | where: 'available'
