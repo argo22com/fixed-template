@@ -52,6 +52,7 @@
             endif
           endif
         -%}
+        {% unless option_name_downcase == 'výchozí' %}
         <fieldset class="js product-form__input product-form__input--variant-picker product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}{% if forloop.last %} last{% endif %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ option.name }}:
@@ -131,6 +132,7 @@
             {%- endfor -%}
           </ul>
         </fieldset>
+        {% endunless %}
       {%- endfor -%}
       <script type="application/json" data-selected-variant>{{ product.selected_or_first_available_variant | json }}</script>
     </variant-radios>
