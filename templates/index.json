@@ -60,7 +60,7 @@
             "hide_text_on_mobile": false,
             "button_label": "Konfigurovat",
             "price": "1300",
-            "link": "shopify://pages/konfigurator-drzaku",
+            "link": "shopify://pages/konfigurator",
             "button_style": "primary",
             "button_open_new_tab": false,
             "box_align": "middle-left",
