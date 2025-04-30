@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -17,7 +17,8 @@
         "content_alignment": "left",
         "color_scheme": "",
         "padding_top": 80,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "ul_li_marker": "#000"
       }
     },
     "image_banner_xtbneD": {
@@ -43,8 +44,8 @@
         "text_hkRi8i"
       ],
       "settings": {
-        "layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/roll_desktop_banner_v2.jpg",
+        "layout": "grid",
+        "image": "shopify://shop_images/fixmro-bk_008_77dedba1-7823-4702-aecb-08e2e40f13c1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
@@ -84,8 +85,7 @@
     },
     "product_configurator_BMFbCT": {
       "type": "product-configurator",
-      "settings": {
-      }
+      "settings": {}
     },
     "rich_text_Ggp6YW": {
       "type": "rich-text",
@@ -93,14 +93,14 @@
         "heading_VzDCcq": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>KOMPLETNÍ DRŽÁKY<\/strong><\/h3>",
+            "heading": "<h3><strong>KOMPLETNÍ DRŽÁKY</strong></h3>",
             "heading_size": "h1"
           }
         },
         "text_7PUURt": {
           "type": "text",
           "settings": {
-            "text": "<p>Nejste si jisti svou konfigurací? Vyberte si z předem připravených držáků sestavených našimi produktovými specialisty.<\/p>"
+            "text": "<p>Nejste si jisti svou konfigurací? Vyberte si z předem připravených držáků sestavených našimi produktovými specialisty.</p>"
           }
         }
       },
