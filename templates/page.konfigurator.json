@@ -27,14 +27,14 @@
         "heading_XeYxmG": {
           "type": "heading",
           "settings": {
-            "heading": "KONFIGURÁTOR",
+            "heading": "Konfigurátor",
             "size": "h0"
           }
         },
         "text_hkRi8i": {
           "type": "text",
           "settings": {
-            "text": "SESTAV SI DRŽÁK PODLE SVÉHO GUSTA",
+            "text": "Sestav si držák podle svého gusta",
             "text_style": "subtitle"
           }
         }
