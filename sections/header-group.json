@@ -92,7 +92,7 @@
             "button_style": "link",
             "text_align": "center",
             "text_position": "2",
-            "link": "shopify://pages/konfigurator-drzaku",
+            "link": "shopify://pages/konfigurator",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 49,
