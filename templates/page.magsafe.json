@@ -44,7 +44,7 @@
         "text_UDYABY"
       ],
       "settings": {
-        "layout": "stretched_grid",
+        "layout": "grid",
         "image": "shopify://shop_images/magicke_leto_desktop_513A8142.png",
         "image_mobile": "shopify://shop_images/kolecko_ms.png",
         "image_overlay_opacity": 20,
@@ -813,7 +813,7 @@
         "featured_products_CX9Rfz"
       ],
       "settings": {
-        "title": "Vyber si z toho nejlepšího příslušenství",
+        "title": "Vyber si z toho nejlepšího nejen magnetického příslušenství",
         "subtitle": "",
         "heading_size": "h2",
         "full_width": false,
