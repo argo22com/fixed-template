@@ -27,7 +27,7 @@
         "heading_AbkTRp": {
           "type": "heading",
           "settings": {
-            "heading": "Jedno kolečko, tisíce možností",
+            "heading": "Magnetické léto s FIXED",
             "size": "h1"
           }
         },
@@ -45,7 +45,7 @@
       ],
       "settings": {
         "layout": "stretched_grid",
-        "image": "shopify://shop_images/kolecko_desktop.png",
+        "image": "shopify://shop_images/magicke_leto_desktop_513A8142.png",
         "image_mobile": "shopify://shop_images/kolecko_ms.png",
         "image_overlay_opacity": 20,
         "image_height": "medium",
@@ -210,6 +210,71 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_MajPjt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zw8JJa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Top 4 produkty  na  léto",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_Lri9ny": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Chceš aby tvůj výlet byl nezapomenutelný  a bez stresu? Tyto 4 produkty si potřebuješ přihodit do kufru.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_tr4MjR": {
+          "type": "button",
+          "settings": {
+            "button_label": "Více se dozvíš na blogu",
+            "button_link": "shopify://blogs/news",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_zw8JJa",
+        "text_Lri9ny",
+        "button_tr4MjR"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/magneticke_leto_sekce.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#dc4405",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "image_with_text_x39Mgh": {
@@ -776,6 +841,7 @@
     "image_banner_7GGLw8",
     "image_with_text_rRBN9q",
     "image_with_text_h7EAQW",
+    "image_with_text_MajPjt",
     "image_with_text_x39Mgh",
     "image_with_text_bXVgiV",
     "before_after_image_slider_9zCyyR",
