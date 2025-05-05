@@ -799,10 +799,10 @@
             "title": "",
             "product_list": [
               "powerbanka-fixed-magzen-10-pro-s-bezdratovym-nabijenim-se-standardem-qi2-a-podporou-magsafe-10-000-mah-cerna",
-              "magsafe-penezenka-s-lokatorem-a-podporou-find-my-fixed-magwallet-bezdratove-nabijeni-cerna",
               "selfie-stick-s-tripodem-fixed-magsnap-s-podporou-magsafe-a-bezdratovou-spousti-cerny",
-              "flexibilni-drzak-fixed-magfloppy-kompatibilni-s-magsafe-a-uchycenim-na-suchy-zip-cerny-1",
-              "magneticka-nalepka-na-mobilni-telefony-pro-pouziti-technologie-magsafe-fixed-magplate-cerna"
+              "magneticka-nalepka-na-mobilni-telefony-pro-pouziti-technologie-magsafe-fixed-magplate-cerna",
+              "vodeodolne-pouzdro-fixed-dry-belt-okolo-pasu-z-hypalonu-s-certifikaci-ipx8-khaki",
+              "pouzdro-fixed-magpure-neck-s-ruzovou-snurkou-na-krk-pro-apple-iphone-16"
             ],
             "products_to_show": 5,
             "columns_desktop": 5
@@ -815,7 +815,7 @@
       "settings": {
         "title": "Vyber si z toho nejlepšího příslušenství",
         "subtitle": "",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "full_width": false,
         "enable_desktop_slider": false,
         "color_scheme": "",
