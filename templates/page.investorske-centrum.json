@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -17,7 +17,8 @@
         "content_alignment": "left",
         "color_scheme": "background-1",
         "padding_top": 0,
-        "padding_bottom": 16
+        "padding_bottom": 16,
+        "ul_li_marker": "#000000"
       }
     },
     "image_banner_HtGAm3": {
@@ -175,6 +176,15 @@
     "collapsible_content_GjAKAi": {
       "type": "collapsible-content",
       "blocks": {
+        "collapsible_row_hYT6n8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2025",
+            "icon": "document",
+            "row_content": "",
+            "page": "pro-investory-2025"
+          }
+        },
         "collapsible_row_4gPghX": {
           "type": "collapsible_row",
           "settings": {
@@ -231,6 +241,7 @@
         }
       },
       "block_order": [
+        "collapsible_row_hYT6n8",
         "collapsible_row_4gPghX",
         "collapsible_row_E36gHj",
         "collapsible_row_NRBz4F",
@@ -501,13 +512,11 @@
         },
         "email_form_YD9eHt": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         },
         "social_icons_3X3XHV": {
           "type": "social_icons",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
