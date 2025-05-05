@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -17,7 +17,8 @@
         "content_alignment": "left",
         "color_scheme": "background-2",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "ul_li_marker": "#000000"
       }
     },
     "image_banner_kDXK8x": {
@@ -44,8 +45,8 @@
       ],
       "settings": {
         "layout": "stretched_grid",
-        "image": "shopify:\/\/shop_images\/office-woman-hands-on-report.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/office-woman-hands-on-report.jpg",
+        "image": "shopify://shop_images/office-woman-hands-on-report.jpg",
+        "image_mobile": "shopify://shop_images/office-woman-hands-on-report.jpg",
         "image_overlay_opacity": 30,
         "image_height": "small",
         "image_height_mobile": "small-mobile",
@@ -86,6 +87,15 @@
     "collapsible_content_AHHHxy": {
       "type": "collapsible-content",
       "blocks": {
+        "collapsible_row_KYxBXK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2025",
+            "icon": "pencil",
+            "row_content": "",
+            "page": "2025"
+          }
+        },
         "collapsible_row_fkqnBp": {
           "type": "collapsible_row",
           "settings": {
@@ -124,6 +134,7 @@
         }
       },
       "block_order": [
+        "collapsible_row_KYxBXK",
         "collapsible_row_fkqnBp",
         "collapsible_row_JJcMaG",
         "collapsible_row_DgkEEC",
@@ -150,12 +161,12 @@
         "column_PTFjer": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Martin_Kubac.jpg",
+            "image": "shopify://shop_images/Martin_Kubac.jpg",
             "icon": "check",
             "title": "Kontakt pro média",
-            "text": "<h3><strong>Martin Kubáč<\/strong><\/h3><p>PR Manažer<\/p><p><a href=\"mailto:martin.kubac@fixed.zone\" target=\"_blank\">Martin.Kubac@fixed.zone<\/a><\/p>",
+            "text": "<h3><strong>Martin Kubáč</strong></h3><p>PR Manažer</p><p><a href=\"mailto:martin.kubac@fixed.zone\" target=\"_blank\">Martin.Kubac@fixed.zone</a></p>",
             "link_label": "Linkedin",
-            "link": "https:\/\/www.linkedin.com\/in\/martinkubac\/",
+            "link": "https://www.linkedin.com/in/martinkubac/",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -209,10 +220,10 @@
           "type": "text-icon",
           "settings": {
             "icon": "fast_forward",
-            "custom_icon": "shopify:\/\/shop_images\/facebook.png",
+            "custom_icon": "shopify://shop_images/facebook.png",
             "title": "Facebook",
             "subheading": "",
-            "link": "https:\/\/www.facebook.com\/fixedcesko",
+            "link": "https://www.facebook.com/fixedcesko",
             "open_link_in_new_tab": false
           }
         },
@@ -220,10 +231,10 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/instagram-logo.png",
+            "custom_icon": "shopify://shop_images/instagram-logo.png",
             "title": "Instagram",
             "subheading": "",
-            "link": "https:\/\/www.instagram.com\/fixedcesko\/",
+            "link": "https://www.instagram.com/fixedcesko/",
             "open_link_in_new_tab": false
           }
         },
@@ -231,10 +242,10 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/youtube.png",
+            "custom_icon": "shopify://shop_images/youtube.png",
             "title": "Youtube",
             "subheading": "",
-            "link": "https:\/\/www.youtube.com\/channel\/UCqZqDkRGsTIIVCcqCkfogvw",
+            "link": "https://www.youtube.com/channel/UCqZqDkRGsTIIVCcqCkfogvw",
             "open_link_in_new_tab": false
           }
         },
@@ -242,10 +253,10 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/tik-tok.png",
+            "custom_icon": "shopify://shop_images/tik-tok.png",
             "title": "Tiktok",
             "subheading": "",
-            "link": "https:\/\/www.tiktok.com\/@fixedcesko",
+            "link": "https://www.tiktok.com/@fixedcesko",
             "open_link_in_new_tab": false
           }
         },
@@ -253,10 +264,10 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/linkedin.png",
+            "custom_icon": "shopify://shop_images/linkedin.png",
             "title": "Linkedin",
             "subheading": "",
-            "link": "https:\/\/www.linkedin.com\/company\/fixedzone\/mycompany\/",
+            "link": "https://www.linkedin.com/company/fixedzone/mycompany/",
             "open_link_in_new_tab": false
           }
         }
@@ -363,12 +374,12 @@
         "column_XNKtCz": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+            "image": "shopify://shop_images/FIXED_SIDLO.jpg",
             "icon": "check",
             "title": "SEZNAMTE SE S FIXED",
-            "text": "<p>Poznejte FIXED a všechny naše hodnoty.<\/p>",
+            "text": "<p>Poznejte FIXED a všechny naše hodnoty.</p>",
             "link_label": "SEZNAMTE SE S FIXED",
-            "link": "shopify:\/\/pages\/seznamte-se-s-fixed",
+            "link": "shopify://pages/seznamte-se-s-fixed",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -381,12 +392,12 @@
         "column_9FU3WC": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/investorske_centrum_obdelnik.jpg",
+            "image": "shopify://shop_images/investorske_centrum_obdelnik.jpg",
             "icon": "check",
             "title": "INVESTORSKÉ CENTRUM",
-            "text": "<p>Zde naleznete informace o našich finančních výsledcích a další zprávy týkající se hospodaření naší firmy<\/p>",
+            "text": "<p>Zde naleznete informace o našich finančních výsledcích a další zprávy týkající se hospodaření naší firmy</p>",
             "link_label": "NAVŠTIVTE INVESTORSKÉ CENTRUM",
-            "link": "shopify:\/\/pages\/investorske-centrum",
+            "link": "shopify://pages/investorske-centrum",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -399,12 +410,12 @@
         "column_Vg8qah": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/udrzitelnost_obdelnik.jpg",
+            "image": "shopify://shop_images/udrzitelnost_obdelnik.jpg",
             "icon": "check",
             "title": "UDRŽITELNOST",
-            "text": "<p>Prohlédněte si náš ESG report<\/p>",
+            "text": "<p>Prohlédněte si náš ESG report</p>",
             "link_label": "CERTIFIKACE",
-            "link": "shopify:\/\/pages\/releaf",
+            "link": "shopify://pages/releaf",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -417,12 +428,12 @@
         "column_nUzdhM": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/blog_obdelnik_f4c952d7-fee6-4de1-8f28-4fc1bcacf279.jpg",
+            "image": "shopify://shop_images/blog_obdelnik_f4c952d7-fee6-4de1-8f28-4fc1bcacf279.jpg",
             "icon": "check",
             "title": "BLOG",
-            "text": "<p>Nahlédněte pod pokličku FIXED<\/p>",
+            "text": "<p>Nahlédněte pod pokličku FIXED</p>",
             "link_label": "NAVŠTIVTE BLOG",
-            "link": "shopify:\/\/blogs\/news",
+            "link": "shopify://blogs/news",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
@@ -435,12 +446,12 @@
         "column_c8PRKn": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/podpora_obdelnik.jpg",
+            "image": "shopify://shop_images/podpora_obdelnik.jpg",
             "icon": "check",
             "title": "PODPORA",
-            "text": "<p>Vyhledejte si potřebné kontakty nebo se přímo spojte s naší zákaznickou podporou.<\/p>",
+            "text": "<p>Vyhledejte si potřebné kontakty nebo se přímo spojte s naší zákaznickou podporou.</p>",
             "link_label": "NAVŠTIVTE FIXED PODPORU",
-            "link": "shopify:\/\/pages\/podpora",
+            "link": "shopify://pages/podpora",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
@@ -453,12 +464,12 @@
         "column_w7N9zC": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/career_obdelnik.jpg",
+            "image": "shopify://shop_images/career_obdelnik.jpg",
             "icon": "check",
             "title": "KARIÉRA",
-            "text": "<p>Připoj se do našeho týmu, prohlédni si aktuální volné pozice, nebo napiš jen tak.<\/p>",
+            "text": "<p>Připoj se do našeho týmu, prohlédni si aktuální volné pozice, nebo napiš jen tak.</p>",
             "link_label": "NAVŠTIVTE FIXED HR",
-            "link": "https:\/\/www.welcometothejungle.com\/cs\/companies\/fixed\/jobs",
+            "link": "https://www.welcometothejungle.com/cs/companies/fixed/jobs",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
