@@ -241,7 +241,8 @@
         "price_at_each": "{{ price }}/szt.",
         "price_range": "{{ minimum }} - {{ maximum }}"
       },
-      "by_vendor_html": "<span>By</span> {{ vendor }}"
+      "by_vendor_html": "<span>By</span> {{ vendor }}",
+      "show_more": "Więcej opcji"
     },
     "modal": {
       "label": "Galeria multimediów"
