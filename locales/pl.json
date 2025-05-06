@@ -331,10 +331,10 @@
         "title": "Formularz kontaktowy"
       },
       "address": {
-        "heading": "Our address"
+        "heading": "Informacje kontaktowe"
       },
       "opening_hour": {
-        "heading": "Opening hour"
+        "heading": "Godziny otwarcia"
       }
     },
     "404": {
@@ -342,14 +342,14 @@
       "subtext": "404"
     },
     "compare": {
-      "header_icon": "Product compare",
-      "add_button": "Add {{ product_title }} to the comparison list",
-      "add_to_compare": "Add to compare",
-      "popup": "Product compare popup",
-      "empty": "There are no products in comparison list.",
-      "warning": "Please select at least 2 products to compare.",
-      "success": "Added to the comparison list.",
-      "remove": "Remove"
+      "header_icon": "Porównywać",
+      "add_button": "Dodaj {{ product_title }} do listy porównawczej",
+      "add_to_compare": "Dodaj do listy porównawczej",
+      "popup": "Lista porównawcza",
+      "empty": "Lista porównawcza jest pusta.",
+      "warning": "Wybierz co najmniej 2 produkty do porównania.",
+      "success": "Produkt dodany do listy porównawczej",
+      "remove": "Usunąć"
     }
   },
   "sections": {
