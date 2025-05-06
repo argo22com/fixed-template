@@ -309,12 +309,12 @@
         "few": "Znaleziono {{ count }} wyniki(-ów) dla \"{{ terms }}\"",
         "many": "Znaleziono {{ count }} wyniki(-ów) dla \"{{ terms }}\""
       },
-      "no_products": "No products found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_articles": "No articles found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_pages": "No pages found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "no_collections": "No collections found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
-      "article": "Articles",
-      "suggestions": "Suggestions"
+      "no_products": "Nie znaleziono produktów dla „{{ terms }}”. Sprawdź pisownię lub wprowadź inne słowo lub frazę.",
+      "no_articles": "Nie znaleziono artykułów dla „{{ terms }}”. Sprawdź pisownię lub wprowadź inne słowo lub frazę.",
+      "no_pages": "Nie znaleziono stron dla „{{ terms }}”. Sprawdź pisownię lub wprowadź inne słowo lub frazę.",
+      "no_collections": "Nie znaleziono kolekcji dla „{{ terms }}”. Sprawdź pisownię lub wprowadź inne słowo lub frazę.",
+      "article": "Artykuł",
+      "suggestions": "Sugestie"
     },
     "cart": {
       "cart": "Koszyk"
