@@ -226,7 +226,7 @@
         "text_Lri9ny": {
           "type": "text",
           "settings": {
-            "text": "<p>Chceš aby tvůj výlet byl nezapomenutelný  a bez stresu? Tyto 4 produkty si potřebuješ přihodit do kufru.</p>",
+            "text": "<p>Chceš, aby tvůj výlet byl nezapomenutelný  a bez stresu? Tyto 4 produkty si potřebuješ přihodit do kufru.</p>",
             "text_style": "body"
           }
         },
@@ -312,7 +312,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/1B1A4793.jpg",
+        "image": "shopify://shop_images/MagZen_8.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
