@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "518b8ced-997b-408e-84d5-64fe5082a6a1": {
       "type": "slideshow",
@@ -15,8 +15,6 @@
         "slide_T3NJDj": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/kolecko_desktop.png",
-            "mobile_image": "shopify://shop_images/kolecko_ms.png",
             "badge_label": "",
             "heading": "Jedno kolečko, tisíce možností",
             "text": "<strong>Objevuj svět magnetického příslušenství pro Apple i Android telefony</strong>",
@@ -163,7 +161,6 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/roll_desktop_banner_v2.jpg",
             "badge_label": "",
             "heading": "KONFIGURÁTOR DRŽÁKŮ",
             "text": "SESTAVTE SI DRŽÁK PŘESNĚ NA MÍRU VAŠEMU AUTU",
@@ -210,7 +207,7 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "large",
+        "slide_height": "small",
         "slide_height_mobile": "small-mobile",
         "auto_rotate": true,
         "change_slides_speed": 9,
@@ -227,43 +224,145 @@
     },
     "17225355129c0ff813": {
       "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "collection_list_BgrBeK": {
+      "type": "collection-list",
       "blocks": {
-        "hulk_form_builder_form_block_H7Q4mi": {
-          "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "featured_collection_GhmfFK": {
+          "type": "featured_collection",
           "settings": {
-            "form_uuid": "",
-            "form_settings": false,
-            "font_color": "#000000",
-            "size": 14,
-            "input_background_color": "#ffffff",
-            "input_background_color_focus": "#f4dada",
-            "input_border_radius": 1,
-            "input_border_color": "#ebe9e9",
-            "input_border_color_focus": "#2d2727",
-            "input_font_color": "#3d3131",
-            "input_size": 14,
-            "border_color": "#121212",
-            "border_radius": 2,
-            "border": 1,
-            "fill_color": "#ebe9e9",
-            "padding": 35,
-            "form_width": 600,
-            "btn_text": "Submit",
-            "sub_btn_txt_color": "#f3f3f3",
-            "sub_btn_bg_color": "#3f3333",
-            "sub_btn_font_size": 14,
-            "sub_btn_bdr_color": "#ffffff",
-            "sub_btn_bdr_rad": 3,
-            "sub_btn_bdr_width": 1,
-            "fonts": "Times New Roman"
+            "collection": "audio",
+            "custom_image": "shopify://shop_images/FIXPDS-WH-PRODUCT-7.jpg",
+            "custom_title": "Audio"
+          }
+        },
+        "featured_collection_8HiR6M": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "drzaky-a-stojanky",
+            "custom_image": "shopify://shop_images/FIXMCLI-BK-PRODUCT-9.jpg",
+            "custom_title": "Držáky a stojánky"
+          }
+        },
+        "featured_collection_QBAJFW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "selfie-tyce-a-stativy",
+            "custom_image": "shopify://shop_images/FIXSS-SN-BK-PRODUCT-9.jpg",
+            "custom_title": "Selfie tyče a stativy"
+          }
+        },
+        "featured_collection_eJyiBp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "powerbanky",
+            "custom_image": "shopify://shop_images/FIXZENM-10-BK-PRODUCT-5.jpg",
+            "custom_title": "Powerbanky"
+          }
+        },
+        "featured_collection_kzbFj6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kabely",
+            "custom_image": "shopify://shop_images/FIXDLED-CC-RA-PRODUCT-11.jpg",
+            "custom_title": "Kabely"
+          }
+        },
+        "featured_collection_39F6DX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "sitove-nabijecky",
+            "custom_image": "shopify://shop_images/FIXC30M-CL-WH-PRODUCT-6.jpg",
+            "custom_title": "Nabíječky"
+          }
+        },
+        "featured_collection_B7GCFB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": "Lokátory"
+          }
+        },
+        "featured_collection_eMDYDb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "reminky",
+            "custom_title": "Řemínky"
+          }
+        },
+        "featured_collection_YY6kTi": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_TTHazM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_YmREy6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_jatN9n": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_ff4exg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
           }
         }
       },
       "block_order": [
-        "hulk_form_builder_form_block_H7Q4mi"
+        "featured_collection_GhmfFK",
+        "featured_collection_8HiR6M",
+        "featured_collection_QBAJFW",
+        "featured_collection_eJyiBp",
+        "featured_collection_kzbFj6",
+        "featured_collection_39F6DX",
+        "featured_collection_B7GCFB",
+        "featured_collection_eMDYDb",
+        "featured_collection_YY6kTi",
+        "featured_collection_TTHazM",
+        "featured_collection_YmREy6",
+        "featured_collection_jatN9n",
+        "featured_collection_ff4exg"
       ],
+      "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "include_margins": true
+        "title": "Produkty",
+        "subtitle": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "full_width": false,
+        "enable_section_box_layout": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "show_view_all": false,
+        "collection_card_show_title": true,
+        "show_products_count": false,
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "rich_text_RPc8kt": {
@@ -305,7 +404,6 @@
         "column_QxJR8a": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/FIXXB-MCS-BK_LS1_4695d48c-1289-4c99-a37f-27ffd0ffd8b0.jpg",
             "icon": "check",
             "title": "Herní příslušenství",
             "text": "<p>Vyber si z multifunkčních dokovacích stanic a nabíječek pro herní konzole PlayStation 5, PlaysStation Portal, Xbox nebo objev nová sluchátka pro hráče.<br/></p>",
@@ -342,7 +440,6 @@
         "column_GJR9bJ": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/magsafe.jpg",
             "icon": "check",
             "title": "Magnetické příslušenství",
             "text": "<p>Pořiď si to nejmodernější a nejvychytanější příslušenství nezávisle na tom, jaký máš telefon. Powerbanky, nabíječky, selfie tyče i držáky do auta - to nejlepší jenom pro tebe.</p>",
@@ -425,7 +522,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "prislusenstvi-kompatibilni-s-magsafe",
-            "custom_image": "shopify://shop_images/kolekce5_835b509c-d072-4bcc-9bb1-62c954a3709c.jpg",
             "custom_title": "Magnetické příslušenství"
           }
         },
@@ -433,7 +529,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "lokatory-s-findmy",
-            "custom_image": "shopify://shop_images/kolekce2.jpg",
             "custom_title": "Chytré lokátory"
           }
         },
@@ -441,7 +536,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "bezdratove-nabijecky",
-            "custom_image": "shopify://shop_images/kolekce3_c2608871-fe82-457b-a948-8f16b1759638.jpg",
             "custom_title": "Bezdrátové nabíjení"
           }
         },
@@ -449,7 +543,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "skla-armor",
-            "custom_image": "shopify://shop_images/kolekce4.jpg",
             "custom_title": "Armor"
           }
         },
@@ -553,7 +646,6 @@
         "enable_desktop_slider": true,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "image": "shopify://shop_images/mix.1495.jpg",
         "image_position_desktop": "left",
         "image_height": "adapt_product_list",
         "image_height_mobile": "34",
@@ -579,7 +671,6 @@
         "text_overlay_image_TrcKUU": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify://shop_images/OCHRANA.1384.jpg",
             "link": "shopify://collections/ochrana",
             "keep_ltr": true,
             "text": "Pouzdra, tvrzená skla, folie...",
@@ -631,7 +722,6 @@
         "text_overlay_image_kzc9B8": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify://shop_images/nabijecky.1472.jpg",
             "link": "shopify://collections/nabijeni",
             "keep_ltr": false,
             "text": "Nabíječky, cestovní adaptéry, powerbanky, kabely...",
@@ -719,7 +809,6 @@
         "enable_desktop_slider": false,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "image": "shopify://shop_images/mix3.1460.jpg",
         "image_position_desktop": "right",
         "image_height": "adapt_product_list",
         "image_height_mobile": "34",
@@ -876,7 +965,6 @@
       ],
       "settings": {
         "grid_layout": "full_bleed",
-        "image": "shopify://shop_images/shutterstock_1778085617_kopie.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -993,6 +1081,7 @@
   "order": [
     "518b8ced-997b-408e-84d5-64fe5082a6a1",
     "17225355129c0ff813",
+    "collection_list_BgrBeK",
     "rich_text_RPc8kt",
     "multicolumn_Liefqw",
     "collection_list_ndxz9L",
