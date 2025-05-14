@@ -231,11 +231,18 @@
     "collection_list_BgrBeK": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_GhmfFK": {
+        "featured_collection_YmREy6": {
           "type": "featured_collection",
           "settings": {
-            "collection": "audio",
-            "custom_title": "Audio"
+            "collection": "pouzdra",
+            "custom_title": "Pouzdra"
+          }
+        },
+        "featured_collection_jatN9n": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tvrzena-skla",
+            "custom_title": "Ochranná skla"
           }
         },
         "featured_collection_8HiR6M": {
@@ -245,11 +252,11 @@
             "custom_title": "Držáky a stojánky"
           }
         },
-        "featured_collection_QBAJFW": {
+        "featured_collection_39F6DX": {
           "type": "featured_collection",
           "settings": {
-            "collection": "selfie-tyce-a-stativy",
-            "custom_title": "Selfie tyče a stativy"
+            "collection": "sitove-nabijecky",
+            "custom_title": "Nabíječky"
           }
         },
         "featured_collection_eJyiBp": {
@@ -266,11 +273,18 @@
             "custom_title": "Redukce a kabely"
           }
         },
-        "featured_collection_39F6DX": {
+        "featured_collection_eMDYDb": {
           "type": "featured_collection",
           "settings": {
-            "collection": "sitove-nabijecky",
-            "custom_title": "Nabíječky"
+            "collection": "reminky",
+            "custom_title": "Řemínky"
+          }
+        },
+        "featured_collection_QBAJFW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "selfie-tyce-a-stativy",
+            "custom_title": "Selfie tyče a stativy"
           }
         },
         "featured_collection_B7GCFB": {
@@ -280,39 +294,11 @@
             "custom_title": "Lokátory"
           }
         },
-        "featured_collection_eMDYDb": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "reminky",
-            "custom_title": "Řemínky"
-          }
-        },
         "featured_collection_YY6kTi": {
           "type": "featured_collection",
           "settings": {
             "collection": "sluchatka",
             "custom_title": "Sluchátka"
-          }
-        },
-        "featured_collection_TTHazM": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "stojanky",
-            "custom_title": "Stojánky"
-          }
-        },
-        "featured_collection_YmREy6": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pouzdra",
-            "custom_title": "Pouzdra"
-          }
-        },
-        "featured_collection_jatN9n": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "tvrzena-skla",
-            "custom_title": "Ochranná skla"
           }
         },
         "featured_collection_ff4exg": {
@@ -329,39 +315,29 @@
             "custom_image": "shopify://shop_images/FIXPS5S-MCS-BW-PRODUCT-0.jpg",
             "custom_title": "Gaming"
           }
-        },
-        "featured_collection_zKYCFb": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "klavesnice",
-            "custom_title": "Klávesnice"
-          }
         }
       },
       "block_order": [
-        "featured_collection_GhmfFK",
-        "featured_collection_8HiR6M",
-        "featured_collection_QBAJFW",
-        "featured_collection_eJyiBp",
-        "featured_collection_kzbFj6",
-        "featured_collection_39F6DX",
-        "featured_collection_B7GCFB",
-        "featured_collection_eMDYDb",
-        "featured_collection_YY6kTi",
-        "featured_collection_TTHazM",
         "featured_collection_YmREy6",
         "featured_collection_jatN9n",
+        "featured_collection_8HiR6M",
+        "featured_collection_39F6DX",
+        "featured_collection_eJyiBp",
+        "featured_collection_kzbFj6",
+        "featured_collection_eMDYDb",
+        "featured_collection_QBAJFW",
+        "featured_collection_B7GCFB",
+        "featured_collection_YY6kTi",
         "featured_collection_ff4exg",
-        "featured_collection_JLM4wG",
-        "featured_collection_zKYCFb"
+        "featured_collection_JLM4wG"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "Produkty",
+        "title": "",
         "subtitle": "",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 5,
+        "columns_desktop": 6,
         "full_width": false,
         "enable_section_box_layout": false,
         "enable_desktop_slider": false,
