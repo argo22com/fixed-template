@@ -282,7 +282,7 @@
         "featured_collection_B7GCFB": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "lokatory",
             "custom_title": "Lokátory"
           }
         },
