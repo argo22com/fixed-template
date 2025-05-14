@@ -235,7 +235,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "audio",
-            "custom_image": "shopify://shop_images/FIXPDS-WH-PRODUCT-7.jpg",
             "custom_title": "Audio"
           }
         },
@@ -243,7 +242,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "drzaky-a-stojanky",
-            "custom_image": "shopify://shop_images/FIXMCLI-BK-PRODUCT-9.jpg",
             "custom_title": "Držáky a stojánky"
           }
         },
@@ -251,7 +249,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "selfie-tyce-a-stativy",
-            "custom_image": "shopify://shop_images/FIXSS-SN-BK-PRODUCT-9.jpg",
             "custom_title": "Selfie tyče a stativy"
           }
         },
@@ -259,7 +256,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "powerbanky",
-            "custom_image": "shopify://shop_images/FIXZENM-10-BK-PRODUCT-5.jpg",
             "custom_title": "Powerbanky"
           }
         },
@@ -267,15 +263,13 @@
           "type": "featured_collection",
           "settings": {
             "collection": "kabely",
-            "custom_image": "shopify://shop_images/FIXDLED-CC-RA-PRODUCT-11.jpg",
-            "custom_title": "Kabely"
+            "custom_title": "Redukce a kabely"
           }
         },
         "featured_collection_39F6DX": {
           "type": "featured_collection",
           "settings": {
             "collection": "sitove-nabijecky",
-            "custom_image": "shopify://shop_images/FIXC30M-CL-WH-PRODUCT-6.jpg",
             "custom_title": "Nabíječky"
           }
         },
@@ -296,35 +290,35 @@
         "featured_collection_YY6kTi": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "collection": "sluchatka",
+            "custom_title": "Sluchátka"
           }
         },
         "featured_collection_TTHazM": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "collection": "stojanky",
+            "custom_title": "Stojánky"
           }
         },
         "featured_collection_YmREy6": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "collection": "pouzdra",
+            "custom_title": "Pouzdra"
           }
         },
         "featured_collection_jatN9n": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "custom_title": ""
+            "collection": "tvrzena-skla",
+            "custom_title": "Ochranná skla"
           }
         },
         "featured_collection_ff4exg": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "penezenky",
             "custom_title": ""
           }
         }
@@ -351,7 +345,7 @@
         "heading_size": "h1",
         "image_ratio": "adapt",
         "columns_desktop": 6,
-        "full_width": false,
+        "full_width": true,
         "enable_section_box_layout": false,
         "enable_desktop_slider": false,
         "color_scheme": "",
