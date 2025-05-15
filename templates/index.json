@@ -493,54 +493,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_products_tabs_EB8HcH": {
-      "type": "featured-products-tabs",
-      "blocks": {
-        "featured_products_R8jfLQ": {
-          "type": "featured_products",
-          "settings": {
-            "title": "",
-            "product_list": [
-              "6-portovy-hlinikovy-usb-c-fixed-hub-pro-pro-notebooky-a-tablety-sedy-rozbaleno",
-              "automaticky-drzak-do-auta-s-rychlym-bezdratovym-nabijenim-fixed-matic-xl-na-sklo-nebo-palubni-desku-15w-cerny",
-              "autonabijecka-fixed-s-usb-c-vystupem-a-podporou-pd-20w-cerna",
-              "bezdratova-tws-sluchatka-fixed-boom-joy-cerna",
-              "bezdratova-tws-sluchatka-fixed-pods-ruzova",
-              "datovy-a-nabijeci-kabel-fixed-s-konektory-usb-lightning-1-metr-mfi-certifikace-bily"
-            ],
-            "products_to_show": 18,
-            "columns_desktop": 4
-          }
-        }
-      },
-      "block_order": [
-        "featured_products_R8jfLQ"
-      ],
-      "disabled": true,
-      "custom_css": [],
-      "settings": {
-        "title": "Novinky v sortimentu",
-        "subtitle": "",
-        "heading_size": "h2",
-        "full_width": false,
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "portrait",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "enable_compare": false,
-        "enable_quick_view": true,
-        "show_color_swatches": true,
-        "color_swatches_style": "custom",
-        "columns_tablet": "3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 72,
-        "padding_bottom": 36
-      }
-    },
     "featured_collection_xcmLFp": {
       "type": "featured-collection",
       "settings": {
@@ -726,7 +678,7 @@
         "image_height": "adapt_product_list",
         "image_height_mobile": "34",
         "image_ratio": "adapt",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": true,
@@ -998,7 +950,6 @@
     "rich_text_RPc8kt",
     "multicolumn_Liefqw",
     "collection_list_ndxz9L",
-    "featured_products_tabs_EB8HcH",
     "featured_collection_xcmLFp",
     "gallery_hgMnHR",
     "featured_collection_Ma4mPk",
