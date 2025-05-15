@@ -903,7 +903,7 @@
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
-        "title": "Blog posts",
+        "title": "FIXED (R)evolution",
         "heading_size": "h1",
         "blog": "fixed-r-evolution",
         "post_limit": 3,
