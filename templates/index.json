@@ -588,14 +588,14 @@
         "featured_collection_xdJmVL": {
           "type": "featured_collection",
           "settings": {
-            "collection": "prislusenstvi-kompatibilni-s-magsafe",
+            "collection": "magsafe-nabijecky",
             "custom_title": "Magnetické příslušenství"
           }
         },
         "featured_collection_emzhYj": {
           "type": "featured_collection",
           "settings": {
-            "collection": "lokatory-s-findmy",
+            "collection": "lokatory-s-podporou-apple-findmy",
             "custom_title": "Chytré lokátory"
           }
         },
@@ -616,7 +616,7 @@
         "featured_collection_qTq37c": {
           "type": "featured_collection",
           "settings": {
-            "collection": "pouzdra-z-umele-kuze",
+            "collection": "klavesnice",
             "custom_title": ""
           }
         }
@@ -643,7 +643,7 @@
         "color_scheme": "background-1",
         "show_view_all": false,
         "collection_card_show_title": true,
-        "show_products_count": true,
+        "show_products_count": false,
         "columns_tablet": "2",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
