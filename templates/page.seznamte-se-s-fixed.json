@@ -746,6 +746,28 @@
         "description2": "S růstem firmy roste počet zaměstnanců"
       }
     },
+    "featured_blog_N366PE": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "title": "FIXED (R)evolution",
+        "heading_size": "h1",
+        "blog": "fixed-r-evolution",
+        "post_limit": 3,
+        "image_height": "medium",
+        "show_view_all": true,
+        "columns_desktop": 3,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "blog_card_text_alignment": "left",
+        "blog_card_color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn_ADgaBQ": {
       "type": "multicolumn",
       "blocks": {
@@ -898,28 +920,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "featured_blog_N366PE": {
-      "type": "featured-blog",
-      "name": "t:sections.featured-blog.presets.name",
-      "settings": {
-        "title": "FIXED (R)evolution",
-        "heading_size": "h1",
-        "blog": "fixed-r-evolution",
-        "post_limit": 3,
-        "image_height": "medium",
-        "show_view_all": true,
-        "columns_desktop": 3,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "blog_card_text_alignment": "left",
-        "blog_card_color_scheme": "",
-        "show_image": true,
-        "show_date": true,
-        "show_author": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -932,8 +932,8 @@
     "text_icons_D3aUPg",
     "multicolumn_MayPfc",
     "timeline_ccWkJE",
+    "featured_blog_N366PE",
     "graph_wrK7F9",
-    "multicolumn_ADgaBQ",
-    "featured_blog_N366PE"
+    "multicolumn_ADgaBQ"
   ]
 }
