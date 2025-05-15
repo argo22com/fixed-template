@@ -63,7 +63,7 @@
     "social_tiktok_link": "https://www.tiktok.com/@fixedcesko",
     "social_linkedin_link": "https://www.linkedin.com/company/fixedzone/mycompany/",
     "predictive_search_enabled": true,
-    "enable_appear_effect": true,
+    "enable_appear_effect": false,
     "favicon": "shopify://shop_images/logo_square-2.jpg",
     "currency_code_enabled": false,
     "cart_type": "drawer",
