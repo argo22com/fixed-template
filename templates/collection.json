@@ -110,6 +110,7 @@
         "enable_quick_add": true,
         "enable_compare": true,
         "enable_quick_view": true,
+        "show_compatible_devices_filters": false,
         "show_color_swatches": true,
         "color_swatches_style": "custom",
         "enable_filtering": true,
