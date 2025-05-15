@@ -1,18 +1,18 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-blog",
       "settings": {
-        "title_background_image": "shopify:\/\/shop_images\/podpora_8.png",
+        "title_background_image": "shopify://shop_images/podpora_8.png",
         "posts_per_page": 12,
         "show_tags": true,
         "layout": "collage",
@@ -31,9 +31,56 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "newsletter_gQJeVa": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_VbcayN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Přihlašte se k  odběru novinek",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_TatFqc": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Přidejte se k naší komunitě ať už vám žádné novinky neutečou!<br/>Přečtěte si naše <a href=\"/pages/contact\" title=\"Kontakt\">zásady ochrany osobních údajů</a>. </p>"
+          }
+        },
+        "email_form_abBzYa": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_VbcayN",
+        "paragraph_TatFqc",
+        "email_form_abBzYa"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "grid_layout": "stretched_grid",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "background-2",
+        "background_image_section": "shopify://shop_images/bg.jpg",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#fff",
+        "colors_input": "#000000",
+        "overlay_color": "#00a9e0",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "newsletter_gQJeVa"
   ]
 }
