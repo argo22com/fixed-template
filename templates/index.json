@@ -385,6 +385,86 @@
         "padding_bottom": 52
       }
     },
+    "text_icons_kXCWwM": {
+      "type": "text-icons",
+      "blocks": {
+        "text_icon_KbC4Pf": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/fixed_logo_bk_ong.png",
+            "title": "",
+            "subheading": "Český výrobce, již 24 let na trhu",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_mtfmFn": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "identification",
+            "title": "",
+            "subheading": "Nákup přímo od výrobce",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_Ck89Ti": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "delivery",
+            "title": "",
+            "subheading": "Při nákupu nad 2000 Kč doprava zdarma",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_6np8JQ": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check_circle",
+            "title": "",
+            "subheading": "Ověřeno zákazníky",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_icon_KbC4Pf",
+        "text_icon_mtfmFn",
+        "text_icon_Ck89Ti",
+        "text_icon_6np8JQ"
+      ],
+      "name": "t:sections.text-icons.presets.name",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h2",
+        "icon_width_desktop": 19,
+        "text_position": "bottom",
+        "enable_heading_in_box": false,
+        "columns_desktop": 4,
+        "columns_tablet": 4,
+        "auto_fit": false,
+        "column_alignment": "center",
+        "highlight_icon": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "background-2",
+        "border_width": 1,
+        "border_opacity": 15,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "circle",
+        "blur_background": true,
+        "columns_mobile": "1",
+        "icon_width_mobile": 30,
+        "border_spacing_mobile": 0,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn_Liefqw": {
       "type": "multicolumn",
       "blocks": {
@@ -1070,6 +1150,7 @@
     "17225355129c0ff813",
     "collection_list_BgrBeK",
     "rich_text_RPc8kt",
+    "text_icons_kXCWwM",
     "multicolumn_Liefqw",
     "collection_list_ndxz9L",
     "featured_products_tabs_EB8HcH",
