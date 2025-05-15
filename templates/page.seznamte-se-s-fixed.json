@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -17,7 +17,8 @@
         "content_alignment": "left",
         "color_scheme": "background-1",
         "padding_top": 0,
-        "padding_bottom": 16
+        "padding_bottom": 16,
+        "ul_li_marker": "#000000"
       }
     },
     "image_banner_HtGAm3": {
@@ -44,8 +45,8 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "image": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/FIXED_SIDLO.jpg",
+        "image": "shopify://shop_images/FIXED_SIDLO.jpg",
+        "image_mobile": "shopify://shop_images/FIXED_SIDLO.jpg",
         "image_overlay_opacity": 20,
         "image_height": "medium",
         "image_height_mobile": "medium-mobile",
@@ -97,7 +98,7 @@
         "text_XQf8HX": {
           "type": "text",
           "settings": {
-            "text": "<p>Vše pečlivě vyvíjíme a testujeme, a tím vytváříme kvalitní a odolné příslušenství, které se jednoduše používá. Takové příslušenství dlouho vydrží bez nutnosti obměny a naplňuje naši víru, že kvalita je alternativou spotřeby. Současně vám zjendodušuje a zpříjemňuje používání vašich chytrých zařízení, abyste mohli naplno využívat jejich potenciál.<\/p><p>Kdyby i tak někdy něco zaskřípalo, můžete se kdykoliv obrátit na centrum podpory FIXED, kde vám s vašimi dotazy nebo problémy rádi poradíme.<\/p>",
+            "text": "<p>Vše pečlivě vyvíjíme a testujeme, a tím vytváříme kvalitní a odolné příslušenství, které se jednoduše používá. Takové příslušenství dlouho vydrží bez nutnosti obměny a naplňuje naši víru, že kvalita je alternativou spotřeby. Současně vám zjendodušuje a zpříjemňuje používání vašich chytrých zařízení, abyste mohli naplno využívat jejich potenciál.</p><p>Kdyby i tak někdy něco zaskřípalo, můžete se kdykoliv obrátit na centrum podpory FIXED, kde vám s vašimi dotazy nebo problémy rádi poradíme.</p>",
             "text_style": "body"
           }
         }
@@ -108,7 +109,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/Tag_card_df83434f-d87e-47a3-aa7d-acd964416444.png",
+        "image": "shopify://shop_images/Tag_card_df83434f-d87e-47a3-aa7d-acd964416444.png",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -151,7 +152,7 @@
         "text_JPYh4L": {
           "type": "text",
           "settings": {
-            "text": "<p>Věříme, že silná značka a autentická komunikace z ní vycházející, pomáhá budovat dlouhodobý vztah. Značku FIXED naplňuje její poselství zlepšovat život s chytrými zařízeními a v kombinaci s přátelskou a kreativní komunikací vytváříme jedinečkou, zapamatovatelnou vizualitu a tonalitu.<\/p><p>FIXED jako nejlepší přítel s kreativní myslí vám vždy pomůže vidět o kus dále. Můžete se spolehnout, že vymyslí řešení, dá dobrou radu a podá pomocnou ruku při výběru kvalitního a odolného příslušenství.<\/p>",
+            "text": "<p>Věříme, že silná značka a autentická komunikace z ní vycházející, pomáhá budovat dlouhodobý vztah. Značku FIXED naplňuje její poselství zlepšovat život s chytrými zařízeními a v kombinaci s přátelskou a kreativní komunikací vytváříme jedinečkou, zapamatovatelnou vizualitu a tonalitu.</p><p>FIXED jako nejlepší přítel s kreativní myslí vám vždy pomůže vidět o kus dále. Můžete se spolehnout, že vymyslí řešení, dá dobrou radu a podá pomocnou ruku při výběru kvalitního a odolného příslušenství.</p>",
             "text_style": "body"
           }
         }
@@ -162,7 +163,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/1B1A5064_1b777026-af07-40a2-90f8-e309c05663bf.jpg",
+        "image": "shopify://shop_images/1B1A5064_1b777026-af07-40a2-90f8-e309c05663bf.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -205,7 +206,7 @@
         "text_JUrCbK": {
           "type": "text",
           "settings": {
-            "text": "<p>Největší hodnotou jsou lidé. Nasloucháme jejich potřebám a podle toho konáme a to jak uvnitř firmy, tak vůči našemu okolí: zákazníkům, obchodním partnerům, akcionářům a všem ostatním. Zakládáme si na otevřené komunikaci, zpětné vazbě, férovosti a autentičnosti, protože věříme v dlouhodobé vztahy.<\/p><p>Neobětujeme budoucnost kvůli dnešku a tím se stává naše činnost udržitelnější. Chceme totiž zanechat naší planetu v co nejlepším stavu pro další generace.<\/p>",
+            "text": "<p>Největší hodnotou jsou lidé. Nasloucháme jejich potřebám a podle toho konáme a to jak uvnitř firmy, tak vůči našemu okolí: zákazníkům, obchodním partnerům, akcionářům a všem ostatním. Zakládáme si na otevřené komunikaci, zpětné vazbě, férovosti a autentičnosti, protože věříme v dlouhodobé vztahy.</p><p>Neobětujeme budoucnost kvůli dnešku a tím se stává naše činnost udržitelnější. Chceme totiž zanechat naší planetu v co nejlepším stavu pro další generace.</p>",
             "text_style": "body"
           }
         }
@@ -216,7 +217,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify:\/\/shop_images\/1B1A4464.jpg",
+        "image": "shopify://shop_images/1B1A4464.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -258,13 +259,12 @@
         "paragraph_BBNpic": {
           "type": "paragraph",
           "settings": {
-            "text": "<p><\/p><p>Přidejte se do rodiny spokojených zákazníků a fanoušků značky FIXED na sociálních sítích nebo se zaregistrujte do našeho newsletteru. Budete tak mít jistotu, že vám neuniknou novinky ze světa kvalitního a odolného příslušenství, doporučení na produkty nebo další rady, tipy a triky.<\/p>"
+            "text": "<p></p><p>Přidejte se do rodiny spokojených zákazníků a fanoušků značky FIXED na sociálních sítích nebo se zaregistrujte do našeho newsletteru. Budete tak mít jistotu, že vám neuniknou novinky ze světa kvalitního a odolného příslušenství, doporučení na produkty nebo další rady, tipy a triky.</p>"
           }
         },
         "email_form_7j4jTy": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -297,10 +297,10 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify:\/\/shop_images\/facebook_24ed6b7e-67cf-4816-a004-f47dd598ba5b.png",
+            "custom_icon": "shopify://shop_images/facebook_24ed6b7e-67cf-4816-a004-f47dd598ba5b.png",
             "title": "Facebook",
             "subheading": "",
-            "link": "https:\/\/www.facebook.com\/fixedcesko\/",
+            "link": "https://www.facebook.com/fixedcesko/",
             "open_link_in_new_tab": true
           }
         },
@@ -308,10 +308,10 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/instagram-logo_dce32725-78f8-426b-a0e2-10ca4a540cfd.png",
+            "custom_icon": "shopify://shop_images/instagram-logo_dce32725-78f8-426b-a0e2-10ca4a540cfd.png",
             "title": "Instagram",
             "subheading": "",
-            "link": "https:\/\/www.instagram.com\/fixedcesko\/",
+            "link": "https://www.instagram.com/fixedcesko/",
             "open_link_in_new_tab": true
           }
         },
@@ -319,10 +319,10 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/linkedin_4b68bca5-2509-4774-9dee-e7d7a37464fb.png",
+            "custom_icon": "shopify://shop_images/linkedin_4b68bca5-2509-4774-9dee-e7d7a37464fb.png",
             "title": "LinkedIn",
             "subheading": "",
-            "link": "https:\/\/www.linkedin.com\/company\/fixedzone\/",
+            "link": "https://www.linkedin.com/company/fixedzone/",
             "open_link_in_new_tab": true
           }
         },
@@ -330,10 +330,10 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/tik-tok_a89ad24c-a0ea-48ce-b142-48ffa8853c5b.png",
+            "custom_icon": "shopify://shop_images/tik-tok_a89ad24c-a0ea-48ce-b142-48ffa8853c5b.png",
             "title": "TikTok",
             "subheading": "",
-            "link": "https:\/\/www.tiktok.com\/@fixedcesko",
+            "link": "https://www.tiktok.com/@fixedcesko",
             "open_link_in_new_tab": true
           }
         },
@@ -341,10 +341,10 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify:\/\/shop_images\/youtube_d706cd54-0753-4a43-b753-812d80d51d7b.png",
+            "custom_icon": "shopify://shop_images/youtube_d706cd54-0753-4a43-b753-812d80d51d7b.png",
             "title": "YouTube",
             "subheading": "",
-            "link": "https:\/\/www.youtube.com\/channel\/UCqZqDkRGsTIIVCcqCkfogvw",
+            "link": "https://www.youtube.com/channel/UCqZqDkRGsTIIVCcqCkfogvw",
             "open_link_in_new_tab": true
           }
         }
@@ -390,7 +390,7 @@
         "column_tE8t9x": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fixed_for_life_CZ_1_0341dba3-9728-4577-a16f-4873b04256f4.jpg",
+            "image": "shopify://shop_images/fixed_for_life_CZ_1_0341dba3-9728-4577-a16f-4873b04256f4.jpg",
             "icon": "check",
             "title": "",
             "text": "",
@@ -408,7 +408,7 @@
         "column_MVbyjw": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fixed_for_life_CZ_2_c2cf3822-1520-41ff-9423-5796bda26d4d.jpg",
+            "image": "shopify://shop_images/fixed_for_life_CZ_2_c2cf3822-1520-41ff-9423-5796bda26d4d.jpg",
             "icon": "none",
             "title": "",
             "text": "",
@@ -426,7 +426,7 @@
         "column_8Qa7zJ": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fixed_for_life_CZ_3_d6e4ddec-63de-4077-9f16-93f7dfa711d3.jpg",
+            "image": "shopify://shop_images/fixed_for_life_CZ_3_d6e4ddec-63de-4077-9f16-93f7dfa711d3.jpg",
             "icon": "check",
             "title": "",
             "text": "",
@@ -525,7 +525,7 @@
             "year": 2005,
             "title": "První handsfree",
             "link_text": "Ukaž mi více",
-            "description": "<p>Distribuce značky SUPERTOOTH a první handsfree  na stínítka aut.<\/p>\n\n<p>Zahájení prodeje navigací GEOSAT, klíčová spolupráce se specialistou na příslušenství, společností CORADIA.<\/p>"
+            "description": "<p>Distribuce značky SUPERTOOTH a první handsfree  na stínítka aut.</p>\n\n<p>Zahájení prodeje navigací GEOSAT, klíčová spolupráce se specialistou na příslušenství, společností CORADIA.</p>"
           }
         },
         "timeline_block_zkKpXD": {
@@ -534,7 +534,7 @@
             "year": 2006,
             "title": "Otevření moto segmentu",
             "link_text": "Ukaž mi více",
-            "description": "<p>Start aktivit v motosegmentu s produkty Supertooth Moto – později přejmenováno na Interphone.<\/p>\n\n<p>Počátek prodeje navigací Mio<\/p>"
+            "description": "<p>Start aktivit v motosegmentu s produkty Supertooth Moto – později přejmenováno na Interphone.</p>\n\n<p>Počátek prodeje navigací Mio</p>"
           }
         },
         "timeline_block_RY6jLQ": {
@@ -543,7 +543,7 @@
             "year": 2007,
             "title": "Spolupráce s ElectroWorld",
             "link_text": "Ukaž mi více",
-            "description": "<p>Počátek spolupráce s elektrospecialistou – řetězcem ElectroWorld.<\/p>\n\n<p>První výstava Motocykl s intercom Interphone.<\/p>"
+            "description": "<p>Počátek spolupráce s elektrospecialistou – řetězcem ElectroWorld.</p>\n\n<p>První výstava Motocykl s intercom Interphone.</p>"
           }
         },
         "timeline_block_nKwYGg": {
@@ -552,7 +552,7 @@
             "year": 2008,
             "title": "Distribuce Touratech",
             "link_text": "Ukaž mi více",
-            "description": "<p>Zahájení spolupráce s distributorem značky Touratech.<\/p>\n\n<p>Podpora prodeje Interphone<\/p>"
+            "description": "<p>Zahájení spolupráce s distributorem značky Touratech.</p>\n\n<p>Podpora prodeje Interphone</p>"
           }
         },
         "timeline_block_zkdBRa": {
@@ -597,7 +597,7 @@
             "year": 2013,
             "title": "Založení RECALL Slovensko",
             "link_text": "Ukaž mi více",
-            "description": "<p>Založení pobočky na Slovensku.<\/p>\n\n<p>Spolupráce s Datart, Expert. V roce 2013 jsme již distributory 40 světových značek příslušenství.<\/p>"
+            "description": "<p>Založení pobočky na Slovensku.</p>\n\n<p>Spolupráce s Datart, Expert. V roce 2013 jsme již distributory 40 světových značek příslušenství.</p>"
           }
         },
         "timeline_block_bm6igB": {
@@ -606,7 +606,7 @@
             "year": 2014,
             "title": "Czech hand made",
             "link_text": "Ukaž mi více",
-            "description": "<p>Strategický nákup šicí dílny v českém Prostějově. Zde se začíná doslova šít historie. Stáváme se výrobci ručně šitých kožených pouzder. I přes těžkosti jsme ruční práci vždy věřili a považujeme ji za naše rodinné stříbro.<\/p>\n\n<p>Spolupráce s Alza.cz<\/p>"
+            "description": "<p>Strategický nákup šicí dílny v českém Prostějově. Zde se začíná doslova šít historie. Stáváme se výrobci ručně šitých kožených pouzder. I přes těžkosti jsme ruční práci vždy věřili a považujeme ji za naše rodinné stříbro.</p>\n\n<p>Spolupráce s Alza.cz</p>"
           }
         },
         "timeline_block_M3GVnM": {
@@ -615,7 +615,7 @@
             "year": 2015,
             "title": "Vznik značky FIXED",
             "link_text": "Ukaž mi více",
-            "description": "<p>Posouváme se dál s ambicí vybudovat vlastní značku. Světlo světa tak spatřují první produkty FIXED. Z pozice úspěšného distributora směřujeme do pozice inovátora, tvůrce, vývojáře a výrobce vlastní značky.<\/p>\n\n<p>Spolupráce s mobilním operátorem O2<\/p>"
+            "description": "<p>Posouváme se dál s ambicí vybudovat vlastní značku. Světlo světa tak spatřují první produkty FIXED. Z pozice úspěšného distributora směřujeme do pozice inovátora, tvůrce, vývojáře a výrobce vlastní značky.</p>\n\n<p>Spolupráce s mobilním operátorem O2</p>"
           }
         },
         "timeline_block_XEwRrb": {
@@ -651,7 +651,7 @@
             "year": 2019,
             "title": "European Design Award",
             "link_text": "Ukaž mi více",
-            "description": "<p>Držák FIXED ICON získává ocenění za design European Design Award.<\/p>\n\n<p>2. generace FIXED Smile, ukončení prodeje CELLY. FIXED se stává hlavní značkou v portfoliu.<\/p>\n\n<p>Založení exportního oddělení, první výstava IFA Berlin.<\/p>"
+            "description": "<p>Držák FIXED ICON získává ocenění za design European Design Award.</p>\n\n<p>2. generace FIXED Smile, ukončení prodeje CELLY. FIXED se stává hlavní značkou v portfoliu.</p>\n\n<p>Založení exportního oddělení, první výstava IFA Berlin.</p>"
           }
         },
         "timeline_block_FW6Pg9": {
@@ -669,7 +669,7 @@
             "year": 2021,
             "title": "Vstup na burzu",
             "link_text": "Ukaž mi více",
-            "description": "<p>RECALL s.r.o. se po dvaceti úspěšných letech mění na společnost FIXED.zone a.s. a oficiálně vstupuje na pražskou burzu Start.<\/p>\n\n<p>Exportní oddělení začíná otevírat nové trhy.<\/p>\n\n<p>Nový web FIXED.zone.<\/p>"
+            "description": "<p>RECALL s.r.o. se po dvaceti úspěšných letech mění na společnost FIXED.zone a.s. a oficiálně vstupuje na pražskou burzu Start.</p>\n\n<p>Exportní oddělení začíná otevírat nové trhy.</p>\n\n<p>Nový web FIXED.zone.</p>"
           }
         },
         "timeline_block_RM6EpU": {
@@ -678,7 +678,7 @@
             "year": 2022,
             "title": "Brand boosting",
             "link_text": "Ukaž mi více",
-            "description": "<p>Prošli jsme programem na posílení komunikace značky FIXED.<\/p>\n\n<p>Byla nastavena strategie komunikace, pilíře prezentace značky a jednotná vizuální identita. Připravili jsme a spustili první komunikační kampaň orientovanou na koncové zákazníky a začali rozšiřovat jednotnou identitu do všech částí komunikačního mixu od balení produktů, přes kampaně, průběžnou komunikaci na sociálních sítích až po PR.<\/p>"
+            "description": "<p>Prošli jsme programem na posílení komunikace značky FIXED.</p>\n\n<p>Byla nastavena strategie komunikace, pilíře prezentace značky a jednotná vizuální identita. Připravili jsme a spustili první komunikační kampaň orientovanou na koncové zákazníky a začali rozšiřovat jednotnou identitu do všech částí komunikačního mixu od balení produktů, přes kampaně, průběžnou komunikaci na sociálních sítích až po PR.</p>"
           }
         },
         "timeline_block_8qttDJ": {
@@ -687,7 +687,7 @@
             "year": 2023,
             "title": "GRS certifikace",
             "link_text": "Ukaž mi více",
-            "description": "<p>V rámci našeho závazku a přípravy k plnění cílů ESG jsme prošli první certifikací GRS. Global Recycled Standard dává jednotný pohled a požadavky na firemní procesy a práci s produkty.<\/p>\n\n<p>Koncem září jsme obdrželi GRS certifikát.<\/p>"
+            "description": "<p>V rámci našeho závazku a přípravy k plnění cílů ESG jsme prošli první certifikací GRS. Global Recycled Standard dává jednotný pohled a požadavky na firemní procesy a práci s produkty.</p>\n\n<p>Koncem září jsme obdrželi GRS certifikát.</p>"
           }
         },
         "timeline_block_hwUBEr": {
@@ -738,9 +738,7 @@
     },
     "graph_wrK7F9": {
       "type": "graph",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "heading1": "Vývoj obratu",
         "description1": "Celkový obrat v Kč",
@@ -754,12 +752,12 @@
         "column_yCyFpe": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/investorske_centrum_obdelnik.jpg",
+            "image": "shopify://shop_images/investorske_centrum_obdelnik.jpg",
             "icon": "check",
             "title": "INVESTORSKÉ CENTRUM",
-            "text": "<p>Zde naleznete informace o našich finančních výsledcích a další zprávy týkající se hospodaření naší firmy<\/p>",
+            "text": "<p>Zde naleznete informace o našich finančních výsledcích a další zprávy týkající se hospodaření naší firmy</p>",
             "link_label": "NAVŠTIVTE INVESTORSKÉ CENTRUM",
-            "link": "shopify:\/\/pages\/investorske-centrum",
+            "link": "shopify://pages/investorske-centrum",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -772,12 +770,12 @@
         "column_9Kbmbi": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/medialni_centrum_obdelnik_01186230-2ead-4c11-a8f3-bb895c869ae0.jpg",
+            "image": "shopify://shop_images/medialni_centrum_obdelnik_01186230-2ead-4c11-a8f3-bb895c869ae0.jpg",
             "icon": "none",
             "title": "MEDIÁLNÍ CENTRUM",
-            "text": "<p>Stáhněte si naše loga, obrázky produktů či další materiály jako jsou tiskové zprávy apod.<\/p>",
+            "text": "<p>Stáhněte si naše loga, obrázky produktů či další materiály jako jsou tiskové zprávy apod.</p>",
             "link_label": "NAVŠTIVTE MEDIÁLNÍ CENTRUM",
-            "link": "shopify:\/\/pages\/pro-media",
+            "link": "shopify://pages/pro-media",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -790,12 +788,12 @@
         "column_jfXPbR": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/udrzitelnost_obdelnik.jpg",
+            "image": "shopify://shop_images/udrzitelnost_obdelnik.jpg",
             "icon": "check",
             "title": "UDRŽITELNOST - RELEAF",
-            "text": "<p>Produkty a projekty pro udržitelnou budoucnost.<\/p>",
+            "text": "<p>Produkty a projekty pro udržitelnou budoucnost.</p>",
             "link_label": "PROZKOUMAT",
-            "link": "shopify:\/\/pages\/releaf",
+            "link": "shopify://pages/releaf",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -808,12 +806,12 @@
         "column_qAcxGh": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/blog_obdelnik_f4c952d7-fee6-4de1-8f28-4fc1bcacf279.jpg",
+            "image": "shopify://shop_images/blog_obdelnik_f4c952d7-fee6-4de1-8f28-4fc1bcacf279.jpg",
             "icon": "check",
             "title": "BLOG",
-            "text": "<p>Nahlédněte pod pokličku FIXED.<\/p>",
+            "text": "<p>Nahlédněte pod pokličku FIXED.</p>",
             "link_label": "NAVŠTIVTE BLOG",
-            "link": "shopify:\/\/blogs\/news",
+            "link": "shopify://blogs/news",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -826,12 +824,12 @@
         "column_Lt8Ctd": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/podpora_obdelnik.jpg",
+            "image": "shopify://shop_images/podpora_obdelnik.jpg",
             "icon": "check",
             "title": "PODPORA",
-            "text": "<p>Často kladené dotazy, návody a kontaktní formulář, vše na jednom místě.<\/p>",
+            "text": "<p>Často kladené dotazy, návody a kontaktní formulář, vše na jednom místě.</p>",
             "link_label": "NAVŠTIVTE FIXED PODPORU",
-            "link": "shopify:\/\/pages\/podpora",
+            "link": "shopify://pages/podpora",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -844,12 +842,12 @@
         "column_Jghrea": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/career_obdelnik.jpg",
+            "image": "shopify://shop_images/career_obdelnik.jpg",
             "icon": "check",
             "title": "KARIÉRA",
-            "text": "<p>Připoj se do našeho týmu, prohlédni si aktuální volné pozice, nebo napiš jen tak.<\/p>",
+            "text": "<p>Připoj se do našeho týmu, prohlédni si aktuální volné pozice, nebo napiš jen tak.</p>",
             "link_label": "NAVŠTIVTE FIXED HR",
-            "link": "https:\/\/www.welcometothejungle.com\/cs\/companies\/fixed\/jobs",
+            "link": "https://www.welcometothejungle.com/cs/companies/fixed/jobs",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
@@ -900,6 +898,28 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "featured_blog_N366PE": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "title": "Blog posts",
+        "heading_size": "h1",
+        "blog": "fixed-r-evolution",
+        "post_limit": 3,
+        "image_height": "medium",
+        "show_view_all": true,
+        "columns_desktop": 3,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "blog_card_text_alignment": "left",
+        "blog_card_color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -913,6 +933,7 @@
     "multicolumn_MayPfc",
     "timeline_ccWkJE",
     "graph_wrK7F9",
-    "multicolumn_ADgaBQ"
+    "multicolumn_ADgaBQ",
+    "featured_blog_N366PE"
   ]
 }
