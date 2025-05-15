@@ -103,7 +103,7 @@
         "pagination_style": "more",
         "preload_first_image": true,
         "image_ratio": "portrait",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": true,
         "include_collection_in_url": true,
