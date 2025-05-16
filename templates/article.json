@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -25,8 +34,7 @@
         },
         "content": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         },
         "52a4e104-b836-428d-baf7-c7c42f1f6e99": {
           "type": "tags",
@@ -42,13 +50,11 @@
         },
         "4f3cfd4c-a6c9-413d-b4d5-a106526d1ef2": {
           "type": "previous_next_posts",
-          "settings": {
-          }
+          "settings": {}
         },
         "debaec65-1a3d-439e-932f-35484926a006": {
           "type": "author_details",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -59,21 +65,64 @@
         "4f3cfd4c-a6c9-413d-b4d5-a106526d1ef2",
         "debaec65-1a3d-439e-932f-35484926a006"
       ],
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     },
     "26cd1575-e824-4144-9543-04abbaca517c": {
       "type": "spacer",
       "settings": {
         "height": 40
       }
+    },
+    "newsletter_rGGwPG": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_wgTq94": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_MhLF3P": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+          }
+        },
+        "email_form_CefB43": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_wgTq94",
+        "paragraph_MhLF3P",
+        "email_form_CefB43"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#fff",
+        "colors_input": "#64748B",
+        "overlay_color": "#1E40AF",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "26cd1575-e824-4144-9543-04abbaca517c"
+    "26cd1575-e824-4144-9543-04abbaca517c",
+    "newsletter_rGGwPG"
   ]
 }
