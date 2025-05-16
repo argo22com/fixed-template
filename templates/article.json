@@ -87,7 +87,7 @@
         "paragraph_MhLF3P": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+            "text": "<p>Přidejte se k naší komunitě ať už vám žádné novinky neutečou!<br/>Přečtěte si naše <a href=\"/pages/contact\" title=\"Kontakt\">zásady ochrany osobních údajů</a>. </p>"
           }
         },
         "email_form_CefB43": {
@@ -111,9 +111,9 @@
         "enable_section_box_layout": false,
         "color_scheme": "",
         "enable_parallax_scrolling_effect": true,
-        "colors_text": "#fff",
-        "colors_input": "#64748B",
-        "overlay_color": "#1E40AF",
+        "colors_text": "#ffffff",
+        "colors_input": "#64748b",
+        "overlay_color": "#1e40af",
         "mobile_content_alignment": "left",
         "padding_top": 40,
         "padding_bottom": 52
