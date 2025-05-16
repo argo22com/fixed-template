@@ -12,6 +12,10 @@
     "cart": {
       "type": "main-cart",
       "blocks": {
+        "free_shipping_bar_jKQU8H": {
+          "type": "free-shipping-bar",
+          "settings": {}
+        },
         "subtotal": {
           "type": "subtotal",
           "settings": {}
@@ -19,16 +23,12 @@
         "buttons": {
           "type": "buttons",
           "settings": {}
-        },
-        "free_shipping_bar_jKQU8H": {
-          "type": "free-shipping-bar",
-          "settings": {}
         }
       },
       "block_order": [
+        "free_shipping_bar_jKQU8H",
         "subtotal",
-        "buttons",
-        "free_shipping_bar_jKQU8H"
+        "buttons"
       ],
       "settings": {
         "show_vendor": true,
