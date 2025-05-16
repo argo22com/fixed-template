@@ -80,7 +80,7 @@
         "filter_type": "vertical",
         "filter_include_group_name": true,
         "enable_sorting": true,
-        "categories_filter": "customer-account-main-menu",
+        "categories_filter": "",
         "categories_filter_type": "dropdown",
         "filter_collapse": "expand",
         "show_collection_description": true,
