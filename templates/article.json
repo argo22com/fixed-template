@@ -113,8 +113,8 @@
         "background_image_section": "shopify://shop_images/bg.jpg",
         "enable_parallax_scrolling_effect": true,
         "colors_text": "#ffffff",
-        "colors_input": "#64748b",
-        "overlay_color": "#1e40af",
+        "colors_input": "#000",
+        "overlay_color": "#00a9e0",
         "mobile_content_alignment": "left",
         "padding_top": 40,
         "padding_bottom": 52

@@ -509,58 +509,10 @@
         "change_slides_speed": 7,
         "color_scheme": "scheme-bcfa08f7-5852-4351-8180-ec2418e795ce"
       }
-    },
-    "newsletter_BnKXE7": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_T988dH": {
-          "type": "heading",
-          "settings": {
-            "heading": "Přihlašte se k odběru novinek",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_AjGf46": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Přidejte se k naší komunitě ať už vám žádné novinky neutečou!<br/>Přečtěte si naše <a href=\"/pages/contact\" title=\"Kontakt\">zásady ochrany osobních údajů</a>. </p>"
-          }
-        },
-        "email_form_jBwejH": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading_T988dH",
-        "paragraph_AjGf46",
-        "email_form_jBwejH"
-      ],
-      "disabled": true,
-      "name": "t:sections.newsletter.presets.name",
-      "settings": {
-        "grid_layout": "stretched_grid",
-        "height": "small",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "background_image_section": "shopify://shop_images/bg.jpg",
-        "enable_parallax_scrolling_effect": true,
-        "colors_text": "#fff",
-        "colors_input": "#64748B",
-        "overlay_color": "#00a9e0",
-        "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "header",
-    "announcement_bar_prdjQa",
-    "newsletter_BnKXE7"
+    "announcement_bar_prdjQa"
   ]
 }
