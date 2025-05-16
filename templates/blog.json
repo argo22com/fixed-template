@@ -70,7 +70,7 @@
         "color_scheme": "background-2",
         "background_image_section": "shopify://shop_images/bg.jpg",
         "enable_parallax_scrolling_effect": true,
-        "colors_text": "#fff",
+        "colors_text": "#ffffff",
         "colors_input": "#000000",
         "overlay_color": "#00a9e0",
         "mobile_content_alignment": "left",
