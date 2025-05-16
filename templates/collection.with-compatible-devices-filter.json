@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -38,71 +38,33 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
-        "b956e729-3f73-41ea-8f6f-4162743c81b7": {
-          "type": "category_filter_icon",
+        "promotion_tile_tnJA7W": {
+          "type": "promotion_tile",
           "settings": {
-            "trigger": "Computers & tablets",
-            "icon": "computers"
-          }
-        },
-        "35ce6bc3-b36c-404c-9cd4-aa917dfe7802": {
-          "type": "category_filter_icon",
-          "settings": {
-            "trigger": "Cellphones & accessories",
-            "icon": "cellphone"
-          }
-        },
-        "4ea7a827-8579-4c44-ae4c-37eb6fdcb9cc": {
-          "type": "category_filter_icon",
-          "settings": {
-            "trigger": "Cameras, camcorders",
-            "icon": "camera"
-          }
-        },
-        "54ca538a-6880-4ba5-96a8-07839008ca90": {
-          "type": "category_filter_icon",
-          "settings": {
-            "trigger": "Others",
-            "icon": "newspaper"
-          }
-        },
-        "category_filter_icon_k6hrGf": {
-          "type": "category_filter_icon",
-          "settings": {
-            "trigger": "",
-            "icon": "computers"
-          }
-        },
-        "category_filter_icon_fqwJyL": {
-          "type": "category_filter_icon",
-          "settings": {
-            "trigger": "",
-            "icon": "computers"
-          }
-        },
-        "category_filter_icon_BQfNEa": {
-          "type": "category_filter_icon",
-          "settings": {
-            "trigger": "",
-            "icon": "computers"
+            "position_in_grid": 3,
+            "image": "shopify://shop_images/FIXPUM-1591-TR-PRODUCT-1.jpg",
+            "heading": "Boží pouzdra od FIXED s Magsafe",
+            "button_label": "Vybrat si",
+            "link": "shopify://collections/magsafe-nabijecky",
+            "enable_parallax_scrolling_effect": true,
+            "content_position": "end",
+            "text_alignment": "left",
+            "keep_ltr_content_direction": false,
+            "colors_heading": "#ffffff",
+            "colors_button_label": "#0a0a0a",
+            "colors_button_background": "#ffffff",
+            "colors_overlay": "#000000"
           }
         }
       },
       "block_order": [
-        "b956e729-3f73-41ea-8f6f-4162743c81b7",
-        "35ce6bc3-b36c-404c-9cd4-aa917dfe7802",
-        "4ea7a827-8579-4c44-ae4c-37eb6fdcb9cc",
-        "54ca538a-6880-4ba5-96a8-07839008ca90",
-        "category_filter_icon_k6hrGf",
-        "category_filter_icon_fqwJyL",
-        "category_filter_icon_BQfNEa"
+        "promotion_tile_tnJA7W"
       ],
       "settings": {
-        "show_compatible_devices_filters": true,
         "products_per_page": 28,
         "columns_desktop": 4,
         "pagination_style": "more",
-        "preload_first_image": true,
+        "preload_first_image": false,
         "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -111,6 +73,7 @@
         "enable_quick_add": true,
         "enable_compare": true,
         "enable_quick_view": true,
+        "show_compatible_devices_filters": true,
         "show_color_swatches": true,
         "color_swatches_style": "custom",
         "enable_filtering": true,
@@ -128,8 +91,8 @@
         "read_more_button": "Read more",
         "columns_tablet": "3",
         "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 44
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     }
   },
