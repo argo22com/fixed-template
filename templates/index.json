@@ -216,7 +216,7 @@
         "auto_rotate": true,
         "change_slides_speed": 7,
         "enable_pagination_desktop": false,
-        "enable_navigation_desktop": false,
+        "enable_navigation_desktop": true,
         "preload": false,
         "show_text_below": false,
         "enable_pagination_mobile": true,
