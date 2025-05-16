@@ -54,6 +54,7 @@
         },
         "debaec65-1a3d-439e-932f-35484926a006": {
           "type": "author_details",
+          "disabled": true,
           "settings": {}
         }
       },
@@ -113,7 +114,7 @@
         "background_image_section": "shopify://shop_images/bg.jpg",
         "enable_parallax_scrolling_effect": true,
         "colors_text": "#ffffff",
-        "colors_input": "#000",
+        "colors_input": "#000000",
         "overlay_color": "#00a9e0",
         "mobile_content_alignment": "left",
         "padding_top": 40,
