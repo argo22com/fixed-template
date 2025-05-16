@@ -536,6 +536,7 @@
         "paragraph_AjGf46",
         "email_form_jBwejH"
       ],
+      "disabled": true,
       "name": "t:sections.newsletter.presets.name",
       "settings": {
         "grid_layout": "stretched_grid",
