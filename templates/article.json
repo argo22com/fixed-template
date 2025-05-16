@@ -110,6 +110,7 @@
         "desktop_content_alignment": "center",
         "enable_section_box_layout": false,
         "color_scheme": "",
+        "background_image_section": "shopify://shop_images/bg.jpg",
         "enable_parallax_scrolling_effect": true,
         "colors_text": "#ffffff",
         "colors_input": "#64748b",
