@@ -94,10 +94,90 @@
         "padding_top": 24,
         "padding_bottom": 24
       }
+    },
+    "text_icons_TqghdA": {
+      "type": "text-icons",
+      "blocks": {
+        "text_icon_CGLVbV": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "calendar",
+            "title": "",
+            "subheading": "první důvod",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_tAUV7T": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "document_remove",
+            "title": "",
+            "subheading": "druhej důvod",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_gBBtFQ": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "save",
+            "title": "",
+            "subheading": "třetí důvod",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_fEcx3k": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "support",
+            "title": "",
+            "subheading": "čtvrtej důvod",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_icon_CGLVbV",
+        "text_icon_tAUV7T",
+        "text_icon_gBBtFQ",
+        "text_icon_fEcx3k"
+      ],
+      "name": "t:sections.text-icons.presets.name",
+      "settings": {
+        "title": "Proč nakupovat u nás",
+        "subtitle": "",
+        "heading_size": "h2",
+        "icon_width_desktop": 21,
+        "text_position": "bottom",
+        "enable_heading_in_box": false,
+        "columns_desktop": 4,
+        "columns_tablet": 4,
+        "auto_fit": false,
+        "column_alignment": "center",
+        "highlight_icon": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
+        "border_width": 1,
+        "border_opacity": 0,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "square",
+        "blur_background": false,
+        "columns_mobile": "1",
+        "icon_width_mobile": 30,
+        "border_spacing_mobile": 0,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "text_icons_TqghdA"
   ]
 }
