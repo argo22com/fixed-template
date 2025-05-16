@@ -501,10 +501,32 @@
         "change_slides_speed": 7,
         "color_scheme": "scheme-bcfa08f7-5852-4351-8180-ec2418e795ce"
       }
+    },
+    "announcement_bar_CRxM6j": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_NNJtDn": {
+          "type": "announcement",
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_NNJtDn"
+      ],
+      "name": "t:sections.announcement-bar.presets.name",
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "color_scheme": ""
+      }
     }
   },
   "order": [
     "header",
-    "announcement_bar_prdjQa"
+    "announcement_bar_prdjQa",
+    "announcement_bar_CRxM6j"
   ]
 }
