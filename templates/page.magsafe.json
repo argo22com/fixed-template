@@ -439,12 +439,12 @@
     },
     "video_Ajgxtb": {
       "type": "video",
-      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "title": "",
         "subtitle": "",
         "heading_size": "h2",
+        "cover_image": "shopify://shop_images/FIXSN-M_v2_logo.jpg",
         "video_url": "https://www.youtube.com/watch?v=g6rnTwi5T3Y",
         "description": "",
         "autoplay": false,
