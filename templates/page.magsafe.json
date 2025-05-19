@@ -437,6 +437,26 @@
         "padding_bottom": 36
       }
     },
+    "video_Ajgxtb": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h2",
+        "video_url": "https://www.youtube.com/watch?v=g6rnTwi5T3Y",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection_Jbdayq": {
       "type": "featured-collection",
       "settings": {
@@ -845,6 +865,7 @@
     "image_with_text_x39Mgh",
     "image_with_text_bXVgiV",
     "before_after_image_slider_9zCyyR",
+    "video_Ajgxtb",
     "featured_collection_Jbdayq",
     "multicolumn_XKCb7x",
     "rich_text_akQrQY",
