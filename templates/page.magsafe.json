@@ -439,6 +439,7 @@
     },
     "video_Ajgxtb": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "title": "",
