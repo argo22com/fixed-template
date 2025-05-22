@@ -33,13 +33,18 @@
             "page": "tabulka-velikosti-univerzalni-pouzdra"
           }
         },
-        "collapsible_tab_4dwDAt": {
-          "type": "collapsible_tab",
+        "text_TL7xaD": {
+          "type": "text",
           "settings": {
-            "heading": "Krátký popisek",
-            "icon": "check",
-            "content": "<p>{{ product.metafields.custom.kr_tk_popisek | metafield_tag }}</p>",
-            "page": ""
+            "icon": "none",
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "text_in_multi_line_enwE7B": {
+          "type": "text_in_multi_line",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.kr_tk_popisek | metafield_tag }}</p>"
           }
         },
         "price": {
@@ -100,7 +105,8 @@
         "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "popup_XDycdy",
-        "collapsible_tab_4dwDAt",
+        "text_TL7xaD",
+        "text_in_multi_line_enwE7B",
         "price",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
@@ -335,7 +341,7 @@
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": false,
-            "card_color_text": "#000",
+            "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#ffffff",
@@ -353,7 +359,7 @@
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": false,
-            "card_color_text": "#000",
+            "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#ffffff",
@@ -371,7 +377,7 @@
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": false,
-            "card_color_text": "#000",
+            "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#ffffff",
             "card_color_background": "#ffffff",
