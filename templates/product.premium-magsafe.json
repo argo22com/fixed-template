@@ -134,6 +134,32 @@
         "padding_bottom": 40
       }
     },
+    "rich_text_KhfnnF": {
+      "type": "rich-text",
+      "blocks": {
+        "text_zf4JP7": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Aramidová ochrana - </strong>Materiál s vlastnostmi kevlaru odolá nárazům i poškrábání.</p><p><strong>Ultratenké provedení - </strong>Pevnost bez zbytečné hmotnosti – jen 1,2 mm.</p><p><strong>MagSafe kompatibilita - </strong>Integrované magnety pro nabíjení a příslušenství.</p><p><strong>Ochrana fotoaparátu - </strong>Zvýšený kovový rámeček chrání čočky před poškozením.</p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_zf4JP7"
+      ],
+      "custom_css": [],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_with_text_rVJmD8": {
       "type": "image-with-text",
       "blocks": {
@@ -307,24 +333,59 @@
         "overlay_color": "#1e40af"
       }
     },
-    "video_GJcT4J": {
-      "type": "video",
+    "image_with_text_JcxmMg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_VmqANq": {
+          "type": "heading",
+          "settings": {
+            "heading": "MagSafe a Qi2 kompatibilita",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_TWDGPr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Díky integrovaným magnetům je kryt FIXED MagVelar plně kompatibilní s MagSafe i novým standardem Qi2. Zaručuje pevné uchycení na bezdrátových nabíječkách i příslušenství a bezproblémové nabíjení bez nutnosti sundávat kryt.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VmqANq",
+        "text_TWDGPr"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "title": "Video",
-        "subtitle": "",
-        "heading_size": "h1",
-        "video_hosted": "{{ product.metafields.custom.video.value }}",
-        "video_url": "",
-        "description": "",
-        "autoplay": false,
-        "enable_controls": false,
-        "enable_video_looping": true,
-        "full_width": false,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/FIXVM-LS3.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "multicolumn_7bqrwM": {
@@ -423,6 +484,26 @@
         "padding_bottom": 36
       }
     },
+    "video_GJcT4J": {
+      "type": "video",
+      "settings": {
+        "title": "Video",
+        "subtitle": "",
+        "heading_size": "h1",
+        "video_hosted": "{{ product.metafields.custom.video.value }}",
+        "video_url": "",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main_product_tabs_XdRTBE": {
       "type": "main-product-tabs",
       "blocks": {
@@ -499,11 +580,13 @@
   },
   "order": [
     "main",
+    "rich_text_KhfnnF",
     "image_with_text_rVJmD8",
     "image_with_text_i6bPEB",
     "image_with_text_meHxRb",
-    "video_GJcT4J",
+    "image_with_text_JcxmMg",
     "multicolumn_7bqrwM",
+    "video_GJcT4J",
     "main_product_tabs_XdRTBE",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
