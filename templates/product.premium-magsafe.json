@@ -148,7 +148,6 @@
         "text_zf4JP7"
       ],
       "custom_css": [],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "large",
@@ -356,10 +355,9 @@
         "heading_VmqANq",
         "text_TWDGPr"
       ],
-      "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/FIXVM-LS3.jpg",
+        "image": "shopify://shop_images/FIXVM-APPLE.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -371,21 +369,21 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
-        "color_heading": "#000",
+        "color_heading": "#000000",
         "gradient_heading": "",
-        "color_text": "#000",
-        "color_highlight_text": "#DA2127",
-        "color_caption": "#000",
-        "color_countdown": "#000",
-        "color_icon": "#000",
-        "color_button_text": "#fff",
-        "color_button": "#000",
-        "background_container": "#fff",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
         "gradient_background_container": "",
-        "background_section": "#fff",
+        "background_section": "#ffffff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "multicolumn_7bqrwM": {
