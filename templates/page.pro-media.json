@@ -161,12 +161,12 @@
         "column_PTFjer": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Martin_Kubac.jpg",
+            "image": "shopify://shop_images/Jan_Plajner.jpg",
             "icon": "check",
             "title": "Kontakt pro média",
-            "text": "<h3><strong>Martin Kubáč</strong></h3><p>PR Manažer</p><p><a href=\"mailto:martin.kubac@fixed.zone\" target=\"_blank\">Martin.Kubac@fixed.zone</a></p>",
+            "text": "<h3><strong>Jan Plajner</strong></h3><p>Ředitel marketingu / CMO</p><p><a href=\"mailto:jan.plajner@fixed.zone\" target=\"_blank\" title=\"mailto:jan.plajner@fixed.zone\">Jan.Plajner@fixed.zone</a></p>",
             "link_label": "Linkedin",
-            "link": "https://www.linkedin.com/in/martinkubac/",
+            "link": "",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
