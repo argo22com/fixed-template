@@ -168,7 +168,7 @@
             "link_label": "Linkedin",
             "link": "https://www.linkedin.com/in/janplajner/",
             "button_style": "link",
-            "button_open_new_tab": false,
+            "button_open_new_tab": true,
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
