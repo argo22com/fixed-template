@@ -166,7 +166,7 @@
             "title": "Kontakt pro média",
             "text": "<h3><strong>Jan Plajner</strong></h3><p>Ředitel marketingu / CMO</p><p><a href=\"mailto:jan.plajner@fixed.zone\" target=\"_blank\" title=\"mailto:jan.plajner@fixed.zone\">Jan.Plajner@fixed.zone</a></p>",
             "link_label": "Linkedin",
-            "link": "",
+            "link": "https://www.linkedin.com/in/janplajner/",
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
