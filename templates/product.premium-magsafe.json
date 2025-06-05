@@ -137,6 +137,13 @@
     "rich_text_KhfnnF": {
       "type": "rich-text",
       "blocks": {
+        "heading_T9RYnz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Proč zvolit pouzdro MagVelar?</p>",
+            "heading_size": "h2"
+          }
+        },
         "text_zf4JP7": {
           "type": "text",
           "settings": {
@@ -145,6 +152,7 @@
         }
       },
       "block_order": [
+        "heading_T9RYnz",
         "text_zf4JP7"
       ],
       "custom_css": [],
