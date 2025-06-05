@@ -392,28 +392,10 @@
         "column_43GUjk": {
           "type": "column",
           "settings": {
-            "image": "{{ product.metafields.custom.promotion_card_pictue_2.value }}",
+            "image": "shopify://shop_images/FIXVM.jpg",
             "icon": "check",
-            "title": "{{ product.metafields.custom.promotion_card_heading_2.value }}",
-            "text": "<p>{{ product.metafields.custom.promotion_card_content_2 | metafield_tag }}</p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false,
-            "card_color_text": "#000000",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#ffffff",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_iLPkgN": {
-          "type": "column",
-          "settings": {
-            "image": "{{ product.metafields.custom.promotion_card_picture_1.value }}",
-            "icon": "check",
-            "title": "{{ product.metafields.custom.promotion_card_heading_1.value }}",
-            "text": "<p>{{ product.metafields.custom.promotion_card_content_1 | metafield_tag }}</p>",
+            "title": "Prověřená odolnost",
+            "text": "<p>Každé pouzdro pečlivě testujeme, abychom měli jistotu, že opravdu ochrání – odolá pádům, nárazům i každodennímu opotřebení bez kompromisů.</p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -428,10 +410,10 @@
         "column_ihLtUe": {
           "type": "column",
           "settings": {
-            "image": "{{ product.metafields.custom.promotion_card_picture_3.value }}",
+            "image": "shopify://shop_images/FIXVM-1506-BK-PRODUCT-11.jpg",
             "icon": "check",
-            "title": "{{ product.metafields.custom.promotion_card_heading_3.value }}",
-            "text": "<p>{{ product.metafields.custom.promotion_card_content_3 | metafield_tag }}</p>",
+            "title": "Šetrné k přírodě",
+            "text": "<p>Balení je plně papírové, recyklovatelné a nese FSC® certifikaci – bez plastů, bez zbytečného odpadu, s ohledem na přírodu i budoucnost.</p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -442,16 +424,33 @@
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
+        },
+        "column_iLPkgN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/magvelar.4628_1.jpg",
+            "icon": "check",
+            "title": "Perfektně sedí",
+            "text": "<p>Pouzdro jsme navrhli přesně na míru konkrétnímu modelu telefonu – dokonale kopíruje jeho tvar a zajišťuje bezchybný přístup ke všem ovládacím prvkům, konektorům i fotoaparátu.<br/><br/></p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
         }
       },
       "block_order": [
         "column_43GUjk",
-        "column_iLPkgN",
-        "column_ihLtUe"
+        "column_ihLtUe",
+        "column_iLPkgN"
       ],
-      "disabled": true,
       "settings": {
-        "title": "",
+        "title": "Testováno FIXED",
         "subtitle": "",
         "heading_size": "h1",
         "media_type": "image",
@@ -558,7 +557,7 @@
         "subtitle": "",
         "heading_size": "h2",
         "full_width": false,
-        "color_scheme": "background-2",
+        "color_scheme": "scheme-23f306a8-68ab-4175-b71b-505bbda9b2ac",
         "padding_top": 40,
         "padding_bottom": 52
       }
