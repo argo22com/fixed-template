@@ -346,14 +346,24 @@
         "text_TWDGPr": {
           "type": "text",
           "settings": {
-            "text": "<p>Díky integrovaným magnetům je kryt FIXED MagVelar plně kompatibilní s MagSafe i novým standardem Qi2. Zaručuje pevné uchycení na bezdrátových nabíječkách i příslušenství a bezproblémové nabíjení bez nutnosti sundávat kryt.</p>",
+            "text": "<p>Díky integrovaným magnetům je kryt FIXED MagVelar plně kompatibilní s MagSafe i novým standardem Qi2.  Zaručuje pevné uchycení na bezdrátových nabíječkách i příslušenství a bezproblémové nabíjení bez nutnosti sundávat kryt.</p>",
             "text_style": "body"
+          }
+        },
+        "button_WYNxe4": {
+          "type": "button",
+          "settings": {
+            "button_label": "MagSafe i pro Android",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_VmqANq",
-        "text_TWDGPr"
+        "text_TWDGPr",
+        "button_WYNxe4"
       ],
       "settings": {
         "grid_layout": "grid",
