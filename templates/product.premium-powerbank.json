@@ -140,7 +140,7 @@
         "heading_T9RYnz": {
           "type": "heading",
           "settings": {
-            "heading": "<p><strong>Proč zvolit powerbanku Zen 10 Pro?</strong></p>",
+            "heading": "<p><strong>Proč zvolit powerbanku Zen 10 Pro?</strong></p><p></p>",
             "heading_size": "h2"
           }
         },
@@ -163,8 +163,8 @@
         "enable_section_box_layout": false,
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
     "image_with_text_rVJmD8": {
