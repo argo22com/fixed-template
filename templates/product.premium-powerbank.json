@@ -539,7 +539,7 @@
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "section_width": "grid",
-        "title": "",
+        "title": "Detaily produktu",
         "subtitle": "",
         "heading_size": "h1",
         "enable_section_box_layout": false,
