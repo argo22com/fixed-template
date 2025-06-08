@@ -140,14 +140,14 @@
         "heading_T9RYnz": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Proč zvolit pouzdro MagVelar?</p>",
+            "heading": "<p>Proč zvolit powerbanku MagVelar?</p>",
             "heading_size": "h2"
           }
         },
         "text_zf4JP7": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Aramidová ochrana - </strong>Materiál s vlastnostmi kevlaru odolá nárazům i poškrábání.</p><p><strong>Ultratenké provedení - </strong>Pevnost bez zbytečné hmotnosti – jen 1,2 mm.</p><p><strong>MagSafe kompatibilita - </strong>Integrované magnety pro nabíjení a další příslušenství.</p><p><strong>Ochrana fotoaparátu - </strong>Zvýšený kovový rámeček chrání čočky před poškozením.</p><p></p>"
+            "text": "<p><strong>Extra výkon</strong> – Podpora Power Delivery 3.0 a výkon až 30 W pro rychlé doplnění energie.<br/><br/><strong>Dva nabíjecí porty</strong> – USB-C a USB-A port pro současné nabíjení dvou zařízení.<br/><br/><strong>Chytrý displej</strong> – LCD displej s kapacitou baterie a výkonem každého portu.<br/><br/><strong>Dostatečná kapacita</strong> – 10 000 mAh pro nabíjení veškeré vaší elektroniky<br/><br/></p><p></p>"
           }
         }
       },
@@ -346,7 +346,7 @@
         "heading_VmqANq": {
           "type": "heading",
           "settings": {
-            "heading": "MagSafe a Qi2 kompatibilita",
+            "heading": "{{ product.metafields.custom.premium_headind_4.value }}",
             "heading_size": "h1",
             "enable_bold_heading": true
           }
@@ -354,28 +354,18 @@
         "text_TWDGPr": {
           "type": "text",
           "settings": {
-            "text": "<p>Díky integrovaným magnetům je kryt FIXED MagVelar plně kompatibilní s MagSafe i novým standardem Qi2.  Zaručuje pevné uchycení na bezdrátových nabíječkách i příslušenství a bezproblémové nabíjení bez nutnosti sundávat kryt.</p>",
+            "text": "<p>{{ product.metafields.custom.premium_content_4 | metafield_tag }}</p>",
             "text_style": "body"
-          }
-        },
-        "button_WYNxe4": {
-          "type": "button",
-          "settings": {
-            "button_label": "MagSafe i pro Android",
-            "button_link": "https://fixed.zone/blogs/news/jak-a-k-cemu-vyuzivat-technologii-magsafe-kdyz-mas-mobil-s-androidem",
-            "button_style": "solid",
-            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_VmqANq",
-        "text_TWDGPr",
-        "button_WYNxe4"
+        "text_TWDGPr"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/FIXVM-APPLE.jpg",
+        "image": "{{ product.metafields.custom.premium_picture_4.value }}",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -410,10 +400,10 @@
         "column_43GUjk": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/FIXVM.jpg",
+            "image": "shopify://shop_images/FIXZENP-10pro.2341_kopie.jpg",
             "icon": "check",
-            "title": "Prověřená odolnost",
-            "text": "<p>Každé pouzdro pečlivě testujeme, abychom měli jistotu, že opravdu ochrání – odolá pádům, nárazům i každodennímu opotřebení bez kompromisů.</p>",
+            "title": "Prověřená bezpečnost",
+            "text": "<p>Powerbanku Zen 10 Pro jsme před uvedením důkladně otestovali v reálných i extrémních podmínkách. Díky ochraně proti přepětí, přehřátí a zkratu se na ni můžete spolehnout i při každodenním používání.<br/></p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -430,7 +420,7 @@
           "settings": {
             "image": "shopify://shop_images/FIXVM-1506-BK-PRODUCT-11.jpg",
             "icon": "check",
-            "title": "Šetrné k přírodě",
+            "title": "Ekologické balení",
             "text": "<p>Balení je plně papírové, recyklovatelné a nese FSC® certifikaci – bez plastů, bez zbytečného odpadu, s ohledem na přírodu i budoucnost.</p>",
             "link_label": "",
             "link": "",
@@ -446,10 +436,10 @@
         "column_iLPkgN": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/magvelar.4628_1.jpg",
+            "image": "shopify://shop_images/FIXZENP-10pro.2339_kopie.jpg",
             "icon": "check",
-            "title": "Perfektně sedí",
-            "text": "<p>Pouzdro jsme navrhli přesně na míru konkrétnímu modelu telefonu – dokonale kopíruje jeho tvar a zajišťuje bezchybný přístup ke všem ovládacím prvkům, konektorům i fotoaparátu.<br/><br/></p>",
+            "title": "Vlastní vývoj",
+            "text": "<p>Powerbanku Zen 10 Pro jsme navrhli od základu sami – od elektroniky až po konstrukci. Díky tomu jsme mohli přesně doladit výkon, funkce i rozměry podle skutečných potřeb uživatelů<br/><br/></p>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -468,7 +458,7 @@
         "column_iLPkgN"
       ],
       "settings": {
-        "title": "Testováno FIXED",
+        "title": "Design od FIXED",
         "subtitle": "",
         "heading_size": "h1",
         "media_type": "image",
