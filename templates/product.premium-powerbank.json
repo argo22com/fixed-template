@@ -516,51 +516,30 @@
         "collapsible_row_pCyT4f": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
+            "heading": "Vlastnosti produktu",
+            "icon": "tag",
+            "row_content": "<p>- kompaktní powerbanka s LCD displejem<br/>- kapacita: 10 000 mAh<br/>- porty: USB-C + USB-A<br/>- výkon 30 W s podporou rychlého nabíjení Power Delivery 3.0<br/>- umožňuje nabíjet dvě zařízení současně<br/>- LCD displej s procentním stavem baterie a výstupem jednotlivých portů<br/>- automatické spuštění nabíjení po připojení zařízení<br/>- rychlé dobíjení powerbanky USB-C portem s výkonem až 20 W<br/>- možnost dobíjení powerbanky i během současného nabíjení jiných zařízení<br/>- kompaktní rozměry<br/>- USB-C/USB-C kabel v balení<br/>- ochrana proti zkratu, přetížení a přehřátí<br/>- výrobek splňuje všechny zákonné a bezpečností normy EU<br/><br/></p>",
             "page": ""
           }
         },
         "collapsible_row_jjWnne": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_kecTWz": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_mQCdgW": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
+            "heading": "Technické detaily",
+            "icon": "tag",
+            "row_content": "<p>- kapacita: 10 000mAh/3.7V 37Wh<br/>- porty: USB-C a USB-A<br/>- LCD displej<br/>- výstup USB-C: 5V/3A, 9V/3A, 12V/2,5A, 15V/2A,PPS 3.3V-11V/3A, max 33W<br/>- vstup USB-C: 5V/3A, 9V/2.22A, 12V/1.67A, max 20W<br/>- výstup USB: 4.5V/5A, 5V/4.5A, 5V/3A, 9V/2A, 12V/1.5A, max 22.5W<br/>- celkový výkon: 5V/3A, max 15W<br/>- rozměry: 106 x 64 x 26 mm<br/>- váha: 239 g</p>",
             "page": ""
           }
         }
       },
       "block_order": [
         "collapsible_row_pCyT4f",
-        "collapsible_row_jjWnne",
-        "collapsible_row_kecTWz",
-        "collapsible_row_mQCdgW"
+        "collapsible_row_jjWnne"
       ],
-      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "section_width": "grid",
-        "title": "Collapsible content",
+        "title": "",
         "subtitle": "",
         "heading_size": "h1",
         "enable_section_box_layout": false,
