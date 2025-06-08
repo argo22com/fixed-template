@@ -525,7 +525,7 @@
         "collapsible_row_jjWnne": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Technické detaily",
+            "heading": "Technické specifikace",
             "icon": "tag",
             "row_content": "<p>- kapacita: 10 000mAh/3.7V 37Wh<br/>- porty: USB-C a USB-A<br/>- LCD displej<br/>- výstup USB-C: 5V/3A, 9V/3A, 12V/2,5A, 15V/2A,PPS 3.3V-11V/3A, max 33W<br/>- vstup USB-C: 5V/3A, 9V/2.22A, 12V/1.67A, max 20W<br/>- výstup USB: 4.5V/5A, 5V/4.5A, 5V/3A, 9V/2A, 12V/1.5A, max 22.5W<br/>- celkový výkon: 5V/3A, max 15W<br/>- rozměry: 106 x 64 x 26 mm<br/>- váha: 239 g</p>",
             "page": ""
