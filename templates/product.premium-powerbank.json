@@ -140,7 +140,7 @@
         "heading_T9RYnz": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Proč zvolit powerbanku Zen 10 Pro?</p>",
+            "heading": "<p><strong>Proč zvolit powerbanku Zen 10 Pro?</strong></p>",
             "heading_size": "h2"
           }
         },
@@ -174,7 +174,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ product.metafields.custom.premium_heading1.value }}",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
@@ -239,7 +239,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ product.metafields.custom.premium_heading_2.value }}",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
@@ -293,7 +293,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ product.metafields.custom.premium_heading_3.value }}",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
@@ -347,7 +347,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ product.metafields.custom.premium_headind_4.value }}",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
@@ -541,7 +541,7 @@
         "section_width": "grid",
         "title": "Detaily produktu",
         "subtitle": "",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "enable_section_box_layout": false,
         "color_scheme": "",
         "open_first_collapsible_row": false,
