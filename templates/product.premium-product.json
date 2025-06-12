@@ -33,13 +33,10 @@
             "page": "tabulka-velikosti-univerzalni-pouzdra"
           }
         },
-        "collapsible_tab_4dwDAt": {
-          "type": "collapsible_tab",
+        "text_in_multi_line_kUqjgD": {
+          "type": "text_in_multi_line",
           "settings": {
-            "heading": "Krátký popisek",
-            "icon": "check",
-            "content": "<p>{{ product.metafields.custom.kr_tk_popisek | metafield_tag }}</p>",
-            "page": ""
+            "text": "<p>{{ product.metafields.custom.kr_tk_popisek | metafield_tag }}</p>"
           }
         },
         "price": {
@@ -100,7 +97,7 @@
         "title",
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "popup_XDycdy",
-        "collapsible_tab_4dwDAt",
+        "text_in_multi_line_kUqjgD",
         "price",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
