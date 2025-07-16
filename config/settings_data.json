@@ -93,39 +93,6 @@
           "color_scheme": "background-1"
         }
       },
-      "cart-drawer": {
-        "type": "cart-drawer",
-        "blocks": {
-          "5680e29a-1672-451b-acab-6b4f2c068892": {
-            "type": "subtotal",
-            "settings": {}
-          },
-          "74e95a49-790a-40ea-af84-0a487b25dd72": {
-            "type": "buttons",
-            "settings": {
-              "show_view_cart_button": true
-            }
-          }
-        },
-        "block_order": [
-          "5680e29a-1672-451b-acab-6b4f2c068892",
-          "74e95a49-790a-40ea-af84-0a487b25dd72"
-        ],
-        "settings": {
-          "drawer_size": "small",
-          "image_ratio": "square",
-          "show_vendor": true,
-          "show_cart_note": true,
-          "show_shipping_calculator": true,
-          "show_free_shipping_bar": true,
-          "recommended_collection_list": [],
-          "collection_card_show_title": true,
-          "product_recommendations_enable": true,
-          "product_recommendations_heading": "Doporučené produkty",
-          "product_recommendations_limit": 5,
-          "product_recommendations_image_ratio": "square"
-        }
-      },
       "background-color-swatches": {
         "type": "background-color-swatches",
         "blocks": {
@@ -700,30 +667,9 @@
         "disabled": false,
         "settings": {}
       },
-      "319724205969189013": {
-        "type": "shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+      "1787840288555608609": {
+        "type": "shopify://apps/live-product-options/blocks/app-embed/88bfdf40-5e27-4962-a966-70c8d1e87757",
         "disabled": false,
-        "settings": {}
-      },
-      "2102808784413787648": {
-        "type": "shopify://apps/kb-back-in-stock/blocks/main-app-embed/147a6f7f-6771-4f9b-8dc6-c14e6b24f32c",
-        "disabled": false,
-        "settings": {}
-      },
-      "7870687481494312845": {
-        "type": "shopify://apps/wishlist-hero/blocks/app-embed/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
-        "disabled": false,
-        "settings": {
-          "customThemeName": "~",
-          "additionalWLButtonCssClasses": "",
-          "additionalWLCartBubbleCssClasses": "",
-          "extraHTMLToAppend": "<style> @media only screen and (max-width: 749px) {\n#wishlisthero-floating-launcher-container {display: none !important;}\n}</style>",
-          "disableAutomaticButtonAddition": false
-        }
-      },
-      "2127842402487706816": {
-        "type": "shopify://apps/spurit-discount-reminder/blocks/app-embed/cbf22c2a-9546-45b8-8db5-60582288cfde",
-        "disabled": true,
         "settings": {}
       }
     },
