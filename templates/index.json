@@ -15,6 +15,8 @@
         "slide_T3NJDj": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/magicke_leto_desktop_513A8142.png",
+            "mobile_image": "shopify://shop_images/magicke_leto_mobile.png",
             "badge_label": "",
             "heading": "Magnetické léto s FIXED",
             "text": "Držáky, kryty, powerbanky a další příslušenství pro bezstarostné léto.",
@@ -50,6 +52,8 @@
         "slide_AFmp8D": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/fixmro-bk_008_77dedba1-7823-4702-aecb-08e2e40f13c1.jpg",
+            "mobile_image": "shopify://shop_images/fixmro-bk_008_77dedba1-7823-4702-aecb-08e2e40f13c1.jpg",
             "badge_label": "",
             "heading": "Konfigurátor držáků",
             "text": "Sestav si držák přesně na míru do svého auta",
@@ -224,6 +228,41 @@
     },
     "17225355129c0ff813": {
       "type": "apps",
+      "blocks": {
+        "hulk_form_builder_form_block_H7Q4mi": {
+          "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+          "settings": {
+            "form_uuid": "",
+            "form_settings": false,
+            "font_color": "#000000",
+            "size": 14,
+            "input_background_color": "#ffffff",
+            "input_background_color_focus": "#f4dada",
+            "input_border_radius": 1,
+            "input_border_color": "#ebe9e9",
+            "input_border_color_focus": "#2d2727",
+            "input_font_color": "#3d3131",
+            "input_size": 14,
+            "border_color": "#121212",
+            "border_radius": 2,
+            "border": 1,
+            "fill_color": "#ebe9e9",
+            "padding": 35,
+            "form_width": 600,
+            "btn_text": "Submit",
+            "sub_btn_txt_color": "#f3f3f3",
+            "sub_btn_bg_color": "#3f3333",
+            "sub_btn_font_size": 14,
+            "sub_btn_bdr_color": "#ffffff",
+            "sub_btn_bdr_rad": 3,
+            "sub_btn_bdr_width": 1,
+            "fonts": "Times New Roman"
+          }
+        }
+      },
+      "block_order": [
+        "hulk_form_builder_form_block_H7Q4mi"
+      ],
       "settings": {
         "include_margins": true
       }
@@ -267,6 +306,7 @@
         "column_QxJR8a": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/FIXMA-LS1.jpg",
             "icon": "check",
             "title": "Konfigurátor držáků",
             "text": "<p>Sestav si držák přesně podle svých potřeb. Vyber si hlavu držáku, způsob jeho uchycení a zvol, zda má mít i funkci nabíjení. A získej držák, jaký potřebuješ.<br/></p>",
@@ -303,6 +343,7 @@
         "column_GJR9bJ": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/magicke_leto_mobile.png",
             "icon": "check",
             "title": "Magnetické příslušenství",
             "text": "<p>Pořiď si to nejmodernější a nejvychytanější příslušenství nezávisle na tom, jaký máš telefon. Powerbanky, nabíječky, selfie tyče i držáky do auta - to nejlepší jenom pro tebe.</p>",
@@ -385,6 +426,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "prislusenstvi-kompatibilni-s-magsafe",
+            "custom_image": "shopify://shop_images/kolekce5_835b509c-d072-4bcc-9bb1-62c954a3709c.jpg",
             "custom_title": "Magnetické příslušenství"
           }
         },
@@ -392,6 +434,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "lokatory-s-findmy",
+            "custom_image": "shopify://shop_images/kolekce2.jpg",
             "custom_title": "Chytré lokátory"
           }
         },
@@ -399,6 +442,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "bezdratove-nabijecky",
+            "custom_image": "shopify://shop_images/kolekce3_c2608871-fe82-457b-a948-8f16b1759638.jpg",
             "custom_title": "Bezdrátové nabíjení"
           }
         },
@@ -406,6 +450,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "skla-armor",
+            "custom_image": "shopify://shop_images/kolekce4.jpg",
             "custom_title": "Armor"
           }
         },
@@ -413,6 +458,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "konfiguratorove-produkty",
+            "custom_image": "shopify://shop_images/fixicq-flexxl-bk_001.jpg",
             "custom_title": "Konfigurátor držáků"
           }
         }
@@ -452,7 +498,7 @@
       "settings": {
         "title": "TOP produkty",
         "subtitle": "",
-        "collection": "audio",
+        "collection": "bestsellers",
         "heading_size": "h2",
         "products_to_show": 3,
         "columns_desktop": 3,
@@ -461,6 +507,7 @@
         "enable_desktop_slider": true,
         "enable_section_box_layout": false,
         "color_scheme": "",
+        "image": "shopify://shop_images/mix.1495.jpg",
         "image_position_desktop": "left",
         "image_height": "adapt_product_list",
         "image_height_mobile": "34",
@@ -486,6 +533,7 @@
         "text_overlay_image_TrcKUU": {
           "type": "text-overlay-image",
           "settings": {
+            "image": "shopify://shop_images/OCHRANA.1384.jpg",
             "link": "shopify://collections/ochrana",
             "keep_ltr": true,
             "text": "Pouzdra, tvrzená skla, folie...",
@@ -537,6 +585,7 @@
         "text_overlay_image_kzc9B8": {
           "type": "text-overlay-image",
           "settings": {
+            "image": "shopify://shop_images/nabijecky.1472.jpg",
             "link": "shopify://collections/nabijeni",
             "keep_ltr": false,
             "text": "Nabíječky, cestovní adaptéry, powerbanky, kabely...",
@@ -624,6 +673,7 @@
         "enable_desktop_slider": false,
         "enable_section_box_layout": false,
         "color_scheme": "",
+        "image": "shopify://shop_images/mix3.1460.jpg",
         "image_position_desktop": "right",
         "image_height": "adapt_product_list",
         "image_height_mobile": "34",
@@ -780,6 +830,7 @@
       ],
       "settings": {
         "grid_layout": "full_bleed",
+        "image": "shopify://shop_images/WTTJ_FIXEDZONE_2000-29.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
