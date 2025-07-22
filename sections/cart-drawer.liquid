@@ -165,8 +165,8 @@
                             {%- endif -%}
 
                             <a href="{{ item.url }}" class="cart-item__name h6 link link--text font-heading-bold">
-                              {% if item.product.variants.size == 1 %}
-                                {% assign title = item.product.title %}
+                              {% if item.product.metafields.product_texts.title %}
+                                {% assign title = item.product.metafields.product_texts.title %}
                               {% else %}
                                 {% assign title = item.variant.metafields.product_texts.title %}
                               {% endif %}
@@ -278,8 +278,8 @@
                                     name="plus"
                                     type="button"
                                   >
-                                    {% if product.variants.size == %}
-                                      {% assign title = product.title %}
+                                    {% if product.metafields.product_texts.title %}
+                                      {% assign title = product.metafields.product_texts.title %}
                                     {% else %}
                                       {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
                                     {% endif %}
@@ -348,7 +348,11 @@
                             role="cell"
                             headers="CartDrawer-ColumnTotal"
                           >
-                            {% assign price_with_vat = item.variant.metafields.product_texts.price_with_vat %}
+                            {% if item.product.metafields.product_texts.price_with_vat%}
+                              {% assign price_with_vat = item.product.metafields.product_texts.price_with_vat %}
+                            {% else %}
+                              {% assign price_with_vat = item.variant.metafields.product_texts.price_with_vat %}
+                            {% endif %}
 
                             <div class="cart-item__price-wrapper">
                               {% render 'price-with-vat',
