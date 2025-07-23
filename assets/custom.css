@@ -152,11 +152,11 @@
   .slider-component-full-width .slideshow__text>* {
     max-width: 75%;
   }
-  .product-grid .card-wrapper--product {
+  .grid__item .card-wrapper--product {
     border-color: #e6e6e6;
     padding: 10px;
   }
-  .product-grid .card-wrapper--product compare-add-button {
+  .grid__item .card-wrapper--product compare-add-button {
     position: absolute;
     top: 10px;
     right: 10px;
