@@ -126,6 +126,10 @@
 .newsletter__grid .newsletter__subheading.image-with-text__text.color-foreground.light {
   opacity: 1;
 }
+.newsletter__grid .newsletter__subheading.image-with-text__text.color-foreground.light.rte a {
+  opacity: 1;
+  color: #fff;
+}
 @media (max-width: 749px) {
   .slider-component-full-width .slideshow__controls {
     top: 50%;
@@ -147,5 +151,14 @@
   }
   .slider-component-full-width .slideshow__text>* {
     max-width: 75%;
+  }
+  .product-grid .card-wrapper--product {
+    border-color: #e6e6e6;
+    padding: 10px;
+  }
+  .product-grid .card-wrapper--product compare-add-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 }
