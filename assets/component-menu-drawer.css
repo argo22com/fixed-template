@@ -24,8 +24,7 @@
 menu-drawer > details[open] > summary::before {
   visibility: visible;
   opacity: 1;
-  transition: opacity 300ms ease,
-    visibility 300ms ease;
+  transition: opacity 100ms ease;
 }
 
 .menu-drawer {
@@ -51,7 +50,7 @@ menu-drawer > details[open] > summary::before {
 
 .js details[open] > .menu-drawer,
 .js details[open] > .menu-drawer__submenu {
-  transition: transform 500ms ease, visibility 300ms ease;
+  transition: transform 200ms ease;
 }
 
 .no-js details[open] > .menu-drawer,

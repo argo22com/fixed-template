@@ -123,3 +123,6 @@
   border: 1px solid;
   padding: .5em;
 }
+.newsletter__grid .newsletter__subheading.image-with-text__text.color-foreground.light {
+  opacity: 1;
+}
