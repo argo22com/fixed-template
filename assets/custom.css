@@ -153,12 +153,17 @@
     max-width: 75%;
   }
   .grid__item .card-wrapper--product {
-    border-color: #e6e6e6;
+    border: 1px solid #e6e6e6;
     padding: 10px;
+    box-sizing: border-box;
   }
   .grid__item .card-wrapper--product compare-add-button {
     position: absolute;
     top: 10px;
     right: 10px;
+  }
+  .grid__item .card-wrapper--product .badge--position-1 {
+    top: 0rem;
+    inset-inline-start: 0rem;
   }
 }
