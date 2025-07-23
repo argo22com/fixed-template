@@ -181,4 +181,7 @@
   .article-template__footer-share .share-button button span {
     display: none;
   }
+  .article-template__footer-share .share-button button svg {
+    fill: rgb(var(--color-foreground));
+  }
 }
