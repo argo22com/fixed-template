@@ -62,7 +62,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .back-button-menu {
   inset-inline-end: 1.5rem;
-  transition: opacity 300ms ease, visibility 300ms ease, transform 500ms ease;
+  transition: opacity 100ms ease, transform 200ms ease;
   z-index: 4;
 }
 

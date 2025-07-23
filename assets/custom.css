@@ -126,3 +126,26 @@
 .newsletter__grid .newsletter__subheading.image-with-text__text.color-foreground.light {
   opacity: 1;
 }
+@media (max-width: 749px) {
+  .slider-component-full-width .slideshow__controls {
+    top: 50%;
+    height: 0;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+  .slider-component-full-width button.slider__autoplay {
+    display: none;
+  }
+  .slider-component-full-width .slider-button--transparent {
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 4rem;
+    height: 4rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+  .slider-component-full-width .slideshow__text>* {
+    max-width: 75%;
+  }
+}
