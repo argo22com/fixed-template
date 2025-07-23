@@ -130,6 +130,9 @@
   opacity: 1;
   color: #fff;
 }
+.article-template__content.rte a {
+  color: #00A9E0;
+}
 @media (max-width: 749px) {
   .slider-component-full-width .slideshow__controls {
     top: 50%;
