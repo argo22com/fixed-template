@@ -169,16 +169,16 @@
     top: 0rem;
     inset-inline-start: 0rem;
   }
-  .article-card__footer {
+  .article-template__footer-share {
     flex-direction: row;
   }
-  .article-card__footer .share-button button{
+  .article-template__footer-share .share-button button{
     background-color: transparent;
     border: none;
     box-shadow: none;
     padding: .9rem;
   }
-  .article-card__footer .share-button button span {
+  .article-template__footer-share .share-button button span {
     display: none;
   }
 }
