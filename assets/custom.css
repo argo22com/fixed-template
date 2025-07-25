@@ -216,15 +216,20 @@
     background: #eee;
   }
   .blog-tags__list {
+    border-radius: 12px;
+    border: none!important;
+    background: none!important;
+    box-shadow: none!important;
     flex-wrap: nowrap;
-    overflow-x: auto;
     white-space: nowrap;
+    place-self: flex-start;
   }
-  .blog-tags__list::-webkit-scrollbar {
-    display: none;
-  }
-  .blog-tags__list {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  .mobile-tag-swip {
+    border-radius: 12px;
+    border: 1px solid rgb(var(--color-foreground), 0.05);
+    background: rgb(var(--color-background));
+    box-shadow: 0px 1px 2px 0px rgb(var(--color-foreground), 0.05), 0px 1px 3px 0px rgb(var(--color-foreground), 0.07);
+    overflow-x: scroll;
+    width:100%;
   }
 }

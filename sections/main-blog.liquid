@@ -85,6 +85,7 @@
     {%- render 'page-title', heading_title: blog.title -%}
     {%- if section.settings.show_tags and blog.all_tags.size > 0 -%}
       <div class="blog-tags page-width">
+      <div class="mobile-tag-swip">
         <ul class="list-unstyled flex flex-wrap justify-center align-center text-center blog-tags__list por">
           <li class="blog-tags__item">
             <a href="{{ blog.url }}" title="{{ 'blogs.article.tags_all' | t | escape }}" class="link {% unless current_tags %}underlined-link{% else %}link-effect-no-underline light{% endunless %} font-body-semi-bold lh1">
@@ -102,6 +103,7 @@
             </li>
           {% endfor %}
         </ul>
+      </div>
       </div>
     {%- endif -%}  
   </div>
