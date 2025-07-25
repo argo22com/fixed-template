@@ -22,7 +22,7 @@
         "2525f94e-add4-418e-b362-bd2bb35545fa": {
           "type": "rating",
           "settings": {
-            "show_if_no_reviews": true
+            "show_if_no_reviews": false
           }
         },
         "popup_XDycdy": {
@@ -97,12 +97,6 @@
             "button_label": "Přihodit do košíku",
             "image_ratio": "square"
           }
-        },
-        "live_product_options_app_block_iN8kFV": {
-          "type": "shopify://apps/live-product-options/blocks/app-block/88bfdf40-5e27-4962-a966-70c8d1e87757",
-          "settings": {
-            "product": "{{product}}"
-          }
         }
       },
       "block_order": [
@@ -113,8 +107,7 @@
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
-        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
-        "live_product_options_app_block_iN8kFV"
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
       ],
       "settings": {
         "section_width": "page-width",
