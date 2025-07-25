@@ -1,4 +1,4 @@
-{%-liquid
+{%- liquid
   case request.page_type
     when 'collection'
       assign image_height = settings.page_heading_collection_image_height
@@ -10,10 +10,25 @@
       assign image_height = settings.page_heading_other_image_height
   endcase
 -%}
+
 {%- assign is_cart_page = false -%}
 {%- if request.page_type == 'cart' -%}
   {%- assign is_cart_page = true -%}
 {%- endif -%}
+
+{%- liquid
+  assign breadcrumb_align_class = 'justify-' | append: settings.page_heading_alignment
+  assign show_breadcrumbs = false
+  assign show_breadcrumbs_mobile_only = false
+  if settings.enable_breadcrumns
+    if is_cart_page
+      assign show_breadcrumbs_mobile_only = true
+    else
+      assign show_breadcrumbs = true
+    endif
+  endif
+-%}
+
 <{% if banner_image != blank %}parallax-element{% else %}div{% endif %} class="db page-title {% if is_cart_page %} cart-page-title-banner{% endif %} por background-input color-{{ settings.page_heading_color_scheme }} isolate{% if banner_image != blank %} page-title--with-image{% if settings.page_heading_overlay_color != blank and settings.page_heading_overlay_color.alpha > 0 %} background-overlay{% endif %}{% endif %} overflow-hidden{% if settings.enable_appear_effect and banner_image != blank %} {% endif %}" data-speed="0.5" style="--speed: 0.5;"{% unless enable_parallax_scrolling_effect %} data-turn-off="true"{% endunless %}>
   {%- if banner_image != blank -%}
     <appear-animate-single class="parallax-inner w100 h100 db media media--background">
@@ -67,9 +82,9 @@
 {%- liquid
   assign breadcrumb_align_class = 'justify-' | append: settings.page_heading_alignment
 -%}
-{%- if settings.enable_breadcrumns and not is_cart_page -%}
+{%- if show_breadcrumbs -%}
   {%- render 'breadcrumbs', no_page_width: true, align_classes: breadcrumb_align_class, add_classes: 'margin-bottom-1rem' -%}
-{%- elsif settings.enable_breadcrumns and is_cart_page -%}
+{%- elsif show_breadcrumbs_mobile_only -%}
   <div class="hide-on-mobile">
     {%- render 'breadcrumbs', no_page_width: true, align_classes: breadcrumb_align_class, add_classes: 'margin-bottom-1rem' -%}
   </div>
