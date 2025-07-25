@@ -310,7 +310,7 @@
                                     aria-label="{{ 'products.product.quantity.input_label' | t: product: title | escape }}"
                                     data-index="{{ item.index | plus: 1 }}"
                                   >
-                                  <div class="quantity__buttons flex flex-column flex-grow-1">
+                                  <div class="quantity__buttons flex flex-column flex-grow-1 small-hide">
                                     <button
                                       class="quantity__button flex justify-center align-center no-js-hidden w100 color-foreground"
                                       name="plus"
@@ -532,11 +532,15 @@
           </div>
         {%- endif -%}
       </div>
-      {%- when 'free-shipping-bar' -%}
-      <div class="free-shipping-bar-mobile">
-          {%- render 'free-shipping-bar', wrapper_classes: 'cart__free-shipping-bar', no_background: true -%}
-      </div>              
-      {%- else -%}
+                                  
+      {% for block in section.blocks %}
+        {%- case block.type -%}
+          {%- when 'free-shipping-bar' -%}
+            <div class="free-shipping-bar-mobile">
+              {%- render 'free-shipping-bar', wrapper_classes: 'cart__free-shipping-bar', no_background: true -%}
+            </div>
+        {%- endcase -%}
+      {% endfor %}
 
       <div class="cart__footer cart-page__content__right por" id="main-cart-footer">
         <h2 class="cart__footer__title w100 margin0 font-heading-bold h3">{{ 'sections.cart.cart_totals' | t }}</h2>
@@ -623,11 +627,13 @@
                     </small>
                   </div>
                 </div>
+          
                 {%- when 'free-shipping-bar' -%}
                 <div class="free-shipping-bar-desktop">
                     {%- render 'free-shipping-bar', wrapper_classes: 'cart__free-shipping-bar', no_background: true -%}
                 </div>              
-                {%- else -%}
+                {%- else -%}             
+              
                 <div class="cart__ctas" {{ block.shopify_attributes }}>
                   <noscript>
                     <button type="submit" class="cart__update-button button button--secondary" form="cart">
