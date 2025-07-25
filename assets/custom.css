@@ -209,4 +209,17 @@
   .cart-item__quantity .quantity__buttons.small-hide {
     display: block !important;
   }
+  .article-tags li.article-tags__item {
+    line-height: 22px;
+    color: #808080;
+    font-size: 1.2rem;
+    background: #eee;
+  }
+  .blog-tags__list::-webkit-scrollbar {
+    display: none;
+  }
+  .blog-tags__list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
