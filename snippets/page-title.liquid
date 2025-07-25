@@ -10,7 +10,7 @@
       assign image_height = settings.page_heading_other_image_height
   endcase
 -%}
-<{% if banner_image != blank %}parallax-element{% else %}div{% endif %} class="db page-title por background-input color-{{ settings.page_heading_color_scheme }} isolate{% if banner_image != blank %} page-title--with-image{% if settings.page_heading_overlay_color != blank and settings.page_heading_overlay_color.alpha > 0 %} background-overlay{% endif %}{% endif %} overflow-hidden{% if settings.enable_appear_effect and banner_image != blank %} {% endif %}" data-speed="0.5" style="--speed: 0.5;"{% unless enable_parallax_scrolling_effect %} data-turn-off="true"{% endunless %}>
+<{% if banner_image != blank %}parallax-element{% else %}div{% endif %} class="db page-title {% if request.page_type == 'cart' %}cart-page-title-banner{% endif %} por background-input color-{{ settings.page_heading_color_scheme }} isolate{% if banner_image != blank %} page-title--with-image{% if settings.page_heading_overlay_color != blank and settings.page_heading_overlay_color.alpha > 0 %} background-overlay{% endif %}{% endif %} overflow-hidden{% if settings.enable_appear_effect and banner_image != blank %} {% endif %}" data-speed="0.5" style="--speed: 0.5;"{% unless enable_parallax_scrolling_effect %} data-turn-off="true"{% endunless %}>
   {%- if banner_image != blank -%}
     <appear-animate-single class="parallax-inner w100 h100 db media media--background">
       {%- capture sizes -%}
@@ -60,12 +60,17 @@
 
   <div class="page-title__text-wrapper">
     <div class="page-width">
-      {%- liquid
-        if settings.enable_breadcrumns
-          assign breadcrumb_align_class = 'justify-' | append: settings.page_heading_alignment
-          render 'breadcrumbs', no_page_width: true, align_classes: breadcrumb_align_class, add_classes: 'margin-bottom-1rem'
-        endif  
-      -%}
+{%- liquid
+  assign is_cart_page = request.page_type == 'cart'
+  assign breadcrumb_align_class = 'justify-' | append: settings.page_heading_alignment
+-%}
+{%- if settings.enable_breadcrumns and not is_cart_page -%}
+  {%- render 'breadcrumbs', no_page_width: true, align_classes: breadcrumb_align_class, add_classes: 'margin-bottom-1rem' -%}
+{%- elsif settings.enable_breadcrumns and is_cart_page -%}
+  <div class="hide-on-mobile">
+    {%- render 'breadcrumbs', no_page_width: true, align_classes: breadcrumb_align_class, add_classes: 'margin-bottom-1rem' -%}
+  </div>
+{%- endif -%}
 
       <h1 class="page-title__title {{ settings.page_heading_size }} {{ settings.page_heading_alignment }} margin0 font-heading-extra-bold">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>

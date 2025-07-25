@@ -63,7 +63,7 @@
     grid-row: 3;
   }
   .cart-item__quantity-wrapper .quantity {
-    --add-width: 5rem;
+    --add-width: 8rem;
   }
   .cart-item__quantity-wrapper .quantity__input {
     border-radius: var(--inputs-radius);

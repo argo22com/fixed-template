@@ -133,6 +133,12 @@
 .article-template__content.rte a {
   color: #00A9E0;
 }
+.free-shipping-bar-desktop {
+  display: block;
+}
+.free-shipping-bar-mobile {
+  display: none;
+}
 @media (max-width: 749px) {
   .slider-component-full-width .slideshow__controls {
     top: 50%;
@@ -183,5 +189,18 @@
   }
   .article-template__footer-share .share-button button svg {
     fill: rgb(var(--color-foreground));
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .page-title.cart-page-title-banner {
+    --page-title-height: 3rem;
+  }
+  .free-shipping-bar-desktop {
+    display: none;
+  }
+  .free-shipping-bar-mobile {
+    display: block;
+    margin-bottom: 20px;
   }
 }
