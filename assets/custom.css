@@ -203,4 +203,7 @@
     display: block;
     margin-bottom: 20px;
   }
+  button.WtpiW {
+    display: none!important
+  }
 }
