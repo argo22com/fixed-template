@@ -206,4 +206,7 @@
   button.WtpiW {
     display: none!important
   }
+  .cart-item__quantity .quantity__buttons.small-hide {
+    display: block !important;
+  }
 }
