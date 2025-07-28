@@ -294,7 +294,7 @@
     padding: 3rem 0!important;
   }
   .product__sale-box__footer {
-    gap: 0.5rem;
+    gap: 0.5rem!important;
     display: grid;
   }
 }
