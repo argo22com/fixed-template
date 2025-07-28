@@ -139,7 +139,7 @@
 .free-shipping-bar-mobile {
   display: none;
 }
-.product__info-container .share-button__button
+.product__info-container .share-button__button {
     color: rgb(var(--color-foreground), .7);
     box-shadow: none;
     background-color: transparent;
