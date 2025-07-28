@@ -215,6 +215,11 @@
     top: 10px;
     right: 10px;
   }
+@media (min-width: 990px) {
+    .card__quick-buttons {
+        position: static;
+    }
+}
 @media (max-width: 1544px) {
   .js .slideshow__text-wrapper {
     max-width: 85%;
