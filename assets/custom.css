@@ -197,6 +197,8 @@
     display: flex;
     justify-content: space-between;
     background-color: transparent;
+    border: none;
+    box-shadow: none;
   }
   .slider-component-full-width button.slider__autoplay {
     display: none;
