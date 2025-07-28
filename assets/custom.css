@@ -166,6 +166,17 @@
 .product__info-container #wishlisthero-product-page-button-container button:hover{
     color: rgb(var(--color-foreground), 1)!important;
 }
+.product__info-container .gw-button-widget.gw-button-widget-v2 {
+    background: none!important;
+    border: none!important;
+    box-shadow: none!important;
+    font-weight: 500!important;
+    color: rgb(var(--color-foreground), .7)!important;
+    font-size: 14px!important;
+}
+.product__info-container .gw-button-widget.gw-button-widget-v2:hover {
+    color: rgb(var(--color-foreground), 1)!important;
+}
 @media (max-width: 749px) {
   .slider-component-full-width .slideshow__controls {
     top: 50%;
