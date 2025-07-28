@@ -367,3 +367,12 @@ function pushSuccessMessage(content) {
 function pushErrorMessage(content) {
   pushMessage(content, 'error');
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const watchButton = document.querySelector(".gw-button-widget.gw-button-widget-v2.product-form__submit");
+  const targetElement = document.querySelector(".product__sale-box__footer-sep");
+
+  if (watchButton && targetElement) {
+    targetElement.insertAdjacentElement("afterend", watchButton);
+  }
+});
