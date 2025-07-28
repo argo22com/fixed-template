@@ -139,6 +139,37 @@
 .free-shipping-bar-mobile {
   display: none;
 }
+.product__info-container .share-button__button
+    color: rgb(var(--color-foreground), .7);
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.product__info-container #wishlisthero-product-page-button-container button{
+    background: none;
+    margin: 0px;
+    opacity: 0.9;
+    border: none;
+    line-height: normal;
+    height: 40px;
+    display: block;
+    padding: 0px;
+    text-align: left;
+    overflow: hidden;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    color: rgb(var(--color-foreground), .7);
+    box-shadow: none;
+}
+.product__info-container #wishlisthero-product-page-button-container button svg path {
+  fill: black;
+}
+.product__info-container .share-button__button:hover {
+    color: rgb(var(--color-foreground), 1);
+}
 @media (max-width: 749px) {
   .slider-component-full-width .slideshow__controls {
     top: 50%;
