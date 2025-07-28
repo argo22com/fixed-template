@@ -211,7 +211,7 @@
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   }
 @media (max-width: 1544px) {
-  .slider-component-full-width .slideshow__text>* {
+  .js .slideshow__text-wrapper {
     max-width: 80%;
   }
 }  
