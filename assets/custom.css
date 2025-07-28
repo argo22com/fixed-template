@@ -148,20 +148,10 @@
 }
 
 .product__info-container #wishlisthero-product-page-button-container button{
-    background: none;
-    margin: 0px;
-    opacity: 0.9;
-    border: none;
-    line-height: normal;
-    height: 40px;
-    display: block;
-    padding: 0px;
-    text-align: left;
-    overflow: hidden;
-    outline: none;
-    position: relative;
-    cursor: pointer;
-    color: rgb(var(--color-foreground), .7);
+    background: none!important;
+    border: none!important;
+    padding: 0px!important;
+    color: rgb(var(--color-foreground), .7)!important;
     box-shadow: none;
 }
 .product__info-container #wishlisthero-product-page-button-container button svg path {
@@ -172,6 +162,9 @@
 }
 .product__info-container .share-button__button:before, .product__info-container #wishlisthero-product-page-button-container button:before {
   display: none;
+}
+.product__info-container #wishlisthero-product-page-button-container button:hover{
+    color: rgb(var(--color-foreground), 1)!important;
 }
 @media (max-width: 749px) {
   .slider-component-full-width .slideshow__controls {
