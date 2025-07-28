@@ -1,1 +1,395 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"section_width":"grid","content_alignment":"left","color_scheme":"","padding_top":80,"padding_bottom":40}},"image_banner_xtbneD":{"type":"image-banner","blocks":{"heading_XeYxmG":{"type":"heading","settings":{"heading":"Konfigurátor","size":"h0"}},"text_hkRi8i":{"type":"text","settings":{"text":"Sestav si držák podle svého gusta","text_style":"subtitle"}}},"block_order":["heading_XeYxmG","text_hkRi8i"],"settings":{"layout":"full_bleed","image":"shopify:\/\/shop_images\/roll_desktop_banner_v2.jpg","image_overlay_opacity":0,"image_height":"medium","image_height_mobile":"medium-mobile","desktop_content_position":"middle-left","desktop_content_alignment":"center","keep_ltr":false,"hide_when_empty_image":false,"preload":false,"enable_parallax_scrolling_effect":false,"mobile_content_alignment":"center","show_text_below_image":true,"color_text":"#ffffff","gradient_heading_desktop":"","color_button_text_1":"#000000","color_button_1":"#ffffff","color_button_text_2":"#000000","color_button_2":"#ffffff","colors_badge_foreground":"#ffffff","colors_badge_background":"#f87171","color_countdown_foreground":"#000000","color_countdown_background":"#ffffff","color_text_mobile":"#ffffff","gradient_heading_mobile":"","color_button_text_1_mobile":"#000000","color_button_1_mobile":"#ffffff","color_button_text_2_mobile":"#000000","color_button_2_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","color_countdown_foreground_mobile":"#000000","color_countdown_background_mobile":"#ffffff","background_container_mobile":"#565656","gradient_background_container_mobile":"","padding_top":0,"padding_bottom":0}},"product_configurator_BMFbCT":{"type":"product-configurator","disabled":true,"settings":{}},"rich_text_dWXckk":{"type":"rich-text","blocks":{"heading_rMyJr8":{"type":"heading","settings":{"heading":"<h3><strong>4 snadné kroky k vlastnímu držáku na mobil<\/strong><\/h3>","heading_size":"h0"}},"text_Y9R7Pt":{"type":"text","settings":{"text":"<p>Proč se omezovat univerzálním řešením, když můžeš mít držák do auta vyrobený na míru svému mobilu? Pomocí konfigurátoru níže si ho navrhneš snadno a na pár kliknutí během 5 minut.<\/p>"}}},"block_order":["heading_rMyJr8","text_Y9R7Pt"],"settings":{"desktop_content_position":"center","desktop_content_width":"large","content_alignment":"center","enable_section_box_layout":false,"color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"image_with_text_UjPCyz":{"type":"image-with-text","blocks":{"heading_N8CpXh":{"type":"heading","settings":{"heading":"1. Vyber si hlavu držáku","heading_size":"h2","enable_bold_heading":true}},"text_xnJ6tx":{"type":"text","settings":{"text":"<p>V prvním kroku svému telefonu dokonale přizpůsobíš hlavu držáku. Hodí se ti spíš magnetické uchycení s MagSafe technologií, nebo mechanické s nabíjením? Na výběr máš i hlavu s jednoduchým mechanickým přichycením.<\/p><p>Hlavu můžeš vybírat nejen na základě jejích funkcí, ale i podle toho, jak ti designově padne do oka. Výběr je zkrátka 100% na tobě.<\/p>","text_style":"body"}}},"block_order":["heading_N8CpXh","text_xnJ6tx"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/config-side-01.jpg","height":"adapt","desktop_image_width":"small","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000000","gradient_heading":"","color_text":"#000000","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_icon":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"#ffffff","gradient_background_container":"","background_section":"#ffffff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"image_with_text_MUzzfc":{"type":"image-with-text","blocks":{"heading_JW7Xxj":{"type":"heading","settings":{"heading":"2. Zvol způsob uchycení","heading_size":"h2","enable_bold_heading":true}},"text_LgN74N":{"type":"text","settings":{"text":"<p>Dále si zvol způsob, jakým bude držák přichycený k autu. Výhoda je, že všechny hlavy jdou kombinovat s kterýmkoliv způsobem uchycení. Vybírej každopádně tak, ať máš mobil vždy na dosah ruky.<\/p><p>Vsaď na klasickou přísavku na sklo, extra dlouhou nohu držáku do dodávky nebo sáhni po úchytu do mřížky ventilace.<\/p>","text_style":"body"}}},"block_order":["heading_JW7Xxj","text_LgN74N"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/config-side-02.jpg","height":"adapt","desktop_image_width":"small","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000000","gradient_heading":"","color_text":"#000000","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_icon":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"#ffffff","gradient_background_container":"","background_section":"#ffffff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"image_with_text_t6gYAg":{"type":"image-with-text","blocks":{"heading_JyC6aT":{"type":"heading","settings":{"heading":"3. Prohlédni si výsledek ve 3D","heading_size":"h2","enable_bold_heading":true}},"text_XpH7fj":{"type":"text","settings":{"text":"<p>Že by sis vybral špatně? To nehrozí, protože ještě před odesláním si svůj vysněný držák prohlédneš pomocí 3D vizualizace. <\/p><p>Díky 3D náhledu výsledek uvidíš ze všech stran, doslova milimetr po milimetru. A když budeš chtít něco změnit? Tak se jednoduše vrátíš o krok zpět.<\/p>","text_style":"body"}}},"block_order":["heading_JyC6aT","text_XpH7fj"],"settings":{"grid_layout":"grid","height":"small","desktop_image_width":"small","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000000","gradient_heading":"","color_text":"#000000","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_icon":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"#ffffff","gradient_background_container":"","background_section":"#ffffff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"image_with_text_jDFQML":{"type":"image-with-text","blocks":{"heading_6hidTa":{"type":"heading","settings":{"heading":"4. Počkej, až ti držák přijde","heading_size":"h2","enable_bold_heading":true}},"text_b9e4Gd":{"type":"text","settings":{"text":"<p>Nic dalšího řešit nemusíš, zbytek je na nás. Nakonfigurovaný držák co nejdříve zabalíme do speciální krabičky a pošleme ho na cestu za tebou.<\/p><p>Až ti držák na mobil přijde, snadno ho nainstaluješ do auta. Pak už ti bude dlouhá léta sloužit.<\/p>","text_style":"body"}}},"block_order":["heading_6hidTa","text_b9e4Gd"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/konfigurator_box_cardboard_110x90x80mm-768x768.jpg","height":"small","desktop_image_width":"small","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000000","gradient_heading":"","color_text":"#000000","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_icon":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"#ffffff","gradient_background_container":"","background_section":"#ffffff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"rich_text_XTMjVU":{"type":"rich-text","blocks":{"button_8dQacE":{"type":"button","settings":{"button_label":"Začít konfigurovat","button_link":"shopify:\/\/pages\/konfigurator","button_style_1":"primary","button_open_new_tab_1":false,"button_label_2":"","button_link_2":"shopify:\/\/pages\/konfigurator","button_style_2":"secondary","button_open_new_tab_2":false}}},"block_order":["button_8dQacE"],"settings":{"desktop_content_position":"center","desktop_content_width":"large","content_alignment":"center","enable_section_box_layout":false,"color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}}},"order":["main","image_banner_xtbneD","product_configurator_BMFbCT","rich_text_dWXckk","image_with_text_UjPCyz","image_with_text_MUzzfc","image_with_text_t6gYAg","image_with_text_jDFQML","rich_text_XTMjVU"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "grid",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "ul_li_marker": "#000000"
+      }
+    },
+    "image_banner_xtbneD": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_XeYxmG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Konfigurátor",
+            "size": "h0"
+          }
+        },
+        "text_hkRi8i": {
+          "type": "text",
+          "settings": {
+            "text": "Sestav si držák podle svého gusta",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_aVFyCN": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Začít konfigurovat",
+            "button_link_1": "shopify://pages/konfigurator-drzaku",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_XeYxmG",
+        "text_hkRi8i",
+        "buttons_aVFyCN"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify://shop_images/roll_desktop_banner_v2.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#ffffff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000000",
+        "color_button_1": "#ffffff",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#ffffff",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product_configurator_BMFbCT": {
+      "type": "product-configurator",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_dWXckk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rMyJr8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>4 snadné kroky k vlastnímu držáku na mobil</strong></h3>",
+            "heading_size": "h0"
+          }
+        },
+        "text_Y9R7Pt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Proč se omezovat univerzálním řešením, když můžeš mít držák do auta vyrobený na míru svému mobilu? Pomocí konfigurátoru níže si ho navrhneš snadno a na pár kliknutí během 5 minut.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rMyJr8",
+        "text_Y9R7Pt"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_UjPCyz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_N8CpXh": {
+          "type": "heading",
+          "settings": {
+            "heading": "1. Vyber si hlavu držáku",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_xnJ6tx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>V prvním kroku svému telefonu dokonale přizpůsobíš hlavu držáku. Hodí se ti spíš magnetické uchycení s MagSafe technologií, nebo mechanické s nabíjením? Na výběr máš i hlavu s jednoduchým mechanickým přichycením.</p><p>Hlavu můžeš vybírat nejen na základě jejích funkcí, ale i podle toho, jak ti designově padne do oka. Výběr je zkrátka 100% na tobě.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_N8CpXh",
+        "text_xnJ6tx"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/config-side-01.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_MUzzfc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JW7Xxj": {
+          "type": "heading",
+          "settings": {
+            "heading": "2. Zvol způsob uchycení",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_LgN74N": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dále si zvol způsob, jakým bude držák přichycený k autu. Výhoda je, že všechny hlavy jdou kombinovat s kterýmkoliv způsobem uchycení. Vybírej každopádně tak, ať máš mobil vždy na dosah ruky.</p><p>Vsaď na klasickou přísavku na sklo, extra dlouhou nohu držáku do dodávky nebo sáhni po úchytu do mřížky ventilace.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JW7Xxj",
+        "text_LgN74N"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/config-side-02.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_t6gYAg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JyC6aT": {
+          "type": "heading",
+          "settings": {
+            "heading": "3. Prohlédni si výsledek ve 3D",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_XpH7fj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Že by sis vybral špatně? To nehrozí, protože ještě před odesláním si svůj vysněný držák prohlédneš pomocí 3D vizualizace. </p><p>Díky 3D náhledu výsledek uvidíš ze všech stran, doslova milimetr po milimetru. A když budeš chtít něco změnit? Tak se jednoduše vrátíš o krok zpět.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JyC6aT",
+        "text_XpH7fj"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_jDFQML": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6hidTa": {
+          "type": "heading",
+          "settings": {
+            "heading": "4. Počkej, až ti držák přijde",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_b9e4Gd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nic dalšího řešit nemusíš, zbytek je na nás. Nakonfigurovaný držák co nejdříve zabalíme do speciální krabičky a pošleme ho na cestu za tebou.</p><p>Až ti držák na mobil přijde, snadno ho nainstaluješ do auta. Pak už ti bude dlouhá léta sloužit.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6hidTa",
+        "text_b9e4Gd"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/konfigurator_box_cardboard_110x90x80mm-768x768.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "rich_text_XTMjVU": {
+      "type": "rich-text",
+      "blocks": {
+        "button_8dQacE": {
+          "type": "button",
+          "settings": {
+            "button_label": "Začít konfigurovat",
+            "button_link": "shopify://pages/konfigurator",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "shopify://pages/konfigurator",
+            "button_style_2": "secondary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_8dQacE"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_xtbneD",
+    "product_configurator_BMFbCT",
+    "rich_text_dWXckk",
+    "image_with_text_UjPCyz",
+    "image_with_text_MUzzfc",
+    "image_with_text_t6gYAg",
+    "image_with_text_jDFQML",
+    "rich_text_XTMjVU"
+  ]
+}
