@@ -39,20 +39,6 @@
             "variant_price": true
           }
         },
-        "wishlist_hero_custom_product_button_McnAG4": {
-          "type": "shopify://apps/wishlist-hero/blocks/custom-product-button/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
-          "settings": {
-            "displayButtonMode": "~",
-            "contentAlignment": "center",
-            "buttonAlignment": "center",
-            "buttonFullwidth": true,
-            "removeBoxShadowAndBorder": false,
-            "horizontalPadding": 20,
-            "iconTopOffset": 0,
-            "addedCssClassNames": "",
-            "addedContainerStyles": "js-wishlist-button"
-          }
-        },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
           "type": "sale_box",
           "settings": {
@@ -67,6 +53,20 @@
             "quantity_selector_enable": true,
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
+          }
+        },
+        "wishlist_hero_custom_product_button_McnAG4": {
+          "type": "shopify://apps/wishlist-hero/blocks/custom-product-button/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+          "settings": {
+            "displayButtonMode": "text_with_icon",
+            "contentAlignment": "left",
+            "buttonAlignment": "flex-start",
+            "buttonFullwidth": false,
+            "removeBoxShadowAndBorder": false,
+            "horizontalPadding": 20,
+            "iconTopOffset": 0,
+            "addedCssClassNames": "",
+            "addedContainerStyles": "js-wishlist-button"
           }
         },
         "share": {
@@ -118,8 +118,8 @@
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "popup_XDycdy",
         "price",
-        "wishlist_hero_custom_product_button_McnAG4",
         "e592d434-8377-4309-b179-f98d4b3742a2",
+        "wishlist_hero_custom_product_button_McnAG4",
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
