@@ -158,7 +158,7 @@
   fill: black;
 }
 .product__info-container .share-button__button:hover {
-    color: rgb(var(--color-foreground), 1);
+    color: rgb(var(--color-foreground), 1)!important;
 }
 .product__info-container .share-button__button:before, .product__info-container #wishlisthero-product-page-button-container button:before {
   display: none;
