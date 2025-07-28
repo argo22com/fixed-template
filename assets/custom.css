@@ -170,6 +170,9 @@
 .product__info-container .share-button__button:hover {
     color: rgb(var(--color-foreground), 1);
 }
+.product__info-container .share-button__button:before, .product__info-container #wishlisthero-product-page-button-container button:before {
+  display: none;
+}
 @media (max-width: 749px) {
   .slider-component-full-width .slideshow__controls {
     top: 50%;
