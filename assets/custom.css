@@ -293,4 +293,8 @@
   .page-title {
     padding: 3rem 0!important;
   }
+  .product__sale-box__footer {
+    gap: 0.5rem;
+    display: grid;
+  }
 }
