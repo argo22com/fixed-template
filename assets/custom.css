@@ -220,7 +220,7 @@
         position: static;
     }
   .card-wrapper--product:hover:after {
-        height: 0;
+        height: calc(100% + var(--product-card-shadow-distance) - 40px)!important;
     }
 }
 @media (max-width: 1544px) {
