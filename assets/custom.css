@@ -210,6 +210,11 @@
     height: 5rem;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   }
+  .grid__item .card-wrapper--product compare-add-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 @media (max-width: 1544px) {
   .js .slideshow__text-wrapper {
     max-width: 85%;
@@ -227,11 +232,6 @@
     border: 1px solid #e6e6e6;
     padding: 10px;
     box-sizing: border-box;
-  }
-  .grid__item .card-wrapper--product compare-add-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
   }
   .grid__item .card-wrapper--product .badge--position-1 {
     top: 0rem;
