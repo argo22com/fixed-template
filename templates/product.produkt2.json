@@ -22,7 +22,7 @@
         "2525f94e-add4-418e-b362-bd2bb35545fa": {
           "type": "rating",
           "settings": {
-            "show_if_no_reviews": true
+            "show_if_no_reviews": false
           }
         },
         "popup_XDycdy": {
