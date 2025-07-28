@@ -65,7 +65,7 @@
             "removeBoxShadowAndBorder": false,
             "horizontalPadding": 20,
             "iconTopOffset": 0,
-            "addedCssClassNames": "",
+            "addedCssClassNames": "custom-wishlist-button",
             "addedContainerStyles": "js-wishlist-button"
           }
         },
