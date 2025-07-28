@@ -219,6 +219,9 @@
     .card__quick-buttons {
         position: static;
     }
+  .card-wrapper--product:hover:after {
+        height: 0;
+    }
 }
 @media (max-width: 1544px) {
   .js .slideshow__text-wrapper {
