@@ -1,1 +1,142 @@
-{"parent":"index.json","context":{"market":"cz"},"sections":{"518b8ced-997b-408e-84d5-64fe5082a6a1":{"custom_css":[".slideshow__progress__path {stroke: #cccccc;}",".slider-counter__link--active.slider-counter__link--dots .dot,.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"],"settings":{"slide_height":"medium","slide_height_mobile":"medium-mobile"},"blocks":{"slide_T3NJDj":{"settings":{"image":"shopify:\/\/shop_images\/513A8142-_1.jpg","mobile_image":"shopify:\/\/shop_images\/513A8142-_1.jpg","box_align":"middle-left"}},"slide_AFmp8D":{"settings":{"image":"shopify:\/\/shop_images\/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.jpg","mobile_image":"shopify:\/\/shop_images\/banner2.jpg","box_align":"middle-left","image_overlay_opacity":20,"text_alignment_mobile":"center","colors_text_mobile":"#ffffff"}},"slide_LBwdxn":{"settings":{"image":"shopify:\/\/shop_images\/banner5.jpg","mobile_image":"shopify:\/\/shop_images\/banner5-mobil.jpg"}},"slide_VnxEnd":{"disabled":true,"settings":{"image":"shopify:\/\/shop_images\/banner4_fbb51bc4-cd5d-4bcb-a605-62f6f86c3941.jpg","mobile_image":"shopify:\/\/shop_images\/banner4-mobil_4e731c17-9c6b-462d-96f7-94d80d2b992a.jpg","text":"Nakup za 500,- a máš dopravu zdarma!","hide_text_on_mobile":false,"link":"","image_overlay_opacity":0,"text_alignment_mobile":"center","colors_text":"#000000","colors_text_mobile":"#ffffff"}}}},"multicolumn_Liefqw":{"settings":{},"blocks":{"column_QxJR8a":{"settings":{"image":"shopify:\/\/shop_images\/dashboard.4336.jpg"}},"column_GJR9bJ":{"settings":{"image":"shopify:\/\/shop_images\/1B1A3421.jpg"}},"column_Ftt4cf":{"settings":{"image":"shopify:\/\/shop_images\/1B1A5450-_2_a42785f1-fa32-40c5-bc3a-3207a9e8ad0c.jpg"}}}},"collection_list_ndxz9L":{"disabled":true,"settings":{},"blocks":{}},"gallery_hgMnHR":{"settings":{"flexible_columns_layout":"grid","enable_section_box_layout":false,"color_scheme":"background-1","image_ratio":"square"},"blocks":{"text_overlay_image_TrcKUU":{"settings":{"image":"shopify:\/\/shop_images\/sluchatka.5272.jpg","button_size":"normal","vertical_alignment":"start"}},"text_overlay_image_QcRW6g":{"settings":{"image":"shopify:\/\/shop_images\/sluchatka.5273.jpg","text":"Bezdrátová sluchátka, headsety, audiokabely...","heading":"Audio","heading_uppercase":false}},"text_overlay_image_kzc9B8":{"settings":{"image":"shopify:\/\/shop_images\/sluchatka.5271.jpg"}},"text_overlay_image_yq9DWA":{"settings":{"image":"shopify:\/\/shop_images\/sluchatka.5268.jpg"}}}},"featured_collection_xcmLFp":{"settings":{"enable_section_box_layout":false,"color_scheme":"background-1"},"blocks":{}},"image_with_text_EW9q8n":{"settings":{"grid_layout":"grid"},"blocks":{}}}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "index.json",
+  "context": {
+    "market": "cz"
+  },
+  "sections": {
+    "518b8ced-997b-408e-84d5-64fe5082a6a1": {
+      "custom_css": [
+        ".slideshow__progress__path {stroke: #cccccc;}",
+        ".slider-counter__link--active.slider-counter__link--dots .dot,.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
+      ],
+      "settings": {
+        "slide_height": "medium",
+        "slide_height_mobile": "medium-mobile"
+      },
+      "blocks": {
+        "slide_T3NJDj": {
+          "settings": {
+            "image": "shopify://shop_images/513A8142-_1.jpg",
+            "mobile_image": "shopify://shop_images/513A8142-_1.jpg",
+            "box_align": "middle-left"
+          }
+        },
+        "slide_AFmp8D": {
+          "settings": {
+            "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.jpg",
+            "mobile_image": "shopify://shop_images/banner2.jpg",
+            "box_align": "middle-left",
+            "image_overlay_opacity": 20,
+            "text_alignment_mobile": "center",
+            "colors_text_mobile": "#ffffff"
+          }
+        },
+        "slide_LBwdxn": {
+          "settings": {
+            "image": "shopify://shop_images/banner5.jpg",
+            "mobile_image": "shopify://shop_images/banner5-mobil.jpg"
+          }
+        },
+        "slide_VnxEnd": {
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/banner4_fbb51bc4-cd5d-4bcb-a605-62f6f86c3941.jpg",
+            "mobile_image": "shopify://shop_images/banner4-mobil_4e731c17-9c6b-462d-96f7-94d80d2b992a.jpg",
+            "text": "Nakup za 500,- a máš dopravu zdarma!",
+            "hide_text_on_mobile": false,
+            "link": "",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#000000",
+            "colors_text_mobile": "#ffffff"
+          }
+        }
+      }
+    },
+    "multicolumn_Liefqw": {
+      "settings": {},
+      "blocks": {
+        "column_QxJR8a": {
+          "settings": {
+            "image": "shopify://shop_images/dashboard.4336.jpg"
+          }
+        },
+        "column_GJR9bJ": {
+          "settings": {
+            "image": "shopify://shop_images/1B1A3421.jpg"
+          }
+        },
+        "column_Ftt4cf": {
+          "settings": {
+            "image": "shopify://shop_images/1B1A5450-_2_a42785f1-fa32-40c5-bc3a-3207a9e8ad0c.jpg"
+          }
+        }
+      }
+    },
+    "collection_list_ndxz9L": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "featured_collection_xcmLFp": {
+      "settings": {
+        "enable_section_box_layout": false,
+        "color_scheme": "background-1"
+      },
+      "blocks": {}
+    },
+    "gallery_hgMnHR": {
+      "settings": {
+        "flexible_columns_layout": "grid",
+        "enable_section_box_layout": false,
+        "color_scheme": "background-1",
+        "image_ratio": "square"
+      },
+      "blocks": {
+        "text_overlay_image_TrcKUU": {
+          "settings": {
+            "image": "shopify://shop_images/sluchatka.5272.jpg",
+            "button_size": "normal",
+            "vertical_alignment": "start"
+          }
+        },
+        "text_overlay_image_QcRW6g": {
+          "settings": {
+            "image": "shopify://shop_images/sluchatka.5273.jpg",
+            "text": "Bezdrátová sluchátka, headsety, audiokabely...",
+            "heading": "Audio",
+            "heading_uppercase": false,
+            "text_size": "large"
+          }
+        },
+        "text_overlay_image_kzc9B8": {
+          "settings": {
+            "image": "shopify://shop_images/sluchatka.5271.jpg",
+            "text_size": "large"
+          }
+        },
+        "text_overlay_image_yq9DWA": {
+          "settings": {
+            "image": "shopify://shop_images/sluchatka.5268.jpg",
+            "text_size": "large"
+          }
+        }
+      }
+    },
+    "image_with_text_EW9q8n": {
+      "settings": {
+        "grid_layout": "grid"
+      },
+      "blocks": {}
+    }
+  }
+}
