@@ -472,6 +472,7 @@
         "featured_collection_BEHfYD",
         "featured_collection_qTq37c"
       ],
+      "disabled": true,
       "custom_css": [
         "h3 {font-size: 2.5rem;}"
       ],
