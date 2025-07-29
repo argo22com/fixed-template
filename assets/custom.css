@@ -285,6 +285,9 @@
   }
 }  
 @media (max-width: 749px) {
+  .blog-tags.page-width:after {
+    right: 0;
+  }
   .slider-component-full-width .slider-button--transparent {
     width: 4rem;
     height: 4rem;
