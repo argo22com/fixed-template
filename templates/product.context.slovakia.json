@@ -12,5 +12,16 @@
   "context": {
     "market": "slovakia"
   },
-  "sections": {}
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "e592d434-8377-4309-b179-f98d4b3742a2": {
+          "settings": {
+            "picker_type": "button"
+          }
+        }
+      }
+    }
+  }
 }
