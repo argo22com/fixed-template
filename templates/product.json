@@ -106,7 +106,7 @@
             "icon": "thumb_down",
             "product_list_limit": 3,
             "total_enable": true,
-            "total_label": "Celkem",
+            "total_label": "Celkem bez DPH",
             "button_enable": true,
             "button_label": "Přihodit do košíku",
             "image_ratio": "square"
