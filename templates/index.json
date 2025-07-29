@@ -15,8 +15,8 @@
         "slide_T3NJDj": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/magicke_leto_desktop_513A8142.png",
-            "mobile_image": "shopify://shop_images/magicke_leto_mobile.png",
+            "image": "shopify://shop_images/513A8142-_1.jpg",
+            "mobile_image": "shopify://shop_images/513A8142-_1.jpg",
             "badge_label": "",
             "heading": "Magnetické léto s FIXED",
             "text": "Držáky, kryty, powerbanky a další příslušenství pro bezstarostné léto.",
@@ -52,8 +52,8 @@
         "slide_AFmp8D": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/fixmro-bk_008_77dedba1-7823-4702-aecb-08e2e40f13c1.jpg",
-            "mobile_image": "shopify://shop_images/fixmro-bk_008_77dedba1-7823-4702-aecb-08e2e40f13c1.jpg",
+            "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.jpg",
+            "mobile_image": "shopify://shop_images/banner2.jpg",
             "badge_label": "",
             "heading": "Konfigurátor držáků",
             "text": "Sestav si držák přesně na míru do svého auta",
@@ -89,8 +89,8 @@
         "slide_LBwdxn": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/slide-kuze.jpg",
-            "mobile_image": "shopify://shop_images/slide-kuze.jpg",
+            "image": "shopify://shop_images/banner5.jpg",
+            "mobile_image": "shopify://shop_images/banner5-mobil.jpg",
             "badge_label": "",
             "heading": "Kožené příslušenství",
             "text": "Nadčasové doplňky pro vaše zařízení",
@@ -127,8 +127,8 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/333.jpg",
-            "mobile_image": "shopify://shop_images/444.jpg",
+            "image": "shopify://shop_images/banner4_fbb51bc4-cd5d-4bcb-a605-62f6f86c3941.jpg",
+            "mobile_image": "shopify://shop_images/banner4-mobil_4e731c17-9c6b-462d-96f7-94d80d2b992a.jpg",
             "badge_label": "",
             "heading": "Doprava zdarma nad 500 Kč",
             "text": "Nakup Za 500 a máš dopravu zdaram",
@@ -308,7 +308,7 @@
         "column_QxJR8a": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/FIXMA-LS1.jpg",
+            "image": "shopify://shop_images/dashboard.4336.jpg",
             "icon": "check",
             "title": "Konfigurátor držáků",
             "text": "<p>Sestav si držák přesně podle svých potřeb. Vyber si hlavu držáku, způsob jeho uchycení a zvol, zda má mít i funkci nabíjení. A získej držák, jaký potřebuješ.<br/></p>",
@@ -345,7 +345,7 @@
         "column_GJR9bJ": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/magicke_leto_mobile.png",
+            "image": "shopify://shop_images/1B1A3421.jpg",
             "icon": "check",
             "title": "Magnetické příslušenství",
             "text": "<p>Pořiď si to nejmodernější a nejvychytanější příslušenství nezávisle na tom, jaký máš telefon. Powerbanky, nabíječky, selfie tyče i držáky do auta - to nejlepší jenom pro tebe.</p>",
@@ -363,7 +363,7 @@
         "column_Ftt4cf": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/1200x1200.jpg",
+            "image": "shopify://shop_images/1B1A5450-_2_a42785f1-fa32-40c5-bc3a-3207a9e8ad0c.jpg",
             "icon": "check",
             "title": "Armor",
             "text": "<p>Ultraodolná skla Armor jsou tou nejlepší ochranou pro displeje telefonu. Jsou 3x odolnější než běžná skla proti pádům, poškrábání, ale i odleskům slunce.</p>",
@@ -472,6 +472,7 @@
         "featured_collection_BEHfYD",
         "featured_collection_qTq37c"
       ],
+      "disabled": true,
       "custom_css": [
         "h3 {font-size: 2.5rem;}"
       ],
@@ -535,7 +536,7 @@
         "text_overlay_image_TrcKUU": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify://shop_images/OCHRANA.1384.jpg",
+            "image": "shopify://shop_images/sluchatka.5272.jpg",
             "link": "shopify://collections/ochrana",
             "keep_ltr": true,
             "text": "Pouzdra, tvrzená skla, folie...",
@@ -561,13 +562,13 @@
         "text_overlay_image_QcRW6g": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify://shop_images/FIXPDS.1463.jpg",
+            "image": "shopify://shop_images/sluchatka.5273.jpg",
             "link": "shopify://collections/audio",
             "keep_ltr": false,
             "text": "Bezdrátová sluchátka, sluchátka s kabelem...",
             "text_style": "subtitle",
             "text_size": "medium",
-            "heading": "Hudba",
+            "heading": "Audio",
             "heading_size": "h2",
             "heading_uppercase": false,
             "button_label": "Více",
@@ -587,7 +588,7 @@
         "text_overlay_image_kzc9B8": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify://shop_images/nabijecky.1472.jpg",
+            "image": "shopify://shop_images/sluchatka.5271.jpg",
             "link": "shopify://collections/nabijeni",
             "keep_ltr": false,
             "text": "Nabíječky, cestovní adaptéry, powerbanky, kabely...",
@@ -613,7 +614,7 @@
         "text_overlay_image_yq9DWA": {
           "type": "text-overlay-image",
           "settings": {
-            "image": "shopify://shop_images/drzaky.jpg",
+            "image": "shopify://shop_images/sluchatka.5268.jpg",
             "link": "shopify://collections/drzaky-a-stojanky",
             "keep_ltr": false,
             "text": "Do auta, na kolo i motorku...",
@@ -658,7 +659,7 @@
         "disable_item_space": true,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 72,
