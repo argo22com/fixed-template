@@ -252,6 +252,8 @@
     width: 71px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%);
     transition-duration: 300ms;
+      border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
   }
   .mobile-tag-swip {
     border-radius: 12px;
