@@ -19,8 +19,8 @@
         ".slider-counter__link--active.slider-counter__link--dots .dot,.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
       ],
       "settings": {
-        "slide_height": "medium",
-        "slide_height_mobile": "medium-mobile"
+        "slide_height": "small",
+        "slide_height_mobile": "small-mobile"
       },
       "blocks": {
         "slide_T3NJDj": {
@@ -113,9 +113,9 @@
           "settings": {
             "image": "shopify://shop_images/sluchatka.5273.jpg",
             "text": "Bezdrátová sluchátka, headsety, audiokabely...",
+            "text_size": "large",
             "heading": "Audio",
-            "heading_uppercase": false,
-            "text_size": "large"
+            "heading_uppercase": false
           }
         },
         "text_overlay_image_kzc9B8": {
