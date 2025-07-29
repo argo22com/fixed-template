@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin language editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -470,7 +470,7 @@
     "product_tabs": {
       "reviews": {
         "title": "Reviews",
-        "no_review": "No reviews",
+        "no_review": "No reviews"
       }
     }
   },
@@ -690,6 +690,24 @@
         "subtotal_label_with_quantity": {
           "few": "Subtotal (number of items: %{count})",
           "many": "Subtotal (number of items: %{count})"
+        },
+        "unit_price": {
+          "per_item": {
+            "few": "%{price} for this number of items: %{count}",
+            "many": "%{price} for this number of items: %{count}"
+          }
+        },
+        "number_items": {
+          "few": "Number of items: %{count}",
+          "many": "Number of items: %{count}"
+        },
+        "view_all_items": {
+          "few": "Show all items (%{count})",
+          "many": "Show all items (%{count})"
+        },
+        "pickup_unavailable_banner_title": {
+          "few": "No stores with your items are available.",
+          "many": "No stores with your items are available."
         }
       },
       "shipping": {
@@ -731,6 +749,50 @@
           "free_for_first_n_order": {
             "few": "On first %{count} orders",
             "many": "On first %{count} orders"
+          },
+          "free_shipping_cycles": {
+            "few": "Free shipping for next delivery (%{count} more)",
+            "many": "Free shipping for next delivery (%{count} more)"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "few": "Free shipping on %{count} deliveries",
+            "many": "Free shipping on %{count} deliveries"
+          },
+          "first_n_order_free_with_cycle": {
+            "few": "Free shipping for next delivery (%{count} more), then %{recurring_order_shipping_price}",
+            "many": "Free shipping for next delivery (%{count} more), then %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "few": "Free shipping for %{count} deliveries, then %{recurring_order_shipping_price}",
+            "many": "Free shipping for %{count} deliveries, then %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "few": "Next delivery (%{count} more) always at %{shipping_price}",
+            "many": "Next delivery (%{count} more) always at %{shipping_price}"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "few": "Next delivery (%{count} more) always at %{shipping_price}",
+            "many": "Next delivery (%{count} more) always at %{shipping_price}"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "few": "Free shipping for the first %{cycle}, then %{recurring_order_shipping_price}",
+            "many": "Free shipping for the first %{cycle}, then %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_one_cycle": {
+            "few": "%{shipping_price} for next delivery (%{count} more) (%{per_delivery_cost})",
+            "many": "%{shipping_price} for next delivery (%{count} more) (%{per_delivery_cost})"
+          },
+          "prepaid_order_one_cycle_delivery_not_included": {
+            "few": "%{shipping_price} for %{count} deliveries (%{per_delivery_cost})",
+            "many": "%{shipping_price} for %{count} deliveries (%{per_delivery_cost})"
+          },
+          "prepaid_order_no_cycle": {
+            "few": "%{shipping_price} for the next delivery (%{count} more) (%{per_delivery_cost}), then %{recurring_order_shipping_price}",
+            "many": "%{shipping_price} for the next delivery (%{count} more) (%{per_delivery_cost}), then %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_no_cycle_delivery_not_included": {
+            "few": "%{shipping_price} for %{count} deliveries (%{per_delivery_cost}), then %{recurring_order_shipping_price}",
+            "many": "%{shipping_price} for %{count} deliveries (%{per_delivery_cost}), then %{recurring_order_shipping_price}"
           }
         },
         "shipping_method_first_shipment_group_title": {
@@ -900,6 +962,10 @@
         "number_of_pickup_points_near_location": {
           "few": "Pickup locations near your location: %{count}",
           "many": "Pickup locations near your location: %{count}"
+        },
+        "pickup_unavailable_banner_title": {
+          "few": "There are no pickup locations available for your items.",
+          "many": "There are no pickup locations available for your items."
         }
       },
       "local_pickup": {
@@ -916,6 +982,18 @@
         "reveal_more_label": {
           "few": "View this number of additional sites: %{count}",
           "many": "View this number of additional sites: %{count}"
+        }
+      },
+      "review_address_modal": {
+        "subtitle": {
+          "few": "This order will be shipped to the address provided by {{merchant}} . Select a shipping address.",
+          "many": "This order will be shipped to the address provided by {{merchant}} . Select a shipping address."
+        }
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "remove_items_action": {
+          "few": "remove unavailable items",
+          "many": "remove unavailable items"
         }
       }
     },
@@ -990,6 +1068,14 @@
         "delivered_description_digital": {
           "few": "These items have completed.",
           "many": "These items have completed."
+        },
+        "tracking_number": {
+          "few": "Tracking numbers",
+          "many": "Tracking numbers"
+        },
+        "gift_card_resend_button": {
+          "few": "Resend gift cards",
+          "many": "Resend gift cards"
         }
       },
       "if_not_received": {
