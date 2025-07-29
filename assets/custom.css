@@ -180,6 +180,8 @@
     padding-left: 26px;
     width: 288px;
     margin-top: 0;
+    justify-content: flex-start;
+    padding-left: 33px;
 }
 .product__info-container .gw-button-widget.gw-button-widget-v2:hover {
     color: rgb(var(--color-foreground), 1)!important;
