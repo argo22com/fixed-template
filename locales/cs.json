@@ -590,7 +590,7 @@
       "total_duties": "Cla",
       "recycling_fee": "Recyklační poplatek: {{recyclingFee}} ({{unitRecyclingFee}} / ks)"
     },
-    "back_to_login": "Back to the login page"
+    "back_to_login": "Vrátit se na přihlášení"
   },
   "gift_cards": {
     "issued": {
