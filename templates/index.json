@@ -26,7 +26,7 @@
             "link": "shopify://pages/magneticke-prislusenstvi-fixed",
             "button_style": "primary",
             "button_open_new_tab": true,
-            "box_align": "bottom-left",
+            "box_align": "middle-left",
             "text_alignment": "left",
             "keep_ltr": false,
             "desktop_image_width": "full",
