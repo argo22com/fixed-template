@@ -13,26 +13,6 @@
     "market": "cz"
   },
   "sections": {
-    "multicolumn_Liefqw": {
-      "settings": {},
-      "blocks": {
-        "column_QxJR8a": {
-          "settings": {
-            "image": "shopify://shop_images/dashboard.4336.jpg"
-          }
-        },
-        "column_GJR9bJ": {
-          "settings": {
-            "image": "shopify://shop_images/1B1A3421.jpg"
-          }
-        },
-        "column_Ftt4cf": {
-          "settings": {
-            "image": "shopify://shop_images/1B1A5450-_2_a42785f1-fa32-40c5-bc3a-3207a9e8ad0c.jpg"
-          }
-        }
-      }
-    },
     "collection_list_ndxz9L": {
       "disabled": true,
       "settings": {},
