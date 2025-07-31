@@ -12,50 +12,5 @@
   "context": {
     "market": "cz"
   },
-  "sections": {
-    "gallery_hgMnHR": {
-      "settings": {
-        "flexible_columns_layout": "grid",
-        "enable_section_box_layout": false,
-        "color_scheme": "background-1",
-        "image_ratio": "square"
-      },
-      "blocks": {
-        "text_overlay_image_TrcKUU": {
-          "settings": {
-            "image": "shopify://shop_images/sluchatka.5272.jpg",
-            "button_size": "normal",
-            "vertical_alignment": "start"
-          }
-        },
-        "text_overlay_image_QcRW6g": {
-          "settings": {
-            "image": "shopify://shop_images/sluchatka.5273.jpg",
-            "text": "Bezdrátová sluchátka, headsety, audiokabely...",
-            "text_size": "large",
-            "heading": "Audio",
-            "heading_uppercase": false
-          }
-        },
-        "text_overlay_image_kzc9B8": {
-          "settings": {
-            "image": "shopify://shop_images/sluchatka.5271.jpg",
-            "text_size": "large"
-          }
-        },
-        "text_overlay_image_yq9DWA": {
-          "settings": {
-            "image": "shopify://shop_images/sluchatka.5268.jpg",
-            "text_size": "large"
-          }
-        }
-      }
-    },
-    "image_with_text_EW9q8n": {
-      "settings": {
-        "grid_layout": "grid"
-      },
-      "blocks": {}
-    }
-  }
+  "sections": {}
 }
