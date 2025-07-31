@@ -13,13 +13,6 @@
     "market": "cz"
   },
   "sections": {
-    "featured_collection_xcmLFp": {
-      "settings": {
-        "enable_section_box_layout": false,
-        "color_scheme": "background-1"
-      },
-      "blocks": {}
-    },
     "gallery_hgMnHR": {
       "settings": {
         "flexible_columns_layout": "grid",
