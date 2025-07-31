@@ -115,6 +115,7 @@
       "blocks": {
         "text_icon_kLBQaF": {
           "type": "text-icon",
+          "disabled": true,
           "settings": {
             "icon": "check",
             "custom_icon": "shopify://shop_images/Martin_Schwarz_100px.jpg",
