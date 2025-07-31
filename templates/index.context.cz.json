@@ -13,11 +13,6 @@
     "market": "cz"
   },
   "sections": {
-    "collection_list_ndxz9L": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
     "featured_collection_xcmLFp": {
       "settings": {
         "enable_section_box_layout": false,
