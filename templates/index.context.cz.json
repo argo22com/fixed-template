@@ -13,55 +13,6 @@
     "market": "cz"
   },
   "sections": {
-    "518b8ced-997b-408e-84d5-64fe5082a6a1": {
-      "custom_css": [
-        ".slideshow__progress__path {stroke: #cccccc;}",
-        ".slider-counter__link--active.slider-counter__link--dots .dot,.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
-      ],
-      "settings": {
-        "slide_height": "medium",
-        "slide_height_mobile": "small-mobile"
-      },
-      "blocks": {
-        "slide_T3NJDj": {
-          "settings": {
-            "image": "shopify://shop_images/513A8142-_1.jpg",
-            "mobile_image": "shopify://shop_images/513A8142-_1.jpg",
-            "box_align": "middle-left"
-          }
-        },
-        "slide_AFmp8D": {
-          "settings": {
-            "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.jpg",
-            "mobile_image": "shopify://shop_images/banner2.jpg",
-            "box_align": "middle-left",
-            "image_overlay_opacity": 20,
-            "text_alignment_mobile": "center",
-            "colors_text_mobile": "#ffffff"
-          }
-        },
-        "slide_LBwdxn": {
-          "settings": {
-            "image": "shopify://shop_images/banner5.jpg",
-            "mobile_image": "shopify://shop_images/banner5-mobil.jpg"
-          }
-        },
-        "slide_VnxEnd": {
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/banner4_fbb51bc4-cd5d-4bcb-a605-62f6f86c3941.jpg",
-            "mobile_image": "shopify://shop_images/banner4-mobil_4e731c17-9c6b-462d-96f7-94d80d2b992a.jpg",
-            "text": "Nakup za 500,- a máš dopravu zdarma!",
-            "hide_text_on_mobile": false,
-            "link": "",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
-            "colors_text": "#000000",
-            "colors_text_mobile": "#ffffff"
-          }
-        }
-      }
-    },
     "multicolumn_Liefqw": {
       "settings": {},
       "blocks": {
