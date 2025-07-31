@@ -1,0 +1,214 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "medium"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false,
+            "blog_show_blog_title": false,
+            "share_enable": true,
+            "share_on_facebook": true,
+            "share_on_twitter": true,
+            "share_on_pinterest": true,
+            "share_on_email": true,
+            "share_link": true
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        },
+        "52a4e104-b836-428d-baf7-c7c42f1f6e99": {
+          "type": "tags",
+          "settings": {
+            "tags_label": "Témata",
+            "share_enable": true,
+            "share_on_facebook": true,
+            "share_on_twitter": true,
+            "share_on_pinterest": true,
+            "share_on_email": true,
+            "share_link": true
+          }
+        },
+        "4f3cfd4c-a6c9-413d-b4d5-a106526d1ef2": {
+          "type": "previous_next_posts",
+          "disabled": true,
+          "settings": {}
+        },
+        "debaec65-1a3d-439e-932f-35484926a006": {
+          "type": "author_details",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "content",
+        "52a4e104-b836-428d-baf7-c7c42f1f6e99",
+        "4f3cfd4c-a6c9-413d-b4d5-a106526d1ef2",
+        "debaec65-1a3d-439e-932f-35484926a006"
+      ],
+      "custom_css": [],
+      "settings": {}
+    },
+    "featured_collection_JqQ83z": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "collection": "nintendo-switch",
+        "heading_size": "h1",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "enable_desktop_slider": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image_position_desktop": "left",
+        "image_height": "adapt_product_list",
+        "image_height_mobile": "34",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "26cd1575-e824-4144-9543-04abbaca517c": {
+      "type": "spacer",
+      "settings": {
+        "height": 40
+      }
+    },
+    "text_icons_MYJ8mz": {
+      "type": "text-icons",
+      "blocks": {
+        "text_icon_kLBQaF": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/Martin_Schwarz_100px.jpg",
+            "title": "Autor: Martin Schwarz",
+            "subheading": "Martin se dlouhodobě specializuje na psaní o IT a technologiích. Vystudoval žurnalistiku, píše více než 14 let a dříve působil v online i tištěných médiích. Na přípravě článků spolupracuje společně s týmem FIXED. ",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_icon_kLBQaF"
+      ],
+      "name": "t:sections.text-icons.presets.name",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "icon_width_desktop": 10,
+        "text_position": "right",
+        "enable_heading_in_box": false,
+        "columns_desktop": 1,
+        "columns_tablet": 1,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "highlight_icon": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "border_width": 1,
+        "border_opacity": 15,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "circle",
+        "blur_background": false,
+        "columns_mobile": "1",
+        "icon_width_mobile": 20,
+        "border_spacing_mobile": 0,
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "newsletter_rGGwPG": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_wgTq94": {
+          "type": "heading",
+          "settings": {
+            "heading": "Přihlašte se k odběru novinek",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_MhLF3P": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Přidejte se k naší komunitě ať už vám žádné novinky neutečou!<br/>Přečtěte si naše <a href=\"/pages/contact\" title=\"Kontakt\">zásady ochrany osobních údajů</a>. </p>"
+          }
+        },
+        "email_form_CefB43": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_wgTq94",
+        "paragraph_MhLF3P",
+        "email_form_CefB43"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "grid_layout": "stretched_grid",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "background_image_section": "shopify://shop_images/bg.jpg",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#ffffff",
+        "colors_input": "#000000",
+        "overlay_color": "#00a9e0",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured_collection_JqQ83z",
+    "26cd1575-e824-4144-9543-04abbaca517c",
+    "text_icons_MYJ8mz",
+    "newsletter_rGGwPG"
+  ]
+}
