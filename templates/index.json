@@ -772,7 +772,7 @@
           "settings": {
             "heading": "Jak dlouhá je záruka na produkty?",
             "icon": "shield_check",
-            "row_content": "<p>Pro vybrané produkty máme nově prodlouženou záruku až na 3 roky. Více se dozvíte ZDE. </p>",
+            "row_content": "<p>Pro vybrané produkty máme nově prodlouženou záruku až na 3 roky. Více se dozvíte <a href=\"/pages/zaruka\" target=\"_blank\" title=\"Záruka\">ZDE. </a></p>",
             "page": ""
           }
         },
