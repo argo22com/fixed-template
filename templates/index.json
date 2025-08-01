@@ -767,6 +767,15 @@
             "page": ""
           }
         },
+        "collapsible_row_wnCp6N": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Jak dlouhá je záruka na produkty?",
+            "icon": "shield_check",
+            "row_content": "<p>Pro vybrané produkty máme nově prodlouženou záruku až na 3 roky. Více se dozvíte ZDE. </p>",
+            "page": ""
+          }
+        },
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
@@ -815,6 +824,7 @@
       },
       "block_order": [
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-1",
+        "collapsible_row_wnCp6N",
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-2",
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-3",
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-4",
