@@ -149,14 +149,14 @@
             "colors_background": "#ffffff",
             "colors_badge_foreground": "#ffffff",
             "colors_badge_background": "#dc4405",
-            "colors_button_text": "#000000",
-            "colors_button": "#ffffff",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
             "colors_text_mobile": "#000000",
             "gradient_heading_mobile": "",
             "colors_background_mobile": "#ffffff",
             "colors_badge_foreground_mobile": "#ffffff",
             "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#00a9e0",
+            "colors_button_text_mobile": "#000000",
             "colors_button_mobile": "#ffffff"
           }
         },
