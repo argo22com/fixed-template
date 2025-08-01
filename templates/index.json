@@ -180,7 +180,7 @@
             "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
+            "text_alignment_mobile": "left",
             "colors_text": "#000000",
             "gradient_heading_desktop": "",
             "colors_background": "#ffffff",
