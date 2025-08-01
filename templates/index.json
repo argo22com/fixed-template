@@ -160,6 +160,7 @@
         },
         "slide_Pb37rp": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/3roky2_2cef315a-d5c2-4cf3-a5a4-3bd3d50e8daa.jpg",
             "badge_label": "",
@@ -767,15 +768,6 @@
             "page": ""
           }
         },
-        "collapsible_row_wnCp6N": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Jak dlouhá je záruka na produkty?",
-            "icon": "shield_check",
-            "row_content": "<p>Pro vybrané produkty máme nově prodlouženou záruku až na 3 roky. Více se dozvíte <a href=\"/pages/zaruka\" target=\"_blank\" title=\"Záruka\">ZDE. </a></p>",
-            "page": ""
-          }
-        },
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
@@ -824,7 +816,6 @@
       },
       "block_order": [
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-1",
-        "collapsible_row_wnCp6N",
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-2",
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-3",
         "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-4",
