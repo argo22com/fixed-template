@@ -134,7 +134,7 @@
             "hide_text_on_mobile": false,
             "button_label": "Nakupovat",
             "price": "",
-            "link": "",
+            "link": "shopify://collections/all",
             "button_style": "primary",
             "button_open_new_tab": false,
             "box_align": "middle-left",
