@@ -53,7 +53,6 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.jpg",
-            "mobile_image": "shopify://shop_images/banner2.jpg",
             "badge_label": "",
             "heading": "Konfigurátor držáků",
             "text": "Sestav si držák přesně na míru do svého auta",
@@ -69,7 +68,7 @@
             "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 20,
-            "text_alignment_mobile": "center",
+            "text_alignment_mobile": "left",
             "colors_text": "#ffffff",
             "gradient_heading_desktop": "",
             "colors_background": "#ffffff",
