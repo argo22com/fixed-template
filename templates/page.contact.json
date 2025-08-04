@@ -1,1 +1,354 @@
-{"sections":{"multicolumn_jWx9hX":{"type":"multicolumn","blocks":{"column_wh4nX8":{"type":"column","settings":{"icon":"ticket","title":"Servis & reklamace","text":"<p><a href=\"mailto:reklamace@fixed.zone\" target=\"_blank\" title=\"mailto:reklamace@fixed.zone\">reklamace@FIXED.zone  <\/a><br\/>+ 420 724 161 817<\/p>","link_label":"","link":"","button_style":"solid","button_open_new_tab":false,"card_color_text":"#000000","color_button_text":"#ffffff","color_button":"#2563eb","card_color_background":"#ffffff","card_color_background_gradient":""}},"column_4naCn6":{"type":"column","settings":{"icon":"shopping_cart","title":"E-shop objednávky","text":"<p><strong>Po – Pá<\/strong>: 8:00 – 16:00<strong><br\/><\/strong><a href=\"mailto:podpora@FIXED.zone\" target=\"_blank\" title=\"mailto:podpora@FIXED.zone\">podpora@FIXED.zone<\/a><br\/>+420 385 510 206 <\/p>","link_label":"","link":"","button_style":"solid","button_open_new_tab":false,"card_color_text":"#212c4d","color_button_text":"#ffffff","color_button":"#2563eb","card_color_background":"#ffffff","card_color_background_gradient":""}},"column_NDpDk7":{"type":"column","settings":{"icon":"chat","title":"Podpora","text":"<p><strong>Po – Pá<\/strong>: 8:00 – 16:00 <br\/><a href=\"mailto:podpora@fixed.zone\" target=\"_blank\" title=\"mailto:podpora@fixed.zone\">podpora@FIXED.zone<\/a>    <br\/>+420 385 510 206              <br\/><strong><br\/><\/strong><\/p>","link_label":"","link":"","button_style":"solid","button_open_new_tab":false,"card_color_text":"#212c4d","color_button_text":"#ffffff","color_button":"#2563eb","card_color_background":"#ffffff","card_color_background_gradient":""}},"column_Gr8YRz":{"type":"column","settings":{"icon":"scissors","title":"Výroba","text":"<p><strong>Po – Pá: <\/strong>8:00 – 14:00<\/p><p><strong>FIXED.zone a.s.<br\/><\/strong>Žeranovská 8796 01 Prostějov<\/p>","link_label":"","link":"","button_style":"solid","button_open_new_tab":false,"card_color_text":"#212c4d","color_button_text":"#ffffff","color_button":"#2563eb","card_color_background":"#ffffff","card_color_background_gradient":""}},"column_GDembi":{"type":"column","settings":{"icon":"speakerphone","title":"Whistleblowing","text":"<p><a href=\"mailto:WB@fixed.zone\">WB@fixed.zone<br\/><\/a>+420 385 310 120 <br\/>(telefon pro zanechání záznamu)<\/p>","link_label":"","link":"","button_style":"solid","button_open_new_tab":false,"card_color_text":"#121212","color_button_text":"#ffffff","color_button":"#2563eb","card_color_background":"#f8fafc","card_color_background_gradient":""}}},"block_order":["column_wh4nX8","column_4naCn6","column_NDpDk7","column_Gr8YRz","column_GDembi"],"custom_css":[".multicolumn-card__image-wrapper {box-shadow: 0 0px 0px 0px rgba(var(--color-foreground), 0), 0 0px 0px 0px rgba(var(--color-foreground), 0);}"],"settings":{"title":"Kontaktujte nás","subtitle":"","heading_size":"h2","media_type":"icon","media_width_desktop":"50","image_ratio":"adapt","text_position":"bottom","columns_desktop":5,"columns_tablet":3,"desktop_gap":30,"auto_fit":false,"column_alignment":"center","enable_shadow":false,"background_transparent":true,"button_label":"","button_link":"","button_open_new_tab":false,"enable_section_box_layout":false,"color_scheme":"background-2","enable_parallax_scrolling_effect":true,"background_image_overlay_color":"button","columns_mobile":"1","mobile_gap":30,"media_width_mobile":"100","swipe_on_mobile":false,"text_boxes_border_thickness":0,"text_boxes_border_opacity":0,"text_boxes_radius":10,"padding_top":36,"padding_bottom":36}},"image_with_text_CeyKqL":{"type":"image-with-text","blocks":{"heading_DTfPxY":{"type":"heading","settings":{"heading":"FIXED.zone a. s.","heading_size":"h1","enable_bold_heading":true}},"text_PzkdHa":{"type":"text","settings":{"text":"<p>Výrobcem, dovozcem a distributorem produktů značky FIXED je společnost FIXED.zone a.s..<br\/>Budějovická 19, 370 01, Homole, Czech Republic<\/p><p><strong>IČ:<\/strong> 26036363, <strong>DIČ:<\/strong> CZ26036363<\/p><p><strong>Bankovní spojení:   <\/strong>CZK 8724732 \/ 0800 Česká spořitelna, a.s.<\/p><p><strong>EUR IBAN<\/strong> CZ8108000000000008866992 <\/p><p><strong>SWIFT: <\/strong>GIBACZPXXXX<\/p><p><strong>Spisová značka:<\/strong> C 10575 vedená u Krajského soudu v Českých Budějovicích<\/p><p><\/p><p><\/p><p><\/p>","text_style":"body"}}},"block_order":["heading_DTfPxY","text_PzkdHa"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/magsafe.png","height":"adapt","desktop_image_width":"small","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000000","gradient_heading":"","color_text":"#000000","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_icon":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"#ffffff","gradient_background_container":"","background_section":"#ffffff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"882ae9d2-b3e9-4bb3-b7c2-a3083565f24f":{"type":"maps","blocks":{"c580f205-257a-41c7-9377-71176d742903":{"type":"physical_address","settings":{"title":"Budějovická 19, 370 01 Homole"}},"template--18627972956461__882ae9d2-b3e9-4bb3-b7c2-a3083565f24f-16855376465a7fd714-1":{"type":"working_time","settings":{"title":"po - pá 8:00 – 16:00"}}},"block_order":["c580f205-257a-41c7-9377-71176d742903","template--18627972956461__882ae9d2-b3e9-4bb3-b7c2-a3083565f24f-16855376465a7fd714-1"],"settings":{"layout":"full_bleed","title":"Sídlo společnosti","heading_size":"h2","description":"","badge":"","image":"shopify:\/\/shop_images\/FIXED_SIDLO.jpg","overlapping_content_layout":true,"color_scheme":"background-2","api_library":"embed","coordinates":"48.93933679848296, 14.425866763249372","map_height":475,"map_zoom":11,"map_type":"roadmap","button_label":"Zobraz na mapě","button_style_secondary":false,"button_link":"https:\/\/www.google.com\/maps\/place\/FIXED.zone+a.s.\/@48.9391816,14.423225,17z\/data=!3m1!4b1!4m6!3m5!1s0x47734fd37d3113b3:0x25305ec44acc022c!8m2!3d48.9391781!4d14.4257999!16s%2Fg%2F1trpk08k?entry=ttu","accessibility_info":"Google Maps","padding_top":0,"padding_bottom":0}},"form":{"type":"contact-form","blocks":{"c9e382bc-285f-41fc-a753-956539360c7f":{"type":"address","disabled":true,"settings":{"name":"Zákaznická podpora","phone":" + 420 385 510 206","direction":"","email":"podpora@FIXED.zone"}},"c17536c2-bac0-4885-834f-6f3efc3850fa":{"type":"social_media_icons","settings":{"title":"Sledujte nás"}},"custom_text_WV4P8n":{"type":"custom_text","settings":{"title":"FIXED Services s.r.o.","content":"<p>Obchodní společnost<br\/><strong>FIXED Services s.r.o.<\/strong> IČO 098 07 420, se sídlem Budějovická 19, 370 01 Homole, zapsaná v obchodním rejstříku vedeném Krajským soudem v Českých Budějovicích, oddíl C, vložka 30586 pro prodej zboží prostřednictvím online obchodu umístěného na internetové adrese <a href=\"http:\/\/www.intercom.zone\/\" target=\"_blank\" title=\"FIXED.zone\">www.fixed.zone<\/a><\/p><p><strong>S ČÍM VÁM MŮŽEME POMOCI?<\/strong><br\/>Máte obecný dotaz nebo potřebujete vyřešit problém s konkrétním produktem? Kontaktujte nás do chatu v levém dolním rohu.<br\/><strong>Email:<\/strong> podpora@fixed.zone<br\/><strong>tel.:<\/strong> (+420) 385 510 206<\/p>"}}},"block_order":["c9e382bc-285f-41fc-a753-956539360c7f","c17536c2-bac0-4885-834f-6f3efc3850fa","custom_text_WV4P8n"],"settings":{"title":"Kontakt","subtitle":"","heading_size":"h2","color_scheme":"background-1","padding_top":24,"padding_bottom":24}},"image_with_text_YMQkmf":{"type":"image-with-text","blocks":{"heading_HVA3Kx":{"type":"heading","settings":{"heading":"FIXED.zone a.s.","heading_size":"h1","enable_bold_heading":true}},"text_rNQQwk":{"type":"text","settings":{"text":"<p>Budějovická 19, 270 01 Homole<\/p><p>po - pá     8:00 - 16:00<\/p>","text_style":"body"}},"button_wGkbck":{"type":"button","settings":{"button_label":"Zobraz na mapě","button_link":"https:\/\/www.google.com\/maps\/place\/FIXED.zone+a.s.\/@48.9391816,14.423225,17z\/data=!3m1!4b1!4m6!3m5!1s0x47734fd37d3113b3:0x25305ec44acc022c!8m2!3d48.9391781!4d14.4257999!16s%2Fg%2F1trpk08k?entry=ttu","button_style":"solid","button_open_new_tab":false}}},"block_order":["heading_HVA3Kx","text_rNQQwk","button_wGkbck"],"disabled":true,"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/FIXED_SIDLO.jpg","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000000","gradient_heading":"","color_text":"#000000","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_icon":"#000000","color_button_text":"#ffffff","color_button":"#ea5c5c","background_container":"#ffffff","gradient_background_container":"","background_section":"#ffffff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}}},"order":["multicolumn_jWx9hX","image_with_text_CeyKqL","882ae9d2-b3e9-4bb3-b7c2-a3083565f24f","form","image_with_text_YMQkmf"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_CeyKqL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_DTfPxY": {
+          "type": "heading",
+          "settings": {
+            "heading": "FIXED.zone a. s.",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_PzkdHa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Výrobcem, dovozcem a distributorem produktů značky FIXED je společnost FIXED.zone a.s..<br/>Budějovická 19, 370 01, Homole, Czech Republic</p><p><strong>IČ:</strong> 26036363, <strong>DIČ:</strong> CZ26036363</p><p><strong>Bankovní spojení:   </strong>CZK 8724732 / 0800 Česká spořitelna, a.s.</p><p><strong>EUR IBAN</strong> CZ8108000000000008866992 </p><p><strong>SWIFT: </strong>GIBACZPXXXX</p><p><strong>Spisová značka:</strong> C 10575 vedená u Krajského soudu v Českých Budějovicích</p><p></p><p></p><p></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DTfPxY",
+        "text_PzkdHa"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/magsafe.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "multicolumn_jWx9hX": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wh4nX8": {
+          "type": "column",
+          "settings": {
+            "icon": "ticket",
+            "title": "Servis & reklamace",
+            "text": "<p><a href=\"mailto:reklamace@fixed.zone\" target=\"_blank\" title=\"mailto:reklamace@fixed.zone\">reklamace@FIXED.zone  </a><br/>+ 420 724 161 817</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_4naCn6": {
+          "type": "column",
+          "settings": {
+            "icon": "shopping_cart",
+            "title": "E-shop objednávky",
+            "text": "<p><strong>Po – Pá</strong>: 8:00 – 16:00<strong><br/></strong><a href=\"mailto:podpora@FIXED.zone\" target=\"_blank\" title=\"mailto:podpora@FIXED.zone\">podpora@FIXED.zone</a><br/>+420 385 510 206 </p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#212c4d",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_NDpDk7": {
+          "type": "column",
+          "settings": {
+            "icon": "chat",
+            "title": "Podpora",
+            "text": "<p><strong>Po – Pá</strong>: 8:00 – 16:00 <br/><a href=\"mailto:podpora@fixed.zone\" target=\"_blank\" title=\"mailto:podpora@fixed.zone\">podpora@FIXED.zone</a>    <br/>+420 385 510 206              <br/><strong><br/></strong></p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#212c4d",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_Gr8YRz": {
+          "type": "column",
+          "settings": {
+            "icon": "scissors",
+            "title": "Výroba",
+            "text": "<p><strong>Po – Pá: </strong>8:00 – 14:00</p><p><strong>FIXED.zone a.s.<br/></strong>Žeranovská 8796 01 Prostějov</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#212c4d",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_GDembi": {
+          "type": "column",
+          "settings": {
+            "icon": "speakerphone",
+            "title": "Whistleblowing",
+            "text": "<p><a href=\"mailto:WB@fixed.zone\">WB@fixed.zone<br/></a>+420 385 310 120 <br/>(telefon pro zanechání záznamu)</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_wh4nX8",
+        "column_4naCn6",
+        "column_NDpDk7",
+        "column_Gr8YRz",
+        "column_GDembi"
+      ],
+      "custom_css": [
+        ".multicolumn-card__image-wrapper {box-shadow: 0 0px 0px 0px rgba(var(--color-foreground), 0), 0 0px 0px 0px rgba(var(--color-foreground), 0);}"
+      ],
+      "settings": {
+        "title": "Kontaktujte nás",
+        "subtitle": "",
+        "heading_size": "h2",
+        "media_type": "icon",
+        "media_width_desktop": "50",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 5,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "center",
+        "enable_shadow": false,
+        "background_transparent": true,
+        "button_label": "",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "background-2",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f": {
+      "type": "maps",
+      "blocks": {
+        "c580f205-257a-41c7-9377-71176d742903": {
+          "type": "physical_address",
+          "settings": {
+            "title": "Budějovická 19, 370 01 Homole"
+          }
+        },
+        "template--18627972956461__882ae9d2-b3e9-4bb3-b7c2-a3083565f24f-16855376465a7fd714-1": {
+          "type": "working_time",
+          "settings": {
+            "title": "po - pá 8:00 – 16:00"
+          }
+        }
+      },
+      "block_order": [
+        "c580f205-257a-41c7-9377-71176d742903",
+        "template--18627972956461__882ae9d2-b3e9-4bb3-b7c2-a3083565f24f-16855376465a7fd714-1"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "title": "Sídlo společnosti",
+        "heading_size": "h2",
+        "description": "",
+        "badge": "",
+        "image": "shopify://shop_images/FIXED_SIDLO.jpg",
+        "overlapping_content_layout": true,
+        "color_scheme": "background-2",
+        "api_library": "embed",
+        "coordinates": "48.93933679848296, 14.425866763249372",
+        "map_height": 475,
+        "map_zoom": 11,
+        "map_type": "roadmap",
+        "button_label": "Zobraz na mapě",
+        "button_style_secondary": false,
+        "button_link": "https://www.google.com/maps/place/FIXED.zone+a.s./@48.9391816,14.423225,17z/data=!3m1!4b1!4m6!3m5!1s0x47734fd37d3113b3:0x25305ec44acc022c!8m2!3d48.9391781!4d14.4257999!16s%2Fg%2F1trpk08k?entry=ttu",
+        "accessibility_info": "Google Maps",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "blocks": {
+        "c9e382bc-285f-41fc-a753-956539360c7f": {
+          "type": "address",
+          "disabled": true,
+          "settings": {
+            "name": "Zákaznická podpora",
+            "phone": " + 420 385 510 206",
+            "direction": "",
+            "email": "podpora@FIXED.zone"
+          }
+        },
+        "c17536c2-bac0-4885-834f-6f3efc3850fa": {
+          "type": "social_media_icons",
+          "settings": {
+            "title": "Sledujte nás"
+          }
+        },
+        "custom_text_WV4P8n": {
+          "type": "custom_text",
+          "settings": {
+            "title": "FIXED Services s.r.o.",
+            "content": "<p>Obchodní společnost<br/><strong>FIXED Services s.r.o.</strong> IČO 098 07 420, se sídlem Budějovická 19, 370 01 Homole, zapsaná v obchodním rejstříku vedeném Krajským soudem v Českých Budějovicích, oddíl C, vložka 30586 pro prodej zboží prostřednictvím online obchodu umístěného na internetové adrese <a href=\"http://www.intercom.zone/\" target=\"_blank\" title=\"FIXED.zone\">www.fixed.zone</a></p><p><strong>S ČÍM VÁM MŮŽEME POMOCI?</strong><br/>Máte obecný dotaz nebo potřebujete vyřešit problém s konkrétním produktem? Kontaktujte nás do chatu v levém dolním rohu.<br/><strong>Email:</strong> podpora@fixed.zone<br/><strong>tel.:</strong> (+420) 385 510 206</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c9e382bc-285f-41fc-a753-956539360c7f",
+        "c17536c2-bac0-4885-834f-6f3efc3850fa",
+        "custom_text_WV4P8n"
+      ],
+      "settings": {
+        "title": "Kontakt",
+        "subtitle": "",
+        "heading_size": "h2",
+        "color_scheme": "background-1",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_YMQkmf": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HVA3Kx": {
+          "type": "heading",
+          "settings": {
+            "heading": "FIXED.zone a.s.",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_rNQQwk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Budějovická 19, 270 01 Homole</p><p>po - pá     8:00 - 16:00</p>",
+            "text_style": "body"
+          }
+        },
+        "button_wGkbck": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zobraz na mapě",
+            "button_link": "https://www.google.com/maps/place/FIXED.zone+a.s./@48.9391816,14.423225,17z/data=!3m1!4b1!4m6!3m5!1s0x47734fd37d3113b3:0x25305ec44acc022c!8m2!3d48.9391781!4d14.4257999!16s%2Fg%2F1trpk08k?entry=ttu",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HVA3Kx",
+        "text_rNQQwk",
+        "button_wGkbck"
+      ],
+      "disabled": true,
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/FIXED_SIDLO.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#ea5c5c",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    }
+  },
+  "order": [
+    "image_with_text_CeyKqL",
+    "multicolumn_jWx9hX",
+    "882ae9d2-b3e9-4bb3-b7c2-a3083565f24f",
+    "form",
+    "image_with_text_YMQkmf"
+  ]
+}
