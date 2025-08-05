@@ -367,3 +367,40 @@ function pushSuccessMessage(content) {
 function pushErrorMessage(content) {
   pushMessage(content, 'error');
 }
+function waitForElement(selector, timeout = 5000) {
+  return new Promise((resolve, reject) => {
+    const el = document.querySelector(selector);
+    if (el) return resolve(el);
+
+    const observer = new MutationObserver(() => {
+      const el = document.querySelector(selector);
+      if (el) {
+        observer.disconnect();
+        resolve(el);
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    setTimeout(() => {
+      observer.disconnect();
+      reject(`Element ${selector} not found within ${timeout}ms`);
+    }, timeout);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
+  try {
+    const [watchButton, targetElement] = await Promise.all([
+      waitForElement(".gw-button-widget.gw-button-widget-v2.product-form__submit"),
+      waitForElement(".product__sale-box__footer-sep")
+    ]);
+
+    targetElement.insertAdjacentElement("afterend", watchButton);
+  } catch (err) {
+    console.warn("Element not found:", err);
+  }
+});
