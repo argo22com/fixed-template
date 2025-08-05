@@ -705,21 +705,10 @@
         "disabled": false,
         "settings": {}
       },
-      "2567389343055140935": {
-        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
+      "2300305662503788569": {
+        "type": "shopify://apps/avada-seo-suite/blocks/avada-seo/15507c6e-1aa3-45d3-b698-7e175e033440",
         "disabled": false,
         "settings": {}
-      },
-      "7870687481494312845": {
-        "type": "shopify://apps/wishlist-hero/blocks/app-embed/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
-        "disabled": false,
-        "settings": {
-          "customThemeName": "~",
-          "additionalWLButtonCssClasses": "",
-          "additionalWLCartBubbleCssClasses": "",
-          "extraHTMLToAppend": "",
-          "disableAutomaticButtonAddition": false
-        }
       }
     },
     "color_schemes": {
