@@ -367,40 +367,27 @@ function pushSuccessMessage(content) {
 function pushErrorMessage(content) {
   pushMessage(content, 'error');
 }
-function waitForElement(selector, timeout = 5000) {
-  return new Promise((resolve, reject) => {
-    const el = document.querySelector(selector);
-    if (el) return resolve(el);
-
-    const observer = new MutationObserver(() => {
-      const el = document.querySelector(selector);
-      if (el) {
-        observer.disconnect();
-        resolve(el);
-      }
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    setTimeout(() => {
-      observer.disconnect();
-      reject(`Element ${selector} not found within ${timeout}ms`);
-    }, timeout);
-  });
+function waitForElement(selector, callback, interval = 100, timeout = 5000) {
+  const startTime = Date.now();
+  const timer = setInterval(() => {
+    const element = document.querySelector(selector);
+    if (element) {
+      clearInterval(timer);
+      callback(element);
+    } else if (Date.now() - startTime > timeout) {
+      clearInterval(timer);
+    }
+  }, interval);
 }
 
-document.addEventListener("DOMContentLoaded", async function () {
-  try {
-    const [watchButton, targetElement] = await Promise.all([
-      waitForElement(".gw-button-widget.gw-button-widget-v2.product-form__submit"),
-      waitForElement(".product__sale-box__footer-sep")
-    ]);
-
-    targetElement.insertAdjacentElement("afterend", watchButton);
-  } catch (err) {
-    console.warn("Element not found:", err);
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  waitForElement(".gw-button-widget.gw-button-widget-v2.product-form__submit", function (watchButton) {
+    waitForElement("#wishlisthero-product-page-button-container", function (wishlistContainer) {
+      waitForElement(".product__sale-box__footer-sep", function (separator) {
+        const separatorClone = separator.cloneNode(true);
+        wishlistContainer.parentNode.insertBefore(watchButton, wishlistContainer);
+        wishlistContainer.parentNode.insertBefore(separatorClone, wishlistContainer);
+      });
+    });
+  });
 });
