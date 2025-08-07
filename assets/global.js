@@ -368,6 +368,8 @@ function pushErrorMessage(content) {
   pushMessage(content, 'error');
 }
 function waitForElement(selector, callback, interval = 100, timeout = 5000) {
+
+function waitForElement(selector, callback, interval = 100, timeout = 5000) {
   const startTime = Date.now();
   const timer = setInterval(() => {
     const element = document.querySelector(selector);
@@ -381,13 +383,19 @@ function waitForElement(selector, callback, interval = 100, timeout = 5000) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  waitForElement(".gw-button-widget.gw-button-widget-v2.product-form__submit", function (watchButton) {
-    waitForElement("#wishlisthero-product-page-button-container", function (wishlistContainer) {
-      waitForElement(".product__sale-box__footer-sep", function (separator) {
-        const separatorClone = separator.cloneNode(true);
-        wishlistContainer.parentNode.insertBefore(watchButton, wishlistContainer);
-        wishlistContainer.parentNode.insertBefore(separatorClone, wishlistContainer);
+  waitForElement(".product__sale-box__footer-sep", function (targetElement) {
+    waitForElement(".gw-button-widget.gw-button-widget-v2.product-form__submit", function (watchButton) {
+      waitForElement("#wishlisthero-product-page-button-container", function (wishlistContainer) {
+        if (watchButton && targetElement) {
+          targetElement.insertAdjacentElement("afterend", watchButton);
+        }
+        const separatorClone = targetElement.cloneNode(true);
+
+        watchButton.insertAdjacentElement("afterend", separatorClone);
+
+        separatorClone.insertAdjacentElement("afterend", wishlistContainer);
       });
     });
   });
 });
+
