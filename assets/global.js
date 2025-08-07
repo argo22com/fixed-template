@@ -383,19 +383,19 @@ function waitForElement(selector, callback, interval = 100, timeout = 5000) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  waitForElement(".product__sale-box__footer-sep", function (targetElement) {
-    waitForElement(".gw-button-widget.gw-button-widget-v2.product-form__submit", function (watchButton) {
-      waitForElement("#wishlisthero-product-page-button-container", function (wishlistContainer) {
-        if (watchButton && targetElement) {
-          targetElement.insertAdjacentElement("afterend", watchButton);
-        }
-        const separatorClone = targetElement.cloneNode(true);
+  waitForElement(".product__sale-box__footer-sep", function (separator) {
+    const watchButton = document.querySelector(".gw-button-widget.gw-button-widget-v2.product-form__submit");
+    const wishlistContainer = document.querySelector("#wishlisthero-product-page-button-container");
 
-        watchButton.insertAdjacentElement("afterend", separatorClone);
+    if (watchButton && separator && wishlistContainer) {
+      separator.insertAdjacentElement("afterend", watchButton);
 
-        separatorClone.insertAdjacentElement("afterend", wishlistContainer);
-      });
-    });
+      const separatorClone = separator.cloneNode(true);
+      watchButton.insertAdjacentElement("afterend", separatorClone);
+
+      separatorClone.insertAdjacentElement("afterend", wishlistContainer);
+    }
   });
 });
+
 
