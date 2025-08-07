@@ -168,6 +168,7 @@
 }
 .product__sale-box__footer {
     gap: 1rem!important;
+    justify-content: space-around!important;
 }
 .product__sale-box__footer-button.compare-add-button .text-small.caption-large{
     font-size: 12px!important;
