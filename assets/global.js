@@ -368,13 +368,15 @@ function pushErrorMessage(content) {
   pushMessage(content, 'error');
 }
 
-function waitForElement(selector, callback, interval = 100, timeout = 5000) {
+function waitForElements(selectors, callback, interval = 100, timeout = 5000) {
   const startTime = Date.now();
   const timer = setInterval(() => {
-    const element = document.querySelector(selector);
-    if (element) {
+    const elements = selectors.map(sel => document.querySelector(sel));
+    const allFound = elements.every(el => el !== null);
+
+    if (allFound) {
       clearInterval(timer);
-      callback(element);
+      callback(...elements);
     } else if (Date.now() - startTime > timeout) {
       clearInterval(timer);
     }
@@ -382,10 +384,12 @@ function waitForElement(selector, callback, interval = 100, timeout = 5000) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  waitForElement(".product__sale-box__footer-sep", function (targetElement) {
-    const watchButton = document.querySelector(".gw-button-widget.gw-button-widget-v2.product-form__submit");
-    if (watchButton && targetElement) {
-      targetElement.insertAdjacentElement("afterend", watchButton);
+  waitForElements(
+    [".product__sale-box__footer-sep", ".gw-button-widget.gw-button-widget-v2.product-form__submit"],
+    function (targetElement, watchButton) {
+      if (watchButton && targetElement) {
+        targetElement.insertAdjacentElement("afterend", watchButton);
+      }
     }
-  });
+  );
 });
