@@ -166,7 +166,10 @@
 .product__info-container #wishlisthero-product-page-button-container button:hover{
     color: rgb(var(--color-foreground), 1)!important;
 }
-.product__sale-box__footer-button.compare-add-button .text-small caption-large{
+.product__sale-box__footer {
+    gap: 1rem!important;
+}
+.product__sale-box__footer-button.compare-add-button .text-small.caption-large{
     font-size: 12px!important;
 }
 .product__info-container .gw-button-widget.gw-button-widget-v2 {
