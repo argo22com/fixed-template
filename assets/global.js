@@ -388,14 +388,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const wishlistContainer = document.querySelector("#wishlisthero-product-page-button-container");
 
     if (watchButton && separator && wishlistContainer) {
+      // Vložíme watchButton za separator
       separator.insertAdjacentElement("afterend", watchButton);
 
+      // Vytvoříme a vložíme klon separatoru za watchButton
       const separatorClone = separator.cloneNode(true);
       watchButton.insertAdjacentElement("afterend", separatorClone);
 
+      // Vložíme wishlistContainer za klon separatoru
       separatorClone.insertAdjacentElement("afterend", wishlistContainer);
     }
   });
 });
+
 
 
