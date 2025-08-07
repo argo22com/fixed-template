@@ -367,7 +367,6 @@ function pushSuccessMessage(content) {
 function pushErrorMessage(content) {
   pushMessage(content, 'error');
 }
-function waitForElement(selector, callback, interval = 100, timeout = 5000) {
 
 function waitForElement(selector, callback, interval = 100, timeout = 5000) {
   const startTime = Date.now();
