@@ -184,7 +184,7 @@
     color: rgb(var(--color-foreground), .7) !important;
     font-size: 12px !important;
     padding-left: 26px;
-    width: 288px;
+    width: auto;
     margin-top: 0;
     justify-content: flex-start;
     padding-left: 33px;
