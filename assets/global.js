@@ -388,18 +388,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const wishlistContainer = document.querySelector("#wishlisthero-product-page-button-container");
 
     if (watchButton && separator && wishlistContainer) {
-      // Vložíme watchButton za separator
-      separator.insertAdjacentElement("afterend", watchButton);
+      const parent = separator.parentNode;
 
-      // Vytvoříme a vložíme klon separatoru za watchButton
+      // Klon separatoru
       const separatorClone = separator.cloneNode(true);
-      watchButton.insertAdjacentElement("afterend", separatorClone);
 
-      // Vložíme wishlistContainer za klon separatoru
-      separatorClone.insertAdjacentElement("afterend", wishlistContainer);
+      // Vložíme v požadovaném pořadí:
+      parent.insertBefore(wishlistContainer, separator.nextSibling);
+      parent.insertBefore(separatorClone, wishlistContainer);
+      parent.insertBefore(watchButton, separatorClone);
     }
   });
 });
-
-
-
