@@ -390,11 +390,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (watchButton && separator && wishlistContainer) {
       const parent = separator.parentNode;
 
-      // Nejprve vložíme wishlistContainer za separator
-      parent.insertBefore(wishlistContainer, separator.nextSibling);
+      const newSeparator = document.createElement("span");
+      newSeparator.className = "product__sale-box__footer-sep";
 
-      // Pak vložíme watchButton ještě před wishlistContainer
-      parent.insertBefore(watchButton, wishlistContainer);
+      parent.insertBefore(wishlistContainer, separator.nextSibling);
+      parent.insertBefore(newSeparator, wishlistContainer);
+      parent.insertBefore(watchButton, newSeparator);
     }
   });
 });
