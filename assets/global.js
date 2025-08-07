@@ -385,11 +385,25 @@ function waitForElements(selectors, callback, interval = 100, timeout = 5000) {
 
 document.addEventListener("DOMContentLoaded", function () {
   waitForElements(
-    [".product__sale-box__footer-sep", ".gw-button-widget.gw-button-widget-v2.product-form__submit"],
-    function (targetElement, watchButton) {
-      if (watchButton && targetElement) {
-        targetElement.insertAdjacentElement("afterend", watchButton);
-      }
+    [
+      ".product__sale-box__footer-sep", // referenční bod pro vložení
+      ".gw-button-widget.gw-button-widget-v2.product-form__submit", // naše GW tlačítko
+      "#wishlisthero-product-page-button-container" // wishlist
+    ],
+    function (separatorRef, gwButton, wishlistButton) {
+      // 1. Přesunout GW tlačítko hned za .product__sale-box__footer-sep
+      separatorRef.insertAdjacentElement("afterend", gwButton);
+
+      // 2. Vytvořit nový separator
+      const newSeparator = document.createElement("span");
+      newSeparator.className = "product__sale-box__footer-sep";
+
+      // 3. Vložit separator za GW tlačítko
+      gwButton.insertAdjacentElement("afterend", newSeparator);
+
+      // 4. Vložit wishlist tlačítko za nový separator
+      newSeparator.insertAdjacentElement("afterend", wishlistButton);
     }
   );
 });
+
