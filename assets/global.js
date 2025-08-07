@@ -390,13 +390,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (watchButton && separator && wishlistContainer) {
       const parent = separator.parentNode;
 
-      // Klon separatoru
-      const separatorClone = separator.cloneNode(true);
-
-      // Vložíme v požadovaném pořadí:
+      // Nejprve vložíme wishlistContainer za separator
       parent.insertBefore(wishlistContainer, separator.nextSibling);
-      parent.insertBefore(separatorClone, wishlistContainer);
-      parent.insertBefore(watchButton, separatorClone);
+
+      // Pak vložíme watchButton ještě před wishlistContainer
+      parent.insertBefore(watchButton, wishlistContainer);
     }
   });
 });
