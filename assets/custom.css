@@ -345,5 +345,16 @@
   .product__sale-box__footer {
     gap: 0.5rem!important;
     display: grid;
+    align-self: flex-start!important;
+  }
+  #wishlisthero-product-page-button-container {
+      padding-top: 0px !important;
+  }
+  .product__info-container .gw-button-widget.gw-button-widget-v2 {
+      margin-top: 0;
+      justify-content: flex-start;
+      padding-left: 28px;
+      margin-left: -4px;
+      margin-top: 5px;
   }
 }
