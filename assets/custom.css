@@ -271,7 +271,7 @@
     position: relative;
   }
   #wishlisthero-product-page-button-container {
-    padding-top: 4px;
+    padding-top: 4px!important;
   }
   #wishlisthero-product-page-button-container span {
     display: flex;
