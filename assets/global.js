@@ -383,10 +383,20 @@ function waitForElement(selector, callback, interval = 100, timeout = 5000) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  waitForElement(".product__sale-box__footer-sep", function (targetElement) {
+  waitForElement(".product__sale-box__footer-sep", function (separator) {
     const watchButton = document.querySelector(".gw-button-widget.gw-button-widget-v2.product-form__submit");
-    if (watchButton && targetElement) {
-      targetElement.insertAdjacentElement("afterend", watchButton);
+    const wishlistContainer = document.querySelector("#wishlisthero-product-page-button-container");
+
+    if (watchButton && separator && wishlistContainer) {
+      const parent = separator.parentNode;
+
+      // Klon separatoru
+      const separatorClone = separator.cloneNode(true);
+
+      // Vložíme v požadovaném pořadí:
+      parent.insertBefore(wishlistContainer, separator.nextSibling);
+      parent.insertBefore(separatorClone, wishlistContainer);
+      parent.insertBefore(watchButton, separatorClone);
     }
   });
 });
