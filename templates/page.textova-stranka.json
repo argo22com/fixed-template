@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -197,7 +197,7 @@
         "featured_collection_PDzqLc": {
           "type": "featured_collection",
           "settings": {
-            "collection": "verona",
+            "collection": "pouzdra-na-telefony-z-umele-kuze",
             "custom_image": "shopify://shop_images/verona_1_0b2940a3-4031-4311-a5c8-0a149193cb51.jpg",
             "custom_title": "Taštičky na mobil Verona"
           }
