@@ -96,8 +96,8 @@
         "featured_collection_WMUJtn": {
           "type": "featured_collection",
           "settings": {
-            "collection": "pouzdra-na-tablety-z-umele-kuze",
-            "custom_image": "shopify://shop_images/1B1A0588.jpg",
+            "collection": "siena",
+            "custom_image": "shopify://shop_images/1B1A0152_7f5f3528-ce57-4a92-97b5-d648c928f966.jpg",
             "custom_title": "OBALY NA TABLETY"
           }
         },
@@ -105,7 +105,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "pouzdra-na-notebooky-z-umele-kuze",
-            "custom_image": "shopify://shop_images/york_ls2.jpg",
+            "custom_image": "shopify://shop_images/1B1A8739.jpg",
             "custom_title": "OBALY NA NOTEBOOKY"
           }
         }
