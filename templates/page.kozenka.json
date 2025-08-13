@@ -413,7 +413,7 @@
             "title": "Bestsellery",
             "collection": "pouzdra-z-umele-kuze-na-telefony-tablety-i-notebooky",
             "products_to_show": 6,
-            "columns_desktop": 3,
+            "columns_desktop": 4,
             "show_view_all": true,
             "view_all_style": "solid"
           }
