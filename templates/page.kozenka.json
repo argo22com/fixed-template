@@ -467,6 +467,7 @@
         "heading_ceCYpX",
         "text_4UtjNC"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "large",
@@ -501,6 +502,7 @@
         "heading_JW7Xxj",
         "text_LgN74N"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/rucni_vyroba.jpg",
@@ -555,6 +557,7 @@
         "heading_jPWPVM",
         "text_PjkGfz"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/rucni_vyroba2.jpg",
