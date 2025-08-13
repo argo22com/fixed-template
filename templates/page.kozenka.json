@@ -141,14 +141,14 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>Pečlivě vyrobené doplňky pro vaše zařízení</h3>",
+            "heading": "<h3>Až 70 % sleva na produkty z umělé kůže, pouze do vyprodání zásob</h3>",
             "heading_size": "h2"
           }
         },
         "text_PTb6yL": {
           "type": "text",
           "settings": {
-            "text": "<p>Na každém koženém doplňku si dáváme záležet, jenom tak můžeme dosáhnout té nejvyšší kvality. Od návrhu designu, přípravy kůže, střihu, pečlivé výroby až po důkladnou kontrolu. Tak vzniká dokonalý výrobek s vůní pravé kůže.</p>"
+            "text": "<p>Slaď si všechna svoje zařízení do obalů z umělé kůže. Vyber si z 11 barev kvalitní koženky přesně podle tvého stylu.</p>"
           }
         }
       },
@@ -169,46 +169,6 @@
     },
     "text_icons_fictdW": {
       "type": "text-icons",
-      "blocks": {
-        "text_icon_Cimifi": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/warranty_1.png",
-            "title": "",
-            "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_FKQJQ6": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/natural-material.png",
-            "title": "",
-            "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_rHAfmj": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/top-grain-1.png",
-            "title": "",
-            "subheading": "Na výběru kůže záleží, proto máme jen to nejlepší od italských dodavatelů.",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "text_icon_Cimifi",
-        "text_icon_FKQJQ6",
-        "text_icon_rHAfmj"
-      ],
       "settings": {
         "title": "",
         "subtitle": "",
@@ -316,7 +276,7 @@
         "text_gXWYDt": {
           "type": "text",
           "settings": {
-            "text": "<p>Pečlivě vyrobené produkty z té nejlepší syntetické kůže se šrafováním. Vyber si z široké škály barev a produktů pro různá zařízení.</p><p>Tento materiál má mnohé výhody, k hlavním patří snadná údržba produktů a větší výběr barevných variant.</p>",
+            "text": "<p>Pečlivě vyrobené produkty v Prostějově z té nejlepší syntetické kůže se šrafováním. Vyber si z široké škály barev a produktů pro různá zařízení.</p><p>Tento materiál má mnohé výhody, k hlavním patří snadná údržba produktů a větší výběr barevných variant.</p>",
             "text_style": "body"
           }
         },
@@ -337,10 +297,74 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/1B1A0152.jpg",
+        "image": "shopify://shop_images/verona_1_0b2940a3-4031-4311-a5c8-0a149193cb51.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#e94200",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_FAeknh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_C8jHLA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Chceš  znát veškeré výhody umělé kůže?",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_Jax3dG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Přečti si článek na blogu, kde popisujeme výhody materiálu i to, jak se o produkty nejlépe starat. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_zPXHCm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Číst blog",
+            "button_link": "shopify://blogs/news/proc-jsou-produkty-z-kozenky-stale-popularnejsi-a-jak-o-tento-material-pecovat",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_C8jHLA",
+        "text_Jax3dG",
+        "button_zPXHCm"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/FIXSIE-15-WI-PRODUCT-10.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -376,10 +400,11 @@
             "product_list": [
               "tasticka-pres-rameno-s-kapsou-fixed-verona-s-cernou-snurkou-pro-mobilni-telefony-do-7-broskvova",
               "pouzdro-fixed-siena-pro-notebooky-a-tablety-o-uhlopricce-do-13-svetle-tyrkysove",
-              "kozena-tasticka-pres-rameno-s-kapsou-fixed-venezia-pro-7-mobilni-telefony-s-cernym-retizkem-cerna"
+              "univerzalni-pouzdro-fixed-lucca-se-zaviracim-popruhem-pro-telefony-do-6-3-svetle-zlute",
+              "pouzdro-fixed-york-pro-notebooky-o-uhlopricce-do-13-cerne"
             ],
-            "products_to_show": 3,
-            "columns_desktop": 3
+            "products_to_show": 4,
+            "columns_desktop": 4
           }
         },
         "featured_collection_Ccb8Vb": {
@@ -414,7 +439,7 @@
         "enable_quick_view": true,
         "show_color_swatches": true,
         "color_swatches_style": "custom",
-        "columns_tablet": "3",
+        "columns_tablet": "4",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -570,6 +595,7 @@
     "text_icons_fictdW",
     "image_with_text_zKVCnf",
     "image_with_text_VYpWNw",
+    "image_with_text_FAeknh",
     "featured_products_tabs_AyhByH",
     "rich_text_w69QNV",
     "image_with_text_MUzzfc",
