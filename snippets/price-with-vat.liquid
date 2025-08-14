@@ -20,7 +20,7 @@
   endif
 -%}
 {% if vat_price_rounded %}
-  <span class="strong price__vat">
+  <span class="strong price__vat test-price">
     {{ vat_price_rounded | money_without_trailing_zeros }}
   </span>
 {% endif %}
