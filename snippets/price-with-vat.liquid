@@ -8,20 +8,22 @@
   Usage:
   {% render 'price-with-vat', price: price, variant_vat_metafield: variant.metafield %}
 {%- endcomment -%}
-{% assign current_price = product.selected_or_first_available_variant.price %}
-{% assign original_price = product.selected_or_first_available_variant.compare_at_price %}
+{% assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value %}
+
+{% assign current_price_vat = product.selected_or_first_available_variant.price | times: vat_rate_multiplier %}
+{% assign original_price_vat = product.selected_or_first_available_variant.compare_at_price | times: vat_rate_multiplier %}
 
 <div class="product-pricing">
-  {% if original_price > current_price %}
+  {% if original_price_vat > current_price_vat %}
     <span class="price-original">
-      {{ original_price | money }}
+      {{ original_price_vat | money }}
     </span>
     <span class="price-sale">
-      {{ current_price | money }}
+      {{ current_price_vat | money }}
     </span>
   {% else %}
     <span class="price-normal">
-      {{ current_price | money }}
+      {{ current_price_vat | money }}
     </span>
   {% endif %}
 </div>
