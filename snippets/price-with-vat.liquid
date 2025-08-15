@@ -9,12 +9,21 @@
   {% render 'price-with-vat', price: price, variant_vat_metafield: variant.metafield %}
 {%- endcomment -%}
 {%- liquid
-  assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
-    assign vat_price = price | times: vat_rate_multiplier
-    assign vat_price_rounded = vat_price | divided_by: 100 | round: 1 | times: 100
+  # očekává: price = variant.price (v centech)
+  assign base_cents = price
+
+  # multiplikátor z metaobjektu, fallback = 1
+  assign multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value | default: 1
+
+  # pokud už má trh ceny s daní, nic nenásob (nativně jsou v price)
+  assign with_tax_cents = base_cents
+  unless shop.taxes_included
+    assign with_tax_cents = base_cents | times: multiplier | round: 0
+  endunless
 -%}
-{% if vat_price_rounded %}
+{% if with_tax_cents %}
   <span class="strong price__vat test-price2">
-    {{ vat_price_rounded | money_without_trailing_zeros }}
+    {{ with_tax_cents | money_without_trailing_zeros }}
   </span>
 {% endif %}
+
