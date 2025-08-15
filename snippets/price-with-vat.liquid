@@ -8,49 +8,20 @@
   Usage:
   {% render 'price-with-vat', price: price, variant_vat_metafield: variant.metafield %}
 {%- endcomment -%}
-{%- liquid
-  assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
-  assign base_price = product.selected_or_first_available_variant.price
-  assign vat_price = base_price | times: vat_rate_multiplier
-  assign vat_price_rounded = vat_price | divided_by: 100 | round: 1 | times: 100
--%}
+{% assign current_price = product.selected_or_first_available_variant.price %}
+{% assign original_price = product.selected_or_first_available_variant.compare_at_price %}
 
-<span class="strong price__vat js-price-with-vat"
-      data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-      data-vat-multiplier="{{ vat_rate_multiplier }}">
-  {{ vat_price_rounded | money_without_trailing_zeros }}
-</span>
-
-<script>
-document.addEventListener('DOMContentLoaded', async () => {
-  const vatPriceEl = document.querySelector('.js-price-with-vat');
-  if (!vatPriceEl) return;
-
-  const vatMultiplier = parseFloat(vatPriceEl.dataset.vatMultiplier);
-  const variantId = vatPriceEl.dataset.variantId;
-
-  try {
-    const cartResp = await fetch('/cart/add.js', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: variantId, quantity: 1 })
-    });
-    await cartResp.json();
-
-    const cartDataResp = await fetch('/cart.js');
-    const cartData = await cartDataResp.json();
-
-    const lineItem = cartData.items.find(item => item.variant_id == variantId);
-    if (lineItem) {
-      const discountedPrice = lineItem.final_line_price / lineItem.quantity / 100;
-      const priceWithVat = (discountedPrice * vatMultiplier).toFixed(2);
-      vatPriceEl.textContent = `${priceWithVat} ${cartData.currency}`;
-    }
-
-    await fetch('/cart/clear.js', { method: 'POST' });
-  } catch (err) {
-    console.error('Chyba při načítání ceny s DPH:', err);
-  }
-});
-</script>
-
+<div class="product-pricing">
+  {% if original_price > current_price %}
+    <span class="price-original">
+      {{ original_price | money }}
+    </span>
+    <span class="price-sale">
+      {{ current_price | money }}
+    </span>
+  {% else %}
+    <span class="price-normal">
+      {{ current_price | money }}
+    </span>
+  {% endif %}
+</div>
