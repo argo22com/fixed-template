@@ -10,14 +10,8 @@
 {%- endcomment -%}
 {%- liquid
   assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
-  if localization.country.currency.iso_code == 'CZK'
-    assign vat_multiplier = 1
-    assign vat_price = variant_vat_metafield | times: vat_multiplier | round: 1
-    assign vat_price_rounded = vat_price | times: 100
-  else
     assign vat_price = price | times: vat_rate_multiplier
     assign vat_price_rounded = vat_price | divided_by: 100 | round: 1 | times: 100
-  endif
 -%}
 {% if vat_price_rounded %}
   <span class="strong price__vat test-price">
