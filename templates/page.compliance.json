@@ -81,10 +81,10 @@
         "collapsible_row_EkYcRU": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "HUB",
+            "heading": "HUBy a klávesnice / HUBs and keyboards",
             "icon": "arrow_right",
             "row_content": "",
-            "page": ""
+            "page": "hub"
           }
         },
         "collapsible_row_HKJXEf": {
