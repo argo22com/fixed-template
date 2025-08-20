@@ -21,77 +21,14 @@
         "ul_li_marker": "#000000"
       }
     },
-    "image_banner_kDXK8x": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_wBG9MV": {
-          "type": "heading",
-          "settings": {
-            "heading": "Mediální centrum",
-            "size": "h0"
-          }
-        },
-        "text_8b9jXJ": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "caption-with-letter-spacing"
-          }
-        }
-      },
-      "block_order": [
-        "heading_wBG9MV",
-        "text_8b9jXJ"
-      ],
-      "settings": {
-        "layout": "stretched_grid",
-        "image": "shopify://shop_images/office-woman-hands-on-report.jpg",
-        "image_mobile": "shopify://shop_images/office-woman-hands-on-report.jpg",
-        "image_overlay_opacity": 30,
-        "image_height": "small",
-        "image_height_mobile": "small-mobile",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "left",
-        "keep_ltr": false,
-        "hide_when_empty_image": false,
-        "preload": false,
-        "enable_parallax_scrolling_effect": false,
-        "mobile_content_alignment": "left",
-        "show_text_below_image": false,
-        "color_text": "#ffffff",
-        "gradient_heading_desktop": "",
-        "color_button_text_1": "#000000",
-        "color_button_1": "#ffffff",
-        "color_button_text_2": "#000000",
-        "color_button_2": "#ffffff",
-        "colors_badge_foreground": "#ffffff",
-        "colors_badge_background": "#f87171",
-        "color_countdown_foreground": "#000000",
-        "color_countdown_background": "#ffffff",
-        "color_text_mobile": "#ffffff",
-        "gradient_heading_mobile": "",
-        "color_button_text_1_mobile": "#000000",
-        "color_button_1_mobile": "#ffffff",
-        "color_button_text_2_mobile": "#000000",
-        "color_button_2_mobile": "#ffffff",
-        "colors_badge_foreground_mobile": "#ffffff",
-        "colors_badge_background_mobile": "#f87171",
-        "color_countdown_foreground_mobile": "#000000",
-        "color_countdown_background_mobile": "#ffffff",
-        "background_container_mobile": "#565656",
-        "gradient_background_container_mobile": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "collapsible_content_AHHHxy": {
       "type": "collapsible-content",
       "blocks": {
         "collapsible_row_KYxBXK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "2025",
-            "icon": "pencil",
+            "heading": "Držáky / Holders",
+            "icon": "arrow_right",
             "row_content": "",
             "page": "2025"
           }
@@ -99,8 +36,8 @@
         "collapsible_row_fkqnBp": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "2024",
-            "icon": "pencil",
+            "heading": "Powerbanky / Powerbanks",
+            "icon": "arrow_right",
             "row_content": "",
             "page": "2024"
           }
@@ -108,8 +45,8 @@
         "collapsible_row_JJcMaG": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "2023",
-            "icon": "pencil",
+            "heading": "Audio",
+            "icon": "arrow_right",
             "row_content": "",
             "page": "2023"
           }
@@ -117,8 +54,8 @@
         "collapsible_row_DgkEEC": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "2022",
-            "icon": "pencil",
+            "heading": "Lokátory s podporou Find My / Find My Locators",
+            "icon": "arrow_right",
             "row_content": "",
             "page": "2022"
           }
@@ -126,10 +63,46 @@
         "collapsible_row_tQYjN3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "2021",
-            "icon": "pencil",
+            "heading": "Nabíječky / Chargers",
+            "icon": "arrow_right",
             "row_content": "",
             "page": "2021"
+          }
+        },
+        "collapsible_row_AtHgye": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Selfie tyče / Selfie Sticks",
+            "icon": "arrow_right",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_EkYcRU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HUB",
+            "icon": "arrow_right",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_HKJXEf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Sport",
+            "icon": "arrow_right",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_NDRPRY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Gaming",
+            "icon": "arrow_right",
+            "row_content": "",
+            "page": "gaming-1"
           }
         }
       },
@@ -138,11 +111,15 @@
         "collapsible_row_fkqnBp",
         "collapsible_row_JJcMaG",
         "collapsible_row_DgkEEC",
-        "collapsible_row_tQYjN3"
+        "collapsible_row_tQYjN3",
+        "collapsible_row_AtHgye",
+        "collapsible_row_EkYcRU",
+        "collapsible_row_HKJXEf",
+        "collapsible_row_NDRPRY"
       ],
       "settings": {
         "section_width": "grid",
-        "title": "Tiskové zprávy",
+        "title": "Prohlášení o shodě/Declarations of conformity",
         "subtitle": "",
         "heading_size": "h1",
         "enable_section_box_layout": false,
@@ -153,198 +130,6 @@
         "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "multicolumn_TQEhqY": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_PTFjer": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Jan_Plajner.jpg",
-            "icon": "check",
-            "title": "Kontakt pro média",
-            "text": "<h3><strong>Jan Plajner</strong></h3><p>Ředitel marketingu / CMO</p><p><a href=\"mailto:jan.plajner@fixed.zone\" target=\"_blank\" title=\"mailto:jan.plajner@fixed.zone\">Jan.Plajner@fixed.zone</a></p>",
-            "link_label": "Linkedin",
-            "link": "https://www.linkedin.com/in/janplajner/",
-            "button_style": "link",
-            "button_open_new_tab": true,
-            "card_color_text": "#000000",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#ffffff",
-            "card_color_background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_PTFjer"
-      ],
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h1",
-        "media_type": "image",
-        "media_width_desktop": "50",
-        "image_ratio": "square",
-        "text_position": "left",
-        "columns_desktop": 1,
-        "columns_tablet": 1,
-        "desktop_gap": 30,
-        "auto_fit": false,
-        "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": true,
-        "button_label": "",
-        "button_link": "",
-        "button_open_new_tab": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
-        "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
-        "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "text_icons_pUPhQy": {
-      "type": "text-icons",
-      "blocks": {
-        "text_icon_gnD4XG": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "fast_forward",
-            "custom_icon": "shopify://shop_images/facebook.png",
-            "title": "Facebook",
-            "subheading": "",
-            "link": "https://www.facebook.com/fixedcesko",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_BWwWyt": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify://shop_images/instagram-logo.png",
-            "title": "Instagram",
-            "subheading": "",
-            "link": "https://www.instagram.com/fixedcesko/",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_C4f6Wt": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify://shop_images/youtube.png",
-            "title": "Youtube",
-            "subheading": "",
-            "link": "https://www.youtube.com/channel/UCqZqDkRGsTIIVCcqCkfogvw",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_XFpXyW": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify://shop_images/tik-tok.png",
-            "title": "Tiktok",
-            "subheading": "",
-            "link": "https://www.tiktok.com/@fixedcesko",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_xAaQiB": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "check",
-            "custom_icon": "shopify://shop_images/linkedin.png",
-            "title": "Linkedin",
-            "subheading": "",
-            "link": "https://www.linkedin.com/company/fixedzone/mycompany/",
-            "open_link_in_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "text_icon_gnD4XG",
-        "text_icon_BWwWyt",
-        "text_icon_C4f6Wt",
-        "text_icon_XFpXyW",
-        "text_icon_xAaQiB"
-      ],
-      "settings": {
-        "title": "Sledujte nás",
-        "subtitle": "",
-        "heading_size": "h1",
-        "icon_width_desktop": 30,
-        "text_position": "bottom",
-        "enable_heading_in_box": false,
-        "columns_desktop": 5,
-        "columns_tablet": 3,
-        "auto_fit": false,
-        "column_alignment": "center",
-        "highlight_icon": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "border_width": 1,
-        "border_opacity": 0,
-        "border_spacing": 0,
-        "highlight_border": false,
-        "border_shape": "square",
-        "blur_background": false,
-        "columns_mobile": "1",
-        "icon_width_mobile": 30,
-        "border_spacing_mobile": 0,
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collapsible_content_Gp6UAE": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_XWMNVK": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Loga FIXED",
-            "icon": "download",
-            "row_content": "",
-            "page": "loga"
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_XWMNVK"
-      ],
-      "settings": {
-        "section_width": "grid",
-        "title": "Dokumenty ke stažení",
-        "subtitle": "",
-        "heading_size": "h1",
-        "enable_section_box_layout": false,
-        "color_scheme": "scheme-23f306a8-68ab-4175-b71b-505bbda9b2ac",
-        "open_first_collapsible_row": false,
-        "hide_image_on_mobile": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "graph_cVdgJT": {
-      "type": "graph",
-      "settings": {
-        "heading1": "Vývoj obratu",
-        "description1": "Celkový obrat v Kč",
-        "heading2": "Počet zaměstnanců",
-        "description2": "S růstem firmy roste počet zaměstnanců"
       }
     },
     "featured_blog_zrC8bP": {
@@ -524,12 +309,7 @@
   },
   "order": [
     "main",
-    "image_banner_kDXK8x",
     "collapsible_content_AHHHxy",
-    "multicolumn_TQEhqY",
-    "text_icons_pUPhQy",
-    "collapsible_content_Gp6UAE",
-    "graph_cVdgJT",
     "featured_blog_zrC8bP",
     "multicolumn_CaLPxP"
   ]
