@@ -93,7 +93,7 @@
             "heading": "Sport",
             "icon": "arrow_right",
             "row_content": "",
-            "page": ""
+            "page": "sport-compliance"
           }
         },
         "collapsible_row_NDRPRY": {
@@ -102,7 +102,7 @@
             "heading": "Gaming",
             "icon": "arrow_right",
             "row_content": "",
-            "page": "gaming-compliance"
+            "page": "gaming-1"
           }
         }
       },
