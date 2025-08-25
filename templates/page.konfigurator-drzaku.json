@@ -267,6 +267,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
+        "image": "shopify://shop_images/PO_FIXTAB-PAS-BK-PRODUCT-0.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -379,6 +380,39 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "rich_text_LdQjQw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7EaQ6w": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Nejsi si jistý jaký držák je pro tebe nejlepší?</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_cNcTCC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pošli nám do chatu v levém dolním rohu fotku palubové desky, či místa, kam chceš držák uchytit a naše podpora ti doporučí držák, který tam padne jako ulitý.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7EaQ6w",
+        "text_cNcTCC"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -390,6 +424,7 @@
     "image_with_text_MUzzfc",
     "image_with_text_t6gYAg",
     "image_with_text_jDFQML",
-    "rich_text_XTMjVU"
+    "rich_text_XTMjVU",
+    "rich_text_LdQjQw"
   ]
 }
