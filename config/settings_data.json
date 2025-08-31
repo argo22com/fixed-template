@@ -53,10 +53,10 @@
     "custom_badge_metafield_1": "product_badges.badge_new",
     "custom_badge_text_color_1": "#16a34a",
     "custom_badge_background_1": "#f0fdf4",
-    "custom_badge_metafield_2": "badge_bestseller",
-    "custom_badge_metafield_3": "badge_blackfriday",
-    "custom_badge_metafield_4": "badge_packing",
-    "custom_badge_metafield_5": "badge_lastpieces",
+    "custom_badge_metafield_2": "product_badges.badge_bestseller",
+    "custom_badge_metafield_3": "product_badges.badge_blackfriday",
+    "custom_badge_metafield_4": "product_badges.badge_packing",
+    "custom_badge_metafield_5": "product_badges.badge_lastpieces",
     "social_facebook_link": "https://www.facebook.com/fixedcesko",
     "social_instagram_link": "https://www.instagram.com/fixedcesko/",
     "social_youtube_link": "https://www.youtube.com/channel/UCqZqDkRGsTIIVCcqCkfogvw",
@@ -702,27 +702,6 @@
       },
       "2102808784413787648": {
         "type": "shopify://apps/kb-back-in-stock/blocks/main-app-embed/147a6f7f-6771-4f9b-8dc6-c14e6b24f32c",
-        "disabled": false,
-        "settings": {}
-      },
-      "7870687481494312845": {
-        "type": "shopify://apps/wishlist-hero/blocks/app-embed/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
-        "disabled": false,
-        "settings": {
-          "customThemeName": "~",
-          "additionalWLButtonCssClasses": "",
-          "additionalWLCartBubbleCssClasses": "",
-          "extraHTMLToAppend": "",
-          "disableAutomaticButtonAddition": false
-        }
-      },
-      "319724205969189013": {
-        "type": "shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3",
-        "disabled": false,
-        "settings": {}
-      },
-      "2567389343055140935": {
-        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
       }
