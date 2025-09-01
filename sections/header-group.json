@@ -17,7 +17,7 @@
         "announcement_QTYLrD": {
           "type": "announcement",
           "settings": {
-            "text": "Výprodej produktů s poškozeným obalem - sleva až 40%.",
+            "text": "Výprodej produktů s poškozeným obalem - sleva až 40 %.",
             "link": "shopify://collections/rozbaleno"
           }
         },
