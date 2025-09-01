@@ -76,7 +76,7 @@ product-price {
 .price__badge {
   background: rgb(var(--color-highlight), 0.05);
   border-radius: 0.3rem;
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 0.4rem 0.8rem;
 }
 
