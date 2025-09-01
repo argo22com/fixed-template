@@ -51,7 +51,7 @@
     "sold_out_badge_text_color": "#dc4405",
     "sold_out_badge_background": "#ffffff",
     "custom_badge_metafield_1": "product_badges.badge_new",
-    "custom_badge_text_color_1": "#16a34a",
+    "custom_badge_text_color_1": "#dc4405",
     "custom_badge_background_1": "#f0fdf4",
     "custom_badge_metafield_2": "product_badges.badge_bestseller",
     "custom_badge_metafield_3": "product_badges.badge_blackfriday",
