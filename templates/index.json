@@ -287,11 +287,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         },
         "promotion_banner_CJcEJX": {
@@ -316,11 +316,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         },
         "promotion_banner_eTBibR": {
@@ -345,11 +345,11 @@
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#fff",
+            "color_text": "#ffffff",
             "color_gradient_heading": "",
-            "color_button_text": "#fff",
-            "color_button": "#2563EB",
-            "color_badge": "#fff"
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         }
       },
@@ -461,13 +461,13 @@
         "column_QxJR8a": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/dashboard.4336.jpg",
+            "image": "shopify://shop_images/FIXA-BLC-LS2_b6a7f07f-4352-4b89-bebf-6e5dfae1ee00.jpg",
             "icon": "check",
-            "title": "Konfigurátor držáků",
-            "text": "<p>Sestav si držák přesně podle svých potřeb. Vyber si hlavu držáku, způsob jeho uchycení a zvol, zda má mít i funkci nabíjení. A získej držák, jaký potřebuješ.<br/></p>",
-            "link_label": "Zjistit více",
-            "link": "shopify://pages/konfigurator",
-            "button_style": "link",
+            "title": "Bezpečné nabíjení",
+            "text": "<p>S <strong>FIXED Data Blockerem</strong> si nabiješ telefon na veřejných místech úplně v klidu – propustí jen energii, zablokuje přenos dat a z tvého běžného USB kabelu udělá bezpečný nabíjecí kabel.</p>",
+            "link_label": "Koupit",
+            "link": "shopify://products/hlinikovy-usb-c-c-a-usb-c-u-data-blocker-2in1-fixed-sedy",
+            "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
@@ -504,11 +504,11 @@
             "text": "<p>Pořiď si to nejmodernější a nejvychytanější příslušenství nezávisle na tom, jaký máš telefon. Powerbanky, nabíječky, selfie tyče i držáky do auta - to nejlepší jenom pro tebe.</p>",
             "link_label": "Objevit",
             "link": "shopify://pages/magneticke-prislusenstvi-fixed",
-            "button_style": "link",
+            "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
-            "color_button": "#dc2626",
+            "color_button": "#dc4405",
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
@@ -519,14 +519,14 @@
             "image": "shopify://shop_images/1B1A5450-_2_a42785f1-fa32-40c5-bc3a-3207a9e8ad0c.jpg",
             "icon": "check",
             "title": "Armor",
-            "text": "<p>Ultraodolná skla Armor jsou tou nejlepší ochranou pro displeje telefonu. Jsou 3x odolnější než běžná skla proti pádům, poškrábání, ale i odleskům slunce.</p>",
+            "text": "<p>Ultraodolná skla Armor jsou tou nejlepší ochranou pro displeje telefonu. Jsou 3x odolnější než běžná skla proti pádům, poškrábání, ale i odleskům slunce. Skla jsou extrémně pružná a zároveň pevná.</p><p></p>",
             "link_label": "Zjistit více",
             "link": "shopify://pages/armor",
-            "button_style": "link",
+            "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
+            "color_button": "#dc4405",
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
