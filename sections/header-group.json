@@ -17,26 +17,19 @@
         "announcement_QTYLrD": {
           "type": "announcement",
           "settings": {
-            "text": "Výprodej produktů s poškozeným obalem - sleva až 40 %.",
-            "link": "shopify://collections/rozbaleno"
-          }
-        },
-        "announcement_AWMpzp": {
-          "type": "announcement",
-          "settings": {
-            "text": "Krabička utrpěla šrám, ale produkt je v pořádku s plnou zárukou. Sleva -40%.",
-            "link": "shopify://collections/rozbaleno"
+            "text": "FIXED Vám přeje krásné Vánoce!",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "announcement_QTYLrD",
-        "announcement_AWMpzp"
+        "announcement_QTYLrD"
       ],
+      "disabled": true,
       "settings": {
         "auto_rotate": true,
-        "change_slides_speed": 5,
-        "color_scheme": "scheme-36aa097d-226b-40ec-820b-ead6f9beef1b"
+        "change_slides_speed": 7,
+        "color_scheme": "scheme-bcfa08f7-5852-4351-8180-ec2418e795ce"
       }
     },
     "header": {
@@ -368,12 +361,12 @@
           "type": "mega_menu_promotion",
           "settings": {
             "trigger": "Blog",
-            "title": "Léto s MagSafe",
-            "image": "shopify://shop_images/magsafe_pack_orez.jpg",
+            "title": "Datablocker",
+            "image": "shopify://shop_images/ChatGPT_Image_Aug_21_2025_10_31_52_AM.png",
             "image_ratio": "square",
             "caption": "",
-            "heading_text": "Léto s MagSafe",
-            "subheading": "MagSafe doplňky, které ti na dovolené nesmí chybět.",
+            "heading_text": "Nabíjej bezpečně",
+            "subheading": "Připojuješ mobil do USB na nádraží? Připrav se na tohle…",
             "button_label": "číst",
             "button_style": "solid",
             "text_align": "center",
