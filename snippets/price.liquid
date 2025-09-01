@@ -103,7 +103,7 @@ endif
         {%- endunless -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
         <span class="price-item price-item--sale price-item--last{% if show_in_card %} price-item--sale-in-card{% endif %}">
-          {{ money_price }}
+          {% comment %}{{ money_price }} {% endcomment %}
         </span>
       </div>
       {%- unless show_in_card and product.selected_or_first_available_variant.unit_price_measurement == nil -%}
