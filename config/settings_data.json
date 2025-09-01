@@ -48,7 +48,7 @@
     "sale_badge_label": "percent",
     "sale_badge_text_color": "#dc2626",
     "sale_badge_background": "#fef2f2",
-    "sold_out_badge_text_color": "#ea5c5c",
+    "sold_out_badge_text_color": "#dc4405",
     "sold_out_badge_background": "#ffffff",
     "custom_badge_metafield_1": "product_badges.badge_new",
     "custom_badge_text_color_1": "#16a34a",
@@ -909,6 +909,26 @@
           "background_message_success": "#effdf4",
           "text_message_warning": "#a06207",
           "background_message_warning": "#fefce8",
+          "text_message_error": "#981c1b",
+          "background_message_error": "#fef2f2"
+        }
+      },
+      "scheme-36aa097d-226b-40ec-820b-ead6f9beef1b": {
+        "settings": {
+          "text": "#ffffff",
+          "sale_off_price": "#dc4405",
+          "compare_at_price": "#16a34a",
+          "background": "#dc4405",
+          "gradient_background": "",
+          "background_input": "#f9f9f9",
+          "solid_button_label_primary": "#ffffff",
+          "solid_button_background_primary": "#dc4405",
+          "review_stars": "#fbbf24",
+          "free_shipping_tracking_gradient_background": "linear-gradient(269.94deg, rgba(239, 68, 68, 1) 0.05%, rgba(251, 191, 36, 1) 99.95%)",
+          "text_message_success": "#166534",
+          "background_message_success": "#effdf4",
+          "text_message_warning": "#ffffff",
+          "background_message_warning": "#dc4405",
           "text_message_error": "#981c1b",
           "background_message_error": "#fef2f2"
         }
