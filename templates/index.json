@@ -65,6 +65,7 @@
         "promotion_banner_KJrVBr": {
           "type": "promotion-banner",
           "settings": {
+            "image": "shopify://shop_images/FIXSHM-1403-TR-PRODUCT-7.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -124,6 +125,8 @@
         "promotion_banner_daGbU4": {
           "type": "promotion-banner",
           "settings": {
+            "image": "shopify://shop_images/FIXSHM-1403-TR-PRODUCT-8.jpg",
+            "image_mobile": "shopify://shop_images/FIXSHM-1402-TR-PRODUCT-8.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
