@@ -162,7 +162,8 @@
         "promotion_banner_daGbU4"
       ],
       "custom_css": [
-        ".banner-grid__item__box .banner-grid__button {margin-top: 40px; /* posune dolů o 40px, můžeš změnit */}"
+        ".banner-grid__item__box {position: relative;}",
+        ".banner-grid__item__box .banner-grid__button {position: absolute; bottom: 20px; /* vzdálenost od spodního okraje */ left: 50%; transform: translateX(-50%); /* zarovná na střed */ }"
       ],
       "name": "t:sections.banner-grid.presets.name",
       "settings": {
