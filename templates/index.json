@@ -26,7 +26,7 @@
             "button_style": "primary",
             "badge": "",
             "badge_style": "blur",
-            "url": "",
+            "url": "shopify://products/powerbanka-fixed-magzen-5-crystal-s-bezdratovym-nabijenim-se-standardem-qi2-a-podporou-magsafe-5-000-mah-ruzova",
             "enable_parallax_scrolling_effect": false,
             "desktop_column": 2,
             "desktop_row": 1,
@@ -72,7 +72,7 @@
             "color_gradient_heading": "",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "color_button_text_2": "#0a0a0a",
+            "color_button_text_2": "#dc4405",
             "color_button_2": "#fafafa",
             "color_badge": "#ffffff"
           }
@@ -91,7 +91,7 @@
             "button_style": "primary",
             "badge": "",
             "badge_style": "box",
-            "url": "",
+            "url": "shopify://products/hlinikovy-usb-c-c-a-usb-c-u-data-blocker-2in1-fixed-sedy",
             "enable_parallax_scrolling_effect": false,
             "desktop_column": 2,
             "desktop_row": 1,
@@ -111,27 +111,28 @@
         "promotion_banner_CJcEJX": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/3roky-ctverec.png",
+            "image": "shopify://shop_images/3roky_blank.png",
+            "image_mobile": "shopify://shop_images/3roky_blank.png",
             "image_overlay_opacity": 0,
-            "heading": "",
+            "heading": "3 roky",
             "heading_size": "h1",
-            "text": "",
-            "text_style": "body",
+            "text": "<a href=\"/pages/zaruka\" title=\"Záruka\"><strong>záruka</strong></a>",
+            "text_style": "caption-with-letter-spacing",
             "button_label": "",
-            "button_style": "primary",
+            "button_style": "link",
             "badge": "",
             "badge_style": "box",
-            "url": "",
+            "url": "shopify://pages/zaruka",
             "enable_parallax_scrolling_effect": false,
             "desktop_column": 1,
             "desktop_row": 1,
-            "desktop_content_position": "middle-center",
+            "desktop_content_position": "bottom-center",
             "desktop_narrow_content": false,
             "elements_gap_desktop": "1.5",
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
+            "color_text": "#00a9e0",
             "color_gradient_heading": "",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
@@ -142,6 +143,7 @@
           "type": "promotion-banner",
           "settings": {
             "image": "shopify://shop_images/Doprava_ZDARMA_Blank_1.png",
+            "image_mobile": "shopify://shop_images/Doprava_ZDARMA_Blank_2.png",
             "image_overlay_opacity": 0,
             "heading": "ZDARMA",
             "heading_size": "h1",
@@ -176,7 +178,6 @@
         "promotion_banner_CJcEJX",
         "promotion_banner_i6heYP"
       ],
-      "disabled": true,
       "name": "t:sections.banner-grid.presets.name",
       "settings": {
         "layout": "grid",
@@ -189,7 +190,7 @@
         "media_border_opacity": 5,
         "media_radius": 15,
         "enable_shadow": true,
-        "padding_top": 4,
+        "padding_top": 12,
         "padding_bottom": 16
       }
     },
@@ -425,6 +426,7 @@
         "slide_Pb37rp",
         "6d524d43-1bde-474f-b4c0-f6b07a06c8be"
       ],
+      "disabled": true,
       "custom_css": [
         ".slideshow__progress__path {stroke: #dc4405;}",
         ".slider-counter__link--active.slider-counter__link--dots .dot,.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
@@ -444,6 +446,40 @@
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 0,
         "padding_bottom": 12
+      }
+    },
+    "featured_collection_xcmLFp": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Produkty měsíce",
+        "subtitle": "",
+        "collection": "zpatky-do-skoly",
+        "heading_size": "h2",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": true,
+        "show_view_all": true,
+        "enable_desktop_slider": true,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image": "shopify://shop_images/mix.1495.jpg",
+        "image_position_desktop": "left",
+        "image_height": "adapt_product_list",
+        "image_height_mobile": "34",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 76
       }
     },
     "1756715191a0d80543": {
@@ -718,40 +754,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "featured_collection_xcmLFp": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "TOP produkty",
-        "subtitle": "",
-        "collection": "bestsellers",
-        "heading_size": "h2",
-        "products_to_show": 3,
-        "columns_desktop": 3,
-        "full_width": true,
-        "show_view_all": true,
-        "enable_desktop_slider": true,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "image": "shopify://shop_images/mix.1495.jpg",
-        "image_position_desktop": "left",
-        "image_height": "adapt_product_list",
-        "image_height_mobile": "34",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "enable_compare": true,
-        "enable_quick_view": true,
-        "show_color_swatches": true,
-        "color_swatches_style": "custom",
-        "columns_tablet": "3",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 76
       }
     },
     "gallery_hgMnHR": {
@@ -1188,12 +1190,12 @@
   "order": [
     "banner_grid_KRdaxm",
     "518b8ced-997b-408e-84d5-64fe5082a6a1",
+    "featured_collection_xcmLFp",
     "1756715191a0d80543",
     "17225355129c0ff813",
     "rich_text_RPc8kt",
     "multicolumn_Liefqw",
     "collection_list_ndxz9L",
-    "featured_collection_xcmLFp",
     "gallery_hgMnHR",
     "featured_collection_Ma4mPk",
     "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
