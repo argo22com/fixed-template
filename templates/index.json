@@ -161,6 +161,9 @@
         "promotion_banner_BPAxUg",
         "promotion_banner_daGbU4"
       ],
+      "custom_css": [
+        ".banner-grid__item__box .banner-grid__button {margin-top: 40px; /* posune dolů o 40px, můžeš změnit */}"
+      ],
       "name": "t:sections.banner-grid.presets.name",
       "settings": {
         "layout": "grid",
