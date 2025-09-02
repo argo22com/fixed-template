@@ -56,6 +56,15 @@
             "color_scheme": "inverse"
           }
         },
+        "menu_badge_jiY3QX": {
+          "type": "menu_badge",
+          "settings": {
+            "trigger": "Poškozené balení",
+            "text": "Výprodej -40 %",
+            "text_color": "#ffffff",
+            "background_color": "#dc4405"
+          }
+        },
         "mega_menu_promotion_YqyFiJ": {
           "type": "mega_menu_promotion",
           "disabled": true,
@@ -465,6 +474,7 @@
       },
       "block_order": [
         "mega_menu_promotion_UdqXan",
+        "menu_badge_jiY3QX",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_JjNkGB",
         "mega_menu_promotion_NP3Wit",
