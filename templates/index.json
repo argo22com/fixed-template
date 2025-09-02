@@ -21,11 +21,11 @@
         "promotion_banner_z4HRYN": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/3roky2_2cef315a-d5c2-4cf3-a5a4-3bd3d50e8daa.jpg",
-            "image_overlay_opacity": 50,
-            "heading": "Záruka 3 roky",
+            "image": "shopify://shop_images/3roky-zaruka.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
             "heading_size": "h2",
-            "text": "Stojíme si za kvalitou našich produktů, a proto vám nabízíme prodlouženou záruku.",
+            "text": "",
             "text_style": "subtitle",
             "button_label": "",
             "button_style": "link",
@@ -65,11 +65,11 @@
         "promotion_banner_BPAxUg": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/realistick-obr-zek-ilustruj-c-dopravu-zdarma-text-si-dopln-m-s-m.png",
-            "image_overlay_opacity": 50,
-            "heading": "Doprava zdarma",
+            "image": "shopify://shop_images/Doprava_zdarma.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
             "heading_size": "h1",
-            "text": "Nakup nad 500 Kč a získáš dopravu zdarma!",
+            "text": "",
             "text_style": "body",
             "button_label": "",
             "button_style": "primary",
