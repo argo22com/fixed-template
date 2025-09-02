@@ -164,7 +164,7 @@
       "name": "t:sections.banner-grid.presets.name",
       "settings": {
         "layout": "grid",
-        "desktop_row_height": 19,
+        "desktop_row_height": 23,
         "desktop_gap": 15,
         "mobile_gap": 10,
         "hide_when_empty_content": true,
