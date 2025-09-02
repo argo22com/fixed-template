@@ -338,7 +338,7 @@
         "3753f6b7-733c-49d7-881c-f8fe4195e49f": {
           "type": "menu_label",
           "settings": {
-            "title": "Doprava a platba",
+            "title": "Doprava zdarma od 500 Kč",
             "icon": "delivery",
             "link": "shopify://pages/zpusoby-dopravy-a-platby"
           }
