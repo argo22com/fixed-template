@@ -15,11 +15,12 @@
         "promotion_banner_AeEKmF": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/MagZen5button2_1.png",
+            "image": "shopify://shop_images/MagZenCrystalBanner5.png",
+            "image_mobile": "shopify://shop_images/FIXZENMC-5-LS2.jpg",
             "image_overlay_opacity": 0,
-            "heading": "",
+            "heading": "MagZen 5 Crystal",
             "heading_size": "h2",
-            "text": "",
+            "text": "Powerbanka",
             "text_style": "body",
             "button_label": "Koupit",
             "button_style": "primary",
@@ -29,16 +30,16 @@
             "enable_parallax_scrolling_effect": false,
             "desktop_column": 2,
             "desktop_row": 1,
-            "desktop_content_position": "bottom-right",
+            "desktop_content_position": "middle-right",
             "desktop_narrow_content": false,
             "elements_gap_desktop": "3",
             "image_height_mobile": "medium-mobile",
             "mobile_content_alignment": "center",
             "elements_gap_mobile": "1.5",
-            "color_text": "#ffffff",
+            "color_text": "#f9f9f9",
             "color_gradient_heading": "",
             "color_button_text": "#ffffff",
-            "color_button": "#dc4405",
+            "color_button": "#e94200",
             "color_badge": "#000000"
           }
         },
@@ -79,11 +80,12 @@
         "promotion_banner_eTBibR": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/DataBlockerBanner2.png",
+            "image": "shopify://shop_images/DataBlockerBanner5.png",
+            "image_mobile": "shopify://shop_images/FIXA-BLC-LS2_b6a7f07f-4352-4b89-bebf-6e5dfae1ee00.jpg",
             "image_overlay_opacity": 0,
-            "heading": "",
+            "heading": "DataBlocker",
             "heading_size": "h1",
-            "text": "",
+            "text": "Ochraň svá data",
             "text_style": "body",
             "button_label": "Koupit",
             "button_style": "primary",
@@ -93,7 +95,7 @@
             "enable_parallax_scrolling_effect": false,
             "desktop_column": 2,
             "desktop_row": 1,
-            "desktop_content_position": "bottom-right",
+            "desktop_content_position": "middle-right",
             "desktop_narrow_content": false,
             "elements_gap_desktop": "1.5",
             "image_height_mobile": "medium-mobile",
@@ -102,8 +104,8 @@
             "color_text": "#ffffff",
             "color_gradient_heading": "",
             "color_button_text": "#ffffff",
-            "color_button": "#dc4405",
-            "color_badge": "#ffffff"
+            "color_button": "#e94200",
+            "color_badge": "#000000"
           }
         },
         "promotion_banner_CJcEJX": {
@@ -139,11 +141,11 @@
         "promotion_banner_i6heYP": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/Doprava_ZDARMA2.png",
+            "image": "shopify://shop_images/Doprava_ZDARMA_Blank_1.png",
             "image_overlay_opacity": 0,
-            "heading": "",
+            "heading": "ZDARMA",
             "heading_size": "h1",
-            "text": "",
+            "text": "pro objednávky nad 500 Kč",
             "text_style": "body",
             "button_label": "",
             "button_style": "primary",
@@ -153,7 +155,7 @@
             "enable_parallax_scrolling_effect": false,
             "desktop_column": 1,
             "desktop_row": 1,
-            "desktop_content_position": "middle-center",
+            "desktop_content_position": "bottom-center",
             "desktop_narrow_content": false,
             "elements_gap_desktop": "1.5",
             "image_height_mobile": "medium-mobile",
@@ -178,7 +180,7 @@
       "name": "t:sections.banner-grid.presets.name",
       "settings": {
         "layout": "grid",
-        "desktop_row_height": 24,
+        "desktop_row_height": 30,
         "desktop_gap": 10,
         "mobile_gap": 10,
         "hide_when_empty_content": true,
@@ -187,8 +189,8 @@
         "media_border_opacity": 5,
         "media_radius": 15,
         "enable_shadow": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 4,
+        "padding_bottom": 16
       }
     },
     "518b8ced-997b-408e-84d5-64fe5082a6a1": {
