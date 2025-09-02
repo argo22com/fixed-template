@@ -33,7 +33,7 @@
             "badge_style": "underlined",
             "url": "",
             "enable_parallax_scrolling_effect": false,
-            "desktop_column": 3,
+            "desktop_column": 2,
             "desktop_row": 1,
             "desktop_content_position": "middle-center",
             "desktop_narrow_content": false,
@@ -58,8 +58,37 @@
             "enable_controls": false,
             "enable_video_looping": true,
             "desktop_column": 1,
-            "desktop_row": 3,
+            "desktop_row": 2,
             "image_height_mobile": "medium-mobile"
+          }
+        },
+        "promotion_banner_KJrVBr": {
+          "type": "promotion-banner",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "text": "",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#ffffff",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
           }
         },
         "promotion_banner_BPAxUg": {
@@ -92,14 +121,13 @@
             "color_badge": "#ffffff"
           }
         },
-        "promotion_banner_fUfnrb": {
+        "promotion_banner_daGbU4": {
           "type": "promotion-banner",
           "settings": {
-            "image": "shopify://shop_images/realistick-obr-zek-ilustruj-c-dopravu-zdarma-text-si-dopln-m-s-m.png",
             "image_overlay_opacity": 0,
-            "heading": "Třetí banner",
+            "heading": "",
             "heading_size": "h1",
-            "text": "Give customers details about the banner image(s) or content on the template",
+            "text": "",
             "text_style": "body",
             "button_label": "",
             "button_style": "primary",
@@ -107,7 +135,7 @@
             "badge_style": "box",
             "url": "",
             "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
+            "desktop_column": 1,
             "desktop_row": 1,
             "desktop_content_position": "middle-center",
             "desktop_narrow_content": false,
@@ -126,8 +154,9 @@
       "block_order": [
         "promotion_banner_z4HRYN",
         "promotion_video_UNBQaL",
+        "promotion_banner_KJrVBr",
         "promotion_banner_BPAxUg",
-        "promotion_banner_fUfnrb"
+        "promotion_banner_daGbU4"
       ],
       "name": "t:sections.banner-grid.presets.name",
       "settings": {
