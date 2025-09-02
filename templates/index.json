@@ -160,7 +160,7 @@
       ],
       "name": "t:sections.banner-grid.presets.name",
       "settings": {
-        "layout": "stretched_grid",
+        "layout": "grid",
         "desktop_row_height": 19,
         "desktop_gap": 15,
         "mobile_gap": 10,
