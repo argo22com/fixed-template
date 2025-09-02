@@ -95,8 +95,9 @@
         "promotion_banner_fUfnrb": {
           "type": "promotion-banner",
           "settings": {
+            "image": "shopify://shop_images/realistick-obr-zek-ilustruj-c-dopravu-zdarma-text-si-dopln-m-s-m.png",
             "image_overlay_opacity": 0,
-            "heading": "Image banner heading",
+            "heading": "Třetí banner",
             "heading_size": "h1",
             "text": "Give customers details about the banner image(s) or content on the template",
             "text_style": "body",
