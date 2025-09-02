@@ -33,7 +33,7 @@
             "badge_style": "underlined",
             "url": "",
             "enable_parallax_scrolling_effect": false,
-            "desktop_column": 2,
+            "desktop_column": 3,
             "desktop_row": 1,
             "desktop_content_position": "middle-center",
             "desktop_narrow_content": false,
@@ -57,7 +57,7 @@
             "autoplay": true,
             "enable_controls": false,
             "enable_video_looping": true,
-            "desktop_column": 2,
+            "desktop_column": 1,
             "desktop_row": 3,
             "image_height_mobile": "medium-mobile"
           }
