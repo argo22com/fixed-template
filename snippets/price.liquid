@@ -89,13 +89,16 @@ endif
                 {%- if settings.sale_badge_label == 'text' -%}
                   {{ 'products.product.on_sale' | t }}
                 {%- elsif settings.sale_badge_label == 'percent' -%}
-                  {{ target.price | minus: target.compare_at_price | times: 100.00 | divided_by: target.compare_at_price | round }}%
-                {%- else -%}
-                  {%- if settings.currency_code_enabled -%}
-                    -{{ target.compare_at_price | minus: target.price | money_with_currency }}
-                  {%- else -%}
-                    -{{ target.compare_at_price | minus: target.price | money }}
-                  {%- endif -%}
+  {% assign adjusted_compare_at = target.compare_at_price | divided_by: 1.21 %}
+  {{ target.price | minus: adjusted_compare_at | times: 100.00 | divided_by: adjusted_compare_at | round }}%
+{%- else -%}
+  {% assign adjusted_compare_at = target.compare_at_price | divided_by: 1.21 %}
+  {%- if settings.currency_code_enabled -%}
+    -{{ adjusted_compare_at | minus: target.price | money_with_currency }}
+  {%- else -%}
+    -{{ adjusted_compare_at | minus: target.price | money }}
+  {%- endif -%}
+
                 {%- endif -%}
               </span>
             {%- endif -%}
