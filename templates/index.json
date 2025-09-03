@@ -1191,7 +1191,6 @@
       "blocks": {
         "heureka_reviews_heureka_review_YmcUKM": {
           "type": "shopify://apps/heureka-reviews/blocks/heureka_review/6b1d450a-0cbe-475a-b2f9-0bd342111b5d",
-          "disabled": true,
           "settings": {
             "title": "Recenze našich zákazníků",
             "heading_size": "h2",
