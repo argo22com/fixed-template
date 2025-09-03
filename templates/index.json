@@ -1186,13 +1186,47 @@
         "padding_bottom": 72
       }
     },
+    "rich_text_VTpGF3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Q3p9C7": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<h3><strong>Talk about your brand</strong></h3>",
+            "heading_size": "h1"
+          }
+        },
+        "text_D93XFn": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Recenze našich zákazníků</strong></h3>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Q3p9C7",
+        "text_D93XFn"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "desktop_content_width": "small",
+        "content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
     "1756906366f4bc4740": {
       "type": "apps",
       "blocks": {
         "heureka_reviews_heureka_review_YmcUKM": {
           "type": "shopify://apps/heureka-reviews/blocks/heureka_review/6b1d450a-0cbe-475a-b2f9-0bd342111b5d",
           "settings": {
-            "title": "Recenze našich zákazníků",
+            "title": "",
             "heading_size": "h2",
             "description": "",
             "description_style": "body",
@@ -1238,6 +1272,7 @@
     "image_with_text_EW9q8n",
     "rich_text_trbrie",
     "newsletter_7jCQFM",
+    "rich_text_VTpGF3",
     "1756906366f4bc4740"
   ]
 }
