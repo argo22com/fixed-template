@@ -1207,7 +1207,7 @@
             "review_record_preset": "0",
             "show_percentage": false,
             "show_stars": true,
-            "number_of_review_rows": 1,
+            "number_of_review_rows": 3,
             "show_initials_name": "name",
             "columns_mobile": "2",
             "swipe_on_mobile": true
