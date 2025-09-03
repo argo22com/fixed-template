@@ -178,6 +178,7 @@
         "promotion_banner_CJcEJX",
         "promotion_banner_i6heYP"
       ],
+      "disabled": true,
       "name": "t:sections.banner-grid.presets.name",
       "settings": {
         "layout": "grid",
@@ -197,6 +198,43 @@
     "518b8ced-997b-408e-84d5-64fe5082a6a1": {
       "type": "slideshow",
       "blocks": {
+        "slide_LBwdxn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner5.jpg",
+            "mobile_image": "shopify://shop_images/banner5-mobil.jpg",
+            "badge_label": "",
+            "heading": "Kožené příslušenství",
+            "text": "Nadčasové doplňky pro vaše zařízení",
+            "hide_text_on_mobile": false,
+            "button_label": "Zjistit více",
+            "price": "",
+            "link": "shopify://collections/rucni-vyroba",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 20,
+            "text_alignment_mobile": "left",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#e31c79",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
+            "colors_text_mobile": "#ffffff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
         "slide_T3NJDj": {
           "type": "slide",
           "settings": {
@@ -259,43 +297,6 @@
             "colors_background": "#ffffff",
             "colors_badge_foreground": "#ffffff",
             "colors_badge_background": "#f87171",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
-            "colors_text_mobile": "#ffffff",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
-          }
-        },
-        "slide_LBwdxn": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/banner5.jpg",
-            "mobile_image": "shopify://shop_images/banner5-mobil.jpg",
-            "badge_label": "",
-            "heading": "Kožené příslušenství",
-            "text": "Nadčasové doplňky pro vaše zařízení",
-            "hide_text_on_mobile": false,
-            "button_label": "Zjistit více",
-            "price": "",
-            "link": "shopify://collections/rucni-vyroba",
-            "button_style": "primary",
-            "button_open_new_tab": false,
-            "box_align": "middle-left",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 20,
-            "text_alignment_mobile": "left",
-            "colors_text": "#ffffff",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#e31c79",
             "colors_button_text": "#ffffff",
             "colors_button": "#000000",
             "colors_text_mobile": "#ffffff",
@@ -419,14 +420,13 @@
         }
       },
       "block_order": [
+        "slide_LBwdxn",
         "slide_T3NJDj",
         "slide_AFmp8D",
-        "slide_LBwdxn",
         "slide_VnxEnd",
         "slide_Pb37rp",
         "6d524d43-1bde-474f-b4c0-f6b07a06c8be"
       ],
-      "disabled": true,
       "custom_css": [
         ".slideshow__progress__path {stroke: #dc4405;}",
         ".slider-counter__link--active.slider-counter__link--dots .dot,.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
