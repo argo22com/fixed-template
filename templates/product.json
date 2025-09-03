@@ -45,6 +45,8 @@
             "displayButtonMode": "~",
             "contentAlignment": "center",
             "buttonAlignment": "center",
+            "overrideFont": false,
+            "customFont": "helvetica_n4",
             "buttonFullwidth": true,
             "removeBoxShadowAndBorder": false,
             "horizontalPadding": 20,
@@ -166,7 +168,10 @@
         },
         "judge_me_reviews_review_widget_8VjJfr": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         },
         "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
           "type": "page_content",
@@ -222,6 +227,41 @@
       "type": "spacer",
       "settings": {
         "height": 40
+      }
+    },
+    "1756907534d5f70c79": {
+      "type": "apps",
+      "blocks": {
+        "heureka_reviews_heureka_review_hWCFDd": {
+          "type": "shopify://apps/heureka-reviews/blocks/heureka_review/6b1d450a-0cbe-475a-b2f9-0bd342111b5d",
+          "settings": {
+            "title": "",
+            "heading_size": "h2",
+            "description": "<h3><strong>Recenze našich zákazníků</strong></h3>",
+            "description_style": "body",
+            "reviews_to_show": 11,
+            "columns_desktop": 4,
+            "full_width": true,
+            "show_view_all": false,
+            "view_all_link": "",
+            "view_all_style": "solid",
+            "view_all_target": "_self",
+            "enable_desktop_slider": true,
+            "review_record_preset": "0",
+            "show_percentage": false,
+            "show_stars": true,
+            "number_of_review_rows": 3,
+            "show_initials_name": "name",
+            "columns_mobile": "2",
+            "swipe_on_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "heureka_reviews_heureka_review_hWCFDd"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "product-recommendations": {
@@ -281,6 +321,7 @@
     "main",
     "52bf00c5-c1a5-4bcd-9b87-204e690ab1d5",
     "8124c74c-24a1-4cc3-9369-91db0fab3a14",
+    "1756907534d5f70c79",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
     "0fcf424c-972e-4afd-b20d-49aaed072495",
