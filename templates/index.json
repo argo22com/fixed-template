@@ -143,11 +143,11 @@
           "type": "promotion-banner",
           "settings": {
             "image": "shopify://shop_images/Doprava_ZDARMA_Blank_1.png",
-            "image_mobile": "shopify://shop_images/Doprava_ZDARMA_Blank_2.png",
+            "image_mobile": "shopify://shop_images/Doprava_ZDARMA_Blank_1.png",
             "image_overlay_opacity": 0,
             "heading": "ZDARMA",
             "heading_size": "h1",
-            "text": "pro objednávky nad 500 Kč",
+            "text": "<a href=\"/collections/zpatky-do-skoly\" title=\"Zpátky do školy\">pro objednávky nad 500 Kč</a>",
             "text_style": "body",
             "button_label": "",
             "button_style": "primary",
