@@ -229,8 +229,8 @@
       "inventory_out_of_stock_continue_selling": "In stock",
       "quick_view": "Quick view a product",
       "number_of_reviews": {
-        "one": "{{ count }} review",
-        "other": "{{ count }} reviews"
+        "one": "<a href=\"shopify-section-template--15699446759506__52bf00c5-c1a5-4bcd-9b87-204e690ab1d5\">{{ count }} review</a>",
+        "other": "<a href=\"shopify-section-template--15699446759506__52bf00c5-c1a5-4bcd-9b87-204e690ab1d5\">{{ count }} reviews</a>"
       },
       "by_vendor_html": "<span>By</span> {{ vendor }}",
       "pre_order": "Pre-order",
