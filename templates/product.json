@@ -46,7 +46,7 @@
             "contentAlignment": "center",
             "buttonAlignment": "center",
             "overrideFont": false,
-            "customFont": "helvetica_n4",
+            "customFont": "sans_serif_n4",
             "buttonFullwidth": true,
             "removeBoxShadowAndBorder": false,
             "horizontalPadding": 20,
@@ -169,7 +169,7 @@
         "judge_me_reviews_review_widget_8VjJfr": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "review_data": "sample_data",
+            "review_data": "real_data",
             "max_width": 1200
           }
         },
