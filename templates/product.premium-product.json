@@ -352,41 +352,6 @@
         "overlay_color": "#1e40af"
       }
     },
-    "17569077888e954180": {
-      "type": "apps",
-      "blocks": {
-        "heureka_reviews_heureka_review_zj4xjr": {
-          "type": "shopify://apps/heureka-reviews/blocks/heureka_review/6b1d450a-0cbe-475a-b2f9-0bd342111b5d",
-          "settings": {
-            "title": "",
-            "heading_size": "h1",
-            "description": "<h3><strong>Recenze našich zákazníků</strong></h3>",
-            "description_style": "body",
-            "reviews_to_show": 6,
-            "columns_desktop": 3,
-            "full_width": true,
-            "show_view_all": false,
-            "view_all_link": "",
-            "view_all_style": "solid",
-            "view_all_target": "_self",
-            "enable_desktop_slider": true,
-            "review_record_preset": "0",
-            "show_percentage": false,
-            "show_stars": true,
-            "number_of_review_rows": 3,
-            "show_initials_name": "name",
-            "columns_mobile": "2",
-            "swipe_on_mobile": false
-          }
-        }
-      },
-      "block_order": [
-        "heureka_reviews_heureka_review_zj4xjr"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "video_GJcT4J": {
       "type": "video",
       "settings": {
@@ -494,6 +459,41 @@
     },
     "168088586605a49d77": {
       "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17569077888e954180": {
+      "type": "apps",
+      "blocks": {
+        "heureka_reviews_heureka_review_zj4xjr": {
+          "type": "shopify://apps/heureka-reviews/blocks/heureka_review/6b1d450a-0cbe-475a-b2f9-0bd342111b5d",
+          "settings": {
+            "title": "",
+            "heading_size": "h1",
+            "description": "<h3><strong>Recenze našich zákazníků</strong></h3>",
+            "description_style": "body",
+            "reviews_to_show": 6,
+            "columns_desktop": 3,
+            "full_width": true,
+            "show_view_all": false,
+            "view_all_link": "",
+            "view_all_style": "solid",
+            "view_all_target": "_self",
+            "enable_desktop_slider": true,
+            "review_record_preset": "0",
+            "show_percentage": false,
+            "show_stars": true,
+            "number_of_review_rows": 3,
+            "show_initials_name": "name",
+            "columns_mobile": "2",
+            "swipe_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heureka_reviews_heureka_review_zj4xjr"
+      ],
       "settings": {
         "include_margins": true
       }
