@@ -511,6 +511,7 @@
       "block_order": [
         "judge_me_reviews_featured_carousel_QNFhiN"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
