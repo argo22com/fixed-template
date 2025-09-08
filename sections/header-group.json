@@ -59,7 +59,7 @@
         "menu_badge_jiY3QX": {
           "type": "menu_badge",
           "settings": {
-            "trigger": "Poškozené balení",
+            "trigger": "Rozbaleno",
             "text": "Výprodej -40 %",
             "text_color": "#ffffff",
             "background_color": "#dc4405"
