@@ -125,6 +125,13 @@
         "padding_bottom": 40
       }
     },
+    "spacer_RKnFtF": {
+      "type": "spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height": 13
+      }
+    },
     "17573256685190508a": {
       "type": "apps",
       "blocks": {
@@ -521,6 +528,7 @@
   },
   "order": [
     "main",
+    "spacer_RKnFtF",
     "17573256685190508a",
     "image_with_text_rVJmD8",
     "image_with_text_i6bPEB",
