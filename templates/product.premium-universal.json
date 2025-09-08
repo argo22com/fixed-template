@@ -86,6 +86,10 @@
             "collections_label": "Kolekce"
           }
         },
+        "judge_me_reviews_review_snippet_widget_QNke6K": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
           "type": "complementary",
           "settings": {
@@ -110,6 +114,7 @@
         "price",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
+        "judge_me_reviews_review_snippet_widget_QNke6K",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
       ],
       "settings": {
