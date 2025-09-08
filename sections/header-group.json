@@ -25,7 +25,6 @@
       "block_order": [
         "announcement_QTYLrD"
       ],
-      "disabled": true,
       "settings": {
         "auto_rotate": true,
         "change_slides_speed": 7,
@@ -59,7 +58,6 @@
         },
         "menu_badge_jiY3QX": {
           "type": "menu_badge",
-          "disabled": true,
           "settings": {
             "trigger": "Rozbaleno",
             "text": "Výprodej -40 %",
@@ -71,7 +69,7 @@
           "type": "menu_badge",
           "settings": {
             "trigger": "Ruční výroba z umělé kůže",
-            "text": "Výprodej -62%",
+            "text": "Výprodej -70%",
             "text_color": "#ffffff",
             "background_color": "#dc4405"
           }
