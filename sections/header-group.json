@@ -58,6 +58,7 @@
         },
         "menu_badge_jiY3QX": {
           "type": "menu_badge",
+          "disabled": true,
           "settings": {
             "trigger": "Rozbaleno",
             "text": "Výprodej -40 %",
