@@ -98,7 +98,7 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Přichází nový iPhone 17 a s ním i hromada příslušenství od <strong>FIXED.</strong></p><p><strong>Přihlaš se do soutěže, splň úkoly a vyhraj jednu z cen.</strong></p><p><strong>CENY</strong></p><p><strong>1. místo: iPhone 17 Pro příslušenství FIXED za 10 000 Kč</strong></p><p>2. místo: Příslušesntví FIXED v hodnotě 5 000 Kč</p><p>3. místo: Příslušenství FIXED v hodnotě 2 000 Kč<br/><br/>Pravidla a podmínky soutěže najdeš zde.</p>",
+            "text": "<p>Přichází nový iPhone 17 a s ním i hromada příslušenství od <strong>FIXED.</strong></p><p><strong>Přihlaš se do soutěže, splň úkoly a vyhraj jednu z cen.</strong></p><p><strong>CENY</strong></p><p><strong>1. místo: iPhone 17 Pro příslušenství FIXED za 10 000 Kč</strong></p><p>2. místo: Příslušesntví FIXED v hodnotě 5 000 Kč</p><p>3. místo: Příslušenství FIXED v hodnotě 2 000 Kč<br/><br/>Pravidla a podmínky soutěže najdeš <a href=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\" target=\"_blank\" title=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\">níže.</a></p>",
             "text_style": "body"
           }
         },
@@ -146,6 +146,31 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
+      }
+    },
+    "rich_text_fBphmx": {
+      "type": "rich-text",
+      "blocks": {
+        "text_7HxhBL": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\" target=\"_blank\" title=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\">Pravidla a podmínky soutěže o iPhone 17.</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_7HxhBL"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "desktop_content_width": "medium",
+        "content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 16
       }
     },
     "collection_list_EhQ9Me": {
@@ -215,6 +240,7 @@
     "main",
     "image_banner_7GGLw8",
     "image_with_text_rRBN9q",
+    "rich_text_fBphmx",
     "collection_list_EhQ9Me"
   ]
 }
