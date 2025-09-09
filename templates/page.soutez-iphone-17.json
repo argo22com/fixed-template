@@ -27,15 +27,15 @@
         "heading_AbkTRp": {
           "type": "heading",
           "settings": {
-            "heading": "MagPoo",
+            "heading": "Soutěž o iPhone 17",
             "size": "h0"
           }
         },
         "text_UDYABY": {
           "type": "text",
           "settings": {
-            "text": "<strong> Inovativní koncept magnetického držáku mobilu a&nbsp;toaletního papíru</strong>",
-            "text_style": "caption-with-letter-spacing"
+            "text": "<strong>a hromadu FIXED příslušenství </strong>",
+            "text_style": "subtitle"
           }
         }
       },
@@ -45,11 +45,11 @@
       ],
       "settings": {
         "layout": "grid",
-        "image": "shopify://shop_images/magpoo_desktop.png",
-        "image_mobile": "shopify://shop_images/513A8294_2.jpg",
+        "image": "shopify://shop_images/mgp.5093.jpg",
+        "image_mobile": "shopify://shop_images/mgp.5093.png",
         "image_overlay_opacity": 20,
-        "image_height": "medium",
-        "image_height_mobile": "medium-mobile",
+        "image_height": "small",
+        "image_height_mobile": "small-mobile",
         "desktop_content_position": "bottom-left",
         "desktop_content_alignment": "left",
         "keep_ltr": false,
@@ -90,7 +90,7 @@
         "heading_Mf43cQ": {
           "type": "heading",
           "settings": {
-            "heading": "FIXED MagPoo",
+            "heading": "Soutěž s FIXED o iPhone 17",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -98,18 +98,28 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Neustále přinášíme inovace, které zlepšují život s chytrými zařízeními. Na základě našeho průzkumu jsme zjistili, že 99 % lidí si bere na toaletu mobilní telefon a nemá ho kde odložit. Volné ruce jsou přitom stěžejní při návštěvě toalety. Proto jsme se rozhodli jednat a přicházíme tak s návrhem inovace, která osloví zcela každého. Na onu místnost totiž musíme občas všichni.</p><p>Ačkoliv je tato naše aktivita spojena s datumem 1.4., pokud budou ohlasy na náš koncept pozitivní, kdo ví… možná se dočkáme i prototypování a sériové výroby.</p>",
+            "text": "<p>Přichází nový iPhone 17 a s ním i hromada příslušenství od <strong>FIXED.</strong></p><p><strong>Přihlaš se do soutěže, splň úkoly a vyhraj jednu z cen.</strong></p><p><strong>CENY</strong></p><p><strong>1. místo: iPhone 17 Pro příslušenství FIXED za 10 000 Kč</strong></p><p>2. místo: Příslušesntví FIXED v hodnotě 5 000 Kč</p><p>3. místo: Příslušenství FIXED v hodnotě 2 000 Kč<br/><br/>Pravidla a podmínky soutěže najdeš zde.</p>",
             "text_style": "body"
+          }
+        },
+        "button_M4hBDq": {
+          "type": "button",
+          "settings": {
+            "button_label": "Soutěžit",
+            "button_link": "https://gleam.io/UiyaW/soutez-s-fixed-o-iphone-17-pro-a-hromadu-prislusenstvi-k-nemu",
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
         "heading_Mf43cQ",
-        "text_Rc9KRn"
+        "text_Rc9KRn",
+        "button_M4hBDq"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/513A8294.jpg",
+        "image": "shopify://shop_images/mgp.5100.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -129,57 +139,13 @@
         "color_countdown": "#000000",
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#dc4405",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
-      }
-    },
-    "newsletter_DmwGV3": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_h7kkEM": {
-          "type": "heading",
-          "settings": {
-            "heading": "Zajímá vás pokračování příběhu držáku MagPoo a další novinky z FIXED?",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_EewmnJ": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Zapište se do našeho newsletteru a nic vám neunikne.</p>"
-          }
-        },
-        "email_form_UPwfwi": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading_h7kkEM",
-        "paragraph_EewmnJ",
-        "email_form_UPwfwi"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "colors_text": "#fff",
-        "colors_input": "#64748B",
-        "overlay_color": "#1E40AF",
-        "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "collection_list_EhQ9Me": {
@@ -225,8 +191,8 @@
         "featured_collection_9NpwDP"
       ],
       "settings": {
-        "title": "Držáka na toaletu sice (ještě) nemáme",
-        "subtitle": "Ale spoustu jiného praktického magnetického příslušenství ano",
+        "title": "Prohlédnout si příslušenství k iPhone 17",
+        "subtitle": "",
         "heading_size": "h2",
         "image_ratio": "adapt",
         "columns_desktop": 4,
@@ -249,7 +215,6 @@
     "main",
     "image_banner_7GGLw8",
     "image_with_text_rRBN9q",
-    "newsletter_DmwGV3",
     "collection_list_EhQ9Me"
   ]
 }
