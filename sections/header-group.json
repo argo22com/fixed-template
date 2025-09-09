@@ -70,7 +70,7 @@
           "type": "menu_badge",
           "settings": {
             "trigger": "Ruční výroba z umělé kůže",
-            "text": "Výprodej -70%",
+            "text": "Výprodej -70 %",
             "text_color": "#ffffff",
             "background_color": "#dc4405"
           }
