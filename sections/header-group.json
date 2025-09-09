@@ -60,10 +60,10 @@
         "menu_badge_jiY3QX": {
           "type": "menu_badge",
           "settings": {
-            "trigger": "Rozbaleno",
-            "text": "Výprodej -40 %",
+            "trigger": "Video nákupy",
+            "text": "Novinka",
             "text_color": "#ffffff",
-            "background_color": "#dc4405"
+            "background_color": "#00a9e0"
           }
         },
         "menu_badge_CxNkFp": {
