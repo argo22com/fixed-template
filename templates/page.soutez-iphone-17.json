@@ -1,0 +1,255 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "grid",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "ul_li_marker": "#000000"
+      }
+    },
+    "image_banner_7GGLw8": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_AbkTRp": {
+          "type": "heading",
+          "settings": {
+            "heading": "MagPoo",
+            "size": "h0"
+          }
+        },
+        "text_UDYABY": {
+          "type": "text",
+          "settings": {
+            "text": "<strong> Inovativní koncept magnetického držáku mobilu a&nbsp;toaletního papíru</strong>",
+            "text_style": "caption-with-letter-spacing"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AbkTRp",
+        "text_UDYABY"
+      ],
+      "settings": {
+        "layout": "grid",
+        "image": "shopify://shop_images/magpoo_desktop.png",
+        "image_mobile": "shopify://shop_images/513A8294_2.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "medium",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#ffffff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000000",
+        "color_button_1": "#ffffff",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#ffffff",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_rRBN9q": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Mf43cQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "FIXED MagPoo",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_Rc9KRn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Neustále přinášíme inovace, které zlepšují život s chytrými zařízeními. Na základě našeho průzkumu jsme zjistili, že 99 % lidí si bere na toaletu mobilní telefon a nemá ho kde odložit. Volné ruce jsou přitom stěžejní při návštěvě toalety. Proto jsme se rozhodli jednat a přicházíme tak s návrhem inovace, která osloví zcela každého. Na onu místnost totiž musíme občas všichni.</p><p>Ačkoliv je tato naše aktivita spojena s datumem 1.4., pokud budou ohlasy na náš koncept pozitivní, kdo ví… možná se dočkáme i prototypování a sériové výroby.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Mf43cQ",
+        "text_Rc9KRn"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/513A8294.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "newsletter_DmwGV3": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_h7kkEM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zajímá vás pokračování příběhu držáku MagPoo a další novinky z FIXED?",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_EewmnJ": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Zapište se do našeho newsletteru a nic vám neunikne.</p>"
+          }
+        },
+        "email_form_UPwfwi": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_h7kkEM",
+        "paragraph_EewmnJ",
+        "email_form_UPwfwi"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#fff",
+        "colors_input": "#64748B",
+        "overlay_color": "#1E40AF",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collection_list_EhQ9Me": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_cGh9PW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "magneticke-prislusenstvi-bez-nabijeni",
+            "custom_image": "shopify://shop_images/MagSnap_2-768x512.png",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_8aaBAT": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "nabijeni-kompatibilni-s-magsafe",
+            "custom_image": "shopify://shop_images/FIXMPOS-RO-LS1_1bd773d2-217d-49e6-95eb-15a295cc4106.jpg",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_ARgaAY": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "magsafe-kompatibilni-doplnky-pro-zarizeni",
+            "custom_image": "shopify://shop_images/1B1A0096.jpg",
+            "custom_title": ""
+          }
+        },
+        "featured_collection_9NpwDP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "prislusenstvi-kompatibilni-s-magsafe",
+            "custom_image": "shopify://shop_images/1B1A0257.jpg",
+            "custom_title": "Veškeré magnetické příslušenství"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_cGh9PW",
+        "featured_collection_8aaBAT",
+        "featured_collection_ARgaAY",
+        "featured_collection_9NpwDP"
+      ],
+      "settings": {
+        "title": "Držáka na toaletu sice (ještě) nemáme",
+        "subtitle": "Ale spoustu jiného praktického magnetického příslušenství ano",
+        "heading_size": "h2",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "full_width": false,
+        "enable_section_box_layout": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "show_view_all": false,
+        "collection_card_show_title": true,
+        "show_products_count": false,
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_7GGLw8",
+    "image_with_text_rRBN9q",
+    "newsletter_DmwGV3",
+    "collection_list_EhQ9Me"
+  ]
+}
