@@ -98,7 +98,7 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Přichází nový iPhone 17 a s ním i hromada příslušenství od <strong>FIXED.</strong></p><p><strong>Přihlaš se do soutěže, splň úkoly a vyhraj jednu z cen.</strong></p><p><strong>CENY</strong></p><p><strong>1. místo: iPhone 17 Pro příslušenství FIXED za 10 000 Kč</strong></p><p>2. místo: Příslušesntví FIXED v hodnotě 5 000 Kč</p><p>3. místo: Příslušenství FIXED v hodnotě 2 000 Kč<br/><br/>Pravidla a podmínky soutěže najdeš <a href=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\" target=\"_blank\" title=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\">níže.</a></p>",
+            "text": "<p>Přichází nový iPhone 17 a s ním i hromada příslušenství od <strong>FIXED.</strong></p><p><strong>Přihlaš se do soutěže, splň úkoly a vyhraj jednu z cen.</strong></p><p><strong>CENY</strong></p><p><strong>1. místo: iPhone 17 Pro příslušenství FIXED za 10 000 Kč</strong></p><p>2. místo: Příslušesntví FIXED v hodnotě 5 000 Kč</p><p>3. místo: Příslušenství FIXED v hodnotě 2 000 Kč<br/><br/>Pravidla a podmínky soutěže najdeš <a href=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\" target=\"_blank\" title=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\">zde.</a></p>",
             "text_style": "body"
           }
         },
@@ -161,6 +161,7 @@
       "block_order": [
         "text_7HxhBL"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "left",
