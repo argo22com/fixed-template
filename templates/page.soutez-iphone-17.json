@@ -90,7 +90,7 @@
         "heading_Mf43cQ": {
           "type": "heading",
           "settings": {
-            "heading": "Soutěž s FIXED o iPhone 17",
+            "heading": "Přichází nový iPhone 17 a s ním i hromada příslušenství od FIXED.",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -98,7 +98,7 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Přichází nový iPhone 17 a s ním i hromada příslušenství od <strong>FIXED.</strong></p><p>Přihlaš se do soutěže, splň úkoly a vyhraj jednu z cen.<strong><br/>Soutěž probíhá od 14. - 21. 9. 2025</strong></p><p><strong>CENY</strong></p><p><strong>1. místo: iPhone 17 Pro příslušenství FIXED za 10 000 Kč</strong></p><p>2. místo: Příslušesntví FIXED v hodnotě 5 000 Kč</p><p>3. místo: Příslušenství FIXED v hodnotě 2 000 Kč<br/><br/>Pravidla a podmínky soutěže najdeš <a href=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\" target=\"_blank\" title=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\">zde.</a></p>",
+            "text": "<p><strong>Přihlaš se do soutěže, splň úkoly a vyhraj jednu z cen.<br/></strong></p><p><strong>CENY</strong></p><p><strong>1. místo: iPhone 17 Pro a příslušenství FIXED za 10 000 Kč</strong></p><p>2. místo: Příslušenství FIXED v hodnotě 5 000 Kč</p><p>3. místo: Příslušenství FIXED v hodnotě 2 000 Kč<br/></p>",
             "text_style": "body"
           }
         },
@@ -130,7 +130,7 @@
         "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_bottom": 0,
         "color_heading": "#000000",
         "gradient_heading": "",
         "color_text": "#000000",
@@ -154,14 +154,13 @@
         "text_7HxhBL": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\" target=\"_blank\" title=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\">Pravidla a podmínky soutěže o iPhone 17.</a></p>"
+            "text": "<p><a href=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\" target=\"_blank\" title=\"https://fixed.zone/pages/podmiky-spotrebitelske-souteze\">Pravidla a podmínky soutěže o iPhone 17 zde.</a></p>"
           }
         }
       },
       "block_order": [
         "text_7HxhBL"
       ],
-      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "left",
@@ -172,6 +171,52 @@
         "full_width": true,
         "padding_top": 0,
         "padding_bottom": 16
+      }
+    },
+    "image_with_text_zpirbH": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_KmaeGB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Za spolupráci a iPhone 17 Pro do soutěže děkujeme společnosti <a href=\"https://smarty.cz\" target=\"_blank\" title=\"https://smarty.cz\">Smarty.cz</a>.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_KmaeGB"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/logo-CZ.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "collection_list_EhQ9Me": {
@@ -242,6 +287,7 @@
     "image_banner_7GGLw8",
     "image_with_text_rRBN9q",
     "rich_text_fBphmx",
+    "image_with_text_zpirbH",
     "collection_list_EhQ9Me"
   ]
 }
