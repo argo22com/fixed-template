@@ -383,21 +383,21 @@
             "color_scheme": "inverse"
           }
         },
-        "mega_menu_promotion_fBdRTY": {
+        "mega_menu_promotion_fXE9Ac": {
           "type": "mega_menu_promotion",
           "settings": {
             "trigger": "Blog",
-            "title": "Datablocker",
-            "image": "shopify://shop_images/ChatGPT_Image_Aug_21_2025_10_31_52_AM.png",
+            "title": "iPhone 17",
+            "image": "shopify://shop_images/GenAIImage_967488ac-2f83-4c03-b0a2-5855088af48c_1.jpg",
             "image_ratio": "square",
             "caption": "",
-            "heading_text": "Nabíjej bezpečně",
-            "subheading": "Připojuješ mobil do USB na nádraží? Připrav se na tohle…",
+            "heading_text": "Apple představil iPhony 17. Co si k nim pořídit?",
+            "subheading": "",
             "button_label": "číst",
             "button_style": "solid",
             "text_align": "center",
             "text_position": "2",
-            "link": "shopify://blogs/news/pripojujes-mobil-do-usb-na-nadrazi-priprav-se-na-tohle",
+            "link": "shopify://blogs/news/apple-predstavil-iphony-17-v-cem-predcily-lonske-modely-a-co-si-k-nim-poridit",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 50,
@@ -425,21 +425,21 @@
             "color_scheme": "inverse"
           }
         },
-        "mega_menu_promotion_fXE9Ac": {
+        "mega_menu_promotion_fBdRTY": {
           "type": "mega_menu_promotion",
           "settings": {
             "trigger": "Blog",
-            "title": "O kolečko navíc",
-            "image": "shopify://shop_images/513A4966.jpg",
+            "title": "Datablocker",
+            "image": "shopify://shop_images/ChatGPT_Image_Aug_21_2025_10_31_52_AM.png",
             "image_ratio": "square",
             "caption": "",
-            "heading_text": "O kolečko navíc: Vše co je třeba vědět o MagSafe",
-            "subheading": "",
+            "heading_text": "Nabíjej bezpečně",
+            "subheading": "Připojuješ mobil do USB na nádraží? Připrav se na tohle…",
             "button_label": "číst",
             "button_style": "solid",
             "text_align": "center",
             "text_position": "2",
-            "link": "shopify://blogs/news/o-kolecko-navic-magsafe-vychytavky-ktere-ti-usnadni-den",
+            "link": "shopify://blogs/news/pripojujes-mobil-do-usb-na-nadrazi-priprav-se-na-tohle",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 50,
@@ -508,9 +508,9 @@
         "menu_label_fBV3r3",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "mega_menu_promotion_9HJwDd",
-        "mega_menu_promotion_fBdRTY",
-        "mega_menu_promotion_ya4VNA",
         "mega_menu_promotion_fXE9Ac",
+        "mega_menu_promotion_ya4VNA",
+        "mega_menu_promotion_fBdRTY",
         "mega_menu_promotion_TLTfPK",
         "mega_menu_promotion_LL7tjW"
       ],
