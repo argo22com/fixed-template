@@ -218,7 +218,7 @@
             "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
+            "text_alignment_mobile": "left",
             "colors_text": "#ffffff",
             "gradient_heading_desktop": "",
             "colors_background": "#ffffff",
@@ -483,7 +483,7 @@
         "enable_navigation_mobile": true,
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 0,
-        "padding_bottom": 12
+        "padding_bottom": 8
       }
     },
     "featured_collection_xcmLFp": {
