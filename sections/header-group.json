@@ -345,6 +345,14 @@
             "color_scheme": "inverse"
           }
         },
+        "menu_label_fBV3r3": {
+          "type": "menu_label",
+          "settings": {
+            "title": "Seznam přání",
+            "icon": "heart",
+            "link": "#hero-wishlist"
+          }
+        },
         "3753f6b7-733c-49d7-881c-f8fe4195e49f": {
           "type": "menu_label",
           "settings": {
@@ -497,6 +505,7 @@
         "mega_menu_product_brand_3VPHNd",
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_qrrCqd",
+        "menu_label_fBV3r3",
         "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "mega_menu_promotion_9HJwDd",
         "mega_menu_promotion_fBdRTY",
