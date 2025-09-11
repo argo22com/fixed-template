@@ -64,7 +64,8 @@
           "type": "category_filter_icon",
           "settings": {
             "trigger": "Na telefony",
-            "icon": "phone"
+            "icon": "phone",
+            "custom_icon": "shopify://shop_images/FIXDR-CS-BK-PRODUCT-7.jpg"
           }
         },
         "35ce6bc3-b36c-404c-9cd4-aa917dfe7802": {
