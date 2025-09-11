@@ -9,14 +9,25 @@
  */
 {
   "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "section_width": "grid",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 16,
+        "ul_li_marker": "#000000"
+      }
+    },
     "1757426487f4eee2c5": {
       "type": "apps",
       "blocks": {
         "whatmore_shoppable_videos_app_block_WmFXew": {
           "type": "shopify://apps/whatmore-shoppable-videos/blocks/app-block/20db8a72-315a-4364-8885-64219ee48303",
           "settings": {
-            "heading": "Sleduj a nakupuj",
-            "template-type": "template-h",
+            "heading": "",
+            "template-type": "template-i",
             "title-font-size": 40,
             "title-font-size-portrait": 24,
             "landscape-padding": 40,
@@ -33,21 +44,10 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "section_width": "grid",
-        "content_alignment": "left",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 16,
-        "ul_li_marker": "#000000"
-      }
     }
   },
   "order": [
-    "1757426487f4eee2c5",
-    "main"
+    "main",
+    "1757426487f4eee2c5"
   ]
 }
