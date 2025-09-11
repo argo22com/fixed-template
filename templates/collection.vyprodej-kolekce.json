@@ -35,6 +35,28 @@
         "text_color_transparent": "#ffffff"
       }
     },
+    "1757575632451c0ded": {
+      "type": "apps",
+      "blocks": {
+        "whatmore_shoppable_videos_app_block_collections_zagERr": {
+          "type": "shopify://apps/whatmore-shoppable-videos/blocks/app-block-collections/20db8a72-315a-4364-8885-64219ee48303",
+          "settings": {
+            "collectionHeading": "Objevte naše produkty",
+            "template-type": "template-collections-b",
+            "tile-size": 60,
+            "tile-size-portrait": 60,
+            "min-height": 250,
+            "collectionId": "0"
+          }
+        }
+      },
+      "block_order": [
+        "whatmore_shoppable_videos_app_block_collections_zagERr"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
@@ -135,6 +157,7 @@
   },
   "order": [
     "banner",
+    "1757575632451c0ded",
     "product-grid"
   ]
 }
