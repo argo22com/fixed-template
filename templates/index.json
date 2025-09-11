@@ -470,7 +470,7 @@
         ".slider-counter__link--active.slider-counter__link--dots .dot,.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
       ],
       "settings": {
-        "layout": "full_bleed",
+        "layout": "stretched_grid",
         "slide_height": "small",
         "slide_height_mobile": "small-mobile",
         "auto_rotate": true,
