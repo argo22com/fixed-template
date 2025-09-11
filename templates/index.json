@@ -522,6 +522,24 @@
     },
     "1756715191a0d80543": {
       "type": "apps",
+      "blocks": {
+        "luigi_s_ai_search_discovery_recommender_hp_Cwmx7m": {
+          "type": "shopify://apps/luigi-s-ai-search-discovery/blocks/recommender-hp/e958335d-b7a0-483f-9ab5-a587d1bd4fa9",
+          "settings": {
+            "type": "user_click_based",
+            "box_title": "Doporučeno na míru",
+            "size_columns": 4,
+            "size_rows": 1,
+            "carousel": true,
+            "color_default": "#234855",
+            "color_primary": "#2bb9d5",
+            "color_primary_text": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "luigi_s_ai_search_discovery_recommender_hp_Cwmx7m"
+      ],
       "settings": {
         "include_margins": true
       }
