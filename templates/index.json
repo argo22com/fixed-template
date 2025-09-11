@@ -540,6 +540,7 @@
       "block_order": [
         "luigi_s_ai_search_discovery_recommender_hp_Cwmx7m"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
