@@ -522,7 +522,7 @@
       "cookies-banner": {
         "type": "cookies-banner",
         "custom_css": [
-          ".cookies-banner {bottom: 10rem;}"
+          ".cookies-banner {bottom: 5rem;}"
         ],
         "settings": {
           "enable": true,
