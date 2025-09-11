@@ -42,7 +42,7 @@
           "type": "shopify://apps/whatmore-shoppable-videos/blocks/app-block-collections/20db8a72-315a-4364-8885-64219ee48303",
           "settings": {
             "collectionHeading": "Objevte naše produkty",
-            "template-type": "template-collections-b",
+            "template-type": "template-collections-stories",
             "tile-size": 60,
             "tile-size-portrait": 60,
             "min-height": 250,
