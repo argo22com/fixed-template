@@ -75,6 +75,15 @@
             "background_color": "#dc4405"
           }
         },
+        "menu_badge_xmfB8A": {
+          "type": "menu_badge",
+          "settings": {
+            "trigger": "Rozbaleno",
+            "text": "Výprodej -62 %",
+            "text_color": "#ffffff",
+            "background_color": "#d9121f"
+          }
+        },
         "mega_menu_promotion_YqyFiJ": {
           "type": "mega_menu_promotion",
           "disabled": true,
@@ -494,6 +503,7 @@
         "mega_menu_promotion_UdqXan",
         "menu_badge_jiY3QX",
         "menu_badge_CxNkFp",
+        "menu_badge_xmfB8A",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_JjNkGB",
         "mega_menu_promotion_NP3Wit",
