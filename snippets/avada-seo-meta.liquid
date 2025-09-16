@@ -1,4 +1,5 @@
 {%- assign avada_seo_ovr_product_ids = "7442064015442" -%}
+{%- assign avada_seo_ovr_page_ids = "" -%}
   
 {%- if request.page_type == 'product' -%}
 {%-  if avada_seo_ovr_product_ids contains product.id  -%}
@@ -60,12 +61,12 @@
 {%- endif -%}
 {%- endif -%}
 
-{%- if avada_seo_meta_title -%}
+{%- if avada_seo_meta_title != blank -%}
 {%- assign seo_title = avada_seo_meta_title | strip_html | strip -%}
 {%- assign page_title = seo_title -%}
 {%- assign og_title = seo_title -%}
 {%- endif -%}
-{%- if avada_seo_meta_description -%}
+{%- if avada_seo_meta_description != blank -%}
 {%- assign page_description = avada_seo_meta_description | strip_html | strip -%}
 {%- assign og_description = page_description -%}
 {%- endif -%}
