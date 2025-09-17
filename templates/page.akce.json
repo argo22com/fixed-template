@@ -33,9 +33,9 @@
             "heading": "Pouzdra z umělé kůže",
             "text": "Vyber si pouzdro z kvalitních materiálů ručně ušité v Prostějově se slevou až 70 %",
             "hide_text_on_mobile": false,
-            "button_label": "",
+            "button_label": "Přejít na výprodej",
             "price": "",
-            "link": "",
+            "link": "shopify://collections/pouzdra-z-umele-kuze-na-telefony-tablety-i-notebooky",
             "button_style": "primary",
             "button_open_new_tab": false,
             "box_align": "middle-left",
@@ -58,7 +58,7 @@
             "colors_badge_foreground_mobile": "#ffffff",
             "colors_badge_background_mobile": "#f87171",
             "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
+            "colors_button_mobile": "#e94200"
           }
         }
       },
