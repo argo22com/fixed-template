@@ -115,6 +115,27 @@
             "color_scheme": "inverse"
           }
         },
+        "mega_menu_promotion_NP3Wit": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Akce",
+            "title": "Příslušenství pro iPhone 17",
+            "image": "shopify://shop_images/image007.png",
+            "image_ratio": "landscape",
+            "caption": "",
+            "heading_text": "Příslušenství pro novou řadu iPhone 17",
+            "subheading": "",
+            "button_label": "Přejít na kolekci",
+            "button_style": "link",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://collections/prislusenstvi-pro-iphone-17",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 49,
+            "color_scheme": "inverse"
+          }
+        },
         "mega_menu_promotion_JjNkGB": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -130,27 +151,6 @@
             "text_align": "center",
             "text_position": "2",
             "link": "shopify://pages/zaruka",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 49,
-            "color_scheme": "inverse"
-          }
-        },
-        "mega_menu_promotion_NP3Wit": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Akce",
-            "title": "Konfigurátor držáků",
-            "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.png",
-            "image_ratio": "landscape",
-            "caption": "",
-            "heading_text": "Konfigurátor držáků",
-            "subheading": "Sestav si ten svůj",
-            "button_label": "Konfigurovat",
-            "button_style": "link",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "shopify://pages/konfigurator",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 49,
@@ -515,8 +515,8 @@
         "menu_badge_xmfB8A",
         "menu_badge_geKUxy",
         "mega_menu_promotion_YqyFiJ",
-        "mega_menu_promotion_JjNkGB",
         "mega_menu_promotion_NP3Wit",
+        "mega_menu_promotion_JjNkGB",
         "mega_menu_promotion_Bh4wzD",
         "mega_menu_promotion_9KBrbX",
         "mega_menu_product_brand_eMcj9n",
