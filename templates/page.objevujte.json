@@ -123,12 +123,12 @@
         "column_6My4be": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.png",
+            "image": "shopify://shop_images/investor.jpg",
             "icon": "check",
             "title": "Kontakty",
             "text": "",
-            "link_label": "Začít konfigurovat",
-            "link": "shopify://pages/konfigurator",
+            "link_label": "Přejít na kontakty",
+            "link": "shopify://pages/contact",
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
