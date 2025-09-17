@@ -141,12 +141,12 @@
         "column_TdKnrC": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/FIXTAG-ST-WH-PRODUCT-7.jpg",
+            "image": "shopify://shop_images/kariera.jpg",
             "icon": "check",
             "title": "Kariéra ve FIXED",
             "text": "",
-            "link_label": "Vybrat lokátor",
-            "link": "shopify://pages/smart",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/contact",
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -159,12 +159,12 @@
         "column_GF8HCY": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/FIXGA-929-BK-PRODUCT-6.jpg",
+            "image": "shopify://shop_images/people-holding-earth-their-hands.jpg",
             "icon": "check",
             "title": "Udržitelnost",
             "text": "",
-            "link_label": "Ochránit telefon",
-            "link": "shopify://collections/skla-armor",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/releaf",
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
@@ -221,7 +221,7 @@
         "column_KJJM64": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/3roky.5200.webp",
+            "image": "shopify://shop_images/medialni.jpg",
             "icon": "check",
             "title": "Mediální centrum",
             "text": "",
@@ -239,7 +239,7 @@
         "column_aQpRR9": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.png",
+            "image": "shopify://shop_images/making-a-budget-tracking-finances.jpg",
             "icon": "check",
             "title": "Investorské centrum",
             "text": "",
@@ -257,7 +257,7 @@
         "column_6rKEMy": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/FIXTAG-ST-WH-PRODUCT-7.jpg",
+            "image": "shopify://shop_images/obch_podminky.jpg",
             "icon": "check",
             "title": "Obchodní podmínky",
             "text": "",
@@ -275,7 +275,7 @@
         "column_PxM7Gj": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/FIXGA-929-BK-PRODUCT-6.jpg",
+            "image": "shopify://shop_images/reklamace.jpg",
             "icon": "check",
             "title": "Zásady ochrany osobních údajů",
             "text": "",
@@ -355,12 +355,12 @@
         "column_hDyNJt": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.png",
+            "image": "shopify://shop_images/podpora.jpg",
             "icon": "check",
             "title": "Zákaznická podpora",
             "text": "<p>Sestav si ve 3 jednoduchých krocích perfektní řešení uchycení tvého smartphonu nebo tabletu do svého vozidla.</p>",
-            "link_label": "Začít konfigurovat",
-            "link": "shopify://pages/konfigurator",
+            "link_label": "Přejít na zákaznickou podporu",
+            "link": "shopify://pages/podpora",
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
@@ -373,11 +373,11 @@
         "column_V7dxfi": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/FIXTAG-ST-WH-PRODUCT-7.jpg",
+            "image": "shopify://shop_images/reklamace.jpg",
             "icon": "check",
             "title": "Reklamační řád",
             "text": "",
-            "link_label": "Vybrat lokátor",
+            "link_label": "Zjistit více",
             "link": "shopify://pages/smart",
             "button_style": "solid",
             "button_open_new_tab": false,
