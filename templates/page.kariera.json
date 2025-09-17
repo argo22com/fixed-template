@@ -67,11 +67,245 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "image_with_text_FQEjUR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fdyJRj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Jaký má smysl práce pro FIXED?",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_iwt9KG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vytváříme jedinečné produkty, které se jednoduše používají a usnadňují nebo zlepšují užívání mobilního telefonu, tabletu, hodinek i další elektroniky, případně je chrání před poškozením.<br/></p><p>Vytváříme prostředí, ve kterém mohou zaměstnanci zažít pocity užitečnosti, naplnění a uznání. S našimi obchodními partnery navazujeme dlouhodobé férové vztahy, ve kterých se cítí bezpečně. Bude skvělé, pokud se staneš podporovatelem těchto principů, a přitom zůstaneš sám sebou.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fdyJRj",
+        "text_iwt9KG"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/medialni.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "image_with_text_RQiDmi": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_B4Btwr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hodnoty FIXED",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_cyJGz3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Naše hodnoty nejsou jen na papíře – žijeme je každý den. <br/><br/>Férovost, respekt, zodpovědnost a radost z práce jsou základ, na kterém stavíme. Všichni ve FIXED jsme spolutvůrci prostředí, ve kterém pracujeme. Každé slovo, každý e-mail i každý produkt přispívají k tomu, jak se nám spolu daří. Je to svoboda i odpovědnost – a my ji bereme vážně.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_B4Btwr",
+        "text_cyJGz3"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/kariera.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "image_with_text_6xtkNg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_eUiLdt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Komunikace",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_EGAwge": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bez komunikace to u nás nejde. <br/><br/>Každý den si nasloucháme, sdílíme potřeby, řešíme situace a hledáme cesty, jak spolupracovat co nejlépe. Učíme se nebát se říct, co je důležité, a nezapomínáme chválit i děkovat. Věříme, že dobrá komunikace zlepšuje nejen práci, ale i život, proto se v ní neustále dovzděláváme na pravidelných workshopech.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_mMJyEq": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_eUiLdt",
+        "text_EGAwge",
+        "button_mMJyEq"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/komunikace.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "image_with_text_PLHGLj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Q4K7Lx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Jednoduchost",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_FREVJQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Méně je víc. <br/><br/>Věříme, že jednoduchost dělá věci srozumitelnějšími, rychlejšími a spolehlivějšími. Víme ale, že to není vždy snadné – jednoduchost je často ta nejtěžší cesta. Proto si navzájem pomáháme udržet směr a soustředit se na to podstatné. Naši zákazníci i my sami díky tomu dostáváme to nejlepší.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Q4K7Lx",
+        "text_FREVJQ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/jednoduchost.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
     }
   },
   "order": [
     "main",
     "video_WC6gyz",
-    "rich_text_BFbnzM"
+    "rich_text_BFbnzM",
+    "image_with_text_FQEjUR",
+    "image_with_text_RQiDmi",
+    "image_with_text_6xtkNg",
+    "image_with_text_PLHGLj"
   ]
 }
