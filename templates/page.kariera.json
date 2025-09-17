@@ -25,11 +25,11 @@
       "type": "video",
       "name": "t:sections.video.presets.name",
       "settings": {
-        "title": "",
+        "title": "Kariéra ve FIXED",
         "subtitle": "",
         "heading_size": "h1",
         "video_hosted": "shopify://files/videos/FIXED_COVER.mp4",
-        "video_url": "https://youtu.be/_JofmaTT4_0",
+        "video_url": "",
         "description": "",
         "autoplay": true,
         "enable_controls": false,
@@ -48,34 +48,13 @@
         "heading_ceXbWT": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Talk about your brand</p>",
-            "heading_size": "h1"
-          }
-        },
-        "text_Aba9yc": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_P6ceY3": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_1": "primary",
-            "button_open_new_tab_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary",
-            "button_open_new_tab_2": false
+            "heading": "<p>Momentálně nejsou dostupné žádné otevřené pozice.</p>",
+            "heading_size": "h2"
           }
         }
       },
       "block_order": [
-        "heading_ceXbWT",
-        "text_Aba9yc",
-        "button_P6ceY3"
+        "heading_ceXbWT"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
