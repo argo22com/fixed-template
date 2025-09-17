@@ -215,33 +215,17 @@
         "column_VmkTYD": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/FIXTAG-ST-WH-PRODUCT-7.jpg",
             "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
+            "title": "FIXED Tag Stick",
+            "text": "<p>Na první pohled připomíná malý USB flash disk a zaručeně ti nebude překážet. </p><p>Jde o skvělého strážce pro klíče, kabelku, batoh a jakékoliv další cennosti, na <strong>které jde připevnit poutko.<br/></strong>Vydrží nabitý 3 měsíce a snadno jej dobiješ přes USB-C.</p>",
+            "link_label": "VÍCE O TAG STICK",
+            "link": "shopify://products/smart-tracker-fixed-tag-stick-s-podporou-find-my-bily",
+            "button_style": "secondary",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
             "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#f8fafc",
-            "card_color_background_gradient": ""
-          }
-        },
-        "column_nTiDAX": {
-          "type": "column",
-          "settings": {
-            "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false,
-            "card_color_text": "#121212",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
+            "color_button": "#e94200",
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
           }
@@ -252,8 +236,7 @@
         "column_YGyC9A",
         "column_wNf6b7",
         "column_wt9wkW",
-        "column_VmkTYD",
-        "column_nTiDAX"
+        "column_VmkTYD"
       ],
       "settings": {
         "title": "",
