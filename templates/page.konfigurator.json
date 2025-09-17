@@ -45,9 +45,10 @@
       ],
       "settings": {
         "layout": "grid",
-        "image": "shopify://shop_images/fixmro-bk_008_77dedba1-7823-4702-aecb-08e2e40f13c1.jpg",
+        "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.jpg",
+        "image_mobile": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "small",
         "image_height_mobile": "medium-mobile",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "center",
