@@ -711,7 +711,7 @@
         "heading_size": "h2",
         "media_type": "image",
         "media_width_desktop": "100",
-        "image_ratio": "landscape",
+        "image_ratio": "square",
         "text_position": "bottom",
         "columns_desktop": 3,
         "columns_tablet": 3,
