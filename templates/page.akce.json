@@ -67,7 +67,7 @@
       ],
       "settings": {
         "layout": "grid",
-        "slide_height": "medium",
+        "slide_height": "small",
         "slide_height_mobile": "adapt_image_mobile",
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -82,366 +82,140 @@
         "padding_bottom": 0
       }
     },
-    "collection_list_bB4BBc": {
-      "type": "collection-list",
+    "multicolumn_eTYzWE": {
+      "type": "multicolumn",
       "blocks": {
-        "featured_collection_fE9TMM": {
-          "type": "featured_collection",
+        "column_NwTBYX": {
+          "type": "column",
           "settings": {
-            "collection": "pouzdra-na-telefony-z-umele-kuze",
-            "custom_image": "shopify://shop_images/FIXLUC-LS4.jpg",
-            "custom_title": "OBALY NA TELEFON"
+            "image": "shopify://shop_images/3roky.5200.webp",
+            "icon": "check",
+            "title": "Záruka 3 roky",
+            "text": "<p>Užijte si 3 roky jistoty.<br/>Ať už jste <strong>koncový zákazník </strong>nebo <strong>firma</strong>, máte u nás<strong> prodlouženou záruku bez složitostí a malých písmenek</strong>.</p>",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/zaruka",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
           }
         },
-        "featured_collection_WMUJtn": {
-          "type": "featured_collection",
+        "column_3dD8tM": {
+          "type": "column",
           "settings": {
-            "collection": "pouzdra-na-tablety-z-umele-kuze",
-            "custom_image": "shopify://shop_images/1B1A0152_7f5f3528-ce57-4a92-97b5-d648c928f966.jpg",
-            "custom_title": "OBALY NA TABLETY"
+            "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.png",
+            "icon": "check",
+            "title": "Konfigurátor držáků",
+            "text": "<p>Sestav si ve 3 jednoduchých krocích perfektní řešení uchycení tvého smartphonu nebo tabletu do svého vozidla.</p>",
+            "link_label": "Začít konfigurovat",
+            "link": "shopify://pages/konfigurator",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
           }
         },
-        "featured_collection_4Ge7Ga": {
-          "type": "featured_collection",
+        "column_NnRakk": {
+          "type": "column",
           "settings": {
-            "collection": "pouzdra-na-notebooky-z-umele-kuze",
-            "custom_image": "shopify://shop_images/1B1A8739.jpg",
-            "custom_title": "OBALY NA NOTEBOOKY"
+            "image": "shopify://shop_images/FIXTAG-ST-WH-PRODUCT-7.jpg",
+            "icon": "check",
+            "title": "Chytré lokátory",
+            "text": "<p>Vyber si z naší řady chytrých lokátorů s podporou Apple Find My. Každý je vytvořen tak, aby dokonale splynul s prostředím a ochránil tak všechny tvé cennosti.</p>",
+            "link_label": "Vybrat lokátor",
+            "link": "shopify://pages/smart",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_mpMBtN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/FIXGA-929-BK-PRODUCT-6.jpg",
+            "icon": "check",
+            "title": "Armor",
+            "text": "<p>Ochraň svůj telefon tím nejlepším sklem na trhu. Až 3x odolnější a pružnější s vrstvou proti otiskům prstů z něj dělá dokonalý štít před všemi nástrahami.</p>",
+            "link_label": "Ochránit telefon",
+            "link": "shopify://collections/skla-armor",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
           }
         }
       },
       "block_order": [
-        "featured_collection_fE9TMM",
-        "featured_collection_WMUJtn",
-        "featured_collection_4Ge7Ga"
+        "column_NwTBYX",
+        "column_3dD8tM",
+        "column_NnRakk",
+        "column_mpMBtN"
       ],
+      "name": "t:sections.promotion-cards.presets.name",
       "settings": {
-        "title": "Kategorie výrobků",
+        "title": "Akce",
         "subtitle": "",
         "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "full_width": false,
-        "enable_section_box_layout": false,
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "show_view_all": false,
-        "collection_card_show_title": true,
-        "show_products_count": false,
-        "columns_tablet": "3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_GnRiqE": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_UWbDfX": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h3>Až 70 % sleva na produkty z umělé kůže, pouze do vyprodání zásob</h3>",
-            "heading_size": "h2"
-          }
-        },
-        "text_PTb6yL": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Slaď si všechna svoje zařízení do obalů z umělé kůže. Vyber si z 11 barev kvalitní koženky přesně podle tvého stylu.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_UWbDfX",
-        "text_PTb6yL"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "text_icons_fictdW": {
-      "type": "text-icons",
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h2",
-        "icon_width_desktop": 50,
         "text_position": "bottom",
-        "enable_heading_in_box": false,
-        "columns_desktop": 3,
-        "columns_tablet": 3,
+        "columns_desktop": 4,
+        "columns_tablet": 4,
+        "desktop_gap": 30,
         "auto_fit": false,
-        "column_alignment": "center",
-        "highlight_icon": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
+        "button_open_new_tab": false,
         "enable_section_box_layout": false,
-        "color_scheme": "background-1",
-        "border_width": 1,
-        "border_opacity": 0,
-        "border_spacing": 0,
-        "highlight_border": false,
-        "border_shape": "square",
-        "blur_background": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
         "columns_mobile": "1",
-        "icon_width_mobile": 30,
-        "border_spacing_mobile": 0,
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
         "swipe_on_mobile": false,
-        "padding_top": 0,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "image_with_text_zKVCnf": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_JYcbnb": {
-          "type": "heading",
-          "settings": {
-            "heading": "Obal, který už nebudeš muset měnit.",
-            "heading_size": "h2",
-            "enable_bold_heading": true
-          }
-        },
-        "text_BVLD3r": {
-          "type": "text",
-          "settings": {
-            "text": "<p>S doživotní zárukou na náš kožený obal ProFit můžete mít jeden obal po celou dobu používání tvého telefonu.</p><ul><li>Ochrání tvůj telefon ze všech stran</li><li>Má praktické kapsy na karty či peníze</li><li>Dá se využít i jako stojánek</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_MppFHw": {
-          "type": "button",
-          "settings": {
-            "button_label": "Zjistit více",
-            "button_link": "shopify://collections/profit",
-            "button_style": "solid",
-            "button_open_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_JYcbnb",
-        "text_BVLD3r",
-        "button_MppFHw"
-      ],
-      "disabled": true,
+    "featured_blog_GywpXz": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
       "settings": {
-        "grid_layout": "grid",
-        "image": "shopify://shop_images/leather.png",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 24,
-        "padding_bottom": 24,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#e94200",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#e94200",
-        "background_container": "#ececec",
-        "gradient_background_container": "",
-        "background_section": "#ececec",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
-      }
-    },
-    "image_with_text_VYpWNw": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_YVgNAz": {
-          "type": "heading",
-          "settings": {
-            "heading": "Produkty z veganské kůže",
-            "heading_size": "h1",
-            "enable_bold_heading": true
-          }
-        },
-        "text_gXWYDt": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pečlivě vyrobené produkty v Prostějově z té nejlepší syntetické kůže se šrafováním. Vyber si z široké škály barev a produktů pro různá zařízení.</p><p>Tento materiál má mnohé výhody, k hlavním patří snadná údržba produktů a větší výběr barevných variant.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_fcqKMB": {
-          "type": "button",
-          "settings": {
-            "button_label": "Prohlédnout všechny výrobky",
-            "button_link": "shopify://collections/pouzdra-z-umele-kuze",
-            "button_style": "solid",
-            "button_open_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_YVgNAz",
-        "text_gXWYDt",
-        "button_fcqKMB"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "image": "shopify://shop_images/verona_1_0b2940a3-4031-4311-a5c8-0a149193cb51.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#e94200",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
-      }
-    },
-    "image_with_text_FAeknh": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_C8jHLA": {
-          "type": "heading",
-          "settings": {
-            "heading": "Chceš  znát veškeré výhody umělé kůže?",
-            "heading_size": "h1",
-            "enable_bold_heading": true
-          }
-        },
-        "text_Jax3dG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Přečti si článek na blogu, kde popisujeme výhody materiálu i to, jak se o produkty nejlépe starat. </p>",
-            "text_style": "body"
-          }
-        },
-        "button_zPXHCm": {
-          "type": "button",
-          "settings": {
-            "button_label": "Číst blog",
-            "button_link": "shopify://blogs/news/proc-jsou-produkty-z-kozenky-stale-popularnejsi-a-jak-o-tento-material-pecovat",
-            "button_style": "solid",
-            "button_open_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_C8jHLA",
-        "text_Jax3dG",
-        "button_zPXHCm"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "image": "shopify://shop_images/FIXSIE-15-WI-PRODUCT-10.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#e94200",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
-      }
-    },
-    "featured_products_tabs_AyhByH": {
-      "type": "featured-products-tabs",
-      "blocks": {
-        "featured_products_CX9Rfz": {
-          "type": "featured_products",
-          "settings": {
-            "title": "Novinky",
-            "product_list": [
-              "tasticka-pres-rameno-s-kapsou-fixed-verona-s-cernou-snurkou-pro-mobilni-telefony-do-7-broskvova",
-              "pouzdro-fixed-siena-pro-notebooky-a-tablety-o-uhlopricce-do-13-svetle-tyrkysove",
-              "univerzalni-pouzdro-fixed-lucca-se-zaviracim-popruhem-pro-telefony-do-6-3-svetle-zlute",
-              "pouzdro-fixed-york-pro-notebooky-o-uhlopricce-do-13-cerne"
-            ],
-            "products_to_show": 4,
-            "columns_desktop": 4
-          }
-        },
-        "featured_collection_Ccb8Vb": {
-          "type": "featured_collection",
-          "settings": {
-            "title": "Bestsellery",
-            "collection": "pouzdra-z-umele-kuze-na-telefony-tablety-i-notebooky",
-            "products_to_show": 6,
-            "columns_desktop": 4,
-            "show_view_all": true,
-            "view_all_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "featured_products_CX9Rfz",
-        "featured_collection_Ccb8Vb"
-      ],
-      "settings": {
-        "title": "Novinky a bestsellery z naší kolekce",
-        "subtitle": "",
+        "title": "Blog It's FIXED",
         "heading_size": "h1",
-        "full_width": false,
-        "enable_desktop_slider": true,
+        "blog": "news",
+        "post_limit": 3,
+        "image_height": "medium",
+        "show_view_all": true,
+        "columns_desktop": 3,
+        "enable_section_box_layout": false,
         "color_scheme": "",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "enable_compare": true,
-        "enable_quick_view": true,
-        "show_color_swatches": true,
-        "color_swatches_style": "custom",
-        "columns_tablet": "4",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "blog_card_text_alignment": "left",
+        "blog_card_color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -593,13 +367,8 @@
   "order": [
     "main",
     "slideshow_8r6nPV",
-    "collection_list_bB4BBc",
-    "rich_text_GnRiqE",
-    "text_icons_fictdW",
-    "image_with_text_zKVCnf",
-    "image_with_text_VYpWNw",
-    "image_with_text_FAeknh",
-    "featured_products_tabs_AyhByH",
+    "multicolumn_eTYzWE",
+    "featured_blog_GywpXz",
     "rich_text_w69QNV",
     "image_with_text_MUzzfc",
     "image_with_text_76ABzN"
