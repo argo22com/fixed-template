@@ -105,12 +105,12 @@
         "column_8tRDxf": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/3roky.5200.webp",
+            "image": "shopify://shop_images/o_nas_72be813d-3881-45fd-a9eb-4a7eed5513b8.jpg",
             "icon": "check",
             "title": "Seznamte se s FIXED",
             "text": "",
             "link_label": "Zjistit více",
-            "link": "shopify://pages/zaruka",
+            "link": "shopify://pages/seznamte-se-s-fixed",
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
