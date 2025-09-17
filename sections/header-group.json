@@ -84,6 +84,15 @@
             "background_color": "#d9121f"
           }
         },
+        "menu_badge_geKUxy": {
+          "type": "menu_badge",
+          "settings": {
+            "trigger": "Poškozená balení",
+            "text": "Extra sleva",
+            "text_color": "#ffffff",
+            "background_color": "#dc4405"
+          }
+        },
         "mega_menu_promotion_YqyFiJ": {
           "type": "mega_menu_promotion",
           "disabled": true,
@@ -504,6 +513,7 @@
         "menu_badge_jiY3QX",
         "menu_badge_CxNkFp",
         "menu_badge_xmfB8A",
+        "menu_badge_geKUxy",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_JjNkGB",
         "mega_menu_promotion_NP3Wit",
