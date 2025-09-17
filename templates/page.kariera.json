@@ -195,21 +195,11 @@
             "text": "<p>Bez komunikace to u nás nejde. <br/><br/>Každý den si nasloucháme, sdílíme potřeby, řešíme situace a hledáme cesty, jak spolupracovat co nejlépe. Učíme se nebát se říct, co je důležité, a nezapomínáme chválit i děkovat. Věříme, že dobrá komunikace zlepšuje nejen práci, ale i život, proto se v ní neustále dovzděláváme na pravidelných workshopech.</p>",
             "text_style": "body"
           }
-        },
-        "button_mMJyEq": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "solid",
-            "button_open_new_tab": false
-          }
         }
       },
       "block_order": [
         "heading_eUiLdt",
-        "text_EGAwge",
-        "button_mMJyEq"
+        "text_EGAwge"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
