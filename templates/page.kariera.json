@@ -287,6 +287,26 @@
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1E40AF"
       }
+    },
+    "video_YRY97q": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "title": "FIXED z mnoha úhlů pohledu",
+        "subtitle": "Jak vidí FIXED CEO, zakladatel, či ředitel marketingu? Podívej se na krátká videa.",
+        "heading_size": "h1",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -296,6 +316,7 @@
     "image_with_text_FQEjUR",
     "image_with_text_RQiDmi",
     "image_with_text_6xtkNg",
-    "image_with_text_PLHGLj"
+    "image_with_text_PLHGLj",
+    "video_YRY97q"
   ]
 }
