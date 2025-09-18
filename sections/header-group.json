@@ -59,6 +59,7 @@
         },
         "menu_badge_jiY3QX": {
           "type": "menu_badge",
+          "disabled": true,
           "settings": {
             "trigger": "Video nákupy",
             "text": "Novinka",
@@ -75,17 +76,9 @@
             "background_color": "#dc4405"
           }
         },
-        "menu_badge_xmfB8A": {
-          "type": "menu_badge",
-          "settings": {
-            "trigger": "Rozbaleno",
-            "text": "Výprodej -62 %",
-            "text_color": "#ffffff",
-            "background_color": "#d9121f"
-          }
-        },
         "menu_badge_geKUxy": {
           "type": "menu_badge",
+          "disabled": true,
           "settings": {
             "trigger": "Poškozená balení",
             "text": "Extra sleva",
@@ -512,7 +505,6 @@
         "mega_menu_promotion_UdqXan",
         "menu_badge_jiY3QX",
         "menu_badge_CxNkFp",
-        "menu_badge_xmfB8A",
         "menu_badge_geKUxy",
         "mega_menu_promotion_YqyFiJ",
         "mega_menu_promotion_NP3Wit",
