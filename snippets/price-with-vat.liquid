@@ -9,6 +9,6 @@
       data-variant-id="{{ product.selected_or_first_available_variant.id }}"
       data-vat-multiplier="{{ vat_rate_multiplier }}">
   {{ vat_price_rounded | money_without_trailing_zeros }}
-  regular:
-  {{ 'products.product.price.regular_price' | t }}
+  
+  {{ 'products.product.price.regular_price' | t }} {{ money_price }}
 </span>
