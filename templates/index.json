@@ -486,14 +486,49 @@
         "padding_bottom": 8
       }
     },
+    "featured_collection_HiYfEm": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Aktuální kolekce - Saffiano design",
+        "subtitle": "",
+        "collection": "pouzdra-z-umele-kuze-na-telefony-tablety-i-notebooky",
+        "heading_size": "h1",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "enable_desktop_slider": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image_position_desktop": "left",
+        "image_height": "adapt_product_list",
+        "image_height_mobile": "34",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_compare": false,
+        "enable_quick_view": false,
+        "show_color_swatches": false,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection_xcmLFp": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Produkty měsíce",
         "subtitle": "",
         "collection": "zpatky-do-skoly",
         "heading_size": "h2",
-        "products_to_show": 3,
+        "products_to_show": 8,
         "columns_desktop": 3,
         "full_width": true,
         "show_view_all": true,
@@ -1316,6 +1351,7 @@
   "order": [
     "banner_grid_KRdaxm",
     "518b8ced-997b-408e-84d5-64fe5082a6a1",
+    "featured_collection_HiYfEm",
     "featured_collection_xcmLFp",
     "1756715191a0d80543",
     "17225355129c0ff813",
