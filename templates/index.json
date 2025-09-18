@@ -699,10 +699,10 @@
           "type": "column",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/banner-17-2-mobil_56f59210-fbcd-454f-b91a-e523260c6558.jpg",
+            "image": "shopify://shop_images/Screenshot_2025-09-18_at_16.05.34.png",
             "icon": "check",
-            "title": "Soutěž o iPhone 17 pro a hromadu příslušenství k tomu",
-            "text": "<p>Zasoutěž si s námi o nejnovější iPhone 17 pro. Splň jednoduché úkoly a vyhraj.</p>",
+            "title": "Soutěž o iPhone 17 Pro a hromadu příslušenství k tomu",
+            "text": "<p>Zasoutěž si s námi o nejnovější iPhone 17 Pro. Splň jednoduché úkoly a vyhraj.</p>",
             "link_label": "Přejít na soutěž",
             "link": "shopify://pages/soutez-o-iphone-17",
             "button_style": "solid",
