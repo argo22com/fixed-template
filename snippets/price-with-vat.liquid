@@ -1,27 +1,26 @@
 {%- comment -%}
-  price-with-vat: zobrazí cenu s DPH.
-  - očekává: price = variant.price (v centech)
-  - DPH bere z metaobjektu vat_rates_by_country (price_multiplier), ale
-    pokud je shop.taxes_included zapnuté, cenu už nenásobí.
+  Renders a price with VAT based on the market's VAT rate from metaobject. In case of CZK currency, the price is taken from the variant's metafield.
+
+  Accepts:
+  - price: Integeror float
+  - variant_vat_metafield: String
+
+  Usage:
+  {% render 'price-with-vat', price: price, variant_vat_metafield: variant.metafield %}
 {%- endcomment -%}
 {%- liquid
-  assign base_cents = price
-
-  # multiplikátor DPH pro aktuální zemi (fallback = 1)
-  assign mo = shop.metaobjects.vat_rates_by_country[ localization.country.iso_code ]
-  assign multiplier = 1
-  if mo and mo.price_multiplier and mo.price_multiplier.value
-    assign multiplier = mo.price_multiplier.value
+  assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
+  if localization.country.currency.iso_code == 'CZK'
+    assign vat_multiplier = 1
+    assign vat_price = variant_vat_metafield | times: vat_multiplier | round: 1
+    assign vat_price_rounded = vat_price | times: 100
+  else
+    assign vat_price = price | times: vat_rate_multiplier
+    assign vat_price_rounded = vat_price | divided_by: 100 | round: 1 | times: 100
   endif
-
-  # když jsou ceny v adminu už vč. DPH, multiplikátor nepoužijeme
-  assign with_tax_cents = base_cents
-  unless shop.taxes_included
-    assign with_tax_cents = base_cents | times: multiplier | round: 0
-  endunless
 -%}
-{% if with_tax_cents %}
+{% if vat_price_rounded %}
   <span class="strong price__vat">
-    {{ with_tax_cents | money_without_trailing_zeros }}
+    {{ vat_price_rounded | money_without_trailing_zeros }}
   </span>
 {% endif %}
