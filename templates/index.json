@@ -309,6 +309,41 @@
             "colors_button_mobile": "#000000"
           }
         },
+        "slide_XzVakF": {
+          "type": "slide",
+          "settings": {
+            "badge_label": "Badge label",
+            "heading": "Image slide",
+            "text": "Tell your brand's story through images",
+            "hide_text_on_mobile": false,
+            "button_label": "Button label",
+            "price": "1300",
+            "link": "",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-center",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#000000",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#f87171",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
+            "colors_text_mobile": "#000000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
         "slide_AFmp8D": {
           "type": "slide",
           "settings": {
@@ -328,7 +363,7 @@
             "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 20,
-            "text_alignment_mobile": "left",
+            "text_alignment_mobile": "center",
             "colors_text": "#ffffff",
             "gradient_heading_desktop": "",
             "colors_background": "#ffffff",
@@ -460,6 +495,7 @@
         "slide_QWELn3",
         "slide_T3NJDj",
         "slide_LBwdxn",
+        "slide_XzVakF",
         "slide_AFmp8D",
         "slide_VnxEnd",
         "slide_Pb37rp",
