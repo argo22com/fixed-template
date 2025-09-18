@@ -201,8 +201,8 @@
         "slide_QWELn3": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/iphone17.jpg",
-            "mobile_image": "shopify://shop_images/mgp.5093.png",
+            "image": "shopify://shop_images/banner-17-2_a6691681-a18f-464a-a559-dcf74a21a78e.jpg",
+            "mobile_image": "shopify://shop_images/banner-17-2-mobil_56f59210-fbcd-454f-b91a-e523260c6558.jpg",
             "badge_label": "",
             "heading": "Příslušenství pro iPhone 17",
             "text": "Inspiruj se naší širokou nabídkou kvalitního a odolného příslušenství pro tvůj nový iPhone",
@@ -218,7 +218,7 @@
             "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 0,
-            "text_alignment_mobile": "left",
+            "text_alignment_mobile": "center",
             "colors_text": "#ffffff",
             "gradient_heading_desktop": "",
             "colors_background": "#ffffff",
@@ -471,7 +471,7 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "medium",
+        "slide_height": "large",
         "slide_height_mobile": "medium-mobile",
         "auto_rotate": true,
         "change_slides_speed": 7,
@@ -490,7 +490,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "Právě letí: Saffiano design",
+        "title": "Právě letí",
         "subtitle": "",
         "collection": "pouzdra-z-umele-kuze-na-telefony-tablety-i-notebooky",
         "heading_size": "h1",
