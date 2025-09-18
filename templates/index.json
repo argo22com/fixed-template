@@ -311,6 +311,7 @@
         },
         "slide_XzVakF": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "badge_label": "Badge label",
             "heading": "Image slide",
