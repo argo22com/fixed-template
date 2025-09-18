@@ -349,6 +349,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/doprava.jpg",
+            "mobile_image": "shopify://shop_images/doprava-mobil.jpg",
             "badge_label": "",
             "heading": "Užívejte si dopravu zdarma",
             "text": "Stačí nakoupit na našem e-shopu nad 500 Kč",
