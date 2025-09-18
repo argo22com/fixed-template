@@ -238,8 +238,8 @@
         "slide_T3NJDj": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/bts2.5826_168ad736-a37f-4f47-9a8f-58e43ffcf366.jpg",
-            "mobile_image": "shopify://shop_images/bts2.5826.jpg",
+            "image": "shopify://shop_images/bts.5848.jpg",
+            "mobile_image": "shopify://shop_images/bts.5848.jpg",
             "badge_label": "",
             "heading": "Zpátky do školy",
             "text": "Chytré doplňky pro každý tablet, počítač i mobil",
@@ -262,14 +262,14 @@
             "colors_badge_foreground": "#ffffff",
             "colors_badge_background": "#e31c79",
             "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
+            "colors_button": "#e94200",
             "colors_text_mobile": "#ffffff",
             "gradient_heading_mobile": "",
             "colors_background_mobile": "#ffffff",
             "colors_badge_foreground_mobile": "#ffffff",
             "colors_badge_background_mobile": "#f87171",
             "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
+            "colors_button_mobile": "#e94200"
           }
         },
         "slide_LBwdxn": {
