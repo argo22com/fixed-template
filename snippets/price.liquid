@@ -1,4 +1,3 @@
-
 {% comment %}
     Renders a list of product's price (regular, sale)
 
@@ -30,28 +29,44 @@
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
-assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
-assign price_with_vat = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat
 
-
-if localization.country.currency.iso_code == 'CZK'
-  assign vat_price_string = price_with_vat
+  # ----------------------------
+  # Display ceny & sleva (%)
+  # ----------------------------
+  # VAT multiplikátor pro aktuální trh (fallback = 1)
   assign vat_multiplier = 1
-  assign vat_price = vat_price_string | times: vat_multiplier | round : 1
-  assign vat_price_rounded = vat_price | times: 100
-else
-  assign vat_price_string = product.selected_or_first_available_variant.price
-  assign vat_price = vat_price_string | times: vat_rate_multiplier
-  assign vat_price_rounded = vat_price | divided_by: 100 | round: 1 | times: 100
-endif
+  assign mo = shop.metaobjects.vat_rates_by_country[ localization.country.iso_code ]
+  if mo and mo.price_multiplier and mo.price_multiplier.value
+    assign vat_multiplier = mo.price_multiplier.value
+  endif
 
+  # nativní ceny v centech
+  assign current_cents  = target.price
+  assign original_cents = target.compare_at_price | default: 0
+
+  # display ceny (stejná báze jako hlavní zobrazená cena)
+  # - pokud máš "Include tax in prices" zapnuté, nenasobuj (Shopify už vrací vč. DPH)
+  assign current_display_cents  = current_cents
+  assign original_display_cents = original_cents
+  unless shop.taxes_included
+    assign current_display_cents  = current_cents  | times: vat_multiplier | round: 0
+    assign original_display_cents = original_cents | times: vat_multiplier | round: 0
+  endunless
+
+  # procento slevy z display cen
+  assign discount_pct = 0
+  if original_display_cents > current_display_cents and original_display_cents > 0
+    assign discount_pct = original_display_cents | minus: current_display_cents | times: 100.0 | divided_by: original_display_cents | round: 0
+  endif
+
+  # (legacy) CZ metafield pro cenu s DPH varianta — pokud ho ještě používáš jinde
+  assign price_with_vat = product.selected_or_first_available_variant.metafields.product_texts.price_with_vat
 -%}
 
 {% if show_in_card %}
-  {% render 'price-with-vat', price: product.selected_or_first_available_variant.price , variant_vat_metafield: price_with_vat %}
+  {%- render 'price-with-vat', price: product.selected_or_first_available_variant.price , variant_vat_metafield: price_with_vat -%}
 {% else %}
-{% render 'price-with-vat', price: product.selected_or_first_available_variant.price , variant_vat_metafield: price_with_vat %}
-
+  {%- render 'price-with-vat', price: product.selected_or_first_available_variant.price , variant_vat_metafield: price_with_vat -%}
 
   <{% unless use_custom_element %}div{% else %}product-price{% endunless %} class="price
     {%- if price_class %} {{ price_class }}{% endif -%}
@@ -73,6 +88,7 @@ endif
         </span>
         <span class="price__vat__note"> {{ 'products.product.price.price_without_vat' | t }} </span>
       </div>
+
       <div class="price__sale{% if show_in_card %} flex-column{% endif %}">
         {%- unless product.price_varies == false and product.compare_at_price_varies %}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
@@ -85,31 +101,30 @@ endif
               {% endif %}
             </s>
 
-            {%- if show_badges and show_in_card and target.price < target.compare_at_price and settings.sale_badge_label != 'none' -%}
+            {%- if show_badges and show_in_card and discount_pct > 0 and settings.sale_badge_label != 'none' -%}
               <span class="price__badge price__badge--in-card lh1 color-foreground">
                 {%- if settings.sale_badge_label == 'text' -%}
                   {{ 'products.product.on_sale' | t }}
                 {%- elsif settings.sale_badge_label == 'percent' -%}
-  {% assign adjusted_compare_at = target.compare_at_price | divided_by: 1.21 %}
-  {{ target.price | minus: adjusted_compare_at | times: 100.00 | divided_by: adjusted_compare_at | round }}%
-{%- else -%}
-  {% assign adjusted_compare_at = target.compare_at_price | divided_by: 1.21 %}
-  {%- if settings.currency_code_enabled -%}
-    -{{ adjusted_compare_at | minus: target.price | money_with_currency }}
-  {%- else -%}
-    -{{ adjusted_compare_at | minus: target.price | money }}
-  {%- endif -%}
-
+                  -{{ discount_pct }}%
+                {%- else -%}
+                  {%- if settings.currency_code_enabled -%}
+                    -{{ original_display_cents | minus: current_display_cents | money_with_currency }}
+                  {%- else -%}
+                    -{{ original_display_cents | minus: current_display_cents | money }}
+                  {%- endif -%}
                 {%- endif -%}
               </span>
             {%- endif -%}
           </span>
         {%- endunless -%}
+
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
         <span class="price-item price-item--sale price-item--last{% if show_in_card %} price-item--sale-in-card{% endif %}">
-          {% comment %} V případě výprodeje nezobrazuj cenu bez DPH   {{ money_price }} {% endcomment %}
+          {{ money_price }}
         </span>
       </div>
+
       {%- unless show_in_card and product.selected_or_first_available_variant.unit_price_measurement == nil -%}
       <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
         <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
@@ -127,23 +142,19 @@ endif
       </small>
       {%- endunless -%}
     </div>
-    {%- if show_badges and show_in_card == false and target.price < target.compare_at_price and settings.sale_badge_label != 'none' -%}
+
+    {%- if show_badges and show_in_card == false and discount_pct > 0 and settings.sale_badge_label != 'none' -%}
       <span class="price__badge lh1 color-foreground">
         {%- if settings.sale_badge_label == 'text' -%}
           {{ 'products.product.on_sale' | t }}
-
-{%- elsif settings.sale_badge_label == 'percent' -%}
-  {% assign adjusted_compare_at = target.compare_at_price | divided_by: 1.21 %}
-  {{ target.price | minus: adjusted_compare_at | times: 100.00 | divided_by: adjusted_compare_at | round }}%
-{%- else -%}
-  {% assign adjusted_compare_at = target.compare_at_price | divided_by: 1.21 %}
-  {%- if settings.currency_code_enabled -%}
-    -{{ adjusted_compare_at | minus: target.price | money_with_currency }}
-  {%- else -%}
-    -{{ adjusted_compare_at | minus: target.price | money }}
-  {%- endif -%}
-
-
+        {%- elsif settings.sale_badge_label == 'percent' -%}
+          -{{ discount_pct }}%
+        {%- else -%}
+          {%- if settings.currency_code_enabled -%}
+            -{{ original_display_cents | minus: current_display_cents | money_with_currency }}
+          {%- else -%}
+            -{{ original_display_cents | minus: current_display_cents | money }}
+          {%- endif -%}
         {%- endif -%}
       </span>
     {%- endif -%}
