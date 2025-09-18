@@ -1,9 +1,9 @@
 {%- liquid
-  assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
   assign base_price = product.selected_or_first_available_variant.price
   assign vat_price = base_price | times: vat_rate_multiplier
   assign vat_price_rounded = vat_price | divided_by: 100 | round: 1 | times: 100
 -%}
+{%- comment -%} assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value {%- endcomment -%}
  {%- comment -%} assign vat_price = base_price | times: vat_rate_multiplier {%- endcomment -%}
 <span class="strong price__vat js-price-with-vat"
       data-variant-id="{{ product.selected_or_first_available_variant.id }}"
