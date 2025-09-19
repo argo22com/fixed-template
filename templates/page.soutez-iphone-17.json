@@ -206,7 +206,7 @@
         "title": "",
         "subtitle": "",
         "heading_size": "h2",
-        "icon_width_desktop": 30,
+        "icon_width_desktop": 25,
         "text_position": "bottom",
         "enable_heading_in_box": false,
         "columns_desktop": 1,
@@ -226,8 +226,8 @@
         "icon_width_mobile": 15,
         "border_spacing_mobile": 0,
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "image_with_text_zpirbH": {
