@@ -734,13 +734,13 @@
         "column_MmmtK7": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Bez-nazvu-3.jpg",
+            "image": "shopify://shop_images/soutez.jpg",
             "icon": "check",
             "title": "Soutěž o iPhone 17 Pro a hromadu příslušenství k tomu",
             "text": "<p>Zasoutěž si s námi o nejnovější iPhone 17 Pro. Splň jednoduché úkoly a vyhraj.</p>",
             "link_label": "Chci soutěžit",
             "link": "shopify://pages/soutez-o-iphone-17",
-            "button_style": "solid",
+            "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
             "color_button_text": "#ffffff",
