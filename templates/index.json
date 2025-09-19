@@ -470,8 +470,8 @@
         ".slider-counter__link--active.slider-counter__link--dots .dot,.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
       ],
       "settings": {
-        "layout": "stretched_grid",
-        "slide_height": "small",
+        "layout": "full_bleed",
+        "slide_height": "medium",
         "slide_height_mobile": "medium-mobile",
         "auto_rotate": true,
         "change_slides_speed": 7,
@@ -479,7 +479,7 @@
         "enable_navigation_desktop": true,
         "preload": false,
         "show_text_below": false,
-        "enable_pagination_mobile": true,
+        "enable_pagination_mobile": false,
         "enable_navigation_mobile": true,
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 0,
