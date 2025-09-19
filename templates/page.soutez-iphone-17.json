@@ -50,7 +50,7 @@
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_height_mobile": "small-mobile",
-        "desktop_content_position": "bottom-left",
+        "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
         "keep_ltr": false,
         "hide_when_empty_image": false,
