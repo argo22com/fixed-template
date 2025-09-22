@@ -488,9 +488,7 @@
     },
     "featured_collection_NmgH79": {
       "type": "featured-collection",
-      "custom_css": [
-        ".card__heading--product-large {font-size: calc(var(--font-heading-scale) * 1.5rem);}"
-      ],
+      "custom_css": [],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "title": "Právě letí: Saffiano design",
