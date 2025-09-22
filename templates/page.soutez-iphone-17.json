@@ -46,11 +46,11 @@
       "settings": {
         "layout": "grid",
         "image": "shopify://shop_images/soutez.5864.jpg",
-        "image_mobile": "shopify://shop_images/soutez.5859.jpg",
-        "image_overlay_opacity": 10,
+        "image_mobile": "shopify://shop_images/Screenshot_2025-09-18_at_16.05.34.png",
+        "image_overlay_opacity": 0,
         "image_height": "small",
         "image_height_mobile": "small-mobile",
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "bottom-left",
         "desktop_content_alignment": "left",
         "keep_ltr": false,
         "hide_when_empty_image": false,
@@ -129,10 +129,10 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/rollup.5870.jpg",
+        "image": "shopify://shop_images/mgp.5100.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -201,12 +201,13 @@
       "block_order": [
         "text_icon_zwTRcC"
       ],
+      "disabled": true,
       "name": "t:sections.text-icons.presets.name",
       "settings": {
         "title": "",
         "subtitle": "",
         "heading_size": "h2",
-        "icon_width_desktop": 25,
+        "icon_width_desktop": 30,
         "text_position": "bottom",
         "enable_heading_in_box": false,
         "columns_desktop": 1,
@@ -226,8 +227,8 @@
         "icon_width_mobile": 15,
         "border_spacing_mobile": 0,
         "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 44
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_zpirbH": {
@@ -319,6 +320,7 @@
         "featured_collection_ARgaAY",
         "featured_collection_9NpwDP"
       ],
+      "disabled": true,
       "settings": {
         "title": "Prohlédnout si příslušenství k iPhone 17",
         "subtitle": "",
