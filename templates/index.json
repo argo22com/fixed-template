@@ -1314,11 +1314,11 @@
         "desktop_content_alignment": "center",
         "enable_section_box_layout": false,
         "color_scheme": "background-2",
-        "background_image_section": "shopify://shop_images/bg.jpg",
+        "background_image_section": "shopify://shop_images/taking-notes-and-working-on-laptop.jpg",
         "enable_parallax_scrolling_effect": true,
         "colors_text": "#ffffff",
         "colors_input": "#000000",
-        "overlay_color": "#00a9e0",
+        "overlay_color": "#000000",
         "mobile_content_alignment": "center",
         "padding_top": 72,
         "padding_bottom": 72
