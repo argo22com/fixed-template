@@ -707,7 +707,7 @@
             "button_open_new_tab": false,
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
-            "color_button": "#dc4405",
+            "color_button": "#000000",
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
           }
@@ -740,11 +740,11 @@
             "text": "<p>Zasoutěž si s námi o nejnovější iPhone 17 Pro. Splň jednoduché úkoly a vyhraj.</p>",
             "link_label": "Chci soutěžit",
             "link": "shopify://pages/soutez-o-iphone-17",
-            "button_style": "link",
+            "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
             "color_button_text": "#ffffff",
-            "color_button": "#e94200",
+            "color_button": "#000000",
             "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
           }
