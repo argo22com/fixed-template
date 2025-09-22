@@ -897,32 +897,6 @@
             "overlay_opacity": 30
           }
         },
-        "text_overlay_image_QcRW6g": {
-          "type": "text-overlay-image",
-          "settings": {
-            "image": "shopify://shop_images/audio.jpg",
-            "link": "shopify://collections/audio",
-            "keep_ltr": false,
-            "text": "Bezdrátová sluchátka, sluchátka s kabelem...",
-            "text_style": "subtitle",
-            "text_size": "small",
-            "heading": "Audio",
-            "heading_size": "h3",
-            "heading_uppercase": false,
-            "button_label": "",
-            "button_style": "primary",
-            "button_size": "small",
-            "button_pin_bottom": false,
-            "horizontal_alignment": "left",
-            "vertical_alignment": "end",
-            "heading_color": "#000000",
-            "caption_color": "#000000",
-            "button_foreground": "#ffffff",
-            "button_background": "#000000",
-            "overlay_color": "#daecff",
-            "overlay_opacity": 30
-          }
-        },
         "text_overlay_image_kzc9B8": {
           "type": "text-overlay-image",
           "settings": {
@@ -975,6 +949,32 @@
             "overlay_opacity": 30
           }
         },
+        "text_overlay_image_QcRW6g": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/audio.jpg",
+            "link": "shopify://collections/audio",
+            "keep_ltr": false,
+            "text": "Bezdrátová sluchátka, sluchátka s kabelem...",
+            "text_style": "subtitle",
+            "text_size": "small",
+            "heading": "Audio",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "small",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "end",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#ffffff",
+            "button_background": "#000000",
+            "overlay_color": "#daecff",
+            "overlay_opacity": 30
+          }
+        },
         "text_overlay_image_XYGigM": {
           "type": "text-overlay-image",
           "disabled": true,
@@ -1004,9 +1004,9 @@
       },
       "block_order": [
         "text_overlay_image_TrcKUU",
-        "text_overlay_image_QcRW6g",
         "text_overlay_image_kzc9B8",
         "text_overlay_image_yq9DWA",
+        "text_overlay_image_QcRW6g",
         "text_overlay_image_XYGigM"
       ],
       "custom_css": [
