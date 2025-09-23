@@ -128,7 +128,7 @@
       ],
       "custom_css": [
         ".inventory-template--15699446759506__main {color: #00bb00;}",
-        ".price__vat {color: #00ace9; font-size: 4rem;}",
+        ".price__vat {color: #00ace9; font-size: 4rem; font-weight:bold}",
         ".price-item--regular {color: #000;}",
         ".color-swatch-icon {border: 1px solid #f6f6f6;}"
       ],
