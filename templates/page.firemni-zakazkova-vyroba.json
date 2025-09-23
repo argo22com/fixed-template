@@ -424,7 +424,7 @@
         "video_hosted": "shopify://files/videos/Vyroba-kozene-penezenky-Tiny-Wallet-pro-BCPP-Burzu-cennych-papiru-Praha.mp4",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
-        "autoplay": false,
+        "autoplay": true,
         "enable_controls": true,
         "enable_video_looping": true,
         "full_width": true,
