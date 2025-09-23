@@ -223,8 +223,8 @@
       ],
       "settings": {
         "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
+        "desktop_content_width": "full",
+        "content_alignment": "left",
         "enable_section_box_layout": false,
         "color_scheme": "",
         "full_width": true,
