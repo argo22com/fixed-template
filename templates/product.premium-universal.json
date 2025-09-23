@@ -117,6 +117,10 @@
         "judge_me_reviews_review_snippet_widget_QNke6K",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
       ],
+      "custom_css": [
+        ".price__vat {font-size: 4rem; font-weight: bold; color: #00ace6;}",
+        ".inventory-template--15699447283794__main {color: #00bc00;}"
+      ],
       "settings": {
         "section_width": "page-width",
         "use_background_input": true,
