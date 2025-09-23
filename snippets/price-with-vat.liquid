@@ -1,10 +1,8 @@
 {%- comment -%}
   Renders a price with VAT based on the market's VAT rate from metaobject. In case of CZK currency, the price is taken from the variant's metafield.
-
   Accepts:
   - price: Integeror float
   - variant_vat_metafield: String
-
   Usage:
   {% render 'price-with-vat', price: price, variant_vat_metafield: variant.metafield %}
 {%- endcomment -%}
