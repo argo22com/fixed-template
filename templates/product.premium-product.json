@@ -104,7 +104,8 @@
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe"
       ],
       "custom_css": [
-        ".price__vat {font-size: 4rem; font-weight:bold; color: #00ace6}"
+        ".price__vat {font-size: 4rem; font-weight: bold; color: #00ace6;}",
+        ".inventory-template--15699447185490__main {color: #00bc00;}"
       ],
       "settings": {
         "section_width": "page-width",
