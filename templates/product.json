@@ -127,7 +127,8 @@
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
       ],
       "custom_css": [
-        ".inventory-template--15699446759506__main {color: #00bb00;}"
+        ".inventory-template--15699446759506__main {color: #00bb00;}",
+        ".price__vat {color: #00ace9; font-size: 4rem;}"
       ],
       "settings": {
         "section_width": "page-width",
