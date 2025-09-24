@@ -200,7 +200,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture_1.value }}",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -254,7 +254,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture_2.value }}",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "middle",
@@ -308,7 +308,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture_3.value }}",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -362,7 +362,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture_4.value }}",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "middle",
