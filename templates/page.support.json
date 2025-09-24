@@ -176,6 +176,15 @@
             "row_content": "<p>Manuál pro aplikaci FIXED Smart najdete<strong> </strong><a href=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/Manual_pro_FIXED_Smart.pdf?v=1731073449\" title=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/Manual_pro_FIXED_Smart.pdf?v=1731073449\"><strong>zde</strong></a>.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_9G84kU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Jak vyřešit nefunkční trackpad na klávesnici Typee po aktualizaci iPadu na iPadOS 26?",
+            "icon": "emoji_happy",
+            "row_content": "<p><br/>Klávesnici lze jednoduše aktualizovat pomocí aplikace v iPhonu. <br/><br/><a href=\"https://cdn.shopify.com/videos/c/o/v/c7d48eb921b64f68bbad3215ce5c47d3.mp4\" title=\"https://cdn.shopify.com/videos/c/o/v/c7d48eb921b64f68bbad3215ce5c47d3.mp4\">Videonávod</a><br/><a href=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/110MB01CW5-FIXED_Typee-CZ-SX-250910-V3.2.4_0x6846__iOS16.1_1.bin?v=1758624839\" title=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/110MB01CW5-FIXED_Typee-CZ-SX-250910-V3.2.4_0x6846__iOS16.1_1.bin?v=1758624839\">Soubor pro LOT 240395</a><br/><a href=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/110MB01C-FIXED_Typee-CZ-SX-250826-V3.2.4_0x133b__iOS16.1_1.bin?v=1758624841\" title=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/110MB01C-FIXED_Typee-CZ-SX-250826-V3.2.4_0x133b__iOS16.1_1.bin?v=1758624841\">Soubor pro ostatní LOT<br/></a><br/></p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -183,7 +192,8 @@
         "collapsible_row_yK8XmW",
         "collapsible_row_NWRtmw",
         "collapsible_row_WqrCEr",
-        "collapsible_row_KaiVYT"
+        "collapsible_row_KaiVYT",
+        "collapsible_row_9G84kU"
       ],
       "settings": {
         "section_width": "grid",
