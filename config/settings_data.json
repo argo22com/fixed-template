@@ -725,6 +725,11 @@
         "type": "shopify://apps/luigi-s-ai-search-discovery/blocks/lbx-script/e958335d-b7a0-483f-9ab5-a587d1bd4fa9",
         "disabled": false,
         "settings": {}
+      },
+      "16216491870256628967": {
+        "type": "shopify://apps/bss-labels-badges/blocks/bss-pl-config-data/91bfe765-b604-49a1-805e-3599fa600b24",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
