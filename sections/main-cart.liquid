@@ -582,13 +582,7 @@
                 <div class="cart__footer__js-contents" {{ block.shopify_attributes }}>
                   <div class="totals flex justify-space-between align-end flex-wrap">
                     <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-                    <p class="totals__subtotal-value price font-body-semi-bold">
-                      {%- liquid
-                        assign vat_rate_multiplier = shop.metaobjects.vat_rates_by_country[localization.country.iso_code].price_multiplier.value
-                        assign total_price_with_vat = cart.total_price | times: vat_rate_multiplier | divided_by: 100 | round: 1 | times: 100
-                      -%}
-                      {%- render 'price-format', price: total_price_with_vat -%}
-                    </p>
+                    <p class="totals__subtotal-value price font-body-semi-bold">{%- render 'price-format', price: cart.total_price -%}</p>
                   </div>
 
                   <div>
