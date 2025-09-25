@@ -384,12 +384,6 @@
 
                           <td class="cart-item__totals cart-page__item-totals flex justify-space-between align-center">
                             <div class="cart-item__price-wrapper">
-                              {% assign price_with_vat = item.variant.metafields.product_texts.price_with_vat %}
-
-                              {% render 'price-with-vat',
-                                price: item.original_line_price,
-                                variant_vat_metafield: price_with_vat
-                              %}
                               {%- if item.original_line_price != item.final_line_price -%}
                                 <dl class="cart-item__discounted-prices">
                                   <dt class="visually-hidden">
@@ -408,14 +402,9 @@
                                   </dd>
                                 </dl>
                               {%- else -%}
-                                <div class="flex flex-column">
-                                  <span class="price price--end">
-                                    {%- render 'price-format', price: item.original_line_price -%}
-                                  </span>
-                                  <span class="price__vat__note">
-                                    {{ 'products.product.price.price_without_vat' | t }}
-                                  </span>
-                                </div>
+                                <span class="price price--end">
+                                  {%- render 'price-format', price: item.original_line_price -%}
+                                </span>
                               {%- endif -%}
 
                               {%- if item.variant.available and item.unit_price_measurement -%}
