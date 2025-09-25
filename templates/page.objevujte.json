@@ -1,0 +1,608 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "grid",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "ul_li_marker": "#000000"
+      }
+    },
+    "multicolumn_eTYzWE": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_NwTBYX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/17_Pro.5099.jpg",
+            "icon": "check",
+            "title": "B2B e-shop",
+            "text": "<p>E-shop pro obchodní partnery.</p>",
+            "link_label": "Přejít na e-shop",
+            "link": "https://shop.fixed.zone/",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_3dD8tM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/oxford_brown.jpg",
+            "icon": "check",
+            "title": "Firemní zakázková výroba",
+            "text": "<p>Personalizované luxusní kožené doplňky z pravé italské kůže</p>",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/firemni-zakazkova-vyroba",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_NwTBYX",
+        "column_3dD8tM"
+      ],
+      "name": "t:sections.promotion-cards.presets.name",
+      "settings": {
+        "title": "Pro firmy",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 4,
+        "columns_tablet": 4,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_w4WNC8": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_8tRDxf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/o_nas_72be813d-3881-45fd-a9eb-4a7eed5513b8.jpg",
+            "icon": "check",
+            "title": "Seznamte se s FIXED",
+            "text": "",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/seznamte-se-s-fixed",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_6My4be": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/investor.jpg",
+            "icon": "check",
+            "title": "Kontakty",
+            "text": "",
+            "link_label": "Přejít na kontakty",
+            "link": "shopify://pages/contact",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_TdKnrC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/kariera.jpg",
+            "icon": "check",
+            "title": "Kariéra ve FIXED",
+            "text": "",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/kariera-ve-fixed",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_GF8HCY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/people-holding-earth-their-hands.jpg",
+            "icon": "check",
+            "title": "Udržitelnost",
+            "text": "",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/releaf",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_8tRDxf",
+        "column_6My4be",
+        "column_TdKnrC",
+        "column_GF8HCY"
+      ],
+      "name": "t:sections.promotion-cards.presets.name",
+      "settings": {
+        "title": "O nás",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 4,
+        "columns_tablet": 4,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_349ceA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_KJJM64": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/medialni.jpg",
+            "icon": "check",
+            "title": "Mediální centrum",
+            "text": "",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/pro-media",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_aQpRR9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/making-a-budget-tracking-finances.jpg",
+            "icon": "check",
+            "title": "Investorské centrum",
+            "text": "",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/investorske-centrum",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_6rKEMy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/obch_podminky.jpg",
+            "icon": "check",
+            "title": "Obchodní podmínky",
+            "text": "",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/obchodni-podminky-b2c",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_PxM7Gj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/reklamace.jpg",
+            "icon": "check",
+            "title": "Zásady ochrany osobních údajů",
+            "text": "",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/zasady-ochrany-osobnich-udaju",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_KJJM64",
+        "column_aQpRR9",
+        "column_6rKEMy",
+        "column_PxM7Gj"
+      ],
+      "name": "t:sections.promotion-cards.presets.name",
+      "settings": {
+        "title": "Informuj se",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 4,
+        "columns_tablet": 4,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_i86nDQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3EAkXh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3roky.5200.webp",
+            "icon": "check",
+            "title": "Záruka 3 roky",
+            "text": "<p><br/>Ať už jsi <strong>koncový zákazník </strong>nebo <strong>firma</strong>, máte u nás<strong> prodlouženou záruku bez složitostí a malých písmenek</strong>.</p>",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/zaruka",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_hDyNJt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/podpora.jpg",
+            "icon": "check",
+            "title": "Zákaznická podpora",
+            "text": "<p>Máš dotaz, potřebuješ návod ke svému produktu,  vrátit nebo reklamovat zboží?</p>",
+            "link_label": "Přejít na podporu",
+            "link": "shopify://pages/podpora",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_V7dxfi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/reklamace.jpg",
+            "icon": "check",
+            "title": "Reklamační řád",
+            "text": "<p>Pravidla vrácení a reklamování zboží FIXED.</p>",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/reklamacni-rad",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3EAkXh",
+        "column_hDyNJt",
+        "column_V7dxfi"
+      ],
+      "name": "t:sections.promotion-cards.presets.name",
+      "settings": {
+        "title": "Pro zákazníky",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 4,
+        "columns_tablet": 4,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_GywpXz": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "title": "Blog It's FIXED",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "image_height": "medium",
+        "show_view_all": true,
+        "columns_desktop": 3,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "blog_card_text_alignment": "left",
+        "blog_card_color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_w69QNV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ceCYpX": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3>O NAŠÍ VÝROBĚ</h3>",
+            "heading_size": "h2"
+          }
+        },
+        "text_4UtjNC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Od roku 2014 vlastníme a provozujeme tradiční šicí dílnu v Prostějově. Právě tady, ve městě s dlouholetou oděvní tradicí, vznikají dnes módní, praktická a vysoce odolná pouzdra na telefony, tablety či notebooky a peněženky s chytrými lokátory, které již neztratíte.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ceCYpX",
+        "text_4UtjNC"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_MUzzfc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JW7Xxj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Kůže zraje",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_LgN74N": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.</p><p>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.</p><p>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JW7Xxj",
+        "text_LgN74N"
+      ],
+      "disabled": true,
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/rucni_vyroba.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_76ABzN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jPWPVM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Péče o kůži",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_PjkGfz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu.</p><p>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci.</p><p>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.</p><p>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jPWPVM",
+        "text_PjkGfz"
+      ],
+      "disabled": true,
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/rucni_vyroba2.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_eTYzWE",
+    "multicolumn_w4WNC8",
+    "multicolumn_349ceA",
+    "multicolumn_i86nDQ",
+    "featured_blog_GywpXz",
+    "rich_text_w69QNV",
+    "image_with_text_MUzzfc",
+    "image_with_text_76ABzN"
+  ]
+}

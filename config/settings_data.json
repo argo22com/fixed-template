@@ -33,7 +33,8 @@
     "color_swatches_shape": "circle",
     "card_heading_font_weight": "thin",
     "card_text_alignment": "left",
-    "card_show_border": false,
+    "card_image_fit": "cover",
+    "card_show_border": true,
     "card_border_radius": 0,
     "card_box_shadow_opacity": 10,
     "card_buttons": "hover",
@@ -53,7 +54,8 @@
     "custom_badge_metafield_1": "product_badges.badge_new",
     "custom_badge_text_color_1": "#ffffff",
     "custom_badge_background_1": "#dc4405",
-    "custom_badge_metafield_2": "product_badges.badge_bestseller",
+    "custom_badge_metafield_2": "product_badges.badge_prop",
+    "custom_badge_background_2": "#8031a7",
     "custom_badge_metafield_3": "product_badges.badge_blackfriday",
     "custom_badge_metafield_4": "product_badges.badge_packing",
     "custom_badge_background_4": "#00a3ad",
@@ -754,17 +756,22 @@
         "disabled": false,
         "settings": {}
       },
-      "12120936241911852800": {
-        "type": "shopify://apps/judge-me-reviews/blocks/reviews_tab/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {
-          "position": "right"
-        }
-      },
       "10923402407195338671": {
         "type": "shopify://apps/luigi-s-ai-search-discovery/blocks/lbx-script/e958335d-b7a0-483f-9ab5-a587d1bd4fa9",
         "disabled": false,
         "settings": {}
+      },
+      "pagefly-page-builder": {
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {}
+      },
+      "12120936241911852800": {
+        "type": "shopify://apps/judge-me-reviews/blocks/reviews_tab/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+          "position": "right"
+        }
       }
     },
     "color_schemes": {
@@ -1173,7 +1180,9 @@
     "custom_css": [
       "@media (max-width: 989px) {back-to-top.floating-element, .compare-button-floating.floating-element {display: none; }}",
       "@media (min-width: 990px) {back-to-top {--floating-element-position: 7.5rem; }}",
-      "toast-message-manager {bottom: 7rem;}"
+      "toast-message-manager {bottom: 7rem;}",
+      ".price__vat {color: #00a9e0; font-size: 2.5rem;}",
+      ".card__heading--product-small {font-size: calc(var(--font-heading-scale) * 1.4rem);}"
     ]
   }
 }

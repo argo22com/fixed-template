@@ -103,6 +103,10 @@
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe"
       ],
+      "custom_css": [
+        ".price__vat {font-size: 4rem; font-weight: bold; color: #00ace6;}",
+        ".inventory-template--15699447185490__main {color: #00bc00;}"
+      ],
       "settings": {
         "section_width": "page-width",
         "use_background_input": true,
@@ -137,6 +141,7 @@
       "blocks": {
         "judge_me_reviews_review_snippet_widget_g8qnT6": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
           "settings": {}
         }
       },
@@ -472,7 +477,7 @@
         "subtitle": "",
         "heading_size": "h2",
         "full_width": false,
-        "color_scheme": "background-2",
+        "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
       }

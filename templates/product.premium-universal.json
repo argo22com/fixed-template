@@ -86,10 +86,6 @@
             "collections_label": "Kolekce"
           }
         },
-        "judge_me_reviews_review_snippet_widget_QNke6K": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
           "type": "complementary",
           "settings": {
@@ -114,8 +110,11 @@
         "price",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
-        "judge_me_reviews_review_snippet_widget_QNke6K",
         "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
+      ],
+      "custom_css": [
+        ".price__vat {font-size: 4rem; font-weight: bold; color: #00ace6;}",
+        ".inventory-template--15699447283794__main {color: #00bc00;}"
       ],
       "settings": {
         "section_width": "page-width",
@@ -202,7 +201,7 @@
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture_1.value }}",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
@@ -256,7 +255,7 @@
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture_2.value }}",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
@@ -310,7 +309,7 @@
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture_3.value }}",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
@@ -364,7 +363,7 @@
         "grid_layout": "grid",
         "image": "{{ product.metafields.custom.premium_picture_4.value }}",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
@@ -522,6 +521,7 @@
       "block_order": [
         "judge_me_reviews_review_widget_URMAGU"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -552,6 +552,7 @@
         "collapsible_row_pCyT4f",
         "collapsible_row_jjWnne"
       ],
+      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "section_width": "grid",
@@ -571,16 +572,55 @@
     "main_product_tabs_XdRTBE": {
       "type": "main-product-tabs",
       "blocks": {
+        "judge_me_reviews_review_widget_cPxRBN": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200
+          }
+        },
         "parameters_cX8gcL": {
           "type": "parameters",
           "settings": {
             "title": "Parametry",
             "show_sku": false
           }
+        },
+        "custom_text_9CBnx7": {
+          "type": "custom_text",
+          "settings": {
+            "title": "Vlastnosti",
+            "custom_text": "<p>{{ product.metafields.custom.vlastnosti_produktu | metafield_tag }}</p>"
+          }
+        },
+        "custom_text_9GrtDb": {
+          "type": "custom_text",
+          "settings": {
+            "title": "Technické specifikace",
+            "custom_text": "<p>{{ product.metafields.custom.technicke_specifikace | metafield_tag }}</p>"
+          }
+        },
+        "metafields_XaWX3L": {
+          "type": "metafields",
+          "settings": {
+            "title": "FAQ",
+            "namespace_key": "custom.faq_page"
+          }
+        },
+        "files_mX6kgm": {
+          "type": "files",
+          "settings": {
+            "title": "Dokumenty ke stažení"
+          }
         }
       },
       "block_order": [
-        "parameters_cX8gcL"
+        "judge_me_reviews_review_widget_cPxRBN",
+        "parameters_cX8gcL",
+        "custom_text_9CBnx7",
+        "custom_text_9GrtDb",
+        "metafields_XaWX3L",
+        "files_mX6kgm"
       ],
       "settings": {
         "grid_layout": "grid",
@@ -601,7 +641,7 @@
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "square",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": true,
@@ -623,7 +663,7 @@
         "subtitle": "",
         "heading_size": "h2",
         "full_width": false,
-        "color_scheme": "scheme-23f306a8-68ab-4175-b71b-505bbda9b2ac",
+        "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
       }

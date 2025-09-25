@@ -8,6 +8,1431 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "banner_grid_KRdaxm": {
+      "type": "banner-grid",
+      "blocks": {
+        "promotion_banner_AeEKmF": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/MagZenCrystalBanner5.png",
+            "image_mobile": "shopify://shop_images/FIXZENMC-5-LS2.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "MagZen 5 Crystal",
+            "heading_size": "h2",
+            "text": "Powerbanka",
+            "text_style": "body",
+            "button_label": "Koupit",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "blur",
+            "url": "shopify://products/powerbanka-fixed-magzen-5-crystal-s-bezdratovym-nabijenim-se-standardem-qi2-a-podporou-magsafe-5-000-mah-ruzova",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 2,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-right",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "3",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#f9f9f9",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "color_badge": "#000000"
+          }
+        },
+        "video_background_cnXjM9": {
+          "type": "video-background",
+          "settings": {
+            "video_hosted": "shopify://files/videos/Back to VŠ_1.část_tit.MP4",
+            "heading": "",
+            "heading_size": "h1",
+            "text": "",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "url": "",
+            "button_label_2": "Vybrat produkty",
+            "button_style_2": "primary",
+            "url_2": "shopify://collections/zpatky-do-skoly",
+            "badge": "",
+            "badge_style": "box",
+            "image_overlay_opacity": 0,
+            "desktop_column": 1,
+            "desktop_row": 2,
+            "desktop_content_position": "bottom-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#ffffff",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_button_text_2": "#dc4405",
+            "color_button_2": "#fafafa",
+            "color_badge": "#ffffff"
+          }
+        },
+        "promotion_banner_eTBibR": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/DataBlockerBanner5.png",
+            "image_mobile": "shopify://shop_images/FIXA-BLC-LS2_b6a7f07f-4352-4b89-bebf-6e5dfae1ee00.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Data Blocker",
+            "heading_size": "h1",
+            "text": "Ochraň svá data",
+            "text_style": "body",
+            "button_label": "Koupit",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "shopify://products/hlinikovy-usb-c-c-a-usb-c-u-data-blocker-2in1-fixed-sedy",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 2,
+            "desktop_row": 1,
+            "desktop_content_position": "middle-right",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#ffffff",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#e94200",
+            "color_badge": "#000000"
+          }
+        },
+        "promotion_banner_CJcEJX": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/3roky_blank.png",
+            "image_mobile": "shopify://shop_images/3roky_blank.png",
+            "image_overlay_opacity": 0,
+            "heading": "3 roky",
+            "heading_size": "h1",
+            "text": "<a href=\"/pages/zaruka\" title=\"Záruka\"><strong>záruka</strong></a>",
+            "text_style": "caption-with-letter-spacing",
+            "button_label": "",
+            "button_style": "link",
+            "badge": "",
+            "badge_style": "box",
+            "url": "shopify://pages/zaruka",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "bottom-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#00a9e0",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
+          }
+        },
+        "promotion_banner_i6heYP": {
+          "type": "promotion-banner",
+          "settings": {
+            "image": "shopify://shop_images/Doprava_ZDARMA_Blank_1.png",
+            "image_mobile": "shopify://shop_images/Doprava_ZDARMA_Blank_1.png",
+            "image_overlay_opacity": 0,
+            "heading": "ZDARMA",
+            "heading_size": "h1",
+            "text": "<a href=\"/collections/zpatky-do-skoly\" title=\"Zpátky do školy\">pro objednávky nad 500 Kč</a>",
+            "text_style": "body",
+            "button_label": "",
+            "button_style": "primary",
+            "badge": "",
+            "badge_style": "box",
+            "url": "",
+            "enable_parallax_scrolling_effect": false,
+            "desktop_column": 1,
+            "desktop_row": 1,
+            "desktop_content_position": "bottom-center",
+            "desktop_narrow_content": false,
+            "elements_gap_desktop": "1.5",
+            "image_height_mobile": "medium-mobile",
+            "mobile_content_alignment": "center",
+            "elements_gap_mobile": "1.5",
+            "color_text": "#ffffff",
+            "color_gradient_heading": "",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "color_badge": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_banner_AeEKmF",
+        "video_background_cnXjM9",
+        "promotion_banner_eTBibR",
+        "promotion_banner_CJcEJX",
+        "promotion_banner_i6heYP"
+      ],
+      "disabled": true,
+      "name": "t:sections.banner-grid.presets.name",
+      "settings": {
+        "layout": "grid",
+        "desktop_row_height": 30,
+        "desktop_gap": 10,
+        "mobile_gap": 10,
+        "hide_when_empty_content": true,
+        "enable_section_box_layout": false,
+        "media_border_thickness": 2,
+        "media_border_opacity": 5,
+        "media_radius": 15,
+        "enable_shadow": true,
+        "padding_top": 12,
+        "padding_bottom": 16
+      }
+    },
+    "518b8ced-997b-408e-84d5-64fe5082a6a1": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_QWELn3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner-17-2_a6691681-a18f-464a-a559-dcf74a21a78e.jpg",
+            "mobile_image": "shopify://shop_images/banner-17-2-mobil_28d52c6d-c8e1-4179-b0be-2902329ea91d.jpg",
+            "badge_label": "",
+            "heading": "Příslušenství na iPhone 17",
+            "text": "Inspiruj se naší širokou nabídkou kvalitního a odolného příslušenství pro tvůj nový iPhone",
+            "hide_text_on_mobile": false,
+            "button_label": "Prohlédnout",
+            "price": "1300",
+            "link": "shopify://collections/prislusenstvi-pro-iphone-17",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "left",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#e94200",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
+            "colors_text_mobile": "#ffffff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#dc4405"
+          }
+        },
+        "slide_T3NJDj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/bts.58512.jpg",
+            "mobile_image": "shopify://shop_images/bts.58512.jpg",
+            "badge_label": "",
+            "heading": "Zpátky do školy",
+            "text": "Chytré doplňky pro každý tablet, počítač i mobil",
+            "hide_text_on_mobile": false,
+            "button_label": "Nakupovat",
+            "price": "",
+            "link": "shopify://collections/zpatky-do-skoly",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 20,
+            "text_alignment_mobile": "left",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#e31c79",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#dc4405",
+            "colors_text_mobile": "#ffffff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
+        "slide_LBwdxn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner5.jpg",
+            "mobile_image": "shopify://shop_images/banner5-mobil.jpg",
+            "badge_label": "",
+            "heading": "Kožené příslušenství",
+            "text": "Nadčasové doplňky pro vaše zařízení",
+            "hide_text_on_mobile": false,
+            "button_label": "Zjistit více",
+            "price": "",
+            "link": "shopify://collections/rucni-vyroba",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 20,
+            "text_alignment_mobile": "left",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#e31c79",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
+            "colors_text_mobile": "#ffffff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
+        "slide_AFmp8D": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.jpg",
+            "badge_label": "",
+            "heading": "Konfigurátor držáků",
+            "text": "Sestav si držák přesně na míru do svého auta",
+            "hide_text_on_mobile": false,
+            "button_label": "Konfigurovat",
+            "price": "1300",
+            "link": "shopify://pages/konfigurator",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 20,
+            "text_alignment_mobile": "left",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#f87171",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
+            "colors_text_mobile": "#ffffff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
+        "slide_VnxEnd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/doprava.jpg",
+            "badge_label": "",
+            "heading": "Užívejte si dopravu zdarma",
+            "text": "Stačí nakoupit na našem e-shopu nad 500 Kč",
+            "hide_text_on_mobile": false,
+            "button_label": "Nakupovat",
+            "price": "",
+            "link": "shopify://collections/all",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "left",
+            "colors_text": "#000000",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#dc4405",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
+            "colors_text_mobile": "#000000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
+        "slide_Pb37rp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/3roky2_2cef315a-d5c2-4cf3-a5a4-3bd3d50e8daa.jpg",
+            "badge_label": "",
+            "heading": "Záruka 3 roky",
+            "text": "Stojíme si za kvalitou našich produktů, a proto vám nabízíme prodlouženou záruku.",
+            "hide_text_on_mobile": false,
+            "button_label": "Více",
+            "price": "1300",
+            "link": "shopify://pages/zaruka",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "left",
+            "colors_text": "#000000",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#f87171",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#00adea",
+            "colors_text_mobile": "#000000",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
+        "6d524d43-1bde-474f-b4c0-f6b07a06c8be": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/slide-tag-card-2.jpg",
+            "mobile_image": "shopify://shop_images/slide-tag-card-2.jpg",
+            "badge_label": "Novinka",
+            "heading": "Tag Card",
+            "text": "Chytrý lokátor s podporou Apple Find My",
+            "hide_text_on_mobile": false,
+            "button_label": "Koupit: [price]",
+            "price": "899",
+            "link": "shopify://products/smart-tracker-fixed-tag-card-s-podporou-find-my-bezdratove-nabijeni-modry",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 20,
+            "text_alignment_mobile": "left",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#dc4405",
+            "colors_button_text": "#00aae9",
+            "colors_button": "#ffffff",
+            "colors_text_mobile": "#ffffff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#ea5c5c",
+            "colors_button_text_mobile": "#000000",
+            "colors_button_mobile": "#00aae9"
+          }
+        }
+      },
+      "block_order": [
+        "slide_QWELn3",
+        "slide_T3NJDj",
+        "slide_LBwdxn",
+        "slide_AFmp8D",
+        "slide_VnxEnd",
+        "slide_Pb37rp",
+        "6d524d43-1bde-474f-b4c0-f6b07a06c8be"
+      ],
+      "custom_css": [
+        ".slideshow__progress__path {stroke: #dc4405;}",
+        ".slider-counter__link--active.slider-counter__link--dots .dot,.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slide_height_mobile": "medium-mobile",
+        "auto_rotate": true,
+        "change_slides_speed": 7,
+        "enable_pagination_desktop": false,
+        "enable_navigation_desktop": true,
+        "preload": false,
+        "show_text_below": false,
+        "enable_pagination_mobile": false,
+        "enable_navigation_mobile": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "featured_collection_NmgH79": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Právě letí: Saffiano design",
+        "subtitle": "",
+        "collection": "pouzdra-z-umele-kuze-na-telefony-tablety-i-notebooky",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "enable_desktop_slider": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image_position_desktop": "left",
+        "image_height": "adapt_product_list",
+        "image_height_mobile": "34",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_xcmLFp": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Produkty měsíce",
+        "subtitle": "",
+        "collection": "zpatky-do-skoly",
+        "heading_size": "h2",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": true,
+        "show_view_all": true,
+        "enable_desktop_slider": true,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image": "shopify://shop_images/mix.1495.jpg",
+        "image_position_desktop": "left",
+        "image_height": "adapt_product_list",
+        "image_height_mobile": "34",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 76
+      }
+    },
+    "1756715191a0d80543": {
+      "type": "apps",
+      "blocks": {
+        "luigi_s_ai_search_discovery_recommender_hp_Cwmx7m": {
+          "type": "shopify://apps/luigi-s-ai-search-discovery/blocks/recommender-hp/e958335d-b7a0-483f-9ab5-a587d1bd4fa9",
+          "settings": {
+            "type": "user_click_based",
+            "box_title": "Doporučeno na míru",
+            "size_columns": 4,
+            "size_rows": 1,
+            "carousel": true,
+            "color_default": "#234855",
+            "color_primary": "#2bb9d5",
+            "color_primary_text": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "luigi_s_ai_search_discovery_recommender_hp_Cwmx7m"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17225355129c0ff813": {
+      "type": "apps",
+      "blocks": {
+        "hulk_form_builder_form_block_H7Q4mi": {
+          "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+          "settings": {
+            "form_uuid": "",
+            "form_settings": false,
+            "font_color": "#000000",
+            "size": 14,
+            "input_background_color": "#ffffff",
+            "input_background_color_focus": "#f4dada",
+            "input_border_radius": 1,
+            "input_border_color": "#ebe9e9",
+            "input_border_color_focus": "#2d2727",
+            "input_font_color": "#3d3131",
+            "input_size": 14,
+            "border_color": "#121212",
+            "border_radius": 2,
+            "border": 1,
+            "fill_color": "#ebe9e9",
+            "padding": 35,
+            "form_width": 600,
+            "btn_text": "Submit",
+            "sub_btn_txt_color": "#f3f3f3",
+            "sub_btn_bg_color": "#3f3333",
+            "sub_btn_font_size": 14,
+            "sub_btn_bdr_color": "#ffffff",
+            "sub_btn_bdr_rad": 3,
+            "sub_btn_bdr_width": 1,
+            "fonts": "Times New Roman"
+          }
+        }
+      },
+      "block_order": [
+        "hulk_form_builder_form_block_H7Q4mi"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "rich_text_RPc8kt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_hh6rpY": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2><strong>Hledej příslušenství podle zařízení</strong></h2>",
+            "heading_size": "h2"
+          }
+        },
+        "text_jr9xnA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vyber si telefon, hodinky nebo tablet ze seznamu a najdi dostupné příslušenství přesně pro své zařízení.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hh6rpY",
+        "text_jr9xnA"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_Liefqw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_QxJR8a": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/FIXA-BLC-LS2_b6a7f07f-4352-4b89-bebf-6e5dfae1ee00.jpg",
+            "icon": "check",
+            "title": "Bezpečné nabíjení",
+            "text": "<p>S <strong>FIXED Data Blockerem</strong> si nabiješ telefon na veřejných místech úplně v klidu – propustí jen energii, zablokuje přenos dat a z tvého běžného USB kabelu udělá bezpečný nabíjecí kabel.</p>",
+            "link_label": "Koupit",
+            "link": "shopify://products/hlinikovy-usb-c-c-a-usb-c-u-data-blocker-2in1-fixed-sedy",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#000000",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_NWghpx": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/1B1A2804_kopie.jpg",
+            "icon": "check",
+            "title": "Tag Card",
+            "text": "<p>Chytrý lokátor ve velikosti kreditní karty pro ochranu každé peněženky. Je kompatibilní s iOS a ovládá se v aplikaci Apple Najít. Navíc má i bezdrátové nabíjení.<br/></p>",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/smart",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#dc4405",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_GJR9bJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1B1A3421.jpg",
+            "icon": "check",
+            "title": "Magnetické příslušenství",
+            "text": "<p>Pořiď si to nejmodernější a nejvychytanější příslušenství nezávisle na tom, jaký máš telefon. Powerbanky, nabíječky, selfie tyče i držáky do auta - to nejlepší jenom pro tebe.</p>",
+            "link_label": "Objevit",
+            "link": "shopify://pages/magneticke-prislusenstvi-fixed",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#000000",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_Ftt4cf": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/1B1A5450-_2_a42785f1-fa32-40c5-bc3a-3207a9e8ad0c.jpg",
+            "icon": "check",
+            "title": "Armor",
+            "text": "<p>Ultraodolná skla Armor jsou tou nejlepší ochranou pro displeje telefonu. Jsou 3x odolnější než běžná skla proti pádům, poškrábání, ale i odleskům slunce. </p><p></p>",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/armor",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#dc4405",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_WG9Vnh": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/FIXMPL2-BK-PRODUCT-7.jpg",
+            "icon": "check",
+            "title": "MagSafe příslušenství pro Android",
+            "text": "<p>I telefony s Android operačním systémem mohou využívat magnetické příslušenství. Objev sílu magnetů v nabíjení i držácích.</p>",
+            "link_label": "Objevit",
+            "link": "shopify://collections/magsafe-pro-android",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_MmmtK7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/soutez.5859.jpg",
+            "icon": "check",
+            "title": "Soutěž o iPhone 17 Pro a hromadu příslušenství k tomu",
+            "text": "<p>Zasoutěž si s námi o nejnovější iPhone 17 Pro. Splň jednoduché úkoly a vyhraj.</p>",
+            "link_label": "Chci soutěžit",
+            "link": "shopify://pages/soutez-o-iphone-17",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#ffffff",
+            "color_button": "#000000",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_QxJR8a",
+        "column_NWghpx",
+        "column_GJR9bJ",
+        "column_Ftt4cf",
+        "column_WG9Vnh",
+        "column_MmmtK7"
+      ],
+      "custom_css": [
+        ".multicolumn-card__info {text-align: left;}"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h2",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "square",
+        "text_position": "bottom",
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "desktop_gap": 12,
+        "auto_fit": false,
+        "column_alignment": "center",
+        "enable_shadow": false,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "background-1",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 10,
+        "media_width_mobile": "50",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_ndxz9L": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_xdJmVL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "prislusenstvi-kompatibilni-s-magsafe",
+            "custom_image": "shopify://shop_images/kolekce5_835b509c-d072-4bcc-9bb1-62c954a3709c.jpg",
+            "custom_title": "Magnetické příslušenství"
+          }
+        },
+        "featured_collection_emzhYj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "lokatory-s-findmy",
+            "custom_image": "shopify://shop_images/kolekce2.jpg",
+            "custom_title": "Chytré lokátory"
+          }
+        },
+        "featured_collection_ejGJRA": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bezdratove-nabijecky",
+            "custom_image": "shopify://shop_images/kolekce3_c2608871-fe82-457b-a948-8f16b1759638.jpg",
+            "custom_title": "Bezdrátové nabíjení"
+          }
+        },
+        "featured_collection_BEHfYD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "skla-armor",
+            "custom_image": "shopify://shop_images/kolekce4.jpg",
+            "custom_title": "Armor"
+          }
+        },
+        "featured_collection_qTq37c": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "konfiguratorove-produkty",
+            "custom_image": "shopify://shop_images/fixicq-flexxl-bk_001.jpg",
+            "custom_title": "Konfigurátor držáků"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_xdJmVL",
+        "featured_collection_emzhYj",
+        "featured_collection_ejGJRA",
+        "featured_collection_BEHfYD",
+        "featured_collection_qTq37c"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h3 {font-size: 2.5rem;}"
+      ],
+      "settings": {
+        "title": "Doporučujeme",
+        "subtitle": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "full_width": false,
+        "enable_section_box_layout": false,
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "collection_card_show_title": true,
+        "show_products_count": false,
+        "columns_tablet": "2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_hgMnHR": {
+      "type": "gallery",
+      "blocks": {
+        "text_overlay_image_TrcKUU": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/ochrana.jpg",
+            "link": "shopify://collections/ochrana",
+            "keep_ltr": true,
+            "text": "Pouzdra, tvrzená skla, folie...",
+            "text_style": "subtitle",
+            "text_size": "small",
+            "heading": "Ochrana",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "small",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "end",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#ffffff",
+            "button_background": "#000000",
+            "overlay_color": "#eee9e5",
+            "overlay_opacity": 30
+          }
+        },
+        "text_overlay_image_kzc9B8": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/nabijeni2.jpg",
+            "link": "shopify://collections/nabijeni",
+            "keep_ltr": false,
+            "text": "Nabíječky, adaptéry, powerbanky, kabely...",
+            "text_style": "subtitle",
+            "text_size": "small",
+            "heading": "Nabíjení",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "small",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "end",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#ffffff",
+            "button_background": "#000000",
+            "overlay_color": "#f5e5ff",
+            "overlay_opacity": 30
+          }
+        },
+        "text_overlay_image_yq9DWA": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/drzaky_eb071698-172a-48e6-a91b-af4eda74fae8.jpg",
+            "link": "shopify://collections/drzaky-a-stojanky",
+            "keep_ltr": false,
+            "text": "Do auta, na kolo i motorku...",
+            "text_style": "subtitle",
+            "text_size": "small",
+            "heading": "Držáky",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "small",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "end",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#ffffff",
+            "button_background": "#000000",
+            "overlay_color": "#dbfdff",
+            "overlay_opacity": 30
+          }
+        },
+        "text_overlay_image_QcRW6g": {
+          "type": "text-overlay-image",
+          "settings": {
+            "image": "shopify://shop_images/audio.jpg",
+            "link": "shopify://collections/audio",
+            "keep_ltr": false,
+            "text": "Bezdrátová sluchátka, sluchátka s kabelem...",
+            "text_style": "subtitle",
+            "text_size": "small",
+            "heading": "Audio",
+            "heading_size": "h3",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "small",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "left",
+            "vertical_alignment": "end",
+            "heading_color": "#000000",
+            "caption_color": "#000000",
+            "button_foreground": "#ffffff",
+            "button_background": "#000000",
+            "overlay_color": "#daecff",
+            "overlay_opacity": 30
+          }
+        },
+        "text_overlay_image_XYGigM": {
+          "type": "text-overlay-image",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "keep_ltr": false,
+            "text": "",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+            "heading": "Our collection",
+            "heading_size": "h2",
+            "heading_uppercase": false,
+            "button_label": "",
+            "button_style": "primary",
+            "button_size": "normal",
+            "button_pin_bottom": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "heading_color": "#ffffff",
+            "caption_color": "#ffffff",
+            "button_foreground": "#000000",
+            "button_background": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_overlay_image_TrcKUU",
+        "text_overlay_image_kzc9B8",
+        "text_overlay_image_yq9DWA",
+        "text_overlay_image_QcRW6g",
+        "text_overlay_image_XYGigM"
+      ],
+      "custom_css": [
+        ".slideshow__progress__path {stroke: #cccccc;}",
+        ".slider-counter__link--active.slider-counter__link--dots .dot,.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {background-color: #00a9e0;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "flexible_columns_layout": "carousel",
+        "columns_desktop": 4,
+        "columns_tablet": "3",
+        "full_width": true,
+        "auto_fit": true,
+        "disable_item_space": false,
+        "enable_section_box_layout": true,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 72,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_Ma4mPk": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Novinky",
+        "subtitle": "",
+        "collection": "top2",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "enable_desktop_slider": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image_position_desktop": "right",
+        "image_height": "adapt_product_list",
+        "image_height_mobile": "34",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "6816d4fe-29d0-4a8d-802e-43061cbf5a80": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "Blog It's FIXED",
+        "heading_size": "h2",
+        "blog": "news",
+        "post_limit": 4,
+        "image_height": "medium",
+        "show_view_all": true,
+        "columns_desktop": 4,
+        "enable_section_box_layout": false,
+        "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
+        "blog_card_text_alignment": "left",
+        "blog_card_color_scheme": "inverse",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "8f5a111c-95e5-4fe4-9470-893b0e7841d7": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Nabízíte dopravu zdarma?",
+            "icon": "truck",
+            "row_content": "<p>Ano, při nákupu nad 500 Kč máte dopravu zdarma.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tdrqHg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Jak dlouhá je záruka na produkty?",
+            "icon": "shield_check",
+            "row_content": "<p>Pro vybrané produkty máme nově prodlouženou záruku 3 roky. Více informací se dozvíte <a href=\"/pages/zaruka\" target=\"_blank\" title=\"Záruka\">zde.</a></p>",
+            "page": ""
+          }
+        },
+        "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Mohu si u Vás nechat ušít/ upravit pouzdro na telefon na míru?",
+            "icon": "book_open",
+            "row_content": "<p>Těší nás váš zájem o produkty z naší prostějovské dílny. Aktuálně nenabízíme možnost zákaznických úprav na míru. </p>",
+            "page": ""
+          }
+        },
+        "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Jak správně nalepit ochranné sklo na mobily Samsung Galaxy S?",
+            "icon": "cellphone",
+            "row_content": "<p><strong>1. Naskenujte prsty k identifikaci</strong></p><p>Než se pustíte do lepení skla, nejprve naskenujte (identifikujte) své prsty, ať pak můžete například odemykat obrazovku jednoduše dotekem. Po nalepení ochranného skla už by skenování prstů nebylo možné. Máte-li toto nastavené, pokračujte dále.</p><p><strong>2. Zapněte funkci „Dotyková citlivost“</strong></p><p>U mobilů Samsung Galaxy S se po nalepení skla může stát, že displej nebude na vaše dotyky reagovat tak, jak by měl. Má to snadné řešení – zapněte funkci „Dotyková citlivost“, a to následovně: </p><ul><li>Přejděte do nabídky „<em><strong>Nastaven</strong></em><em>í</em>“ a vyberte možnost „<em><strong>Displej</strong></em>“ </li><li>Klikněte na „<em><strong>Dotyková citlivost</strong></em>“ V tuto chvíli by funkce Dotyková citlivost měla být zapnutá.</li></ul><p><strong>3. Nalepte sklo na displej</strong></p><p>Teď už se vrhněte na samotné lepení skla. S řádným nalepením vám pomůže naše <a href=\"https://www.youtube.com/watch?v=jc4OqiDGie8\"><span style=\"text-decoration:underline\">video</span></a></p><p><strong>4. Počkejte 10 minut</strong></p><p>Máte hotovo, nic dalšího dělat nemusíte. Pro bezproblémovou funkčnost displeje je ale potřeba aspoň 10 minut počkat, aby pořádně „uzrálo“ lepidlo na ochranném skle. Po uplynutí 10 minut mobil několikrát odemkněte a zamkněte, pak už by vše mělo fungovat a telefon můžete rovnou používat.</p><p><strong>Pokud se vám nalepení ochranného skla FIXED na Samsung Galaxy S nedaří, napište nám do live chatu tady na webu, rádi vám poradíme.</strong></p><p></p>",
+            "page": ""
+          }
+        },
+        "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Tracker se po určité době odpojí od telefonu, nebo se nepřipojí, když jsem v jeho blízkosti, jak to mohu vyřešit?",
+            "icon": "arrows_expand",
+            "row_content": "<p>Operační systém Android automaticky potlačuje aplikace běžící na pozadí, které mají nízkou aktivitu. To způsobí, že jakmile běží aplikace Smart na pozadí, je systémem deaktivována, následně trackery nefungují správně. Toto chování systému je možné vyřešit nastavením optimalizace přímo v telefonu.<br/>Návody pro správné nastavení systému naleznete zde:</p><ul><li><a href=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-samsung\" title=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-samsung\"><strong>SAMSUNG</strong></a></li><li><a href=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-huawei\" title=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-huawei\"><strong>HUAWEI</strong></a></li><li><a href=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-xiaomi\" title=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-xiaomi\"><strong>XIAOMI</strong></a></li></ul>",
+            "page": ""
+          }
+        },
+        "f720c224-680e-4598-aa51-f0d9c079f489": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Jak vyberu správnou velikost univerzálního pouzdra?",
+            "icon": "question_mark_circle",
+            "row_content": "<p>V popisu u každého univerzálního pouzdra FIXED naleznete informaci o vnitřní velikosti pouzdra, dle které se můžete řídit. Tento údaj odpovídá maximální možné velikosti mobiliního telefonu, který můžete s pouzdrem pohodlně používat. Pouzdro by zároveň nemělo být větší než telefon více než o pár milimetrů.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_EKFCM7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kde najdu manuál pro aplikaci FIXED Smart?",
+            "icon": "download",
+            "row_content": "<p>Manuál pro aplikaci FIXED Smart najdete <a href=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/Manual_pro_FIXED_Smart.pdf?v=1731073449\" title=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/Manual_pro_FIXED_Smart.pdf?v=1731073449\"><strong>zde</strong></a>.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-1",
+        "collapsible_row_tdrqHg",
+        "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-2",
+        "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-3",
+        "template--20124663021869__8f5a111c-95e5-4fe4-9470-893b0e7841d7-collapsible_row-4",
+        "f720c224-680e-4598-aa51-f0d9c079f489",
+        "collapsible_row_EKFCM7"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "title": "Často kladené otázky",
+        "subtitle": "",
+        "heading_size": "h2",
+        "enable_section_box_layout": false,
+        "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
+        "open_first_collapsible_row": false,
+        "hide_image_on_mobile": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_EW9q8n": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_qCYbLn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zákaznická podpora",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_YEFfM9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nenašli jste odpověď na vaší otázku? Kontaktujte naši podporu! </p>",
+            "text_style": "body"
+          }
+        },
+        "button_QAmwxq": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zákaznická podpora",
+            "button_link": "shopify://pages/contact",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_qCYbLn",
+        "text_YEFfM9",
+        "button_QAmwxq"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/WTTJ_FIXEDZONE_2000-29.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 68,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#dc4405",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "rich_text_trbrie": {
+      "type": "rich-text",
+      "blocks": {
+        "text_ebUx64": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nenašli jste odpověď na vaši otázku? Konktaktujte naši podporu!</p>"
+          }
+        },
+        "button_hwHD86": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zákaznická podpora",
+            "button_link": "shopify://pages/podpora",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_ebUx64",
+        "button_hwHD86"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "newsletter_7jCQFM": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_grTNDz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Přihlašte se k  odběru novinek",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_rerDNd": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Přidejte se k naší komunitě ať už vám žádné novinky neutečou!<br/>Přečtěte si naše <a href=\"/pages/contact\" title=\"Kontakt\">zásady ochrany osobních údajů</a>. </p>"
+          }
+        },
+        "email_form_FXwgyM": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_grTNDz",
+        "paragraph_rerDNd",
+        "email_form_FXwgyM"
+      ],
+      "settings": {
+        "grid_layout": "stretched_grid",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "background-2",
+        "background_image_section": "shopify://shop_images/taking-notes-and-working-on-laptop.jpg",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#ffffff",
+        "colors_input": "#000000",
+        "overlay_color": "#000000",
+        "mobile_content_alignment": "center",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "rich_text_VTpGF3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Q3p9C7": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<h3><strong>Talk about your brand</strong></h3>",
+            "heading_size": "h1"
+          }
+        },
+        "text_D93XFn": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Recenze našich zákazníků</strong></h3>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Q3p9C7",
+        "text_D93XFn"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "desktop_content_width": "small",
+        "content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 56,
+        "padding_bottom": 0
+      }
+    },
+    "1756906366f4bc4740": {
+      "type": "apps",
+      "blocks": {
+        "heureka_reviews_heureka_review_YmcUKM": {
+          "type": "shopify://apps/heureka-reviews/blocks/heureka_review/6b1d450a-0cbe-475a-b2f9-0bd342111b5d",
+          "settings": {
+            "title": "",
+            "heading_size": "h2",
+            "description": "",
+            "description_style": "body",
+            "reviews_to_show": 10,
+            "columns_desktop": 5,
+            "full_width": true,
+            "show_view_all": false,
+            "view_all_link": "",
+            "view_all_style": "solid",
+            "view_all_target": "_self",
+            "enable_desktop_slider": true,
+            "review_record_preset": "0",
+            "show_percentage": false,
+            "show_stars": true,
+            "number_of_review_rows": 3,
+            "show_initials_name": "name",
+            "columns_mobile": "2",
+            "swipe_on_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "heureka_reviews_heureka_review_YmcUKM"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "banner_grid_KRdaxm",
+    "518b8ced-997b-408e-84d5-64fe5082a6a1",
+    "featured_collection_NmgH79",
+    "featured_collection_xcmLFp",
+    "1756715191a0d80543",
+    "17225355129c0ff813",
+    "rich_text_RPc8kt",
+    "multicolumn_Liefqw",
+    "collection_list_ndxz9L",
+    "gallery_hgMnHR",
+    "featured_collection_Ma4mPk",
+    "6816d4fe-29d0-4a8d-802e-43061cbf5a80",
+    "8f5a111c-95e5-4fe4-9470-893b0e7841d7",
+    "image_with_text_EW9q8n",
+    "rich_text_trbrie",
+    "newsletter_7jCQFM",
+    "rich_text_VTpGF3",
+    "1756906366f4bc4740"
+  ]
 }

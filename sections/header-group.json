@@ -59,6 +59,7 @@
         },
         "menu_badge_jiY3QX": {
           "type": "menu_badge",
+          "disabled": true,
           "settings": {
             "trigger": "Video nákupy",
             "text": "Novinka",
@@ -69,19 +70,20 @@
         "menu_badge_CxNkFp": {
           "type": "menu_badge",
           "settings": {
-            "trigger": "EKO pouzdra z veganské kůže",
+            "trigger": "EKO pouzdra",
             "text": "Výprodej -70 %",
             "text_color": "#ffffff",
             "background_color": "#dc4405"
           }
         },
-        "menu_badge_xmfB8A": {
+        "menu_badge_geKUxy": {
           "type": "menu_badge",
+          "disabled": true,
           "settings": {
-            "trigger": "Rozbaleno",
-            "text": "Výprodej -62 %",
+            "trigger": "Poškozená balení",
+            "text": "Extra sleva",
             "text_color": "#ffffff",
-            "background_color": "#d9121f"
+            "background_color": "#dc4405"
           }
         },
         "mega_menu_promotion_YqyFiJ": {
@@ -106,42 +108,42 @@
             "color_scheme": "inverse"
           }
         },
-        "mega_menu_promotion_JjNkGB": {
+        "mega_menu_promotion_NP3Wit": {
           "type": "mega_menu_promotion",
           "settings": {
             "trigger": "Akce",
-            "title": "Magnetické příslušenství",
-            "image": "shopify://shop_images/kolecko_desktop.png",
+            "title": "Příslušenství pro iPhone 17",
+            "image": "shopify://shop_images/image007.png",
             "image_ratio": "landscape",
             "caption": "",
-            "heading_text": "Magnetické příslušenství",
+            "heading_text": "Příslušenství pro novou řadu iPhone 17",
             "subheading": "",
-            "button_label": "Objevit",
+            "button_label": "Přejít na kolekci",
             "button_style": "link",
             "text_align": "center",
             "text_position": "2",
-            "link": "shopify://pages/magneticke-prislusenstvi-fixed",
+            "link": "shopify://collections/prislusenstvi-pro-iphone-17",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 49,
             "color_scheme": "inverse"
           }
         },
-        "mega_menu_promotion_NP3Wit": {
+        "mega_menu_promotion_JjNkGB": {
           "type": "mega_menu_promotion",
           "settings": {
             "trigger": "Akce",
-            "title": "Konfigurátor držáků",
-            "image": "shopify://shop_images/fixmro-bk_008_77dedba1-7823-4702-aecb-08e2e40f13c1.jpg",
+            "title": "Záruka",
+            "image": "shopify://shop_images/3roky-ctverec.png",
             "image_ratio": "landscape",
             "caption": "",
-            "heading_text": "Konfigurátor držáků",
-            "subheading": "Sestav si ten svůj",
-            "button_label": "Konfigurovat",
+            "heading_text": "Záruka 3 roky",
+            "subheading": "",
+            "button_label": "Zjistit více",
             "button_style": "link",
             "text_align": "center",
             "text_position": "2",
-            "link": "shopify://pages/konfigurator",
+            "link": "shopify://pages/zaruka",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 49,
@@ -153,7 +155,7 @@
           "settings": {
             "trigger": "Akce",
             "title": "Smart",
-            "image": "shopify://shop_images/blog_tagcard3.jpg",
+            "image": "shopify://shop_images/FIXTAG-ST-WH-PRODUCT-7.jpg",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "Smart",
@@ -233,7 +235,7 @@
             "brand_2": "Kontakty",
             "brand_link_2": "shopify://pages/contact",
             "brand_3": "Kariéra ve FIXED",
-            "brand_link_3": "https://www.welcometothejungle.com/cs/companies/fixed/jobs",
+            "brand_link_3": "shopify://pages/kariera-ve-fixed",
             "brand_4": "Udržitelnost",
             "brand_link_4": "shopify://pages/releaf",
             "brand_5": "",
@@ -417,17 +419,17 @@
           "type": "mega_menu_promotion",
           "settings": {
             "trigger": "Blog",
-            "title": "Zařízení pro prvňáčka",
-            "image": "shopify://shop_images/Screenshot_2025-08-13_at_11.24.56.png",
+            "title": "Tablet nebo notebook na vejšku?",
+            "image": "shopify://shop_images/tablet_laptop.jpg",
             "image_ratio": "square",
             "caption": "",
-            "heading_text": "Přehledně: Co pořídit prvňáčkovi za zařízení",
+            "heading_text": "Tablet, nebo notebook? Porovnali jsme možnosti.",
             "subheading": "",
             "button_label": "číst",
             "button_style": "solid",
             "text_align": "center",
             "text_position": "2",
-            "link": "shopify://blogs/news/prehledne-je-lepsi-prvnackovi-poridit-mobil-nebo-chytre-hodinky",
+            "link": "shopify://blogs/news/tablet-nebo-notebook-srovnali-jsme-co-se-ti-vic-vyplati-do-skoly",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 50,
@@ -503,10 +505,10 @@
         "mega_menu_promotion_UdqXan",
         "menu_badge_jiY3QX",
         "menu_badge_CxNkFp",
-        "menu_badge_xmfB8A",
+        "menu_badge_geKUxy",
         "mega_menu_promotion_YqyFiJ",
-        "mega_menu_promotion_JjNkGB",
         "mega_menu_promotion_NP3Wit",
+        "mega_menu_promotion_JjNkGB",
         "mega_menu_promotion_Bh4wzD",
         "mega_menu_promotion_9KBrbX",
         "mega_menu_product_brand_eMcj9n",
@@ -537,7 +539,7 @@
         "menu": "hlavni-menu",
         "always_use_standard_menu": false,
         "show_go_to_link": false,
-        "show_line_separator": true,
+        "show_line_separator": false,
         "enable_sticky_header": true,
         "sticky_header": "always",
         "enable_social_links": true,

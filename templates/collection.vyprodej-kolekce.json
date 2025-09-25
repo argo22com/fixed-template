@@ -40,6 +40,7 @@
       "blocks": {
         "whatmore_shoppable_videos_app_block_collections_zagERr": {
           "type": "shopify://apps/whatmore-shoppable-videos/blocks/app-block-collections/20db8a72-315a-4364-8885-64219ee48303",
+          "disabled": true,
           "settings": {
             "collectionHeading": "Objevte naše produkty",
             "template-type": "template-collections-stories",
@@ -126,7 +127,7 @@
         "pagination_style": "numbers",
         "preload_first_image": true,
         "image_ratio": "portrait",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": true,
         "include_collection_in_url": true,
