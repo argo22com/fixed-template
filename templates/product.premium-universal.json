@@ -599,13 +599,28 @@
             "title": "Technické specifikace",
             "custom_text": "<p>{{ product.metafields.custom.technicke_specifikace | metafield_tag }}</p>"
           }
+        },
+        "metafields_XaWX3L": {
+          "type": "metafields",
+          "settings": {
+            "title": "FAQ",
+            "namespace_key": "custom.faq_page"
+          }
+        },
+        "files_mX6kgm": {
+          "type": "files",
+          "settings": {
+            "title": "Dokumenty ke stažení"
+          }
         }
       },
       "block_order": [
         "judge_me_reviews_review_widget_cPxRBN",
         "parameters_cX8gcL",
         "custom_text_9CBnx7",
-        "custom_text_9GrtDb"
+        "custom_text_9GrtDb",
+        "metafields_XaWX3L",
+        "files_mX6kgm"
       ],
       "settings": {
         "grid_layout": "grid",
