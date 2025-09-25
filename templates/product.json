@@ -39,22 +39,6 @@
             "variant_price": true
           }
         },
-        "wishlist_hero_custom_product_button_McnAG4": {
-          "type": "shopify://apps/wishlist-hero/blocks/custom-product-button/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
-          "settings": {
-            "displayButtonMode": "~",
-            "contentAlignment": "center",
-            "buttonAlignment": "center",
-            "overrideFont": false,
-            "customFont": "sans_serif_n4",
-            "buttonFullwidth": true,
-            "removeBoxShadowAndBorder": false,
-            "horizontalPadding": 20,
-            "iconTopOffset": 0,
-            "addedCssClassNames": "",
-            "addedContainerStyles": "js-wishlist-button"
-          }
-        },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
           "type": "sale_box",
           "settings": {
@@ -120,7 +104,6 @@
         "2525f94e-add4-418e-b362-bd2bb35545fa",
         "popup_XDycdy",
         "price",
-        "wishlist_hero_custom_product_button_McnAG4",
         "e592d434-8377-4309-b179-f98d4b3742a2",
         "share",
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
@@ -172,13 +155,6 @@
             "show_sku": false
           }
         },
-        "judge_me_reviews_review_widget_8VjJfr": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "real_data",
-            "max_width": 1200
-          }
-        },
         "cbb96b5f-f683-42e5-b865-6ac18e11645e": {
           "type": "page_content",
           "settings": {
@@ -209,7 +185,6 @@
       "block_order": [
         "1638dd10-8e33-4e82-b01c-2eb71d6362ba",
         "parameters_GiBjwJ",
-        "judge_me_reviews_review_widget_8VjJfr",
         "cbb96b5f-f683-42e5-b865-6ac18e11645e",
         "size_chart_page_h8pBMk",
         "metafields_XkQWGr",
@@ -237,35 +212,6 @@
     },
     "1756907534d5f70c79": {
       "type": "apps",
-      "blocks": {
-        "heureka_reviews_heureka_review_hWCFDd": {
-          "type": "shopify://apps/heureka-reviews/blocks/heureka_review/6b1d450a-0cbe-475a-b2f9-0bd342111b5d",
-          "settings": {
-            "title": "",
-            "heading_size": "h2",
-            "description": "<h3><strong>Recenze našich zákazníků</strong></h3>",
-            "description_style": "body",
-            "reviews_to_show": 11,
-            "columns_desktop": 4,
-            "full_width": true,
-            "show_view_all": false,
-            "view_all_link": "",
-            "view_all_style": "solid",
-            "view_all_target": "_self",
-            "enable_desktop_slider": true,
-            "review_record_preset": "0",
-            "show_percentage": false,
-            "show_stars": true,
-            "number_of_review_rows": 3,
-            "show_initials_name": "name",
-            "columns_mobile": "2",
-            "swipe_on_mobile": true
-          }
-        }
-      },
-      "block_order": [
-        "heureka_reviews_heureka_review_hWCFDd"
-      ],
       "settings": {
         "include_margins": true
       }
