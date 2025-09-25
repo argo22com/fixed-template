@@ -402,19 +402,17 @@
                                   </dd>
                                 </dl>
                               {%- else -%}
-                                <span class="price price--end">
-                                  {%- render 'price-format', price: item.original_line_price -%}
+                                <span class="price price--end ">
+                                  <span class="strong price__vat">{%- render 'price-format', price: item.original_line_price -%}</span>
                                 </span>
                               {%- endif -%}
 
-                              {%- if item.variant.available and item.unit_price_measurement -%}
+                             {%- if item.variant.available and item.unit_price_measurement -%}
                                 <div class="unit-price caption">
                                   <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
                                   {%- render 'price-format', price: item.variant.unit_price -%}
                                   <span aria-hidden="true">/</span>
-                                  <span class="visually-hidden"
-                                    >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
-                                  >
+                                  <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
                                   {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
                                     {{- item.variant.unit_price_measurement.reference_value -}}
                                   {%- endif -%}
