@@ -55,8 +55,8 @@
         {{ money_price }}
       </span>
     </div>
-    <div class="price__sale{% if show_in_card %} flex-column{% endif %}">
-            <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
+    <div class="price__sale{% if show_in_card %} flex-column{% else %} flex-column{% endif %}">
+      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
       <span class="price-item price-item--sale price-item--last{% if show_in_card %} price-item--sale-in-card{% else %} price__vat js-price-with-vat{% endif %}">
         {{ money_price }}
       </span>
