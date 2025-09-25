@@ -57,7 +57,8 @@ product-price {
 .price--on-sale .price-item--regular {
   text-decoration: line-through;
   font-size: 1.4rem;
-  color: rgb(var(--color-compare-at-price));
+  /*color: rgb(var(--color-compare-at-price));*/
+  color: #000;
 }
 
 .price--large.price--on-sale .price-item--regular {
@@ -70,7 +71,8 @@ product-price {
 }
 
 .price--on-sale .price-item--sale-in-card {
-  color: rgb(var(--color-sale-off-price), 0.8);
+  /*color: rgb(var(--color-sale-off-price), 0.8);*/
+  color: #00ace9;
 }
 
 .price__badge {
