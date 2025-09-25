@@ -552,6 +552,7 @@
         "collapsible_row_pCyT4f",
         "collapsible_row_jjWnne"
       ],
+      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "section_width": "grid",
@@ -585,28 +586,34 @@
             "show_sku": false
           }
         },
-        "metafields_yxxC9k": {
-          "type": "metafields",
-          "disabled": true,
+        "custom_text_9CBnx7": {
+          "type": "custom_text",
           "settings": {
             "title": "Vlastnosti",
-            "namespace_key": ""
+            "custom_text": "<p>{{ product.metafields.custom.vlastnosti_produktu | metafield_tag }}</p>"
           }
         },
-        "metafields_KkrdeE": {
-          "type": "metafields",
-          "disabled": true,
+        "custom_text_9GrtDb": {
+          "type": "custom_text",
           "settings": {
             "title": "Technické specifikace",
-            "namespace_key": ""
+            "custom_text": "<p>{{ product.metafields.custom.technicke_specifikace | metafield_tag }}</p>"
+          }
+        },
+        "page_content_tXttPj": {
+          "type": "page_content",
+          "settings": {
+            "title": "FAQ",
+            "page": "{{ product.metafields.custom.faq_page.value }}"
           }
         }
       },
       "block_order": [
         "judge_me_reviews_review_widget_cPxRBN",
         "parameters_cX8gcL",
-        "metafields_yxxC9k",
-        "metafields_KkrdeE"
+        "custom_text_9CBnx7",
+        "custom_text_9GrtDb",
+        "page_content_tXttPj"
       ],
       "settings": {
         "grid_layout": "grid",
