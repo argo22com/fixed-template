@@ -232,7 +232,7 @@
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "desktop_content_position": "center",
+        "desktop_content_position": "left",
         "desktop_content_width": "large",
         "content_alignment": "left",
         "enable_section_box_layout": false,
