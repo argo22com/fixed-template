@@ -210,6 +210,38 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_QFK3Tr": {
+      "type": "rich-text",
+      "blocks": {
+        "button_VNRhFk": {
+          "type": "button",
+          "settings": {
+            "button_label": "FAQ",
+            "button_link": "https://fixed.zone/pages/faq",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_VNRhFk"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "rich_text_pEzQib": {
       "type": "rich-text",
       "blocks": {
@@ -245,19 +277,6 @@
     "rich_text_K4iVcR": {
       "type": "rich-text",
       "blocks": {
-        "heading_MyCfVd": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h4><strong>1. Vratný formulář</strong></h4><h5><strong>Reklamace zboží zakoupeného do 11. 10. 2024</strong></h5>",
-            "heading_size": "h1"
-          }
-        },
-        "text_Yg7AmB": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pro reklamaci produktů zakoupených před <strong>11. 10. 2024 </strong>klikněte na oranžové tlačítko níže a dále postupujte podle instrukcí.</p><p>(Oranžové tlačítko \"Reklamovat  starší objednávky\")</p>"
-          }
-        },
         "button_ppAb4r": {
           "type": "button",
           "settings": {
@@ -273,8 +292,6 @@
         }
       },
       "block_order": [
-        "heading_MyCfVd",
-        "text_Yg7AmB",
         "button_ppAb4r"
       ],
       "settings": {
@@ -436,6 +453,7 @@
     "image_banner_aBk4NA",
     "rich_text_WGRr4t",
     "collapsible_content_6mYWW4",
+    "rich_text_QFK3Tr",
     "rich_text_pEzQib",
     "rich_text_K4iVcR",
     "rich_text_q3wxrf",
