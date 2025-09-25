@@ -56,6 +56,10 @@
       </span>
     </div>
     <div class="price__sale{% if show_in_card %} flex-column{% endif %}">
+            <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
+      <span class="price-item price-item--sale price-item--last{% if show_in_card %} price-item--sale-in-card{% endif %} price__vat js-price-with-vat">
+        {{ money_price }}
+      </span>
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span class="flex align-center">
@@ -84,10 +88,7 @@
           {%- endif -%}
         </span>
       {%- endunless -%}
-      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-      <span class="price-item price-item--sale price-item--last{% if show_in_card %} price-item--sale-in-card{% endif %} price__vat js-price-with-vat">
-        {{ money_price }}
-      </span>
+
     </div>
     {%- unless show_in_card and product.selected_or_first_available_variant.unit_price_measurement == nil -%}
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
