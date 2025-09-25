@@ -355,10 +355,6 @@
                             {% endif %}
 
                             <div class="cart-item__price-wrapper">
-                              {% render 'price-with-vat',
-                                price: item.original_line_price,
-                                variant_vat_metafield: price_with_vat
-                              %}
                               {%- if item.original_line_price != item.final_line_price -%}
                                 <div class="cart-item__discounted-prices">
                                   <span class="visually-hidden">
@@ -377,10 +373,7 @@
                               {%- else -%}
                                 <div class="flex">
                                   <span class="price price--start">
-                                    {%- render 'price-format', price: item.original_line_price -%}
-                                  </span>
-                                  <span class="price__vat__note">
-                                    {{ 'products.product.price.price_without_vat' | t }}
+                                    <span class="strong price__vat">{%- render 'price-format', price: item.original_line_price -%}</span>
                                   </span>
                                 </div>
                               {%- endif -%}
