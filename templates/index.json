@@ -732,6 +732,25 @@
             "card_color_background_gradient": ""
           }
         },
+        "column_WG9Vnh": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/FIXMPL2-BK-PRODUCT-7.jpg",
+            "icon": "check",
+            "title": "MagSafe příslušenství pro Android",
+            "text": "<p>I telefony s Android operačním systémem mohou využívat magnetické příslušenství. Objev sílu magnetů v nabíjení i držácích.</p>",
+            "link_label": "Objevit",
+            "link": "shopify://collections/magsafe-pro-android",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
         "column_MmmtK7": {
           "type": "column",
           "settings": {
@@ -756,6 +775,7 @@
         "column_NWghpx",
         "column_GJR9bJ",
         "column_Ftt4cf",
+        "column_WG9Vnh",
         "column_MmmtK7"
       ],
       "custom_css": [
