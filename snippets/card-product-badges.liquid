@@ -40,7 +40,6 @@
 {%- if total > 0 or card_product.available == false -%}
 
 {%- if card_product.compare_at_price > card_product.price and card_product.available and settings.sale_badge_label != 'none' -%}
-  {%- assign adjusted_compare_at = card_product.compare_at_price | divided_by: 1.21 -%}
   <span id="{{ prefix_id }}-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left badge--sale badge--position-1 font-body-bold">
     {%- if settings.sale_badge_label == 'text' -%}
       {{ 'products.product.on_sale' | t }}
