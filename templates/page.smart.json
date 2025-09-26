@@ -140,7 +140,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#e94200",
-            "card_color_background": "#ffffff",
+            "card_color_background": "#f4f9ff",
             "card_color_background_gradient": ""
           }
         },
@@ -158,7 +158,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#e94200",
-            "card_color_background": "#ffffff",
+            "card_color_background": "#f4f9ff",
             "card_color_background_gradient": ""
           }
         },
@@ -176,7 +176,7 @@
             "card_color_text": "#121212",
             "color_button_text": "#ffffff",
             "color_button": "#e94200",
-            "card_color_background": "#ffffff",
+            "card_color_background": "#f4f9ff",
             "card_color_background_gradient": ""
           }
         },
@@ -194,7 +194,7 @@
             "card_color_text": "#121212",
             "color_button_text": "#ffffff",
             "color_button": "#e94200",
-            "card_color_background": "#f8fafc",
+            "card_color_background": "#f4f9ff",
             "card_color_background_gradient": ""
           }
         },
@@ -210,9 +210,9 @@
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#121212",
-            "color_button_text": "#ffffff",
+            "color_button_text": "#eee9e4",
             "color_button": "#e94200",
-            "card_color_background": "#f8fafc",
+            "card_color_background": "#f4f9ff",
             "card_color_background_gradient": ""
           }
         }
