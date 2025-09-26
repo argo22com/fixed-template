@@ -288,12 +288,59 @@
         "overlay_color": "#1e40af"
       }
     },
+    "rich_text_T8KkqM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TBnPPG": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>FIXED z mnoha úhlů pohledu</strong></p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_wKEHbA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jak vidí FIXED náš CEO, zakladatel, či ředitel marketingu? Podívej se na krátká videa.</p>"
+          }
+        },
+        "button_wNFRt6": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_TBnPPG",
+        "text_wKEHbA",
+        "button_wNFRt6"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 68,
+        "padding_bottom": 4
+      }
+    },
     "video_YRY97q": {
       "type": "video",
       "name": "t:sections.video.presets.name",
       "settings": {
-        "title": "FIXED z mnoha úhlů pohledu",
-        "subtitle": "Jak vidí FIXED náš CEO, zakladatel, či ředitel marketingu? Podívej se na krátká videa.",
+        "title": "",
+        "subtitle": "",
         "heading_size": "h2",
         "cover_image": "shopify://shop_images/honza_m.jpg",
         "video_hosted": "shopify://files/videos/FIXED_4_V3.mp4",
@@ -385,6 +432,7 @@
     "image_with_text_RQiDmi",
     "image_with_text_6xtkNg",
     "image_with_text_PLHGLj",
+    "rich_text_T8KkqM",
     "video_YRY97q",
     "video_Mz69Re",
     "video_LrA37e",
