@@ -174,7 +174,7 @@
         "columns_tablet": 3,
         "desktop_gap": 40,
         "auto_fit": false,
-        "column_alignment": "center",
+        "column_alignment": "left",
         "enable_shadow": false,
         "background_transparent": true,
         "button_label": "",
