@@ -1,1 +1,562 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"section_width":"grid","content_alignment":"left","color_scheme":"background-1","padding_top":0,"padding_bottom":16,"ul_li_marker":"#000000"}},"image_banner_HtGAm3":{"type":"image-banner","blocks":{"heading_CzBm3w":{"type":"heading","settings":{"heading":"FIXED pro investory","size":"h0"}},"text_3XXkNR":{"type":"text","settings":{"text":"Podílejte se na úspěchu značky FIXED a představte nás zákazníkům ve svém okolí. Skrolujte níže a podívejte se proč partnerství s námi dává smysl.","text_style":"body"}}},"block_order":["heading_CzBm3w","text_3XXkNR"],"settings":{"layout":"stretched_grid","image":"shopify:\/\/shop_images\/making-a-budget-tracking-finances.jpg","image_mobile":"shopify:\/\/shop_images\/making-a-budget-tracking-finances.jpg","image_overlay_opacity":40,"image_height":"small","image_height_mobile":"medium-mobile","desktop_content_position":"bottom-left","desktop_content_alignment":"left","keep_ltr":false,"hide_when_empty_image":false,"preload":false,"enable_parallax_scrolling_effect":false,"mobile_content_alignment":"center","show_text_below_image":true,"color_text":"#ffffff","gradient_heading_desktop":"","color_button_text_1":"#000000","color_button_1":"#ffffff","color_button_text_2":"#000000","color_button_2":"#ffffff","colors_badge_foreground":"#ffffff","colors_badge_background":"#f87171","color_countdown_foreground":"#000000","color_countdown_background":"#ffffff","color_text_mobile":"#ffffff","gradient_heading_mobile":"","color_button_text_1_mobile":"#000000","color_button_1_mobile":"#ffffff","color_button_text_2_mobile":"#000000","color_button_2_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","color_countdown_foreground_mobile":"#000000","color_countdown_background_mobile":"#ffffff","background_container_mobile":"#565656","gradient_background_container_mobile":"","padding_top":0,"padding_bottom":0}},"rich_text_jpbEXR":{"type":"rich-text","blocks":{"text_UjxbGp":{"type":"text","settings":{"text":"<p>FIXED. zone a. s. <strong>začátkem listopadu 2021 <\/strong>úspěšně vstoupila na trh START pražské burzy. Ve společnosti dnes pracuje bezmála 100 zaměstnanců, má sídlo v Homolích u Českých Budějovic a vlastní výrobu luxusních kožených pouzder v Prostějově.<\/p>"}},"button_xtYQ6F":{"type":"button","settings":{"button_label":"SEZNAMTE SE S FIXED","button_link":"shopify:\/\/pages\/seznamte-se-s-fixed","button_style_1":"primary","button_open_new_tab_1":false,"button_label_2":"","button_link_2":"","button_style_2":"primary","button_open_new_tab_2":false}}},"block_order":["text_UjxbGp","button_xtYQ6F"],"settings":{"desktop_content_position":"center","desktop_content_width":"large","content_alignment":"center","enable_section_box_layout":false,"color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"rich_text_kbYNC9":{"type":"rich-text","blocks":{"heading_LmWyfP":{"type":"heading","settings":{"heading":"<h3><strong>FIXED v číslech<\/strong><\/h3>","heading_size":"h1"}},"text_nDTtVT":{"type":"text","settings":{"text":"<p>Podívejte se na historický růst naší firmy v grafech.<\/p>"}}},"block_order":["heading_LmWyfP","text_nDTtVT"],"settings":{"desktop_content_position":"center","desktop_content_width":"large","content_alignment":"center","enable_section_box_layout":false,"color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"graph_wrK7F9":{"type":"graph","settings":{"heading1":"Vývoj obratu","description1":"Celkový obrat v Kč","heading2":"Počet zaměstnanců","description2":"S růstem firmy roste počet zaměstnanců"}},"page_96tHiA":{"type":"page","settings":{"page":"tabulka-financnich-ukazatelu","heading_size":"h2","color_scheme":"","padding_top":36,"padding_bottom":36}},"collapsible_content_GjAKAi":{"type":"collapsible-content","blocks":{"collapsible_row_hYT6n8":{"type":"collapsible_row","settings":{"heading":"2025","icon":"document","row_content":"","page":"pro-investory-2025"}},"collapsible_row_4gPghX":{"type":"collapsible_row","settings":{"heading":"2024","icon":"document","row_content":"","page":"pro-investory-2024"}},"collapsible_row_E36gHj":{"type":"collapsible_row","settings":{"heading":"2023","icon":"document","row_content":"","page":"pro-investory-2023"}},"collapsible_row_NRBz4F":{"type":"collapsible_row","settings":{"heading":"2022","icon":"document","row_content":"","page":"pro-investory-2022"}},"collapsible_row_kDmbWF":{"type":"collapsible_row","settings":{"heading":"2021","icon":"document","row_content":"","page":"pro-investory-2021"}},"collapsible_row_e8iPYa":{"type":"collapsible_row","settings":{"heading":"2020","icon":"document","row_content":"","page":"pro-investory-2020"}},"collapsible_row_Xn8Fdn":{"type":"collapsible_row","settings":{"heading":"Úpis akcií IPO","icon":"cash","row_content":"","page":"upis-akcii-ipo"}}},"block_order":["collapsible_row_hYT6n8","collapsible_row_4gPghX","collapsible_row_E36gHj","collapsible_row_NRBz4F","collapsible_row_kDmbWF","collapsible_row_e8iPYa","collapsible_row_Xn8Fdn"],"settings":{"section_width":"grid","title":"FIXED dokumenty","subtitle":"","heading_size":"h1","enable_section_box_layout":false,"color_scheme":"","open_first_collapsible_row":false,"hide_image_on_mobile":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":36,"padding_bottom":36}},"rich_text_h6CMdf":{"type":"rich-text","blocks":{"heading_NqVVhg":{"type":"heading","settings":{"heading":"<p>Podpora projektů <\/p>","heading_size":"h1"}}},"block_order":["heading_NqVVhg"],"settings":{"desktop_content_position":"center","desktop_content_width":"large","content_alignment":"center","enable_section_box_layout":false,"color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"image_banner_hcNRxN":{"type":"image-banner","settings":{"layout":"grid","image":"shopify:\/\/shop_images\/publicita_na_obrazovku_b44f5e95-a818-43a3-9a52-220e3f87edd4.png","image_overlay_opacity":0,"image_height":"adapt","image_height_mobile":"adapt-mobile","desktop_content_position":"middle-center","desktop_content_alignment":"center","keep_ltr":false,"hide_when_empty_image":false,"preload":false,"enable_parallax_scrolling_effect":false,"mobile_content_alignment":"center","show_text_below_image":true,"color_text":"#ffffff","gradient_heading_desktop":"","color_button_text_1":"#000000","color_button_1":"#ffffff","color_button_text_2":"#000000","color_button_2":"#ffffff","colors_badge_foreground":"#ffffff","colors_badge_background":"#f87171","color_countdown_foreground":"#000000","color_countdown_background":"#ffffff","color_text_mobile":"#ffffff","gradient_heading_mobile":"","color_button_text_1_mobile":"#000000","color_button_1_mobile":"#ffffff","color_button_text_2_mobile":"#000000","color_button_2_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","color_countdown_foreground_mobile":"#000000","color_countdown_background_mobile":"#ffffff","background_container_mobile":"#565656","gradient_background_container_mobile":"","padding_top":0,"padding_bottom":0}},"page_UEwNU4":{"type":"page","settings":{"page":"projekty","heading_size":"h2","color_scheme":"","padding_top":36,"padding_bottom":24}},"multicolumn_ADgaBQ":{"type":"multicolumn","blocks":{"column_yCyFpe":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/FIXED_SIDLO.jpg","icon":"check","title":"SEZNAMTE SE S FIXED","text":"<p>Poznejte FIXED a všechny naše hodnoty.<\/p>","link_label":"SEZNAMTE SE S FIXED","link":"shopify:\/\/pages\/seznamte-se-s-fixed","button_style":"link","button_open_new_tab":false,"card_color_text":"#000000","color_button_text":"#ffffff","color_button":"#2563eb","card_color_background":"rgba(0,0,0,0)","card_color_background_gradient":""}},"column_9Kbmbi":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/medialni_centrum_obdelnik.jpg","icon":"check","title":"MEDIÁLNÍ CENTRUM","text":"<p>Stáhněte si naše loga, obrázky produktů či další materiály jako jsou tiskové zprávy apod.<\/p>","link_label":"NAVŠTIVTE MEDIÁLNÍ CENTRUM","link":"shopify:\/\/pages\/pro-media","button_style":"link","button_open_new_tab":false,"card_color_text":"#000000","color_button_text":"#ffffff","color_button":"#2563eb","card_color_background":"rgba(0,0,0,0)","card_color_background_gradient":""}},"column_jfXPbR":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/udrzitelnost_obdelnik.jpg","icon":"check","title":"UDRŽITELNOST","text":"<p>Prohlédněte si náš ESG report.<\/p>","link_label":"CERTIFIKACE","link":"shopify:\/\/pages\/releaf","button_style":"link","button_open_new_tab":false,"card_color_text":"#000000","color_button_text":"#ffffff","color_button":"#2563eb","card_color_background":"rgba(0,0,0,0)","card_color_background_gradient":""}},"column_qAcxGh":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/blog_obdelnik_f4c952d7-fee6-4de1-8f28-4fc1bcacf279.jpg","icon":"check","title":"BLOG","text":"<p>Nahlédněte pod pokličku FIXED.<\/p>","link_label":"NAVŠTIVTE BLOG","link":"shopify:\/\/blogs\/news","button_style":"link","button_open_new_tab":false,"card_color_text":"#000000","color_button_text":"#ffffff","color_button":"#2563eb","card_color_background":"rgba(0,0,0,0)","card_color_background_gradient":""}},"column_Lt8Ctd":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/podpora_obdelnik.jpg","icon":"check","title":"PODPORA","text":"<p>Vyhledejte si potřebné kontakty nebo se přímo spojte s naší zákaznickou podporou.<\/p>","link_label":"NAVŠTIVTE FIXED PODPORU","link":"shopify:\/\/pages\/podpora","button_style":"link","button_open_new_tab":false,"card_color_text":"#000000","color_button_text":"#ffffff","color_button":"#2563eb","card_color_background":"rgba(0,0,0,0)","card_color_background_gradient":""}},"column_Jghrea":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/career_obdelnik.jpg","icon":"check","title":"KARIÉRA","text":"<p>Připoj se do našeho týmu, prohlédni si aktuální volné pozice, nebo napiš jen tak.<\/p>","link_label":"NAVŠTIVTE FIXED HR","link":"https:\/\/www.welcometothejungle.com\/cs\/companies\/fixed\/jobs","button_style":"link","button_open_new_tab":false,"card_color_text":"#121212","color_button_text":"#ffffff","color_button":"#2563eb","card_color_background":"rgba(0,0,0,0)","card_color_background_gradient":""}}},"block_order":["column_yCyFpe","column_9Kbmbi","column_jfXPbR","column_qAcxGh","column_Lt8Ctd","column_Jghrea"],"settings":{"title":"KAM DÁL?","subtitle":"","heading_size":"h1","media_type":"image","media_width_desktop":"100","image_ratio":"adapt","text_position":"bottom","columns_desktop":3,"columns_tablet":3,"desktop_gap":30,"auto_fit":false,"column_alignment":"left","enable_shadow":false,"background_transparent":false,"button_label":"","button_link":"","button_open_new_tab":false,"enable_section_box_layout":false,"color_scheme":"","enable_parallax_scrolling_effect":true,"background_image_overlay_color":"button","columns_mobile":"1","mobile_gap":30,"media_width_mobile":"100","swipe_on_mobile":false,"text_boxes_border_thickness":0,"text_boxes_border_opacity":0,"text_boxes_radius":10,"padding_top":36,"padding_bottom":36}},"newsletter_a3YF6J":{"type":"newsletter","blocks":{"heading_QhrWgK":{"type":"heading","settings":{"heading":"Zůstaňte v obraze","heading_size":"h2"}},"paragraph_GVcxng":{"type":"paragraph","settings":{"text":"<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce. <\/p><p>Přečtěte si naše <a href=\"https:\/\/obchod.fixed.zone\/ochrana-osobnich-udaju-a-zasilani-obchodnich-sdeleni\/\" target=\"_blank\">zásady ochrany osobních údajů<\/a>.<\/p>"}},"email_form_YD9eHt":{"type":"email_form","settings":{}},"social_icons_3X3XHV":{"type":"social_icons","settings":{}}},"block_order":["heading_QhrWgK","paragraph_GVcxng","email_form_YD9eHt","social_icons_3X3XHV"],"settings":{"grid_layout":"grid","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"center","enable_section_box_layout":false,"color_scheme":"scheme-93d0b4d7-0fb9-4886-b4bf-c2a0b0dd1c82","background_image_section":"shopify:\/\/shop_images\/bg.jpg","enable_parallax_scrolling_effect":true,"colors_text":"#ffffff","colors_input":"#64748b","overlay_color":"rgba(0,0,0,0)","mobile_content_alignment":"left","padding_top":40,"padding_bottom":52}}},"order":["main","image_banner_HtGAm3","rich_text_jpbEXR","rich_text_kbYNC9","graph_wrK7F9","page_96tHiA","collapsible_content_GjAKAi","rich_text_h6CMdf","image_banner_hcNRxN","page_UEwNU4","multicolumn_ADgaBQ","newsletter_a3YF6J"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "grid",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 16,
+        "ul_li_marker": "#000000"
+      }
+    },
+    "image_banner_HtGAm3": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_CzBm3w": {
+          "type": "heading",
+          "settings": {
+            "heading": "FIXED pro investory",
+            "size": "h0"
+          }
+        },
+        "text_3XXkNR": {
+          "type": "text",
+          "settings": {
+            "text": "Podílejte se na úspěchu značky FIXED a představte nás zákazníkům ve svém okolí. Skrolujte níže a podívejte se proč partnerství s námi dává smysl.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CzBm3w",
+        "text_3XXkNR"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify://shop_images/making-a-budget-tracking-finances.jpg",
+        "image_mobile": "shopify://shop_images/making-a-budget-tracking-finances.jpg",
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#ffffff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000000",
+        "color_button_1": "#ffffff",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#ffffff",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_jpbEXR": {
+      "type": "rich-text",
+      "blocks": {
+        "text_UjxbGp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FIXED. zone a. s. <strong>začátkem listopadu 2021 </strong>úspěšně vstoupila na trh START pražské burzy. Ve společnosti dnes pracuje bezmála 100 zaměstnanců, má sídlo v Homolích u Českých Budějovic a vlastní výrobu luxusních kožených pouzder v Prostějově.</p>"
+          }
+        },
+        "button_xtYQ6F": {
+          "type": "button",
+          "settings": {
+            "button_label": "SEZNAMTE SE S FIXED",
+            "button_link": "shopify://pages/seznamte-se-s-fixed",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_UjxbGp",
+        "button_xtYQ6F"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_kbYNC9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LmWyfP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>FIXED v číslech</strong></h3>",
+            "heading_size": "h1"
+          }
+        },
+        "text_nDTtVT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Podívejte se na historický růst naší firmy v grafech.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LmWyfP",
+        "text_nDTtVT"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "graph_wrK7F9": {
+      "type": "graph",
+      "settings": {
+        "heading1": "Vývoj obratu",
+        "description1": "Celkový obrat v Kč",
+        "heading2": "Počet zaměstnanců",
+        "description2": "S růstem firmy roste počet zaměstnanců"
+      }
+    },
+    "page_96tHiA": {
+      "type": "page",
+      "settings": {
+        "page": "tabulka-financnich-ukazatelu",
+        "heading_size": "h2",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_GjAKAi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_hYT6n8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2025",
+            "icon": "document",
+            "row_content": "",
+            "page": "pro-investory-2025"
+          }
+        },
+        "collapsible_row_4gPghX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2024",
+            "icon": "document",
+            "row_content": "",
+            "page": "pro-investory-2024"
+          }
+        },
+        "collapsible_row_E36gHj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2023",
+            "icon": "document",
+            "row_content": "",
+            "page": "pro-investory-2023"
+          }
+        },
+        "collapsible_row_NRBz4F": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2022",
+            "icon": "document",
+            "row_content": "",
+            "page": "pro-investory-2022"
+          }
+        },
+        "collapsible_row_kDmbWF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2021",
+            "icon": "document",
+            "row_content": "",
+            "page": "pro-investory-2021"
+          }
+        },
+        "collapsible_row_e8iPYa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2020",
+            "icon": "document",
+            "row_content": "",
+            "page": "pro-investory-2020"
+          }
+        },
+        "collapsible_row_Xn8Fdn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Úpis akcií IPO",
+            "icon": "cash",
+            "row_content": "",
+            "page": "upis-akcii-ipo"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_hYT6n8",
+        "collapsible_row_4gPghX",
+        "collapsible_row_E36gHj",
+        "collapsible_row_NRBz4F",
+        "collapsible_row_kDmbWF",
+        "collapsible_row_e8iPYa",
+        "collapsible_row_Xn8Fdn"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "title": "FIXED dokumenty",
+        "subtitle": "",
+        "heading_size": "h1",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "hide_image_on_mobile": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_h6CMdf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NqVVhg": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Podpora projektů </p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NqVVhg"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_hcNRxN": {
+      "type": "image-banner",
+      "settings": {
+        "layout": "grid",
+        "image": "shopify://shop_images/publicita_na_obrazovku_b44f5e95-a818-43a3-9a52-220e3f87edd4.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_height_mobile": "adapt-mobile",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#ffffff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000000",
+        "color_button_1": "#ffffff",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#ffffff",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "page_UEwNU4": {
+      "type": "page",
+      "settings": {
+        "page": "projekty",
+        "heading_size": "h2",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 24
+      }
+    },
+    "multicolumn_ADgaBQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_yCyFpe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/FIXED_SIDLO.jpg",
+            "icon": "check",
+            "title": "SEZNAMTE SE S FIXED",
+            "text": "<p>Poznejte FIXED a všechny naše hodnoty.</p>",
+            "link_label": "SEZNAMTE SE S FIXED",
+            "link": "shopify://pages/seznamte-se-s-fixed",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "rgba(0,0,0,0)",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_9Kbmbi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/medialni_centrum_obdelnik.jpg",
+            "icon": "check",
+            "title": "MEDIÁLNÍ CENTRUM",
+            "text": "<p>Stáhněte si naše loga, obrázky produktů či další materiály jako jsou tiskové zprávy apod.</p>",
+            "link_label": "NAVŠTIVTE MEDIÁLNÍ CENTRUM",
+            "link": "shopify://pages/pro-media",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "rgba(0,0,0,0)",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_jfXPbR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/udrzitelnost_obdelnik.jpg",
+            "icon": "check",
+            "title": "UDRŽITELNOST",
+            "text": "<p>Prohlédněte si náš ESG report.</p>",
+            "link_label": "CERTIFIKACE",
+            "link": "shopify://pages/releaf",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "rgba(0,0,0,0)",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_qAcxGh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blog_obdelnik_f4c952d7-fee6-4de1-8f28-4fc1bcacf279.jpg",
+            "icon": "check",
+            "title": "BLOG",
+            "text": "<p>Nahlédněte pod pokličku FIXED.</p>",
+            "link_label": "NAVŠTIVTE BLOG",
+            "link": "shopify://blogs/news",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "rgba(0,0,0,0)",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_Lt8Ctd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/podpora_obdelnik.jpg",
+            "icon": "check",
+            "title": "PODPORA",
+            "text": "<p>Vyhledejte si potřebné kontakty nebo se přímo spojte s naší zákaznickou podporou.</p>",
+            "link_label": "NAVŠTIVTE FIXED PODPORU",
+            "link": "shopify://pages/podpora",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "rgba(0,0,0,0)",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_Jghrea": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/career_obdelnik.jpg",
+            "icon": "check",
+            "title": "KARIÉRA",
+            "text": "<p>Připoj se do našeho týmu, prohlédni si aktuální volné pozice, nebo napiš jen tak.</p>",
+            "link_label": "NAVŠTIVTE FIXED HR",
+            "link": "https://www.welcometothejungle.com/cs/companies/fixed/jobs",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "rgba(0,0,0,0)",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_yCyFpe",
+        "column_9Kbmbi",
+        "column_jfXPbR",
+        "column_qAcxGh",
+        "column_Lt8Ctd",
+        "column_Jghrea"
+      ],
+      "settings": {
+        "title": "KAM DÁL?",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": false,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_a3YF6J": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_QhrWgK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zůstaňte v obraze",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph_GVcxng": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Přihlaste se k odběru newsletteru a už vám neuniknou žádné novinky nebo akce. </p><p>Přečtěte si naše <a href=\"https://obchod.fixed.zone/ochrana-osobnich-udaju-a-zasilani-obchodnich-sdeleni/\" target=\"_blank\">zásady ochrany osobních údajů</a>.</p>"
+          }
+        },
+        "email_form_YD9eHt": {
+          "type": "email_form",
+          "settings": {}
+        },
+        "social_icons_3X3XHV": {
+          "type": "social_icons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_QhrWgK",
+        "paragraph_GVcxng",
+        "email_form_YD9eHt",
+        "social_icons_3X3XHV"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "scheme-93d0b4d7-0fb9-4886-b4bf-c2a0b0dd1c82",
+        "background_image_section": "shopify://shop_images/bg.jpg",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#ffffff",
+        "colors_input": "#64748b",
+        "overlay_color": "rgba(0,0,0,0)",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_HtGAm3",
+    "rich_text_jpbEXR",
+    "rich_text_kbYNC9",
+    "graph_wrK7F9",
+    "page_96tHiA",
+    "collapsible_content_GjAKAi",
+    "rich_text_h6CMdf",
+    "image_banner_hcNRxN",
+    "page_UEwNU4",
+    "multicolumn_ADgaBQ",
+    "newsletter_a3YF6J"
+  ]
+}
