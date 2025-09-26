@@ -360,7 +360,7 @@
         "title": "",
         "subtitle": "",
         "heading_size": "h1",
-        "icon_width_desktop": 30,
+        "icon_width_desktop": 10,
         "text_position": "bottom",
         "enable_heading_in_box": false,
         "columns_desktop": 5,
