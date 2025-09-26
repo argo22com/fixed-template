@@ -242,7 +242,7 @@
         "button_label": "",
         "button_link": "",
         "button_open_new_tab": false,
-        "enable_section_box_layout": false,
+        "enable_section_box_layout": true,
         "color_scheme": "",
         "enable_parallax_scrolling_effect": true,
         "background_image_overlay_color": "button",
