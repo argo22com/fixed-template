@@ -41,17 +41,17 @@
 
 {%- if card_product.compare_at_price > card_product.price and card_product.available and settings.sale_badge_label != 'none' -%}
   <span id="{{ prefix_id }}-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left badge--sale badge--position-1 font-body-bold">
-    {%- if settings.sale_badge_label == 'text' -%}
-      {{ 'products.product.on_sale' | t }}
-    {%- elsif settings.sale_badge_label == 'percent' -%}
-      {{ card_product.price | minus: adjusted_compare_at | times: 100.00 | divided_by: adjusted_compare_at | round }}%
-    {%- else -%}
-      {%- if settings.currency_code_enabled -%}
-        -{{ adjusted_compare_at | minus: card_product.price | money_with_currency }}
-      {%- else -%}
-        -{{ adjusted_compare_at | minus: card_product.price | money }}
-      {%- endif -%}
-    {%- endif -%}
+			{%- if settings.sale_badge_label == 'text' -%}
+				{{ 'products.product.on_sale' | t }}
+			{%- elsif settings.sale_badge_label == 'percent' -%}
+				{{ card_product.price | minus: card_product.compare_at_price | times: 100.00 | divided_by: card_product.compare_at_price | round }}%
+			{%- else -%}
+				{%- if settings.currency_code_enabled -%}
+					-{{ card_product.compare_at_price | minus: card_product.price | money_with_currency }}	
+				{%- else -%}
+					-{{ card_product.compare_at_price | minus: card_product.price | money }}	
+				{%- endif -%}	
+			{%- endif -%}	
   </span>
 {%- endif -%}
 
