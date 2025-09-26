@@ -1182,7 +1182,8 @@
       "@media (min-width: 990px) {back-to-top {--floating-element-position: 7.5rem; }}",
       "toast-message-manager {bottom: 7rem;}",
       ".price__vat {color: #00a9e0; font-size: 2.5rem;}",
-      ".card__heading--product-small {font-size: calc(var(--font-heading-scale) * 1.4rem);}"
+      ".card__heading--product-small {font-size: calc(var(--font-heading-scale) * 1.4rem);}",
+      ".grid__item .card-wrapper--product compare-add-button {position: relative; top: 0px; right: 10px;}"
     ]
   }
 }
