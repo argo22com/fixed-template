@@ -160,9 +160,10 @@
       "blocks": {
         "column_PTFjer": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Jan_Plajner.jpg",
-            "icon": "check",
+            "icon": "none",
             "title": "Kontakt pro média",
             "text": "<h3><strong>Jan Plajner</strong></h3><p>Ředitel marketingu / CMO</p><p><a href=\"mailto:jan.plajner@fixed.zone\" target=\"_blank\" title=\"mailto:jan.plajner@fixed.zone\">Jan.Plajner@fixed.zone</a></p>",
             "link_label": "Linkedin",
@@ -191,10 +192,10 @@
         "columns_desktop": 1,
         "columns_tablet": 1,
         "desktop_gap": 30,
-        "auto_fit": false,
+        "auto_fit": true,
         "column_alignment": "left",
-        "enable_shadow": true,
-        "background_transparent": true,
+        "enable_shadow": false,
+        "background_transparent": false,
         "button_label": "",
         "button_link": "",
         "button_open_new_tab": false,
@@ -308,6 +309,71 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_YHt378": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ga9xkF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Kontakt pro média",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_U4hkDx": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Jan Plajner</strong></p><p>Ředitel marketingu / CMO</p><p><a href=\"mailto:jan.plajner@fixed.zone\" target=\"_blank\" title=\"mailto:jan.plajner@fixed.zone\">Jan.Plajner@fixed.zone</a></p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_dGJikN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Linkedin",
+            "button_link": "",
+            "button_style": "link",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ga9xkF",
+        "text_U4hkDx",
+        "button_dGJikN"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/Jan_Plajner.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
     "collapsible_content_Gp6UAE": {
       "type": "collapsible-content",
       "blocks": {
@@ -329,8 +395,8 @@
         "title": "Dokumenty ke stažení",
         "subtitle": "",
         "heading_size": "h1",
-        "enable_section_box_layout": true,
-        "color_scheme": "scheme-23f306a8-68ab-4175-b71b-505bbda9b2ac",
+        "enable_section_box_layout": false,
+        "color_scheme": "background-1",
         "open_first_collapsible_row": false,
         "hide_image_on_mobile": false,
         "image_ratio": "adapt",
@@ -530,6 +596,7 @@
     "collapsible_content_AHHHxy",
     "multicolumn_TQEhqY",
     "text_icons_pUPhQy",
+    "image_with_text_YHt378",
     "collapsible_content_Gp6UAE",
     "graph_cVdgJT",
     "featured_blog_zrC8bP",
