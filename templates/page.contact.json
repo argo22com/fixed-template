@@ -69,7 +69,7 @@
         "column_wh4nX8": {
           "type": "column",
           "settings": {
-            "icon": "ticket",
+            "icon": "none",
             "title": "Servis & reklamace",
             "text": "<p><a href=\"mailto:reklamace@fixed.zone\" target=\"_blank\" title=\"mailto:reklamace@fixed.zone\">reklamace@FIXED.zone  </a><br/>+ 420 724 161 817</p>",
             "link_label": "",
@@ -86,7 +86,7 @@
         "column_4naCn6": {
           "type": "column",
           "settings": {
-            "icon": "shopping_cart",
+            "icon": "none",
             "title": "E-shop objednávky",
             "text": "<p><strong>Po – Pá</strong>: 8:00 – 16:00<strong><br/></strong><a href=\"mailto:podpora@FIXED.zone\" target=\"_blank\" title=\"mailto:podpora@FIXED.zone\">podpora@FIXED.zone</a><br/>+420 385 510 206 </p>",
             "link_label": "",
@@ -103,7 +103,7 @@
         "column_NDpDk7": {
           "type": "column",
           "settings": {
-            "icon": "chat",
+            "icon": "none",
             "title": "Podpora",
             "text": "<p><strong>Po – Pá</strong>: 8:00 – 16:00 <br/><a href=\"mailto:podpora@fixed.zone\" target=\"_blank\" title=\"mailto:podpora@fixed.zone\">podpora@FIXED.zone</a>    <br/>+420 385 510 206              <br/><strong><br/></strong></p>",
             "link_label": "",
@@ -120,7 +120,7 @@
         "column_Gr8YRz": {
           "type": "column",
           "settings": {
-            "icon": "scissors",
+            "icon": "none",
             "title": "Výroba",
             "text": "<p><strong>Po – Pá: </strong>8:00 – 14:00</p><p><strong>FIXED.zone a.s.<br/></strong>Žeranovská 8796 01 Prostějov</p>",
             "link_label": "",
@@ -137,7 +137,7 @@
         "column_GDembi": {
           "type": "column",
           "settings": {
-            "icon": "speakerphone",
+            "icon": "none",
             "title": "Whistleblowing",
             "text": "<p><a href=\"mailto:WB@fixed.zone\">WB@fixed.zone<br/></a>+420 385 310 120 <br/>(telefon pro zanechání záznamu)</p>",
             "link_label": "",
