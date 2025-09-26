@@ -44,7 +44,7 @@
         "text_8b9jXJ"
       ],
       "settings": {
-        "layout": "stretched_grid",
+        "layout": "full_bleed",
         "image": "shopify://shop_images/office-woman-hands-on-report.jpg",
         "image_mobile": "shopify://shop_images/office-woman-hands-on-report.jpg",
         "image_overlay_opacity": 30,
