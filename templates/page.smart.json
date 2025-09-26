@@ -106,25 +106,11 @@
           "settings": {
             "text": "<p>Hledání peněženky a klíčů nebylo nikdy jednodušší. S FIXED chytrými lokátory, které jsou kompatibilní se sítí Apple Find My, už budete mít své věci vždy pod kontrolou. Pomohou vám v tom miliony uživatelů zařízení s operačním systémem iOS po celém světě. Stačí si přidat svůj Tag do aplikace a vše ostatní už je hračka.<br/>Jak na to?</p>"
           }
-        },
-        "button_MYnFAt": {
-          "type": "button",
-          "settings": {
-            "button_label": "PŘEJÍT NA PRODUKTY",
-            "button_link": "shopify://collections/lokatory",
-            "button_style_1": "primary",
-            "button_open_new_tab_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary",
-            "button_open_new_tab_2": false
-          }
         }
       },
       "block_order": [
         "heading_Nmdam7",
-        "text_eqbpAU",
-        "button_MYnFAt"
+        "text_eqbpAU"
       ],
       "settings": {
         "desktop_content_position": "center",
