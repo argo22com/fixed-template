@@ -523,37 +523,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "rich_text_bUDPqX": {
-      "type": "rich-text",
-      "blocks": {
-        "button_yAjbgy": {
-          "type": "button",
-          "settings": {
-            "button_label": "JAK PŘIDAT FIXED TAG DO APLIKACE NAJÍT",
-            "button_link": "shopify://pages/jak-pridat-fixed-tag-do-aplikace-najit",
-            "button_style_1": "secondary",
-            "button_open_new_tab_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "secondary",
-            "button_open_new_tab_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_yAjbgy"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -566,7 +535,6 @@
     "image_with_text_j8Qig9",
     "rich_text_rXNM9Y",
     "video_XhEQtC",
-    "featured_collection_EXHM3A",
-    "rich_text_bUDPqX"
+    "featured_collection_EXHM3A"
   ]
 }
