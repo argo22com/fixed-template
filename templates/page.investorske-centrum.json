@@ -156,6 +156,9 @@
     },
     "graph_wrK7F9": {
       "type": "graph",
+      "custom_css": [
+        ".chart.white {background-color: #ccc; color: black;}"
+      ],
       "settings": {
         "heading1": "Vývoj obratu",
         "description1": "Celkový obrat v Kč",
