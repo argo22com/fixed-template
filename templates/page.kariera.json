@@ -56,6 +56,7 @@
       "block_order": [
         "heading_ceXbWT"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -66,6 +67,84 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "multicolumn_mKVEbU": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_thYUhW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/asistent.png",
+            "icon": "check",
+            "title": "Asistent/ka Front Office",
+            "text": "",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/asistent-ka-front-office",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_dMTh3w": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/obchod.png",
+            "icon": "check",
+            "title": "Sales manager for Poland",
+            "text": "",
+            "link_label": "Zjistit více",
+            "link": "",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_thYUhW",
+        "column_dMTh3w"
+      ],
+      "name": "t:sections.promotion-cards.presets.name",
+      "settings": {
+        "title": "Volné pozice",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_FQEjUR": {
@@ -339,55 +418,11 @@
       "type": "video",
       "name": "t:sections.video.presets.name",
       "settings": {
-        "title": "",
-        "subtitle": "",
+        "title": "Jan Moravec",
+        "subtitle": "CEO",
         "heading_size": "h2",
         "cover_image": "shopify://shop_images/honza_m.jpg",
         "video_hosted": "shopify://files/videos/FIXED_4_V3.mp4",
-        "video_url": "",
-        "description": "",
-        "autoplay": false,
-        "enable_controls": false,
-        "enable_video_looping": true,
-        "full_width": false,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video_Mz69Re": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h1",
-        "cover_image": "shopify://shop_images/jitka.jpg",
-        "video_hosted": "shopify://files/videos/FIXED_1 (1).mp4",
-        "video_url": "",
-        "description": "",
-        "autoplay": false,
-        "enable_controls": false,
-        "enable_video_looping": true,
-        "full_width": false,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video_LrA37e": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h1",
-        "cover_image": "shopify://shop_images/honza_p.jpg",
-        "video_hosted": "shopify://files/videos/FIXED_5_V2.mp4",
         "video_url": "",
         "description": "",
         "autoplay": false,
@@ -405,11 +440,55 @@
       "type": "video",
       "name": "t:sections.video.presets.name",
       "settings": {
-        "title": "",
-        "subtitle": "",
+        "title": "Daniel Havner",
+        "subtitle": "Zakladatel",
         "heading_size": "h1",
         "cover_image": "shopify://shop_images/dan.jpg",
         "video_hosted": "shopify://files/videos/FIXED_2_8e88491f-bdd8-45a4-bb3a-34b526658447.mp4",
+        "video_url": "",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_LrA37e": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "title": "Jan Plajner",
+        "subtitle": "Head of Marketing",
+        "heading_size": "h1",
+        "cover_image": "shopify://shop_images/honza_p.jpg",
+        "video_hosted": "shopify://files/videos/FIXED_5_V2.mp4",
+        "video_url": "",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_Mz69Re": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "title": "Jitka Kovářová",
+        "subtitle": "Marketing specialistka",
+        "heading_size": "h1",
+        "cover_image": "shopify://shop_images/jitka.jpg",
+        "video_hosted": "shopify://files/videos/FIXED_1 (1).mp4",
         "video_url": "",
         "description": "",
         "autoplay": false,
@@ -428,14 +507,15 @@
     "main",
     "video_WC6gyz",
     "rich_text_BFbnzM",
+    "multicolumn_mKVEbU",
     "image_with_text_FQEjUR",
     "image_with_text_RQiDmi",
     "image_with_text_6xtkNg",
     "image_with_text_PLHGLj",
     "rich_text_T8KkqM",
     "video_YRY97q",
-    "video_Mz69Re",
+    "video_RjVq8n",
     "video_LrA37e",
-    "video_RjVq8n"
+    "video_Mz69Re"
   ]
 }
