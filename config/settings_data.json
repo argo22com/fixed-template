@@ -76,7 +76,7 @@
     "recently_viewed_enable": true,
     "recently_viewed_columns_desktop": 5,
     "recently_viewed_image_ratio": "square",
-    "recently_viewed_show_secondary_image": true,
+    "recently_viewed_show_secondary_image": false,
     "recently_viewed_show_rating": true,
     "recently_viewed_enable_quick_add": true,
     "recently_viewed_enable_quick_view": true,
