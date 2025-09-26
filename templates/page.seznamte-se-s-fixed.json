@@ -361,7 +361,7 @@
         "subtitle": "",
         "heading_size": "h1",
         "icon_width_desktop": 10,
-        "text_position": "bottom",
+        "text_position": "right",
         "enable_heading_in_box": false,
         "columns_desktop": 5,
         "columns_tablet": 3,
