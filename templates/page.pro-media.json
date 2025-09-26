@@ -155,65 +155,6 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_TQEhqY": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_PTFjer": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Jan_Plajner.jpg",
-            "icon": "none",
-            "title": "Kontakt pro média",
-            "text": "<h3><strong>Jan Plajner</strong></h3><p>Ředitel marketingu / CMO</p><p><a href=\"mailto:jan.plajner@fixed.zone\" target=\"_blank\" title=\"mailto:jan.plajner@fixed.zone\">Jan.Plajner@fixed.zone</a></p>",
-            "link_label": "Linkedin",
-            "link": "https://www.linkedin.com/in/janplajner/",
-            "button_style": "link",
-            "button_open_new_tab": true,
-            "card_color_text": "#000000",
-            "color_button_text": "#ffffff",
-            "color_button": "#2563eb",
-            "card_color_background": "#ffffff",
-            "card_color_background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_PTFjer"
-      ],
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h1",
-        "media_type": "image",
-        "media_width_desktop": "50",
-        "image_ratio": "square",
-        "text_position": "left",
-        "columns_desktop": 1,
-        "columns_tablet": 1,
-        "desktop_gap": 30,
-        "auto_fit": true,
-        "column_alignment": "left",
-        "enable_shadow": false,
-        "background_transparent": false,
-        "button_label": "",
-        "button_link": "",
-        "button_open_new_tab": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "enable_parallax_scrolling_effect": true,
-        "background_image_overlay_color": "button",
-        "columns_mobile": "1",
-        "mobile_gap": 30,
-        "media_width_mobile": "100",
-        "swipe_on_mobile": false,
-        "text_boxes_border_thickness": 0,
-        "text_boxes_border_opacity": 0,
-        "text_boxes_radius": 10,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "text_icons_pUPhQy": {
       "type": "text-icons",
       "blocks": {
@@ -594,7 +535,6 @@
     "main",
     "image_banner_kDXK8x",
     "collapsible_content_AHHHxy",
-    "multicolumn_TQEhqY",
     "text_icons_pUPhQy",
     "image_with_text_YHt378",
     "collapsible_content_Gp6UAE",
