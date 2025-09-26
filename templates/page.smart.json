@@ -237,7 +237,7 @@
         "desktop_gap": 30,
         "auto_fit": true,
         "column_alignment": "left",
-        "enable_shadow": true,
+        "enable_shadow": false,
         "background_transparent": false,
         "button_label": "",
         "button_link": "",
