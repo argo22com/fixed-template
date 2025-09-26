@@ -157,7 +157,7 @@
     "graph_wrK7F9": {
       "type": "graph",
       "custom_css": [
-        ".chart.white {background-color: #eee9e4; color: black;}"
+        ".chart.white {background-color: #f1f1f1; color: black;}"
       ],
       "settings": {
         "heading1": "Vývoj obratu",
