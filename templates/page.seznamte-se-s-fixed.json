@@ -762,6 +762,7 @@
     },
     "graph_wrK7F9": {
       "type": "graph",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "heading1": "Vývoj obratu",
