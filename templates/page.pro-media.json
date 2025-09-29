@@ -264,7 +264,7 @@
         "text_U4hkDx": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Jan Plajner</strong></p><p>Ředitel marketingu / CMO</p><p><a href=\"mailto:jan.plajner@fixed.zone\" target=\"_blank\" title=\"mailto:jan.plajner@fixed.zone\">Jan.Plajner@fixed.zone</a></p>",
+            "text": "<p><strong>Hana Ludlová</strong></p><p><a href=\"mailto:hana.ludlova@fixed.zone\" title=\"mailto:hana.ludlova@fixed.zone\">hana.ludlova@fixed.zone</a></p>",
             "text_style": "subtitle"
           }
         },
@@ -272,7 +272,7 @@
           "type": "button",
           "settings": {
             "button_label": "Linkedin",
-            "button_link": "",
+            "button_link": "https://www.linkedin.com/in/hana-ludlov%C3%A1-85a8928b/",
             "button_style": "link",
             "button_open_new_tab": false
           }
