@@ -734,7 +734,6 @@
         },
         "column_WG9Vnh": {
           "type": "column",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/FIXMPL2-BK-PRODUCT-7.jpg",
             "icon": "check",
@@ -753,6 +752,7 @@
         },
         "column_MmmtK7": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/soutez.5859.jpg",
             "icon": "check",
