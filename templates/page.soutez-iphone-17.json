@@ -90,7 +90,7 @@
         "heading_Mf43cQ": {
           "type": "heading",
           "settings": {
-            "heading": "Přichází nový iPhone 17 a s ním i hromada příslušenství od FIXED.",
+            "heading": "Soutěž byla ukončena 26. 9.",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -98,12 +98,13 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Přihlas se do soutěže, splň úkoly a vyhraj jednu z cen.<br/></strong></p><p></p><p><strong>1. místo: iPhone 17 Pro a příslušenství FIXED za 10 000 Kč</strong></p><p>2. místo: Příslušenství FIXED v hodnotě 5 000 Kč</p><p>3. místo: Příslušenství FIXED v hodnotě 2 000 Kč<br/></p>",
+            "text": "<p><strong>Výherci jsou<br/></strong></p><p></p><p><strong>1. místo Kateřina Š.: iPhone 17 Pro a příslušenství FIXED za 10 000 Kč<br/></strong></p><p>2. místo Igor K.: Příslušenství FIXED v hodnotě 5 000 Kč<br/></p><p>3. místo Oliver L.: Příslušenství FIXED v hodnotě 2 000 Kč<br/><br/></p>",
             "text_style": "body"
           }
         },
         "button_M4hBDq": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "SOUTĚŽIT",
             "button_link": "https://gleam.io/UiyaW/soutez-s-fixed-o-iphone-17-pro-a-hromadu-prislusenstvi-k-nemu",
