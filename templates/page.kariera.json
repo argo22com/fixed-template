@@ -84,7 +84,7 @@
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
@@ -102,7 +102,7 @@
             "button_style": "link",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
@@ -380,7 +380,7 @@
         "text_wKEHbA": {
           "type": "text",
           "settings": {
-            "text": "<p>Jak vidí FIXED náš CEO, zakladatel, či ředitel marketingu? Podívej se na krátká videa.</p>"
+            "text": "<p>Jak vidí FIXED náš CEO, zakladatel, či kolegyně z marketingu? Podívej se na krátká videa.</p>"
           }
         },
         "button_wNFRt6": {
@@ -458,28 +458,6 @@
         "padding_bottom": 36
       }
     },
-    "video_LrA37e": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
-      "settings": {
-        "title": "Jan Plajner",
-        "subtitle": "Head of Marketing",
-        "heading_size": "h1",
-        "cover_image": "shopify://shop_images/honza_p.jpg",
-        "video_hosted": "shopify://files/videos/FIXED_5_V2.mp4",
-        "video_url": "",
-        "description": "",
-        "autoplay": false,
-        "enable_controls": false,
-        "enable_video_looping": true,
-        "full_width": false,
-        "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "video_Mz69Re": {
       "type": "video",
       "name": "t:sections.video.presets.name",
@@ -515,7 +493,6 @@
     "rich_text_T8KkqM",
     "video_YRY97q",
     "video_RjVq8n",
-    "video_LrA37e",
     "video_Mz69Re"
   ]
 }
