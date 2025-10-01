@@ -400,7 +400,7 @@
         "text_KmgUnq": {
           "type": "text",
           "settings": {
-            "text": "<p>Nezáleží na tom, kolik svých cenností si chcete ohlídat.</p><p>Přidejte si neomezený počet Tagů pro každou vaši cennost.</p><p>Navíc můžete lokaci každého Tagu sdílet až s pěti lidmi.</p><p>Hlídejte své věci beze strachu o své soukromí. Veškerá data jsou samozřejmě zabezpečená, všechna vaše data jsou anonymní, anonymní jsou také data uživatelů, kteří Tag ve svém okolí zaznamenali a data se nikam neukládají.</p>",
+            "text": "<p>Nezáleží na tom, kolik svých cenností si chcete ohlídat.</p><p>Přidejte si neomezený počet Tagů pro každou vaši cennost a sdílejte je až s pěti lidmi.</p><p>Hlídejte své věci beze strachu o své soukromí. Veškerá data jsou samozřejmě zabezpečená, všechna vaše data jsou anonymní, anonymní jsou také data uživatelů, kteří Tag ve svém okolí zaznamenali a data se nikam neukládají.</p>",
             "text_style": "body"
           }
         }
