@@ -15,12 +15,6 @@
   "sections": {
     "image_banner_aBk4NA": {
       "settings": {
-        "layout": "full_bleed",
-        "image": "shopify://shop_images/tagy2.5928.jpg",
-        "image_mobile": "shopify://shop_images/tagy2.5928-mobil_34c9b773-6799-49cb-9143-b845b249f406.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "color_text": "#000000",
         "background_container_mobile": "#aa9ab6"
       },
       "blocks": {
@@ -43,12 +37,6 @@
       "blocks": {}
     },
     "image_with_text_MUzzfc": {
-      "settings": {
-        "height": "adapt"
-      },
-      "blocks": {}
-    },
-    "image_with_text_j8Qig9": {
       "settings": {
         "height": "adapt"
       },
