@@ -20,7 +20,8 @@
         "image_mobile": "shopify://shop_images/tagy2.5928-mobil.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
-        "color_text": "#000000"
+        "color_text": "#000000",
+        "background_container_mobile": "#aa9ab6"
       },
       "blocks": {
         "text_zym3RF": {
