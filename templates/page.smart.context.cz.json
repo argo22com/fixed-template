@@ -18,7 +18,9 @@
         "layout": "full_bleed",
         "image": "shopify://shop_images/tagy2.5928.jpg",
         "image_mobile": "shopify://shop_images/trackery.5214_kopie2.jpg",
-        "image_height": "medium"
+        "image_height": "medium",
+        "image_overlay_opacity": 0,
+        "color_text": "#000000"
       },
       "blocks": {
         "text_zym3RF": {
