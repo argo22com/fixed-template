@@ -34,14 +34,14 @@
         "text_zym3RF": {
           "type": "text",
           "settings": {
-            "text": "<strong>Chytré lokátory</strong>",
+            "text": "<strong>Chytré lokátory - mějte své cennosti vždy pod kontrolou</strong>",
             "text_style": "subtitle"
           }
         },
         "multiline_text_UQgPEB": {
           "type": "multiline_text",
           "settings": {
-            "text": "<p><strong>Mějte své cennosti vždy pod kontrolou</strong></p>",
+            "text": "",
             "text_style": "subtitle"
           }
         }
@@ -52,10 +52,11 @@
         "multiline_text_UQgPEB"
       ],
       "settings": {
-        "layout": "stretched_grid",
-        "image": "shopify://shop_images/banner-desktop_Tag_Card_BL_noAFM_5b09e767-2727-4919-a0e2-f725eea92149.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
+        "layout": "full_bleed",
+        "image": "shopify://shop_images/tagy2.5928.jpg",
+        "image_mobile": "shopify://shop_images/tagy2.5928.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "medium",
         "image_height_mobile": "medium-mobile",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
