@@ -46,15 +46,6 @@
   {%- endif -%}
 
   {% for option in product.options_with_values %}
-
-    {%- liquid
-      assign opt_name_down = option.name | downcase
-      assign has_single_value = option.values.size == 1
-      assign only_value_down = option.values.first | downcase
-      assign is_dummy_default = (opt_name_down == 'default_option') and has_single_value and (only_value_down == 'default_option_value')
-    -%}
-    {%- if is_dummy_default -%}{% continue %}{%- endif -%}
-
     {%- if option.name == 'default' -%}
       {%- continue -%}
     {%- elsif block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
@@ -563,15 +554,6 @@
     </label>
     <div class="select">
       {% for option in product.options_with_values %}
-
-        {%- liquid
-          assign opt_name_down = option.name | downcase
-          assign has_single_value = option.values.size == 1
-          assign only_value_down = option.values.first | downcase
-          assign is_dummy_default = (opt_name_down == 'default_option') and has_single_value and (only_value_down == 'default_option_value')
-        -%}
-        {%- if is_dummy_default -%}{% continue %}{%- endif -%}
-
         <select
           name="options[{{ option.name | escape }}]"
           id="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
