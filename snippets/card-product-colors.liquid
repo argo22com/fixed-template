@@ -1,12 +1,12 @@
 {%- comment -%}
   Product card color swatches (grouping + metaobject labels + PDP-like visuals)
-  - Detekce názvu color option z settings.color_name (může být více názvů, oddělené čárkou)
-  - Pokud existuje grupa (product_variants_grouping.variation_products), vypíše všechny barvy z celé skupiny
-    * aktuální barva daného card produktu je vždy první
-  - Fallback: když grupa není, jede původní chování (barvy jen z card_product), opět s current barvou první
-  - Label barvy: metaobject `color_codes_hex` (priorita: label → search_words[0] → code → raw)
-  - Vizualizace swatche: image z metaobjektu, jinak HEX(y); pokud `color_swatches_style == 'variant'` a varianta má obrázek, použije se ten
-  - Limit zobrazených: 5, zbytek +N
+  - Najde color option podle settings.color_name (může být seznam)
+  - Pokud existuje grupa (product_variants_grouping.variation_products), vypíše všechny barvy napříč skupinou
+    * aktuální barva card produktu je vždy první
+  - Fallback: bez grupy vypíše barvy jen z card_product (aktuální první)
+  - Label barvy: metaobject color_codes_hex (label → search_words[0] → code → raw)
+  - Vizuál swatche: image z metaobjektu, jinak HEX(y); případně obrázek varianty při color_swatches_style == 'variant'
+  - Limit 5 + „+N“
 {%- endcomment -%}
 
 {%- assign color_names = settings.color_name | downcase | split: ',' | map: 'strip' -%}
@@ -31,16 +31,12 @@
     {%- assign used_group = true -%}
   {%- endif -%}
 
-  {%- comment -%} Serializace položek pro bezpečné renderování {%- endcomment -%}
   {%- assign SEP = '::' -%}{%- assign END = ';;' -%}
   {%- assign unique_keys = '' -%}
   {%- assign entries = '' -%}
 
-  {%- comment -%} Pomocník: přidej položku, pokud ještě není (key = normalized color) {%- endcomment -%}
-  {%- assign __noop = '' -%}
-
   {%- if used_group -%}
-    {%- comment -%} 1) Aktuální produkt – aktuální barva jako první {%- endcomment -%}
+    {# 1) Aktuální produkt – aktuální barva první #}
     {%- assign p = card_product -%}
     {%- assign val = current_color -%}
     {%- assign attr = 'option' | append: p.options_by_name[found_color_name].position -%}
@@ -48,8 +44,9 @@
     {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
 
     {%- assign key = val | downcase | strip -%}
-    {%- unless unique_keys contains '|' | append: key | append: '|' -%}
-      {%- assign unique_keys = unique_keys | append: '|' | append: key | append: '|' -%}
+    {%- assign needle = '|' | append: key | append: '|' -%}
+    {%- unless unique_keys contains needle -%}
+      {%- assign unique_keys = unique_keys | append: needle -%}
 
       {%- assign handle = 'color-code-' | append: val -%}
       {%- assign cm = shop.metaobjects.color_codes_hex[handle] -%}
@@ -93,7 +90,7 @@
       -%}
     {%- endunless -%}
 
-    {%- comment -%} 2) Sesterské produkty z grupy {%- endcomment -%}
+    {# 2) Sesterské produkty #}
     {%- for gp in group_items -%}
       {%- assign opt = gp.options_by_name[found_color_name] -%}
       {%- if opt and opt.values.size > 0 -%}
@@ -103,8 +100,9 @@
         {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
 
         {%- assign key = val | downcase | strip -%}
-        {%- unless unique_keys contains '|' | append: key | append: '|' -%}
-          {%- assign unique_keys = unique_keys | append: '|' | append: key | append: '|' -%}
+        {%- assign needle = '|' | append: key | append: '|' -%}
+        {%- unless unique_keys contains needle -%}
+          {%- assign unique_keys = unique_keys | append: needle -%}
 
           {%- assign handle = 'color-code-' | append: val -%}
           {%- assign cm = shop.metaobjects.color_codes_hex[handle] -%}
@@ -150,10 +148,11 @@
       {%- endif -%}
     {%- endfor -%}
 
-    {%- comment -%} 3) Zbývající barvy aktuálního produktu (po current) {%- endcomment -%}
+    {# 3) Zbývající barvy aktuálního produktu #}
     {%- for val in color_option.values -%}
       {%- assign key = val | downcase | strip -%}
-      {%- unless unique_keys contains '|' | append: key | append: '|' -%}
+      {%- assign needle = '|' | append: key | append: '|' -%}
+      {%- unless unique_keys contains needle -%}
         {%- assign vset = card_product.variants | where: color_attr, val -%}
         {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
 
@@ -207,7 +206,9 @@
         {%- assign items = entries | split: ';;' -%}
         {%- assign rendered = 0 -%}
         {%- assign total = 0 -%}
-        {%- for it in items -%}{%- unless it == '' -%}{%- assign total = total | plus: 1 -%}{%- endunless -%}{%- endfor -%}
+        {%- for it in items -%}
+          {%- unless it == '' -%}{%- assign total = total | plus: 1 -%}{%- endunless -%}
+        {%- endfor -%}
         {%- for it in items -%}
           {%- unless it == '' -%}
             {%- assign p = it | split: '::' -%}
