@@ -9,17 +9,20 @@
   - Limit 5 + „+N“
 {%- endcomment -%}
 
-{%- assign color_names = settings.color_name | downcase | split: ',' | map: 'strip' -%}
+{%- assign color_candidates = settings.color_name | downcase | split: ',' | map: 'strip' -%}
+{%- assign found_color_name_actual = '' -%}
 
-{%- assign found_color_name = '' -%}
-{%- for n in color_names -%}
-  {%- if card_product.options_by_name[n] != blank -%}
-    {%- assign found_color_name = n -%}{%- break -%}
+{%- for opt in card_product.options_with_values -%}
+  {%- assign opt_down = opt.name | downcase | strip -%}
+  {%- if color_candidates contains opt_down -%}
+    {%- assign found_color_name_actual = opt.name -%}
+    {%- break -%}
   {%- endif -%}
 {%- endfor -%}
 
-{%- unless card_product.has_only_default_variant or found_color_name == '' -%}
-  {%- assign color_option = card_product.options_by_name[found_color_name] -%}
+
+{%- unless card_product.has_only_default_variant or found_color_name_actual == '' -%}
+  {%- assign color_option = card_product.options_by_name[found_color_name_actual] -%}
   {%- assign color_attr = 'option' | append: color_option.position -%}
   {%- assign current_variant = card_product.selected_or_first_available_variant -%}
   {%- assign current_color = current_variant[color_attr] | default: color_option.values | first -%}
@@ -39,7 +42,7 @@
     {# 1) Aktuální produkt – aktuální barva první #}
     {%- assign p = card_product -%}
     {%- assign val = current_color -%}
-    {%- assign attr = 'option' | append: p.options_by_name[found_color_name].position -%}
+    {%- assign attr = 'option' | append: p.options_by_name[found_color_name_actual].position -%}
     {%- assign vset = p.variants | where: attr, val -%}
     {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
 
@@ -92,10 +95,10 @@
 
     {# 2) Sesterské produkty #}
     {%- for gp in group_items -%}
-      {%- assign opt = gp.options_by_name[found_color_name] -%}
+      {%- assign opt = gp.options_by_name[found_color_name_actual] -%}
       {%- if opt and opt.values.size > 0 -%}
         {%- assign val = opt.values | first -%}
-        {%- assign attr = 'option' | append: gp.options_by_name[found_color_name].position -%}
+        {%- assign attr = 'option' | append: gp.options_by_name[found_color_name_actual].position -%}
         {%- assign vset = gp.variants | where: attr, val -%}
         {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
 
@@ -199,7 +202,16 @@
       {%- endunless -%}
     {%- endfor -%}
   {%- endif -%}
-
+{%- if used_group -%}
+  {%- assign items = entries | split: ';;' -%}
+  {%- assign nonempty = 0 -%}
+  {%- for it in items -%}
+    {%- unless it == '' -%}{%- assign nonempty = nonempty | plus: 1 -%}{%- endunless -%}
+  {%- endfor -%}
+  {%- if nonempty == 0 -%}
+    {%- assign used_group = false -%}
+  {%- endif -%}
+{%- endif -%}
   <card-product-colors>
     <ul class="card__product-color-list list-unstyled flex flex-wrap align-center">
       {%- if used_group -%}
