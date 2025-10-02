@@ -1,65 +1,454 @@
-{% comment %}
-  - only_specific_color: [string] - if color is provided, show this one color swatch
-{% endcomment %}
+{%- comment -%}
+  Product card color swatches (grouping + metaobject labels + PDP-like visuals, robust autodetect)
+  - Autodetekce "color" option:
+      1) settings.color_name (case-insensitive, seznam)
+      2) metaobject existence pro jednu z hodnot (color-code-<value>)
+      3) běžná jména ("barva,color,farbe,couleur,kleur,colore,kolor,farba,цвет")
+      4) fallback = první option produktu
+  - Grupa (product_variants_grouping.variation_products): načtení bezpečně (value | default: raw metafield)
+  - Když grupa nic nepřinese, fallback jen na barvy aktuálního produktu
+  - Label: shop.metaobjects.color_codes_hex (label → search_words[0] → code → raw)
+  - Vizual: image z metaobjektu, jinak HEX segmenty; nebo obrázek varianty při color_swatches_style == 'variant'
+  - Limit: 5 + „+N“
+{%- endcomment -%}
 
-{%- assign color_name = settings.color_name | downcase -%}
-{% if only_specific_color %}
-  <card-product-colors>
-    <ul class="card__product-color-list list-unstyled flex flex-wrap align-center">
-      <li>
-        {% render 'color-swatch', color: only_specific_color %}
-      </li>
-    </ul>
-  </card-product-colors>
-{% else %}
-  {%- unless card_product.has_only_default_variant
-    or color_name == blank
-    or card_product.options_by_name[color_name] == blank
-  -%}
-    {%- assign attribute = 'option' | append: card_product.options_by_name[color_name].position -%}
-    <card-product-colors>
-      <ul class="card__product-color-list list-unstyled flex flex-wrap align-center">
-        {%- assign color_size = card_product.options_by_name[color_name].values.size -%}
-        {%- for color in card_product.options_by_name[color_name].values limit: 5 -%}
+{%- assign options = card_product.options_with_values -%}
+{%- assign color_option_name = '' -%}
+
+{%- comment %} 1) settings.color_name (case-insensitive, více názvů) {% endcomment -%}
+{%- assign candidates = settings.color_name | default: '' | downcase | split: ',' | map: 'strip' -%}
+{%- if candidates.size > 0 and candidates.first != '' -%}
+  {%- for opt in options -%}
+    {%- assign opt_down = opt.name | downcase | strip -%}
+    {%- if candidates contains opt_down -%}
+      {%- assign color_option_name = opt.name -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- comment %} 2) Heuristika přes metaobject (najdi option, pro kterou existuje color-code-<hodnota>) {% endcomment -%}
+{%- if color_option_name == '' -%}
+  {%- for opt in options -%}
+    {%- assign found = false -%}
+    {%- for v in opt.values limit: 3 -%}
+      {%- assign handle_try = 'color-code-' | append: v -%}
+      {%- assign mo = shop.metaobjects.color_codes_hex[handle_try] -%}
+      {%- if mo -%}{%- assign found = true -%}{%- break -%}{%- endif -%}
+    {%- endfor -%}
+    {%- if found -%}{%- assign color_option_name = opt.name -%}{%- break -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- comment %} 3) Běžná jména napříč jazyky {% endcomment -%}
+{%- if color_option_name == '' -%}
+  {%- assign common_names = 'barva,color,farbe,couleur,kleur,colore,kolor,farba,цвет' | split: ',' -%}
+  {%- for opt in options -%}
+    {%- assign opt_down = opt.name | downcase | strip -%}
+    {%- if common_names contains opt_down -%}
+      {%- assign color_option_name = opt.name -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- comment %} 4) Fallback: první option (aby se něco vykreslilo) {% endcomment -%}
+{%- if color_option_name == '' and options.size > 0 -%}
+  {%- assign color_option_name = options.first.name -%}
+{%- endif -%}
+
+{%- assign color_option = card_product.options_by_name[color_option_name] -%}
+{%- if color_option == blank -%}
+  {%- comment %} Bezpečnostní brzda: nic nevykresluj, když není co {% endcomment -%}
+  {%- comment %} Záměrně nenecháváme žádný HTML výstup {% endcomment -%}
+  {%- break -%}
+{%- endif -%}
+
+{%- assign color_attr   = 'option' | append: color_option.position -%}
+{%- assign current_variant = card_product.selected_or_first_available_variant -%}
+{%- assign current_color   = current_variant[color_attr] | default: color_option.values | first -%}
+{%- assign current_color_key = current_color | downcase | strip -%}
+
+{%- comment %} Grupa: bezpečné načtení (value | default: raw) {% endcomment -%}
+{%- assign group_mf = card_product.metafields.product_variants_grouping.variation_products -%}
+{%- assign group_items = group_mf.value | default: group_mf -%}
+{%- assign used_group = false -%}
+{%- if group_items and group_items.size > 0 -%}{%- assign used_group = true -%}{%- endif -%}
+
+{%- assign SEP = '::' -%}{%- assign END = ';;' -%}
+{%- assign unique_keys = '' -%}
+{%- assign entries = '' -%}
+
+{%- if used_group -%}
+  {%- comment %} 1) Aktuální produkt – aktuální barva první {% endcomment -%}
+  {%- assign p = card_product -%}
+  {%- assign val = current_color -%}
+  {%- assign attr = 'option' | append: p.options_by_name[color_option_name].position -%}
+  {%- assign vset = p.variants | where: attr, val -%}
+  {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
+
+  {%- assign key = val | downcase | strip -%}
+  {%- assign needle = '|' | append: key | append: '|' -%}
+  {%- unless unique_keys contains needle -%}
+    {%- assign unique_keys = unique_keys | append: needle -%}
+
+    {%- assign handle = 'color-code-' | append: val -%}
+    {%- assign cm = shop.metaobjects.color_codes_hex[handle] -%}
+    {%- assign label = val -%}
+    {%- if cm -%}
+      {%- assign label = cm.label | default: cm.search_words.value | first | default: cm.code | default: val -%}
+    {%- endif -%}
+
+    {%- assign srcset = '' -%}{%- assign img100 = '' -%}
+    {%- if v1 and v1.featured_image != blank -%}
+      {%- assign img = v1.featured_image -%}
+      {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
+      {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
+      {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
+      {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
+      {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
+    {%- endif -%}
+
+    {%- assign mode = 'none' -%}{%- assign bgstyle = '' -%}{%- assign hexes = '' -%}
+    {%- if cm and cm.image.value -%}
+      {%- assign imgu = cm.image.value | image_url: width: 100, height: 100, crop: 'center' -%}
+      {%- assign bgstyle = '--background-image:url(' | append: imgu | append: ');' -%}
+      {%- assign mode = 'image' -%}
+    {%- elsif cm and cm.color_hex_list.value and cm.color_hex_list.value.size > 0 -%}
+      {%- assign mode = 'hexlist' -%}
+      {%- assign hexes = cm.color_hex_list.value | join: ',' -%}
+    {%- endif -%}
+
+    {%- assign entries = entries
+      | append: key | append: SEP
+      | append: v1.url | append: SEP
+      | append: label | append: SEP
+      | append: srcset | append: SEP
+      | append: mode | append: SEP
+      | append: hexes | append: SEP
+      | append: bgstyle | append: SEP
+      | append: img100 | append: END
+    -%}
+  {%- endunless -%}
+
+  {%- comment %} 2) Sesterské produkty – autodetekce jejich vlastního názvu barvy {% endcomment -%}
+  {%- for gp in group_items -%}
+    {%- assign gp_options = gp.options_with_values -%}
+    {%- assign gp_color_option_name = '' -%}
+
+    {%- comment %} a) zkus settings.color_name {% endcomment -%}
+    {%- if candidates.size > 0 and candidates.first != '' -%}
+      {%- for _opt in gp_options -%}
+        {%- assign _down = _opt.name | downcase | strip -%}
+        {%- if candidates contains _down -%}
+          {%- assign gp_color_option_name = _opt.name -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- comment %} b) metaobject heuristika {% endcomment -%}
+    {%- if gp_color_option_name == '' -%}
+      {%- for _opt in gp_options -%}
+        {%- assign _found = false -%}
+        {%- for _v in _opt.values limit: 3 -%}
+          {%- assign _handle_try = 'color-code-' | append: _v -%}
+          {%- assign _mo = shop.metaobjects.color_codes_hex[_handle_try] -%}
+          {%- if _mo -%}{%- assign _found = true -%}{%- break -%}{%- endif -%}
+        {%- endfor -%}
+        {%- if _found -%}{%- assign gp_color_option_name = _opt.name -%}{%- break -%}{%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- comment %} c) běžné názvy {% endcomment -%}
+    {%- if gp_color_option_name == '' -%}
+      {%- assign common_names = 'barva,color,farbe,couleur,kleur,colore,kolor,farba,цвет' | split: ',' -%}
+      {%- for _opt in gp_options -%}
+        {%- assign _down = _opt.name | downcase | strip -%}
+        {%- if common_names contains _down -%}
+          {%- assign gp_color_option_name = _opt.name -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- comment %} d) fallback – když nic, přeskoč tento gp {% endcomment -%}
+    {%- if gp_color_option_name == '' -%}{%- continue -%}{%- endif -%}
+
+    {%- assign opt = gp.options_by_name[gp_color_option_name] -%}
+    {%- if opt and opt.values.size > 0 -%}
+      {%- assign val = opt.values | first -%}
+      {%- assign attr = 'option' | append: opt.position -%}
+      {%- assign vset = gp.variants | where: attr, val -%}
+      {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
+
+      {%- assign key = val | downcase | strip -%}
+      {%- assign needle = '|' | append: key | append: '|' -%}
+      {%- unless unique_keys contains needle -%}
+        {%- assign unique_keys = unique_keys | append: needle -%}
+
+        {%- assign handle = 'color-code-' | append: val -%}
+        {%- assign cm = shop.metaobjects.color_codes_hex[handle] -%}
+        {%- assign label = val -%}
+        {%- if cm -%}
+          {%- assign label = cm.label | default: cm.search_words.value | first | default: cm.code | default: val -%}
+        {%- endif -%}
+
+        {%- assign srcset = '' -%}{%- assign img100 = '' -%}
+        {%- if v1 and v1.featured_image != blank -%}
+          {%- assign img = v1.featured_image -%}
+          {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
+          {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
+          {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
+          {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
+          {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
+        {%- endif -%}
+
+        {%- assign mode = 'none' -%}{%- assign bgstyle = '' -%}{%- assign hexes = '' -%}
+        {%- if cm and cm.image.value -%}
+          {%- assign imgu = cm.image.value | image_url: width: 100, height: 100, crop: 'center' -%}
+          {%- assign bgstyle = '--background-image:url(' | append: imgu | append: ');' -%}
+          {%- assign mode = 'image' -%}
+        {%- elsif cm and cm.color_hex_list.value and cm.color_hex_list.value.size > 0 -%}
+          {%- assign mode = 'hexlist' -%}
+          {%- assign hexes = cm.color_hex_list.value | join: ',' -%}
+        {%- endif -%}
+
+        {%- assign entries = entries
+          | append: key | append: SEP
+          | append: v1.url | append: SEP
+          | append: label | append: SEP
+          | append: srcset | append: SEP
+          | append: mode | append: SEP
+          | append: hexes | append: SEP
+          | append: bgstyle | append: SEP
+          | append: img100 | append: END
+        -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- comment %} 3) Zbývající barvy aktuálního produktu {% endcomment -%}
+  {%- for val in color_option.values -%}
+    {%- assign key = val | downcase | strip -%}
+    {%- assign needle = '|' | append: key | append: '|' -%}
+    {%- unless unique_keys contains needle -%}
+      {%- assign vset = card_product.variants | where: color_attr, val -%}
+      {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
+
+      {%- assign handle = 'color-code-' | append: val -%}
+      {%- assign cm = shop.metaobjects.color_codes_hex[handle] -%}
+      {%- assign label = val -%}
+      {%- if cm -%}
+        {%- assign label = cm.label | default: cm.search_words.value | first | default: cm.code | default: val -%}
+      {%- endif -%}
+
+      {%- assign srcset = '' -%}{%- assign img100 = '' -%}
+      {%- if v1 and v1.featured_image != blank -%}
+        {%- assign img = v1.featured_image -%}
+        {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
+        {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
+        {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
+        {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
+        {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
+      {%- endif -%}
+
+      {%- assign mode = 'none' -%}{%- assign bgstyle = '' -%}{%- assign hexes = '' -%}
+      {%- if cm and cm.image.value -%}
+        {%- assign imgu = cm.image.value | image_url: width: 100, height: 100, crop: 'center' -%}
+        {%- assign bgstyle = '--background-image:url(' | append: imgu | append: ');' -%}
+        {%- assign mode = 'image' -%}
+      {%- elsif cm and cm.color_hex_list.value and cm.color_hex_list.value.size > 0 -%}
+        {%- assign mode = 'hexlist' -%}
+        {%- assign hexes = cm.color_hex_list.value | join: ',' -%}
+      {%- endif -%}
+
+      {%- assign entries = entries
+        | append: key | append: SEP
+        | append: v1.url | append: SEP
+        | append: label | append: SEP
+        | append: srcset | append: SEP
+        | append: mode | append: SEP
+        | append: hexes | append: SEP
+        | append: bgstyle | append: SEP
+        | append: img100 | append: END
+      -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- comment %} Pokud grupa nic nedala, spadni na fallback větev níže {% endcomment -%}
+{%- if used_group -%}
+  {%- assign items_tmp = entries | split: ';;' -%}
+  {%- assign nonempty = 0 -%}
+  {%- for it in items_tmp -%}
+    {%- unless it == '' -%}{%- assign nonempty = nonempty | plus: 1 -%}{%- endunless -%}
+  {%- endfor -%}
+  {%- if nonempty == 0 -%}{%- assign used_group = false -%}{%- endif -%}
+{%- endif -%}
+
+<card-product-colors>
+  <ul class="card__product-color-list list-unstyled flex flex-wrap align-center">
+    {%- if used_group -%}
+      {%- assign items = entries | split: ';;' -%}
+      {%- assign rendered = 0 -%}
+      {%- assign total = 0 -%}
+      {%- for it in items -%}
+        {%- unless it == '' -%}{%- assign total = total | plus: 1 -%}{%- endunless -%}
+      {%- endfor -%}
+      {%- for it in items -%}
+        {%- unless it == '' -%}
+          {%- assign p = it | split: '::' -%}
+          {%- assign _key = p[0] -%}
+          {%- assign _url = p[1] -%}
+          {%- assign _title = p[2] -%}
+          {%- assign _srcset = p[3] -%}
+          {%- assign _mode = p[4] -%}
+          {%- assign _hexes = p[5] -%}
+          {%- assign _bgstyle = p[6] -%}
+          {%- assign _img100 = p[7] -%}
+          <li>
+            <a href="{{ _url }}"
+               class="card__product-color-list__button bt-tooltip por db{% if color_swatches_style == 'variant' %} card__product-color-list__button--variant{% endif %}"
+               {% if _srcset != '' %}data-srcset="{{ _srcset }}"{% endif %}
+               data-color="{{ _key | handleize }}"
+               {% if _mode == 'image' and _bgstyle != '' %} style="{{ _bgstyle }}"{% endif %}>
+              {%- if color_swatches_style == 'variant' and _img100 != '' -%}
+                <img src="{{ _img100 }}" width="100" height="100" loading="lazy" class="w100 h100" alt="{{ card_product.title | escape }} - {{ _title }}"/>
+              {%- elsif _mode == 'hexlist' and _hexes != '' -%}
+                {%- assign color_list = _hexes | split: ',' -%}
+                {%- assign color_size = color_list.size -%}
+                <div class="color-swatch-background">
+                  {%- if color_size == 1 -%}
+                    <span style="background: {{ color_list[0] }}; width: 100%; height: 100%"></span>
+                  {%- elsif color_size == 2 -%}
+                    <span style="background: {{ color_list[0] }}; width: 100%; height: 100%; left: -50%"></span>
+                    <span style="background: {{ color_list[1] }}; width: 100%; height: 100%; left: 50%"></span>
+                  {%- else -%}
+                    {%- assign angle = 360 | divided_by: color_size -%}
+                    {%- for c in color_list -%}
+                      {%- assign rotation = angle | times: forloop.index0 -%}
+                      {%- assign skew = -90 | plus: angle -%}
+                      <span style="background: {{ c }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if color_size == 3 %}top:-10%; right:-25%; height:70%; width:70%{% endif %}"></span>
+                    {%- endfor -%}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+              <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ _title }}</span>
+            </a>
+          </li>
+          {%- assign rendered = rendered | plus: 1 -%}
+          {%- if rendered == 5 -%}{%- break -%}{%- endif -%}
+        {%- endunless -%}
+      {%- endfor -%}
+      {%- if total > 5 -%}
+        <li>
+          <a href="{{ card_product.url }}" class="card__product-color-list__more lh1 font-body-bold{% if color_swatches_style == 'variant' %} card__product-color-list__more--variant flex justify-center align-center{% endif %}">
+            +{{ total | minus: 5 }}
+          </a>
+        </li>
+      {%- endif -%}
+    {%- else -%}
+      {%- assign values = color_option.values -%}
+      {%- assign ordered_values = '' -%}
+      {%- for v in values -%}{%- if v == current_color -%}{%- assign ordered_values = ordered_values | append: v | append: '||' -%}{%- endif -%}{%- endfor -%}
+      {%- for v in values -%}{%- unless v == current_color -%}{%- assign ordered_values = ordered_values | append: v | append: '||' -%}{%- endunless -%}{%- endfor -%}
+      {%- assign values_ordered = ordered_values | split: '||' -%}
+      {%- assign color_size = color_option.values.size -%}
+      {%- assign shown = 0 -%}
+
+      {%- for color in values_ordered -%}
+        {%- unless color == '' -%}
           {%- liquid
-            assign variants = card_product.variants | where: attribute, color
-            assign variant_color = variants | where: 'featured_image' | first
-            unless variant_color
-              assign variant_color = variants | first
+            assign variant_color = color.variant
+            unless variant_color and variant_color.featured_image
+              assign variants = card_product.variants | where: color_attr, color
+              assign variant_color = variants | where: 'featured_image' | first
+              unless variant_color
+                assign variant_color = variants | first
+              endunless
             endunless
+
             assign srcset = ''
-            if variant_color.featured_image != blank
-              if variant_color.featured_image.width >= 165
-                assign product_image_url = variant_color.featured_image | image_url: width: 165
-                assign srcset = srcset | append: product_image_url | append: ' 165w,'
+            assign img100 = ''
+            if variant_color and variant_color.featured_image != blank
+              assign img = variant_color.featured_image
+              if img.width >= 165
+                assign u165 = img | image_url: width: 165
+                assign srcset = srcset | append: u165 | append: ' 165w,'
               endif
-              if variant_color.featured_image.width >= 360
-                assign product_image_url = variant_color.featured_image | image_url: width: 360
-                assign srcset = srcset | append: product_image_url | append: ' 360w,'
+              if img.width >= 360
+                assign u360 = img | image_url: width: 360
+                assign srcset = srcset | append: u360 | append: ' 360w,'
               endif
-              if variant_color.featured_image.width >= 430
-                assign product_image_url = variant_color.featured_image | image_url: width: 450
-                assign srcset = srcset | append: product_image_url | append: ' 450w,'
+              if img.width >= 430
+                assign u450 = img | image_url: width: 450
+                assign srcset = srcset | append: u450 | append: ' 450w,'
               endif
-              assign product_image_url = variant_color.featured_image | image_url
-              assign srcset = srcset | append: product_image_url | append: ' ' | append: variant_color.featured_image.width | append: 'w'
+              assign ufull = img | image_url
+              assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w'
+              assign img100 = img | image_url: width: 100, height: 100, crop: 'center'
+            endif
+
+            assign handle = 'color-code-' | append: color
+            assign cm = shop.metaobjects.color_codes_hex[handle]
+            assign display_title = color
+            if cm
+              assign display_title = cm.label | default: cm.search_words.value | first | default: cm.code | default: color
+            endif
+
+            assign bgstyle = ''
+            assign mode = 'none'
+            assign hex_list = nil
+            if cm and cm.image.value
+              assign imgu = cm.image.value | image_url: width: 100, height: 100, crop: 'center'
+              assign bgstyle = '--background-image:url(' | append: imgu | append: ');'
+              assign mode = 'image'
+            elsif cm and cm.color_hex_list.value and cm.color_hex_list.value.size > 0
+              assign mode = 'hexlist'
+              assign hex_list = cm.color_hex_list.value
             endif
           -%}
           <li>
-            {% render 'color-swatch', color: color, variant_color: variant_color, color_swatches_style: color_swatches_style, srcset: srcset, card_product: card_product %}
-          </li>
-        {%- endfor -%}
-        {%- if color_size > 5 -%}
-          <li>
-            <a
-              href="{{ card_product.url }}"
-              class="card__product-color-list__more lh1 font-body-bold{% if color_swatches_style == 'variant' %} card__product-color-list__more--variant flex justify-center align-center{% endif %}"
-            >
-              +{{ color_size | minus: 5 }}
+            <a href="{{ variant_color.url }}"
+               class="card__product-color-list__button bt-tooltip por db{% if color_swatches_style == 'variant' %} card__product-color-list__button--variant{% if variant_color != null %} color-swatch-own-image{% endif %}{% endif %}"
+               {% if srcset != '' %} data-srcset="{{ srcset | escape }}"{% endif %}
+               data-color="{{ color | handleize }}"
+               {% if mode == 'image' and bgstyle != '' %} style="{{ bgstyle }}"{% endif %}>
+              {%- if color_swatches_style == 'variant' and variant_color != null and img100 != '' -%}
+                <img src="{{ img100 }}" width="100" height: "100" loading="lazy" class="w100 h100" alt="{{ card_product.title | escape }} - {{ display_title | escape }}"/>
+              {%- elsif mode == 'hexlist' and hex_list and hex_list.size > 0 -%}
+                <div class="color-swatch-background">
+                  {%- if hex_list.size == 1 -%}
+                    <span style="background: {{ hex_list[0] }}; width: 100%; height: 100%"></span>
+                  {%- elsif hex_list.size == 2 -%}
+                    <span style="background: {{ hex_list[0] }}; width: 100%; height: 100%; left: -50%"></span>
+                    <span style="background: {{ hex_list[1] }}; width: 100%; height: 100%; left: 50%"></span>
+                  {%- else -%}
+                    {%- assign angle = 360 | divided_by: hex_list.size -%}
+                    {%- for c in hex_list -%}
+                      {%- assign rotation = angle | times: forloop.index0 -%}
+                      {%- assign skew = -90 | plus: angle -%}
+                      <span style="background: {{ c }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if hex_list.size == 3 %}top:-10%; right:-25%; height:70%; width:70%{% endif %}"></span>
+                    {%- endfor -%}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+              <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ display_title }}</span>
             </a>
           </li>
-        {%- endif -%}
-      </ul>
-    </card-product-colors>
-  {%- endunless -%}
-{% endif %}
+          {%- assign shown = shown | plus: 1 -%}
+          {%- if shown == 5 -%}{%- break -%}{%- endif -%}
+        {%- endunless -%}
+      {%- endfor -%}
+
+      {%- if color_size > 5 -%}
+        <li>
+          <a href="{{ card_product.url }}" class="card__product-color-list__more lh1 font-body-bold{% if color_swatches_style == 'variant' %} card__product-color-list__more--variant flex justify-center align-center{% endif %}">
+            +{{ color_size | minus: 5 }}
+          </a>
+        </li>
+      {%- endif -%}
+    {%- endif -%}
+  </ul>
+</card-product-colors>
