@@ -68,33 +68,51 @@
 {%- assign used_group = false -%}
 {%- if group_items and group_items.size > 0 -%}{%- assign used_group = true -%}{%- endif -%}
 
-{%- comment %} DEBUG — hlavička {% endcomment -%}
-{% if request.design_mode %}
-  {%- assign _gmf = card_product.metafields.product_variants_grouping.variation_products -%}
-  {%- assign _group_items = _gmf.value | default: _gmf -%}
-  {%- assign _color_attr_dbg = 'option' | append: color_option.position -%}
+{%- assign _gmf = card_product.metafields.product_variants_grouping.variation_products -%}
+{%- assign _group_items = _gmf.value | default: _gmf -%}
 
-  <!-- DEBUG HEAD
-       product={{ card_product.title | escape }}
-       color_option_name="{{ color_option_name }}"
-       color_attr="{{ _color_attr_dbg }}"
-       current_color="{{ current_color }}"
-       group_items.class={{ _group_items | class }} size={{ _group_items.size }}
-       candidates="{{ candidates | join: ', ' }}"
-  -->
-  <script>
-    console.log('CARD DEBUG', {
-      product: {{ card_product.title | json }},
-      color_option_name: {{ color_option_name | json }},
-      color_attr: {{ _color_attr_dbg | json }},
-      current_color: {{ current_color | json }},
-      group_items_size: {{ _group_items.size | default: 0 }},
-      candidates: {{ candidates | json }},
-      option_names: {{ options | map: 'name' | json }},
-      option_values: {{ options | map: 'values' | json }}
-    });
-  </script>
-{% endif %}
+{%- assign _options = card_product.options_with_values -%}
+{%- assign _opt_names = _options | map: 'name' | join: ' | ' -%}
+{%- assign _opt_vals_serial = '' -%}
+{%- for o in _options -%}
+  {%- assign _vals = o.values | join: '/' -%}
+  {%- assign _opt_vals_serial = _opt_vals_serial | append: '[' | append: o.name | append: ':' | append: _vals | append: '] ' -%}
+{%- endfor -%}
+
+{%- assign _color_attr_dbg = 'option' | append: color_option.position -%}
+
+<!-- DEBUG HEAD
+     product="{{ card_product.title | escape }}"
+     color_option_name="{{ color_option_name }}"
+     color_attr="{{ _color_attr_dbg }}"
+     current_color="{{ current_color }}"
+     group_items.class={{ _group_items | class }} size={{ _group_items.size }}
+     option_names="{{ _opt_names }}"
+     option_values="{{ _opt_vals_serial }}"
+-->
+
+<script>
+  (function(){
+    try {
+      var dbg = {
+        product: {{ card_product.title | json }},
+        color_option_name: {{ color_option_name | json }},
+        color_attr: {{ _color_attr_dbg | json }},
+        current_color: {{ current_color | json }},
+        group_items_size: {{ _group_items.size | default: 0 }},
+        option_names: {{ _options | map: 'name' | json }},
+        option_values: {{ _options | map: 'values' | json }}
+      };
+      console.log('CARD DEBUG', dbg);
+      // Viditelný beacon v DOM pro inspekci:
+      var span = document.createElement('span');
+      span.setAttribute('data-card-debug', JSON.stringify(dbg));
+      span.style.display = 'none';
+      document.currentScript.parentNode.insertBefore(span, document.currentScript);
+    } catch(e) { console.warn('CARD DEBUG error', e); }
+  })();
+</script>
+
 
 {%- assign SEP = '::' -%}{%- assign END = ';;' -%}
 {%- assign unique_keys = '' -%}
