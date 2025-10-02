@@ -122,60 +122,101 @@
     -%}
   {%- endunless -%}
 
-  {# 2) Sesterské produkty #}
-  {%- for gp in group_items -%}
-    {%- assign opt = gp.options_by_name[color_option_name] -%}
-    {%- if opt and opt.values.size > 0 -%}
-      {%- assign val = opt.values | first -%}
-      {%- assign attr = 'option' | append: gp.options_by_name[color_option_name].position -%}
-      {%- assign vset = gp.variants | where: attr, val -%}
-      {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
+ {# 2) Sesterské produkty (autodetekce jejich vlastního názvu color option) #}
+{%- for gp in group_items -%}
+  {%- assign gp_options = gp.options_with_values -%}
+  {%- assign gp_color_option_name = '' -%}
 
-      {%- assign key = val | downcase | strip -%}
-      {%- assign needle = '|' | append: key | append: '|' -%}
-      {%- unless unique_keys contains needle -%}
-        {%- assign unique_keys = unique_keys | append: needle -%}
-
-        {%- assign handle = 'color-code-' | append: val -%}
-        {%- assign cm = shop.metaobjects.color_codes_hex[handle] -%}
-        {%- assign label = val -%}
-        {%- if cm -%}
-          {%- assign label = cm.label | default: cm.search_words.value | first | default: cm.code | default: val -%}
-        {%- endif -%}
-
-        {%- assign srcset = '' -%}{%- assign img100 = '' -%}
-        {%- if v1 and v1.featured_image != blank -%}
-          {%- assign img = v1.featured_image -%}
-          {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
-          {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
-          {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
-          {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
-          {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
-        {%- endif -%}
-
-        {%- assign mode = 'none' -%}{%- assign bgstyle = '' -%}{%- assign hexes = '' -%}
-        {%- if cm and cm.image.value -%}
-          {%- assign imgu = cm.image.value | image_url: width: 100, height: 100, crop: 'center' -%}
-          {%- assign bgstyle = '--background-image:url(' | append: imgu | append: ');' -%}
-          {%- assign mode = 'image' -%}
-        {%- elsif cm and cm.color_hex_list.value and cm.color_hex_list.value.size > 0 -%}
-          {%- assign mode = 'hexlist' -%}
-          {%- assign hexes = cm.color_hex_list.value | join: ',' -%}
-        {%- endif -%}
-
-        {%- assign entries = entries
-          | append: key | append: SEP
-          | append: v1.url | append: SEP
-          | append: label | append: SEP
-          | append: srcset | append: SEP
-          | append: mode | append: SEP
-          | append: hexes | append: SEP
-          | append: bgstyle | append: SEP
-          | append: img100 | append: END
-        -%}
-      {%- endunless -%}
+  {%- comment %} a) zkus settings.color_name {% endcomment -%}
+  {%- for _opt in gp_options -%}
+    {%- assign _down = _opt.name | downcase | strip -%}
+    {%- if candidates contains _down -%}
+      {%- assign gp_color_option_name = _opt.name -%}
+      {%- break -%}
     {%- endif -%}
   {%- endfor -%}
+
+  {%- comment %} b) metaobject heuristika {% endcomment -%}
+  {%- if gp_color_option_name == '' -%}
+    {%- for _opt in gp_options -%}
+      {%- assign _found = false -%}
+      {%- for _v in _opt.values limit: 3 -%}
+        {%- assign _handle_try = 'color-code-' | append: _v -%}
+        {%- assign _mo = shop.metaobjects.color_codes_hex[_handle_try] -%}
+        {%- if _mo -%}{%- assign _found = true -%}{%- break -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if _found -%}{%- assign gp_color_option_name = _opt.name -%}{%- break -%}{%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- comment %} c) běžné názvy {% endcomment -%}
+  {%- if gp_color_option_name == '' -%}
+    {%- assign common_names = 'barva,color,farbe,couleur,kleur,colore,kolor,farba,цвет' | split: ',' -%}
+    {%- for _opt in gp_options -%}
+      {%- assign _down = _opt.name | downcase | strip -%}
+      {%- if common_names contains _down -%}
+        {%- assign gp_color_option_name = _opt.name -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- comment %} d) fallback – když nic, přeskoč tento gp {% endcomment -%}
+  {%- if gp_color_option_name == '' -%}{%- continue -%}{%- endif -%}
+
+  {%- assign opt = gp.options_by_name[gp_color_option_name] -%}
+  {%- if opt and opt.values.size > 0 -%}
+    {%- assign val = opt.values | first -%}
+    {%- assign attr = 'option' | append: opt.position -%}
+    {%- assign vset = gp.variants | where: attr, val -%}
+    {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
+
+    {%- assign key = val | downcase | strip -%}
+    {%- assign needle = '|' | append: key | append: '|' -%}
+    {%- unless unique_keys contains needle -%}
+      {%- assign unique_keys = unique_keys | append: needle -%}
+
+      {%- assign handle = 'color-code-' | append: val -%}
+      {%- assign cm = shop.metaobjects.color_codes_hex[handle] -%}
+      {%- assign label = val -%}
+      {%- if cm -%}
+        {%- assign label = cm.label | default: cm.search_words.value | first | default: cm.code | default: val -%}
+      {%- endif -%}
+
+      {%- assign srcset = '' -%}{%- assign img100 = '' -%}
+      {%- if v1 and v1.featured_image != blank -%}
+        {%- assign img = v1.featured_image -%}
+        {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
+        {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
+        {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
+        {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
+        {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
+      {%- endif -%}
+
+      {%- assign mode = 'none' -%}{%- assign bgstyle = '' -%}{%- assign hexes = '' -%}
+      {%- if cm and cm.image.value -%}
+        {%- assign imgu = cm.image.value | image_url: width: 100, height: 100, crop: 'center' -%}
+        {%- assign bgstyle = '--background-image:url(' | append: imgu | append: ');' -%}
+        {%- assign mode = 'image' -%}
+      {%- elsif cm and cm.color_hex_list.value and cm.color_hex_list.value.size > 0 -%}
+        {%- assign mode = 'hexlist' -%}
+        {%- assign hexes = cm.color_hex_list.value | join: ',' -%}
+      {%- endif -%}
+
+      {%- assign entries = entries
+        | append: key | append: SEP
+        | append: v1.url | append: SEP
+        | append: label | append: SEP
+        | append: srcset | append: SEP
+        | append: mode | append: SEP
+        | append: hexes | append: SEP
+        | append: bgstyle | append: SEP
+        | append: img100 | append: END
+      -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+
 
   {# 3) Zbývající barvy aktuálního produktu #}
   {%- for val in color_option.values -%}
