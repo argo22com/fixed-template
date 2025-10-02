@@ -1,359 +1,578 @@
-{%- comment -%}
-  Product card color swatches (GROUP + full debug)
-  - Najde "color" option dle settings.color_name (case-insensitive, bere první z CSV)
-  - Zkusí načíst grupu variation_products (value | default: raw metafield)
-  - Vylistuje barvy: aktuální produkt (aktuální barva první) + sestry z grupy + zbytek aktuálního
-  - Fallback: pokud grupa nedorazí, barvy přímo z variant (uniq)
-  - Limit 5 + „+N“
-{%- endcomment -%}
+{% comment %}
+  Renders product options on the product page or featured product section.
 
-{%- assign color_candidates = settings.color_name | default: '' | downcase | split: ',' | map: 'strip' -%}
-{%- assign found_color_name_actual = '' -%}
+  Accepts:
+  - product: {Object} Product object
+  - block: {Object} Block object when browse section.blocks array.
+  - product_form_id: {String} the HTML ID of the product form.
+  - prefix_variant: {String} used to render a custom elements which extends from the variant-radios or variant-selects elements
 
-{%- for opt in card_product.options_with_values -%}
-  {%- assign opt_down = opt.name | downcase | strip -%}
-  {%- if color_candidates contains opt_down -%}
-    {%- assign found_color_name_actual = opt.name -%}
-    {%- break -%}
-  {%- endif -%}
-{%- endfor -%}
+  Usage:
+  {% render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+{%- unless product.has_only_default_variant -%}
+  {%- liquid
+    assign max_rows = 4
+    assign items_per_row = 3
+    assign total_visible_items = max_rows | times: items_per_row
+    assign current_variant = product.selected_or_first_available_variant
+    assign first_selected_variant = current_variant | default: product.variants[0]
+    assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-{%- if found_color_name_actual == '' and card_product.options_with_values.size > 0 -%}
-  {%- comment -%} Fallback: vezmi první option, ať se něco zobrazí {%- endcomment -%}
-  {%- assign found_color_name_actual = card_product.options_with_values.first.name -%}
-{%- endif -%}
+    assign color_name = settings.color_name | downcase
+    assign option_color_position = null
+    for option in product.options_with_values
+      assign option_name_downcase = option.name | downcase
 
-{%- assign color_option = card_product.options_by_name[found_color_name_actual] -%}
-{%- if color_option == blank -%}
-  <!-- CARD-COLORS: color option "{{ found_color_name_actual }}" na card_product nenalezena -->
-  {%- break -%}
-{%- endif -%}
-
-{%- assign color_attr   = 'option' | append: color_option.position -%}
-{%- assign current_variant = card_product.selected_or_first_available_variant -%}
-{%- assign current_color   = current_variant[color_attr] | default: color_option.values | first -%}
-{%- assign current_color_key = current_color | downcase | strip -%}
-
-{%- comment -%} Bezpečné načtení grupy (value | default) {%- endcomment -%}
-{%- assign _mf = card_product.metafields.product_variants_grouping.variation_products -%}
-{%- assign group_items = nil -%}
-{%- if _mf != blank -%}
-  {%- assign group_items = _mf.value | default: _mf -%}
-{%- endif -%}
-{%- assign used_group = false -%}
-{%- if group_items and group_items.size > 0 -%}{%- assign used_group = true -%}{%- endif -%}
-
-{%- comment -%} DEBUG hlavička {%- endcomment -%}
-{%- assign _mf_json = _mf | json -%}
-<!-- CARD-COLORS DEBUG
-     product_id={{ card_product.id }}
-     title="{{ card_product.title | escape }}"
-     color_option_name="{{ found_color_name_actual }}"
-     color_attr="{{ color_attr }}"
-     current_color="{{ current_color }}"
-     group_items_size={{ group_items.size | default: 0 }}
-     raw_metafield={{ _mf_json | default: 'null' }}
--->
-<script>
-  try {
-    console.log('CARD DEBUG', {
-      product_id: {{ card_product.id }},
-      title: {{ card_product.title | json }},
-      color_option_name: {{ found_color_name_actual | json }},
-      color_attr: {{ color_attr | json }},
-      current_color: {{ current_color | json }},
-      group_items_size: {{ group_items.size | default: 0 }},
-      option_names: {{ card_product.options_with_values | map: 'name' | json }},
-      option_values: {{ card_product.options_with_values | map: 'values' | json }},
-      raw_metafield: {{ _mf | json }}
-    });
-  } catch(e) { console.warn('CARD DEBUG error', e); }
-</script>
-
-{%- assign SEP = '::' -%}{%- assign END = ';;' -%}
-{%- assign unique_keys = '' -%}
-{%- assign entries = '' -%}
-
-{%- comment -%} 1) Aktuální produkt – aktuální barva první {%- endcomment -%}
-{%- assign vset = card_product.variants | where: color_attr, current_color -%}
-{%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
-{%- assign key = current_color | downcase | strip -%}
-{%- assign needle = '|' | append: key | append: '|' -%}
-{%- unless unique_keys contains needle -%}
-  {%- assign unique_keys = unique_keys | append: needle -%}
-
-  {%- assign handle = 'color-code-' | append: current_color -%}
-  {%- assign cm = shop.metaobjects.color_codes_hex[handle] -%}
-  {%- assign label = current_color -%}
-  {%- if cm -%}
-    {%- assign label = cm.label | default: cm.search_words.value | first | default: cm.code | default: current_color -%}
-  {%- endif -%}
-
-  {%- assign srcset = '' -%}{%- assign img100 = '' -%}
-  {%- if v1 and v1.featured_image != blank -%}
-    {%- assign img = v1.featured_image -%}
-    {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
-    {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
-    {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
-    {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
-    {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
-  {%- endif -%}
-
-  {%- assign mode = 'none' -%}{%- assign bgstyle = '' -%}{%- assign hexes = '' -%}
-  {%- if cm and cm.image.value -%}
-    {%- assign imgu = cm.image.value | image_url: width: 100, height: 100, crop: 'center' -%}
-    {%- assign bgstyle = '--background-image:url(' | append: imgu | append: ');' -%}
-    {%- assign mode = 'image' -%}
-  {%- elsif cm and cm.color_hex_list.value and cm.color_hex_list.value.size > 0 -%}
-    {%- assign mode = 'hexlist' -%}
-    {%- assign hexes = cm.color_hex_list.value | join: ',' -%}
-  {%- endif -%}
-
-  {%- assign entries = entries
-    | append: key | append: SEP
-    | append: v1.url | append: SEP
-    | append: label | append: SEP
-    | append: srcset | append: SEP
-    | append: mode | append: SEP
-    | append: hexes | append: SEP
-    | append: bgstyle | append: SEP
-    | append: img100 | append: END
+      if option_name_downcase == color_name
+        assign option_color_position = 'option' | append: option.position
+      endif
+    endfor
   -%}
-{%- endunless -%}
+  {% style %}
+    .variant-flex-item {
+      flex: 1 0 calc(100% * (1 /{{items_per_row}}) - 2rem);
+      max-width: calc(100% * (1 /{{items_per_row}}) - 1rem);
+    }
 
-{%- comment -%} 2) Sesterské produkty z grupy – projdi VŠECHNY jejich hodnoty barvy {%- endcomment -%}
-{%- if used_group -%}
-  {%- for gp in group_items -%}
-    {%- assign gp_color_option = gp.options_by_name[found_color_name_actual] -%}
-    {%- if gp_color_option == blank -%}
-      <!-- CARD-COLORS DEBUG gp{{ forloop.index }}: nemá option "{{ found_color_name_actual }}" -->
+    .hidden-more {
+      display: none !important;
+    }
+  {% endstyle %}
+
+  {%- if block.settings.picker_type == 'button' and block.settings.enable_color_swatches -%}
+    <link rel="stylesheet" href="{{ 'component-tooltip.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>{{ 'component-tooltip.css' | asset_url | stylesheet_tag }}</noscript>
+  {%- endif -%}
+
+  {% for option in product.options_with_values %}
+    {%- if option.name == 'default' -%}
       {%- continue -%}
-    {%- endif -%}
+    {%- elsif block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
+      {%- liquid
+        unless settings.hide_unavailable_options
+          assign instock_variants = product.variants | where: 'available'
+        endunless
+      -%}
+      <{{ prefix_variant }}variant-radios
+        class="no-js-hidden variant-picker-primary-{{ section.id }} db"
+        data-section="{{ section.id }}"
+        data-url="{{ product_url | default: product.url }}"
+        {% if settings.hide_unavailable_options %}
+          data-hide-unavailable-options="true"
+        {% endif %}
+      >
+        {%- liquid
+          assign option_name_downcase = option.name | downcase
+          assign is_color_swatches = false
+          assign attribute = 'option' | append: forloop.index
+          if option_name_downcase == color_name and block.settings.enable_color_swatches
+            assign is_color_swatches = true
+          endif
 
-    <!-- CARD-COLORS DEBUG gp{{ forloop.index }}: values="{{ gp_color_option.values | join: ', ' }}" -->
-
-    {%- assign gp_attr = 'option' | append: gp_color_option.position -%}
-    {%- for val in gp_color_option.values -%}
-      {%- assign key = val | downcase | strip -%}
-      {%- assign needle = '|' | append: key | append: '|' -%}
-      {%- unless unique_keys contains needle -%}
-        {%- assign vset = gp.variants | where: gp_attr, val -%}
-        {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
-
-        {%- assign handle = 'color-code-' | append: val -%}
-        {%- assign cm = shop.metaobjects.color_codes_hex[handle] -%}
-        {%- assign label = val -%}
-        {%- if cm -%}
-          {%- assign label = cm.label | default: cm.search_words.value | first | default: cm.code | default: val -%}
-        {%- endif -%}
-
-        {%- assign srcset = '' -%}{%- assign img100 = '' -%}
-        {%- if v1 and v1.featured_image != blank -%}
-          {%- assign img = v1.featured_image -%}
-          {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
-          {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
-          {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
-          {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
-          {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
-        {%- endif -%}
-
-        {%- assign mode = 'none' -%}{%- assign bgstyle = '' -%}{%- assign hexes = '' -%}
-        {%- if cm and cm.image.value -%}
-          {%- assign imgu = cm.image.value | image_url: width: 100, height: 100, crop: 'center' -%}
-          {%- assign bgstyle = '--background-image:url(' | append: imgu | append: ');' -%}
-          {%- assign mode = 'image' -%}
-        {%- elsif cm and cm.color_hex_list.value and cm.color_hex_list.value.size > 0 -%}
-          {%- assign mode = 'hexlist' -%}
-          {%- assign hexes = cm.color_hex_list.value | join: ',' -%}
-        {%- endif -%}
-
-        {%- assign unique_keys = unique_keys | append: needle -%}
-        {%- assign entries = entries
-          | append: key | append: SEP
-          | append: v1.url | append: SEP
-          | append: label | append: SEP
-          | append: srcset | append: SEP
-          | append: mode | append: SEP
-          | append: hexes | append: SEP
-          | append: bgstyle | append: SEP
-          | append: img100 | append: END
+          assign available_variants = product.variants
+          unless settings.hide_unavailable_options
+            assign instock_option_values = instock_variants
+            assign position_checking = option.position | minus: 1
+            for i in (1..position_checking)
+              assign option_index = 'option' | append: i
+              assign current_option_value = current_variant[option_index]
+              assign instock_option_values = instock_option_values | where: option_index, current_option_value
+            endfor
+            assign instock_option_values = instock_option_values | map: attribute
+            for available_option in product.options
+              if option.position != forloop.index
+                assign filter_index = 'option' | append: forloop.index
+                assign filter_value = first_selected_variant[filter_index]
+                assign available_variants = available_variants | where: filter_index, filter_value
+              endif
+            endfor
+          else
+            if option.position > 1
+              assign end_compare_index = option.position | minus: 1
+              for i in (1..end_compare_index)
+                assign filter_index = 'option' | append: i
+                assign filter_value = first_selected_variant[filter_index]
+                assign available_variants = available_variants | where: filter_index, filter_value
+              endfor
+            endif
+            assign instock_option_values = available_variants | where: 'available' | map: attribute
+          endunless
+          assign index_option = 'option' | append: option.position
+          assign available_option_values = available_variants | map: index_option
         -%}
-      {%- endunless -%}
-    {%- endfor -%}
-  {%- endfor -%}
-{%- endif -%}
+        <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
+          <legend class="product-form__input__form-label text-small margin-bottom-1rem">
+            {{ option.name | capitalize }}:
+            {% if option.name == color_name %}
+              {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
+              <span class="product-form__input__option-value font-body-bold">
+                {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize -}}
+              </span>
+            {% else %}
+              <span class="product-form__input__option-value font-body-bold"> {{ option.selected_value }}</span>
+            {% endif %}
+          </legend>
+          <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
+            {%- for value in option.values -%}
+              {% liquid
+                assign is_first_option = forloop.first
 
-{%- comment -%} 3) Zbývající barvy aktuálního produktu (které jsme ještě nepřidali) {%- endcomment -%}
-{%- for val in color_option.values -%}
-  {%- assign key = val | downcase | strip -%}
-  {%- assign needle = '|' | append: key | append: '|' -%}
-  {%- unless unique_keys contains needle -%}
-    {%- assign vset = card_product.variants | where: color_attr, val -%}
-    {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
+                assign out_of_stock = false
+                if settings.hide_unavailable_options
+                  unless instock_option_values contains value
+                    assign out_of_stock = true
+                  endunless
+                elsif available_option_values contains value
+                  unless instock_option_values contains value
+                    assign out_of_stock = true
+                  endunless
+                endif
+              %}
+              {% comment %}  {% endcomment %}
+              {%- assign variant = product.variants | where: attribute, value | first -%}
+              {%- if is_color_swatches and block.settings.color_swatches_style == 'variant' -%}
+                {%- assign variant_color = product.variants
+                  | where: attribute, value
+                  | where: 'featured_image'
+                  | first
+                -%}
+              {%- endif -%}
+              {%- if is_color_swatches -%}
+                {%- liquid
+                  assign contains_product = false
 
-    {%- assign handle = 'color-code-' | append: val -%}
-    {%- assign cm = shop.metaobjects.color_codes_hex[handle] -%}
-    {%- assign label = val -%}
-    {%- if cm -%}
-      {%- assign label = cm.label | default: cm.search_words.value | first | default: cm.code | default: val -%}
-    {%- endif -%}
+                  for product_variation in variation_products
+                    if product_variation == product
+                      assign contains_product = true
+                    endif
+                  endfor
+                -%}
+                {%- if contains_product -%}
+                  {% liquid
+                    assign color_option_names = ''
+                    if option.name == settings.color_name
+                      paginate shop.metaobjects.color_codes_hex.values by 10000
+                        assign color_codes = shop.metaobjects.color_codes_hex.values
 
-    {%- assign srcset = '' -%}{%- assign img100 = '' -%}
-    {%- if v1 and v1.featured_image != blank -%}
-      {%- assign img = v1.featured_image -%}
-      {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
-      {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
-      {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
-      {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
-      {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
-    {%- endif -%}
+                        if color_codes
+                          for color_code_hex in color_codes
+                            for product_variation in variation_products
+                              assign variation_color = product_variation.options_by_name[color_name].values | first
 
-    {%- assign mode = 'none' -%}{%- assign bgstyle = '' -%}{%- assign hexes = '' -%}
-    {%- if cm and cm.image.value -%}
-      {%- assign imgu = cm.image.value | image_url: width: 100, height: 100, crop: 'center' -%}
-      {%- assign bgstyle = '--background-image:url(' | append: imgu | append: ');' -%}
-      {%- assign mode = 'image' -%}
-    {%- elsif cm and cm.color_hex_list.value and cm.color_hex_list.value.size > 0 -%}
-      {%- assign mode = 'hexlist' -%}
-      {%- assign hexes = cm.color_hex_list.value | join: ',' -%}
-    {%- endif -%}
+                              if color_code_hex.code == variation_color
+                                if color_code_hex.image.value
+                                  assign colors = color_code_hex.image.value | image_url: width: 40
+                                else
+                                  assign colors = 'colors_'
+                                  for color in color_code_hex.color_hex_list.value
+                                    assign colors = colors | append: color | append: ','
+                                  endfor
+                                endif
 
-    {%- assign entries = entries
-      | append: key | append: SEP
-      | append: v1.url | append: SEP
-      | append: label | append: SEP
-      | append: srcset | append: SEP
-      | append: mode | append: SEP
-      | append: hexes | append: SEP
-      | append: bgstyle | append: SEP
-      | append: img100 | append: END
-    -%}
-  {%- endunless -%}
-{%- endfor -%}
+                                assign color_option_names = color_option_names | append: color_code_hex.code | append: ':' | append: colors | append: ';'
+                              endif
+                            endfor
+                          endfor
+                        endif
+                      endpaginate
+                    endif
+                  %}
+                  {%- for product_variation in variation_products -%}
+                    {%- liquid
+                      assign color_out_of_stock = null
 
-{%- comment -%} Pokud grupa nedala nic (nebo nebyla), FALLBACK: barvy přímo z variant {%- endcomment -%}
-{%- assign items_tmp = entries | split: ';;' -%}
-{%- assign nonempty = 0 -%}
-{%- for it in items_tmp -%}{%- unless it == '' -%}{%- assign nonempty = nonempty | plus: 1 -%}{%- endunless -%}{%- endfor -%}
-{%- if nonempty == 0 -%}
-  <!-- CARD-COLORS DEBUG: GROUP EMPTY → FALLBACK VARIANTS -->
-  {%- assign values = card_product.variants | map: color_attr | uniq -%}
-  {%- assign ordered_values = '' -%}
-  {%- for v in values -%}{%- if v == current_color -%}{%- assign ordered_values = ordered_values | append: v | append: '||' -%}{%- endif -%}{%- endfor -%}
-  {%- for v in values -%}{%- unless v == current_color -%}{%- assign ordered_values = ordered_values | append: v | append: '||' -%}{%- endunless -%}{%- endfor -%}
-  {%- assign values_ordered = ordered_values | split: '||' -%}
-  {%- assign entries = '' -%}
-  {%- assign unique_keys = '' -%}
-  {%- for val in values_ordered -%}
-    {%- unless val == '' -%}
-      {%- assign key = val | downcase | strip -%}
-      {%- assign needle = '|' | append: key | append: '|' -%}
-      {%- unless unique_keys contains needle -%}
-        {%- assign unique_keys = unique_keys | append: needle -%}
-        {%- assign vset = card_product.variants | where: color_attr, val -%}
-        {%- assign v1 = vset | where: 'featured_image' | first | default: vset | first -%}
+                      if product_variation == product
+                        assign selected = true
+                      else
+                        assign selected = false
+                      endif
 
-        {%- assign handle = 'color-code-' | append: val -%}
-        {%- assign cm = shop.metaobjects.color_codes_hex[handle] -%}
-        {%- assign label = val -%}
-        {%- if cm -%}
-          {%- assign label = cm.label | default: cm.search_words.value | first | default: cm.code | default: val -%}
-        {%- endif -%}
+                      assign current_variant = product.selected_or_first_available_variant
+                      assign product_current_variation = product_variation
+                      assign product_variation_variants = product_variation.variants
 
-        {%- assign srcset = '' -%}{%- assign img100 = '' -%}
-        {%- if v1 and v1.featured_image != blank -%}
-          {%- assign img = v1.featured_image -%}
-          {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
-          {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
-          {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
-          {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
-          {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
-        {%- endif -%}
+                      for option in product.options_with_values
+                        assign option_index = 'option' | append: option.position
+                        if option_index == option_color_position
+                          continue
+                        endif
 
-        {%- assign mode = 'none' -%}{%- assign bgstyle = '' -%}{%- assign hexes = '' -%}
-        {%- if cm and cm.image.value -%}
-          {%- assign imgu = cm.image.value | image_url: width: 100, height: 100, crop: 'center' -%}
-          {%- assign bgstyle = '--background-image:url(' | append: imgu | append: ');' -%}
-          {%- assign mode = 'image' -%}
-        {%- elsif cm and cm.color_hex_list.value and cm.color_hex_list.value.size > 0 -%}
-          {%- assign mode = 'hexlist' -%}
-          {%- assign hexes = cm.color_hex_list.value | join: ',' -%}
-        {%- endif -%}
+                        assign product_variation_variants = product_variation_variants | where: option_index, current_variant[option_index]
+                      endfor
 
-        {%- assign entries = entries
-          | append: key | append: SEP
-          | append: v1.url | append: SEP
-          | append: label | append: SEP
-          | append: srcset | append: SEP
-          | append: mode | append: SEP
-          | append: hexes | append: SEP
-          | append: bgstyle | append: SEP
-          | append: img100 | append: END
-        -%}
-      {%- endunless -%}
-    {%- endunless -%}
-  {%- endfor -%}
-{%- endif -%}
+                      if product_variation_variants.size != 0
+                        assign product_current_variation = product_variation_variants | first
+                      else
+                        comment
+                          Product variation does not have selected variant, so this color is out of stock
+                        endcomment
+                        assign color_out_of_stock = true
+                      endif
+                    -%}
+                    <li>
+                      {% liquid
+                        if is_color_swatches
+                          assign current_value = product_variation.options_by_name[color_name].values | first
+                        else
+                          assign current_value = product_variation.title
+                        endif
+                      %}
+                      <a
+                        href="{% if color_out_of_stock %}#{% else %}{{ product_current_variation.url }}{% endif %}"
+                        class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if out_of_stock and is_color_swatches == false %} soldout{% endif %}{% if color_out_of_stock %} no-stock{% endif %}"
+                        {% if is_color_swatches %}
+                          data-color="{{ current_value | handleize }}"
+                          style="{% if selected %} border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));{% endif %}"
+                          {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
+                            style="--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }})"
+                          {%- endif -%}
+                        {% endif %}
+                      >
+                        <input
+                          type="radio"
+                          id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                          name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+                          value="{{ current_value | escape }}"
+                          form="{{ product_form_id }}"
+                          style="display: none;"
+                          {% if selected %}
+                            checked="checked"
+                          {% endif %}
+                        >
+                        {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
+                          <span
+                            class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"
+                          ></span>
+                        {%- endif -%}
+                        {%- unless is_color_swatches -%}
+                          {% if product.variants.size == 1 %}
+                            {% assign title = product.title %}
+                          {% else %}
+                            {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+                          {% endif %}
+                          {{ title }}
+                        {%- else -%}
+                          {% liquid
+                            assign current_color_values = ''
 
-{%- comment -%} Render {%- endcomment -%}
-<card-product-colors>
-  <ul class="card__product-color-list list-unstyled flex flex-wrap align-center">
-    {%- assign items = entries | split: ';;' -%}
-    {%- assign total = 0 -%}
-    {%- for it in items -%}{%- unless it == '' -%}{%- assign total = total | plus: 1 -%}{%- endunless -%}{%- endfor -%}
-    <!-- CARD-COLORS DEBUG total={{ total }} -->
-    {%- assign rendered = 0 -%}
-    {%- for it in items -%}
-      {%- unless it == '' -%}
-        {%- assign p = it | split: '::' -%}
-        {%- assign _key = p[0] -%}
-        {%- assign _url = p[1] -%}
-        {%- assign _title = p[2] -%}
-        {%- assign _srcset = p[3] -%}
-        {%- assign _mode = p[4] -%}
-        {%- assign _hexes = p[5] -%}
-        {%- assign _bgstyle = p[6] -%}
-        {%- assign _img100 = p[7] -%}
-        <li>
-          <a href="{{ _url }}"
-             class="card__product-color-list__button bt-tooltip por db{% if color_swatches_style == 'variant' %} card__product-color-list__button--variant{% endif %}"
-             {% if _srcset != '' %}data-srcset="{{ _srcset }}"{% endif %}
-             data-color="{{ _key | handleize }}"
-             {% if _mode == 'image' and _bgstyle != '' %} style="{{ _bgstyle }}"{% endif %}>
-            {%- if color_swatches_style == 'variant' and _img100 != '' -%}
-              <img src="{{ _img100 }}" width="100" height="100" loading="lazy" class="w100 h100" alt="{{ card_product.title | escape }} - {{ _title }}"/>
-            {%- elsif _mode == 'hexlist' and _hexes != '' -%}
-              {%- assign color_list = _hexes | split: ',' -%}
-              {%- assign color_size = color_list.size -%}
-              <div class="color-swatch-background">
-                {%- if color_size == 1 -%}
-                  <span style="background: {{ color_list[0] }}; width: 100%; height: 100%"></span>
-                {%- elsif color_size == 2 -%}
-                  <span style="background: {{ color_list[0] }}; width: 100%; height: 100%; left: -50%"></span>
-                  <span style="background: {{ color_list[1] }}; width: 100%; height: 100%; left: 50%"></span>
-                {%- else -%}
-                  {%- assign angle = 360 | divided_by: color_size -%}
-                  {%- for c in color_list -%}
-                    {%- assign rotation = angle | times: forloop.index0 -%}
-                    {%- assign skew = -90 | plus: angle -%}
-                    <span style="background: {{ c }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if color_size == 3 %}top:-10%; right:-25%; height:70%; width:70%{% endif %}"></span>
+                            if color_option_names
+                              assign color_option_names_list = color_option_names | split: ';'
+                              for color_option_name in color_option_names_list
+                                assign color_option_name_parts = color_option_name | split: ':'
+                                assign color_option_code = color_option_name_parts[0]
+                                assign color_option_value = color_option_name_parts[1]
+
+                                if color_option_code == current_value
+                                  assign current_color_values = color_option_value
+                                endif
+                              endfor
+                            endif
+                          %}
+
+                          {% if current_color_values contains 'colors_' %}
+                            {% liquid
+                              assign color_object = current_color_values | split: 'colors_'
+                              assign angle = 0
+                              assign color_list = color_object[1] | split: ','
+                              assign color_size = color_list.size
+                              if color_size > 0
+                                assign angle = 360 | divided_by: color_size
+                              endif
+                            %}
+
+                            <div class="color-swatch-background">
+                              {% for color_value in color_list %}
+                                {% if color_size == 1 %}
+                                  <span style="background: {{ color_value }}; width: 100%; height: 100%"></span>
+                                {% elsif color_size == 2 %}
+                                  {% if forloop.index0 == 0 %}
+                                    {% assign left = -50 %}
+                                  {% else %}
+                                    {% assign left = 50 %}
+                                  {% endif %}
+                                  <span
+                                    style="background: {{ color_value }}; width: 100%; height: 100%; left: {{ left }}%"
+                                  ></span>
+                                {% else %}
+                                  {% assign rotation = angle | times: forloop.index0 %}
+                                  {% assign skew = -90 | plus: angle %}
+                                  <span
+                                    style="background: {{ color_value }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if color_size == 3 %}top: -10%; right: -25%; height: 70%; width: 70%{% endif %}"
+                                  ></span>
+                                {% endif %}
+                              {% endfor %}
+                            </div>
+                          {% elsif current_color_values %}
+                            <div class="color-swatch-background flex justify-center align-center">
+                              <img src="{{ current_color_values }}" alt="{{ current_color_values }}">
+                            </div>
+                          {% endif %}
+
+                          <span
+                            class="js-title-tooltip bt-tooltip__inner bt-tooltip__inner--top {% if color_out_of_stock %}d-none{% endif %}"
+                            style="z-index: 10"
+                          >
+                            {{-
+                              product_current_variation.metafields.product_texts.title.value
+                              | default: product_current_variation.title
+                            -}}
+                          </span>
+                          {%- if selected %}
+                            {%- render 'icon-checkmark' -%}
+                          {% endif %}
+
+                          {%- if color_out_of_stock %}
+                            {%- render 'icon-close', add_classes: 'js-close-icon' -%}
+                          {% else %}
+                            {%- render 'icon-close', add_classes: 'js-close-icon d-none' -%}
+                          {%- endif %}
+                        {%- endunless -%}
+                      </a>
+                    </li>
                   {%- endfor -%}
                 {%- endif -%}
-              </div>
-            {%- endif -%}
-            <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ _title }}</span>
-          </a>
-        </li>
-        {%- assign rendered = rendered | plus: 1 -%}
-        {%- if rendered == 5 -%}{%- break -%}{%- endif -%}
-      {%- endunless -%}
-    {%- endfor -%}
-    {%- if total > 5 -%}
-      <li>
-        <a href="{{ card_product.url }}" class="card__product-color-list__more lh1 font-body-bold{% if color_swatches_style == 'variant' %} card__product-color-list__more--variant flex justify-center align-center{% endif %}">
-          +{{ total | minus: 5 }}
-        </a>
-      </li>
+              {%- else -%}
+                {% comment %}  {% endcomment %}
+                <li
+                  {% unless is_first_option %}
+                    class="variant-flex-item dynamic-option{% if settings.hide_unavailable_options %}{% unless available_option_values contains value %} hidden{% endunless %}{% endif %}{% if forloop.index >= total_visible_items %} hidden-more{% endif %}"
+                  {% else %}
+                    class="variant-flex-item{% if forloop.index >= total_visible_items %} hidden-more{% endif %}"
+                  {% endunless %}
+                >
+                  <input
+                    type="radio"
+                    id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+                    class="product-form__input__radio{% unless settings.hide_unavailable_options %}{% unless available_option_values contains value %} disabled{% endunless %}{% endunless %}"
+                    value="{{ value | escape }}"
+                    form="{{ product_form_id }}"
+                    data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
+                    data-title="{{ variant.metafields.product_texts.title.value | escape }}"
+                    {% if option.selected_value == value %}
+                      checked="checked"
+                    {% endif %}
+                    {% if out_of_stock %}
+                      disabled="disabled"
+                    {% endif %}
+                    {% for product_variation in variation_products %}
+                      {% assign option_color_variant = product_variation.variants
+                        | where: index_option, value
+                        | first
+                      %}
+                      {% if option_color_variant and option_color_position != null %}
+                        {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
+                        data-{{ current_color_code }}-url="{{ option_color_variant.url }}"
+                        data-{{ current_color_code }}-title="{{ option_color_variant.metafields['product_texts']['title'].value | escape }}"
+                      {% endif %}
+                    {% endfor %}
+                  >
+                  <label
+                    for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if out_of_stock and is_color_swatches == false %} soldout{% endif %}"
+                    {% if is_color_swatches %}
+                      data-color="{{ value | handleize }}"
+                      {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
+                        style="--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }})"
+                      {%- endif -%}
+                    {% endif %}
+                  >
+                    {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
+                      <span
+                        class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"
+                      ></span>
+                    {%- endif -%}
+                    {%- unless is_color_swatches -%}
+                      {{ value }}
+                    {%- else -%}
+                      <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index: 10">{{ value }}</span>
+                      {% if out_of_stock %}
+                        {% render 'icon-close' %}
+                      {% elsif selected %}
+                        {%- render 'icon-checkmark' -%}
+                      {% endif %}
+                    {%- endunless -%}
+                  </label>
+                </li>
+              {%- endif -%}
+              {% if forloop.index == total_visible_items %}
+                <li class="variant-flex-item js-show-more">
+                  <label
+                    for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    class="product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}"
+                  >
+                    {{ 'products.product.show_more' | t }}
+                  </label>
+                </li>
+              {% endif %}
+            {%- endfor -%}
+          </ul>
+        </fieldset>
+        <script type="application/json">
+          {{ product.variants | json }}
+        </script>
+      </{{ prefix_variant }}variant-radios>
+    {%- else -%}
+      <{{ prefix_variant }}variant-selects
+        class="no-js-hidden variant-picker-primary-{{ section.id }} db"
+        data-section="{{ section.id }}"
+        data-url="{{ product_url | default: product.url }}"
+        {% if settings.hide_unavailable_options %}
+          data-hide-unavailable-options="true"
+        {% endif %}
+      >
+        <div class="js-product-form-input product-form__input product-form__input--dropdown product-form__input--larger{% unless forloop.first %} element-small-margin-top{% endunless %}">
+          <label
+            class="form__label product-form__input__form-label"
+            for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
+          >
+            {{ option.name | capitalize }}
+          </label>
+          <div class="select">
+            <select
+              id="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
+              class="js-select-product select__select{% unless is_first_option %} dynamic-option{% endunless %} select__select-lower"
+              name="options[{{ option.name | escape }}]"
+              form="{{ product_form_id }}"
+            >
+              {%- liquid
+                assign available_variants = product.variants
+                unless settings.hide_unavailable_options
+                  for available_option in product.options
+                    if option.position != forloop.index
+                      assign filter_index = 'option' | append: forloop.index
+                      assign filter_value = first_selected_variant[filter_index]
+                      assign available_variants = available_variants | where: filter_index, filter_value
+                    endif
+                  endfor
+                else
+                  if option.position > 1
+                    assign end_compare_index = option.position | minus: 1
+                    for i in (1..end_compare_index)
+                      assign filter_index = 'option' | append: i
+                      assign filter_value = first_selected_variant[filter_index]
+                      assign available_variants = available_variants | where: filter_index, filter_value
+                    endfor
+                  endif
+                endunless
+                assign index_option = 'option' | append: option.position
+                assign available_option_values = available_variants | map: indexOption
+
+                assign phone_option_names = ''
+
+                if option.name == settings.phone_name
+                  paginate shop.metaobjects.phone_properties.values by 10000
+                    assign phone_properties = shop.metaobjects.phone_properties.values
+
+                    if phone_properties
+                      for phone_property in phone_properties
+                        for value in option.values
+                          assign phone_code = value | strip
+
+                          if phone_property.code == phone_code
+                            assign phone_option_names = phone_option_names | append: phone_code | append: ':' | append: phone_property.model.value | append: ';'
+                          endif
+                        endfor
+                      endfor
+                    endif
+                  endpaginate
+                endif
+              -%}
+              {%- for value in option.values -%}
+                {%- liquid
+                  assign option_name_downcase = option.name | downcase
+                  assign is_first_option = forloop.first
+                  assign variant = product.variants | where: index_option, value | first
+                -%}
+
+                <option
+                  class="js-select-product-option"
+                  value="{{ value | escape }}"
+                  data-name="{{ option.name | escape }}"
+                  {% if option.selected_value == value %}
+                    selected="selected"
+                  {% endif -%}
+                  {% if settings.hide_unavailable_options and is_first_option == false %}
+                    {%- unless available_option_values contains value %} class="hidden"{% endunless -%}
+                  {% endif %}
+                  data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
+                  data-title="{{ variant.metafields.product_texts.title.value | escape }}"
+                  {% for product_variation in variation_products %}
+                    {% assign option_color_variant = product_variation.variants | where: index_option, value | first %}
+                    {% if option_color_variant and option_color_position != null %}
+                      {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
+                      data-{{ current_color_code }}-url="{{ option_color_variant.url }}"
+                      data-{{ current_color_code }}-title="{{ option_color_variant.metafields.product_texts.title.value | escape }}"
+                    {% endif %}
+                  {% endfor %}
+                >
+                  {% liquid
+                    assign display_value = value
+                    if phone_option_names and option.name == settings.phone_name
+                      assign phone_option_names_list = phone_option_names | split: ';'
+                      for phone_option_name in phone_option_names_list
+                        assign phone_option_name_parts = phone_option_name | split: ':'
+                        assign phone_option_code = phone_option_name_parts[0]
+                        assign phone_option_model = phone_option_name_parts[1]
+
+                        if phone_option_code == value
+                          assign display_value = phone_option_model
+                        endif
+                      endfor
+                    endif
+                  %}
+
+                  {%- unless settings.hide_unavailable_options -%}
+                    {%- if available_option_values contains value -%}
+                      {{- display_value -}}
+                    {%- else -%}
+                      {{- 'products.product.value_unavailable' | t: option_value: display_value -}}
+                    {%- endif -%}
+                  {%- else -%}
+                    {{ display_value }}
+                  {%- endunless -%}
+                </option>
+              {%- endfor -%}
+            </select>
+            {% render 'icon-caret' %}
+          </div>
+        </div>
+
+        <script type="application/json">
+          {{ product.variants | json }}
+        </script>
+      </{{ prefix_variant }}variant-selects>
     {%- endif -%}
-  </ul>
-</card-product-colors>
+  {% endfor %}
+{%- endunless -%}
+
+<noscript class="product-form__noscript-wrapper-{{ section_id | default: section.id }}">
+  <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+    <label class="form__label" for="Variants-{{ section_id | default: section.id }}">
+      {{- 'products.product.product_variants' | t -}}
+    </label>
+    <div class="select">
+      {% for option in product.options_with_values %}
+        <select
+          name="options[{{ option.name | escape }}]"
+          id="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
+          class="select__select"
+          form="{{ product_form_id }}"
+        >
+          {% for value in option.values %}
+            <option
+              value="{{ value | escape }}"
+              {% if option.selected_value == value %}
+                selected="selected"
+              {% endif %}
+            >
+              {{ value }}
+            </option>
+          {% endfor %}
+        </select>
+      {% endfor %}
+      {% render 'icon-caret' %}
+    </div>
+  </div>
+</noscript>
