@@ -70,21 +70,25 @@
 
 {%- comment %} DEBUG — hlavička {% endcomment -%}
 {% if request.design_mode %}
+  {%- assign _gmf = card_product.metafields.product_variants_grouping.variation_products -%}
+  {%- assign _group_items = _gmf.value | default: _gmf -%}
+  {%- assign _color_attr_dbg = 'option' | append: color_option.position -%}
+
   <!-- DEBUG HEAD
        product={{ card_product.title | escape }}
        color_option_name="{{ color_option_name }}"
-       color_attr="option{{ color_option.position }}"
+       color_attr="{{ _color_attr_dbg }}"
        current_color="{{ current_color }}"
-       group_items.class={{ group_items | class }} size={{ group_items.size }}
+       group_items.class={{ _group_items | class }} size={{ _group_items.size }}
        candidates="{{ candidates | join: ', ' }}"
   -->
   <script>
     console.log('CARD DEBUG', {
       product: {{ card_product.title | json }},
       color_option_name: {{ color_option_name | json }},
-      color_attr: {{ ('option' | append: color_option.position) | json }},
+      color_attr: {{ _color_attr_dbg | json }},
       current_color: {{ current_color | json }},
-      group_items_size: {{ group_items.size | default: 0 }},
+      group_items_size: {{ _group_items.size | default: 0 }},
       candidates: {{ candidates | json }},
       option_names: {{ options | map: 'name' | json }},
       option_values: {{ options | map: 'values' | json }}
