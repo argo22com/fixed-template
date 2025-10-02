@@ -59,10 +59,10 @@
       {%- assign img100 = '' -%}
       {%- if v1.featured_image != blank -%}
         {%- assign img = v1.featured_image -%}
-        {%- if img.width >= 165 -%}{%- assign srcset = srcset | append: (img | image_url: width: 165) | append: ' 165w,' -%}{%- endif -%}
-        {%- if img.width >= 360 -%}{%- assign srcset = srcset | append: (img | image_url: width: 360) | append: ' 360w,' -%}{%- endif -%}
-        {%- if img.width >= 430 -%}{%- assign srcset = srcset | append: (img | image_url: width: 450) | append: ' 450w,' -%}{%- endif -%}
-        {%- assign srcset = srcset | append: (img | image_url) | append: ' ' | append: img.width | append: 'w' -%}
+        {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
+        {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
+        {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
+        {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
         {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
       {%- endif -%}
 
@@ -115,10 +115,10 @@
           {%- assign img100 = '' -%}
           {%- if v1.featured_image != blank -%}
             {%- assign img = v1.featured_image -%}
-            {%- if img.width >= 165 -%}{%- assign srcset = srcset | append: (img | image_url: width: 165) | append: ' 165w,' -%}{%- endif -%}
-            {%- if img.width >= 360 -%}{%- assign srcset = srcset | append: (img | image_url: width: 360) | append: ' 360w,' -%}{%- endif -%}
-            {%- if img.width >= 430 -%}{%- assign srcset = srcset | append: (img | image_url: width: 450) | append: ' 450w,' -%}{%- endif -%}
-            {%- assign srcset = srcset | append: (img | image_url) | append: ' ' | append: img.width | append: 'w' -%}
+            {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
+            {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
+            {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
+            {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
             {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
           {%- endif -%}
 
@@ -167,10 +167,10 @@
         {%- assign img100 = '' -%}
         {%- if v1.featured_image != blank -%}
           {%- assign img = v1.featured_image -%}
-          {%- if img.width >= 165 -%}{%- assign srcset = srcset | append: (img | image_url: width: 165) | append: ' 165w,' -%}{%- endif -%}
-          {%- if img.width >= 360 -%}{%- assign srcset = srcset | append: (img | image_url: width: 360) | append: ' 360w,' -%}{%- endif -%}
-          {%- if img.width >= 430 -%}{%- assign srcset = srcset | append: (img | image_url: width: 450) | append: ' 450w,' -%}{%- endif -%}
-          {%- assign srcset = srcset | append: (img | image_url) | append: ' ' | append: img.width | append: 'w' -%}
+          {%- if img.width >= 165 -%}{%- assign u165 = img | image_url: width: 165 -%}{%- assign srcset = srcset | append: u165 | append: ' 165w,' -%}{%- endif -%}
+          {%- if img.width >= 360 -%}{%- assign u360 = img | image_url: width: 360 -%}{%- assign srcset = srcset | append: u360 | append: ' 360w,' -%}{%- endif -%}
+          {%- if img.width >= 430 -%}{%- assign u450 = img | image_url: width: 450 -%}{%- assign srcset = srcset | append: u450 | append: ' 450w,' -%}{%- endif -%}
+          {%- assign ufull = img | image_url -%}{%- assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w' -%}
           {%- assign img100 = img | image_url: width: 100, height: 100, crop: 'center' -%}
         {%- endif -%}
 
@@ -285,21 +285,22 @@
               assign srcset = ''
               assign img100 = ''
               if variant_color and variant_color.featured_image != blank
-                if variant_color.featured_image.width >= 165
-                  assign product_image_url = variant_color.featured_image | image_url: width: 165
-                  assign srcset = srcset | append: product_image_url | append: ' 165w,'
+                assign img = variant_color.featured_image
+                if img.width >= 165
+                  assign u165 = img | image_url: width: 165
+                  assign srcset = srcset | append: u165 | append: ' 165w,'
                 endif
-                if variant_color.featured_image.width >= 360
-                  assign product_image_url = variant_color.featured_image | image_url: width: 360
-                  assign srcset = srcset | append: product_image_url | append: ' 360w,'
+                if img.width >= 360
+                  assign u360 = img | image_url: width: 360
+                  assign srcset = srcset | append: u360 | append: ' 360w,'
                 endif
-                if variant_color.featured_image.width >= 430
-                  assign product_image_url = variant_color.featured_image | image_url: width: 450
-                  assign srcset = srcset | append: product_image_url | append: ' 450w,'
+                if img.width >= 430
+                  assign u450 = img | image_url: width: 450
+                  assign srcset = srcset | append: u450 | append: ' 450w,'
                 endif
-                assign product_image_url = variant_color.featured_image | image_url
-                assign srcset = srcset | append: product_image_url | append: ' ' | append: variant_color.featured_image.width | append: 'w'
-                assign img100 = variant_color.featured_image | image_url: width: 100, height: 100, crop: 'center'
+                assign ufull = img | image_url
+                assign srcset = srcset | append: ufull | append: ' ' | append: img.width | append: 'w'
+                assign img100 = img | image_url: width: 100, height: 100, crop: 'center'
               endif
 
               assign handle = 'color-code-' | append: color
