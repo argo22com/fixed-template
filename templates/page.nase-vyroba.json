@@ -963,7 +963,7 @@
         "columns_desktop": 3,
         "full_width": false,
         "enable_section_box_layout": false,
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "",
         "show_view_all": false,
         "collection_card_show_title": true,
