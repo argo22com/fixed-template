@@ -860,7 +860,7 @@
         "text_DAWxGc": {
           "type": "text",
           "settings": {
-            "text": "<p>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu.</p><p>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci.</p><p>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.</p><p>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.</p>"
+            "text": "<p>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu.</p><p>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci.</p><p>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.</p><p>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.<br/></p>"
           }
         },
         "button_RhGchU": {
@@ -943,7 +943,7 @@
           "settings": {
             "collection": "venezia",
             "custom_image": "shopify://shop_images/venezia_ls3_9e1a74e1-b4e0-411b-9180-288e9cb120cb.jpg",
-            "custom_title": "TAŠTIČKY NA TELEFONY"
+            "custom_title": "Taštičky na telefony"
           }
         },
         "featured_collection_39BEyL": {
@@ -951,7 +951,7 @@
           "settings": {
             "collection": "pouzdra-na-telefony",
             "custom_image": "shopify://shop_images/profit_1.jpg",
-            "custom_title": "POUZDRA NA TELEFONY"
+            "custom_title": "Pouzdra na telefony"
           }
         },
         "featured_collection_MWJN9E": {
@@ -959,7 +959,7 @@
           "settings": {
             "collection": "pouzdra-na-notebooky",
             "custom_image": "shopify://shop_images/1B1A1377_1e40ff19-5738-4d6a-b0cc-939455e6b6f8.jpg",
-            "custom_title": "POUZDRA NA NOTEBOOKY"
+            "custom_title": "Pouzdra na notebooky"
           }
         },
         "featured_collection_iXWMGe": {
@@ -967,7 +967,7 @@
           "settings": {
             "collection": "pouzdra-na-tablety",
             "custom_image": "shopify://shop_images/pouzdra_na_tablety.jpg",
-            "custom_title": "POUZDRA NA TABLETY"
+            "custom_title": "Pouzdra na tablety"
           }
         },
         "featured_collection_cGFVCd": {
@@ -975,7 +975,7 @@
           "settings": {
             "collection": "penezenky",
             "custom_image": "shopify://shop_images/Penezenky_pro_airtag.jpg",
-            "custom_title": "PENĚŽENKY"
+            "custom_title": "Peněženky"
           }
         },
         "featured_collection_pejaJ6": {
@@ -983,7 +983,7 @@
           "settings": {
             "collection": "pasovky",
             "custom_image": "shopify://shop_images/pasovky.jpg",
-            "custom_title": "PASOVKY"
+            "custom_title": "Pasovky"
           }
         }
       },
