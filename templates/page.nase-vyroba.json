@@ -260,6 +260,7 @@
         "column_exBALG": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/clear_vs_antracit.2124.png",
             "icon": "check",
             "title": "Story",
             "text": "<p>Průhledné kryty z prémiového TPU od německé společnosti BASF<br/><br/></p><ul><li>o <strong>36 %</strong> nižší emise CO₂ než u běžné čínské výroby</li><li>čiré pouzdro s lesklým povrchem</li><li>vždy připravené na nejnovější modely telefonů</li></ul>",
