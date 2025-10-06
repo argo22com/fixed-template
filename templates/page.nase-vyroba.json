@@ -372,6 +372,7 @@
         "text_ezmpVe",
         "button_8JUfpD"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "grid_layout": "grid",
@@ -445,6 +446,7 @@
         "text_PBycda",
         "button_dqMPCk"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "grid_layout": "grid",
