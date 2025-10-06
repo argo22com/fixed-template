@@ -278,8 +278,8 @@
           "type": "column",
           "settings": {
             "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "ReStory",
+            "text": "<p>barevné kryty vyrobené z <strong>80 % </strong>recyklovaného TPU, doplněného o nový materiál BASF.<br/><br/></p><ul><li>o <strong>46 %</strong> nižší emise CO₂</li><li>matný povrch, široká paleta barev</li><li>certifikace ISCC+ a GRS zaručující kvalitu a udržitelnost</li></ul>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
