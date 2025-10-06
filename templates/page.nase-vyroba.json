@@ -1007,7 +1007,7 @@
         "color_scheme": "",
         "show_view_all": false,
         "collection_card_show_title": true,
-        "show_products_count": false,
+        "show_products_count": true,
         "columns_tablet": "3",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
