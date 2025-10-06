@@ -27,7 +27,7 @@
         "slide_d3AYiw": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Picture_3.jpg",
+            "image": "shopify://shop_images/025_Loutocky_COM_DS2_2810_exp.jpg",
             "mobile_image": "shopify://shop_images/Picture_3.jpg",
             "badge_label": "",
             "heading": "Výroba pouzder v Česku",
@@ -43,7 +43,7 @@
             "keep_ltr": false,
             "desktop_image_width": "full",
             "desktop_image_position": "left",
-            "image_overlay_opacity": 10,
+            "image_overlay_opacity": 20,
             "text_alignment_mobile": "center",
             "colors_text": "#ffffff",
             "gradient_heading_desktop": "",
