@@ -27,11 +27,11 @@
         "slide_d3AYiw": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/kuze_banner-desktop.jpg",
-            "mobile_image": "shopify://shop_images/1B1A5760.jpg",
+            "image": "shopify://shop_images/Picture_3.jpg",
+            "mobile_image": "shopify://shop_images/Picture_3.jpg",
             "badge_label": "",
-            "heading": "Ruční výroba",
-            "text": "Doplňky z kůže a veganské kůže pro vaše zařízení",
+            "heading": "Výroba pouzder v Česku",
+            "text": "Odnávrhu po šití a lisování – vše vzniká doma",
             "hide_text_on_mobile": false,
             "button_label": "",
             "price": "",
@@ -44,80 +44,6 @@
             "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 10,
-            "text_alignment_mobile": "center",
-            "colors_text": "#ffffff",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#f87171",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
-            "colors_text_mobile": "#000000",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
-          }
-        },
-        "slide_68Kgzz": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/profit_banner-desktop.jpg",
-            "mobile_image": "shopify://shop_images/1B1A5911.jpg",
-            "badge_label": "",
-            "heading": "Kožené pouzdro Profit",
-            "text": "Pravá italská kůže a doživotní záruka",
-            "hide_text_on_mobile": false,
-            "button_label": "",
-            "price": "",
-            "link": "",
-            "button_style": "primary",
-            "button_open_new_tab": false,
-            "box_align": "middle-left",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 10,
-            "text_alignment_mobile": "center",
-            "colors_text": "#ffffff",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#f87171",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#000000",
-            "colors_text_mobile": "#000000",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
-          }
-        },
-        "slide_DJbWYU": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/OXFORD.jpg",
-            "mobile_image": "shopify://shop_images/1B1A5878.jpg",
-            "badge_label": "",
-            "heading": "Kožené pouzdro Oxford",
-            "text": "360° Ochrana pro notebooky a tablety",
-            "hide_text_on_mobile": false,
-            "button_label": "",
-            "price": "",
-            "link": "",
-            "button_style": "primary",
-            "button_open_new_tab": false,
-            "box_align": "middle-left",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
             "text_alignment_mobile": "center",
             "colors_text": "#ffffff",
             "gradient_heading_desktop": "",
@@ -137,9 +63,7 @@
         }
       },
       "block_order": [
-        "slide_d3AYiw",
-        "slide_68Kgzz",
-        "slide_DJbWYU"
+        "slide_d3AYiw"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -164,14 +88,14 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>Pečlivě vyrobené doplňky pro vaše zařízení</h3>",
+            "heading": "<p><strong>Již 10 let vlastní výroby FIXED</strong></p>",
             "heading_size": "h2"
           }
         },
         "text_PTb6yL": {
           "type": "text",
           "settings": {
-            "text": "<p>Na každém koženém doplňku si dáváme záležet, jenom tak můžeme dosáhnout té nejvyšší kvality. Od návrhu designu, přípravy kůže, střihu, pečlivé výroby až po důkladnou kontrolu. Tak vzniká dokonalý výrobek s vůní pravé kůže.</p>"
+            "text": "<p>Ve FIXED věříme, že výroba příslušenství může být poctivá, udržitelná a lokální. Již<br/>10 let šijeme v Česku kožená pouzdra a v roce 2025 přidáváme také výrobu<br/>pouzder z TPU. V Prostějově šijeme kožená pouzdra tradičními postupy z kvalitní<br/>italské kůže, v Bystřici pod Hostýnem zase recyklujeme stará TPU pouzdra a<br/>vyrábíme nové kryty Story a ReStory. <br/><br/><br/><br/></p>"
           }
         }
       },
@@ -190,53 +114,322 @@
         "padding_bottom": 0
       }
     },
-    "text_icons_fictdW": {
+    "image_with_text_VYpWNw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YVgNAz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ruční výroba v Prostějově",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "highlight_text_iKjPqq": {
+          "type": "highlight_text",
+          "settings": {
+            "text": "Kožená pouzdra s příběhem",
+            "text_size": "h2"
+          }
+        },
+        "text_gXWYDt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>V naší vlastní kožedělné dílně navrhujeme a<br/>šijeme pouzdra z prvotřídní italské kůže. Každý kus vzniká v rukou zkušených<br/>švadlen, které dbají na každý detail – od přesného střihu po pevné švy.<br/>Výsledkem je originální doplněk, který spojuje funkčnost, odolnost a krásu<br/>poctivé ruční práce.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_fcqKMB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Prohlédnout všechny výrobky",
+            "button_link": "shopify://collections/pouzdra-z-umele-kuze",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YVgNAz",
+        "highlight_text_iKjPqq",
+        "text_gXWYDt",
+        "button_fcqKMB"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/oxford_brown.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#e94200",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_zKVCnf": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JYcbnb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Výroba TPU krytů v Bystřici pod Hostýnem",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "highlight_text_LRX4mQ": {
+          "type": "highlight_text",
+          "settings": {
+            "text": "Moderní technologie, lokální výroba",
+            "text_size": "h2"
+          }
+        },
+        "text_BVLD3r": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dalším krokem k udržitelnosti je výroba TPU<br/>pouzder v Česku. Díky ní máme každý krok produkce plně pod kontrolou a můžeme<br/>zaručit špičkovou kvalitu i odpovědnost vůči životnímu prostředí.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JYcbnb",
+        "highlight_text_LRX4mQ",
+        "text_BVLD3r"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/Picture_1.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#e94200",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#e94200",
+        "background_container": "#ececec",
+        "gradient_background_container": "",
+        "background_section": "#ececec",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_nVUzjk": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_A8xmE6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dvě řady, jedna filozofie",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "highlight_text_AqRQcj": {
+          "type": "highlight_text",
+          "settings": {
+            "text": "Story",
+            "text_size": "h2"
+          }
+        },
+        "text_ezmpVe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>průhledné kryty z prémiového TPU od německé společnosti BASF</p><ul><li>o 36 % nižší emise CO₂ než u běžné<br/>čínské výroby</li><li>čiré pouzdro s lesklým povrchem</li><li>vždy připravené na nejnovější modely<br/>telefonů</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_8JUfpD": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_A8xmE6",
+        "highlight_text_AqRQcj",
+        "text_ezmpVe",
+        "button_8JUfpD"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/FIXTCC-1126-PRODUCT-1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "image_with_text_fPKijJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_J6g7bM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dvě řady, jedna filozofie",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "highlight_text_fGtMHg": {
+          "type": "highlight_text",
+          "settings": {
+            "text": "ReStory",
+            "text_size": "h2"
+          }
+        },
+        "text_PBycda": {
+          "type": "text",
+          "settings": {
+            "text": "<p>barevné kryty vyrobené z 80 % recyklovaného TPU, doplněného o nový materiál BASF.</p><ul><li>o 46 % nižší emise CO₂ </li><li>matný povrch, široká paleta barev</li><li>certifikace ISCC+ a GRS zaručující kvalitu a udržitelnost<br/><br/><br/><br/></li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_dqMPCk": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_J6g7bM",
+        "highlight_text_fGtMHg",
+        "text_PBycda",
+        "button_dqMPCk"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/FIXSTRE-1700-BK-PRODUCT-0.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "text_icons_b8nAVq": {
       "type": "text-icons",
       "blocks": {
-        "text_icon_Cimifi": {
+        "text_icon_Bpznfy": {
           "type": "text-icon",
           "settings": {
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/warranty_1.png",
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/iscc.png",
             "title": "",
-            "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
+            "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
         },
-        "text_icon_FKQJQ6": {
+        "text_icon_d9BVRj": {
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify://shop_images/natural-material.png",
+            "custom_icon": "shopify://shop_images/GRS.png",
             "title": "",
-            "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_rHAfmj": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/top-grain-1.png",
-            "title": "",
-            "subheading": "Na výběru kůže záleží, proto máme jen to nejlepší od italských dodavatelů.",
+            "subheading": "",
             "link": "",
             "open_link_in_new_tab": false
           }
         }
       },
       "block_order": [
-        "text_icon_Cimifi",
-        "text_icon_FKQJQ6",
-        "text_icon_rHAfmj"
+        "text_icon_Bpznfy",
+        "text_icon_d9BVRj"
       ],
+      "name": "t:sections.text-icons.presets.name",
       "settings": {
         "title": "",
         "subtitle": "",
         "heading_size": "h2",
-        "icon_width_desktop": 50,
+        "icon_width_desktop": 30,
         "text_position": "bottom",
         "enable_heading_in_box": false,
         "columns_desktop": 3,
@@ -245,7 +438,7 @@
         "column_alignment": "center",
         "highlight_icon": false,
         "enable_section_box_layout": false,
-        "color_scheme": "background-1",
+        "color_scheme": "",
         "border_width": 1,
         "border_opacity": 0,
         "border_spacing": 0,
@@ -256,8 +449,117 @@
         "icon_width_mobile": 30,
         "border_spacing_mobile": 0,
         "swipe_on_mobile": false,
-        "padding_top": 0,
+        "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_XXYiQN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nfbT6F": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Proč záleží na místě výroby</h1>",
+            "heading_size": "h1"
+          }
+        },
+        "text_NAcAbr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nižší uhlíková stopa – kratší dodavatelské řetězce a minimum přepravy.Bezpečné materiály – splňují přísné evropské normy, bez toxických látek.Plná kontrola – od surového TPU po obal z FSC papíru.Rychlost a flexibilita – kryty pro nové telefony máme připravené okamžitě.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nfbT6F",
+        "text_NAcAbr"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_ntx4aV": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "layout": "grid",
+        "image": "shopify://shop_images/Picture_2.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_tCpiQQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RedqCc": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>Česká výroba jako závazek</h1>",
+            "heading_size": "h1"
+          }
+        },
+        "text_FpxEUa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ať už si vyberete tradiční kožené pouzdro nebo moderní TPU kryt, máte jistotu, že držíte v ruce výrobek z české výroby. Naše rozhodnutí vyrábět doma je závazkem – k vyšší kvalitě, k odpovědnosti i k vám.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RedqCc",
+        "text_FpxEUa"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "collection_list_NekX4X": {
@@ -321,7 +623,7 @@
         "featured_collection_pejaJ6"
       ],
       "settings": {
-        "title": "Kategorie výrobků z kůže",
+        "title": "Prohlédněte si nabídku našich pouzder",
         "subtitle": "",
         "heading_size": "h1",
         "image_ratio": "adapt",
@@ -338,134 +640,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "image_with_text_zKVCnf": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_JYcbnb": {
-          "type": "heading",
-          "settings": {
-            "heading": "Obal, který už nebudeš muset měnit.",
-            "heading_size": "h2",
-            "enable_bold_heading": true
-          }
-        },
-        "text_BVLD3r": {
-          "type": "text",
-          "settings": {
-            "text": "<p>S doživotní zárukou na náš kožený obal ProFit můžete mít jeden obal po celou dobu používání tvého telefonu.</p><ul><li>Ochrání tvůj telefon ze všech stran</li><li>Má praktické kapsy na karty či peníze</li><li>Dá se využít i jako stojánek</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_MppFHw": {
-          "type": "button",
-          "settings": {
-            "button_label": "Zjistit více",
-            "button_link": "shopify://collections/profit",
-            "button_style": "solid",
-            "button_open_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_JYcbnb",
-        "text_BVLD3r",
-        "button_MppFHw"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "image": "shopify://shop_images/leather.png",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 24,
-        "padding_bottom": 24,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#e94200",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#e94200",
-        "background_container": "#ececec",
-        "gradient_background_container": "",
-        "background_section": "#ececec",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
-      }
-    },
-    "image_with_text_VYpWNw": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_YVgNAz": {
-          "type": "heading",
-          "settings": {
-            "heading": "Produkty z veganské kůže",
-            "heading_size": "h1",
-            "enable_bold_heading": true
-          }
-        },
-        "text_gXWYDt": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pečlivě vyrobené produkty z té nejlepší syntetické kůže se šrafováním. Vyber si z široké škály barev a produktů pro různá zařízení.</p><p>Tento materiál má mnohé výhody, k hlavním patří snadná údržba produktů a větší výběr barevných variant.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_fcqKMB": {
-          "type": "button",
-          "settings": {
-            "button_label": "Prohlédnout všechny výrobky",
-            "button_link": "shopify://collections/pouzdra-z-umele-kuze",
-            "button_style": "solid",
-            "button_open_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_YVgNAz",
-        "text_gXWYDt",
-        "button_fcqKMB"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "image": "shopify://shop_images/1B1A0152.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#e94200",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
       }
     },
     "collection_list_bB4BBc": {
@@ -721,10 +895,15 @@
     "main",
     "slideshow_8r6nPV",
     "rich_text_GnRiqE",
-    "text_icons_fictdW",
-    "collection_list_NekX4X",
-    "image_with_text_zKVCnf",
     "image_with_text_VYpWNw",
+    "image_with_text_zKVCnf",
+    "image_with_text_nVUzjk",
+    "image_with_text_fPKijJ",
+    "text_icons_b8nAVq",
+    "rich_text_XXYiQN",
+    "image_banner_ntx4aV",
+    "rich_text_tCpiQQ",
+    "collection_list_NekX4X",
     "collection_list_bB4BBc",
     "featured_products_tabs_AyhByH",
     "rich_text_w69QNV",
