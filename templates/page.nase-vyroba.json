@@ -544,6 +544,7 @@
       "blocks": {
         "heading_nfbT6F": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "<h1>Proč záleží na místě výroby</h1>",
             "heading_size": "h1"
@@ -552,7 +553,7 @@
         "text_NAcAbr": {
           "type": "text",
           "settings": {
-            "text": "<p>Nižší uhlíková stopa – kratší dodavatelské řetězce a minimum přepravy.Bezpečné materiály – splňují přísné evropské normy, bez toxických látek.Plná kontrola – od surového TPU po obal z FSC papíru.Rychlost a flexibilita – kryty pro nové telefony máme připravené okamžitě.</p>"
+            "text": "<p><strong>Nižší uhlíková stopa</strong> – kratší dodavatelské řetězce a minimum přepravy.Bezpečné materiály – splňují přísné evropské normy, bez toxických látek.Plná kontrola – od surového TPU po obal z FSC papíru. Rychlost a flexibilita – kryty pro nové telefony máme připravené okamžitě.</p>"
           }
         }
       },
@@ -574,6 +575,7 @@
     },
     "image_banner_ntx4aV": {
       "type": "image-banner",
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "layout": "grid",
