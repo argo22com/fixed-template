@@ -969,7 +969,7 @@
         "show_products_count": true,
         "columns_tablet": "3",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
