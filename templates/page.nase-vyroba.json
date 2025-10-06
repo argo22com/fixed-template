@@ -509,6 +509,7 @@
         "text_icon_Bpznfy",
         "text_icon_d9BVRj"
       ],
+      "disabled": true,
       "name": "t:sections.text-icons.presets.name",
       "settings": {
         "title": "",
