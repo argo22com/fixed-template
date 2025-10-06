@@ -156,7 +156,7 @@
         "button_fcqKMB"
       ],
       "custom_css": [
-        "div.image-with-text__content h3 {font-size: 2em;}"
+        "div.image-with-text__content h3 {font-size: 2em; color: #000000;}"
       ],
       "settings": {
         "grid_layout": "grid",
@@ -221,7 +221,7 @@
         "text_BVLD3r"
       ],
       "custom_css": [
-        "div.image-with-text__content h3 {font-size: 2em;}"
+        "div.image-with-text__content h3 {font-size: 2em; color: #000000}"
       ],
       "settings": {
         "grid_layout": "grid",
