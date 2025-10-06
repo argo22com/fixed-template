@@ -261,8 +261,8 @@
           "type": "column",
           "settings": {
             "icon": "check",
-            "title": "Card heading",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Story",
+            "text": "<p>Průhledné kryty z prémiového TPU od německé společnosti BASF<br/><br/></p><ul><li>o <strong>36 %</strong> nižší emise CO₂ než u běžné čínské výroby</li><li>čiré pouzdro s lesklým povrchem</li><li>vždy připravené na nejnovější modely telefonů</li></ul>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
