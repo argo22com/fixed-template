@@ -155,6 +155,9 @@
         "text_gXWYDt",
         "button_fcqKMB"
       ],
+      "custom_css": [
+        "div.image-with-text__content h3 {font-size: 2em;}"
+      ],
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/oxford_brown.jpg",
