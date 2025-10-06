@@ -928,6 +928,94 @@
         "overlay_color": "#1e40af"
       }
     },
+    "rich_text_BrHngY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CjYXVQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Jak o kůži pečovat?</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_DAWxGc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu.</p><p>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci.</p><p>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.</p><p>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.</p>"
+          }
+        },
+        "button_RhGchU": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CjYXVQ",
+        "text_DAWxGc",
+        "button_RhGchU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_HKrVNx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_weKCjC": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "button_P3AF7T": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_weKCjC",
+        "button_P3AF7T"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_with_text_76ABzN": {
       "type": "image-with-text",
       "blocks": {
@@ -951,6 +1039,7 @@
         "heading_jPWPVM",
         "text_PjkGfz"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/rucni_vyroba2.jpg",
@@ -1001,6 +1090,8 @@
     "featured_products_tabs_AyhByH",
     "rich_text_w69QNV",
     "image_with_text_MUzzfc",
+    "rich_text_BrHngY",
+    "rich_text_HKrVNx",
     "image_with_text_76ABzN"
   ]
 }
