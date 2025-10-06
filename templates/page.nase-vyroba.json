@@ -564,7 +564,7 @@
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
-        "desktop_content_width": "large",
+        "desktop_content_width": "full",
         "content_alignment": "center",
         "enable_section_box_layout": true,
         "color_scheme": "",
