@@ -566,7 +566,7 @@
         "desktop_content_position": "center",
         "desktop_content_width": "large",
         "content_alignment": "center",
-        "enable_section_box_layout": false,
+        "enable_section_box_layout": true,
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
@@ -848,7 +848,7 @@
         "heading_ceCYpX": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>O NAŠÍ VÝROBĚ</h3>",
+            "heading": "<h2>Výroba Prostějov</h2>",
             "heading_size": "h2"
           }
         },
