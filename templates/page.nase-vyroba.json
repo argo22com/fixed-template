@@ -225,7 +225,7 @@
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/A55-BK.5734.jpg",
+        "image": "shopify://shop_images/02_f8ac8c3c-3030-49bb-8dfe-96d29e80afac.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -246,9 +246,9 @@
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#e94200",
-        "background_container": "#fff",
+        "background_container": "#ffffff",
         "gradient_background_container": "",
-        "background_section": "#fff",
+        "background_section": "#ffffff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
@@ -268,8 +268,8 @@
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": false,
-            "card_color_text": "#000",
-            "color_button_text": "#fff",
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#f5e5ff",
             "card_color_background_gradient": ""
@@ -285,8 +285,8 @@
             "link": "",
             "button_style": "solid",
             "button_open_new_tab": false,
-            "card_color_text": "#000",
-            "color_button_text": "#fff",
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
             "card_color_background": "#dbfdff",
             "card_color_background_gradient": ""
