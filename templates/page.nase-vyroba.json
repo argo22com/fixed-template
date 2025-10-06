@@ -254,6 +254,82 @@
         "overlay_color": "#1e40af"
       }
     },
+    "multicolumn_gMaHAJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_exBALG": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "Card heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#166534",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#effdf4",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_kwnMaR": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "Card heading",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#a06207",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fefce8",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_exBALG",
+        "column_kwnMaR"
+      ],
+      "name": "t:sections.promotion-cards.presets.name",
+      "settings": {
+        "title": "Dvě řady, jedna filozofie",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 2,
+        "columns_tablet": 2,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_nVUzjk": {
       "type": "image-with-text",
       "blocks": {
@@ -905,6 +981,7 @@
     "rich_text_GnRiqE",
     "image_with_text_VYpWNw",
     "image_with_text_zKVCnf",
+    "multicolumn_gMaHAJ",
     "image_with_text_nVUzjk",
     "image_with_text_fPKijJ",
     "text_icons_b8nAVq",
