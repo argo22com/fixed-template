@@ -313,7 +313,7 @@
         "column_alignment": "left",
         "enable_shadow": false,
         "background_transparent": false,
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "button_open_new_tab": false,
         "enable_section_box_layout": false,
