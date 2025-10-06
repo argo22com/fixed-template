@@ -95,7 +95,7 @@
         "text_PTb6yL": {
           "type": "text",
           "settings": {
-            "text": "<p>Ve FIXED věříme, že výroba příslušenství může být poctivá, udržitelná a lokální. Již 10 let šijeme v Česku kožená pouzdra a v roce 2025 přidáváme také výrobu pouzder z TPU. <br/>V Prostějově šijeme kožená pouzdra tradičními postupy z kvalitní italské kůže, v Bystřici pod Hostýnem zase recyklujeme stará TPU pouzdra a vyrábíme nové kryty Story a ReStory. <br/><br/><br/><br/></p>"
+            "text": "<p>Ve FIXED věříme, že výroba příslušenství může být poctivá, udržitelná a lokální. Již 10 let šijeme v Česku kožená pouzdra a v roce 2025 přidáváme také výrobu pouzder z TPU.  V Prostějově šijeme kožená pouzdra tradičními postupy z kvalitní italské kůže, v Bystřici pod Hostýnem zase recyklujeme stará TPU pouzdra a vyrábíme nové kryty Story a ReStory. <br/><br/><br/><br/></p>"
           }
         }
       },
@@ -105,7 +105,7 @@
       ],
       "settings": {
         "desktop_content_position": "center",
-        "desktop_content_width": "full",
+        "desktop_content_width": "large",
         "content_alignment": "center",
         "enable_section_box_layout": false,
         "color_scheme": "",
