@@ -120,25 +120,29 @@
                               assign item_label = splits[0] | strip
                             endif
                           -%}
-                          {%- if product.metafields[namespace][key] != blank or request.design_mode -%}
+
+                          {%- comment -%} VARIANTA → PRODUKT fallback {%- endcomment -%}
+                          {%- assign attr_value = current_variant.metafields[namespace][key] | default: product.metafields[namespace][key] -%}
+
+                          {%- if attr_value != blank or request.design_mode -%}
                             <li class="grid__item">
                               {%- assign has_content = true -%}
                               <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ item_label | replace: '_', ' ' }}</h4>
-                              <div class="rte{% if product.metafields[namespace][key].type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
-                                {%- unless product.metafields[namespace][key].type == 'boolean' -%}
-                                  {%- unless product.metafields[namespace][key].type contains 'list.' and product.metafields[namespace][key].type != 'list.single_line_text_field' -%}
-                                    {% unless product.metafields[namespace][key].type contains 'metaobject_reference' %}
-                                      {{ product.metafields[namespace][key] | metafield_tag }}
+                              <div class="rte{% if attr_value.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
+                                {%- unless attr_value.type == 'boolean' -%}
+                                  {%- unless attr_value.type contains 'list.' and attr_value.type != 'list.single_line_text_field' -%}
+                                    {% unless attr_value.type contains 'metaobject_reference' %}
+                                      {{ attr_value | metafield_tag }}
                                     {% else %}
-                                      {{ product.metafields[namespace][key].value[pair[2]] }}
+                                      {{ attr_value.value[pair[2]] }}
                                     {% endunless %}
                                   {%- else -%}
                                     <ul>
-                                      {%- for field in product.metafields[namespace][key].value -%}
+                                      {%- for field in attr_value.value -%}
                                         <li>
-                                          {%- if product.metafields[namespace][key].type contains 'product_reference' or product.metafields[namespace][key].type contains 'variant_reference' -%}
+                                          {%- if attr_value.type contains 'product_reference' or attr_value.type contains 'variant_reference' -%}
                                             <a href="{{ field.url }}">{{ field.title }}</a>
-                                          {%- elsif product.metafields[namespace][key].type contains 'metaobject_reference' -%}
+                                          {%- elsif attr_value.type contains 'metaobject_reference' -%}
                                             {{ field[pair[2]] }}
                                           {%- else -%}
                                             {{ field }}
@@ -148,7 +152,7 @@
                                     </ul>
                                   {%- endunless -%}
                                 {%- else -%}
-                                  {%- if product.metafields[namespace][key].value == true -%}
+                                  {%- if attr_value.value == true -%}
                                     {{ 'general.boolean.true' | t }}
                                   {%- else -%}
                                     {{ 'general.boolean.false' | t }}
