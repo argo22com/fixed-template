@@ -101,6 +101,7 @@
     {%- assign meta_text = block.settings.metafields | newline_to_br | replace: '<br />', ',' -%}
     {%- assign metafields_array = meta_text | split: ',' -%}
     {%- if metafields_array.size > 0 -%}
+      {{ current_variant.metafields.product_variant_attribute.frekvence_to | json }}
       <ul class="product-attributes__table-item__specifications-list grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
         {%- for raw in metafields_array -%}
           {%- assign field = raw | strip -%}
