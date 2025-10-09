@@ -566,7 +566,7 @@
         {% assign opt_name_down = option.name | downcase %}
         {% assign only_value_down = option.values.first | downcase %}
         {% assign values_count = option.values | size %}
-        {% if opt_name_down == 'default_option' and values_count == 1 and only_value_down == 'default_option_value' %}
+        {% if opt_name_down == 'default_option' and values_count == 1 %}
           {% continue %}
         {% endif %}
 
