@@ -213,8 +213,15 @@
     "rich_text_QFK3Tr": {
       "type": "rich-text",
       "blocks": {
+        "text_iPdpyP": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://fixed.zone/pages/faq\" title=\"https://fixed.zone/pages/faq\"><strong>Více častých dotazů FAQ</strong></a></p>"
+          }
+        },
         "button_VNRhFk": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Více FAQ",
             "button_link": "https://fixed.zone/pages/faq",
@@ -228,6 +235,7 @@
         }
       },
       "block_order": [
+        "text_iPdpyP",
         "button_VNRhFk"
       ],
       "name": "t:sections.rich-text.presets.name",
