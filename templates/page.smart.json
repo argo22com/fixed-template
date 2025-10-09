@@ -272,7 +272,7 @@
         "text_LgN74N": {
           "type": "text",
           "settings": {
-            "text": "<p>Pořídili jste si nový Tag?<br/>Přidejte si jej do aplikace Find My. Stačí dlouze stisknout tlačítko a aplikace jej sama nalezne.</p><p>Pak už stačí Tag jenom pojmenovat a přidat mu ikonu, ať jej na mapě jednoduše rozeznáte.</p><p>Jak funguje hledání? Tag se automaticky hlásí svým zabezpečeným Bluetooth signálem ke všem zařízením, které využívají iOS operativní systém. Data jsou následně ukládaná do iCloudu odkud se propisují do mapy v aplikaci.</p>",
+            "text": "<p>Pořídili jste si nový Tag? Přidejte si jej do aplikace <strong>Find My</strong>. Stačí dlouze stisknout tlačítko a aplikace jej sama nalezne.</p><p>Pak už stačí Tag jenom pojmenovat a přidat mu ikonu, ať jej na mapě jednoduše rozeznáte.</p><p>Jak funguje hledání? Tag se automaticky hlásí svým zabezpečeným Bluetooth signálem ke všem zařízením, které využívají <strong>iOS</strong> operační systém. Data jsou následně ukládaná do <strong>iCloudu</strong> odkud se propisují do mapy v aplikaci.</p>",
             "text_style": "body"
           }
         },
@@ -336,7 +336,7 @@
         "text_XpH7fj": {
           "type": "text",
           "settings": {
-            "text": "<p>Ke každému Tagu si jednoduše můžete nastavit specifické notifikace.</p><p>Chcete, aby vás telefon upozornil, že jste někde zanechali svou peněženku, ale nechcete, aby se tak dělo pokaždé když vyběhnete z bytu s odpadem? Také si můžete nastavit notifikaci na to, že se od vás vás Tag vzdaluje.</p><p>Aplikace má různé možnosti, jak si upozornění personalizovat.</p><p>Hledáte Tag někde ve svém okolí, ale nevidíte ho? V aplikaci zvolíte možnost „prozvonit“ a Tag se vám ozve.</p><p>Tag se také dá nahlásit jako ztracený, automaticky tak nálezci ukáže vámi personalizovanou zprávu s kontaktem.</p>",
+            "text": "<p>Ke každému Tagu si jednoduše můžete nastavit <strong>specifické</strong> <strong>notifikace</strong>.</p><p>Chcete, aby vás telefon upozornil, že jste někde zanechali svou peněženku, ale nechcete, aby se tak dělo pokaždé když vyběhnete z bytu s odpadem? Také si můžete nastavit notifikaci na to, že se od vás vás Tag vzdaluje.</p><p>Aplikace má různé možnosti, jak si upozornění personalizovat.</p><p>Hledáte Tag někde ve svém okolí, ale nevidíte ho? V aplikaci zvolíte možnost „prozvonit“ a Tag se vám ozve.</p><p>Tag se také dá nahlásit jako ztracený, automaticky tak nálezci ukáže vámi personalizovanou zprávu s kontaktem.</p>",
             "text_style": "body"
           }
         },
