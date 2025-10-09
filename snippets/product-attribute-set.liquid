@@ -9,6 +9,7 @@
   {% render 'product-attribute-set', products: products %}
   {% render 'product-attribute-set', product: product %}
 {% endcomment %}
+
 {%- comment -%} ===== DEBUG START (dočasné) ===== {%- endcomment -%}
 {%- assign DEBUG = true -%}
 {%- if DEBUG -%}
@@ -24,9 +25,19 @@
         {% for c in product.collections %}
           <li>
             <b>{{ c.title }}</b> — attribute_set existuje?
-            <code>{{ c.metafields.product_attributes.product_attribute_set.value != blank }}</code>
+            <code>
+              {% if c.metafields.product_attributes.product_attribute_set.value %}
+                true
+              {% else %}
+                false
+              {% endif %}
+            </code>
             {% if c.metafields.product_attributes.product_attribute_set.value %}
-              <div>počet: <code>{{ c.metafields.product_attributes.product_attribute_set.value.list.value.size }}</code></div>
+              <div>počet:
+                <code>
+                  {{ c.metafields.product_attributes.product_attribute_set.value.list.value.size }}
+                </code>
+              </div>
               <ul>
                 {% for a in c.metafields.product_attributes.product_attribute_set.value.list.value %}
                   {% assign raw = a.metafield_key | strip %}
@@ -57,10 +68,6 @@
       </details>
 
       <hr>
-      {% comment %}
-        Otestujeme rozřešení pro několik klíčů včetně FREKVENCE_TO.
-        Přidej klíče dle potřeby.
-      {% endcomment %}
       {% assign probe_keys = "FREKVENCE_TO,FREKVENCE_OD,IMPEDANCE,CITLIVOST" | split: "," %}
       <div><b>Rozřešení „probe“ klíčů:</b></div>
       <table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse">
@@ -74,6 +81,7 @@
         {% for rawk in probe_keys %}
           {% assign normk = rawk | strip | downcase | replace: ' ', '_' | replace: '-', '_' %}
           {% assign v = product.selected_or_first_available_variant %}
+
           {% assign src = "" %}
           {% assign mf = v.metafields.product_attributes[normk] %}
           {% if mf != blank %}
@@ -89,11 +97,12 @@
               {% endif %}
             {% endif %}
           {% endif %}
+
           <tr>
             <td><code>{{ rawk }}</code></td>
             <td><code>{{ normk }}</code></td>
-            <td><code>{{ src | default: "—" }}</code></td>
-            <td><code>{{ mf != blank }}</code></td>
+            <td><code>{% if src != blank %}{{ src }}{% else %}—{% endif %}</code></td>
+            <td><code>{% if mf != blank %}true{% else %}false{% endif %}</code></td>
             <td>
               {% if mf != blank %}
                 {{ mf | metafield_tag }}
@@ -108,6 +117,7 @@
   </details>
 {%- endif -%}
 {%- comment -%} ===== DEBUG END ===== {%- endcomment -%}
+
 {%- assign attribute_names = '' -%}
 {%- assign attribute_keys  = '' -%}
 
