@@ -48,18 +48,14 @@
             {%- for attribute in attribute_set -%}
               {%- if attribute.metafield_key == blank -%}{% continue %}{%- endif -%}
 
-              {%- comment -%} NORMALIZACE KLÍČE (UPPERCASE → lowercase; mezery/„-“ → „_“) {%- endcomment -%}
+              {%- comment -%} NORMALIZACE KLÍČE {%- endcomment -%}
               {%- assign raw_key = attribute.metafield_key | strip -%}
               {%- assign key = raw_key | downcase | replace: ' ', '_' | replace: '-', '_' -%}
 
-              {%- comment -%} PRIORITA ČTENÍ HODNOTY {%- endcomment -%}
+              {%- comment -%} PRIORITA ČTENÍ {%- endcomment -%}
               {%- assign mf = current_variant.metafields.product_attributes[key] -%}
-              {%- if mf == blank -%}
-                {%- assign mf = current_variant.metafields.product_variant_attribute[key] -%}
-              {%- endif -%}
-              {%- if mf == blank -%}
-                {%- assign mf = product.metafields.product_attributes[key] -%}
-              {%- endif -%}
+              {%- if mf == blank -%}{%- assign mf = current_variant.metafields.product_variant_attribute[key] -%}{%- endif -%}
+              {%- if mf == blank -%}{%- assign mf = product.metafields.product_attributes[key] -%}{%- endif -%}
 
               {%- if mf != blank -%}
                 {%- assign printed_count = printed_count | plus: 1 -%}
@@ -104,8 +100,40 @@
           {%- endfor -%}
         </ul>
 
+        {%- comment -%}
+          FALLBACK: pokud není attribute_set nebo nic nevytiskl, zkus známé klíče – uprav/rozšiř dle potřeby.
+          Klíče mohou být v UPPERCASE; normalizujeme na lowercase s '_' pro lookup.
+        {%- endcomment -%}
         {%- if printed_count == 0 -%}
-          <p class="text-subdued"><em>Parametry nejsou k dispozici.</em></p>
+          {%- assign known_keys = "FREKVENCE_OD,FREKVENCE_TO,IMPEDANCE,CITLIVOST,DELKA_KABELU,MIKROFON,PRIPOJENI" | split: "," -%}
+          {%- assign found_any = 0 -%}
+          <ul class="product-attributes__table-item__specifications-list grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
+            {%- for raw in known_keys -%}
+              {%- assign key = raw | strip | downcase | replace: ' ', '_' | replace: '-', '_' -%}
+
+              {%- assign mf = current_variant.metafields.product_attributes[key] -%}
+              {%- if mf == blank -%}{%- assign mf = current_variant.metafields.product_variant_attribute[key] -%}{%- endif -%}
+              {%- if mf == blank -%}{%- assign mf = product.metafields.product_attributes[key] -%}{%- endif -%}
+
+              {%- if mf != blank -%}
+                {%- assign found_any = 1 -%}
+                <li class="grid__item">
+                  <div class="product-attributes__table-item flex flex-column">
+                    <h3 class="product-attributes__table-item__title margin0 font-heading-bold h5">
+                      {{ raw | replace: '_', ' ' | capitalize }}
+                    </h3>
+                    <div class="product-attributes__table-item__content text-medium margin-top-1rem {% if mf.type != 'file_reference' %}product-attributes__tablet-item-light{% endif %}">
+                      {{ mf | metafield_tag }}
+                    </div>
+                  </div>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+
+          {%- if found_any == 0 -%}
+            <p class="text-subdued"><em>Parametry nejsou k dispozici.</em></p>
+          {%- endif -%}
         {%- endif -%}
 
         {%- if request.design_mode -%}
