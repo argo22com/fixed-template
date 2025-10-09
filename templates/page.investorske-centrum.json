@@ -358,6 +358,7 @@
         "collapsible_row_V3pK8N",
         "collapsible_row_63FBme"
       ],
+      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "section_width": "grid",
@@ -388,7 +389,6 @@
       "block_order": [
         "heading_NqVVhg"
       ],
-      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "large",
@@ -402,7 +402,6 @@
     },
     "image_banner_hcNRxN": {
       "type": "image-banner",
-      "disabled": true,
       "settings": {
         "layout": "grid",
         "image": "shopify://shop_images/publicita_na_obrazovku_b44f5e95-a818-43a3-9a52-220e3f87edd4.png",
@@ -445,7 +444,6 @@
     },
     "page_UEwNU4": {
       "type": "page",
-      "disabled": true,
       "settings": {
         "page": "projekty",
         "heading_size": "h2",
