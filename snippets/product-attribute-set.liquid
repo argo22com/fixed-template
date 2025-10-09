@@ -9,7 +9,105 @@
   {% render 'product-attribute-set', products: products %}
   {% render 'product-attribute-set', product: product %}
 {% endcomment %}
+{%- comment -%} ===== DEBUG START (dočasné) ===== {%- endcomment -%}
+{%- assign DEBUG = true -%}
+{%- if DEBUG -%}
+  <details style="padding:12px;border:1px dashed #888;margin:10px 0">
+    <summary><strong>DEBUG: product-attribute-set</strong></summary>
+    <div style="font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:13px; line-height:1.5">
+      <div><b>Produkt:</b> {{ product.title }} (ID {{ product.id }})</div>
+      <div><b>Varianta:</b> {{ product.selected_or_first_available_variant.title }} (ID {{ product.selected_or_first_available_variant.id }})</div>
 
+      <hr>
+      <div><b>Kolekce & attribute_set:</b></div>
+      <ul>
+        {% for c in product.collections %}
+          <li>
+            <b>{{ c.title }}</b> — attribute_set existuje?
+            <code>{{ c.metafields.product_attributes.product_attribute_set.value != blank }}</code>
+            {% if c.metafields.product_attributes.product_attribute_set.value %}
+              <div>počet: <code>{{ c.metafields.product_attributes.product_attribute_set.value.list.value.size }}</code></div>
+              <ul>
+                {% for a in c.metafields.product_attributes.product_attribute_set.value.list.value %}
+                  {% assign raw = a.metafield_key | strip %}
+                  {% assign norm = raw | downcase | replace: ' ', '_' | replace: '-', '_' %}
+                  <li>key: <code>{{ raw }}</code> → norm: <code>{{ norm }}</code>; label: <code>{{ a.display_name }}</code></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+
+      <hr>
+      <div><b>Metafields na variantě:</b></div>
+      <details>
+        <summary>variant.product_attributes (JSON)</summary>
+        <pre style="white-space:pre-wrap">{{ product.selected_or_first_available_variant.metafields.product_attributes | json }}</pre>
+      </details>
+      <details>
+        <summary>variant.product_variant_attribute (JSON)</summary>
+        <pre style="white-space:pre-wrap">{{ product.selected_or_first_available_variant.metafields.product_variant_attribute | json }}</pre>
+      </details>
+
+      <div><b>Metafields na produktu:</b></div>
+      <details>
+        <summary>product.product_attributes (JSON)</summary>
+        <pre style="white-space:pre-wrap">{{ product.metafields.product_attributes | json }}</pre>
+      </details>
+
+      <hr>
+      {% comment %}
+        Otestujeme rozřešení pro několik klíčů včetně FREKVENCE_TO.
+        Přidej klíče dle potřeby.
+      {% endcomment %}
+      {% assign probe_keys = "FREKVENCE_TO,FREKVENCE_OD,IMPEDANCE,CITLIVOST" | split: "," %}
+      <div><b>Rozřešení „probe“ klíčů:</b></div>
+      <table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse">
+        <tr>
+          <th>raw</th>
+          <th>norm</th>
+          <th>zdroj</th>
+          <th>found?</th>
+          <th>náhled</th>
+        </tr>
+        {% for rawk in probe_keys %}
+          {% assign normk = rawk | strip | downcase | replace: ' ', '_' | replace: '-', '_' %}
+          {% assign v = product.selected_or_first_available_variant %}
+          {% assign src = "" %}
+          {% assign mf = v.metafields.product_attributes[normk] %}
+          {% if mf != blank %}
+            {% assign src = "variant.product_attributes" %}
+          {% else %}
+            {% assign mf = v.metafields.product_variant_attribute[normk] %}
+            {% if mf != blank %}
+              {% assign src = "variant.product_variant_attribute" %}
+            {% else %}
+              {% assign mf = product.metafields.product_attributes[normk] %}
+              {% if mf != blank %}
+                {% assign src = "product.product_attributes" %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+          <tr>
+            <td><code>{{ rawk }}</code></td>
+            <td><code>{{ normk }}</code></td>
+            <td><code>{{ src | default: "—" }}</code></td>
+            <td><code>{{ mf != blank }}</code></td>
+            <td>
+              {% if mf != blank %}
+                {{ mf | metafield_tag }}
+              {% else %}
+                <em>—</em>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </details>
+{%- endif -%}
+{%- comment -%} ===== DEBUG END ===== {%- endcomment -%}
 {%- assign attribute_names = '' -%}
 {%- assign attribute_keys  = '' -%}
 
