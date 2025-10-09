@@ -47,7 +47,6 @@
 
   {% for option in product.options_with_values %}
 
-    {%- comment -%} Guard: schovej fake variantu Default_option/default_option_value {%- endcomment -%}
     {% assign opt_name_down = option.name | downcase %}
     {% assign only_value_down = option.values.first | downcase %}
     {% assign values_count = option.values | size %}
@@ -562,7 +561,6 @@
     <div class="select">
       {% for option in product.options_with_values %}
 
-        {%- comment -%} Guard i pro noscript {%- endcomment -%}
         {% assign opt_name_down = option.name | downcase %}
         {% assign only_value_down = option.values.first | downcase %}
         {% assign values_count = option.values | size %}
