@@ -563,13 +563,12 @@
       {% for option in product.options_with_values %}
 
         {%- comment -%} Guard i pro noscript {%- endcomment -%}
-        {%- liquid
-          assign opt_name_down = option.name | downcase
-          assign has_single_value = option.values.size == 1
-          assign only_value_down = option.values.first | downcase
-          assign is_dummy_default = (opt_name_down == 'default_option') and has_single_value and (only_value_down == 'default_option_value')
-        -%}
-        {%- if is_dummy_default -%}{% continue %}{%- endif -%}
+        {% assign opt_name_down = option.name | downcase %}
+        {% assign only_value_down = option.values.first | downcase %}
+        {% assign values_count = option.values | size %}
+        {% if opt_name_down == 'default_option' and values_count == 1 and only_value_down == 'default_option_value' %}
+          {% continue %}
+        {% endif %}
 
         <select
           name="options[{{ option.name | escape }}]"
