@@ -186,6 +186,7 @@
             "heading": "2025",
             "icon": "document",
             "row_content": "",
+            "liquid": "",
             "page": "pro-investory-2025"
           }
         },
@@ -195,6 +196,7 @@
             "heading": "2024",
             "icon": "document",
             "row_content": "",
+            "liquid": "",
             "page": "pro-investory-2024"
           }
         },
@@ -204,6 +206,7 @@
             "heading": "2023",
             "icon": "document",
             "row_content": "",
+            "liquid": "",
             "page": "pro-investory-2023"
           }
         },
@@ -213,6 +216,7 @@
             "heading": "2022",
             "icon": "document",
             "row_content": "",
+            "liquid": "",
             "page": "pro-investory-2022"
           }
         },
@@ -222,6 +226,7 @@
             "heading": "2021",
             "icon": "document",
             "row_content": "",
+            "liquid": "",
             "page": "pro-investory-2021"
           }
         },
@@ -231,6 +236,7 @@
             "heading": "2020",
             "icon": "document",
             "row_content": "",
+            "liquid": "",
             "page": "pro-investory-2020"
           }
         },
@@ -240,6 +246,7 @@
             "heading": "Úpis akcií IPO",
             "icon": "cash",
             "row_content": "",
+            "liquid": "",
             "page": "upis-akcii-ipo"
           }
         }
@@ -256,6 +263,94 @@
       "settings": {
         "section_width": "grid",
         "title": "FIXED dokumenty",
+        "subtitle": "",
+        "heading_size": "h1",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "hide_image_on_mobile": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_gWRJ8q": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Pw9ANp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Vývoj a hodnocení procesu recyklace polymerních materiálů na bázi termoplastických polyuretanů",
+            "icon": "document",
+            "row_content": "",
+            "liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/publicita_na_obrazovku_b44f5e95-a818-43a3-9a52-220e3f87edd4.png?v=1725874243\">",
+            "page": ""
+          }
+        },
+        "collapsible_row_aPXWGR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Implementace nového ERP systému ve FIXED.zone a.s.",
+            "icon": "document",
+            "row_content": "<p>Implementace nového podnikového sytému ERP, který umožní datovou integraci účetnictví a B2C eshopu, a také efektivní ESG reporting.</p><p><strong>Cíle a výsledky projektu:</strong></p><p>Digitální transformace firmy – pořízení ERP a jeho datová integrace s dalšími systémy vytvoří propojený celek umožňující efektivnější řízení a chod firmy.</p><p>Na realizaci projektu je poskytována finanční podpora Evropské unie.</p>",
+            "liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/eu-spolufinancovano-barevne.png?v=1760013281\" width=\"400px\">",
+            "page": ""
+          }
+        },
+        "collapsible_row_xNrNtb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Účast FIXED.zone na zahraničních veletrzích",
+            "icon": "document",
+            "row_content": "<p>Předmětem projektu je propagace produktů FIXED na zahraničních veletrzích a výstavách, s cílem vstoupit na nové zahraniční trhy, posílit tržní pozici na stávajících zahraničních trzích, a zvýšit exportní tržby.</p><p>Na realizaci projektu je poskytována finanční podpora Evropské unie.</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_UpW7iD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Digitalizace podniku FIXED.zone a.s.",
+            "icon": "document",
+            "row_content": "<p>Předmětem projektu je implementace nového B2C e-shopu napojeného na ERP systém žadatele, pořízení nových aktivních prvků sítí a kamerového monitorovacího systému.</p><p><strong>Cíle a výsledky projektu:</strong></p><ul><li>Rozvoj e-commerce podniku.</li><li>Zvýšení zabezpečení digitální infrastruktury podniku.</li></ul><p>Na realizaci projektu je poskytována finanční podpora Evropské unie.</p>",
+            "liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/eu-spolufinancovano-barevne.png?v=1760013281\" width=\"400px\">",
+            "page": ""
+          }
+        },
+        "collapsible_row_V3pK8N": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "PROJEKT „ÚČAST RECALL S.R.O. NA ZAHRANIČNÍCH VELETRZÍCH“",
+            "icon": "document",
+            "row_content": "<p>Předmětem projektu CZ.01.2.111/0.0/18_244/0016685 Účast RECALL s.r.o. na zahraničních veletrzích je individuální účast žadatele, společnosti RECALL s.r.o., na významných světových výstavách a veletrzích se zaměřením na spotřební elektroniku a mobilní technologie, s cílem propagace firmy a jejích produktů vyráběných pod registrovanou obchodní značkou FIXED.</p><p><strong>Hlavní cíle a výsledky projektu:</strong></p><p>Navázání kontaktů s vhodnými obchodními partnery, zahraničními distributory</p><p>Vstup na nové zahraniční trhy Na realizaci projektu je poskytována finanční podpora Evropské unie v rámci Operačního programu Podnikání a inovace pro konkurenceschopnost (OP PIK), programu Marketing.</p>",
+            "liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/images.png?v=1760013905\">",
+            "page": ""
+          }
+        },
+        "collapsible_row_63FBme": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Projekt „FVE FIXED.zone, Homole“",
+            "icon": "document",
+            "row_content": "<p>Předmětem a cílem projektu je instalace fotovoltaické elektrárny včetně akumulace sloužící zejména pro vlastní spotřebu žadatele. Za pomoci využití obnovitelných zdrojů dojde k optimalizaci zajištění elektrické energie pro podnikatelskou činnost.</p><p>Na realizaci projektu je poskytována finanční podpora Evropské unie v rámci Národního plánu obnovy.</p>",
+            "liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/EU_projekt_FVE.png?v=1723548302\">",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Pw9ANp",
+        "collapsible_row_aPXWGR",
+        "collapsible_row_xNrNtb",
+        "collapsible_row_UpW7iD",
+        "collapsible_row_V3pK8N",
+        "collapsible_row_63FBme"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "section_width": "grid",
+        "title": "Podpora projektů",
         "subtitle": "",
         "heading_size": "h1",
         "enable_section_box_layout": false,
@@ -557,6 +652,7 @@
     "graph_wrK7F9",
     "page_96tHiA",
     "collapsible_content_GjAKAi",
+    "collapsible_content_gWRJ8q",
     "rich_text_h6CMdf",
     "image_banner_hcNRxN",
     "page_UEwNU4",
