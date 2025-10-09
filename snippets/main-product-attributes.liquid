@@ -1,152 +1,57 @@
 {% comment %}
-  Renders parameter section (tabs → "parameters")
+	Renders parameter section
 
-  Accepts:
-  - product: {product} Product
-  - show_sku: {boolean} Should show SKU
-  - title: {String} Title of tab
+	Accepts:
+	- product: {product} Product
+	- show_sku: {boolean} Should show SKU
+	- title: {String} Title of tab
 
-  Usage:
-  {% render 'main-product-attributes', product: product, show_sku: true, title: "Parametry" %}
+	Usage:
+	{% render 'main-product-attributes', product: product, show_sku: true, title: "Test" %}
 {% endcomment %}
 
 {% liquid
-  assign enable_section_box_layout = false
-  assign current_variant = product.selected_or_first_available_variant
+    assign enable_section_box_layout = false
+    assign current_variant = product.selected_or_first_available_variant
 %}
 
 {%- style -%}
-  {%- render 'section-heading-styles' -%}
+    {%- render 'section-heading-styles' -%}
 {%- endstyle -%}
 {{ 'section-main-product-attributes.css' | asset_url | stylesheet_tag }}
-
 <div class="{% unless enable_section_box_layout %} gradient isolate{% else %}page-width{% endunless %}">
-  <div class="{% unless enable_section_box_layout %}page-width{% else %}gradient isolate section__box{% endunless %}">
-    {%- render 'section-heading', title: title -%}
-
-    <div class="product-attributes">
-      <div class="product-attributes__table grid grid--1-col grid--2-col-tablet grid--3-col-desktop"
-           data-section="{{ section.id }}" data-url="{{ product.url }}">
-
-        {%- if show_sku and current_variant.sku != blank -%}
-          <div class="grid__item" style="padding-bottom: 1em">
-            <div class="product-attributes__table-item flex flex-column">
-              <h3 class="product-attributes__table-item__title margin0 font-heading-bold h5">SKU</h3>
-              <div class="product-attributes__table-item__content text-medium margin-top-1rem product-attributes__tablet-item-light">
-                {{ current_variant.sku }}
-              </div>
+    <div class="{% unless enable_section_box_layout %}page-width{% else %}gradient isolate section__box{% endunless %}">
+        {%- render 'section-heading' -%}
+        <div class="product-attributes">
+            <div class="product-attributes__table grid grid--1-col grid--2-col-tablet grid--3-col-desktop"
+                 data-section="{{ section.id }}" data-url="{{ product.url }}">
+                {%- if show_sku -%}
+                    <div class="grid__item" style="padding-bottom: 1em" {{ block.shopify_attributes }}>
+                        <div class="product-attributes__table-item flex flex-column">
+                            <h3 class="product-attributes__table-item__title margin0 font-heading-bold h5">SKU</h3>
+                            <div class="product-attributes__table-item__content text-medium margin-top-1rem product-attributes__tablet-item-light">
+                                {{ current_variant.sku }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {%- liquid
+                    assign has_content = true
+                -%}
+                {%- liquid
+                    assign is_display = has_content
+                    if request.design_mode and is_display == false
+                        assign is_display = true
+                    endif
+                -%}
+                {%- if is_display -%}
+                    {% render 'product-attribute-set', product: product %}
+                {%- endif -%}
             </div>
-          </div>
-        {%- endif -%}
-
-        {%- assign printed_count = 0 -%}
-        <ul class="product-attributes__table-item__specifications-list grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
-          {%- for collection in product.collections -%}
-            {%- assign attribute_set = collection.metafields.product_attributes.product_attribute_set.value.list.value -%}
-            {%- if attribute_set == blank -%}{% continue %}{%- endif -%}
-
-            {%- for attribute in attribute_set -%}
-              {%- if attribute.metafield_key == blank -%}{% continue %}{%- endif -%}
-
-              {%- comment -%} NORMALIZACE KLÍČE {%- endcomment -%}
-              {%- assign raw_key = attribute.metafield_key | strip -%}
-              {%- assign key = raw_key | downcase | replace: ' ', '_' | replace: '-', '_' -%}
-
-              {%- comment -%} PRIORITA ČTENÍ {%- endcomment -%}
-              {%- assign mf = current_variant.metafields.product_attributes[key] -%}
-              {%- if mf == blank -%}{%- assign mf = current_variant.metafields.product_variant_attribute[key] -%}{%- endif -%}
-              {%- if mf == blank -%}{%- assign mf = product.metafields.product_attributes[key] -%}{%- endif -%}
-
-              {%- if mf != blank -%}
-                {%- assign printed_count = printed_count | plus: 1 -%}
-                <li class="grid__item">
-                  <div class="product-attributes__table-item flex flex-column">
-                    <h3 class="product-attributes__table-item__title margin0 font-heading-bold h5">
-                      {{ attribute.display_name | default: key | replace: '_', ' ' | capitalize }}
-                    </h3>
-                    <div class="product-attributes__table-item__content text-medium margin-top-1rem {% if mf.type != 'file_reference' %}product-attributes__tablet-item-light{% endif %}">
-                      {%- unless mf.type == 'boolean' -%}
-                        {%- unless mf.type contains 'list.' and mf.type != 'list.single_line_text_field' -%}
-                          {% unless mf.type contains 'metaobject_reference' %}
-                            {{ mf | metafield_tag }}
-                          {% else %}
-                            {{ mf | metafield_tag }}
-                          {% endunless %}
-                        {%- else -%}
-                          <ul>
-                            {%- for v in mf.value -%}
-                              <li>
-                                {%- if mf.type contains 'product_reference' or mf.type contains 'variant_reference' -%}
-                                  <a href="{{ v.url }}">{{ v.title }}</a>
-                                {%- else -%}
-                                  {{ v }}
-                                {%- endif -%}
-                              </li>
-                            {%- endfor -%}
-                          </ul>
-                        {%- endunless -%}
-                      {%- else -%}
-                        {%- if mf.value == true -%}
-                          {{ 'general.boolean.true' | t }}
-                        {%- else -%}
-                          {{ 'general.boolean.false' | t }}
-                        {%- endif -%}
-                      {%- endunless -%}
-                    </div>
-                  </div>
-                </li>
-              {%- endif -%}
-            {%- endfor -%}
-          {%- endfor -%}
-        </ul>
-
-        {%- comment -%}
-          FALLBACK: pokud není attribute_set nebo nic nevytiskl, zkus známé klíče – uprav/rozšiř dle potřeby.
-          Klíče mohou být v UPPERCASE; normalizujeme na lowercase s '_' pro lookup.
-        {%- endcomment -%}
-        {%- if printed_count == 0 -%}
-          {%- assign known_keys = "FREKVENCE_OD,FREKVENCE_TO,IMPEDANCE,CITLIVOST,DELKA_KABELU,MIKROFON,PRIPOJENI" | split: "," -%}
-          {%- assign found_any = 0 -%}
-          <ul class="product-attributes__table-item__specifications-list grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
-            {%- for raw in known_keys -%}
-              {%- assign key = raw | strip | downcase | replace: ' ', '_' | replace: '-', '_' -%}
-
-              {%- assign mf = current_variant.metafields.product_attributes[key] -%}
-              {%- if mf == blank -%}{%- assign mf = current_variant.metafields.product_variant_attribute[key] -%}{%- endif -%}
-              {%- if mf == blank -%}{%- assign mf = product.metafields.product_attributes[key] -%}{%- endif -%}
-
-              {%- if mf != blank -%}
-                {%- assign found_any = 1 -%}
-                <li class="grid__item">
-                  <div class="product-attributes__table-item flex flex-column">
-                    <h3 class="product-attributes__table-item__title margin0 font-heading-bold h5">
-                      {{ raw | replace: '_', ' ' | capitalize }}
-                    </h3>
-                    <div class="product-attributes__table-item__content text-medium margin-top-1rem {% if mf.type != 'file_reference' %}product-attributes__tablet-item-light{% endif %}">
-                      {{ mf | metafield_tag }}
-                    </div>
-                  </div>
-                </li>
-              {%- endif -%}
-            {%- endfor -%}
-          </ul>
-
-          {%- if found_any == 0 -%}
-            <p class="text-subdued"><em>Parametry nejsou k dispozici.</em></p>
-          {%- endif -%}
-        {%- endif -%}
-
-        {%- if request.design_mode -%}
-          <details style="margin-top:10px">
-            <summary>Debug: variant.product_variant_attribute</summary>
-            <pre style="white-space:pre-wrap">{{ current_variant.metafields.product_variant_attribute | json }}</pre>
-          </details>
-        {%- endif -%}
-
-      </div>
+        </div>
     </div>
-  </div>
 </div>
-
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>
+    {{ 'component-rte.css' | asset_url | stylesheet_tag }}
+</noscript>
