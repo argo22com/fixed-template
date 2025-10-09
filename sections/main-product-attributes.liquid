@@ -14,227 +14,152 @@
   {%- render 'section-heading-styles' -%}
 {%- endstyle -%}
 {{ 'section-main-product-attributes.css' | asset_url | stylesheet_tag }}
-
-{%- assign current_variant = product.selected_or_first_available_variant -%}
-
-{%- comment -%} Robustní fallback popisu: varianta -> produktové metapole -> description {%- endcomment -%}
-{%- assign description = current_variant.metafields.product_texts.descriptionHtml -%}
-{%- if description == blank -%}
-  {%- assign description = product.metafields.product_texts.descriptionHtml -%}
-{%- endif -%}
-{%- if description == blank -%}
-  {%- assign description = product.description -%}
-{%- endif -%}
-
 <div class="{% unless section.settings.enable_section_box_layout %}color-{{ section.settings.color_scheme }} gradient isolate{% else %}section-{{ section.id }}-padding page-width{% endunless %}">
   <div class="{% unless section.settings.enable_section_box_layout %}section-{{ section.id }}-padding page-width{% else %}color-{{ section.settings.color_scheme }} gradient isolate section__box{% endunless %}">
     {%- render 'section-heading' -%}
     <div class="product-attributes">
 
+      {% if product.variants.size == 1 %}
+        {% assign description = product.description %}
+      {% else %}
+        {% assign description = product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml %}
+      {% endif %}
+
       {%- if section.settings.show_description and description != blank -%}
-        <div class="product__description rte quick-add-hidden">
-          {{ description }}
-        </div>
-      {%- endif -%}
+				<div class="product__description rte quick-add-hidden">
+					{{ description }}
+				</div>
+			{%- endif -%}
+			{%- if section.blocks.size > 0 -%}
+        {%- liquid
+          assign current_variant = product.selected_or_first_available_variant
+          assign has_dynamic_attributes = false
+          if product.variants.size > 1
+            assign skus = section.blocks | where: "type", "product_sku"
+            assign weights = section.blocks | where: "type", "product_weight"
+            if skus.size > 0 or weights.size > 0
+              assign has_dynamic_attributes = true
+            endif
+          endif
+        -%}
 
-      {%- if section.blocks.size > 0 -%}
-        {%- assign has_dynamic_attributes = false -%}
-        {%- if product.variants.size > 1 -%}
-          {%- assign skus = section.blocks | where: "type", "product_sku" -%}
-          {%- assign weights = section.blocks | where: "type", "product_weight" -%}
-          {%- if skus.size > 0 or weights.size > 0 -%}
-            {%- assign has_dynamic_attributes = true -%}
-          {%- endif -%}
-        {%- endif -%}
+        {% if product.variants.size == 1 %}
+          {% assign description = product.description %}
+        {% else %}
+          {% assign description = product.selected_or_first_available_variant.metafields.product_texts.descriptionHtml %}
+        {% endif %}
 
-        <{% if has_dynamic_attributes %}product-attributes-table{% else %}div{% endif %}
-          class="product-attributes__table grid grid--1-col grid--2-col-tablet grid--3-col-desktop{% if section.settings.show_description and description != blank %} element-margin-top{% endif %}{% if section.settings.table_color_scheme != section.settings.color_scheme %} color-{{ section.settings.table_color_scheme }} gradient product-attributes__table--padding{% endif %}"
-          data-section="{{ section.id }}"
-          data-url="{{ product.url }}"
-        >
-          {%- for block in section.blocks -%}
+				<{% if has_dynamic_attributes %}product-attributes-table{% else %}div{% endif %} class="product-attributes__table grid grid--1-col grid--2-col-tablet grid--3-col-desktop{% if section.settings.show_description and description != blank %} element-margin-top{% endif %}{% if section.settings.table_color_scheme != section.settings.color_scheme %} color-{{ section.settings.table_color_scheme }} gradient product-attributes__table--padding{% endif %}" data-section="{{ section.id }}" data-url="{{ product.url }}">
+					{%- for block in section.blocks -%}
             {%- if block.type != 'specifications' -%}
               <div class="grid__item" {{ block.shopify_attributes }}>
                 <div class="product-attributes__table-item flex flex-column">
                   <h3 class="product-attributes__table-item__title margin0 font-heading-bold h5">{{ block.settings.title }}</h3>
                   <div class="product-attributes__table-item__content text-medium margin-top-1rem product-attributes__tablet-item-light">
-                    {%- case block.type -%}
-                      {%- when 'product_brand' -%}
-                        {%- if product.vendor != blank -%}
-                          {%- assign vendor_url = product.vendor | url_for_vendor -%}
-                          <a class="link link-effect-no-underline" href="{{ vendor_url }}">{{ product.vendor | capitalize }}</a>
-                        {%- elsif request.design_mode -%}
-                          {{ 'products.product.vendor' | t | capitalize }}
-                        {%- endif -%}
-                      {%- when 'product_type' -%}
-                        {%- if product.type != blank -%}
-                          {%- assign type_url = product.type | url_for_type -%}
-                          <a class="link link-effect-no-underline" href="{{ type_url }}">{{ product.type | capitalize }}</a>
-                        {%- endif -%}
-                      {%- when 'product_sku' -%}
-                        {%- if current_variant.sku != blank -%}
-                          {{ current_variant.sku }}
-                        {%- endif -%}
-                      {%- when 'product_weight' -%}
-                        {%- if current_variant.weight != blank -%}
-                          {{ current_variant.weight | weight_with_unit }}
-                        {%- endif -%}
-                      {%- when 'product_text' -%}
-                        {%- if block.settings.content != blank -%}
-                          {{ block.settings.content }}
-                        {%- endif -%}
-                    {%- endcase -%}
-                  </div>
+                    {%-liquid
+                      case block.type
+                        when 'product_brand'
+                        if product.vendor != blank
+                          assign vendor_url = product.vendor | url_for_vendor
+                          echo '<a class="link link-effect-no-underline" href="' | append: vendor_url | append: '">'
+                          echo product.vendor | capitalize
+                          echo '</a>'
+                        elsif request.design_mode
+                          echo 'products.product.vendor' | t | capitalize
+                        endif
+                      when 'product_type'
+                        if product.type != blank
+                          assign type_url = product.type | url_for_type
+                          echo '<a class="link link-effect-no-underline" href="' | append: type_url | append: '">'
+                          echo product.type | capitalize
+                          echo '</a>'
+                        endif
+                      when 'product_sku'
+                        if current_variant.sku != blank
+                          echo current_variant.sku
+                        endif
+                      when 'product_weight'
+                        if current_variant.weight != blank
+                          echo current_variant.weight | weight_with_unit
+                        endif
+                      when 'product_text'
+                        if block.settings.content != blank
+                          echo block.settings.content
+                        endif
+                      endcase
+                    -%}
+									</div>
                 </div>
               </div>
-
             {%- else -%}
-              {%- assign has_content = false -%}
-              {%- assign block_content = '' -%}
-
-              {%- comment -%}
-                VĚTEV A: Admin vypsal seznam metapol v settings.metafields (CSV).
-                Formát položky: "Label: namespace.key" nebo "namespace.key".
-                NORMALIZACE: namespace i key -> downcase; mezery a '-' -> '_'.
-                PRIORITA: product.ns/key -> variant.ns/key -> variant.product_variant_attribute[key].
-              {%- endcomment -%}
+              {%-liquid
+                assign has_content = true
+                assign block_content = ''
+              -%}
               {%- if block.settings.metafields != blank -%}
                 {%- capture block_content -%}
                   {%- assign metafields_array = block.settings.metafields | split: ',' -%}
                   {%- if metafields_array.size > 0 -%}
-                    {%- assign attr_count = 0 -%}
                     <ul class="product-attributes__table-item__specifications-list grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
                       {%- for field in metafields_array -%}
-                        {%- assign splits = field | split: ':' -%}
-                        {%- if splits.size == 1 -%}
-                          {%- assign pair = field | replace: ' ', '' | split: '.' -%}
-                          {%- assign item_label = pair[1] | replace: '_', ' ' | capitalize -%}
-                        {%- else -%}
-                          {%- assign pair = splits[1] | replace: ' ', '' | split: '.' -%}
-                          {%- assign item_label = splits[0] | strip -%}
-                        {%- endif -%}
-
+                        {%-liquid
+                          assign splits = field | split: ':'
+                          if splits.size == 1
+                            assign pair = field | replace: ' ', '' | split: '.'
+                          else
+                            assign pair = splits[1] | replace: ' ', '' | split: '.'
+                          endif
+                        -%}
                         {%- if pair.size >= 2 -%}
-                          {%- assign ns_raw  = pair[0] | strip -%}
-                          {%- assign key_raw = pair[1] | strip -%}
-                          {%- assign ns  = ns_raw  | downcase | replace: ' ', '_' | replace: '-', '_' -%}
-                          {%- assign key = key_raw | downcase | replace: ' ', '_' | replace: '-', '_' -%}
+                          {%-liquid
+                            assign namespace_raw = pair[0] | strip
+                            assign key_raw = pair[1] | strip
+                            assign namespace = namespace_raw | downcase | replace: ' ', '_' | replace: '-', '_'
+                            assign key = key_raw | downcase | replace: ' ', '_' | replace: '-', '_'
+                            if splits.size == 1
+                              assign item_label = key | replace: '_', ' ' | capitalize
+                            else
+                              assign item_label = splits[0] | strip
+                            endif
 
-                          {%- assign mf = product.metafields[ns][key] -%}
-                          {%- if mf == blank -%}
-                            {%- assign mf = current_variant.metafields[ns][key] -%}
-                          {%- endif -%}
-                          {%- if mf == blank -%}
-                            {%- assign mf = current_variant.metafields.product_variant_attribute[key] -%}
-                          {%- endif -%}
-
+                            # PRIORITA: product.ns/key → variant.ns/key → variant.product_variant_attribute[key]
+                            assign mf = product.metafields[namespace][key]
+                            if mf == blank
+                              assign mf = current_variant.metafields[namespace][key]
+                            endif
+                            if mf == blank
+                              assign mf = current_variant.metafields.product_variant_attribute[key]
+                            endif
+                          -%}
                           {%- if mf != blank or request.design_mode -%}
-                            {%- assign has_content = true -%}
-                            {%- assign attr_count = attr_count | plus: 1 -%}
                             <li class="grid__item">
-                              <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ item_label }}</h4>
+                              {%- assign has_content = true -%}
+                              <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ item_label | replace: '_', ' ' }}</h4>
                               <div class="rte{% if mf != blank and mf.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
-                                {%- if mf == blank -%}
-                                  <!-- placeholder v design módu -->
-                                {%- else -%}
-                                  {%- unless mf.type == 'boolean' -%}
-                                    {%- unless mf.type contains 'list.' and mf.type != 'list.single_line_text_field' -%}
-                                      {%- unless mf.type contains 'metaobject_reference' -%}
-                                        {{ mf | metafield_tag }}
-                                      {%- else -%}
-                                        {%- if pair.size >= 3 -%}
-                                          {{ mf.value[pair[2]] }}
-                                        {%- else -%}
-                                          {{ mf | metafield_tag }}
-                                        {%- endif -%}
-                                      {%- endunless -%}
-                                    {%- else -%}
-                                      <ul>
-                                        {%- for v in mf.value -%}
-                                          <li>
-                                            {%- if mf.type contains 'product_reference' or mf.type contains 'variant_reference' -%}
-                                              <a href="{{ v.url }}">{{ v.title }}</a>
-                                            {%- elsif mf.type contains 'metaobject_reference' and pair.size >= 3 -%}
-                                              {{ v[pair[2]] }}
-                                            {%- else -%}
-                                              {{ v }}
-                                            {%- endif -%}
-                                          </li>
-                                        {%- endfor -%}
-                                      </ul>
-                                    {%- endunless -%}
-                                  {%- else -%}
-                                    {%- if mf.value == true -%}
-                                      {{ 'general.boolean.true' | t }}
-                                    {%- else -%}
-                                      {{ 'general.boolean.false' | t }}
-                                    {%- endif -%}
-                                  {%- endunless -%}
-                                {%- endif -%}
-                              </div>
-                            </li>
-                          {%- endif -%}
-                        {%- endif -%}
-                      {%- endfor -%}
-                    </ul>
-                    {%- if attr_count > 0 -%}
-                      {%- assign has_content = true -%}
-                    {%- endif -%}
-                  {%- endif -%}
-                {%- endcapture -%}
-              {%- endif -%}
-
-              {%- comment -%}
-                VĚTEV B: Fallback na attribute_set z kolekcí (pokud A nic nenašla).
-                NORMALIZACE: attribute.metafield_key -> lowercase + '_' (mezery a '-').
-                PRIORITA: variant.product_attributes[key] -> variant.product_variant_attribute[key] -> product.product_attributes[key].
-              {%- endcomment -%}
-              {%- if has_content == false -%}
-                {%- capture block_content -%}
-                  {%- assign attr_count = 0 -%}
-                  <ul class="product-attributes__table-item__specifications-list grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
-                    {%- for collection in product.collections -%}
-                      {%- assign attribute_set = collection.metafields.product_attributes.product_attribute_set.value.list.value -%}
-                      {%- for attribute in attribute_set -%}
-                        {%- if attribute.metafield_key != blank -%}
-                          {%- assign raw_key = attribute.metafield_key | strip -%}
-                          {%- assign key = raw_key | downcase | replace: ' ', '_' | replace: '-', '_' -%}
-
-                          {%- assign attribute_metafield = current_variant.metafields.product_attributes[key] -%}
-                          {%- if attribute_metafield == blank -%}
-                            {%- assign attribute_metafield = current_variant.metafields.product_variant_attribute[key] -%}
-                          {%- endif -%}
-                          {%- if attribute_metafield == blank -%}
-                            {%- assign attribute_metafield = product.metafields.product_attributes[key] -%}
-                          {%- endif -%}
-
-                          {%- if attribute_metafield != blank -%}
-                            {%- assign attr_count = attr_count | plus: 1 -%}
-                            <li class="grid__item">
-                              <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute.display_name | capitalize }}</h4>
-                              <div class="rte{% if attribute_metafield.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
-                                {%- unless attribute_metafield.type == 'boolean' -%}
-                                  {%- unless attribute_metafield.type contains 'list.' and attribute_metafield.type != 'list.single_line_text_field' -%}
-                                    {%- unless attribute_metafield.type contains 'metaobject_reference' -%}
-                                      {{ attribute_metafield | metafield_tag }}
-                                    {%- else -%}
-                                      {{ attribute_metafield | metafield_tag }}
-                                    {%- endunless -%}
+                                {%- unless mf and mf.type == 'boolean' -%}
+                                  {%- unless mf and mf.type contains 'list.' and mf.type != 'list.single_line_text_field' -%}
+                                    {% unless mf and mf.type contains 'metaobject_reference' %}
+                                      {{ mf | metafield_tag }}
+                                    {% else %}
+                                      {{ mf.value[pair[2]] }}
+                                    {% endunless %}
                                   {%- else -%}
                                     <ul>
-                                      {%- for v in attribute_metafield.value -%}
+                                      {%- for field in mf.value -%}
                                         <li>
-                                          {%- if attribute_metafield.type contains 'product_reference' or attribute_metafield.type contains 'variant_reference' -%}
-                                            <a href="{{ v.url }}">{{ v.title }}</a>
+                                          {%- if mf.type contains 'product_reference' or mf.type contains 'variant_reference' -%}
+                                            <a href="{{ field.url }}">{{ field.title }}</a>
+                                          {%- elsif mf.type contains 'metaobject_reference' -%}
+                                            {{ field[pair[2]] }}
                                           {%- else -%}
-                                            {{ v }}
+                                            {{ field }}
                                           {%- endif -%}
                                         </li>
                                       {%- endfor -%}
                                     </ul>
                                   {%- endunless -%}
                                 {%- else -%}
-                                  {%- if attribute_metafield.value == true -%}
+                                  {%- if mf.value == true -%}
                                     {{ 'general.boolean.true' | t }}
                                   {%- else -%}
                                     {{ 'general.boolean.false' | t }}
@@ -245,19 +170,68 @@
                           {%- endif -%}
                         {%- endif -%}
                       {%- endfor -%}
-                    {%- endfor -%}
-                  </ul>
-                  {%- if attr_count > 0 -%}
-                    {%- assign has_content = true -%}
+                    </ul>
                   {%- endif -%}
                 {%- endcapture -%}
+              {% else %}
+                {%- capture block_content -%}
+                  {% for collection in product.collections %}
+                    {% assign attribute_set = collection.metafields.product_attributes.product_attribute_set.value.list.value %}
+                    {% for attribute in attribute_set %}
+                      {% if attribute.metafield_key != blank %}
+                        {%-liquid
+                          assign raw_key = attribute.metafield_key | strip
+                          assign key_norm = raw_key | downcase | replace: ' ', '_' | replace: '-', '_'
+                        -%}
+                        {% assign attribute_metafield =
+                          current_variant.metafields.product_attributes[key_norm]
+                          | default: current_variant.metafields.product_variant_attribute[key_norm]
+                          | default: product.metafields.product_attributes[key_norm]
+                        %}
+                        {% if attribute_metafield != blank %}
+                          {% assign has_content = true %}
+                          <li class="grid__item">
+                            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute.display_name | capitalize }}</h4>
+                            <div class="rte{% if attribute_metafield.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
+                              {%- unless attribute_metafield.type == 'boolean' -%}
+                                {%- unless attribute_metafield.type contains 'list.' and attribute_metafield.type != 'list.single_line_text_field' -%}
+                                  {% unless attribute_metafield.type contains 'metaobject_reference' %}
+                                    {{ attribute_metafield | metafield_tag }}
+                                  {% endunless %}
+                                {%- else -%}
+                                  <ul>
+                                    {%- for field in attribute_metafield.value -%}
+                                      <li>
+                                        {%- if attribute_metafield.type contains 'product_reference' or attribute_metafield.type contains 'variant_reference' -%}
+                                          <a href="{{ field.url }}">{{ field.title }}</a>
+                                        {%- else -%}
+                                          {{ field }}
+                                        {%- endif -%}
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                {%- endunless -%}
+                              {%- else -%}
+                                {%- if attribute_metafield.value == true -%}
+                                  {{ 'general.boolean.true' | t }}
+                                {%- else -%}
+                                  {{ 'general.boolean.false' | t }}
+                                {%- endif -%}
+                              {%- endunless -%}
+                            </div>
+                          </li>
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+                {%- endcapture -%}
               {%- endif -%}
-
-              {%- assign is_display = has_content -%}
-              {%- if request.design_mode and block.settings.title != blank and is_display == false -%}
-                {%- assign is_display = true -%}
-              {%- endif -%}
-
+              {%-liquid
+                assign is_display = has_content
+                if request.design_mode and block.settings.title != blank and is_display == false
+                  assign is_display = true
+                endif
+              -%}
               {%- if is_display -%}
                 <div class="grid__item product-attributes__table__specifications" {{ block.shopify_attributes }}>
                   <div class="product-attributes__table-item">
@@ -272,55 +246,214 @@
                     </div>
                     <div class="product-attributes__table-item__content product-attributes__table-item__content--specifications text-medium">
                       {{ block_content }}
-                    </div>
-                  </div>
-                </div>
-              {%- endif -%}
+									</div>
+									</div>
+									</div>
+								{%- endif -%}
             {%- endif -%}
-          {%- endfor -%}
-        </{% if has_dynamic_attributes %}product-attributes-table{% else %}div{% endif %}>
-
+					{%- endfor -%}
+				</{% if has_dynamic_attributes %}product-attributes-table{% else %}div{% endif %}>
         {%- if has_dynamic_attributes -%}
           <script src="{{ 'component-product-attributes-table.js' | asset_url }}" defer="defer"></script>
         {%- endif -%}
-      {%- endif -%}
+			{%- endif -%}
     </div>
   </div>
 </div>
-
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>
   {{ 'component-rte.css' | asset_url | stylesheet_tag }}
 </noscript>
-
 {% schema %}
 {
   "name": "t:sections.main-product-attributes.name",
   "tag": "section",
   "class": "section",
   "blocks": [
-    { "type": "product_brand", "name": "t:sections.main-product-attributes.blocks.product_brand.name", "settings": [ { "type": "text", "id": "title", "label": "t:sections.main-product-attributes.blocks.product_brand.settings.title.label", "default": "Brand" } ], "limit": 1 },
-    { "type": "product_type", "name": "t:sections.main-product-attributes.blocks.product_type.name", "settings": [ { "type": "text", "id": "title", "label": "t:sections.main-product-attributes.blocks.product_type.settings.title.label", "default": "Type" } ], "limit": 1 },
-    { "type": "product_sku", "name": "t:sections.main-product-attributes.blocks.product_sku.name", "settings": [ { "type": "text", "id": "title", "label": "t:sections.main-product-attributes.blocks.product_sku.settings.title.label", "default": "SKU" } ], "limit": 1 },
-    { "type": "product_weight", "name": "t:sections.main-product-attributes.blocks.product_weight.name", "settings": [ { "type": "text", "id": "title", "label": "t:sections.main-product-attributes.blocks.product_weight.settings.title.label", "default": "Weight" } ], "limit": 1 },
-    { "type": "product_text", "name": "t:sections.main-product-attributes.blocks.product_text.name", "settings": [ { "type": "text", "id": "title", "label": "t:sections.main-product-attributes.blocks.product_text.settings.title.label", "default": "Dimensions" }, { "type": "inline_richtext", "id": "content", "label": "t:sections.main-product-attributes.blocks.product_text.settings.content.label" } ] },
-    { "type": "specifications", "name": "t:sections.main-product-attributes.blocks.specifications.name", "settings": [ { "type": "text", "id": "title", "label": "t:sections.main-product-attributes.blocks.specifications.settings.title.label", "default": "Technical specs" }, { "type": "text", "id": "metafields", "label": "t:sections.main-product-attributes.blocks.specifications.settings.metafields.label", "info": "t:sections.main-product-attributes.blocks.specifications.settings.metafields.info" } ] }
+    {
+      "type": "product_brand",
+      "name": "t:sections.main-product-attributes.blocks.product_brand.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-product-attributes.blocks.product_brand.settings.title.label",
+          "default": "Brand"
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "type": "product_type",
+      "name": "t:sections.main-product-attributes.blocks.product_type.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-product-attributes.blocks.product_type.settings.title.label",
+          "default": "Type"
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "type": "product_sku",
+      "name": "t:sections.main-product-attributes.blocks.product_sku.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-product-attributes.blocks.product_sku.settings.title.label",
+          "default": "SKU"
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "type": "product_weight",
+      "name": "t:sections.main-product-attributes.blocks.product_weight.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-product-attributes.blocks.product_weight.settings.title.label",
+          "default": "Weight"
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "type": "product_text",
+      "name": "t:sections.main-product-attributes.blocks.product_text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-product-attributes.blocks.product_text.settings.title.label",
+          "default": "Dimensions"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "content",
+          "label": "t:sections.main-product-attributes.blocks.product_text.settings.content.label"
+        }
+      ]
+    },
+    {
+      "type": "specifications",
+      "name": "t:sections.main-product-attributes.blocks.specifications.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-product-attributes.blocks.specifications.settings.title.label",
+          "default": "Technical specs"
+        },
+        {
+          "type": "text",
+          "id": "metafields",
+          "label": "t:sections.main-product-attributes.blocks.specifications.settings.metafields.label",
+          "info": "t:sections.main-product-attributes.blocks.specifications.settings.metafields.info"
+        }
+      ]
+    }
   ],
   "settings": [
-    { "type": "checkbox", "id": "show_description", "label": "t:sections.main-product-attributes.settings.show_description.label", "default": false },
-    { "type": "text", "id": "title", "default": "Product information", "label": "t:sections.main-product-attributes.settings.title.label" },
-    { "type": "text", "id": "subtitle", "label": "t:sections.main-product-attributes.settings.subtitle.label" },
-    { "type": "select", "id": "heading_size", "options": [ { "value": "h2", "label": "t:sections.all.heading_size.options__1.label" }, { "value": "h1", "label": "t:sections.all.heading_size.options__2.label" }, { "value": "h0", "label": "t:sections.all.heading_size.options__3.label" } ], "default": "h1", "label": "t:sections.all.heading_size.label" },
-    { "type": "checkbox", "id": "enable_section_box_layout", "label": "t:sections.all.enable_section_box_layout.label", "default": false },
-    { "type": "color_scheme", "id": "color_scheme", "default": "inverse", "label": "t:sections.all.colors.label" },
-    { "type": "color_scheme", "id": "table_color_scheme", "default": "background-1", "label": "t:sections.main-product-attributes.settings.table_color_scheme.label" },
-    { "type": "header", "content": "t:sections.all.padding.section_padding_heading" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_top", "default": 36 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_bottom", "default": 36 }
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "t:sections.main-product-attributes.settings.show_description.label",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Product information",
+      "label": "t:sections.main-product-attributes.settings.title.label"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "t:sections.main-product-attributes.settings.subtitle.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_section_box_layout",
+      "label": "t:sections.all.enable_section_box_layout.label",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "inverse",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "table_color_scheme",
+      "default": "background-1",
+      "label": "t:sections.main-product-attributes.settings.table_color_scheme.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
   ],
   "presets": [
-    { "name": "t:sections.main-product-attributes.presets.name", "blocks": [ { "type": "product_brand" }, { "type": "product_type" } ] }
+    {
+      "name": "t:sections.main-product-attributes.presets.name",
+      "blocks": [
+        {
+          "type": "product_brand"
+        },
+        {
+          "type": "product_type"
+        }
+      ]
+    }
   ],
-  "templates": [ "product" ]
+  "templates": [
+    "product"
+  ]
 }
 {% endschema %}
