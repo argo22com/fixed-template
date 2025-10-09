@@ -1,223 +1,57 @@
 {% comment %}
-  Renders a list of product attributes
+	Renders parameter section
 
-  Accepts:
-  - products: {Array} Array of products to compare
-  - product : {Product} Product to show
+	Accepts:
+	- product: {product} Product
+	- show_sku: {boolean} Should show SKU
+	- title: {String} Title of tab
 
-  Usage:
-  {% render 'product-attribute-set', products: products %}
-  {% render 'product-attribute-set', product: product %}
+	Usage:
+	{% render 'main-product-attributes', product: product, show_sku: true, title: "Test" %}
 {% endcomment %}
 
-{%- comment -%} ===== DEBUG START (dočasné) ===== {%- endcomment -%}
-{%- assign DEBUG = true -%}
-{%- if DEBUG -%}
-  <details style="padding:12px;border:1px dashed #888;margin:10px 0">
-    <summary><strong>DEBUG: product-attribute-set</strong></summary>
-    <div style="font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:13px; line-height:1.5">
-      <div><b>Produkt:</b> {{ product.title }} (ID {{ product.id }})</div>
-      <div><b>Varianta:</b> {{ product.selected_or_first_available_variant.title }} (ID {{ product.selected_or_first_available_variant.id }})</div>
+{% liquid
+    assign enable_section_box_layout = false
+    assign current_variant = product.selected_or_first_available_variant
+%}
 
-      <hr>
-      <div><b>Kolekce & attribute_set:</b></div>
-      <ul>
-        {% for c in product.collections %}
-          <li>
-            <b>{{ c.title }}</b> — attribute_set existuje?
-            <code>
-              {% if c.metafields.product_attributes.product_attribute_set.value %}
-                true
-              {% else %}
-                false
-              {% endif %}
-            </code>
-            {% if c.metafields.product_attributes.product_attribute_set.value %}
-              <div>počet:
-                <code>
-                  {{ c.metafields.product_attributes.product_attribute_set.value.list.value.size }}
-                </code>
-              </div>
-              <ul>
-                {% for a in c.metafields.product_attributes.product_attribute_set.value.list.value %}
-                  {% assign raw = a.metafield_key | strip %}
-                  {% assign norm = raw | downcase | replace: ' ', '_' | replace: '-', '_' %}
-                  <li>key: <code>{{ raw }}</code> → norm: <code>{{ norm }}</code>; label: <code>{{ a.display_name }}</code></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-
-      <hr>
-      <div><b>Metafields na variantě:</b></div>
-      <details>
-        <summary>variant.product_attributes (JSON)</summary>
-        <pre style="white-space:pre-wrap">{{ product.selected_or_first_available_variant.metafields.product_attributes | json }}</pre>
-      </details>
-      <details>
-        <summary>variant.product_variant_attribute (JSON)</summary>
-        <pre style="white-space:pre-wrap">{{ product.selected_or_first_available_variant.metafields.product_variant_attribute | json }}</pre>
-      </details>
-
-      <div><b>Metafields na produktu:</b></div>
-      <details>
-        <summary>product.product_attributes (JSON)</summary>
-        <pre style="white-space:pre-wrap">{{ product.metafields.product_attributes | json }}</pre>
-      </details>
-
-      <hr>
-      {% assign probe_keys = "FREKVENCE_TO,FREKVENCE_OD,IMPEDANCE,CITLIVOST" | split: "," %}
-      <div><b>Rozřešení „probe“ klíčů:</b></div>
-      <table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse">
-        <tr>
-          <th>raw</th>
-          <th>norm</th>
-          <th>zdroj</th>
-          <th>found?</th>
-          <th>náhled</th>
-        </tr>
-        {% for rawk in probe_keys %}
-          {% assign normk = rawk | strip | downcase | replace: ' ', '_' | replace: '-', '_' %}
-          {% assign v = product.selected_or_first_available_variant %}
-
-          {% assign src = "" %}
-          {% assign mf = v.metafields.product_attributes[normk] %}
-          {% if mf != blank %}
-            {% assign src = "variant.product_attributes" %}
-          {% else %}
-            {% assign mf = v.metafields.product_variant_attribute[normk] %}
-            {% if mf != blank %}
-              {% assign src = "variant.product_variant_attribute" %}
-            {% else %}
-              {% assign mf = product.metafields.product_attributes[normk] %}
-              {% if mf != blank %}
-                {% assign src = "product.product_attributes" %}
-              {% endif %}
-            {% endif %}
-          {% endif %}
-
-          <tr>
-            <td><code>{{ rawk }}</code></td>
-            <td><code>{{ normk }}</code></td>
-            <td><code>{% if src != blank %}{{ src }}{% else %}—{% endif %}</code></td>
-            <td><code>{% if mf != blank %}true{% else %}false{% endif %}</code></td>
-            <td>
-              {% if mf != blank %}
-                {{ mf | metafield_tag }}
-              {% else %}
-                <em>—</em>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-      </table>
-    </div>
-  </details>
-{%- endif -%}
-{%- comment -%} ===== DEBUG END ===== {%- endcomment -%}
-
-{%- assign attribute_names = '' -%}
-{%- assign attribute_keys  = '' -%}
-
-{%- comment -%} Collect attributes from collections' attribute_set {%- endcomment -%}
-{% if products != blank %}
-  {% for p in products %}
-    {% for collection in p.collections %}
-      {% assign aset = collection.metafields.product_attributes.product_attribute_set.value %}
-      {% if aset %}
-        {% for attribute in aset.list.value %}
-          {% if attribute.metafield_key == blank %}{% continue %}{% endif %}
-          {% assign raw  = attribute.metafield_key | strip %}
-          {% assign key  = raw  | downcase | replace: ' ', '_' | replace: '-', '_' %}
-          {% assign label = attribute.display_name | default: key | replace: '_', ' ' | capitalize %}
-          {% unless attribute_keys contains key %}
-            {% assign attribute_names = attribute_names | append: label | append: '|' %}
-            {% assign attribute_keys  = attribute_keys  | append: key   | append: '|' %}
-          {% endunless %}
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-{% elsif product != blank %}
-  {% for collection in product.collections %}
-    {% assign aset = collection.metafields.product_attributes.product_attribute_set.value %}
-    {% if aset %}
-      {% for attribute in aset.list.value %}
-        {% if attribute.metafield_key == blank %}{% continue %}{% endif %}
-        {% assign raw  = attribute.metafield_key | strip %}
-        {% assign key  = raw  | downcase | replace: ' ', '_' | replace: '-', '_' %}
-        {% assign label = attribute.display_name | default: key | replace: '_', ' ' | capitalize %}
-        {% unless attribute_keys contains key %}
-          {% assign attribute_names = attribute_names | append: label | append: '|' %}
-          {% assign attribute_keys  = attribute_keys  | append: key   | append: '|' %}
-        {% endunless %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-
-{%- assign attribute_names = attribute_names | split: '|' | compact | uniq -%}
-{%- assign attribute_keys  = attribute_keys  | split: '|' | compact | uniq -%}
-{%- assign keys_length = attribute_keys.size | minus: 1 -%}
-
-{%- comment -%} === Compare view === {%- endcomment -%}
-{% if products != blank %}
-  {% for i in (0..keys_length) %}
-    {%- assign key = attribute_keys[i] -%}
-    {%- assign all_empty = true -%}
-    {% for p in products %}
-      {%- assign v = p.selected_or_first_available_variant -%}
-      {%- assign mf = v.metafields.product_attributes[key] -%}
-      {%- if mf == blank -%}{%- assign mf = v.metafields.product_variant_attribute[key] -%}{%- endif -%}
-      {%- if mf == blank -%}{%- assign mf = p.metafields.product_attributes[key] -%}{%- endif -%}
-      {%- if mf != blank -%}
-        {%- assign all_empty = false -%}
-        {%- break -%}
-      {%- endif -%}
-    {% endfor %}
-
-    {% if all_empty == false %}
-      <tr>
-        <th>{{ attribute_names[i] }}:</th>
-        {% for p in products %}
-          {%- assign v = p.selected_or_first_available_variant -%}
-          {%- assign mf = v.metafields.product_attributes[key] -%}
-          {%- if mf == blank -%}{%- assign mf = v.metafields.product_variant_attribute[key] -%}{%- endif -%}
-          {%- if mf == blank -%}{%- assign mf = p.metafields.product_attributes[key] -%}{%- endif -%}
-          <td class="product-compare-{{ p.id }}">
-            {% if mf != blank %}
-              {% render 'metafield-display', attribute_metafield: mf %}
-            {% else %}
-              &nbsp;
-            {% endif %}
-          </td>
-        {% endfor %}
-      </tr>
-    {% endif %}
-  {% endfor %}
-
-{%- comment -%} === Single product view === {%- endcomment -%}
-{% elsif product != blank %}
-  <div class="w100">
-    <div class="grid">
-      {% for i in (0..keys_length) %}
-        {%- assign key = attribute_keys[i] -%}
-        {%- assign v = product.selected_or_first_available_variant -%}
-        {%- assign attribute_metafield = v.metafields.product_attributes[key] -%}
-        {%- if attribute_metafield == blank -%}{%- assign attribute_metafield = v.metafields.product_variant_attribute[key] -%}{%- endif -%}
-        {%- if attribute_metafield == blank -%}{%- assign attribute_metafield = product.metafields.product_attributes[key] -%}{%- endif -%}
-
-        {% if attribute_metafield != blank %}
-          <div class="grid__item">
-            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
-            <div class="rte">
-              {% render 'metafield-display', attribute_metafield: attribute_metafield %}
+{%- style -%}
+    {%- render 'section-heading-styles' -%}
+{%- endstyle -%}
+{{ 'section-main-product-attributes.css' | asset_url | stylesheet_tag }}
+<div class="{% unless enable_section_box_layout %} gradient isolate{% else %}page-width{% endunless %}">
+    <div class="{% unless enable_section_box_layout %}page-width{% else %}gradient isolate section__box{% endunless %}">
+        {%- render 'section-heading' -%}
+        <div class="product-attributes">
+            <div class="product-attributes__table grid grid--1-col grid--2-col-tablet grid--3-col-desktop"
+                 data-section="{{ section.id }}" data-url="{{ product.url }}">
+                {%- if show_sku -%}
+                    <div class="grid__item" style="padding-bottom: 1em" {{ block.shopify_attributes }}>
+                        <div class="product-attributes__table-item flex flex-column">
+                            <h3 class="product-attributes__table-item__title margin0 font-heading-bold h5">SKU</h3>
+                            <div class="product-attributes__table-item__content text-medium margin-top-1rem product-attributes__tablet-item-light">
+                                {{ current_variant.sku }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {%- liquid
+                    assign has_content = true
+                -%}
+                {%- liquid
+                    assign is_display = has_content
+                    if request.design_mode and is_display == false
+                        assign is_display = true
+                    endif
+                -%}
+                {%- if is_display -%}
+                    {% render 'product-attribute-set', product: product %}
+                {%- endif -%}
             </div>
-          </div>
-        {% endif %}
-      {% endfor %}
+        </div>
     </div>
-  </div>
-{% endif %}
+</div>
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+    {{ 'component-rte.css' | asset_url | stylesheet_tag }}
+</noscript>
