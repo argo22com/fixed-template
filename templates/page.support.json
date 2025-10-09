@@ -244,7 +244,7 @@
         "desktop_content_width": "large",
         "content_alignment": "left",
         "enable_section_box_layout": false,
-        "color_scheme": "",
+        "color_scheme": "background-2",
         "full_width": true,
         "padding_top": 28,
         "padding_bottom": 32
