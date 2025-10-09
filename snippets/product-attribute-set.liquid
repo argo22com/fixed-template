@@ -1,23 +1,19 @@
 {% comment %}
   Renders a list of product attributes
+
   Accepts:
-  - products: {Array} products to compare
-  - product:  {Product} single product
+  - products: {Array} Array of products to compare
+  - product : {Product} Product to show
 
   Usage:
   {% render 'product-attribute-set', products: products %}
   {% render 'product-attribute-set', product: product %}
 {% endcomment %}
 
-{% liquid
-  assign attribute_names = ''
-  assign attribute_keys  = ''
+{%- assign attribute_names = '' -%}
+{%- assign attribute_keys  = '' -%}
 
-  # Helper: přidání položky do seznamů (unikátně dle normalized key)
-  # (Liquid bez funkcí → řešíme níže manuálně)
-%}
-
-{%- comment -%} Sběr atributů z attribute_set (kolekce) {%- endcomment -%}
+{%- comment -%} Collect attributes from collections' attribute_set {%- endcomment -%}
 {% if products != blank %}
   {% for p in products %}
     {% for collection in p.collections %}
@@ -25,10 +21,9 @@
       {% if aset %}
         {% for attribute in aset.list.value %}
           {% if attribute.metafield_key == blank %}{% continue %}{% endif %}
-          {% assign raw = attribute.metafield_key | strip %}
-          {% assign key = raw | downcase | replace: ' ', '_' | replace: '-', '_' %}
+          {% assign raw  = attribute.metafield_key | strip %}
+          {% assign key  = raw  | downcase | replace: ' ', '_' | replace: '-', '_' %}
           {% assign label = attribute.display_name | default: key | replace: '_', ' ' | capitalize %}
-
           {% unless attribute_keys contains key %}
             {% assign attribute_names = attribute_names | append: label | append: '|' %}
             {% assign attribute_keys  = attribute_keys  | append: key   | append: '|' %}
@@ -43,10 +38,9 @@
     {% if aset %}
       {% for attribute in aset.list.value %}
         {% if attribute.metafield_key == blank %}{% continue %}{% endif %}
-        {% assign raw = attribute.metafield_key | strip %}
-        {% assign key = raw | downcase | replace: ' ', '_' | replace: '-', '_' %}
+        {% assign raw  = attribute.metafield_key | strip %}
+        {% assign key  = raw  | downcase | replace: ' ', '_' | replace: '-', '_' %}
         {% assign label = attribute.display_name | default: key | replace: '_', ' ' | capitalize %}
-
         {% unless attribute_keys contains key %}
           {% assign attribute_names = attribute_names | append: label | append: '|' %}
           {% assign attribute_keys  = attribute_keys  | append: key   | append: '|' %}
@@ -56,46 +50,34 @@
   {% endfor %}
 {% endif %}
 
-{%- comment -%} Dedup + finální pole {%- endcomment -%}
-{% assign attribute_names = attribute_names | split: '|' | compact | uniq %}
-{% assign attribute_keys  = attribute_keys  | split: '|' | compact | uniq %}
-{% assign keys_length = attribute_keys.size | minus: 1 %}
+{%- assign attribute_names = attribute_names | split: '|' | compact | uniq -%}
+{%- assign attribute_keys  = attribute_keys  | split: '|' | compact | uniq -%}
+{%- assign keys_length = attribute_keys.size | minus: 1 -%}
 
-{%- comment -%} === Víc produktů (srovnání) === {%- endcomment -%}
+{%- comment -%} === Compare view === {%- endcomment -%}
 {% if products != blank %}
   {% for i in (0..keys_length) %}
-    {% liquid
-      assign key = attribute_keys[i]
-      assign all_empty = true
-
-      for p in products
-        assign v = p.selected_or_first_available_variant
-
-        # PRIORITA: v.product_attributes -> v.product_variant_attribute -> p.product_attributes
-        assign mf = v.metafields.product_attributes[key]
-        if mf == blank
-          assign mf = v.metafields.product_variant_attribute[key]
-        endif
-        if mf == blank
-          assign mf = p.metafields.product_attributes[key]
-        endif
-
-        if mf != blank
-          assign all_empty = false
-          break
-        endif
-      endfor
-    %}
+    {%- assign key = attribute_keys[i] -%}
+    {%- assign all_empty = true -%}
+    {% for p in products %}
+      {%- assign v = p.selected_or_first_available_variant -%}
+      {%- assign mf = v.metafields.product_attributes[key] -%}
+      {%- if mf == blank -%}{%- assign mf = v.metafields.product_variant_attribute[key] -%}{%- endif -%}
+      {%- if mf == blank -%}{%- assign mf = p.metafields.product_attributes[key] -%}{%- endif -%}
+      {%- if mf != blank -%}
+        {%- assign all_empty = false -%}
+        {%- break -%}
+      {%- endif -%}
+    {% endfor %}
 
     {% if all_empty == false %}
       <tr>
         <th>{{ attribute_names[i] }}:</th>
         {% for p in products %}
-          {% assign v = p.selected_or_first_available_variant %}
-          {% assign mf = v.metafields.product_attributes[attribute_keys[i]] %}
-          {% if mf == blank %}{% assign mf = v.metafields.product_variant_attribute[attribute_keys[i]] %}{% endif %}
-          {% if mf == blank %}{% assign mf = p.metafields.product_attributes[attribute_keys[i]] %}{% endif %}
-
+          {%- assign v = p.selected_or_first_available_variant -%}
+          {%- assign mf = v.metafields.product_attributes[key] -%}
+          {%- if mf == blank -%}{%- assign mf = v.metafields.product_variant_attribute[key] -%}{%- endif -%}
+          {%- if mf == blank -%}{%- assign mf = p.metafields.product_attributes[key] -%}{%- endif -%}
           <td class="product-compare-{{ p.id }}">
             {% if mf != blank %}
               {% render 'metafield-display', attribute_metafield: mf %}
@@ -108,24 +90,16 @@
     {% endif %}
   {% endfor %}
 
-{%- comment -%} === Jeden produkt === {%- endcomment -%}
+{%- comment -%} === Single product view === {%- endcomment -%}
 {% elsif product != blank %}
   <div class="w100">
     <div class="grid">
       {% for i in (0..keys_length) %}
-        {% liquid
-          assign key = attribute_keys[i]
-          assign v = product.selected_or_first_available_variant
-
-          # PRIORITA: v.product_attributes -> v.product_variant_attribute -> p.product_attributes
-          assign attribute_metafield = v.metafields.product_attributes[key]
-          if attribute_metafield == blank
-            assign attribute_metafield = v.metafields.product_variant_attribute[key]
-          endif
-          if attribute_metafield == blank
-            assign attribute_metafield = product.metafields.product_attributes[key]
-          endif
-        %}
+        {%- assign key = attribute_keys[i] -%}
+        {%- assign v = product.selected_or_first_available_variant -%}
+        {%- assign attribute_metafield = v.metafields.product_attributes[key] -%}
+        {%- if attribute_metafield == blank -%}{%- assign attribute_metafield = v.metafields.product_variant_attribute[key] -%}{%- endif -%}
+        {%- if attribute_metafield == blank -%}{%- assign attribute_metafield = product.metafields.product_attributes[key] -%}{%- endif -%}
 
         {% if attribute_metafield != blank %}
           <div class="grid__item">
