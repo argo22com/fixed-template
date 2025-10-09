@@ -216,7 +216,7 @@
         "button_VNRhFk": {
           "type": "button",
           "settings": {
-            "button_label": "FAQ",
+            "button_label": "Více FAQ",
             "button_link": "https://fixed.zone/pages/faq",
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
