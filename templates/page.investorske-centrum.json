@@ -242,15 +242,6 @@
             "row_content": "",
             "page": "upis-akcii-ipo"
           }
-        },
-        "collapsible_row_aDmRpJ": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "emoji_happy",
-            "row_content": "",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -260,8 +251,7 @@
         "collapsible_row_NRBz4F",
         "collapsible_row_kDmbWF",
         "collapsible_row_e8iPYa",
-        "collapsible_row_Xn8Fdn",
-        "collapsible_row_aDmRpJ"
+        "collapsible_row_Xn8Fdn"
       ],
       "settings": {
         "section_width": "grid",
