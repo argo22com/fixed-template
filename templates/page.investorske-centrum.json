@@ -318,6 +318,16 @@
             "page": ""
           }
         },
+        "collapsible_row_tiM3dU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Elektromobilita",
+            "icon": "document",
+            "row_content": "<p>Pořízení vozidel na elektrický pohon</p>",
+            "liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/elektromobilita.pdf_1024x1024_9beaa9c7-d10f-4821-8a67-fb33cb74dd94.webp?v=1760013689\">",
+            "page": ""
+          }
+        },
         "collapsible_row_V3pK8N": {
           "type": "collapsible_row",
           "settings": {
@@ -344,6 +354,7 @@
         "collapsible_row_aPXWGR",
         "collapsible_row_xNrNtb",
         "collapsible_row_UpW7iD",
+        "collapsible_row_tiM3dU",
         "collapsible_row_V3pK8N",
         "collapsible_row_63FBme"
       ],
@@ -377,6 +388,7 @@
       "block_order": [
         "heading_NqVVhg"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "large",
@@ -390,6 +402,7 @@
     },
     "image_banner_hcNRxN": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
         "layout": "grid",
         "image": "shopify://shop_images/publicita_na_obrazovku_b44f5e95-a818-43a3-9a52-220e3f87edd4.png",
@@ -432,6 +445,7 @@
     },
     "page_UEwNU4": {
       "type": "page",
+      "disabled": true,
       "settings": {
         "page": "projekty",
         "heading_size": "h2",
