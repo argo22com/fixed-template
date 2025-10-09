@@ -30,7 +30,6 @@
 					{{ description }}
 				</div>
 			{%- endif -%}
-
 			{%- if section.blocks.size > 0 -%}
         {%- liquid
           assign current_variant = product.selected_or_first_available_variant
@@ -60,33 +59,33 @@
                     {%-liquid
                       case block.type
                         when 'product_brand'
-                          if product.vendor != blank
-                            assign vendor_url = product.vendor | url_for_vendor
-                            echo '<a class="link link-effect-no-underline" href="' | append: vendor_url | append: '">'
-                            echo product.vendor | capitalize
-                            echo '</a>'
-                          elsif request.design_mode
-                            echo 'products.product.vendor' | t | capitalize
-                          endif
-                        when 'product_type'
-                          if product.type != blank
-                            assign type_url = product.type | url_for_type
-                            echo '<a class="link link-effect-no-underline" href="' | append: type_url | append: '">'
-                            echo product.type | capitalize
-                            echo '</a>'
-                          endif
-                        when 'product_sku'
-                          if current_variant.sku != blank
-                            echo current_variant.sku
-                          endif
-                        when 'product_weight'
-                          if current_variant.weight != blank
-                            echo current_variant.weight | weight_with_unit
-                          endif
-                        when 'product_text'
-                          if block.settings.content != blank
-                            echo block.settings.content
-                          endif
+                        if product.vendor != blank
+                          assign vendor_url = product.vendor | url_for_vendor
+                          echo '<a class="link link-effect-no-underline" href="' | append: vendor_url | append: '">'
+                          echo product.vendor | capitalize
+                          echo '</a>'
+                        elsif request.design_mode
+                          echo 'products.product.vendor' | t | capitalize
+                        endif
+                      when 'product_type'
+                        if product.type != blank
+                          assign type_url = product.type | url_for_type
+                          echo '<a class="link link-effect-no-underline" href="' | append: type_url | append: '">'
+                          echo product.type | capitalize
+                          echo '</a>'
+                        endif
+                      when 'product_sku'
+                        if current_variant.sku != blank
+                          echo current_variant.sku
+                        endif
+                      when 'product_weight'
+                        if current_variant.weight != blank
+                          echo current_variant.weight | weight_with_unit
+                        endif
+                      when 'product_text'
+                        if block.settings.content != blank
+                          echo block.settings.content
+                        endif
                       endcase
                     -%}
 									</div>
@@ -94,17 +93,16 @@
               </div>
             {%- else -%}
               {%-liquid
-                assign has_content = false
+                assign has_content = true
                 assign block_content = ''
               -%}
-
               {%- if block.settings.metafields != blank -%}
                 {%- capture block_content -%}
                   {%- assign metafields_array = block.settings.metafields | split: ',' -%}
                   {%- if metafields_array.size > 0 -%}
                     <ul class="product-attributes__table-item__specifications-list grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
                       {%- for field in metafields_array -%}
-                        {%- liquid
+                        {%-liquid
                           assign splits = field | split: ':'
                           if splits.size == 1
                             assign pair = field | replace: ' ', '' | split: '.'
@@ -113,7 +111,7 @@
                           endif
                         -%}
                         {%- if pair.size >= 2 -%}
-                          {%- liquid
+                          {%-liquid
                             assign namespace = pair[0]
                             assign key = pair[1]
                             if splits.size == 1
@@ -121,59 +119,41 @@
                             else
                               assign item_label = splits[0] | strip
                             endif
-
-                            assign mf_product = product.metafields[namespace][key]
-                            assign mf_variant_attr = current_variant.metafields.product_variant_attribute[key]
-                            assign mf = null
-                            if mf_product != blank
-                              assign mf = mf_product
-                            elsif mf_variant_attr != blank
-                              assign mf = mf_variant_attr
-                            endif
                           -%}
-
-                          {%- if mf != blank or request.design_mode -%}
-                            {%- assign has_content = true -%}
+                          {%- if product.metafields[namespace][key] != blank or request.design_mode -%}
                             <li class="grid__item">
+                              {%- assign has_content = true -%}
                               <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ item_label | replace: '_', ' ' }}</h4>
-                              <div class="rte{% if mf != blank and mf.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
-                                {%- if mf == blank -%}
-                                  <!-- placeholder v design módu -->
-                                {%- else -%}
-                                  {%- unless mf.type == 'boolean' -%}
-                                    {%- unless mf.type contains 'list.' and mf.type != 'list.single_line_text_field' -%}
-                                      {% unless mf.type contains 'metaobject_reference' %}
-                                        {{ mf | metafield_tag }}
-                                      {% else %}
-                                        {%- if pair.size >= 3 -%}
-                                          {{ mf.value[pair[2]] }}
-                                        {%- else -%}
-                                          {{ mf | metafield_tag }}
-                                        {%- endif -%}
-                                      {% endunless %}
-                                    {%- else -%}
-                                      <ul>
-                                        {%- for v in mf.value -%}
-                                          <li>
-                                            {%- if mf.type contains 'product_reference' or mf.type contains 'variant_reference' -%}
-                                              <a href="{{ v.url }}">{{ v.title }}</a>
-                                            {%- elsif mf.type contains 'metaobject_reference' and pair.size >= 3 -%}
-                                              {{ v[pair[2]] }}
-                                            {%- else -%}
-                                              {{ v }}
-                                            {%- endif -%}
-                                          </li>
-                                        {%- endfor -%}
-                                      </ul>
-                                    {%- endunless -%}
+                              <div class="rte{% if product.metafields[namespace][key].type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
+                                {%- unless product.metafields[namespace][key].type == 'boolean' -%}
+                                  {%- unless product.metafields[namespace][key].type contains 'list.' and product.metafields[namespace][key].type != 'list.single_line_text_field' -%}
+                                    {% unless product.metafields[namespace][key].type contains 'metaobject_reference' %}
+                                      {{ product.metafields[namespace][key] | metafield_tag }}
+                                    {% else %}
+                                      {{ product.metafields[namespace][key].value[pair[2]] }}
+                                    {% endunless %}
                                   {%- else -%}
-                                    {%- if mf.value == true -%}
-                                      {{ 'general.boolean.true' | t }}
-                                    {%- else -%}
-                                      {{ 'general.boolean.false' | t }}
-                                    {%- endif -%}
+                                    <ul>
+                                      {%- for field in product.metafields[namespace][key].value -%}
+                                        <li>
+                                          {%- if product.metafields[namespace][key].type contains 'product_reference' or product.metafields[namespace][key].type contains 'variant_reference' -%}
+                                            <a href="{{ field.url }}">{{ field.title }}</a>
+                                          {%- elsif product.metafields[namespace][key].type contains 'metaobject_reference' -%}
+                                            {{ field[pair[2]] }}
+                                          {%- else -%}
+                                            {{ field }}
+                                          {%- endif -%}
+                                        </li>
+                                      {%- endfor -%}
+                                    </ul>
                                   {%- endunless -%}
-                                {%- endif -%}
+                                {%- else -%}
+                                  {%- if product.metafields[namespace][key].value == true -%}
+                                    {{ 'general.boolean.true' | t }}
+                                  {%- else -%}
+                                    {{ 'general.boolean.false' | t }}
+                                  {%- endif -%}
+                                {%- endunless -%}
                               </div>
                             </li>
                           {%- endif -%}
@@ -182,76 +162,49 @@
                     </ul>
                   {%- endif -%}
                 {%- endcapture -%}
-              {%- else -%}
-                {%- capture block_content -%}{%- endcapture -%}
-              {%- endif -%}
-
-              {%- comment -%}
-                Fallback: nic nebylo v block.settings.metafields (nebo nenašlo se nic) → zkus attribute_set z kolekcí.
-                U každé položky attribute_set se čte v pořadí:
-                1) current_variant.metafields.product_attributes[metafield_key]
-                2) current_variant.metafields.product_variant_attribute[metafield_key]
-                3) product.metafields.product_attributes[metafield_key]
-              {%- endcomment -%}
-              {%- if block_content == blank or has_content == false -%}
+              {% else %}
                 {%- capture block_content -%}
-                  {%- assign any_attribute_output = false -%}
-                  <ul class="product-attributes__table-item__specifications-list grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
-                    {% for collection in product.collections %}
-                      {% assign attribute_set = collection.metafields.product_attributes.product_attribute_set.value.list.value %}
-                      {% for attribute in attribute_set %}
-                        {% if attribute.metafield_key != blank %}
-                          {% assign attribute_metafield =
-                              current_variant.metafields.product_attributes[attribute.metafield_key]
-                              | default: current_variant.metafields.product_variant_attribute[attribute.metafield_key]
-                              | default: product.metafields.product_attributes[attribute.metafield_key]
-                          %}
-                          {% if attribute_metafield != blank %}
-                            {% assign any_attribute_output = true %}
-                            <li class="grid__item">
-                              <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute.display_name | capitalize }}</h4>
-                              <div class="rte{% if attribute_metafield.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
-                                {%- unless attribute_metafield.type == 'boolean' -%}
-                                  {%- unless attribute_metafield.type contains 'list.' and attribute_metafield.type != 'list.single_line_text_field' -%}
-                                    {% unless attribute_metafield.type contains 'metaobject_reference' %}
-                                      {{ attribute_metafield | metafield_tag }}
-                                    {% else %}
-                                      {%- comment -%} U metaobject_reference zde netušíme cílové pole; pokud potřebuješ, doplň přes attribute.meta_field_name apod. {%- endcomment -%}
-                                      {{ attribute_metafield | metafield_tag }}
-                                    {% endunless %}
-                                  {%- else -%}
-                                    <ul>
-                                      {%- for v in attribute_metafield.value -%}
-                                        <li>
-                                          {%- if attribute_metafield.type contains 'product_reference' or attribute_metafield.type contains 'variant_reference' -%}
-                                            <a href="{{ v.url }}">{{ v.title }}</a>
-                                          {%- else -%}
-                                            {{ v }}
-                                          {%- endif -%}
-                                        </li>
-                                      {%- endfor -%}
-                                    </ul>
-                                  {%- endunless -%}
-                                {%- else -%}
-                                  {%- if attribute_metafield.value == true -%}
-                                    {{ 'general.boolean.true' | t }}
-                                  {%- else -%}
-                                    {{ 'general.boolean.false' | t }}
-                                  {%- endif -%}
-                                {%- endunless -%}
-                              </div>
-                            </li>
-                          {% endif %}
-                        {% endif %}
-                      {% endfor %}
+                  {% for collection in product.collections %}
+                    {% assign attribute_set = collection.metafields.product_attributes.product_attribute_set.value.list.value %}
+                    {% for attribute in attribute_set %}
+                      {% if attribute.metafield_key != blank and current_variant.metafields.product_attributes[attribute.metafield_key] != blank %}
+                        {% assign has_content = true %}
+                        {% assign attribute_metafield = current_variant.metafields.product_attributes[attribute.metafield_key] %}
+                        <li class="grid__item">
+                          <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute.display_name | capitalize }}</h4>
+                          <div class="rte{% if attribute_metafield.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
+                            {%- unless attribute_metafield.type == 'boolean' -%}
+                              {%- unless attribute_metafield.type contains 'list.' and attribute_metafield.type != 'list.single_line_text_field' -%}
+                                {% unless attribute_metafield.type contains 'metaobject_reference' %}
+                                  {{ attribute_metafield | metafield_tag }}
+                                {% endunless %}
+                              {%- else -%}
+                                <ul>
+                                  {%- for field in attribute_metafield.value -%}
+                                    <li>
+                                      {%- if attribute_metafield.type contains 'product_reference' or attribute_metafield.type contains 'variant_reference' -%}
+                                        <a href="{{ field.url }}">{{ field.title }}</a>
+                                      {%- else -%}
+                                        {{ field }}
+                                      {%- endif -%}
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              {%- endunless -%}
+                            {%- else -%}
+                              {%- if attribute_metafield.value == true -%}
+                                {{ 'general.boolean.true' | t }}
+                              {%- else -%}
+                                {{ 'general.boolean.false' | t }}
+                              {%- endif -%}
+                            {%- endunless -%}
+                          </div>
+                        </li>
+                      {% endif %}
                     {% endfor %}
-                  </ul>
-                  {%- if any_attribute_output -%}
-                    {%- assign has_content = true -%}
-                  {%- endif -%}
+                  {% endfor %}
                 {%- endcapture -%}
               {%- endif -%}
-
               {%-liquid
                 assign is_display = has_content
                 if request.design_mode and block.settings.title != blank and is_display == false
@@ -286,12 +239,10 @@
     </div>
   </div>
 </div>
-
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>
   {{ 'component-rte.css' | asset_url | stylesheet_tag }}
 </noscript>
-
 {% schema %}
 {
   "name": "t:sections.main-product-attributes.name",
@@ -408,9 +359,18 @@
       "type": "select",
       "id": "heading_size",
       "options": [
-        { "value": "h2", "label": "t:sections.all.heading_size.options__1.label" },
-        { "value": "h1", "label": "t:sections.all.heading_size.options__2.label" },
-        { "value": "h0", "label": "t:sections.all.heading_size.options__3.label" }
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
@@ -462,11 +422,17 @@
     {
       "name": "t:sections.main-product-attributes.presets.name",
       "blocks": [
-        { "type": "product_brand" },
-        { "type": "product_type" }
+        {
+          "type": "product_brand"
+        },
+        {
+          "type": "product_type"
+        }
       ]
     }
   ],
-  "templates": [ "product" ]
+  "templates": [
+    "product"
+  ]
 }
 {% endschema %}
