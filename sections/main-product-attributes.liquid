@@ -112,44 +112,33 @@
                         -%}
                         {%- if pair.size >= 2 -%}
                           {%-liquid
-                            assign namespace_raw = pair[0] | strip
-                            assign key_raw = pair[1] | strip
-                            assign namespace = namespace_raw | downcase | replace: ' ', '_' | replace: '-', '_'
-                            assign key = key_raw | downcase | replace: ' ', '_' | replace: '-', '_'
+                            assign namespace = pair[0]
+                            assign key = pair[1]
                             if splits.size == 1
                               assign item_label = key | replace: '_', ' ' | capitalize
                             else
                               assign item_label = splits[0] | strip
                             endif
-
-                            # PRIORITA: product.ns/key → variant.ns/key → variant.product_variant_attribute[key]
-                            assign mf = product.metafields[namespace][key]
-                            if mf == blank
-                              assign mf = current_variant.metafields[namespace][key]
-                            endif
-                            if mf == blank
-                              assign mf = current_variant.metafields.product_variant_attribute[key]
-                            endif
                           -%}
-                          {%- if mf != blank or request.design_mode -%}
+                          {%- if product.metafields[namespace][key] != blank or request.design_mode -%}
                             <li class="grid__item">
                               {%- assign has_content = true -%}
                               <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ item_label | replace: '_', ' ' }}</h4>
-                              <div class="rte{% if mf != blank and mf.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
-                                {%- unless mf and mf.type == 'boolean' -%}
-                                  {%- unless mf and mf.type contains 'list.' and mf.type != 'list.single_line_text_field' -%}
-                                    {% unless mf and mf.type contains 'metaobject_reference' %}
-                                      {{ mf | metafield_tag }}
+                              <div class="rte{% if product.metafields[namespace][key].type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
+                                {%- unless product.metafields[namespace][key].type == 'boolean' -%}
+                                  {%- unless product.metafields[namespace][key].type contains 'list.' and product.metafields[namespace][key].type != 'list.single_line_text_field' -%}
+                                    {% unless product.metafields[namespace][key].type contains 'metaobject_reference' %}
+                                      {{ product.metafields[namespace][key] | metafield_tag }}
                                     {% else %}
-                                      {{ mf.value[pair[2]] }}
+                                      {{ product.metafields[namespace][key].value[pair[2]] }}
                                     {% endunless %}
                                   {%- else -%}
                                     <ul>
-                                      {%- for field in mf.value -%}
+                                      {%- for field in product.metafields[namespace][key].value -%}
                                         <li>
-                                          {%- if mf.type contains 'product_reference' or mf.type contains 'variant_reference' -%}
+                                          {%- if product.metafields[namespace][key].type contains 'product_reference' or product.metafields[namespace][key].type contains 'variant_reference' -%}
                                             <a href="{{ field.url }}">{{ field.title }}</a>
-                                          {%- elsif mf.type contains 'metaobject_reference' -%}
+                                          {%- elsif product.metafields[namespace][key].type contains 'metaobject_reference' -%}
                                             {{ field[pair[2]] }}
                                           {%- else -%}
                                             {{ field }}
@@ -159,7 +148,7 @@
                                     </ul>
                                   {%- endunless -%}
                                 {%- else -%}
-                                  {%- if mf.value == true -%}
+                                  {%- if product.metafields[namespace][key].value == true -%}
                                     {{ 'general.boolean.true' | t }}
                                   {%- else -%}
                                     {{ 'general.boolean.false' | t }}
@@ -178,49 +167,39 @@
                   {% for collection in product.collections %}
                     {% assign attribute_set = collection.metafields.product_attributes.product_attribute_set.value.list.value %}
                     {% for attribute in attribute_set %}
-                      {% if attribute.metafield_key != blank %}
-                        {%-liquid
-                          assign raw_key = attribute.metafield_key | strip
-                          assign key_norm = raw_key | downcase | replace: ' ', '_' | replace: '-', '_'
-                        -%}
-                        {% assign attribute_metafield =
-                          current_variant.metafields.product_attributes[key_norm]
-                          | default: current_variant.metafields.product_variant_attribute[key_norm]
-                          | default: product.metafields.product_attributes[key_norm]
-                        %}
-                        {% if attribute_metafield != blank %}
-                          {% assign has_content = true %}
-                          <li class="grid__item">
-                            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute.display_name | capitalize }}</h4>
-                            <div class="rte{% if attribute_metafield.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
-                              {%- unless attribute_metafield.type == 'boolean' -%}
-                                {%- unless attribute_metafield.type contains 'list.' and attribute_metafield.type != 'list.single_line_text_field' -%}
-                                  {% unless attribute_metafield.type contains 'metaobject_reference' %}
-                                    {{ attribute_metafield | metafield_tag }}
-                                  {% endunless %}
-                                {%- else -%}
-                                  <ul>
-                                    {%- for field in attribute_metafield.value -%}
-                                      <li>
-                                        {%- if attribute_metafield.type contains 'product_reference' or attribute_metafield.type contains 'variant_reference' -%}
-                                          <a href="{{ field.url }}">{{ field.title }}</a>
-                                        {%- else -%}
-                                          {{ field }}
-                                        {%- endif -%}
-                                      </li>
-                                    {%- endfor -%}
-                                  </ul>
-                                {%- endunless -%}
+                      {% if attribute.metafield_key != blank and current_variant.metafields.product_attributes[attribute.metafield_key] != blank %}
+                        {% assign has_content = true %}
+                        {% assign attribute_metafield = current_variant.metafields.product_attributes[attribute.metafield_key] %}
+                        <li class="grid__item">
+                          <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute.display_name | capitalize }}</h4>
+                          <div class="rte{% if attribute_metafield.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
+                            {%- unless attribute_metafield.type == 'boolean' -%}
+                              {%- unless attribute_metafield.type contains 'list.' and attribute_metafield.type != 'list.single_line_text_field' -%}
+                                {% unless attribute_metafield.type contains 'metaobject_reference' %}
+                                  {{ attribute_metafield | metafield_tag }}
+                                {% endunless %}
                               {%- else -%}
-                                {%- if attribute_metafield.value == true -%}
-                                  {{ 'general.boolean.true' | t }}
-                                {%- else -%}
-                                  {{ 'general.boolean.false' | t }}
-                                {%- endif -%}
+                                <ul>
+                                  {%- for field in attribute_metafield.value -%}
+                                    <li>
+                                      {%- if attribute_metafield.type contains 'product_reference' or attribute_metafield.type contains 'variant_reference' -%}
+                                        <a href="{{ field.url }}">{{ field.title }}</a>
+                                      {%- else -%}
+                                        {{ field }}
+                                      {%- endif -%}
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
                               {%- endunless -%}
-                            </div>
-                          </li>
-                        {% endif %}
+                            {%- else -%}
+                              {%- if attribute_metafield.value == true -%}
+                                {{ 'general.boolean.true' | t }}
+                              {%- else -%}
+                                {{ 'general.boolean.false' | t }}
+                              {%- endif -%}
+                            {%- endunless -%}
+                          </div>
+                        </li>
                       {% endif %}
                     {% endfor %}
                   {% endfor %}
