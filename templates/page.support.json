@@ -238,8 +238,8 @@
         "enable_section_box_layout": false,
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 32
       }
     },
     "rich_text_pEzQib": {
@@ -270,7 +270,7 @@
         "enable_section_box_layout": false,
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 52
       }
     },
@@ -301,7 +301,7 @@
         "enable_section_box_layout": false,
         "color_scheme": "scheme-67b19887-e315-44f8-9c7f-9dd70b584cce",
         "full_width": true,
-        "padding_top": 32,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
