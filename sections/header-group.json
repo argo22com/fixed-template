@@ -41,7 +41,6 @@
           "settings": {
             "trigger": "Produkty",
             "title": "Produkty",
-            "image": "shopify://shop_images/armor_5d81f6de-d16d-4d74-8c03-61fc6af4ff32.jpg",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "",
@@ -92,7 +91,6 @@
           "settings": {
             "trigger": "Akce",
             "title": "ReLeaf",
-            "image": "shopify://shop_images/01.jpg",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "ReLeaf",
@@ -113,7 +111,6 @@
           "settings": {
             "trigger": "Akce",
             "title": "Příslušenství pro iPhone 17",
-            "image": "shopify://shop_images/image007.png",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "Příslušenství pro novou řadu iPhone 17",
@@ -134,7 +131,6 @@
           "settings": {
             "trigger": "Akce",
             "title": "Záruka",
-            "image": "shopify://shop_images/3roky-ctverec.png",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "Záruka 3 roky",
@@ -155,7 +151,6 @@
           "settings": {
             "trigger": "Akce",
             "title": "Smart",
-            "image": "shopify://shop_images/FIXTAG-ST-WH-PRODUCT-7.jpg",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "Smart",
@@ -176,7 +171,6 @@
           "settings": {
             "trigger": "Akce",
             "title": "Armor",
-            "image": "shopify://shop_images/armor_5d81f6de-d16d-4d74-8c03-61fc6af4ff32.jpg",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "Armor",
@@ -318,7 +312,6 @@
           "settings": {
             "trigger": "Akce",
             "title": "Ona Dnes",
-            "image": "shopify://shop_images/onadnes_banner_2.png",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "",
@@ -340,7 +333,6 @@
           "settings": {
             "trigger": "Akce",
             "title": "Ruční výroba",
-            "image": "shopify://shop_images/1B1A1377.jpg",
             "image_ratio": "landscape",
             "caption": "",
             "heading_text": "Ruční výroba",
@@ -378,7 +370,6 @@
           "settings": {
             "trigger": "Blog",
             "title": "Vegan kůže",
-            "image": "shopify://shop_images/1B1A0588.jpg",
             "image_ratio": "square",
             "caption": "",
             "heading_text": "Proč jsou produkty z koženky stále populárnější?",
@@ -399,7 +390,6 @@
           "settings": {
             "trigger": "Blog",
             "title": "iPhone 17",
-            "image": "shopify://shop_images/image007.png",
             "image_ratio": "square",
             "caption": "",
             "heading_text": "Apple představil iPhony 17. Co si k nim pořídit?",
@@ -420,7 +410,6 @@
           "settings": {
             "trigger": "Blog",
             "title": "Tablet nebo notebook na vejšku?",
-            "image": "shopify://shop_images/tablet_laptop.jpg",
             "image_ratio": "square",
             "caption": "",
             "heading_text": "Tablet, nebo notebook? Porovnali jsme možnosti.",
@@ -441,7 +430,6 @@
           "settings": {
             "trigger": "Blog",
             "title": "Datablocker",
-            "image": "shopify://shop_images/ChatGPT_Image_Aug_21_2025_10_31_52_AM.png",
             "image_ratio": "square",
             "caption": "",
             "heading_text": "Nabíjej bezpečně",
@@ -463,7 +451,6 @@
           "settings": {
             "trigger": "Blog",
             "title": "Testování skel",
-            "image": "shopify://shop_images/Ohebnost_2560x1440_V2.jpg",
             "image_ratio": "square",
             "caption": "",
             "heading_text": "Jak testujeme ochranná skla",
@@ -484,7 +471,6 @@
           "settings": {
             "trigger": "Blog",
             "title": "Přejít na blog",
-            "image": "shopify://shop_images/Voyager_2-768x462.jpg",
             "image_ratio": "square",
             "caption": "",
             "heading_text": "Přejít na blog",
@@ -536,7 +522,7 @@
         "logo": "shopify://shop_images/logo.png",
         "logo_width": 170,
         "logo_position": "top-left",
-        "menu": "hlavni-menu",
+        "menu": "main-menu-1",
         "always_use_standard_menu": false,
         "show_go_to_link": false,
         "show_line_separator": false,
