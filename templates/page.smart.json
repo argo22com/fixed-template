@@ -461,6 +461,7 @@
         "heading_QV4Y3G",
         "text_EXxTFb"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "large",
@@ -475,9 +476,9 @@
     "video_XhEQtC": {
       "type": "video",
       "settings": {
-        "title": "",
+        "title": "Jak chytré lokátory používat?",
         "subtitle": "",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "cover_image": "shopify://shop_images/blog_tagcard4.jpg",
         "video_url": "https://youtu.be/os4MYblhzVc",
         "description": "FIXED ruční výroba v Prostějově",
