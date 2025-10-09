@@ -96,187 +96,115 @@
                 assign has_content = true
                 assign block_content = ''
               -%}
-{%- if block.settings.metafields != blank -%}
-  {%- capture block_content -%}
-    {%- assign has_content = false -%}
-    {%- assign metafields_array = block.settings.metafields | split: ',' -%}
-    {%- if metafields_array.size > 0 -%}
-      <ul class="product-attributes__table-item__specifications-list grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
-        {%- for field in metafields_array -%}
-          {%- liquid
-            assign splits = field | split: ':'
-            if splits.size == 1
-              assign pair = field | replace: ' ', '' | split: '.'
-            else
-              assign pair = splits[1] | replace: ' ', '' | split: '.'
-            endif
-          -%}
-          {%- if pair.size >= 2 -%}
-            {%- liquid
-              assign namespace = pair[0]
-              assign key = pair[1]
-              if splits.size == 1
-                assign item_label = key | replace: '_', ' ' | capitalize
-              else
-                assign item_label = splits[0] | strip
-              endif
-
-              assign mf_product = product.metafields[namespace][key]
-              assign mf_variant = current_variant.metafields.product_variant_attribute[key]
-              assign mf = null
-              if mf_product != blank
-                assign mf = mf_product
-              elsif mf_variant != blank
-                assign mf = mf_variant
-              endif
-            -%}
-
-            {%- if mf != blank or request.design_mode -%}
-              {%- assign has_content = true -%}
-              <li class="grid__item">
-                <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ item_label | replace: '_', ' ' }}</h4>
-                <div class="rte{% if mf != blank and mf.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
-                  {%- if mf == blank -%}
-                    <!-- design mode placeholder -->
-                  {%- else -%}
-                    {%- unless mf.type == 'boolean' -%}
-                      {%- unless mf.type contains 'list.' and mf.type != 'list.single_line_text_field' -%}
-                        {% unless mf.type contains 'metaobject_reference' %}
-                          {{ mf | metafield_tag }}
-                        {% else %}
-                          {%- comment -%}
-                            Pokud v metapoli typu metaobject_reference potřebuješ konkrétní pole,
-                            můžeš třetí část dotazu zadat jako namespace.key.field (pair[2]).
-                          {%- endcomment -%}
-                          {%- if pair.size >= 3 -%}
-                            {{ mf.value[pair[2]] }}
-                          {%- else -%}
-                            {{ mf | metafield_tag }}
-                          {%- endif -%}
-                        {% endunless %}
-                      {%- else -%}
-                        <ul>
-                          {%- for v in mf.value -%}
-                            <li>
-                              {%- if mf.type contains 'product_reference' or mf.type contains 'variant_reference' -%}
-                                <a href="{{ v.url }}">{{ v.title }}</a>
-                              {%- elsif mf.type contains 'metaobject_reference' and pair.size >= 3 -%}
-                                {{ v[pair[2]] }}
-                              {%- else -%}
-                                {{ v }}
-                              {%- endif -%}
+              {%- if block.settings.metafields != blank -%}
+                {%- capture block_content -%}
+                  {%- assign metafields_array = block.settings.metafields | split: ',' -%}
+                  {%- if metafields_array.size > 0 -%}
+                    <ul class="product-attributes__table-item__specifications-list grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
+                      {%- for field in metafields_array -%}
+                        {%-liquid
+                          assign splits = field | split: ':'
+                          if splits.size == 1
+                            assign pair = field | replace: ' ', '' | split: '.'
+                          else
+                            assign pair = splits[1] | replace: ' ', '' | split: '.'
+                          endif
+                        -%}
+                        {%- if pair.size >= 2 -%}
+                          {%-liquid
+                            assign namespace = pair[0]
+                            assign key = pair[1]
+                            if splits.size == 1
+                              assign item_label = key | replace: '_', ' ' | capitalize
+                            else
+                              assign item_label = splits[0] | strip
+                            endif
+                          -%}
+                          {%- if product.metafields[namespace][key] != blank or request.design_mode -%}
+                            <li class="grid__item">
+                              {%- assign has_content = true -%}
+                              <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ item_label | replace: '_', ' ' }}</h4>
+                              <div class="rte{% if product.metafields[namespace][key].type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
+                                {%- unless product.metafields[namespace][key].type == 'boolean' -%}
+                                  {%- unless product.metafields[namespace][key].type contains 'list.' and product.metafields[namespace][key].type != 'list.single_line_text_field' -%}
+                                    {% unless product.metafields[namespace][key].type contains 'metaobject_reference' %}
+                                      {{ product.metafields[namespace][key] | metafield_tag }}
+                                    {% else %}
+                                      {{ product.metafields[namespace][key].value[pair[2]] }}
+                                    {% endunless %}
+                                  {%- else -%}
+                                    <ul>
+                                      {%- for field in product.metafields[namespace][key].value -%}
+                                        <li>
+                                          {%- if product.metafields[namespace][key].type contains 'product_reference' or product.metafields[namespace][key].type contains 'variant_reference' -%}
+                                            <a href="{{ field.url }}">{{ field.title }}</a>
+                                          {%- elsif product.metafields[namespace][key].type contains 'metaobject_reference' -%}
+                                            {{ field[pair[2]] }}
+                                          {%- else -%}
+                                            {{ field }}
+                                          {%- endif -%}
+                                        </li>
+                                      {%- endfor -%}
+                                    </ul>
+                                  {%- endunless -%}
+                                {%- else -%}
+                                  {%- if product.metafields[namespace][key].value == true -%}
+                                    {{ 'general.boolean.true' | t }}
+                                  {%- else -%}
+                                    {{ 'general.boolean.false' | t }}
+                                  {%- endif -%}
+                                {%- endunless -%}
+                              </div>
                             </li>
-                          {%- endfor -%}
-                        </ul>
-                      {%- endunless -%}
-                    {%- else -%}
-                      {%- if mf.value == true -%}
-                        {{ 'general.boolean.true' | t }}
-                      {%- else -%}
-                        {{ 'general.boolean.false' | t }}
-                      {%- endif -%}
-                    {%- endunless -%}
-                  {%- endif -%}
-                </div>
-              </li>
-            {%- endif -%}
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-  {%- endcapture -%}
-
-  {%- comment -%}
-    Fallback: pokud se nic nenašlo na produktu ani variantě, spadni na attribute_set z kolekcí
-  {%- endcomment -%}
-  {%- if block_content == blank or has_content == false -%}
-    {%- capture block_content -%}
-      {% for collection in product.collections %}
-        {% assign attribute_set = collection.metafields.product_attributes.product_attribute_set.value.list.value %}
-        {% for attribute in attribute_set %}
-          {% if attribute.metafield_key != blank %}
-            {% assign attribute_metafield = current_variant.metafields.product_attributes[attribute.metafield_key] | default: current_variant.metafields.product_variant_attribute[attribute.metafield_key] | default: product.metafields.product_attributes[attribute.metafield_key] %}
-            {% if attribute_metafield != blank %}
-              {% assign has_content = true %}
-              <li class="grid__item">
-                <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute.display_name | capitalize }}</h4>
-                <div class="rte{% if attribute_metafield.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
-                  {%- unless attribute_metafield.type == 'boolean' -%}
-                    {%- unless attribute_metafield.type contains 'list.' and attribute_metafield.type != 'list.single_line_text_field' -%}
-                      {% unless attribute_metafield.type contains 'metaobject_reference' %}
-                        {{ attribute_metafield | metafield_tag }}
-                      {% endunless %}
-                    {%- else -%}
-                      <ul>
-                        {%- for v in attribute_metafield.value -%}
-                          <li>
-                            {%- if attribute_metafield.type contains 'product_reference' or attribute_metafield.type contains 'variant_reference' -%}
-                              <a href="{{ v.url }}">{{ v.title }}</a>
-                            {%- else -%}
-                              {{ v }}
-                            {%- endif -%}
-                          </li>
-                        {%- endfor -%}
-                      </ul>
-                    {%- endunless -%}
-                  {%- else -%}
-                    {%- if attribute_metafield.value == true -%}
-                      {{ 'general.boolean.true' | t }}
-                    {%- else -%}
-                      {{ 'general.boolean.false' | t }}
-                    {%- endif -%}
-                  {%- endunless -%}
-                </div>
-              </li>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
-    {%- endcapture -%}
-  {%- endif -%}
-{%- else -%}
-  {%- capture block_content -%}
-    {% for collection in product.collections %}
-      {% assign attribute_set = collection.metafields.product_attributes.product_attribute_set.value.list.value %}
-      {% for attribute in attribute_set %}
-        {% if attribute.metafield_key != blank and current_variant.metafields.product_attributes[attribute.metafield_key] != blank %}
-          {% assign has_content = true %}
-          {% assign attribute_metafield = current_variant.metafields.product_attributes[attribute.metafield_key] %}
-          <li class="grid__item">
-            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute.display_name | capitalize }}</h4>
-            <div class="rte{% if attribute_metafield.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
-              {%- unless attribute_metafield.type == 'boolean' -%}
-                {%- unless attribute_metafield.type contains 'list.' and attribute_metafield.type != 'list.single_line_text_field' -%}
-                  {% unless attribute_metafield.type contains 'metaobject_reference' %}
-                    {{ attribute_metafield | metafield_tag }}
-                  {% endunless %}
-                {%- else -%}
-                  <ul>
-                    {%- for field in attribute_metafield.value -%}
-                      <li>
-                        {%- if attribute_metafield.type contains 'product_reference' or attribute_metafield.type contains 'variant_reference' -%}
-                          <a href="{{ field.url }}">{{ field.title }}</a>
-                        {%- else -%}
-                          {{ field }}
+                          {%- endif -%}
                         {%- endif -%}
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                {%- endunless -%}
-              {%- else -%}
-                {%- if attribute_metafield.value == true -%}
-                  {{ 'general.boolean.true' | t }}
-                {%- else -%}
-                  {{ 'general.boolean.false' | t }}
-                {%- endif -%}
-              {%- endunless -%}
-            </div>
-          </li>
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-  {%- endcapture -%}
-{%- endif -%}
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                {%- endcapture -%}
+              {% else %}
+                {%- capture block_content -%}
+                  {% for collection in product.collections %}
+                    {% assign attribute_set = collection.metafields.product_attributes.product_attribute_set.value.list.value %}
+                    {% for attribute in attribute_set %}
+                      {% if attribute.metafield_key != blank and current_variant.metafields.product_attributes[attribute.metafield_key] != blank %}
+                        {% assign has_content = true %}
+                        {% assign attribute_metafield = current_variant.metafields.product_attributes[attribute.metafield_key] %}
+                        <li class="grid__item">
+                          <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute.display_name | capitalize }}</h4>
+                          <div class="rte{% if attribute_metafield.type != 'file_reference' %} product-attributes__tablet-item-light{% endif %}">
+                            {%- unless attribute_metafield.type == 'boolean' -%}
+                              {%- unless attribute_metafield.type contains 'list.' and attribute_metafield.type != 'list.single_line_text_field' -%}
+                                {% unless attribute_metafield.type contains 'metaobject_reference' %}
+                                  {{ attribute_metafield | metafield_tag }}
+                                {% endunless %}
+                              {%- else -%}
+                                <ul>
+                                  {%- for field in attribute_metafield.value -%}
+                                    <li>
+                                      {%- if attribute_metafield.type contains 'product_reference' or attribute_metafield.type contains 'variant_reference' -%}
+                                        <a href="{{ field.url }}">{{ field.title }}</a>
+                                      {%- else -%}
+                                        {{ field }}
+                                      {%- endif -%}
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              {%- endunless -%}
+                            {%- else -%}
+                              {%- if attribute_metafield.value == true -%}
+                                {{ 'general.boolean.true' | t }}
+                              {%- else -%}
+                                {{ 'general.boolean.false' | t }}
+                              {%- endif -%}
+                            {%- endunless -%}
+                          </div>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+                {%- endcapture -%}
+              {%- endif -%}
               {%-liquid
                 assign is_display = has_content
                 if request.design_mode and block.settings.title != blank and is_display == false
