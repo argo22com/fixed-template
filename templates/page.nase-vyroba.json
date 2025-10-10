@@ -141,6 +141,7 @@
         },
         "button_fcqKMB": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Prohlédnout všechny výrobky",
             "button_link": "shopify://collections/pouzdra-z-umele-kuze",
@@ -181,7 +182,94 @@
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#e94200",
-        "background_container": "#eee9e5",
+        "background_container": "#f9f6f4",
+        "gradient_background_container": "",
+        "background_section": "rgba(0,0,0,0)",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "rich_text_w69QNV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ceCYpX": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<h2><strong>Ruční výroba v Prostějově</strong></h2>",
+            "heading_size": "h2"
+          }
+        },
+        "text_4UtjNC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Od roku 2014 vlastníme a provozujeme tradiční šicí dílnu v Prostějově. Právě tady, ve městě s dlouholetou oděvní tradicí, vznikají dnes módní, praktická a vysoce odolná pouzdra na telefony, tablety či notebooky a peněženky s chytrými lokátory, které již neztratíte.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ceCYpX",
+        "text_4UtjNC"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_MUzzfc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JW7Xxj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Kůže zraje",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_LgN74N": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.</p><p>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.</p><p>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.</p><h3>Jak o ni pečovat?</h3><ul><li>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu.</li><li>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci.</li><li>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.</li><li>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.<br/></li></ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JW7Xxj",
+        "text_LgN74N"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/Loutocky_COM_DS8_4204.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
         "gradient_background_section": "",
@@ -246,9 +334,9 @@
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#e94200",
-        "background_container": "#ffffff",
+        "background_container": "#f9f6f4",
         "gradient_background_container": "",
-        "background_section": "#ffffff",
+        "background_section": "rgba(0,0,0,0)",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
@@ -271,7 +359,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#eee9e4",
+            "card_color_background": "#fbf4ff",
             "card_color_background_gradient": ""
           }
         },
@@ -289,7 +377,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#eee9e4",
+            "card_color_background": "#effeff",
             "card_color_background_gradient": ""
           }
         }
@@ -762,92 +850,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_w69QNV": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_ceCYpX": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h2><strong>Ruční výroba v Prostějově</strong></h2>",
-            "heading_size": "h2"
-          }
-        },
-        "text_4UtjNC": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Od roku 2014 vlastníme a provozujeme tradiční šicí dílnu v Prostějově. Právě tady, ve městě s dlouholetou oděvní tradicí, vznikají dnes módní, praktická a vysoce odolná pouzdra na telefony, tablety či notebooky a peněženky s chytrými lokátory, které již neztratíte.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_ceCYpX",
-        "text_4UtjNC"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "image_with_text_MUzzfc": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_JW7Xxj": {
-          "type": "heading",
-          "settings": {
-            "heading": "Kůže zraje",
-            "heading_size": "h2",
-            "enable_bold_heading": true
-          }
-        },
-        "text_LgN74N": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Kůže je přírodní materiál a má své nepravidelnosti, nicméně právě to dělá každý produkt naprosto unikátní.</p><p>Kůže pracuje, po čase užívání se každý produkt přizpůsobí svému obsahu.</p><p>Jenom kůže nejvyšší kvality si vytvoří specifickou patinu, kterou milovníci kožených produktů vyhledávají a která dodává každému produktu jeho duši.</p><h3>Jak o ni pečovat?</h3><ul><li>Je dobré pravidelně kůži otírat jemným hadříkem, či jemným kartáčem – zamezí se hromadění špíny a prachu na povrchu.</li><li>Nenechávejte své produkty dlouho zavřené na neodvětraných místech, ani na přímém slunci.</li><li>Pokud se Váš produkt namočí, nevysoušejte jej teplem, mohl by se přesušit a popraskat, stačí jej osušit ručníkem, či utěrkou.</li><li>Pravidelně alespoň jednou ročně je třeba kůži hydratovat a ošetřit produktem pro to určeným.<br/></li></ul>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_JW7Xxj",
-        "text_LgN74N"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "image": "shopify://shop_images/Loutocky_COM_DS8_4204.jpg",
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#000000",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
-      }
-    },
     "rich_text_BrHngY": {
       "type": "rich-text",
       "blocks": {
@@ -1037,6 +1039,8 @@
     "slideshow_8r6nPV",
     "rich_text_GnRiqE",
     "image_with_text_VYpWNw",
+    "rich_text_w69QNV",
+    "image_with_text_MUzzfc",
     "image_with_text_zKVCnf",
     "multicolumn_gMaHAJ",
     "image_with_text_nVUzjk",
@@ -1047,8 +1051,6 @@
     "rich_text_tCpiQQ",
     "collection_list_bB4BBc",
     "featured_products_tabs_AyhByH",
-    "rich_text_w69QNV",
-    "image_with_text_MUzzfc",
     "rich_text_BrHngY",
     "collection_list_NekX4X",
     "image_with_text_76ABzN"
