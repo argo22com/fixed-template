@@ -34,7 +34,7 @@
         "text_KMparF": {
           "type": "text",
           "settings": {
-            "text": "Zanechte trvalý dojem u svých obchodních partnerů, klientů a zaměstnanců. Personalizované luxusní kožené doplňky z pravé italské kůže, které přišly na svět v naší dílně v Prostějově, vyrábíme přesně dle vaší představy a požadavků.",
+            "text": "Zanechte trvalý dojem u svých obchodních partnerů, klientů a zaměstnanců. Personalizované luxusní kožené doplňky z pravé italské kůže, které přišly na svět v naší dílně v Prostějově.",
             "text_style": "body"
           }
         }
@@ -45,13 +45,13 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "image": "shopify://shop_images/oxford_brown.jpg",
+        "image": "shopify://shop_images/025_Loutocky_COM_DS2_2810_exp.jpg",
         "image_mobile": "shopify://shop_images/oxford_brown.jpg",
         "image_overlay_opacity": 40,
-        "image_height": "medium",
+        "image_height": "small",
         "image_height_mobile": "medium-mobile",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
         "keep_ltr": false,
         "hide_when_empty_image": false,
         "preload": false,
@@ -90,7 +90,7 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h2>Výroba kožených produktů na míru Vašim potřebám již od 50 kusů</h2>",
+            "heading": "<h2><strong>Výroba kožených produktů na míru Vašim potřebám<br/></strong>již od 50 kusů</h2>",
             "heading_size": "h2"
           }
         },
@@ -113,7 +113,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 80
+        "padding_bottom": 36
       }
     },
     "text_icons_fictdW": {
@@ -122,8 +122,7 @@
         "text_icon_Cimifi": {
           "type": "text-icon",
           "settings": {
-            "icon": "annotation",
-            "custom_icon": "shopify://shop_images/handmade01.png",
+            "icon": "none",
             "title": "Prémiové materiály a kvalita",
             "subheading": "Pro naše pouzdra, peněženky a další produkty jsme vybrali tu nejkvalitnější italskou kůži Torcello od prověřených dodavatelů. Díky vlastnostem pravé kůže pouzdro nestárne, ale zraje. Časem získává jedinečnou patinu a z každého kousku se stává originální a unikátní doplněk pro Vás či Vaše obchodní partnery.",
             "link": "",
@@ -134,7 +133,6 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify://shop_images/handmade02.png",
             "title": "Personalizace",
             "subheading": "Každý náš prémiový výrobek je možné upravit dle vašich potřeb již od 50 kusů. Pomocí gravírování či ražení přidáme na produkty loga, citaci, či jednoduché obrázky.",
             "link": "",
@@ -145,7 +143,6 @@
           "type": "text-icon",
           "settings": {
             "icon": "none",
-            "custom_icon": "shopify://shop_images/handmade03.png",
             "title": "Jak na to",
             "subheading": "Stačí nás kontaktovat pomocí formjuláře níže. Budete kontaktování naším obchodním zástupcem, který Vám poradí s výběrem a mírou personalizace",
             "link": "",
@@ -158,12 +155,13 @@
         "text_icon_FKQJQ6",
         "text_icon_rHAfmj"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "subtitle": "",
         "heading_size": "h2",
         "icon_width_desktop": 10,
-        "text_position": "right",
+        "text_position": "left",
         "enable_heading_in_box": false,
         "columns_desktop": 3,
         "columns_tablet": 3,
@@ -186,9 +184,260 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_bLNrKx": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_tbHnXW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Prémiové materiály a kvalita",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_WnMAni": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pro naše pouzdra, peněženky a další produkty jsme vybrali tu <strong>nejkvalitnější italskou kůži Torcello</strong> od prověřených dodavatelů. Díky vlastnostem pravé kůže pouzdro nestárne, ale zraje. Časem získává jedinečnou <strong>patinu</strong> a z každého kousku se stává originální a unikátní doplněk pro Vás či Vaše obchodní partnery.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_EJpL83": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tbHnXW",
+        "text_WnMAni",
+        "button_EJpL83"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/chm_kopie.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#eee9e4",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "rich_text_GVc7hC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_j9yJzD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2><strong>Personalizace</strong></h2>",
+            "heading_size": "h1"
+          }
+        },
+        "text_bECBkC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Každý náš prémiový výrobek je možné upravit dle vašich potřeb již od 50 kusů. Pomocí gravírování či ražení přidáme na produkty loga, citaci, či jednoduché obrázky.</p><p><strong>Stačí vyplnit formulář níže.</strong> Budete kontaktování naším obchodním zástupcem, který Vám poradí s výběrem a mírou personalizace</p><p></p>"
+          }
+        },
+        "button_HMDm78": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_j9yJzD",
+        "text_bECBkC",
+        "button_HMDm78"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "full",
+        "content_alignment": "center",
+        "enable_section_box_layout": true,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_wXpUCh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kxLLqe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Personalizace",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_BiebUK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Každý náš prémiový výrobek je možné upravit dle vašich potřeb již od 50 kusů. Pomocí gravírování či ražení přidáme na produkty loga, citaci, či jednoduché obrázky.</p><p><strong>Stačí vyplnit formulář níže.</strong> Budete kontaktování naším obchodním zástupcem, který Vám poradí s výběrem a mírou personalizace</p>",
+            "text_style": "body"
+          }
+        },
+        "button_LxX4KF": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kxLLqe",
+        "text_BiebUK",
+        "button_LxX4KF"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/01_6b5451df-3af2-4b54-8719-a4ddc82e5e7b.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 44,
+        "padding_bottom": 72,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
+      }
+    },
+    "rich_text_pnenF8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QDcKeQ": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<p>Jak na to</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_VqkiAx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stačí nás kontaktovat pomocí formuláře níže. Budete kontaktování naším obchodním zástupcem, který Vám poradí s výběrem a mírou personalizace</p>"
+          }
+        },
+        "button_nVUHQ3": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_QDcKeQ",
+        "text_VqkiAx",
+        "button_nVUHQ3"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "gallery_lightbox_dBe4XY": {
       "type": "gallery-lightbox",
       "blocks": {
+        "gallery_image_tJAieB": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/BL-1024x683.jpg",
+            "row": 3,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_z6HMJc": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/storage-one-FIXSM-SMMW2-1024x683.jpg",
+            "row": 2,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
         "gallery_image_Gf63YR": {
           "type": "gallery-image",
           "settings": {
@@ -201,6 +450,7 @@
         },
         "gallery_image_rqQTqF": {
           "type": "gallery-image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/1B1A4684-1024x683.jpg",
             "row": 1,
@@ -223,16 +473,6 @@
           "type": "gallery-image",
           "settings": {
             "row": 1,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_z6HMJc": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/storage-one-FIXSM-SMMW2-1024x683.jpg",
-            "row": 2,
             "gradient": "none",
             "caption": "",
             "subcaption": ""
@@ -267,40 +507,30 @@
             "caption": "",
             "subcaption": ""
           }
-        },
-        "gallery_image_tJAieB": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/BL-1024x683.jpg",
-            "row": 3,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
         }
       },
       "block_order": [
+        "gallery_image_tJAieB",
+        "gallery_image_z6HMJc",
         "gallery_image_Gf63YR",
         "gallery_image_rqQTqF",
         "gallery_image_epDgFJ",
         "gallery_image_tBnJeE",
-        "gallery_image_z6HMJc",
         "gallery_image_U3pajr",
         "gallery_image_tnMBiQ",
-        "gallery_image_wUbKfz",
-        "gallery_image_tJAieB"
+        "gallery_image_wUbKfz"
       ],
       "settings": {
-        "title": "Ukázky realizací",
+        "title": "Ražba loga na produkty",
         "heading_size": "h2",
-        "max_rows": 2,
+        "max_rows": 1,
         "color_scheme": "background-1",
         "show_more_text": "Zobrazit více fotek",
         "button_style": "primary",
         "button_size": "normal",
-        "button_margin_top": 0,
+        "button_margin_top": 52,
         "button_margin_bottom": 0,
-        "padding_top": 48,
+        "padding_top": 0,
         "padding_bottom": 32,
         "overlay_color": "#999999",
         "overlay_opacity": 80
@@ -312,14 +542,14 @@
         "heading_nyWzwM": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Ražba iniciálů a krátkých textů</p>",
+            "heading": "<h2><strong>Ražba iniciálů a krátkých textů</strong></h2>",
             "heading_size": "h1"
           }
         },
         "text_qWnNBJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Všechny produkty ruční výroby je možné personalizovat ražbou iniciálů nebo krátkých textů. Ražbu provádíme na zakázku a požadavky na vyhotovení je potřeba zadat předem, protože se provádí na nově vyráběný produkt, aby byl výsledek perfektní. <br/>Maximální počet znaků je 8 - 10 (v závislosti na šířce znaků) a k dispozici jsou všechny znaky české abecedy v doplnění o znaky ., #,@ a &.<br/><br/>Pro objednávku prosíme o vyplnění nezávazné poptávky níže.</p>"
+            "text": "<p>Všechny produkty ruční výroby je možné personalizovat ražbou iniciálů nebo krátkých textů. Ražbu provádíme na zakázku a požadavky na vyhotovení je potřeba zadat předem, protože se provádí na nově vyráběný produkt, aby byl výsledek perfektní. <br/>Maximální počet znaků je 8 - 10 (v závislosti na šířce znaků) a k dispozici jsou všechny znaky české abecedy v doplnění o znaky ., #,@ a &.<br/><br/><strong>Pro objednávku prosíme o vyplnění nezávazné poptávky níže.</strong></p>"
           }
         }
       },
@@ -399,7 +629,7 @@
         "gallery_image_rw7WxY"
       ],
       "settings": {
-        "title": "Ukázky realizací",
+        "title": "",
         "heading_size": "h2",
         "max_rows": 2,
         "color_scheme": "",
@@ -408,8 +638,8 @@
         "button_size": "normal",
         "button_margin_top": 0,
         "button_margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 0,
+        "padding_bottom": 68,
         "overlay_color": "#999999",
         "overlay_opacity": 80
       }
@@ -429,7 +659,7 @@
         "enable_video_looping": true,
         "full_width": false,
         "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
+        "enable_section_box_layout": true,
         "color_scheme": "background-1",
         "padding_top": 20,
         "padding_bottom": 36
@@ -621,6 +851,7 @@
         "heading_UfM7R3",
         "text_dbVjGL"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "large",
@@ -646,8 +877,8 @@
               "kozena-tasticka-pres-rameno-s-kapsou-fixed-venezia-pro-7-mobilni-telefony-s-bezovym-retizkem-kremova",
               "kozena-tasticka-pres-rameno-s-kapsou-fixed-venezia-pro-7-mobilni-telefony-s-cernym-retizkem-cerna"
             ],
-            "products_to_show": 5,
-            "columns_desktop": 5
+            "products_to_show": 4,
+            "columns_desktop": 4
           }
         },
         "featured_products_jUNrhE": {
@@ -707,7 +938,7 @@
         "featured_products_PcjbUA"
       ],
       "settings": {
-        "title": "Produkty z naší dílny",
+        "title": "Výběr produktů s možností zakázkové výroby",
         "subtitle": "",
         "heading_size": "h1",
         "full_width": false,
@@ -725,7 +956,7 @@
         "columns_tablet": "3",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 20,
         "padding_bottom": 36
       }
     },
@@ -756,6 +987,10 @@
     "image_banner_Q7m3KH",
     "rich_text_GnRiqE",
     "text_icons_fictdW",
+    "image_with_text_bLNrKx",
+    "rich_text_GVc7hC",
+    "image_with_text_wXpUCh",
+    "rich_text_pnenF8",
     "gallery_lightbox_dBe4XY",
     "rich_text_bp6AWb",
     "gallery_lightbox_ymKgwN",
