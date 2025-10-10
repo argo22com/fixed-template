@@ -550,7 +550,7 @@
         "text_qWnNBJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Všechny produkty ruční výroby je možné personalizovat ražbou iniciálů nebo krátkých textů. Ražbu provádíme na zakázku a požadavky na vyhotovení je potřeba zadat předem, protože se provádí na nově vyráběný produkt, aby byl výsledek perfektní. <br/>Maximální počet znaků je 8 - 10 (v závislosti na šířce znaků) a k dispozici jsou všechny znaky české abecedy v doplnění o znaky ., #,@ a &.<br/><br/><strong>Pro objednávku prosíme o vyplnění nezávazné poptávky níže.</strong></p>"
+            "text": "<p>Všechny produkty ruční výroby je možné personalizovat ražbou iniciálů nebo krátkých textů. Ražbu provádíme na zakázku a požadavky na vyhotovení je potřeba zadat předem, protože se provádí na nově vyráběný produkt, aby byl výsledek perfektní. <br/>Maximální počet znaků je <strong>8 - 10</strong> (v závislosti na šířce znaků) a k dispozici jsou všechny znaky české abecedy v doplnění o znaky <strong>., #,@ a &</strong>.<br/><br/><strong>Pro objednávku prosíme o vyplnění nezávazné poptávky níže.</strong></p>"
           }
         }
       },
