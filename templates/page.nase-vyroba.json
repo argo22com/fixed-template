@@ -244,8 +244,8 @@
         "button_jAfQkh": {
           "type": "button",
           "settings": {
-            "button_label": "Kožená pouzdra",
-            "button_link": "shopify://collections/pouzdra-z-umele-kuze",
+            "button_label": "Nabídka kožených pouzder",
+            "button_link": "",
             "button_style": "solid",
             "button_open_new_tab": false
           }
