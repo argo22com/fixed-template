@@ -427,7 +427,7 @@
         "autoplay": true,
         "enable_controls": true,
         "enable_video_looping": true,
-        "full_width": true,
+        "full_width": false,
         "hide_when_empty_video": false,
         "enable_section_box_layout": false,
         "color_scheme": "background-1",
