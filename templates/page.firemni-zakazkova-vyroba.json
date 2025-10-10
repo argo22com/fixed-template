@@ -422,56 +422,6 @@
           "type": "gallery-image",
           "settings": {
             "image": "shopify://shop_images/BL-1024x683.jpg",
-            "row": 3,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_z6HMJc": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/storage-one-FIXSM-SMMW2-1024x683.jpg",
-            "row": 2,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_Gf63YR": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/O2_guru_leather-1-1024x807.png",
-            "row": 1,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_rqQTqF": {
-          "type": "gallery-image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/1B1A4684-1024x683.jpg",
-            "row": 1,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_epDgFJ": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/03-1024x683.jpg",
-            "row": 1,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_tBnJeE": {
-          "type": "gallery-image",
-          "settings": {
             "row": 1,
             "gradient": "none",
             "caption": "",
@@ -482,6 +432,57 @@
           "type": "gallery-image",
           "settings": {
             "image": "shopify://shop_images/storage-one-FIXSMS-C2-1024x683.jpg",
+            "row": 2,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_z6HMJc": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/storage-one-FIXSM-SMMW2-1024x683.jpg",
+            "row": 1,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_Gf63YR": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/O2_guru_leather-1-1024x807.png",
+            "row": 3,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_rqQTqF": {
+          "type": "gallery-image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/1B1A4684-1024x683.jpg",
+            "row": 3,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_epDgFJ": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/03-1024x683.jpg",
+            "row": 2,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_tBnJeE": {
+          "type": "gallery-image",
+          "disabled": true,
+          "settings": {
             "row": 2,
             "gradient": "none",
             "caption": "",
@@ -511,12 +512,12 @@
       },
       "block_order": [
         "gallery_image_tJAieB",
+        "gallery_image_U3pajr",
         "gallery_image_z6HMJc",
         "gallery_image_Gf63YR",
         "gallery_image_rqQTqF",
         "gallery_image_epDgFJ",
         "gallery_image_tBnJeE",
-        "gallery_image_U3pajr",
         "gallery_image_tnMBiQ",
         "gallery_image_wUbKfz"
       ],
