@@ -660,7 +660,7 @@
         "enable_video_looping": true,
         "full_width": false,
         "hide_when_empty_video": false,
-        "enable_section_box_layout": true,
+        "enable_section_box_layout": false,
         "color_scheme": "background-1",
         "padding_top": 20,
         "padding_bottom": 36
@@ -768,8 +768,16 @@
     "rich_text_MRRXE6": {
       "type": "rich-text",
       "blocks": {
+        "heading_RaFPay": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2><strong>Nezávazná poptávka</strong></h2>",
+            "heading_size": "h1"
+          }
+        },
         "heading_jKwymm": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "<h3><strong>Nezávazná poptávka</strong></h3>",
             "heading_size": "h2"
@@ -777,6 +785,7 @@
         }
       },
       "block_order": [
+        "heading_RaFPay",
         "heading_jKwymm"
       ],
       "settings": {
@@ -810,7 +819,7 @@
             "border_color": "#121212",
             "border_radius": 2,
             "border": 1,
-            "fill_color": "#ebe9e9",
+            "fill_color": "#eee9e4",
             "padding": 35,
             "form_width": 600,
             "btn_text": "Submit",
@@ -820,12 +829,15 @@
             "sub_btn_bdr_color": "#ffffff",
             "sub_btn_bdr_rad": 3,
             "sub_btn_bdr_width": 1,
-            "fonts": "Helvetica"
+            "fonts": "Arial"
           }
         }
       },
       "block_order": [
         "hulk_form_builder_form_block_rgQ3YU"
+      ],
+      "custom_css": [
+        ".shopify-app-block {background-color: #f6f3f0;}"
       ],
       "settings": {
         "include_margins": true
@@ -957,7 +969,7 @@
         "columns_tablet": "3",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 20,
+        "padding_top": 60,
         "padding_bottom": 36
       }
     },
