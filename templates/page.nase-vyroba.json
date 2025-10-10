@@ -271,7 +271,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#f5e5ff",
+            "card_color_background": "#eee9e4",
             "card_color_background_gradient": ""
           }
         },
@@ -289,7 +289,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#dbfdff",
+            "card_color_background": "#eee9e4",
             "card_color_background_gradient": ""
           }
         }
