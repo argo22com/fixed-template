@@ -314,6 +314,7 @@
         },
         "button_BQpCbe": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "TPU pouzdra z Bystřice",
             "button_link": "shopify://collections/na-telefon",
@@ -664,11 +665,25 @@
           "settings": {
             "text": "<p><strong>Nižší uhlíková stopa</strong> – kratší dodavatelské řetězce a minimum přepravy.Bezpečné materiály – splňují přísné evropské normy, bez toxických látek.<br/><strong>Plná kontrola</strong> – od surového TPU po obal z FSC papíru. Rychlost a flexibilita – kryty pro nové telefony máme připravené okamžitě.</p><p></p><p></p><p></p>"
           }
+        },
+        "button_7DHmrK": {
+          "type": "button",
+          "settings": {
+            "button_label": "TPU Pouzdra z Bystřice",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "shopify://collections/na-telefon",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
         }
       },
       "block_order": [
         "heading_nfbT6F",
-        "text_NAcAbr"
+        "text_NAcAbr",
+        "button_7DHmrK"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
