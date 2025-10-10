@@ -278,7 +278,7 @@
         "color_countdown": "#000000",
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
-        "color_button": "#000000",
+        "color_button": "#e94200",
         "background_container": "#ffffff",
         "gradient_background_container": "",
         "background_section": "#ffffff",
@@ -311,12 +311,22 @@
             "text": "<p>Dalším krokem k udržitelnosti je výroba TPU pouzder v Česku. Díky ní máme každý krok produkce plně pod kontrolou a můžeme zaručit špičkovou kvalitu i odpovědnost vůči životnímu prostředí.</p>",
             "text_style": "body"
           }
+        },
+        "button_BQpCbe": {
+          "type": "button",
+          "settings": {
+            "button_label": "TPU pouzdra z Bystřice",
+            "button_link": "shopify://collections/na-telefon",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
         }
       },
       "block_order": [
         "heading_JYcbnb",
         "highlight_text_LRX4mQ",
-        "text_BVLD3r"
+        "text_BVLD3r",
+        "button_BQpCbe"
       ],
       "custom_css": [
         "div.image-with-text__content h3 {font-size: 2em; color: #000000;}"
