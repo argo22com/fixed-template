@@ -132,10 +132,60 @@
         "padding_top": 44,
         "padding_bottom": 44
       }
+    },
+    "rich_text_RBGyGg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JGhDAH": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<p>Talk about your brand</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_pPWp4D": {
+          "type": "text",
+          "settings": {
+            "text": "{{ collection.metafields.custom.dlouhy_popis_kolekce | metafield_tag }}"
+          }
+        },
+        "button_3kx8GA": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JGhDAH",
+        "text_pPWp4D",
+        "button_3kx8GA"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "rich_text_RBGyGg"
   ]
 }
