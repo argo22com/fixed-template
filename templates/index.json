@@ -218,7 +218,7 @@
             "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 0,
-            "text_alignment_mobile": "left",
+            "text_alignment_mobile": "center",
             "colors_text": "#ffffff",
             "gradient_heading_desktop": "",
             "colors_background": "#ffffff",
@@ -255,7 +255,7 @@
             "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 20,
-            "text_alignment_mobile": "left",
+            "text_alignment_mobile": "center",
             "colors_text": "#ffffff",
             "gradient_heading_desktop": "",
             "colors_background": "#ffffff",
@@ -328,7 +328,7 @@
             "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 20,
-            "text_alignment_mobile": "left",
+            "text_alignment_mobile": "center",
             "colors_text": "#ffffff",
             "gradient_heading_desktop": "",
             "colors_background": "#ffffff",
@@ -364,7 +364,7 @@
             "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 0,
-            "text_alignment_mobile": "left",
+            "text_alignment_mobile": "center",
             "colors_text": "#000000",
             "gradient_heading_desktop": "",
             "colors_background": "#ffffff",
@@ -400,7 +400,7 @@
             "desktop_image_width": "full",
             "desktop_image_position": "left",
             "image_overlay_opacity": 0,
-            "text_alignment_mobile": "left",
+            "text_alignment_mobile": "center",
             "colors_text": "#000000",
             "gradient_heading_desktop": "",
             "colors_background": "#ffffff",
@@ -1115,6 +1115,7 @@
             "heading": "Nabízíte dopravu zdarma?",
             "icon": "truck",
             "row_content": "<p>Ano, při nákupu nad 500 Kč máte dopravu zdarma.</p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -1124,6 +1125,7 @@
             "heading": "Jak dlouhá je záruka na produkty?",
             "icon": "shield_check",
             "row_content": "<p>Pro vybrané produkty máme nově prodlouženou záruku 3 roky. Více informací se dozvíte <a href=\"/pages/zaruka\" target=\"_blank\" title=\"Záruka\">zde.</a></p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -1133,6 +1135,7 @@
             "heading": "Mohu si u Vás nechat ušít/ upravit pouzdro na telefon na míru?",
             "icon": "book_open",
             "row_content": "<p>Těší nás váš zájem o produkty z naší prostějovské dílny. Aktuálně nenabízíme možnost zákaznických úprav na míru. </p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -1142,6 +1145,7 @@
             "heading": "Jak správně nalepit ochranné sklo na mobily Samsung Galaxy S?",
             "icon": "cellphone",
             "row_content": "<p><strong>1. Naskenujte prsty k identifikaci</strong></p><p>Než se pustíte do lepení skla, nejprve naskenujte (identifikujte) své prsty, ať pak můžete například odemykat obrazovku jednoduše dotekem. Po nalepení ochranného skla už by skenování prstů nebylo možné. Máte-li toto nastavené, pokračujte dále.</p><p><strong>2. Zapněte funkci „Dotyková citlivost“</strong></p><p>U mobilů Samsung Galaxy S se po nalepení skla může stát, že displej nebude na vaše dotyky reagovat tak, jak by měl. Má to snadné řešení – zapněte funkci „Dotyková citlivost“, a to následovně: </p><ul><li>Přejděte do nabídky „<em><strong>Nastaven</strong></em><em>í</em>“ a vyberte možnost „<em><strong>Displej</strong></em>“ </li><li>Klikněte na „<em><strong>Dotyková citlivost</strong></em>“ V tuto chvíli by funkce Dotyková citlivost měla být zapnutá.</li></ul><p><strong>3. Nalepte sklo na displej</strong></p><p>Teď už se vrhněte na samotné lepení skla. S řádným nalepením vám pomůže naše <a href=\"https://www.youtube.com/watch?v=jc4OqiDGie8\"><span style=\"text-decoration:underline\">video</span></a></p><p><strong>4. Počkejte 10 minut</strong></p><p>Máte hotovo, nic dalšího dělat nemusíte. Pro bezproblémovou funkčnost displeje je ale potřeba aspoň 10 minut počkat, aby pořádně „uzrálo“ lepidlo na ochranném skle. Po uplynutí 10 minut mobil několikrát odemkněte a zamkněte, pak už by vše mělo fungovat a telefon můžete rovnou používat.</p><p><strong>Pokud se vám nalepení ochranného skla FIXED na Samsung Galaxy S nedaří, napište nám do live chatu tady na webu, rádi vám poradíme.</strong></p><p></p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -1151,6 +1155,7 @@
             "heading": "Tracker se po určité době odpojí od telefonu, nebo se nepřipojí, když jsem v jeho blízkosti, jak to mohu vyřešit?",
             "icon": "arrows_expand",
             "row_content": "<p>Operační systém Android automaticky potlačuje aplikace běžící na pozadí, které mají nízkou aktivitu. To způsobí, že jakmile běží aplikace Smart na pozadí, je systémem deaktivována, následně trackery nefungují správně. Toto chování systému je možné vyřešit nastavením optimalizace přímo v telefonu.<br/>Návody pro správné nastavení systému naleznete zde:</p><ul><li><a href=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-samsung\" title=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-samsung\"><strong>SAMSUNG</strong></a></li><li><a href=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-huawei\" title=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-huawei\"><strong>HUAWEI</strong></a></li><li><a href=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-xiaomi\" title=\"https://fixed.zone/pages/manual-pro-optimalizaci-baterie-u-telefonu-xiaomi\"><strong>XIAOMI</strong></a></li></ul>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -1160,6 +1165,7 @@
             "heading": "Jak vyberu správnou velikost univerzálního pouzdra?",
             "icon": "question_mark_circle",
             "row_content": "<p>V popisu u každého univerzálního pouzdra FIXED naleznete informaci o vnitřní velikosti pouzdra, dle které se můžete řídit. Tento údaj odpovídá maximální možné velikosti mobiliního telefonu, který můžete s pouzdrem pohodlně používat. Pouzdro by zároveň nemělo být větší než telefon více než o pár milimetrů.</p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -1169,6 +1175,7 @@
             "heading": "Kde najdu manuál pro aplikaci FIXED Smart?",
             "icon": "download",
             "row_content": "<p>Manuál pro aplikaci FIXED Smart najdete <a href=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/Manual_pro_FIXED_Smart.pdf?v=1731073449\" title=\"https://cdn.shopify.com/s/files/1/0561/0228/9490/files/Manual_pro_FIXED_Smart.pdf?v=1731073449\"><strong>zde</strong></a>.</p>",
+            "liquid": "",
             "page": ""
           }
         }
