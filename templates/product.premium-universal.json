@@ -74,7 +74,7 @@
           "settings": {
             "brand_enable": false,
             "brand_label": "Brand",
-            "stock_enable": true,
+            "stock_enable": false,
             "stock_label": "Dostupnost",
             "inventory_threshold": 10,
             "show_inventory_quantity": false,
@@ -514,6 +514,8 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "real_data",
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget",
             "max_width": 1200
           }
         }
@@ -535,6 +537,7 @@
             "heading": "Vlastnosti",
             "icon": "tag",
             "row_content": "<p>{{ product.metafields.custom.vlastnosti_produktu | metafield_tag }}</p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -544,6 +547,7 @@
             "heading": "Technické specifikace",
             "icon": "tag",
             "row_content": "<p>{{ product.metafields.custom.technicke_specifikace | metafield_tag }}</p>",
+            "liquid": "",
             "page": ""
           }
         }
@@ -576,6 +580,8 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "real_data",
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget",
             "max_width": 1200
           }
         },
