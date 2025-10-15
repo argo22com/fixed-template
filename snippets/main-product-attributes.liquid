@@ -61,16 +61,14 @@
   {% endfor %}
 </ul>
 
-{% comment %}
-  This code snippet loops through all the collections a product is in
-  and displays a list of the collection names with links.
-{% endcomment %}
 {% if product.collections.size > 0 %}
   <div class="product-collections">
-    <h3>Collections:</h3>
+    <p>This product is in the following collection(s):</p>
     <ul>
       {% for collection in product.collections %}
-        <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+        <li>
+          <a href="{{ collection.url }}">{{ collection.title }}</a>
+        </li>
       {% endfor %}
     </ul>
   </div>
