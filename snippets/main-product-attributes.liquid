@@ -49,7 +49,27 @@
     </div>
   </div>
 </div>
-<pre>{{ active_collection.metafields.product_attributes.product_attribute_set | json }}</pre>
+<h3>Debug: Kolekce</h3>
+<p>{{ active_collection.title }}</p>
+
+{% assign attribute_sets = active_collection.metafields.product_attributes.product_attribute_set.value %}
+
+{% if attribute_sets != blank %}
+  <ul>
+    {% for attribute_set in attribute_sets %}
+      <li>
+        <strong>{{ attribute_set.title }}</strong>
+        <ul>
+          {% for attribute in attribute_set.list.value %}
+            <li>{{ attribute.display_name }} – {{ attribute.metafield_key }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Žádné sady atributů nenalezeny.</p>
+{% endif %}
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>
   {{ 'component-rte.css' | asset_url | stylesheet_tag }}
