@@ -245,12 +245,6 @@
     </div>
   </div>
 </div>
-
-{% for collection in product.collections %}
-  <h3>{{ collection.title }}</h3>
-  <pre>{{ collection.metafields | json }}</pre>
-{% endfor %}
-
 {%- style -%}
   .section-{{ section.id }}-padding {
   padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
