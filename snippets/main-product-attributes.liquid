@@ -53,3 +53,10 @@
 <noscript>
   {{ 'component-rte.css' | asset_url | stylesheet_tag }}
 </noscript>
+
+<p>Kolekce produktu:</p>
+<ul>
+  {% for raw_collection in product.collections %}
+    <li>{{ raw_collection.title }}</li>
+  {% endfor %}
+</ul>
