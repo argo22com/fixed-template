@@ -49,8 +49,16 @@
           if set_obj.list and set_obj.list.value
             for attribute in set_obj.list.value
               # --- READ STRICTLY FROM product_attribute.*
-              assign a = attribute.value | default: attribute
-              assign name = a['product_attribute.display_name']
+  assign a = attribute.value | default: attribute
+  assign name = a['product_attribute.display_name'] | default: a.display_name
+  assign key  = a['product_attribute.metafield_key'] | default: a.metafield_key
+
+  if attribute_keys contains key
+    continue
+  endif
+
+  assign attribute_names = attribute_names | append: name | append: '|'
+  assign attribute_keys  = attribute_keys  | append: key  | append: '|'
               assign key  = a['product_attribute.metafield_key']
 
               if key != blank
@@ -84,8 +92,12 @@
         if set_obj.list and set_obj.list.value
           for attribute in set_obj.list.value
             # --- READ STRICTLY FROM product_attribute.*
-            assign a = attribute.value | default: attribute
-            assign name = a['product_attribute.display_name']
+  assign a = attribute.value | default: attribute
+  assign name = a['product_attribute.display_name'] | default: a.display_name
+  assign key  = a['product_attribute.metafield_key'] | default: a.metafield_key
+
+  assign attribute_names = attribute_names | append: name | append: '|'
+  assign attribute_keys  = attribute_keys  | append: key  | append: '|'
             assign key  = a['product_attribute.metafield_key']
 
             if key != blank
