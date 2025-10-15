@@ -1,124 +1,61 @@
 {% comment %}
-  Product attribute set renderer (works with list of strings)
-  - Reads collection metafield: product_attributes.product_attribute_set (metaobject)
-  - Takes list from: set.list.value (your field: product_attribute_set.list)
-  - Each item is a label (e.g., "Délka kabelu")
-  - It derives a key OR uses manual map to read variant/product metafield:
-      variant.metafields.product_attributes[key_lc]
+  Renders a list of product atributes
+
+    Accepts:
+    - products: {Array} Array of products to compare
+    - product - {Object} Product to show
+
+    Usage:
+    {% render 'product-attribute-set', products: products %} or {% render 'product-attribute-set', product: product %}
 {% endcomment %}
 
 {% liquid
-  assign attribute_labels_s = ''
-  assign _dbg_collections = ''
+  assign attribute_names = ''
+  assign attribute_keys = ''
 
-  # --- Manual mapping: label -> exact SAP key ---
-  #  Edit pairs below as needed:
-  assign manual_map_s = ''
-  assign manual_map_s = manual_map_s | append: 'Délka kabelu=KABEL_DELKA_CM|'
-  # add more like:
-  # assign manual_map_s = manual_map_s | append: 'Jmenovitý proud=JMENOVITY_PROUD_A|'
+  if products != blank
+    for product in products
+      for collection in product.collections
+        if collection.metafields.product_attributes.product_attribute_set.value
+          for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
+            if attribute_keys contains attribute.metafield_key
+              continue
+            endif
+            assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+            assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
+          endfor
+        endif
+      endfor
+    endfor
+  elsif product != blank
+    for collection in product.collections
+      if collection.metafields.product_attributes.product_attribute_set.value
+        for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
+          assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+          assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
+        endfor
+      endif
+    endfor
+  endif
 
-  assign manual_map_pairs = manual_map_s | split: '|'  # ["Label=SAP_KEY", ...]
+  assign attribute_names = attribute_names | split: '|' | uniq
+  assign attribute_keys = attribute_keys | split: '|' | uniq
+
+  assign keys_length = attribute_keys.size | minus: 1
 %}
-
-{%- capture _collect_from_product -%}
-  {%- for collection in __P.collections -%}
-    {%- assign set_mf = collection.metafields.product_attributes.product_attribute_set -%}
-    {%- if set_mf and set_mf.value -%}
-      {%- assign set = set_mf.value -%}
-      {%- assign labels = set.list.value -%} {# your current field #}
-
-      {%- if labels != blank -%}
-        {%- for label in labels -%}
-          {%- assign label = label | strip -%}
-          {%- if label == '' -%}{%- continue -%}{%- endif -%}
-          {%- assign needle = '|' | append: label | append: '|' -%}
-          {%- if attribute_labels_s contains needle -%}{%- continue -%}{%- endif -%}
-          {%- assign attribute_labels_s = attribute_labels_s | append: '|' | append: label | append: '|' -%}
-        {%- endfor -%}
-      {%- endif -%}
-
-      {%- capture _dbg_collections -%}{{ _dbg_collections }}
-      [{{ collection.handle }}] set: yes; list present={{ labels != blank | json }}{%- endcapture -%}
-    {%- else -%}
-      {%- capture _dbg_collections -%}{{ _dbg_collections }}
-      [{{ collection.handle }}] set: no{%- endcapture -%}
-    {%- endif -%}
-  {%- endfor -%}
-{%- endcapture -%}
-
-{%- if products != blank -%}
-  {%- for __P in products -%}
-    {{ _collect_from_product }}
-  {%- endfor -%}
-{%- elsif product != blank -%}
-  {%- assign __P = product -%}
-  {{ _collect_from_product }}
-{%- endif -%}
-
-{% liquid
-  assign attribute_labels = attribute_labels_s | remove_first: '|' | split: '||'
-  assign keys_length = attribute_labels.size | minus: 1
-%}
-
-<!-- ATTR_LABELS={{ attribute_labels | json }} :: COLLECT={{ _dbg_collections | strip }} -->
-
-{%- capture derive_key_from_label -%}
-  {%- comment -%}
-    Input: label
-    Output: derived key candidate(s): label_lc, handleized with underscores
-  {%- endcomment -%}
-  {%- assign label = __LABEL -%}
-  {%- assign key_lc = label | downcase -%}
-  {%- assign key_h  = label | handleize -%}
-  {%- assign key_hu = key_h  | replace: '-', '_' -%}
-  {{- key_lc -}}|||{{- key_hu -}}
-{%- endcapture -%}
-
-{%- capture map_label_to_sap_key -%}
-  {%- assign label = __LABEL -%}
-  {%- assign mapped = '' -%}
-  {%- for pair in manual_map_pairs -%}
-    {%- assign kv = pair | split: '=' -%}
-    {%- assign k_label = kv[0] | strip -%}
-    {%- assign k_key   = kv[1] | default: '' | strip -%}
-    {%- if k_label != '' and k_label == label and k_key != '' -%}
-      {%- assign mapped = k_key -%}
-      {%- break -%}
-    {%- endif -%}
-  {%- endfor -%}
-  {{- mapped -}}
-{%- endcapture -%}
 
 {% if products != blank %}
   {% for i in (0..keys_length) %}
     {% liquid
-      assign label = attribute_labels[i]
-
-      # 1) try manual map
-      assign __LABEL = label
-      capture mapped_key
-        echo map_label_to_sap_key
-      endcapture
-      assign mapped_key = mapped_key | strip
-
-      # 2) derive candidates
-      capture derived
-        echo derive_key_from_label
-      endcapture
-      assign parts = derived | split: '|||'
-      assign cand1 = (mapped_key != '' ? mapped_key : parts[0]) | downcase
-      assign cand2 = parts[1] | downcase
-
-      # find any non-empty value across products
       assign all_empty = true
-      for p in products
-        assign v = p.selected_or_first_available_variant
-        assign val = v.metafields.product_attributes[cand1] | default: p.metafields.product_attributes[cand1]
-        if val == blank and cand2 != cand1
-          assign val = v.metafields.product_attributes[cand2] | default: p.metafields.product_attributes[cand2]
+      for product in products
+        if product.metafields.product_attributes
+          assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
+        else
+          assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
         endif
-        if val != blank
+
+        if attribute_metafield.value != nill
           assign all_empty = false
           break
         endif
@@ -126,17 +63,15 @@
     %}
     {% if all_empty == false %}
       <tr>
-        <th>{{ label }}:</th>
-        {% for p in products %}
-          {% liquid
-            assign v = p.selected_or_first_available_variant
-            assign val = v.metafields.product_attributes[cand1] | default: p.metafields.product_attributes[cand1]
-            if val == blank and cand2 != cand1
-              assign val = v.metafields.product_attributes[cand2] | default: p.metafields.product_attributes[cand2]
-            endif
-          %}
-          <td class="product-compare-{{ p.id }}">
-            {% if val != blank %}{% render 'metafield-display', attribute_metafield: val %}{% endif %}
+        <th>{{ attribute_names[i] }}:</th>
+        {% for product in products %}
+          {% if product.metafields.product_attributes %}
+            {% assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]] %}
+          {% else %}
+            {% assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
+          {% endif %}
+          <td class="product-compare-{{ product.id }}">
+            {% render 'metafield-display', attribute_metafield: attribute_metafield %}
           </td>
         {% endfor %}
       </tr>
@@ -144,41 +79,23 @@
   {% endfor %}
 {% elsif product != blank %}
   <div class="w100">
-    <div class="grid">
-      {% for i in (0..keys_length) %}
-        {% liquid
-          assign label = attribute_labels[i]
-
-          # 1) manual map
-          assign __LABEL = label
-          capture mapped_key
-            echo map_label_to_sap_key
-          endcapture
-          assign mapped_key = mapped_key | strip
-
-          # 2) derived candidates
-          capture derived
-            echo derive_key_from_label
-          endcapture
-          assign parts = derived | split: '|||'
-          assign cand1 = (mapped_key != '' ? mapped_key : parts[0]) | downcase
-          assign cand2 = parts[1] | downcase
-
-          assign v = product.selected_or_first_available_variant
-          assign val = v.metafields.product_attributes[cand1] | default: product.metafields.product_attributes[cand1]
-          if val == blank and cand2 != cand1
-            assign val = v.metafields.product_attributes[cand2] | default: product.metafields.product_attributes[cand2]
-          endif
-        %}
-        {% if val != blank %}
-          <div class="grid__item">
-            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ label }}</h4>
-            <div class="rte">
-              {% render 'metafield-display', attribute_metafield: val %}
+      <div class="grid">
+        {% for i in (0..keys_length)  %}
+          {% liquid
+            assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
+            if attribute_metafield == blank
+              assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
+            endif
+          %}
+          {% if attribute_metafield.value %}
+            <div class="grid__item">
+              <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
+              <div class="rte">
+                {% render 'metafield-display', attribute_metafield: attribute_metafield %}
+              </div>
             </div>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
+          {% endif %}
+        {% endfor %}
+      </div>
   </div>
 {% endif %}
