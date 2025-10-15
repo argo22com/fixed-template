@@ -1,178 +1,213 @@
 {% comment %}
   Renders a list of product attributes
-  - Hezké názvy bereme z metaobjektů Product Attribute (shop.metaobjects)
-  - Pokud se kolekční sety nenačtou, fallback použije mapu key→display_name z metaobjektů
+
+  Accepts:
+  - products: {Array} Array of products to compare
+  - product : {Object} Product to show
+
+  Supports:
+  - Single Attribute Set metaobject reference on a collection
+  - List of Attribute Set metaobject references on a collection
+  - Fallback: if no sets found, infer keys from product/variant metafields in namespace `product_attributes`
+
+  Expected attribute metaobject fields:
+  - product_attribute.display_name
+  - product_attribute.metafield_key
 {% endcomment %}
 
-{% assign attribute_names = '' %}
-{% assign attribute_keys  = '' %}
+{% liquid
+  assign attribute_names = ''
+  assign attribute_keys  = ''
 
-{% assign enable_attribute_debug = true %}
-{% if request.design_mode %}
-  {% assign enable_attribute_debug = true %}
-{% endif %}
+  assign enable_attribute_debug = false
+  if request.design_mode
+    assign enable_attribute_debug = true
+  endif
+%}
 
-{%- comment -%} === 0) PŘIPRAV MAPU Z METAOBJEKTŮ: key → display_name === {%- endcomment -%}
-{% assign pa_all = blank %}
-{% if shop.metaobjects['product_attribute'] and shop.metaobjects['product_attribute'].values != blank %}
-  {% assign pa_all = shop.metaobjects['product_attribute'].values %}
-{% elsif shop.metaobjects['product_attributes.product_attribute'] and shop.metaobjects['product_attributes.product_attribute'].values != blank %}
-  {% assign pa_all = shop.metaobjects['product_attributes.product_attribute'].values %}
-{% endif %}
+{%- liquid
+  # === 1) TRY TO COLLECT FROM COLLECTION ATTRIBUTE SETS ===
+  assign collected_from_sets = false
 
-{% assign map_keys  = '' %}
-{% assign map_names = '' %}
-{% if pa_all != blank %}
-  {% for pa in pa_all %}
-    {% assign n = pa['product_attribute.display_name'] | default: pa.display_name %}
-    {% assign k = pa['product_attribute.metafield_key']  | default: pa.metafield_key %}
-    {% if k != blank %}
-      {% assign map_keys  = map_keys  | append: k | append: '|' %}
-      {% assign map_names = map_names | append: n | append: '|' %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-{% assign map_keys  = map_keys  | split: '|' | reject: '' %}
-{% assign map_names = map_names | split: '|' | reject: '' %}
+  if products != blank
+    for product in products
+      for collection in product.collections
+        assign sets = collection.metafields.product_attributes.product_attribute_set.value
+        if sets == blank
+          continue
+        endif
 
-{%- comment -%} === 1) POKUS O NAČTENÍ ZE SETŮ NA KOLEKCÍCH (zůstává beze změn) === {%- endcomment -%}
-{% assign collected_from_sets = false %}
+        # Normalize single → array
+        if sets.id != blank
+          assign attribute_sets = sets | array
+        else
+          assign attribute_sets = sets
+        endif
 
-{% if products != blank %}
-  {% for product in products %}
-    {% for collection in product.collections %}
-      {% assign sets = collection.metafields.product_attributes.product_attribute_set.value %}
-      {% if sets == blank %}
-        {% continue %}
-      {% endif %}
+        for attribute_set in attribute_sets
+          assign set_obj = attribute_set.value | default: attribute_set
+          if set_obj.list and set_obj.list.value
+            for attribute in set_obj.list.value
+              # --- JEN NÁZEV/KEY: rozbal reference a čti product_attribute.*
+              assign a = attribute.value | default: attribute
+              assign name = a['product_attribute.display_name']
+              if name == blank
+                assign name = a.display_name
+              endif
+              assign key = a['product_attribute.metafield_key']
+              if key == blank
+                assign key = a.metafield_key
+              endif
 
-      {% if sets.id != blank %}
-        {% assign attribute_sets = sets | array %}
-      {% else %}
-        {% assign attribute_sets = sets %}
-      {% endif %}
+              if key == blank
+                continue
+              endif
+              if attribute_keys contains key
+                continue
+              endif
 
-      {% for attribute_set in attribute_sets %}
-        {% assign set_obj = attribute_set.value | default: attribute_set %}
-        {% if set_obj.list and set_obj.list.value %}
-          {% for attribute in set_obj.list.value %}
-            {% assign a = attribute.value | default: attribute %}
-            {% assign name = a['product_attribute.display_name'] | default: a.display_name %}
-            {% assign key  = a['product_attribute.metafield_key']  | default: a.metafield_key %}
-            {% if key == blank %}{% continue %}{% endif %}
-            {% unless attribute_keys contains key %}
-              {% assign attribute_names = attribute_names | append: name | append: '|' %}
-              {% assign attribute_keys  = attribute_keys  | append: key  | append: '|' %}
-            {% endunless %}
-            {% assign collected_from_sets = true %}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-  {% endfor %}
+              assign attribute_names = attribute_names | append: name | append: '|'
+              assign attribute_keys  = attribute_keys  | append: key  | append: '|'
+              assign collected_from_sets = true
+            endfor
+          endif
+        endfor
+      endfor
+    endfor
 
-{% elsif product != blank %}
-  {% for collection in product.collections %}
-    {% assign sets = collection.metafields.product_attributes.product_attribute_set.value %}
-    {% if sets == blank %}
-      {% continue %}
-    {% endif %}
+  elsif product != blank
+    for collection in product.collections
+      assign sets = collection.metafields.product_attributes.product_attribute_set.value
+      if sets == blank
+        continue
+      endif
 
-    {% if sets.id != blank %}
-      {% assign attribute_sets = sets | array %}
-    {% else %}
-      {% assign attribute_sets = sets %}
-    {% endif %}
+      if sets.id != blank
+        assign attribute_sets = sets | array
+      else
+        assign attribute_sets = sets
+      endif
 
-    {% for attribute_set in attribute_sets %}
-      {% assign set_obj = attribute_set.value | default: attribute_set %}
-      {% if set_obj.list and set_obj.list.value %}
-        {% for attribute in set_obj.list.value %}
-          {% assign a = attribute.value | default: attribute %}
-          {% assign name = a['product_attribute.display_name'] | default: a.display_name %}
-          {% assign key  = a['product_attribute.metafield_key']  | default: a.metafield_key %}
-          {% if key == blank %}{% continue %}{% endif %}
-          {% assign attribute_names = attribute_names | append: name | append: '|' %}
-          {% assign attribute_keys  = attribute_keys  | append: key  | append: '|' %}
-          {% assign collected_from_sets = true %}
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-{% endif %}
+      for attribute_set in attribute_sets
+        assign set_obj = attribute_set.value | default: attribute_set
+        if set_obj.list and set_obj.list.value
+          for attribute in set_obj.list.value
+            # --- JEN NÁZEV/KEY: rozbal reference a čti product_attribute.*
+            assign a = attribute.value | default: attribute
+            assign name = a['product_attribute.display_name']
+            if name == blank
+              assign name = a.display_name
+            endif
+            assign key = a['product_attribute.metafield_key']
+            if key == blank
+              assign key = a.metafield_key
+            endif
 
-{%- comment -%} === 2) FALLBACK: KLÍČE Z PRODUCT/VARIANT, NÁZEV Z MAPY METAOBJEKTŮ === {%- endcomment -%}
-{% assign collected_from_fallback = false %}
+            if key == blank
+              continue
+            endif
 
-{% if collected_from_sets == false and product != blank %}
-  {% assign pa = product.metafields.product_attributes %}
-  {% if pa and pa != blank %}
-    {% for mf in pa %}
-      {% assign k = mf.key | default: mf[0] %}
-      {% assign v = mf.value | default: mf[1] %}
-      {% if v != blank and k != blank %}
-        {% unless attribute_keys contains k %}
-          {% assign attribute_keys  = attribute_keys  | append: k | append: '|' %}
-          {%- comment -%} lookup v mapě metaobjektů {%- endcomment -%}
-          {% assign pretty = '' %}
-          {% for mk in map_keys %}
-            {% if mk == k %}
-              {% assign pretty = map_names[forloop.index0] %}
-              {% break %}
-            {% endif %}
-          {% endfor %}
-          {% if pretty == '' %}
-            {% assign pretty = k | replace: '_', ' ' | replace: '-', ' ' %}
-          {% endif %}
-          {% assign attribute_names = attribute_names | append: pretty | append: '|' %}
-          {% assign collected_from_fallback = true %}
-        {% endunless %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
+            assign attribute_names = attribute_names | append: name | append: '|'
+            assign attribute_keys  = attribute_keys  | append: key  | append: '|'
+            assign collected_from_sets = true
+          endfor
+        endif
+      endfor
+    endfor
+  endif
+-%}
 
-  {% assign va = product.selected_or_first_available_variant.metafields.product_attributes %}
-  {% if va and va != blank %}
-    {% for mf in va %}
-      {% assign k = mf.key | default: mf[0] %}
-      {% assign v = mf.value | default: mf[1] %}
-      {% if v != blank and k != blank %}
-        {% unless attribute_keys contains k %}
-          {% assign attribute_keys  = attribute_keys  | append: k | append: '|' %}
-          {% assign pretty = '' %}
-          {% for mk in map_keys %}
-            {% if mk == k %}
-              {% assign pretty = map_names[forloop.index0] %}
-              {% break %}
-            {% endif %}
-          {% endfor %}
-          {% if pretty == '' %}
-            {% assign pretty = k | replace: '_', ' ' | replace: '-', ' ' %}
-          {% endif %}
-          {% assign attribute_names = attribute_names | append: pretty | append: '|' %}
-          {% assign collected_from_fallback = true %}
-        {% endunless %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-{% endif %}
+{%- liquid
+  # === 2) FALLBACK: DERIVE KEYS FROM PRODUCT / VARIANT METAFIELDS ===
+  assign collected_from_fallback = false
 
-{%- comment -%} === Normalize & dedupe === {%- endcomment -%}
-{% assign attribute_names = attribute_names | split: '|' | reject: '' | uniq %}
-{% assign attribute_keys  = attribute_keys  | split: '|' | reject: '' | uniq %}
-{% assign keys_length = attribute_keys.size | minus: 1 %}
+  if collected_from_sets == false and product != blank
+    # ----- product namespace -----
+    assign pa = product.metafields.product_attributes
+    if pa and pa != blank
+      for mf in pa
+        # mf may be MetafieldDrop (mf.key/mf.value) OR a [key, value] pair
+        assign k = mf.key
+        assign v = mf.value
+        if k == blank
+          assign k = mf[0]
+        endif
+        if v == blank
+          assign v = mf[1]
+        endif
+
+        if v != blank and k != blank
+          unless attribute_keys contains k
+            assign attribute_keys  = attribute_keys  | append: k | append: '|'
+            assign labelized = k | replace: '_', ' ' | replace: '-', ' '
+            assign attribute_names = attribute_names | append: labelized | append: '|'
+            assign collected_from_fallback = true
+          endunless
+        endif
+      endfor
+    endif
+
+    # ----- variant namespace -----
+    assign va = product.selected_or_first_available_variant.metafields.product_attributes
+    if va and va != blank
+      for mf in va
+        assign k = mf.key
+        assign v = mf.value
+        if k == blank
+          assign k = mf[0]
+        endif
+        if v == blank
+          assign v = mf[1]
+        endif
+
+        if v != blank and k != blank
+          unless attribute_keys contains k
+            assign attribute_keys  = attribute_keys  | append: k | append: '|'
+            assign labelized = k | replace: '_', ' ' | replace: '-', ' '
+            assign attribute_names = attribute_names | append: labelized | append: '|'
+            assign collected_from_fallback = true
+          endunless
+        endif
+      endfor
+    endif
+  endif
+
+  assign attribute_names = attribute_names | split: '|' | uniq
+  assign attribute_keys  = attribute_keys  | split: '|' | uniq
+  assign keys_length = attribute_keys.size | minus: 1
+-%}
 
 {%- if enable_attribute_debug -%}
+  {%- liquid
+    assign has_products_ctx = false
+    if products != blank
+      assign has_products_ctx = true
+    endif
+
+    assign product_id_dbg = 0
+    assign product_handle_dbg = ''
+    assign collections_count_dbg = 0
+    if product != blank
+      assign product_id_dbg = product.id
+      assign product_handle_dbg = product.handle
+      assign collections_count_dbg = product.collections.size
+    endif
+  -%}
+
   {%- capture __dbg -%}
 {
+  "has_products_context": {{ has_products_ctx | json }},
+  "product_id": {{ product_id_dbg }},
+  "product_handle": {{ product_handle_dbg | json }},
+  "collections_count": {{ collections_count_dbg }},
   "collected_from_sets": {{ collected_from_sets | json }},
   "collected_from_fallback": {{ collected_from_fallback | json }},
   "attribute_names": {{ attribute_names | json }},
   "attribute_keys": {{ attribute_keys | json }},
-  "keys_length": {{ keys_length }},
-  "pa_map_count": {{ map_keys.size }}
+  "keys_length": {{ keys_length }}
 }
   {%- endcapture -%}
+
   <details style="padding:12px;border:1px dashed #888;margin:10px 0" open>
     <summary><strong>DEBUG: product-attribute-set</strong></summary>
     <div style="font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:13px; line-height:1.5">
