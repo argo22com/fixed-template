@@ -1,51 +1,25 @@
 {% comment %}
-  Renders a list of product attributes
-
-    Accepts:
-    - products: {Array} Array of products to compare
-    - product - {Object} Product to show
-
-    Usage:
-    {% render 'product-attribute-set', products: products %} or {% render 'product-attribute-set', product: product %}
+  Renders product attributes from collection attribute sets (list of references)
+  Accepts:
+  - product: current product
+  - collection: collection object passed manually (with metafields)
 {% endcomment %}
 
 {% liquid
   assign attribute_names = ''
   assign attribute_keys = ''
 
-  if products != blank
-    for product in products
-      for collection in product.collections
-        assign attribute_sets = collection.metafields.product_attributes.product_attribute_set.value
-        if attribute_sets != blank
-          for attribute_set in attribute_sets
-            if attribute_set.list.value != blank
-              for attribute in attribute_set.list.value
-                if attribute_keys contains attribute.metafield_key
-                  continue
-                endif
-                assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-                assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
-              endfor
-            endif
-          endfor
-        endif
-      endfor
-    endfor
-  elsif product != blank
-    for collection in product.collections
-      assign attribute_sets = collection.metafields.product_attributes.product_attribute_set.value
-      if attribute_sets != blank
-        for attribute_set in attribute_sets
-          if attribute_set.list.value != blank
-            for attribute in attribute_set.list.value
-              if attribute_keys contains attribute.metafield_key
-                continue
-              endif
-              assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-              assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
-            endfor
+  if collection != blank and collection.metafields.product_attributes.product_attribute_set.value != blank
+    assign attribute_sets = collection.metafields.product_attributes.product_attribute_set.value
+
+    for attribute_set in attribute_sets
+      if attribute_set.list.value != blank
+        for attribute in attribute_set.list.value
+          if attribute_keys contains attribute.metafield_key
+            continue
           endif
+          assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+          assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
         endfor
       endif
     endfor
@@ -56,40 +30,7 @@
   assign keys_length = attribute_keys.size | minus: 1
 %}
 
-{% if products != blank %}
-  {% for i in (0..keys_length) %}
-    {% liquid
-      assign all_empty = true
-      for product in products
-        if product.metafields.product_attributes
-          assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
-        else
-          assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
-        endif
-
-        if attribute_metafield and attribute_metafield.value != nil
-          assign all_empty = false
-          break
-        endif
-      endfor
-    %}
-    {% if all_empty == false %}
-      <tr>
-        <th>{{ attribute_names[i] }}:</th>
-        {% for product in products %}
-          {% if product.metafields.product_attributes %}
-            {% assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]] %}
-          {% else %}
-            {% assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
-          {% endif %}
-          <td class="product-compare-{{ product.id }}">
-            {% render 'metafield-display', attribute_metafield: attribute_metafield %}
-          </td>
-        {% endfor %}
-      </tr>
-    {% endif %}
-  {% endfor %}
-{% elsif product != blank %}
+{% if product != blank %}
   <div class="w100">
     <div class="grid">
       {% for i in (0..keys_length) %}
