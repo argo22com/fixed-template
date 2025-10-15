@@ -43,8 +43,10 @@
             assign is_display = true
           endif
         -%}
+        {% assign active_collection = collections[product.collections.first.handle] %}
         {%- if is_display -%}
           {% render 'product-attribute-set', product: product %}
+          {% render 'product-attribute-set', product: product, collection: active_collection %}
         {%- endif -%}
       </div>
     </div>
