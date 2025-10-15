@@ -52,22 +52,33 @@
 <h3>Debug: Kolekce</h3>
 <p>{{ active_collection.title }}</p>
 
+
 {% assign attribute_sets = active_collection.metafields.product_attributes.product_attribute_set.value %}
 
-{% if attribute_sets != blank %}
-  <p><strong>Počet sad atributů:</strong> {{ attribute_sets.size }}</p>
+<p><strong>Počet sad atributů:</strong> {{ attribute_sets.size }}</p>
 
-{% for attribute_set in attribute_sets %}
-  <li>
-    <strong>{{ attribute_set.title }}</strong>
-    <br>Typ objektu: {{ attribute_set.object_type }}
-    <br><strong>list:</strong> {{ attribute_set.list }}<br>
-    <pre>{{ attribute_set.list | json }}</pre>
-  </li>
-{% endfor %}
-{% else %}
-  <p>Žádné sady atributů nenalezeny.</p>
-{% endif %}
+<ul>
+  {% for attribute_set in attribute_sets %}
+    <li>
+      <strong>Název sady:</strong> {{ attribute_set.name }}<br>
+      <strong>SAP ID:</strong> {{ attribute_set.sap_id }}
+
+      {% assign attributes = attribute_set.list.value %}
+      {% if attributes != blank %}
+        <ul>
+          {% for attribute in attributes %}
+            <li>
+              {{ attribute.display_name }} – {{ attribute.metafield_key }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>Tato sada nemá žádné atributy.</p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>
   {{ 'component-rte.css' | asset_url | stylesheet_tag }}
