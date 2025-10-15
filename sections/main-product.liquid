@@ -182,10 +182,6 @@
           -%}
         </div>
         <div class="product__info-wrapper product__info-wrapper-media-{{ section.settings.media_position }} grid__item por">
-          {% for collection in product.collections %}
-  <h3>{{ collection.title }}</h3>
-  <pre>{{ collection.metafields | json }}</pre>
-{% endfor %}
           <div
             id="ProductInfo-{{ section.id }}"
             class="product__info-container{% if section.settings.enable_sticky_info %}{% if section.settings.gallery_layout == 'stacked' or section.settings.gallery_layout == 'columns' %} product__sticky{% endif %}{% endif %}"
