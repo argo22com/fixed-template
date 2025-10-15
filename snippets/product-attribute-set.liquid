@@ -1,8 +1,12 @@
 {% comment %}
-  Renders product attributes from collection attribute sets (list of references)
+  Renders a list of product attributes from collection attribute sets (list of references)
+
   Accepts:
-  - product: current product
-  - collection: collection object passed manually (with metafields)
+  - product: {Object}
+  - collection: {Object} - must be passed manually with metafields
+
+  Usage:
+  {% render 'product-attribute-set', product: product, collection: collection %}
 {% endcomment %}
 
 {% liquid
