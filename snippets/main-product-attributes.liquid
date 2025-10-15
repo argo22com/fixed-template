@@ -61,19 +61,20 @@
   {% endfor %}
 </ul>
 
-{% comment %} Create a new array and add collections to it, excluding "all" {% endcomment %}
-{% assign filtered_collections = '' | split: '' %}
-{% for collection in product.collections %}
-  {% unless collection.handle == 'all' %}
-    {% assign filtered_collections = filtered_collections | push: collection %}
+{% assign related_collections = '' | split: '' %}
+{% for collection in collections %}
+  {% unless collection.handle == 'all' or collection.handle == 'frontpage' %}
+    {% if collection.products contains product %}
+      {% assign related_collections = related_collections | push: collection %}
+    {% endif %}
   {% endunless %}
 {% endfor %}
 
-{% if filtered_collections.size > 0 %}
+{% if related_collections.size > 0 %}
   <div class="product-collections">
     <p>This product is in the following collection(s):</p>
     <ul>
-      {% for collection in filtered_collections %}
+      {% for collection in related_collections %}
         <li>
           <a href="{{ collection.url }}">{{ collection.title }}</a>
         </li>
@@ -81,5 +82,6 @@
     </ul>
   </div>
 {% endif %}
+
 
 
