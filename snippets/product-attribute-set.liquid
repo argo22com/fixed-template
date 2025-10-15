@@ -178,6 +178,7 @@ set_mf.type: {{ set_mf.type | json }}
   </details>
 {% endif %}
 
+
 {% if request.design_mode %}
   <details style="padding:10px;border:1px dashed #888;margin:10px 0" open>
     <summary><strong>DBG: Attribute Set → list → Product Attribute</strong></summary>
@@ -187,12 +188,11 @@ set_mf.type: {{ set_mf.type | json }}
         <pre>
 [{{ collection.handle }}]
 set_mf.type: {{ set_mf.type | json }}
-- value.present?: {{ set_mf.value != blank | json }}
-- refs.size:      {% if set_mf.references %}{{ set_mf.references.size }}{% else %}null{% endif %}
-- ref.present?:   {% if set_mf.reference %}true{% else %}false{% endif %}
+- value.present?: {% if set_mf and set_mf.value %}true{% else %}false{% endif %}
+- refs.size:      {% if set_mf and set_mf.references %}{{ set_mf.references.size }}{% else %}null{% endif %}
+- ref.present?:   {% if set_mf and set_mf.reference %}true{% else %}false{% endif %}
         </pre>
 
-        {%- comment -%} zkus value → pole; jinak references/reference {%- endcomment -%}
         {% assign attribute_sets = blank %}
         {% if set_mf and set_mf.value %}
           {% if set_mf.value.id %}{% assign attribute_sets = set_mf.value | array %}{% else %}{% assign attribute_sets = set_mf.value %}{% endif %}
@@ -208,9 +208,9 @@ set_mf.type: {{ set_mf.type | json }}
             <pre>
   set_obj.id:    {{ set_obj.id | json }}
   list.type:     {{ list_mf.type | json }}
-  list.value?    {{ list_mf and list_mf.value != blank | json }}
+  list.value?:   {% if list_mf and list_mf.value %}true{% else %}false{% endif %}
   list.refs.size:{% if list_mf and list_mf.references %}{{ list_mf.references.size }}{% else %}null{% endif %}
-  list.ref?      {% if list_mf and list_mf.reference %}true{% else %}false{% endif %}
+  list.ref?:     {% if list_mf and list_mf.reference %}true{% else %}false{% endif %}
             </pre>
 
             {% assign attrs = blank %}
