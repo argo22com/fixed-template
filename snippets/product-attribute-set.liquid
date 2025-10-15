@@ -5,25 +5,29 @@
   if products != blank
     for product in products
       for collection in product.collections
-        assign val = collection.metafields.product_attributes.product_attribute_set.value
-        if val == blank
+        assign mf = collection.metafields.product_attributes.product_attribute_set
+        if mf == blank
           continue
         endif
 
-        assign sets = val
-        if sets.id != blank
-          assign sets = sets | array
+        assign sets = blank
+        if mf.references and mf.references != blank
+          assign sets = mf.references
+        elsif mf.value and mf.value != blank
+          assign sets = mf.value
+        endif
+        if sets == blank
+          continue
         endif
 
         for s in sets
           assign sv = s.value | default: s
 
           assign attrs = blank
-          if sv.list
-            assign attrs = sv.list
-          endif
-          if attrs == blank and sv.product_attribute_set__list
+          if sv.product_attribute_set__list
             assign attrs = sv.product_attribute_set__list
+          elsif sv.list
+            assign attrs = sv.list
           endif
           if attrs and attrs.value
             assign attrs = attrs.value
@@ -35,22 +39,18 @@
           for attribute in attrs
             assign a = attribute.value | default: attribute
 
-            assign key = a.metafield_key
-            if key == blank and a.product_attribute__metafield_key
-              assign key = a.product_attribute__metafield_key
+            assign key = a.product_attribute__metafield_key
+            assign name = a.product_attribute__display_name
+            if key == blank
+              assign key = a.metafield_key
             endif
-
-            assign name = a.display_name
-            if name == blank and a.product_attribute__display_name
-              assign name = a.product_attribute__display_name
+            if name == blank
+              assign name = a.display_name
             endif
-            if name == blank and a.name
-              assign name = a.name
-            endif
-
             if key == blank or name == blank
               continue
             endif
+
             if attribute_keys contains key
               continue
             endif
@@ -64,25 +64,29 @@
 
   elsif product != blank
     for collection in product.collections
-      assign val = collection.metafields.product_attributes.product_attribute_set.value
-      if val == blank
+      assign mf = collection.metafields.product_attributes.product_attribute_set
+      if mf == blank
         continue
       endif
 
-      assign sets = val
-      if sets.id != blank
-        assign sets = sets | array
+      assign sets = blank
+      if mf.references and mf.references != blank
+        assign sets = mf.references
+      elsif mf.value and mf.value != blank
+        assign sets = mf.value
+      endif
+      if sets == blank
+        continue
       endif
 
       for s in sets
         assign sv = s.value | default: s
 
         assign attrs = blank
-        if sv.list
-          assign attrs = sv.list
-        endif
-        if attrs == blank and sv.product_attribute_set__list
+        if sv.product_attribute_set__list
           assign attrs = sv.product_attribute_set__list
+        elsif sv.list
+          assign attrs = sv.list
         endif
         if attrs and attrs.value
           assign attrs = attrs.value
@@ -94,19 +98,14 @@
         for attribute in attrs
           assign a = attribute.value | default: attribute
 
-          assign key = a.metafield_key
-          if key == blank and a.product_attribute__metafield_key
-            assign key = a.product_attribute__metafield_key
+          assign key = a.product_attribute__metafield_key
+          assign name = a.product_attribute__display_name
+          if key == blank
+            assign key = a.metafield_key
           endif
-
-          assign name = a.display_name
-          if name == blank and a.product_attribute__display_name
-            assign name = a.product_attribute__display_name
+          if name == blank
+            assign name = a.display_name
           endif
-          if name == blank and a.name
-            assign name = a.name
-          endif
-
           if key == blank or name == blank
             continue
           endif
@@ -130,20 +129,21 @@
     assign dbg_attrs = 0
     if product != blank
       for collection in product.collections
-        assign val = collection.metafields.product_attributes.product_attribute_set.value
-        if val != blank
-          assign sets = val
-          if sets.id != blank
-            assign sets = sets | array
-          endif
+        assign mf = collection.metafields.product_attributes.product_attribute_set
+        assign sets = blank
+        if mf and mf.references and mf.references != blank
+          assign sets = mf.references
+        elsif mf and mf.value and mf.value != blank
+          assign sets = mf.value
+        endif
+        if sets != blank
           for s in sets
             assign sv = s.value | default: s
             assign attrs = blank
-            if sv.list
-              assign attrs = sv.list
-            endif
-            if attrs == blank and sv.product_attribute_set__list
+            if sv.product_attribute_set__list
               assign attrs = sv.product_attribute_set__list
+            elsif sv.list
+              assign attrs = sv.list
             endif
             if attrs and attrs.value
               assign attrs = attrs.value
