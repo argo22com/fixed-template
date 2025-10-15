@@ -11,9 +11,9 @@
 {% endcomment %}
 
 {% liquid
-  assign attribute_names     = ''     {# pipe-delimited labels #}
-  assign attribute_keys_raw  = ''     {# pipe-delimited original keys from metaobject (may be UPPERCASE) #}
-  assign attribute_keys_lc_s = ''     {# pipe-delimited lowercase keys for de-duplication #}
+  assign attribute_names     = ''
+  assign attribute_keys_raw  = ''
+  assign attribute_keys_lc_s = ''
 
   if products != blank
     for product in products
