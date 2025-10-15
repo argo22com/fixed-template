@@ -1,13 +1,13 @@
 {% comment %}
-	Renders parameter section
+  Renders parameter section
 
-	Accepts:
-	- product: {product} Product
-	- show_sku: {boolean} Should show SKU
-	- title: {String} Title of tab
+  Accepts:
+  - product: {product} Product
+  - show_sku: {boolean} Should show SKU
+  - title: {String} Title of tab
 
-	Usage:
-	{% render 'main-product-attributes', product: product, show_sku: true, title: "Test" %}
+  Usage:
+  {% render 'main-product-attributes', product: product, show_sku: true, title: "Test" %}
 {% endcomment %}
 
 {% liquid
@@ -36,16 +36,13 @@
             </div>
           </div>
         {% endif %}
-        {%- liquid assign has_content = true -%}
+
         {%- liquid
-          assign is_display = has_content
-          if request.design_mode and is_display == false
-            assign is_display = true
-          endif
+          assign is_display = true
+          assign active_collection = collections[product.collections.first.handle]
         -%}
-        {% assign active_collection = collections[product.collections.first.handle] %}
-        {%- if is_display -%}
-          {% render 'product-attribute-set', product: product %}
+
+        {%- if is_display and active_collection != blank -%}
           {% render 'product-attribute-set', product: product, collection: active_collection %}
         {%- endif -%}
       </div>
