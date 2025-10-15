@@ -5,95 +5,67 @@
   if products != blank
     for product in products
       for collection in product.collections
-        assign mf = collection.metafields.product_attributes.product_attribute_set
-        if mf == blank
+        assign pas = collection.metafields.product_attributes.product_attribute_set
+        if pas == blank
+          continue
+        endif
+        assign mv = pas.value
+        if mv == blank
           continue
         endif
 
-        assign attr_sets = blank
-        if mf.value and mf.value.id
-          assign attr_sets = mf.value | array
-        endif
-        if attr_sets == blank
-          if mf.references and mf.references.size > 0
-            assign attr_sets = mf.references
-          elsif mf.value and mf.value != blank
-            assign attr_sets = mf.value
-          endif
+        if mv.id != blank
+          assign sets = mv | array
+        else
+          assign sets = mv
         endif
 
-        if attr_sets != blank
-          for s in attr_sets
-            assign set_obj = s.value | default: s
-            if set_obj and set_obj.list
-              assign attrs = set_obj.list
-              if attrs.value
-                assign attrs = attrs.value
+        for s in sets
+          assign sv = s.value | default: s
+          if sv and sv.list and sv.list.value
+            for attribute in sv.list.value
+              if attribute_keys contains attribute.metafield_key
+                continue
               endif
-              if attrs != blank
-                for a in attrs
-                  assign a_obj = a.value | default: a
-                  if a_obj.metafield_key == blank
-                    continue
-                  endif
-                  if attribute_keys contains a_obj.metafield_key
-                    continue
-                  endif
-                  assign attribute_names = attribute_names | append: a_obj.display_name | append: '|'
-                  assign attribute_keys  = attribute_keys  | append: a_obj.metafield_key | append: '|'
-                endfor
-              endif
-            endif
-          endfor
-        endif
+              assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+              assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+            endfor
+          endif
+        endfor
       endfor
     endfor
 
   elsif product != blank
     for collection in product.collections
-      assign mf = collection.metafields.product_attributes.product_attribute_set
-      if mf == blank
+      assign pas = collection.metafields.product_attributes.product_attribute_set
+      if pas == blank
+        continue
+      endif
+      assign mv = pas.value
+      if mv == blank
         continue
       endif
 
-      assign attr_sets = blank
-      if mf.value and mf.value.id
-        assign attr_sets = mf.value | array
-      endif
-      if attr_sets == blank
-        if mf.references and mf.references.size > 0
-          assign attr_sets = mf.references
-        elsif mf.value and mf.value != blank
-          assign attr_sets = mf.value
-        endif
+      if mv.id != blank
+        assign sets = mv | array
+      else
+        assign sets = mv
       endif
 
-      if attr_sets != blank
-        for s in attr_sets
-          assign set_obj = s.value | default: s
-          if set_obj and set_obj.list
-            assign attrs = set_obj.list
-            if attrs.value
-              assign attrs = attrs.value
-            endif
-            if attrs != blank
-              for a in attrs
-                assign a_obj = a.value | default: a
-                if a_obj.metafield_key == blank
-                  continue
-                endif
-                assign attribute_names = attribute_names | append: a_obj.display_name | append: '|'
-                assign attribute_keys  = attribute_keys  | append: a_obj.metafield_key | append: '|'
-              endfor
-            endif
-          endif
-        endfor
-      endif
+      for s in sets
+        assign sv = s.value | default: s
+        if sv and sv.list and sv.list.value
+          for attribute in sv.list.value
+            assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+            assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+          endfor
+        endif
+      endfor
     endfor
   endif
 
-  assign attribute_names = attribute_names | split: '|' | uniq | reject: ''
-  assign attribute_keys  = attribute_keys  | split: '|' | uniq | reject: ''
+  assign attribute_names = attribute_names | split: '|' | uniq
+  assign attribute_keys  = attribute_keys  | split: '|' | uniq
   assign keys_length = attribute_keys.size | minus: 1
 %}
 
@@ -116,50 +88,7 @@
   "collections_count": {{ dbg_collections_count }},
   "attribute_names": {{ attribute_names | json }},
   "attribute_keys": {{ attribute_keys | json }},
-  "keys_length": {{ keys_length }},
-  "collections_dump":
-  {% if product != blank %}
-  [
-    {% for collection in product.collections %}
-      {% liquid
-        assign mf = collection.metafields.product_attributes.product_attribute_set
-        assign has_mf = false
-        if mf != blank
-          assign has_mf = true
-        endif
-
-        assign resolution = 'none'
-        if has_mf and mf.value and mf.value.id
-          assign resolution = 'single.value'
-        endif
-        if resolution == 'none' and has_mf and mf.references and mf.references.size > 0
-          assign resolution = 'list.references'
-        endif
-        if resolution == 'none' and has_mf and mf.value and mf.value != blank
-          assign resolution = 'list.value'
-        endif
-
-        assign sets_count = 0
-        if resolution == 'single.value'
-          assign sets_count = 1
-        endif
-        if resolution == 'list.references'
-          assign sets_count = mf.references.size
-        endif
-        if resolution == 'list.value'
-          assign sets_count = mf.value.size
-        endif
-      %}
-      {
-        "collection_id": {{ collection.id }},
-        "collection_handle": {{ collection.handle | json }},
-        "has_metafield": {{ has_mf | json }},
-        "resolution": {{ resolution | json }},
-        "sets_count": {{ sets_count }}
-      }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-  {% else %} null {% endif %}
+  "keys_length": {{ keys_length }}
 }
   {% endcapture %}
   <details style="padding:12px;border:1px dashed #888;margin:10px 0" open>
