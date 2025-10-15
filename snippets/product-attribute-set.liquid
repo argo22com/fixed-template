@@ -1,70 +1,87 @@
 {% comment %}
   Renders a list of product attributes (from collection attribute sets)
+
   Accepts:
-  - products: {Array} for comparison table
-  - product:  {Product} single PDP block
+  - products: {Array} Array of products to compare
+  - product:  {Product} Single product
+
+  Logic:
+  - From each relevant collection, read metafield product_attributes.product_attribute_set (metaobject)
+  - Find its "list" of attribute rows (supports keys: list / attributes / items / fields)
+  - Each attribute row should contain: display_name, metafield_key (key can be UPPERCASE from SAP)
+  - Build unique (case-insensitive) set of keys + labels
+  - Render values from variant.metafields.product_attributes[key_lc] with product fallback
 {% endcomment %}
 
 {% liquid
-  assign attribute_names_s     = ''
-  assign attribute_keys_raw_s  = ''
-  assign attribute_keys_lc_s   = ''
+  assign attribute_names_s     = ''   # pipe-delimited labels
+  assign attribute_keys_raw_s  = ''   # pipe-delimited original keys (may be UPPERCASE)
+  assign attribute_keys_lc_s   = ''   # pipe-delimited lowercase keys (for dedupe)
 
-  if products != blank
-    for product in products
-      for collection in product.collections
-        if collection.metafields.product_attributes.product_attribute_set.value
-          for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
-            assign key_raw = attribute.metafield_key | strip
-            assign key_lc  = key_raw | downcase
-            assign needle  = key_lc | append: '|'
-            if key_lc == '' or attribute_keys_lc_s contains needle
-              continue
-            endif
-            assign attribute_names_s    = attribute_names_s    | append: attribute.display_name | append: '|'
-            assign attribute_keys_raw_s = attribute_keys_raw_s | append: key_raw               | append: '|'
-            assign attribute_keys_lc_s  = attribute_keys_lc_s  | append: needle
-          endfor
-        endif
-      endfor
-    endfor
-  elsif product != blank
-    for collection in product.collections
-      if collection.metafields.product_attributes.product_attribute_set.value
-        for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
-          assign key_raw = attribute.metafield_key | strip
-          assign key_lc  = key_raw | downcase
-          assign needle  = key_lc | append: '|'
-          if key_lc == '' or attribute_keys_lc_s contains needle
-            continue
-          endif
-          assign attribute_names_s    = attribute_names_s    | append: attribute.display_name | append: '|'
-          assign attribute_keys_raw_s = attribute_keys_raw_s | append: key_raw               | append: '|'
-          assign attribute_keys_lc_s  = attribute_keys_lc_s  | append: needle
-        endfor
-      endif
-    endfor
-  endif
+  # helper to collect from one product's collections
+  assign _dbg_collections = ''
+%}
 
+{%- capture _collect_from_product -%}
+  {%- for collection in __P.collections -%}
+    {%- assign set_mf = collection.metafields.product_attributes.product_attribute_set -%}
+    {%- assign has_set = set_mf and set_mf.value -%}
+    {%- if has_set -%}
+      {%- assign set = set_mf.value -%}
+      {%- comment -%}
+        Try multiple field names on the metaobject to find the list of attributes.
+        We need the "value" (array) of a list-type field.
+      {%- endcomment -%}
+      {%- assign list_try_1 = set.list.value -%}
+      {%- assign list_try_2 = set.attributes.value -%}
+      {%- assign list_try_3 = set.items.value -%}
+      {%- assign list_try_4 = set.fields.value -%}
+      {%- assign attr_list = list_try_1 | default: list_try_2 | default: list_try_3 | default: list_try_4 -%}
+
+      {%- if attr_list != blank -%}
+        {%- for attribute in attr_list -%}
+          {%- assign key_raw = attribute.metafield_key | strip -%}
+          {%- assign key_lc  = key_raw | downcase -%}
+          {%- if key_lc == '' -%}{%- continue -%}{%- endif -%}
+          {%- assign needle = key_lc | append: '|' -%}
+          {%- if attribute_keys_lc_s contains needle -%}{%- continue -%}{%- endif -%}
+
+          {%- assign label = attribute.display_name | default: attribute.name | default: key_raw -%}
+          {%- assign attribute_names_s     = attribute_names_s     | append: label   | append: '|' -%}
+          {%- assign attribute_keys_raw_s  = attribute_keys_raw_s  | append: key_raw | append: '|' -%}
+          {%- assign attribute_keys_lc_s   = attribute_keys_lc_s   | append: needle -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- capture _dbg_collections -%}{{ _dbg_collections }}
+      [{{ collection.handle }}] set: yes; list keys present={{ list_try_1 != blank | json }}/{{ list_try_2 != blank | json }}/{{ list_try_3 != blank | json }}/{{ list_try_4 != blank | json }}{%- endcapture -%}
+    {%- else -%}
+      {%- capture _dbg_collections -%}{{ _dbg_collections }}
+      [{{ collection.handle }}] set: no{%- endcapture -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- if products != blank -%}
+  {%- for __P in products -%}
+    {{ _collect_from_product }}
+  {%- endfor -%}
+{%- elsif product != blank -%}
+  {%- assign __P = product -%}
+  {{ _collect_from_product }}
+{%- endif -%}
+
+{%- liquid
   assign attribute_names = attribute_names_s    | split: '|' 
   assign attribute_keys  = attribute_keys_raw_s | split: '|' 
+  assign keys_length     = attribute_keys.size | minus: 1
+-%}
 
-  comment
-    Debug: uvidíš v HTML komentáři, jaké klíče/labely sebrala kolekce.
-  endcomment
-  capture _dbg
-    echo 'ATTR_KEYS_RAW=' | append: attribute_keys | json | append: ' :: ATTR_NAMES=' | append: attribute_names | json
-  endcapture
-%}
-<!-- {{ _dbg }} -->
+<!-- ATTR_KEYS_RAW={{ attribute_keys | json }} :: ATTR_NAMES={{ attribute_names | json }} :: COLLECT={{ _dbg_collections | strip }} -->
 
-{% liquid
-  assign keys_length = attribute_keys.size | minus: 1
-%}
-
-{% if products != blank %}
-  {% for i in (0..keys_length) %}
-    {% liquid
+{%- if products != blank -%}
+  {%- for i in (0..keys_length) -%}
+    {%- liquid
       assign key_raw = attribute_keys[i] | strip
       assign key_lc  = key_raw | downcase
       if key_lc == ''
@@ -72,35 +89,35 @@
       endif
 
       assign all_empty = true
-      for product in products
-        assign v = product.selected_or_first_available_variant
-        assign attribute_metafield = v.metafields.product_attributes[key_lc] | default: product.metafields.product_attributes[key_lc]
+      for p in products
+        assign v = p.selected_or_first_available_variant
+        assign attribute_metafield = v.metafields.product_attributes[key_lc] | default: p.metafields.product_attributes[key_lc]
         if attribute_metafield != nil and attribute_metafield != blank
           assign all_empty = false
           break
         endif
       endfor
-    %}
-    {% if all_empty == false %}
+    -%}
+    {%- if all_empty == false -%}
       <tr>
         <th>{{ attribute_names[i] }}:</th>
-        {% for product in products %}
-          {% liquid
-            assign v = product.selected_or_first_available_variant
-            assign attribute_metafield = v.metafields.product_attributes[key_lc] | default: product.metafields.product_attributes[key_lc]
-          %}
-          <td class="product-compare-{{ product.id }}">
+        {%- for p in products -%}
+          {%- liquid
+            assign v = p.selected_or_first_available_variant
+            assign attribute_metafield = v.metafields.product_attributes[key_lc] | default: p.metafields.product_attributes[key_lc]
+          -%}
+          <td class="product-compare-{{ p.id }}">
             {% render 'metafield-display', attribute_metafield: attribute_metafield %}
           </td>
-        {% endfor %}
+        {%- endfor -%}
       </tr>
-    {% endif %}
-  {% endfor %}
-{% elsif product != blank %}
+    {%- endif -%}
+  {%- endfor -%}
+{%- elsif product != blank -%}
   <div class="w100">
     <div class="grid">
-      {% for i in (0..keys_length) %}
-        {% liquid
+      {%- for i in (0..keys_length) -%}
+        {%- liquid
           assign key_raw = attribute_keys[i] | strip
           assign key_lc  = key_raw | downcase
           if key_lc == ''
@@ -108,16 +125,16 @@
           endif
           assign v = product.selected_or_first_available_variant
           assign attribute_metafield = v.metafields.product_attributes[key_lc] | default: product.metafields.product_attributes[key_lc]
-        %}
-        {% if attribute_metafield != blank %}
+        -%}
+        {%- if attribute_metafield != blank -%}
           <div class="grid__item">
             <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
             <div class="rte">
               {% render 'metafield-display', attribute_metafield: attribute_metafield %}
             </div>
           </div>
-        {% endif %}
-      {% endfor %}
+        {%- endif -%}
+      {%- endfor -%}
     </div>
   </div>
-{% endif %}
+{%- endif -%}
