@@ -1,83 +1,68 @@
 {% liquid
   assign attribute_names = ''
   assign attribute_keys  = ''
-  assign sets_found = 0
-  assign attrs_found = 0
 
   if products != blank
     for product in products
       for collection in product.collections
-        assign pas = collection.metafields.product_attributes.product_attribute_set
-        if pas == blank
+        assign mf = collection.metafields.product_attributes.product_attribute_set
+        if mf == blank
           continue
         endif
-        assign val = pas.value
-        if val == blank
+        assign v = mf.value
+        if v == blank
           continue
         endif
 
-        if val.list and val.list.value
-          assign sets_found = sets_found | plus: 1
-          for attribute in val.list.value
-            if attribute_keys contains attribute.metafield_key
-              continue
-            endif
-            assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-            assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
-            assign attrs_found = attrs_found | plus: 1
-          endfor
+        assign maybe_first = v | first
+        if maybe_first
+          assign sets = v
         else
-          if val.size and val.size > 0
-            for set in val
-              if set.list and set.list.value
-                assign sets_found = sets_found | plus: 1
-                for attribute in set.list.value
-                  if attribute_keys contains attribute.metafield_key
-                    continue
-                  endif
-                  assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-                  assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
-                  assign attrs_found = attrs_found | plus: 1
-                endfor
+          assign sets = v | array
+        endif
+
+        for s in sets
+          assign set_obj = s
+          if set_obj and set_obj.list and set_obj.list.value
+            for attribute in set_obj.list.value
+              if attribute_keys contains attribute.metafield_key
+                continue
               endif
+              assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+              assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
             endfor
           endif
-        endif
+        endfor
       endfor
     endfor
 
   elsif product != blank
     for collection in product.collections
-      assign pas = collection.metafields.product_attributes.product_attribute_set
-      if pas == blank
+      assign mf = collection.metafields.product_attributes.product_attribute_set
+      if mf == blank
         continue
       endif
-      assign val = pas.value
-      if val == blank
+      assign v = mf.value
+      if v == blank
         continue
       endif
 
-      if val.list and val.list.value
-        assign sets_found = sets_found | plus: 1
-        for attribute in val.list.value
-          assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-          assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
-          assign attrs_found = attrs_found | plus: 1
-        endfor
+      assign maybe_first = v | first
+      if maybe_first
+        assign sets = v
       else
-        if val.size and val.size > 0
-          for set in val
-            if set.list and set.list.value
-              assign sets_found = sets_found | plus: 1
-              for attribute in set.list.value
-                assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-                assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
-                assign attrs_found = attrs_found | plus: 1
-              endfor
-            endif
+        assign sets = v | array
+      endif
+
+      for s in sets
+        assign set_obj = s
+        if set_obj and set_obj.list and set_obj.list.value
+          for attribute in set_obj.list.value
+            assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+            assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
           endfor
         endif
-      endif
+      endfor
     endfor
   endif
 
@@ -92,10 +77,41 @@
     assign dbg_product_id = 0
     assign dbg_product_handle = ''
     assign dbg_collections_count = 0
+    assign dbg_sets_total = 0
+    assign dbg_attrs_total = 0
     if product != blank
       assign dbg_product_id = product.id
       assign dbg_product_handle = product.handle
       assign dbg_collections_count = product.collections.size
+      for collection in product.collections
+        assign mf = collection.metafields.product_attributes.product_attribute_set
+        assign v = blank
+        if mf != blank
+          assign v = mf.value
+        endif
+        assign sets = blank
+        if v != blank
+          assign maybe_first = v | first
+          if maybe_first
+            assign sets = v
+          else
+            assign sets = v | array
+          endif
+        endif
+        if sets != blank
+          for s in sets
+            assign set_obj = s
+            assign attrs = blank
+            if set_obj and set_obj.list
+              assign attrs = set_obj.list.value
+            endif
+            assign dbg_sets_total = dbg_sets_total | plus: 1
+            if attrs != blank
+              assign dbg_attrs_total = dbg_attrs_total | plus: attrs.size
+            endif
+          endfor
+        endif
+      endfor
     endif
   %}
   {% capture __dbg %}
@@ -103,8 +119,8 @@
   "product_id": {{ dbg_product_id }},
   "product_handle": {{ dbg_product_handle | json }},
   "collections_count": {{ dbg_collections_count }},
-  "sets_found": {{ sets_found }},
-  "attributes_collected": {{ attrs_found }},
+  "sets_total": {{ dbg_sets_total }},
+  "attributes_total": {{ dbg_attrs_total }},
   "attribute_names": {{ attribute_names | json }},
   "attribute_keys": {{ attribute_keys | json }},
   "keys_length": {{ keys_length }}
