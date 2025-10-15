@@ -61,20 +61,12 @@
   {% endfor %}
 </ul>
 
-{% assign related_collections = '' | split: '' %}
-{% for collection in collections %}
-  {% unless collection.handle == 'all' or collection.handle == 'frontpage' %}
-    {% if collection.products contains product %}
-      {% assign related_collections = related_collections | push: collection %}
-    {% endif %}
-  {% endunless %}
-{% endfor %}
 
-{% if related_collections.size > 0 %}
+{% if product.collections.size > 0 %}
   <div class="product-collections">
     <p>This product is in the following collection(s):</p>
     <ul>
-      {% for collection in related_collections %}
+      {% for collection in product.collections %}
         <li>
           <a href="{{ collection.url }}">{{ collection.title }}</a>
         </li>
