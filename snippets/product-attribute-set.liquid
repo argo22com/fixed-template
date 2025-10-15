@@ -11,9 +11,9 @@
 {% endcomment %}
 
 {% liquid
-  assign attribute_names     = ''
-  assign attribute_keys_raw  = ''
-  assign attribute_keys_lc_s = ''
+  assign attribute_names_s     = ''
+  assign attribute_keys_raw_s  = ''
+  assign attribute_keys_lc_s   = ''
 
   if products != blank
     for product in products
@@ -22,12 +22,13 @@
           for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
             assign key_raw = attribute.metafield_key | strip
             assign key_lc  = key_raw | downcase
-            if attribute_keys_lc_s contains key_lc | append: '|'
+            assign needle  = key_lc | append: '|'
+            if attribute_keys_lc_s contains needle
               continue
             endif
-            assign attribute_names     = attribute_names     | append: attribute.display_name | append: '|'
-            assign attribute_keys_raw  = attribute_keys_raw  | append: key_raw               | append: '|'
-            assign attribute_keys_lc_s = attribute_keys_lc_s | append: key_lc                | append: '|'
+            assign attribute_names_s    = attribute_names_s    | append: attribute.display_name | append: '|'
+            assign attribute_keys_raw_s = attribute_keys_raw_s | append: key_raw               | append: '|'
+            assign attribute_keys_lc_s  = attribute_keys_lc_s  | append: needle
           endfor
         endif
       endfor
@@ -38,26 +39,27 @@
         for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
           assign key_raw = attribute.metafield_key | strip
           assign key_lc  = key_raw | downcase
-          if attribute_keys_lc_s contains key_lc | append: '|'
+          assign needle  = key_lc | append: '|'
+          if attribute_keys_lc_s contains needle
             continue
           endif
-          assign attribute_names     = attribute_names     | append: attribute.display_name | append: '|'
-          assign attribute_keys_raw  = attribute_keys_raw  | append: key_raw               | append: '|'
-          assign attribute_keys_lc_s = attribute_keys_lc_s | append: key_lc                | append: '|'
+          assign attribute_names_s    = attribute_names_s    | append: attribute.display_name | append: '|'
+          assign attribute_keys_raw_s = attribute_keys_raw_s | append: key_raw               | append: '|'
+          assign attribute_keys_lc_s  = attribute_keys_lc_s  | append: needle
         endfor
       endif
     endfor
   endif
 
-  assign attribute_names_arr = attribute_names    | split: '|' | uniq
-  assign attribute_keys_arr  = attribute_keys_raw | split: '|' | uniq
-  assign keys_length         = attribute_keys_arr.size | minus: 1
+  assign attribute_names = attribute_names_s    | split: '|' 
+  assign attribute_keys  = attribute_keys_raw_s | split: '|' 
+  assign keys_length     = attribute_keys.size | minus: 1
 %}
 
 {% if products != blank %}
   {% for i in (0..keys_length) %}
     {% liquid
-      assign key_lc = attribute_keys_arr[i] | downcase
+      assign key_lc = attribute_keys[i] | downcase
       assign all_empty = true
       for product in products
         assign v = product.selected_or_first_available_variant
@@ -70,10 +72,10 @@
     %}
     {% if all_empty == false %}
       <tr>
-        <th>{{ attribute_names_arr[i] }}:</th>
+        <th>{{ attribute_names[i] }}:</th>
         {% for product in products %}
           {% liquid
-            assign key_lc = attribute_keys_arr[i] | downcase
+            assign key_lc = attribute_keys[i] | downcase
             assign v = product.selected_or_first_available_variant
             assign attribute_metafield = v.metafields.product_attributes[key_lc] | default: product.metafields.product_attributes[key_lc]
           %}
@@ -89,13 +91,13 @@
     <div class="grid">
       {% for i in (0..keys_length) %}
         {% liquid
-          assign key_lc = attribute_keys_arr[i] | downcase
+          assign key_lc = attribute_keys[i] | downcase
           assign v = product.selected_or_first_available_variant
           assign attribute_metafield = v.metafields.product_attributes[key_lc] | default: product.metafields.product_attributes[key_lc]
         %}
         {% if attribute_metafield != blank %}
           <div class="grid__item">
-            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names_arr[i] }}</h4>
+            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
             <div class="rte">
               {% render 'metafield-display', attribute_metafield: attribute_metafield %}
             </div>
@@ -105,5 +107,3 @@
     </div>
   </div>
 {% endif %}
-
-{{ product.selected_or_first_available_variant.metafields.product_attributes.KABEL_DELKA_CM | json }}
