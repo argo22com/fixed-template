@@ -89,28 +89,57 @@
 
 {%- liquid
   # === 2) FALLBACK: DERIVE KEYS FROM PRODUCT / VARIANT METAFIELDS ===
-  if collected_from_sets == false and product != blank
-    # from product namespace
-    for mf in product.metafields.product_attributes
-      if mf.value != blank
-        unless attribute_keys contains mf.key
-          assign attribute_keys  = attribute_keys  | append: mf.key | append: '|'
-          assign labelized = mf.key | replace: '_', ' ' | replace: '-', ' '
-          assign attribute_names = attribute_names | append: labelized | append: '|'
-        endunless
-      endif
-    endfor
+  assign collected_from_fallback = false
 
-    # from variant namespace
-    for mf in product.selected_or_first_available_variant.metafields.product_attributes
-      if mf.value != blank
-        unless attribute_keys contains mf.key
-          assign attribute_keys  = attribute_keys  | append: mf.key | append: '|'
-          assign labelized = mf.key | replace: '_', ' ' | replace: '-', ' '
-          assign attribute_names = attribute_names | append: labelized | append: '|'
-        endunless
-      endif
-    endfor
+  if collected_from_sets == false and product != blank
+    # ----- product namespace -----
+    assign pa = product.metafields.product_attributes
+    if pa and pa != blank
+      for mf in pa
+        # mf may be MetafieldDrop (mf.key/mf.value) OR a [key, value] pair
+        assign k = mf.key
+        assign v = mf.value
+        if k == blank
+          assign k = mf[0]
+        endif
+        if v == blank
+          assign v = mf[1]
+        endif
+
+        if v != blank and k != blank
+          unless attribute_keys contains k
+            assign attribute_keys  = attribute_keys  | append: k | append: '|'
+            assign labelized = k | replace: '_', ' ' | replace: '-', ' '
+            assign attribute_names = attribute_names | append: labelized | append: '|'
+            assign collected_from_fallback = true
+          endunless
+        endif
+      endfor
+    endif
+
+    # ----- variant namespace -----
+    assign va = product.selected_or_first_available_variant.metafields.product_attributes
+    if va and va != blank
+      for mf in va
+        assign k = mf.key
+        assign v = mf.value
+        if k == blank
+          assign k = mf[0]
+        endif
+        if v == blank
+          assign v = mf[1]
+        endif
+
+        if v != blank and k != blank
+          unless attribute_keys contains k
+            assign attribute_keys  = attribute_keys  | append: k | append: '|'
+            assign labelized = k | replace: '_', ' ' | replace: '-', ' '
+            assign attribute_names = attribute_names | append: labelized | append: '|'
+            assign collected_from_fallback = true
+          endunless
+        endif
+      endfor
+    endif
   endif
 
   assign attribute_names = attribute_names | split: '|' | uniq
@@ -142,6 +171,7 @@
   "product_handle": {{ product_handle_dbg | json }},
   "collections_count": {{ collections_count_dbg }},
   "collected_from_sets": {{ collected_from_sets | json }},
+  "collected_from_fallback": {{ collected_from_fallback | json }},
   "attribute_names": {{ attribute_names | json }},
   "attribute_keys": {{ attribute_keys | json }},
   "keys_length": {{ keys_length }},
