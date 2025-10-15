@@ -10,162 +10,158 @@
   - List of Attribute Set metaobject references on a collection
   - Fallback: if no sets found, infer keys from product/variant metafields in namespace `product_attributes`
 
-  Expected attribute metaobject fields:
-  - product_attribute.display_name
-  - product_attribute.metafield_key
+  Expected attribute metaobject fields (Product Attribute metaobject):
+  - product_attribute.display_name   (string)
+  - product_attribute.metafield_key  (string)
 {% endcomment %}
 
-{% liquid
-  assign attribute_names = ''
-  assign attribute_keys  = ''
+{% assign attribute_names = '' %}
+{% assign attribute_keys  = '' %}
 
-  assign enable_attribute_debug = false
-  if request.design_mode
-    assign enable_attribute_debug = true
-  endif
-%}
+{% assign enable_attribute_debug = false %}
+{% if request.design_mode %}
+  {% assign enable_attribute_debug = true %}
+{% endif %}
 
-{%- liquid
-  # === 1) TRY TO COLLECT FROM COLLECTION ATTRIBUTE SETS ===
-  assign collected_from_sets = false
+{%- comment -%} === 1) COLLECT FROM COLLECTION ATTRIBUTE SETS (via .references) === {%- endcomment -%}
+{% assign collected_from_sets = false %}
 
-  if products != blank
-    for product in products
-      for collection in product.collections
-        assign sets = collection.metafields.product_attributes.product_attribute_set.value
-        if sets == blank
-          continue
-        endif
+{% if products != blank %}
+  {% for product in products %}
+    {% for collection in product.collections %}
+      {% assign set_mf = collection.metafields.product_attributes.product_attribute_set %}
+      {% assign attribute_sets = blank %}
 
-        # Normalize single → array
-        if sets.id != blank
-          assign attribute_sets = sets | array
-        else
-          assign attribute_sets = sets
-        endif
+      {% if set_mf != blank %}
+        {% if set_mf.type contains 'list' %}
+          {% assign attribute_sets = set_mf.references %}
+        {% else %}
+          {% assign attribute_sets = set_mf.reference | array %}
+        {% endif %}
+      {% endif %}
 
-        for attribute_set in attribute_sets
-          assign set_obj = attribute_set.value | default: attribute_set
-          if set_obj.list and set_obj.list.value
-            for attribute in set_obj.list.value
-              # Read strictly from product_attribute.* (with reference expansion)
-              assign a    = attribute.value | default: attribute
-              assign name = a['product_attribute.display_name'] | default: a.display_name
-              assign key  = a['product_attribute.metafield_key'] | default: a.metafield_key
+      {% if attribute_sets != blank %}
+        {% for attribute_set in attribute_sets %}
+          {% assign list_mf = attribute_set.list %}
+          {% assign attrs = blank %}
 
-              if key == blank
-                continue
-              endif
+          {% if list_mf != blank %}
+            {% if list_mf.type contains 'list' %}
+              {% assign attrs = list_mf.references %}
+            {% else %}
+              {% assign attrs = list_mf.reference | array %}
+            {% endif %}
+          {% endif %}
 
-              unless attribute_keys contains key
-                assign attribute_names = attribute_names | append: name | append: '|'
-                assign attribute_keys  = attribute_keys  | append: key  | append: '|'
-              endunless
+          {% if attrs != blank %}
+            {% for a in attrs %}
+              {% assign name = a['product_attribute.display_name'] | default: a.display_name %}
+              {% assign key  = a['product_attribute.metafield_key']  | default: a.metafield_key %}
 
-              assign collected_from_sets = true
-            endfor
-          endif
-        endfor
-      endfor
-    endfor
+              {% if key != blank %}
+                {% unless attribute_keys contains key %}
+                  {% assign attribute_names = attribute_names | append: name | append: '|' %}
+                  {% assign attribute_keys  = attribute_keys  | append: key  | append: '|' %}
+                {% endunless %}
+                {% assign collected_from_sets = true %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
 
-  elsif product != blank
-    for collection in product.collections
-      assign sets = collection.metafields.product_attributes.product_attribute_set.value
-      if sets == blank
-        continue
-      endif
+{% elsif product != blank %}
+  {% for collection in product.collections %}
+    {% assign set_mf = collection.metafields.product_attributes.product_attribute_set %}
+    {% assign attribute_sets = blank %}
 
-      if sets.id != blank
-        assign attribute_sets = sets | array
-      else
-        assign attribute_sets = sets
-      endif
+    {% if set_mf != blank %}
+      {% if set_mf.type contains 'list' %}
+        {% assign attribute_sets = set_mf.references %}
+      {% else %}
+        {% assign attribute_sets = set_mf.reference | array %}
+      {% endif %}
+    {% endif %}
 
-      for attribute_set in attribute_sets
-        assign set_obj = attribute_set.value | default: attribute_set
-        if set_obj.list and set_obj.list.value
-          for attribute in set_obj.list.value
-            assign a    = attribute.value | default: attribute
-            assign name = a['product_attribute.display_name'] | default: a.display_name
-            assign key  = a['product_attribute.metafield_key'] | default: a.metafield_key
+    {% if attribute_sets != blank %}
+      {% for attribute_set in attribute_sets %}
+        {% assign list_mf = attribute_set.list %}
+        {% assign attrs = blank %}
 
-            if key == blank
-              continue
-            endif
+        {% if list_mf != blank %}
+          {% if list_mf.type contains 'list' %}
+            {% assign attrs = list_mf.references %}
+          {% else %}
+            {% assign attrs = list_mf.reference | array %}
+          {% endif %}
+        {% endif %}
 
-            unless attribute_keys contains key
-              assign attribute_names = attribute_names | append: name | append: '|'
-              assign attribute_keys  = attribute_keys  | append: key  | append: '|'
-            endunless
+        {% if attrs != blank %}
+          {% for a in attrs %}
+            {% assign name = a['product_attribute.display_name'] | default: a.display_name %}
+            {% assign key  = a['product_attribute.metafield_key']  | default: a.metafield_key %}
 
-            assign collected_from_sets = true
-          endfor
-        endif
-      endfor
-    endfor
-  endif
--%}
+            {% if key != blank %}
+              {% assign attribute_names = attribute_names | append: name | append: '|' %}
+              {% assign attribute_keys  = attribute_keys  | append: key  | append: '|' %}
+              {% assign collected_from_sets = true %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
-{%- liquid
-  # === 2) FALLBACK: DERIVE KEYS FROM PRODUCT / VARIANT METAFIELDS ===
-  assign collected_from_fallback = false
+{%- comment -%} === 2) FALLBACK: infer keys from product/variant metafields === {%- endcomment -%}
+{% assign collected_from_fallback = false %}
 
-  if collected_from_sets == false and product != blank
-    # ----- product namespace -----
-    assign pa = product.metafields.product_attributes
-    if pa and pa != blank
-      for mf in pa
-        assign k = mf.key
-        assign v = mf.value
-        if k == blank
-          assign k = mf[0]
-        endif
-        if v == blank
-          assign v = mf[1]
-        endif
+{% if collected_from_sets == false and product != blank %}
+  {% assign pa = product.metafields.product_attributes %}
+  {% if pa and pa != blank %}
+    {% for mf in pa %}
+      {% assign k = mf.key %}
+      {% assign v = mf.value %}
+      {% if k == blank %}{% assign k = mf[0] %}{% endif %}
+      {% if v == blank %}{% assign v = mf[1] %}{% endif %}
 
-        if v != blank and k != blank
-          unless attribute_keys contains k
-            assign attribute_keys  = attribute_keys  | append: k | append: '|'
-            assign labelized = k | replace: '_', ' ' | replace: '-', ' '
-            assign attribute_names = attribute_names | append: labelized | append: '|'
-            assign collected_from_fallback = true
-          endunless
-        endif
-      endfor
-    endif
+      {% if v != blank and k != blank %}
+        {% unless attribute_keys contains k %}
+          {% assign attribute_keys  = attribute_keys  | append: k | append: '|' %}
+          {% assign labelized = k | replace: '_', ' ' | replace: '-', ' ' %}
+          {% assign attribute_names = attribute_names | append: labelized | append: '|' %}
+          {% assign collected_from_fallback = true %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 
-    # ----- variant namespace -----
-    assign va = product.selected_or_first_available_variant.metafields.product_attributes
-    if va and va != blank
-      for mf in va
-        assign k = mf.key
-        assign v = mf.value
-        if k == blank
-          assign k = mf[0]
-        endif
-        if v == blank
-          assign v = mf[1]
-        endif
+  {% assign va = product.selected_or_first_available_variant.metafields.product_attributes %}
+  {% if va and va != blank %}
+    {% for mf in va %}
+      {% assign k = mf.key %}
+      {% assign v = mf.value %}
+      {% if k == blank %}{% assign k = mf[0] %}{% endif %}
+      {% if v == blank %}{% assign v = mf[1] %}{% endif %}
 
-        if v != blank and k != blank
-          unless attribute_keys contains k
-            assign attribute_keys  = attribute_keys  | append: k | append: '|'
-            assign labelized = k | replace: '_', ' ' | replace: '-', ' '
-            assign attribute_names = attribute_names | append: labelized | append: '|'
-            assign collected_from_fallback = true
-          endunless
-        endif
-      endfor
-    endif
-  endif
+      {% if v != blank and k != blank %}
+        {% unless attribute_keys contains k %}
+          {% assign attribute_keys  = attribute_keys  | append: k | append: '|' %}
+          {% assign labelized = k | replace: '_', ' ' | replace: '-', ' ' %}
+          {% assign attribute_names = attribute_names | append: labelized | append: '|' %}
+          {% assign collected_from_fallback = true %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
 
-  # normalize + dedupe
-  assign attribute_names = attribute_names | split: '|' | uniq
-  assign attribute_keys  = attribute_keys  | split: '|' | uniq
-  assign keys_length = attribute_keys.size | minus: 1
--%}
+{%- comment -%} === Normalize & dedupe === {%- endcomment -%}
+{% assign attribute_names = attribute_names | split: '|' | uniq %}
+{% assign attribute_keys  = attribute_keys  | split: '|' | uniq %}
+{% assign keys_length = attribute_keys.size | minus: 1 %}
 
 {%- if enable_attribute_debug -%}
   {%- capture __dbg -%}
@@ -177,7 +173,6 @@
   "keys_length": {{ keys_length }}
 }
   {%- endcapture -%}
-
   <details style="padding:12px;border:1px dashed #888;margin:10px 0" open>
     <summary><strong>DEBUG: product-attribute-set</strong></summary>
     <div style="font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:13px; line-height:1.5">
@@ -241,77 +236,3 @@
     </div>
   </div>
 {% endif %}
-
-{%- capture __attr_dump -%}
-{
-  "product_id": {{ product.id }},
-  "product_handle": {{ product.handle | json }},
-  "product_metafields.product_attributes": {{ product.metafields.product_attributes | json }},
-  "variant_metafields.product_attributes": {{ product.selected_or_first_available_variant.metafields.product_attributes | json }},
-  "collections": [
-    {%- for collection in product.collections -%}
-      {%- assign sets = collection.metafields.product_attributes.product_attribute_set.value -%}
-      {%- assign has_sets = false -%}{% if sets != blank %}{%- assign has_sets = true -%}{% endif %}
-      {%- assign is_single = false -%}{% if has_sets and sets.id != blank %}{%- assign is_single = true -%}{% endif %}
-      {
-        "collection_id": {{ collection.id }},
-        "collection_handle": {{ collection.handle | json }},
-        "has_sets": {{ has_sets | json }},
-        "sets":
-          {%- if has_sets == false -%}
-            null
-          {%- else -%}
-            {%- if is_single -%}
-              {%- assign s_obj = sets.value | default: sets -%}
-              {
-                "set_id": {{ s_obj.id | json }},
-                "set_handle": {{ s_obj.handle | json }},
-                "list_size": {{ s_obj.list.value.size | default: 0 }},
-                "attributes": [
-                  {%- if s_obj.list and s_obj.list.value -%}
-                    {%- for a0 in s_obj.list.value -%}
-                      {%- assign a = a0.value | default: a0 -%}
-                      {
-                        "key": {{ a['product_attribute.metafield_key'] | default: a.metafield_key | json }},
-                        "display_name": {{ a['product_attribute.display_name'] | default: a.display_name | json }}
-                      }{% unless forloop.last %},{% endunless %}
-                    {%- endfor -%}
-                  {%- endif -%}
-                ]
-              }
-            {%- else -%}
-              [
-                {%- for s in sets -%}
-                  {%- assign s_obj = s.value | default: s -%}
-                  {
-                    "set_id": {{ s_obj.id | json }},
-                    "set_handle": {{ s_obj.handle | json }},
-                    "list_size": {{ s_obj.list.value.size | default: 0 }},
-                    "attributes": [
-                      {%- if s_obj.list and s_obj.list.value -%}
-                        {%- for a0 in s_obj.list.value -%}
-                          {%- assign a = a0.value | default: a0 -%}
-                          {
-                            "key": {{ a['product_attribute.metafield_key'] | default: a.metafield_key | json }},
-                            "display_name": {{ a['product_attribute.display_name'] | default: a.display_name | json }}
-                          }{% unless forloop.last %},{% endunless %}
-                        {%- endfor -%}
-                      {%- endif -%}
-                    ]
-                  }{% unless forloop.last %},{% endunless %}
-                {%- endfor -%}
-              ]
-            {%- endif -%}
-          {%- endif -%}
-      }{% unless forloop.last %},{% endunless %}
-    {%- endfor -%}
-  ]
-}
-{%- endcapture -%}
-
-<details style="padding:12px;border:1px dashed #888;margin:10px 0" open>
-  <summary><strong>ATTR DEBUG JSON</strong></summary>
-  <div style="font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:13px; line-height:1.5">
-    <pre>{{ __attr_dump | strip }}</pre>
-  </div>
-</details>
