@@ -1,13 +1,8 @@
 {% comment %}
-  Renders a list of product attributes
-
+  Renders a list of product attributes (from collection attribute sets)
   Accepts:
-  - products: {Array} Array of products to compare
-  - product:  {Product} Single product
-
-  Usage:
-  {% render 'product-attribute-set', products: products %}
-  {% render 'product-attribute-set', product: product %}
+  - products: {Array} for comparison table
+  - product:  {Product} single PDP block
 {% endcomment %}
 
 {% liquid
@@ -23,7 +18,7 @@
             assign key_raw = attribute.metafield_key | strip
             assign key_lc  = key_raw | downcase
             assign needle  = key_lc | append: '|'
-            if attribute_keys_lc_s contains needle
+            if key_lc == '' or attribute_keys_lc_s contains needle
               continue
             endif
             assign attribute_names_s    = attribute_names_s    | append: attribute.display_name | append: '|'
@@ -40,7 +35,7 @@
           assign key_raw = attribute.metafield_key | strip
           assign key_lc  = key_raw | downcase
           assign needle  = key_lc | append: '|'
-          if attribute_keys_lc_s contains needle
+          if key_lc == '' or attribute_keys_lc_s contains needle
             continue
           endif
           assign attribute_names_s    = attribute_names_s    | append: attribute.display_name | append: '|'
@@ -53,13 +48,29 @@
 
   assign attribute_names = attribute_names_s    | split: '|' 
   assign attribute_keys  = attribute_keys_raw_s | split: '|' 
-  assign keys_length     = attribute_keys.size | minus: 1
+
+  comment
+    Debug: uvidíš v HTML komentáři, jaké klíče/labely sebrala kolekce.
+  endcomment
+  capture _dbg
+    echo 'ATTR_KEYS_RAW=' | append: attribute_keys | json | append: ' :: ATTR_NAMES=' | append: attribute_names | json
+  endcapture
+%}
+<!-- {{ _dbg }} -->
+
+{% liquid
+  assign keys_length = attribute_keys.size | minus: 1
 %}
 
 {% if products != blank %}
   {% for i in (0..keys_length) %}
     {% liquid
-      assign key_lc = attribute_keys[i] | downcase
+      assign key_raw = attribute_keys[i] | strip
+      assign key_lc  = key_raw | downcase
+      if key_lc == ''
+        continue
+      endif
+
       assign all_empty = true
       for product in products
         assign v = product.selected_or_first_available_variant
@@ -75,7 +86,6 @@
         <th>{{ attribute_names[i] }}:</th>
         {% for product in products %}
           {% liquid
-            assign key_lc = attribute_keys[i] | downcase
             assign v = product.selected_or_first_available_variant
             assign attribute_metafield = v.metafields.product_attributes[key_lc] | default: product.metafields.product_attributes[key_lc]
           %}
@@ -91,7 +101,11 @@
     <div class="grid">
       {% for i in (0..keys_length) %}
         {% liquid
-          assign key_lc = attribute_keys[i] | downcase
+          assign key_raw = attribute_keys[i] | strip
+          assign key_lc  = key_raw | downcase
+          if key_lc == ''
+            continue
+          endif
           assign v = product.selected_or_first_available_variant
           assign attribute_metafield = v.metafields.product_attributes[key_lc] | default: product.metafields.product_attributes[key_lc]
         %}
@@ -107,4 +121,3 @@
     </div>
   </div>
 {% endif %}
-{{ product.selected_or_first_available_variant.metafields.product_attributes.KABEL_DELKA_CM | json }}
