@@ -1,28 +1,30 @@
 {% comment %}
-  Renders a list of product atributes
+  Renders a list of product attributes
 
-    Accepts:
-    - products: {Array} Array of products to compare
-    - product - {Object} Product to show
+  Accepts:
+  - products: {Array} Array of products to compare
+  - product:  {Product} Single product
 
-    Usage:
-    {% render 'product-attribute-set', products: products %} or {% render 'product-attribute-set', product: product %}
+  Usage:
+  {% render 'product-attribute-set', products: products %}
+  {% render 'product-attribute-set', product: product %}
 {% endcomment %}
 
 {% liquid
   assign attribute_names = ''
-  assign attribute_keys = ''
+  assign attribute_keys  = ''
 
   if products != blank
     for product in products
       for collection in product.collections
         if collection.metafields.product_attributes.product_attribute_set.value
           for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
-            if attribute_keys contains attribute.metafield_key
+            assign k = attribute.metafield_key | downcase
+            if attribute_keys contains k
               continue
             endif
             assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-            assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
+            assign attribute_keys  = attribute_keys  | append: k | append: '|'
           endfor
         endif
       endfor
@@ -31,31 +33,28 @@
     for collection in product.collections
       if collection.metafields.product_attributes.product_attribute_set.value
         for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
+          assign k = attribute.metafield_key | downcase
           assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-          assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
+          assign attribute_keys  = attribute_keys  | append: k | append: '|'
         endfor
       endif
     endfor
   endif
 
   assign attribute_names = attribute_names | split: '|' | uniq
-  assign attribute_keys = attribute_keys | split: '|' | uniq
-
-  assign keys_length = attribute_keys.size | minus: 1
+  assign attribute_keys  = attribute_keys  | split: '|' | uniq
+  assign keys_length     = attribute_keys.size | minus: 1
 %}
 
 {% if products != blank %}
   {% for i in (0..keys_length) %}
     {% liquid
+      assign key = attribute_keys[i] | downcase
       assign all_empty = true
       for product in products
-        if product.metafields.product_attributes
-          assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
-        else
-          assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
-        endif
-
-        if attribute_metafield.value != nill
+        assign v = product.selected_or_first_available_variant
+        assign attribute_metafield = v.metafields.product_attributes[key] | default: product.metafields.product_attributes[key]
+        if attribute_metafield != nil and attribute_metafield != blank
           assign all_empty = false
           break
         endif
@@ -65,11 +64,10 @@
       <tr>
         <th>{{ attribute_names[i] }}:</th>
         {% for product in products %}
-          {% if product.metafields.product_attributes %}
-            {% assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]] %}
-          {% else %}
-            {% assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
-          {% endif %}
+          {% liquid
+            assign v = product.selected_or_first_available_variant
+            assign attribute_metafield = v.metafields.product_attributes[key] | default: product.metafields.product_attributes[key]
+          %}
           <td class="product-compare-{{ product.id }}">
             {% render 'metafield-display', attribute_metafield: attribute_metafield %}
           </td>
@@ -79,23 +77,22 @@
   {% endfor %}
 {% elsif product != blank %}
   <div class="w100">
-      <div class="grid">
-        {% for i in (0..keys_length)  %}
-          {% liquid
-            assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
-            if attribute_metafield == blank
-              assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
-            endif
-          %}
-          {% if attribute_metafield.value %}
-            <div class="grid__item">
-              <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
-              <div class="rte">
-                {% render 'metafield-display', attribute_metafield: attribute_metafield %}
-              </div>
+    <div class="grid">
+      {% for i in (0..keys_length) %}
+        {% liquid
+          assign key = attribute_keys[i] | downcase
+          assign v = product.selected_or_first_available_variant
+          assign attribute_metafield = v.metafields.product_attributes[key] | default: product.metafields.product_attributes[key]
+        %}
+        {% if attribute_metafield != blank %}
+          <div class="grid__item">
+            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
+            <div class="rte">
+              {% render 'metafield-display', attribute_metafield: attribute_metafield %}
             </div>
-          {% endif %}
-        {% endfor %}
-      </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 {% endif %}
