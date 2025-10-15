@@ -5,132 +5,103 @@
   if products != blank
     for product in products
       for collection in product.collections
-        assign mf = collection.metafields.product_attributes.product_attribute_set
-        if mf == blank
-          continue
-        endif
-        assign v = mf.value
-        if v == blank
-          continue
-        endif
-
-        assign maybe_first = v | first
-        if maybe_first
-          assign sets = v
-        else
-          assign sets = v | array
-        endif
-
-        for s in sets
-          assign set_obj = s
-          if set_obj and set_obj.list and set_obj.list.value
-            for attribute in set_obj.list.value
+        if collection.metafields.product_attributes.product_attribute_set.value
+          assign _val = collection.metafields.product_attributes.product_attribute_set.value
+          if _val.list and _val.list.value
+            for attribute in _val.list.value
               if attribute_keys contains attribute.metafield_key
                 continue
               endif
               assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
               assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
             endfor
+          else
+            for _set in _val
+              assign _setv = _set.value | default: _set
+              if _setv.list and _setv.list.value
+                for attribute in _setv.list.value
+                  if attribute_keys contains attribute.metafield_key
+                    continue
+                  endif
+                  assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+                  assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+                endfor
+              endif
+            endfor
           endif
-        endfor
+        endif
       endfor
     endfor
 
   elsif product != blank
     for collection in product.collections
-      assign mf = collection.metafields.product_attributes.product_attribute_set
-      if mf == blank
-        continue
-      endif
-      assign v = mf.value
-      if v == blank
-        continue
-      endif
-
-      assign maybe_first = v | first
-      if maybe_first
-        assign sets = v
-      else
-        assign sets = v | array
-      endif
-
-      for s in sets
-        assign set_obj = s
-        if set_obj and set_obj.list and set_obj.list.value
-          for attribute in set_obj.list.value
+      if collection.metafields.product_attributes.product_attribute_set.value
+        assign _val = collection.metafields.product_attributes.product_attribute_set.value
+        if _val.list and _val.list.value
+          for attribute in _val.list.value
             assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
             assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
           endfor
+        else
+          for _set in _val
+            assign _setv = _set.value | default: _set
+            if _setv.list and _setv.list.value
+              for attribute in _setv.list.value
+                assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+                assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+              endfor
+            endif
+          endfor
         endif
-      endfor
+      endif
     endfor
   endif
 
-  assign attribute_names = attribute_names | split: '|' | uniq | reject: ''
-  assign attribute_keys  = attribute_keys  | split: '|' | uniq | reject: ''
+  assign attribute_names = attribute_names | split: '|' | uniq
+  assign attribute_keys  = attribute_keys  | split: '|' | uniq
   assign keys_length = attribute_keys.size | minus: 1
 %}
 
 {% assign enable_debug = true %}
 {% if enable_debug %}
   {% liquid
-    assign dbg_product_id = 0
-    assign dbg_product_handle = ''
-    assign dbg_collections_count = 0
-    assign dbg_sets_total = 0
-    assign dbg_attrs_total = 0
+    assign dbg_sets = 0
+    assign dbg_attrs = 0
     if product != blank
-      assign dbg_product_id = product.id
-      assign dbg_product_handle = product.handle
-      assign dbg_collections_count = product.collections.size
       for collection in product.collections
-        assign mf = collection.metafields.product_attributes.product_attribute_set
-        assign v = blank
-        if mf != blank
-          assign v = mf.value
-        endif
-        assign sets = blank
-        if v != blank
-          assign maybe_first = v | first
-          if maybe_first
-            assign sets = v
+        assign _val = collection.metafields.product_attributes.product_attribute_set.value
+        if _val
+          if _val.list and _val.list.value
+            assign dbg_sets = dbg_sets | plus: 1
+            assign dbg_attrs = dbg_attrs | plus: _val.list.value.size
           else
-            assign sets = v | array
+            for _set in _val
+              assign _setv = _set.value | default: _set
+              if _setv.list and _setv.list.value
+                assign dbg_sets = dbg_sets | plus: 1
+                assign dbg_attrs = dbg_attrs | plus: _setv.list.value.size
+              endif
+            endfor
           endif
-        endif
-        if sets != blank
-          for s in sets
-            assign set_obj = s
-            assign attrs = blank
-            if set_obj and set_obj.list
-              assign attrs = set_obj.list.value
-            endif
-            assign dbg_sets_total = dbg_sets_total | plus: 1
-            if attrs != blank
-              assign dbg_attrs_total = dbg_attrs_total | plus: attrs.size
-            endif
-          endfor
         endif
       endfor
     endif
   %}
   {% capture __dbg %}
 {
-  "product_id": {{ dbg_product_id }},
-  "product_handle": {{ dbg_product_handle | json }},
-  "collections_count": {{ dbg_collections_count }},
-  "sets_total": {{ dbg_sets_total }},
-  "attributes_total": {{ dbg_attrs_total }},
+  "product_id": {{ product.id | default: 0 }},
+  "product_handle": {{ product.handle | json }},
+  "collections_count": {{ product.collections.size | default: 0 }},
+  "sets_found": {{ dbg_sets }},
+  "attributes_found": {{ dbg_attrs }},
   "attribute_names": {{ attribute_names | json }},
   "attribute_keys": {{ attribute_keys | json }},
   "keys_length": {{ keys_length }}
 }
   {% endcapture %}
   <details style="padding:12px;border:1px dashed #888;margin:10px 0" open>
-    <summary><strong>DEBUG: product-attribute-set</strong></summary>
-    <div style="font-family:ui-monospace, Menlo, monospace; font-size:13px; line-height:1.5">
-      <pre>{{ __dbg | strip }}</pre>
-    </div>
+    <summary><strong>DEBUG</strong></summary>
+    <pre style="font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1.45">{{ __dbg | strip }}</pre>
   </details>
 {% endif %}
 
