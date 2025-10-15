@@ -719,11 +719,6 @@
   featured_media: featured_media,
   cart_qty: cart_qty
 -%}
-{% for collection in product.collections %}
-  <h3>{{ collection.title }}</h3>
-  <pre>{{ collection.metafields | json }}</pre>
-{% endfor %}
-
 {% schema %}
 {
   "name": "t:sections.main-product.name",
