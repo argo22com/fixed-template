@@ -77,14 +77,19 @@
   assign keys_length = attribute_keys.size | minus: 1
 
   if product != blank and keys_length < 0
+    assign fb_names = ''
+    assign fb_keys  = ''
+
     assign pa = product.metafields.product_attributes
     if pa and pa != blank
       for mf in pa
         assign k = mf.key | default: mf[0]
         assign v = mf.value | default: mf[1]
-        if k != blank and v != blank and attribute_keys contains k == false
-          assign attribute_keys  = attribute_keys  | push: k
-          assign attribute_names = attribute_names | push: k
+        if k != blank and v != blank
+          unless fb_keys contains k
+            assign fb_keys  = fb_keys  | append: k | append: '|'
+            assign fb_names = fb_names | append: k | append: '|'
+          endunless
         endif
       endfor
     endif
@@ -94,13 +99,17 @@
       for mf in va
         assign k = mf.key | default: mf[0]
         assign v = mf.value | default: mf[1]
-        if k != blank and v != blank and attribute_keys contains k == false
-          assign attribute_keys  = attribute_keys  | push: k
-          assign attribute_names = attribute_names | push: k
+        if k != blank and v != blank
+          unless fb_keys contains k
+            assign fb_keys  = fb_keys  | append: k | append: '|'
+            assign fb_names = fb_names | append: k | append: '|'
+          endunless
         endif
       endfor
     endif
 
+    assign attribute_keys  = fb_keys  | split: '|' | reject: ''
+    assign attribute_names = fb_names | split: '|' | reject: ''
     assign keys_length = attribute_keys.size | minus: 1
   endif
 %}
