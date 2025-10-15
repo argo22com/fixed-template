@@ -61,11 +61,12 @@
   {% endfor %}
 </ul>
 
-{% if product.collections.size > 0 %}
+{% assign collections_without_all = product.collections | where: 'handle', '!=', 'all' %}
+{% if collections_without_all.size > 0 %}
   <div class="product-collections">
     <p>This product is in the following collection(s):</p>
     <ul>
-      {% for collection in product.collections %}
+      {% for collection in collections_without_all %}
         <li>
           <a href="{{ collection.url }}">{{ collection.title }}</a>
         </li>
@@ -73,3 +74,4 @@
     </ul>
   </div>
 {% endif %}
+
