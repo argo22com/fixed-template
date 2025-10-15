@@ -93,29 +93,52 @@
 %}
 
 {%- if enable_attribute_debug -%}
+  {%- liquid
+    assign has_products_ctx = false
+    if products != blank
+      assign has_products_ctx = true
+    endif
+
+    assign product_id_dbg = 0
+    assign product_handle_dbg = ''
+    assign collections_count_dbg = 0
+    if product != blank
+      assign product_id_dbg = product.id
+      assign product_handle_dbg = product.handle
+      assign collections_count_dbg = product.collections.size
+    endif
+  -%}
+
   {%- capture __dbg -%}
-  {
-    "context": "{{ products != blank | default: false | json }}",
-    "product_id": {{ product.id | default: 0 }},
-    "product_handle": {{ product.handle | json }},
-    "collections_count": {{ product.collections.size | default: 0 }},
-    "attribute_names": {{ attribute_names | json }},
-    "attribute_keys": {{ attribute_keys | json }},
-    "keys_length": {{ keys_length }},
-    "product_metafields.product_attributes": {{ product.metafields.product_attributes | json }},
-    "variant_metafields.product_attributes": {{ product.selected_or_first_available_variant.metafields.product_attributes | json }},
-    "collections_dump": [
+{
+  "has_products_context": {{ has_products_ctx | json }},
+  "product_id": {{ product_id_dbg }},
+  "product_handle": {{ product_handle_dbg | json }},
+  "collections_count": {{ collections_count_dbg }},
+  "attribute_names": {{ attribute_names | json }},
+  "attribute_keys": {{ attribute_keys | json }},
+  "keys_length": {{ keys_length }},
+  "product_metafields.product_attributes": {{ product.metafields.product_attributes | json }},
+  "variant_metafields.product_attributes": {{ product.selected_or_first_available_variant.metafields.product_attributes | json }},
+  "collections_dump":
+    {% if product != blank %}
+    [
       {%- for collection in product.collections -%}
         {%- assign sets = collection.metafields.product_attributes.product_attribute_set.value -%}
+        {%- assign has_sets = false -%}
+        {%- if sets != blank -%}{%- assign has_sets = true -%}{%- endif -%}
+        {%- assign is_single_ref = false -%}
+        {%- if has_sets and sets.id != blank -%}{%- assign is_single_ref = true -%}{%- endif -%}
         {
           "collection_id": {{ collection.id }},
           "collection_handle": {{ collection.handle | json }},
-          "raw_set_value_type": {{ sets.id | default: blank | json | default: '"array_or_blank"'}},
-          "has_sets": {{ sets != blank | json }},
+          "has_sets": {{ has_sets | json }},
+          "sets_type": {{ is_single_ref | json | replace: 'true','"single"' | replace: 'false','"array_or_blank"' }},
           "sets":
-            {%- if sets == blank -%} null
-            {%- else -%}
-              {%- if sets.id != blank -%}
+            {% if has_sets == false %}
+              null
+            {% else %}
+              {% if is_single_ref %}
                 [
                   {
                     "set_id": {{ sets.id | json }},
@@ -128,7 +151,7 @@
                     ]
                   }
                 ]
-              {%- else -%}
+              {% else %}
                 [
                   {%- for s in sets -%}
                     {
@@ -143,12 +166,15 @@
                     }{% unless forloop.last %},{% endunless %}
                   {%- endfor -%}
                 ]
-              {%- endif -%}
-            {%- endif -%}
+              {% endif %}
+            {% endif %}
         }{% unless forloop.last %},{% endunless %}
       {%- endfor -%}
     ]
-  }
+    {% else %}
+    null
+    {% endif %}
+}
   {%- endcapture -%}
 
   <details style="padding:12px;border:1px dashed #888;margin:10px 0" open>
