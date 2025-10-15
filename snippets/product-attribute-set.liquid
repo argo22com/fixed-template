@@ -25,13 +25,10 @@
   endif
 %}
 
-
-{% comment %} helper macro via capture/echo {% endcomment %}
-{%- capture _readers -%}
-  {%- assign __ = '' -%}
-{%- endcapture -%}
 {%- liquid
   # === 1) TRY TO COLLECT FROM COLLECTION ATTRIBUTE SETS ===
+  assign collected_from_sets = false
+
   if products != blank
     for product in products
       for collection in product.collections
@@ -192,28 +189,8 @@
 -%}
 
 {%- if enable_attribute_debug -%}
-  {%- liquid
-    assign has_products_ctx = false
-    if products != blank
-      assign has_products_ctx = true
-    endif
-
-    assign product_id_dbg = 0
-    assign product_handle_dbg = ''
-    assign collections_count_dbg = 0
-    if product != blank
-      assign product_id_dbg = product.id
-      assign product_handle_dbg = product.handle
-      assign collections_count_dbg = product.collections.size
-    endif
-  -%}
-
   {%- capture __dbg -%}
 {
-  "has_products_context": {{ has_products_ctx | json }},
-  "product_id": {{ product_id_dbg }},
-  "product_handle": {{ product_handle_dbg | json }},
-  "collections_count": {{ collections_count_dbg }},
   "collected_from_sets": {{ collected_from_sets | json }},
   "collected_from_fallback": {{ collected_from_fallback | json }},
   "attribute_names": {{ attribute_names | json }},
