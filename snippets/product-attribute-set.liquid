@@ -229,3 +229,61 @@
     </div>
   </div>
 {% endif %}
+
+{% if product %}
+  {% assign coll = product.collections.first %}
+  <pre style="white-space:pre-wrap;font-family:ui-monospace,monospace;font-size:12px;line-height:1.45">
+
+== COLLECTION ==
+handle: {{ coll.handle }}
+id: {{ coll.id }}
+
+== RAW metafield ==
+{{ coll.metafields.product_attributes.product_attribute_set | json }}
+
+== .references (preferred on list refs) ==
+{{ coll.metafields.product_attributes.product_attribute_set.references | json }}
+
+== .value ==
+{{ coll.metafields.product_attributes.product_attribute_set.value | json }}
+
+{% assign sets = coll.metafields.product_attributes.product_attribute_set.references %}
+{% if sets == blank %}
+  {% assign sets = coll.metafields.product_attributes.product_attribute_set.value %}
+{% endif %}
+
+{% if sets != blank %}{{ sets.size | default: 1 }}{% else %}0{% endif %}
+
+{% if sets != blank %}
+  {% for s in sets %}
+    {% assign sv = s.value | default: s %}
+    -- SET {{ forloop.index }}: keys snapshot --
+    {{ sv | json }}
+
+    -- SET {{ forloop.index }}: candidate list fields --
+    list: {{ sv.list | json }}
+    list.value: {{ sv.list.value | json }}
+    product_attribute_set__list: {{ sv.product_attribute_set__list | json }}
+    product_attribute_set__list.value: {{ sv.product_attribute_set__list.value | json }}
+    attributes: {{ sv.attributes | json }}
+    attributes.value: {{ sv.attributes.value | json }}
+
+    {% assign attrs = sv.product_attribute_set__list %}
+    {% if attrs == blank %}{% assign attrs = sv.list %}{% endif %}
+    {% if attrs == blank %}{% assign attrs = sv.attributes %}{% endif %}
+    {% if attrs and attrs.value %}{% assign attrs = attrs.value %}{% endif %}
+
+    -- SET {{ forloop.index }}: resolved attrs count --
+    {% if attrs != blank %}{{ attrs.size }}{% else %}0{% endif %}
+
+    {% if attrs != blank %}
+      {% for a in attrs %}
+        {% assign av = a.value | default: a %}
+        attr {{ forloop.index }}: {{ av | json }}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+  </pre>
+{% endif %}
