@@ -61,12 +61,19 @@
   {% endfor %}
 </ul>
 
-{% assign collections_without_all = product.collections | where: 'handle', '!=', 'all' %}
-{% if collections_without_all.size > 0 %}
+{% comment %} Create a new array and add collections to it, excluding "all" {% endcomment %}
+{% assign filtered_collections = '' | split: '' %}
+{% for collection in product.collections %}
+  {% unless collection.handle == 'all' %}
+    {% assign filtered_collections = filtered_collections | push: collection %}
+  {% endunless %}
+{% endfor %}
+
+{% if filtered_collections.size > 0 %}
   <div class="product-collections">
     <p>This product is in the following collection(s):</p>
     <ul>
-      {% for collection in collections_without_all %}
+      {% for collection in filtered_collections %}
         <li>
           <a href="{{ collection.url }}">{{ collection.title }}</a>
         </li>
@@ -74,4 +81,5 @@
     </ul>
   </div>
 {% endif %}
+
 
