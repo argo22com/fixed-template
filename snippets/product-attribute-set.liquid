@@ -1,45 +1,91 @@
 {% comment %}
-  Renders a list of product atributes
+  Renders a list of product attributes
 
-    Accepts:
-    - products: {Array} Array of products to compare
-    - product - {Object} Product to show
+  Accepts:
+  - products: {Array} Array of products to compare
+  - product : {Object} Product to show
 
-    Usage:
-    {% render 'product-attribute-set', products: products %} or {% render 'product-attribute-set', product: product %}
+  Works with either:
+  - Single Attribute Set metaobject reference on a collection, OR
+  - A list of Attribute Set metaobject references on a collection
+
+  Each Attribute Set metaobject is expected to have field:
+  - list: (list of attribute metaobjects)
+      - attribute.display_name
+      - attribute.metafield_key
+
+  Usage:
+  {% render 'product-attribute-set', products: products %}
+  {% render 'product-attribute-set', product: product %}
 {% endcomment %}
 
 {% liquid
   assign attribute_names = ''
-  assign attribute_keys = ''
+  assign attribute_keys  = ''
 
+  # Helper to collect attributes from either single-set or multi-set metafield
+  # collection.metafields.product_attributes.product_attribute_set.value
+  #  - may be a single metaobject (has .id)
+  #  - or an array of metaobjects (list)
+%}
+
+{% liquid
   if products != blank
     for product in products
       for collection in product.collections
-        if collection.metafields.product_attributes.product_attribute_set.value
-          for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
-            if attribute_keys contains attribute.metafield_key
-              continue
-            endif
+        assign sets = collection.metafields.product_attributes.product_attribute_set.value
+        if sets == blank
+          continue
+        endif
+
+        # Normalize to an array of sets
+        if sets.id != blank
+          assign attribute_sets = sets | array
+        else
+          assign attribute_sets = sets
+        endif
+
+        for attribute_set in attribute_sets
+          if attribute_set.list and attribute_set.list.value
+            for attribute in attribute_set.list.value
+              if attribute_keys contains attribute.metafield_key
+                continue
+              endif
+              assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+              assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+            endfor
+          endif
+        endfor
+      endfor
+    endfor
+
+  elsif product != blank
+    for collection in product.collections
+      assign sets = collection.metafields.product_attributes.product_attribute_set.value
+      if sets == blank
+        continue
+      endif
+
+      # Normalize to an array of sets
+      if sets.id != blank
+        assign attribute_sets = sets | array
+      else
+        assign attribute_sets = sets
+      endif
+
+      for attribute_set in attribute_sets
+        if attribute_set.list and attribute_set.list.value
+          for attribute in attribute_set.list.value
             assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-            assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
+            assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
           endfor
         endif
       endfor
     endfor
-  elsif product != blank
-    for collection in product.collections
-      if collection.metafields.product_attributes.product_attribute_set.value
-        for attribute in collection.metafields.product_attributes.product_attribute_set.value.list.value
-          assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-          assign attribute_keys = attribute_keys | append: attribute.metafield_key | append: '|'
-        endfor
-      endif
-    endfor
   endif
 
   assign attribute_names = attribute_names | split: '|' | uniq
-  assign attribute_keys = attribute_keys | split: '|' | uniq
+  assign attribute_keys  = attribute_keys  | split: '|' | uniq
 
   assign keys_length = attribute_keys.size | minus: 1
 %}
@@ -55,7 +101,7 @@
           assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
         endif
 
-        if attribute_metafield.value != nill
+        if attribute_metafield != blank and attribute_metafield.value != nil
           assign all_empty = false
           break
         endif
@@ -77,25 +123,26 @@
       </tr>
     {% endif %}
   {% endfor %}
+
 {% elsif product != blank %}
   <div class="w100">
-      <div class="grid">
-        {% for i in (0..keys_length)  %}
-          {% liquid
-            assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
-            if attribute_metafield == blank
-              assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
-            endif
-          %}
-          {% if attribute_metafield.value %}
-            <div class="grid__item">
-              <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
-              <div class="rte">
-                {% render 'metafield-display', attribute_metafield: attribute_metafield %}
-              </div>
+    <div class="grid">
+      {% for i in (0..keys_length) %}
+        {% liquid
+          assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
+          if attribute_metafield == blank
+            assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
+          endif
+        %}
+        {% if attribute_metafield != blank and attribute_metafield.value %}
+          <div class="grid__item">
+            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
+            <div class="rte">
+              {% render 'metafield-display', attribute_metafield: attribute_metafield %}
             </div>
-          {% endif %}
-        {% endfor %}
-      </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 {% endif %}
