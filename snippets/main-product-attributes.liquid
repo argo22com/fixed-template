@@ -39,45 +39,15 @@
 
         {%- liquid
           assign is_display = true
-          assign active_collection = collections[product.collections.first.handle]
         -%}
 
-        {%- if is_display and active_collection != blank -%}
-          {% render 'product-attribute-set', product: product, collection: active_collection %}
+        {%- if is_display -%}
+          {%- render 'product-attribute-set', product: product -%}
         {%- endif -%}
       </div>
     </div>
   </div>
 </div>
-<h3>Debug: Kolekce</h3>
-<p>{{ active_collection.title }}</p>
-
-
-{% assign attribute_sets = active_collection.metafields.product_attributes.product_attribute_set.value %}
-
-<p><strong>Počet sad atributů:</strong> {{ attribute_sets.size }}</p>
-
-<ul>
-  {% for attribute_set in attribute_sets %}
-    <li>
-      <strong>Název sady:</strong> {{ attribute_set.name }}<br>
-      <strong>SAP ID:</strong> {{ attribute_set.sap_id }}
-
-      {% assign attributes = attribute_set.list.value %}
-      {% if attributes != blank %}
-        <ul>
-          {% for attribute in attributes %}
-            <li>
-              {{ attribute.display_name }} – {{ attribute.metafield_key }}
-            </li>
-          {% endfor %}
-        </ul>
-      {% else %}
-        <p>Tato sada nemá žádné atributy.</p>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
 
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>
