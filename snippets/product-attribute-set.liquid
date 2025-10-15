@@ -241,3 +241,77 @@
     </div>
   </div>
 {% endif %}
+
+{%- capture __attr_dump -%}
+{
+  "product_id": {{ product.id }},
+  "product_handle": {{ product.handle | json }},
+  "product_metafields.product_attributes": {{ product.metafields.product_attributes | json }},
+  "variant_metafields.product_attributes": {{ product.selected_or_first_available_variant.metafields.product_attributes | json }},
+  "collections": [
+    {%- for collection in product.collections -%}
+      {%- assign sets = collection.metafields.product_attributes.product_attribute_set.value -%}
+      {%- assign has_sets = false -%}{% if sets != blank %}{%- assign has_sets = true -%}{% endif %}
+      {%- assign is_single = false -%}{% if has_sets and sets.id != blank %}{%- assign is_single = true -%}{% endif %}
+      {
+        "collection_id": {{ collection.id }},
+        "collection_handle": {{ collection.handle | json }},
+        "has_sets": {{ has_sets | json }},
+        "sets":
+          {%- if has_sets == false -%}
+            null
+          {%- else -%}
+            {%- if is_single -%}
+              {%- assign s_obj = sets.value | default: sets -%}
+              {
+                "set_id": {{ s_obj.id | json }},
+                "set_handle": {{ s_obj.handle | json }},
+                "list_size": {{ s_obj.list.value.size | default: 0 }},
+                "attributes": [
+                  {%- if s_obj.list and s_obj.list.value -%}
+                    {%- for a0 in s_obj.list.value -%}
+                      {%- assign a = a0.value | default: a0 -%}
+                      {
+                        "key": {{ a['product_attribute.metafield_key'] | default: a.metafield_key | json }},
+                        "display_name": {{ a['product_attribute.display_name'] | default: a.display_name | json }}
+                      }{% unless forloop.last %},{% endunless %}
+                    {%- endfor -%}
+                  {%- endif -%}
+                ]
+              }
+            {%- else -%}
+              [
+                {%- for s in sets -%}
+                  {%- assign s_obj = s.value | default: s -%}
+                  {
+                    "set_id": {{ s_obj.id | json }},
+                    "set_handle": {{ s_obj.handle | json }},
+                    "list_size": {{ s_obj.list.value.size | default: 0 }},
+                    "attributes": [
+                      {%- if s_obj.list and s_obj.list.value -%}
+                        {%- for a0 in s_obj.list.value -%}
+                          {%- assign a = a0.value | default: a0 -%}
+                          {
+                            "key": {{ a['product_attribute.metafield_key'] | default: a.metafield_key | json }},
+                            "display_name": {{ a['product_attribute.display_name'] | default: a.display_name | json }}
+                          }{% unless forloop.last %},{% endunless %}
+                        {%- endfor -%}
+                      {%- endif -%}
+                    ]
+                  }{% unless forloop.last %},{% endunless %}
+                {%- endfor -%}
+              ]
+            {%- endif -%}
+          {%- endif -%}
+      }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+{%- endcapture -%}
+
+<details style="padding:12px;border:1px dashed #888;margin:10px 0" open>
+  <summary><strong>ATTR DEBUG JSON</strong></summary>
+  <div style="font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:13px; line-height:1.5">
+    <pre>{{ __attr_dump | strip }}</pre>
+  </div>
+</details>
