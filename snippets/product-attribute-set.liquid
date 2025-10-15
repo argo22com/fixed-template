@@ -116,6 +116,130 @@
     endfor
   endif
 -%}
+{% if request.design_mode %}
+  <details style="padding:10px;border:1px dashed #888;margin:10px 0" open>
+    <summary><strong>DBG: Attribute Set → list → Product Attribute</strong></summary>
+    <div style="font-family:ui-monospace; font-size:13px; line-height:1.5">
+      {% for collection in product.collections %}
+        {% assign set_mf = collection.metafields.product_attributes.product_attribute_set %}
+        <pre>
+[{{ collection.handle }}]
+set_mf.type: {{ set_mf.type | json }}
+- value.present?: {{ set_mf.value != blank | json }}
+- refs.size:      {% if set_mf.references %}{{ set_mf.references.size }}{% else %}null{% endif %}
+- ref.present?:   {% if set_mf.reference %}true{% else %}false{% endif %}
+        </pre>
+
+        {%- comment -%} zkus value → pole; jinak references/reference {%- endcomment -%}
+        {% assign attribute_sets = blank %}
+        {% if set_mf and set_mf.value %}
+          {% if set_mf.value.id %}{% assign attribute_sets = set_mf.value | array %}{% else %}{% assign attribute_sets = set_mf.value %}{% endif %}
+        {% endif %}
+        {% if attribute_sets == blank and set_mf %}
+          {% if set_mf.type contains 'list' and set_mf.references %}{% assign attribute_sets = set_mf.references %}{% elsif set_mf.reference %}{% assign attribute_sets = set_mf.reference | array %}{% endif %}
+        {% endif %}
+
+        {% if attribute_sets != blank %}
+          {% for attribute_set in attribute_sets %}
+            {% assign set_obj = attribute_set.value | default: attribute_set %}
+            {% assign list_mf = set_obj.list %}
+            <pre>
+  set_obj.id:    {{ set_obj.id | json }}
+  list.type:     {{ list_mf.type | json }}
+  list.value?    {{ list_mf and list_mf.value != blank | json }}
+  list.refs.size:{% if list_mf and list_mf.references %}{{ list_mf.references.size }}{% else %}null{% endif %}
+  list.ref?      {% if list_mf and list_mf.reference %}true{% else %}false{% endif %}
+            </pre>
+
+            {% assign attrs = blank %}
+            {% if list_mf and list_mf.value %}{% assign attrs = list_mf.value %}{% endif %}
+            {% if attrs == blank and list_mf %}
+              {% if list_mf.type and list_mf.type contains 'list' and list_mf.references %}{% assign attrs = list_mf.references %}{% elsif list_mf.reference %}{% assign attrs = list_mf.reference | array %}{% endif %}
+            {% endif %}
+
+            {% if attrs != blank %}
+              <pre>
+  ATTR rows:
+  {%- for a0 in attrs -%}
+    {%- assign a = a0.value | default: a0 -%}
+    key={{ a['product_attribute.metafield_key'] | default: a.metafield_key | json }},
+    name={{ a['product_attribute.display_name'] | default: a.display_name | json }}
+  {%- endfor -%}
+              </pre>
+            {% else %}
+              <pre>  (attrs prázdné)</pre>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <pre>(attribute_sets prázdné)</pre>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </details>
+{% endif %}
+
+{% if request.design_mode %}
+  <details style="padding:10px;border:1px dashed #888;margin:10px 0" open>
+    <summary><strong>DBG: Attribute Set → list → Product Attribute</strong></summary>
+    <div style="font-family:ui-monospace; font-size:13px; line-height:1.5">
+      {% for collection in product.collections %}
+        {% assign set_mf = collection.metafields.product_attributes.product_attribute_set %}
+        <pre>
+[{{ collection.handle }}]
+set_mf.type: {{ set_mf.type | json }}
+- value.present?: {{ set_mf.value != blank | json }}
+- refs.size:      {% if set_mf.references %}{{ set_mf.references.size }}{% else %}null{% endif %}
+- ref.present?:   {% if set_mf.reference %}true{% else %}false{% endif %}
+        </pre>
+
+        {%- comment -%} zkus value → pole; jinak references/reference {%- endcomment -%}
+        {% assign attribute_sets = blank %}
+        {% if set_mf and set_mf.value %}
+          {% if set_mf.value.id %}{% assign attribute_sets = set_mf.value | array %}{% else %}{% assign attribute_sets = set_mf.value %}{% endif %}
+        {% endif %}
+        {% if attribute_sets == blank and set_mf %}
+          {% if set_mf.type contains 'list' and set_mf.references %}{% assign attribute_sets = set_mf.references %}{% elsif set_mf.reference %}{% assign attribute_sets = set_mf.reference | array %}{% endif %}
+        {% endif %}
+
+        {% if attribute_sets != blank %}
+          {% for attribute_set in attribute_sets %}
+            {% assign set_obj = attribute_set.value | default: attribute_set %}
+            {% assign list_mf = set_obj.list %}
+            <pre>
+  set_obj.id:    {{ set_obj.id | json }}
+  list.type:     {{ list_mf.type | json }}
+  list.value?    {{ list_mf and list_mf.value != blank | json }}
+  list.refs.size:{% if list_mf and list_mf.references %}{{ list_mf.references.size }}{% else %}null{% endif %}
+  list.ref?      {% if list_mf and list_mf.reference %}true{% else %}false{% endif %}
+            </pre>
+
+            {% assign attrs = blank %}
+            {% if list_mf and list_mf.value %}{% assign attrs = list_mf.value %}{% endif %}
+            {% if attrs == blank and list_mf %}
+              {% if list_mf.type and list_mf.type contains 'list' and list_mf.references %}{% assign attrs = list_mf.references %}{% elsif list_mf.reference %}{% assign attrs = list_mf.reference | array %}{% endif %}
+            {% endif %}
+
+            {% if attrs != blank %}
+              <pre>
+  ATTR rows:
+  {%- for a0 in attrs -%}
+    {%- assign a = a0.value | default: a0 -%}
+    key={{ a['product_attribute.metafield_key'] | default: a.metafield_key | json }},
+    name={{ a['product_attribute.display_name'] | default: a.display_name | json }}
+  {%- endfor -%}
+              </pre>
+            {% else %}
+              <pre>  (attrs prázdné)</pre>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <pre>(attribute_sets prázdné)</pre>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </details>
+{% endif %}
+
 
 {%- liquid
   # === 2) FALLBACK: DERIVE KEYS FROM PRODUCT / VARIANT METAFIELDS ===
