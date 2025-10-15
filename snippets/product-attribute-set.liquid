@@ -18,21 +18,13 @@
 
         for attribute_set in attribute_sets
           assign set_obj = attribute_set.value | default: attribute_set
-          assign attrs = set_obj.list
-          if attrs and attrs.value
-            assign attrs = attrs.value
-          endif
-          if attrs != blank
-            for a in attrs
-              assign a_obj = a.value | default: a
-              if a_obj.metafield_key == blank
+          if set_obj and set_obj.list and set_obj.list.value
+            for attribute in set_obj.list.value
+              if attribute_keys contains attribute.metafield_key
                 continue
               endif
-              if attribute_keys contains a_obj.metafield_key
-                continue
-              endif
-              assign attribute_names = attribute_names | append: a_obj.display_name | append: '|'
-              assign attribute_keys  = attribute_keys  | append: a_obj.metafield_key | append: '|'
+              assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+              assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
             endfor
           endif
         endfor
@@ -54,64 +46,20 @@
 
       for attribute_set in attribute_sets
         assign set_obj = attribute_set.value | default: attribute_set
-        assign attrs = set_obj.list
-        if attrs and attrs.value
-          assign attrs = attrs.value
-        endif
-        if attrs != blank
-          for a in attrs
-            assign a_obj = a.value | default: a
-            if a_obj.metafield_key == blank
-              continue
-            endif
-            assign attribute_names = attribute_names | append: a_obj.display_name | append: '|'
-            assign attribute_keys  = attribute_keys  | append: a_obj.metafield_key | append: '|'
+        if set_obj and set_obj.list and set_obj.list.value
+          for attribute in set_obj.list.value
+            assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+            assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
           endfor
         endif
       endfor
     endfor
   endif
 
-  assign attribute_names = attribute_names | split: '|' | uniq | reject: ''
-  assign attribute_keys  = attribute_keys  | split: '|' | uniq | reject: ''
+  assign attribute_names = attribute_names | split: '|' | uniq
+  assign attribute_keys  = attribute_keys  | split: '|' | uniq
+
   assign keys_length = attribute_keys.size | minus: 1
-
-  if product != blank and keys_length < 0
-    assign fb_names = ''
-    assign fb_keys  = ''
-
-    assign pa = product.metafields.product_attributes
-    if pa and pa != blank
-      for mf in pa
-        assign k = mf.key | default: mf[0]
-        assign v = mf.value | default: mf[1]
-        if k != blank and v != blank
-          unless fb_keys contains k
-            assign fb_keys  = fb_keys  | append: k | append: '|'
-            assign fb_names = fb_names | append: k | append: '|'
-          endunless
-        endif
-      endfor
-    endif
-
-    assign va = product.selected_or_first_available_variant.metafields.product_attributes
-    if va and va != blank
-      for mf in va
-        assign k = mf.key | default: mf[0]
-        assign v = mf.value | default: mf[1]
-        if k != blank and v != blank
-          unless fb_keys contains k
-            assign fb_keys  = fb_keys  | append: k | append: '|'
-            assign fb_names = fb_names | append: k | append: '|'
-          endunless
-        endif
-      endfor
-    endif
-
-    assign attribute_keys  = fb_keys  | split: '|' | reject: ''
-    assign attribute_names = fb_names | split: '|' | reject: ''
-    assign keys_length = attribute_keys.size | minus: 1
-  endif
 %}
 
 {% if products != blank %}
