@@ -9,22 +9,24 @@
           assign _val = collection.metafields.product_attributes.product_attribute_set.value
           if _val.list and _val.list.value
             for attribute in _val.list.value
-              if attribute_keys contains attribute.metafield_key
+              assign a_obj = attribute.value | default: attribute
+              if attribute_keys contains a_obj.metafield_key
                 continue
               endif
-              assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-              assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+              assign attribute_names = attribute_names | append: a_obj.display_name | append: '|'
+              assign attribute_keys  = attribute_keys  | append: a_obj.metafield_key | append: '|'
             endfor
           else
             for _set in _val
               assign _setv = _set.value | default: _set
               if _setv.list and _setv.list.value
                 for attribute in _setv.list.value
-                  if attribute_keys contains attribute.metafield_key
+                  assign a_obj = attribute.value | default: attribute
+                  if attribute_keys contains a_obj.metafield_key
                     continue
                   endif
-                  assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-                  assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+                  assign attribute_names = attribute_names | append: a_obj.display_name | append: '|'
+                  assign attribute_keys  = attribute_keys  | append: a_obj.metafield_key | append: '|'
                 endfor
               endif
             endfor
@@ -39,16 +41,18 @@
         assign _val = collection.metafields.product_attributes.product_attribute_set.value
         if _val.list and _val.list.value
           for attribute in _val.list.value
-            assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-            assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+            assign a_obj = attribute.value | default: attribute
+            assign attribute_names = attribute_names | append: a_obj.display_name | append: '|'
+            assign attribute_keys  = attribute_keys  | append: a_obj.metafield_key | append: '|'
           endfor
         else
           for _set in _val
             assign _setv = _set.value | default: _set
             if _setv.list and _setv.list.value
               for attribute in _setv.list.value
-                assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-                assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+                assign a_obj = attribute.value | default: attribute
+                assign attribute_names = attribute_names | append: a_obj.display_name | append: '|'
+                assign attribute_keys  = attribute_keys  | append: a_obj.metafield_key | append: '|'
               endfor
             endif
           endfor
