@@ -252,6 +252,7 @@ id: {{ coll.id }}
   {% assign sets = coll.metafields.product_attributes.product_attribute_set.value %}
 {% endif %}
 
+== RESOLVED sets (count) ==
 {% if sets != blank %}{{ sets.size | default: 1 }}{% else %}0{% endif %}
 
 {% if sets != blank %}
@@ -285,5 +286,6 @@ id: {{ coll.id }}
   {% endfor %}
 {% endif %}
 
+== END ==
   </pre>
 {% endif %}
