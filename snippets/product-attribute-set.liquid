@@ -19,7 +19,7 @@
   assign attribute_names = ''
   assign attribute_keys  = ''
 
-  assign enable_attribute_debug = true
+  assign enable_attribute_debug = false
   if request.design_mode
     assign enable_attribute_debug = true
   endif
@@ -48,26 +48,20 @@
           assign set_obj = attribute_set.value | default: attribute_set
           if set_obj.list and set_obj.list.value
             for attribute in set_obj.list.value
-              # --- READ STRICTLY FROM product_attribute.*
-  assign a = attribute.value | default: attribute
-  assign name = a['product_attribute.display_name'] | default: a.display_name
-  assign key  = a['product_attribute.metafield_key'] | default: a.metafield_key
+                assign a    = attribute.value | default: attribute
+                assign name = a['product_attribute.display_name'] | default: a.display_name
+                assign key  = a['product_attribute.metafield_key'] | default: a.metafield_key
 
-  if attribute_keys contains key
-    continue
-  endif
+                if key == blank
+                  continue
+                endif
 
-  assign attribute_names = attribute_names | append: name | append: '|'
-  assign attribute_keys  = attribute_keys  | append: key  | append: '|'
-              assign key  = a['product_attribute.metafield_key']
-
-              if key != blank
                 unless attribute_keys contains key
                   assign attribute_names = attribute_names | append: name | append: '|'
                   assign attribute_keys  = attribute_keys  | append: key  | append: '|'
-                  assign collected_from_sets = true
                 endunless
-              endif
+
+                assign collected_from_sets = true
             endfor
           endif
         endfor
@@ -91,20 +85,20 @@
         assign set_obj = attribute_set.value | default: attribute_set
         if set_obj.list and set_obj.list.value
           for attribute in set_obj.list.value
-            # --- READ STRICTLY FROM product_attribute.*
-  assign a = attribute.value | default: attribute
-  assign name = a['product_attribute.display_name'] | default: a.display_name
-  assign key  = a['product_attribute.metafield_key'] | default: a.metafield_key
+              assign a    = attribute.value | default: attribute
+              assign name = a['product_attribute.display_name'] | default: a.display_name
+              assign key  = a['product_attribute.metafield_key'] | default: a.metafield_key
 
-  assign attribute_names = attribute_names | append: name | append: '|'
-  assign attribute_keys  = attribute_keys  | append: key  | append: '|'
-            assign key  = a['product_attribute.metafield_key']
+              if key == blank
+                continue
+              endif
 
-            if key != blank
-              assign attribute_names = attribute_names | append: name | append: '|'
-              assign attribute_keys  = attribute_keys  | append: key  | append: '|'
+              unless attribute_keys contains key
+                assign attribute_names = attribute_names | append: name | append: '|'
+                assign attribute_keys  = attribute_keys  | append: key  | append: '|'
+              endunless
+
               assign collected_from_sets = true
-            endif
           endfor
         endif
       endfor
