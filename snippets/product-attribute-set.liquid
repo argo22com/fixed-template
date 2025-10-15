@@ -1,6 +1,8 @@
 {% liquid
   assign attribute_names = ''
   assign attribute_keys  = ''
+  assign sets_found = 0
+  assign attrs_found = 0
 
   if products != blank
     for product in products
@@ -9,29 +11,38 @@
         if pas == blank
           continue
         endif
-        assign mv = pas.value
-        if mv == blank
+        assign val = pas.value
+        if val == blank
           continue
         endif
 
-        if mv.id != blank
-          assign sets = mv | array
+        if val.list and val.list.value
+          assign sets_found = sets_found | plus: 1
+          for attribute in val.list.value
+            if attribute_keys contains attribute.metafield_key
+              continue
+            endif
+            assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+            assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+            assign attrs_found = attrs_found | plus: 1
+          endfor
         else
-          assign sets = mv
-        endif
-
-        for s in sets
-          assign sv = s.value | default: s
-          if sv and sv.list and sv.list.value
-            for attribute in sv.list.value
-              if attribute_keys contains attribute.metafield_key
-                continue
+          if val.size and val.size > 0
+            for set in val
+              if set.list and set.list.value
+                assign sets_found = sets_found | plus: 1
+                for attribute in set.list.value
+                  if attribute_keys contains attribute.metafield_key
+                    continue
+                  endif
+                  assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+                  assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+                  assign attrs_found = attrs_found | plus: 1
+                endfor
               endif
-              assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-              assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
             endfor
           endif
-        endfor
+        endif
       endfor
     endfor
 
@@ -41,31 +52,37 @@
       if pas == blank
         continue
       endif
-      assign mv = pas.value
-      if mv == blank
+      assign val = pas.value
+      if val == blank
         continue
       endif
 
-      if mv.id != blank
-        assign sets = mv | array
+      if val.list and val.list.value
+        assign sets_found = sets_found | plus: 1
+        for attribute in val.list.value
+          assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+          assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+          assign attrs_found = attrs_found | plus: 1
+        endfor
       else
-        assign sets = mv
-      endif
-
-      for s in sets
-        assign sv = s.value | default: s
-        if sv and sv.list and sv.list.value
-          for attribute in sv.list.value
-            assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
-            assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+        if val.size and val.size > 0
+          for set in val
+            if set.list and set.list.value
+              assign sets_found = sets_found | plus: 1
+              for attribute in set.list.value
+                assign attribute_names = attribute_names | append: attribute.display_name | append: '|'
+                assign attribute_keys  = attribute_keys  | append: attribute.metafield_key | append: '|'
+                assign attrs_found = attrs_found | plus: 1
+              endfor
+            endif
           endfor
         endif
-      endfor
+      endif
     endfor
   endif
 
-  assign attribute_names = attribute_names | split: '|' | uniq
-  assign attribute_keys  = attribute_keys  | split: '|' | uniq
+  assign attribute_names = attribute_names | split: '|' | uniq | reject: ''
+  assign attribute_keys  = attribute_keys  | split: '|' | uniq | reject: ''
   assign keys_length = attribute_keys.size | minus: 1
 %}
 
@@ -86,6 +103,8 @@
   "product_id": {{ dbg_product_id }},
   "product_handle": {{ dbg_product_handle | json }},
   "collections_count": {{ dbg_collections_count }},
+  "sets_found": {{ sets_found }},
+  "attributes_collected": {{ attrs_found }},
   "attribute_names": {{ attribute_names | json }},
   "attribute_keys": {{ attribute_keys | json }},
   "keys_length": {{ keys_length }}
