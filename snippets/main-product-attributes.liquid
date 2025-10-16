@@ -1,57 +1,59 @@
 {% comment %}
-  Renders parameter section
+	Renders parameter section
 
-  Accepts:
-  - product: {product} Product
-  - show_sku: {boolean} Should show SKU
-  - title: {String} Title of tab
+	Accepts:
+	- product: {product} Product
+	- show_sku: {boolean} Should show SKU
+	- title: {String} Title of tab
 
-  Usage:
-  {% render 'main-product-attributes', product: product, show_sku: true, title: "Test" %}
+	Usage:
+	{% render 'main-product-attributes', product: product, show_sku: true, title: "Test" %}
 {% endcomment %}
 
 {% liquid
-  assign enable_section_box_layout = false
-  assign current_variant = product.selected_or_first_available_variant
+    assign enable_section_box_layout = false
+    assign current_variant = product.selected_or_first_available_variant
 %}
 
 {%- style -%}
-  {%- render 'section-heading-styles' -%}
+    {%- render 'section-heading-styles' -%}
 {%- endstyle -%}
 {{ 'section-main-product-attributes.css' | asset_url | stylesheet_tag }}
-
 <div class="{% unless enable_section_box_layout %} gradient isolate{% else %}page-width{% endunless %}">
-  <div class="{% unless enable_section_box_layout %}page-width{% else %}gradient isolate section__box{% endunless %}">
-    {%- render 'section-heading' -%}
-    <div class="product-attributes">
-      <div class="product-attributes__table grid grid--1-col grid--2-col-tablet grid--3-col-desktop"
-           data-section="{{ section.id }}" data-url="{{ product.url }}">
-        {%- if show_sku -%}
-          <div class="grid__item" style="padding-bottom: 1em" {{ block.shopify_attributes }}>
-            <div class="product-attributes__table-item flex flex-column">
-              <h3 class="product-attributes__table-item__title margin0 font-heading-bold h5">SKU</h3>
-              <div class="product-attributes__table-item__content text-medium margin-top-1rem product-attributes__tablet-item-light">
-                {{ current_variant.sku }}
-              </div>
+    <div class="{% unless enable_section_box_layout %}page-width{% else %}gradient isolate section__box{% endunless %}">
+        {%- render 'section-heading' -%}
+        <div class="product-attributes">
+            <div class="product-attributes__table grid grid--1-col grid--2-col-tablet grid--3-col-desktop"
+                 data-section="{{ section.id }}" data-url="{{ product.url }}">
+                {%- if show_sku -%}
+                    <div class="grid__item" style="padding-bottom: 1em" {{ block.shopify_attributes }}>
+                        <div class="product-attributes__table-item flex flex-column">
+                            <h3 class="product-attributes__table-item__title margin0 font-heading-bold h5">SKU</h3>
+                            <div class="product-attributes__table-item__content text-medium margin-top-1rem product-attributes__tablet-item-light">
+                                {{ current_variant.sku }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {%- liquid
+                    assign has_content = true
+                -%}
+                {%- liquid
+                    assign is_display = has_content
+                    if request.design_mode and is_display == false
+                        assign is_display = true
+                    endif
+                -%}
+                {%- if is_display -%}
+                    {% render 'product-attribute-set', product: product %}
+                {%- endif -%}
             </div>
-          </div>
-        {% endif %}
-
-        {%- liquid
-          assign is_display = true
-        -%}
-
-        {%- if is_display -%}
-          {%- render 'product-attribute-set', product: product -%}
-        {%- endif -%}
-      </div>
+        </div>
     </div>
-  </div>
 </div>
-
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>
-  {{ 'component-rte.css' | asset_url | stylesheet_tag }}
+    {{ 'component-rte.css' | asset_url | stylesheet_tag }}
 </noscript>
 
 <p>Kolekce produktu:</p>
@@ -74,6 +76,7 @@
     </ul>
   </div>
 {% endif %}
+
 
 
 
