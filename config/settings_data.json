@@ -1190,6 +1190,7 @@
       ".card__heading--product-small {font-size: calc(var(--font-heading-scale) * 1.4rem);}",
       ".grid__item .card-wrapper--product compare-add-button {position: relative; top: 0px; right: 10px;}",
       ".bss-pb-stock {padding: 1px 0;}",
+      ".bss-pb-frontend {width: calc(13% + 1px);}",
       ".price__badge {font-size: 1.8rem;}"
     ]
   }
