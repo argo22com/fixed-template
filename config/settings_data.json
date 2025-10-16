@@ -1189,7 +1189,7 @@
       ".price__vat {color: #00a9e0; font-size: 2.5rem;}",
       ".card__heading--product-small {font-size: calc(var(--font-heading-scale) * 1.4rem);}",
       ".grid__item .card-wrapper--product compare-add-button {position: relative; top: 0px; right: 10px;}",
-      ".bss-pb-stock {padding: 0px 0;}",
+      ".bss-pb-stock {padding: 10px 0;}",
       ".price__badge {font-size: 1.8rem;}"
     ]
   }
