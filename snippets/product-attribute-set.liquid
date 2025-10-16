@@ -11,7 +11,10 @@
 
 {% liquid
   assign attribute_names = ''
-  assign attribute_keys = ''
+  assign attribute_keys  = ''
+
+  # Opevněný řetězec pro deduplikaci klíčů (aby "contains" nehledal jen podřetězce)
+  assign keys_guard = '|'
 
   if products != blank
     for product in products
@@ -34,13 +37,18 @@
             for attribute in set_obj.list.value
               # rozbal případnou referenci na Product Attribute
               assign a = attribute.value | default: attribute
+              assign k = a.metafield_key
+              assign n = a.display_name
 
-              if attribute_keys contains a.metafield_key
+              # bezpečný dedupe: kontrolujeme výskyt |KEY|
+              assign needle = '|' | append: k | append: '|'
+              if k == blank or keys_guard contains needle
                 continue
               endif
 
-              assign attribute_names = attribute_names | append: a.display_name | append: '|'
-              assign attribute_keys  = attribute_keys  | append: a.metafield_key | append: '|'
+              assign attribute_names = attribute_names | append: n | append: '|'
+              assign attribute_keys  = attribute_keys  | append: k | append: '|'
+              assign keys_guard      = keys_guard      | append: k | append: '|'
             endfor
           endif
         endfor
@@ -66,18 +74,28 @@
         if set_obj.list and set_obj.list.value
           for attribute in set_obj.list.value
             assign a = attribute.value | default: attribute
+            assign k = a.metafield_key
+            assign n = a.display_name
 
-            assign attribute_names = attribute_names | append: a.display_name | append: '|'
-            assign attribute_keys  = attribute_keys  | append: a.metafield_key | append: '|'
+            assign needle = '|' | append: k | append: '|'
+            if k == blank or keys_guard contains needle
+              continue
+            endif
+
+            assign attribute_names = attribute_names | append: n | append: '|'
+            assign attribute_keys  = attribute_keys  | append: k | append: '|'
+            assign keys_guard      = keys_guard      | append: k | append: '|'
           endfor
         endif
       endfor
     endfor
   endif
 
-  assign attribute_names = attribute_names | split: '|' | uniq
-  assign attribute_keys  = attribute_keys  | split: '|' | uniq
+  # žádné uniq – jen split (ponecháme 1:1 páry v pořadí)
+  assign attribute_names = attribute_names | split: '|' 
+  assign attribute_keys  = attribute_keys  | split: '|'
 
+  # ponecháme původní logiku indexování (poslední prvek je prázdný díky trailing '|')
   assign keys_length = attribute_keys.size | minus: 1
 %}
 
@@ -116,23 +134,23 @@
   {% endfor %}
 {% elsif product != blank %}
   <div class="w100">
-      <div class="grid">
-        {% for i in (0..keys_length)  %}
-          {% liquid
-            assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
-            if attribute_metafield == blank
-              assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
-            endif
-          %}
-          {% if attribute_metafield != blank and attribute_metafield.value %}
-            <div class="grid__item">
-              <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
-              <div class="rte">
-                {% render 'metafield-display', attribute_metafield: attribute_metafield %}
-              </div>
+    <div class="grid">
+      {% for i in (0..keys_length)  %}
+        {% liquid
+          assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
+          if attribute_metafield == blank
+            assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
+          endif
+        %}
+        {% if attribute_metafield != blank and attribute_metafield.value %}
+          <div class="grid__item">
+            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
+            <div class="rte">
+              {% render 'metafield-display', attribute_metafield: attribute_metafield %}
             </div>
-          {% endif %}
-        {% endfor %}
-      </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 {% endif %}
