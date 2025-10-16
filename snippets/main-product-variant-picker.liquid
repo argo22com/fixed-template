@@ -222,11 +222,11 @@ endif
                     -%}
                     <li>
                       {% liquid
-                        if is_color_swatches
-                          assign current_value = product_variation.options_by_name[color_name].values | first
-                        else
-                          assign current_value = product_variation.title
-                        endif
+if is_color_swatches
+  assign current_value = product_variation.variants.first.metafields.product_attributes.UNIV_BARVA.value
+else
+  assign current_value = product_variation.title
+endif
                       %}
                       <a
                         href="{% if color_out_of_stock %}#{% else %}{{ product_current_variation.url }}{% endif %}"
