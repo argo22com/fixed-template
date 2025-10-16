@@ -1438,10 +1438,8 @@ back-to-top .icon {
 }
 
 
-/* Custom CSS pro potlačení odznaků z TA Labels & Badges */
+/* Zajištění, že kontejner odznaku se zobrazí pod vším (z-index: 1 je téměř na dně) */
 .bss-pb-stock-wrapper, 
 .bss-pb-frontend {
-  /* Z-index 10 by měl být dostatečně nízký, aby se zobrazil za menu,
-     které má obvykle z-index 1000 a více. */
-  z-index: 10 !important; 
+  z-index: 1 !important; 
 }
