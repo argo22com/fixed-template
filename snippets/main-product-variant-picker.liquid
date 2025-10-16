@@ -77,6 +77,9 @@
           if option_name_downcase == color_name and block.settings.enable_color_swatches
             assign is_color_swatches = true
           endif
+          if product.variants.first.metafields.product_attributes.UNIV_BARVA != blank
+  assign is_color_swatches = true
+endif
 
           assign available_variants = product.variants
           unless settings.hide_unavailable_options
