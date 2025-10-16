@@ -1,8 +1,16 @@
+
 {% comment %}
   Renders product options on the product page or featured product section.
-  Supports UNIV_BARVA metafield for color swatches.
-{% endcomment %}
 
+  Accepts:
+  - product: {Object} Product object
+  - block: {Object} Block object when browse section.blocks array.
+  - product_form_id: {String} the HTML ID of the product form.
+  - prefix_variant: {String} used to render a custom elements which extends from the variant-radios or variant-selects elements
+
+  Usage:
+  {% render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
 {%- unless product.has_only_default_variant -%}
   {%- liquid
     assign max_rows = 4
@@ -11,192 +19,575 @@
     assign current_variant = product.selected_or_first_available_variant
     assign first_selected_variant = current_variant | default: product.variants[0]
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
-  -%}
 
+    assign color_name = settings.color_name | downcase
+    assign option_color_position = null
+    for option in product.options_with_values
+      assign option_name_downcase = option.name | downcase
+
+      if option_name_downcase == color_name
+        assign option_color_position = 'option' | append: option.position
+      endif
+    endfor
+  -%}
   {% style %}
     .variant-flex-item {
       flex: 1 0 calc(100% * (1 /{{items_per_row}}) - 2rem);
       max-width: calc(100% * (1 /{{items_per_row}}) - 1rem);
     }
+
     .hidden-more {
       display: none !important;
     }
   {% endstyle %}
 
-  {% if block.settings.picker_type == 'button' and block.settings.enable_color_swatches %}
+  {%- if block.settings.picker_type == 'button' and block.settings.enable_color_swatches -%}
     <link rel="stylesheet" href="{{ 'component-tooltip.css' | asset_url }}" media="print" onload="this.media='all'">
     <noscript>{{ 'component-tooltip.css' | asset_url | stylesheet_tag }}</noscript>
-  {% endif %}
+  {%- endif -%}
 
   {% for option in product.options_with_values %}
+
     {% assign opt_name_down = option.name | downcase %}
+    {% assign only_value_down = option.values.first | downcase %}
     {% assign values_count = option.values | size %}
     {% if opt_name_down == 'default_option' and values_count == 1 %}
       {% continue %}
     {% endif %}
 
-    {% if block.settings.picker_type == 'button' and option.name != settings.phone_name %}
+    {%- if option.name == 'default' -%}
+      {%- continue -%}
+    {%- elsif block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
       {%- liquid
-        assign is_color_swatches = false
-        if product.variants.first.metafields.product_attributes.UNIV_BARVA != blank
-          assign is_color_swatches = true
-        endif
-        assign available_variants = product.variants
+        unless settings.hide_unavailable_options
+          assign instock_variants = product.variants | where: 'available'
+        endunless
       -%}
-
       <{{ prefix_variant }}variant-radios
         class="no-js-hidden variant-picker-primary-{{ section.id }} db"
         data-section="{{ section.id }}"
-        data-url="{{ product.url }}"
+        data-url="{{ product_url | default: product.url }}"
+        {% if settings.hide_unavailable_options %}
+          data-hide-unavailable-options="true"
+        {% endif %}
       >
+        {%- liquid
+          assign option_name_downcase = option.name | downcase
+          assign is_color_swatches = false
+          assign attribute = 'option' | append: forloop.index
+          if option_name_downcase == color_name and block.settings.enable_color_swatches
+            assign is_color_swatches = true
+          endif
 
-        <fieldset class="product-form__input product-form__input--fieldset flex flex-column element-small-margin-top">
+          assign available_variants = product.variants
+          unless settings.hide_unavailable_options
+            assign instock_option_values = instock_variants
+            assign position_checking = option.position | minus: 1
+            for i in (1..position_checking)
+              assign option_index = 'option' | append: i
+              assign current_option_value = current_variant[option_index]
+              assign instock_option_values = instock_option_values | where: option_index, current_option_value
+            endfor
+            assign instock_option_values = instock_option_values | map: attribute
+            for available_option in product.options
+              if option.position != forloop.index
+                assign filter_index = 'option' | append: forloop.index
+                assign filter_value = first_selected_variant[filter_index]
+                assign available_variants = available_variants | where: filter_index, filter_value
+              endif
+            endfor
+          else
+            if option.position > 1
+              assign end_compare_index = option.position | minus: 1
+              for i in (1..end_compare_index)
+                assign filter_index = 'option' | append: i
+                assign filter_value = first_selected_variant[filter_index]
+                assign available_variants = available_variants | where: filter_index, filter_value
+              endfor
+            endif
+            assign instock_option_values = available_variants | where: 'available' | map: attribute
+          endunless
+          assign index_option = 'option' | append: option.position
+          assign available_option_values = available_variants | map: index_option
+        -%}
+        <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
-            {{ option.name | capitalize }}
+            {{ option.name | capitalize }}:
+            {% if option.name == color_name %}
+              {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
+              <span class="product-form__input__option-value font-body-bold">
+                {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize -}}
+              </span>
+            {% else %}
+              <span class="product-form__input__option-value font-body-bold"> {{ option.selected_value }}</span>
+            {% endif %}
           </legend>
-
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
-            {% if is_color_swatches %}
-              {%- liquid
-                assign color_option_names = ''
+            {%- for value in option.values -%}
+              {% liquid
+                assign is_first_option = forloop.first
 
-                paginate shop.metaobjects.color_codes_hex.values by 10000
-                  assign color_codes = shop.metaobjects.color_codes_hex.values
-
-                  for color_code_hex in color_codes
-                    for product_variation in variation_products
-                      assign variation_color = product_variation.variants.first.metafields.product_attributes.UNIV_BARVA.value
-if color_code_hex.code == variation_color
-  if color_code_hex.image.value
-    assign colors = color_code_hex.image.value | image_url: width: 40
-  else
-    assign colors = 'colors_'
-    for color in color_code_hex.color_hex_list.value
-      assign colors = colors | append: color | append: ','
-    endfor
-  endif
-
-  assign color_option_names = color_option_names | append: color_code_hex.code | append: ':' | append: colors | append: ';'
-endif
-                    endfor
-                  endfor
-                endpaginate
-              -%}
-
-              {% for product_variation in variation_products %}
-                {%- liquid
-                  assign current_value = product_variation.variants.first.metafields.product_attributes.UNIV_BARVA.value
-assign selected = false
-if product_variation.id == product.id
-  assign selected = true
-endif
-                  assign current_variant = product.selected_or_first_available_variant
+                assign out_of_stock = false
+                if settings.hide_unavailable_options
+                  unless instock_option_values contains value
+                    assign out_of_stock = true
+                  endunless
+                elsif available_option_values contains value
+                  unless instock_option_values contains value
+                    assign out_of_stock = true
+                  endunless
+                endif
+              %}
+              {%- assign variant = product.variants | where: attribute, value | first -%}
+              {%- if is_color_swatches and block.settings.color_swatches_style == 'variant' -%}
+                {%- assign variant_color = product.variants
+                  | where: attribute, value
+                  | where: 'featured_image'
+                  | first
                 -%}
-                <li>
-                  <a
-                    href="{{ product_variation.url }}"
-                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip {% if selected %}selected{% endif %}"
-                    data-color="{{ current_value | handleize }}"
-                  >
-                    <input
-                      type="radio"
-                      id="{{ section_id | default: section.id }}-{{ forloop.index0 }}"
-                      name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
-                      value="{{ current_value | escape }}"
-                      form="{{ product_form_id }}"
-                      style="display:none"
-                      {% if selected %}checked="checked"{% endif %}
-                    >
+              {%- endif -%}
+              {%- if is_color_swatches -%}
+                {%- liquid
+                  assign contains_product = false
 
-                    {% liquid
-                      assign current_color_values = ''
-                      if color_option_names
-                        assign color_option_names_list = color_option_names | split: ';'
-                        for color_option_name in color_option_names_list
-                          assign color_option_name_parts = color_option_name | split: ':'
-                          assign color_option_code = color_option_name_parts[0]
-                          assign color_option_value = color_option_name_parts[1]
-                          if color_option_code == current_value
-                            assign current_color_values = color_option_value
-                          endif
-                        endfor
+                  for product_variation in variation_products
+                    if product_variation == product
+                      assign contains_product = true
+                    endif
+                  endfor
+                -%}
+                {%- if contains_product -%}
+                  {% liquid
+                    assign color_option_names = ''
+                    if option.name == settings.color_name
+                      paginate shop.metaobjects.color_codes_hex.values by 10000
+                        assign color_codes = shop.metaobjects.color_codes_hex.values
+
+                        if color_codes
+                          for color_code_hex in color_codes
+                            for product_variation in variation_products
+                              assign variation_color = product_variation.options_by_name[color_name].values | first
+
+                              if color_code_hex.code == variation_color
+                                if color_code_hex.image.value
+                                  assign colors = color_code_hex.image.value | image_url: width: 40
+                                else
+                                  assign colors = 'colors_'
+                                  for color in color_code_hex.color_hex_list.value
+                                    assign colors = colors | append: color | append: ','
+                                  endfor
+                                endif
+
+                                assign color_option_names = color_option_names | append: color_code_hex.code | append: ':' | append: colors | append: ';'
+                              endif
+                            endfor
+                          endfor
+                        endif
+                      endpaginate
+                    endif
+                  %}
+                  {%- for product_variation in variation_products -%}
+                    {%- liquid
+                      assign color_out_of_stock = null
+
+                      if product_variation == product
+                        assign selected = true
+                      else
+                        assign selected = false
                       endif
-                    %}
 
-                    {% if current_color_values contains 'colors_' %}
+                      assign current_variant = product.selected_or_first_available_variant
+                      assign product_current_variation = product_variation
+                      assign product_variation_variants = product_variation.variants
+
+                      for option in product.options_with_values
+                        assign option_index = 'option' | append: option.position
+                        if option_index == option_color_position
+                          continue
+                        endif
+
+                        assign product_variation_variants = product_variation_variants | where: option_index, current_variant[option_index]
+                      endfor
+
+                      if product_variation_variants.size != 0
+                        assign product_current_variation = product_variation_variants | first
+                      else
+                        comment
+                          Product variation does not have selected variant, so this color is out of stock
+                        endcomment
+                        assign color_out_of_stock = true
+                      endif
+                    -%}
+                    <li>
                       {% liquid
-                        assign color_object = current_color_values | split: 'colors_'
-                        assign color_list = color_object[1] | split: ','
-                        assign color_size = color_list.size
-                        assign angle = 0
-                        if color_size > 0
-                          assign angle = 360 | divided_by: color_size
+                        if is_color_swatches
+                          assign current_value = product_variation.options_by_name[color_name].values | first
+                        else
+                          assign current_value = product_variation.title
                         endif
                       %}
-                      <div class="color-swatch-background">
-                        {% for color_value in color_list %}
-                          {% if color_size == 1 %}
-                            <span style="background: {{ color_value }}; width:100%;height:100%"></span>
-                          {% elsif color_size == 2 %}
-                            {% if forloop.index0 == 0 %}
-                              {% assign left = -50 %}
-                            {% else %}
-                              {% assign left = 50 %}
-                            {% endif %}
-                            <span style="background: {{ color_value }}; width:100%;height:100%;left:{{ left }}%"></span>
-                          {% else %}
-                            {% assign rotation = angle | times: forloop.index0 %}
-                            {% assign skew = -90 | plus: angle %}
-                            <span style="background: {{ color_value }}; transform:rotate({{ rotation }}deg) skew({{ skew }}deg);"></span>
+                      <a
+                        href="{% if color_out_of_stock %}#{% else %}{{ product_current_variation.url }}{% endif %}"
+                        class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if out_of_stock and is_color_swatches == false %} soldout{% endif %}{% if color_out_of_stock %} no-stock{% endif %}"
+                        {% if is_color_swatches %}
+                          data-color="{{ current_value | handleize }}"
+                          style="{% if selected %} border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));{% endif %}"
+                          {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
+                            style="--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }})"
+                          {%- endif -%}
+                        {% endif %}
+                      >
+                        <input
+                          type="radio"
+                          id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                          name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+                          value="{{ current_value | escape }}"
+                          form="{{ product_form_id }}"
+                          style="display: none;"
+                          {% if selected %}
+                            checked="checked"
                           {% endif %}
-                        {% endfor %}
-                      </div>
-                    {% elsif current_color_values %}
-                      <div class="color-swatch-background flex justify-center align-center">
-                        <img src="{{ current_color_values }}" alt="{{ current_value }}">
-                      </div>
-                    {% endif %}
+                        >
+                        {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
+                          <span
+                            class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"
+                          ></span>
+                        {%- endif -%}
+                        {%- unless is_color_swatches -%}
+                          {% if product.variants.size == 1 %}
+                            {% assign title = product.title %}
+                          {% else %}
+                            {% assign title = product.selected_or_first_available_variant.metafields.product_texts.title %}
+                          {% endif %}
+                          {{ title }}
+                        {%- else -%}
+                          {% liquid
+                            assign current_color_values = ''
 
-                    <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ current_value }}</span>
-                    {% if selected %}{% render 'icon-checkmark' %}{% endif %}
-                  </a>
-                </li>
-              {% endfor %}
-            {% else %}
-              {% for value in option.values %}
-                <li class="variant-flex-item">
+                            if color_option_names
+                              assign color_option_names_list = color_option_names | split: ';'
+                              for color_option_name in color_option_names_list
+                                assign color_option_name_parts = color_option_name | split: ':'
+                                assign color_option_code = color_option_name_parts[0]
+                                assign color_option_value = color_option_name_parts[1]
+
+                                if color_option_code == current_value
+                                  assign current_color_values = color_option_value
+                                endif
+                              endfor
+                            endif
+                          %}
+
+                          {% if current_color_values contains 'colors_' %}
+                            {% liquid
+                              assign color_object = current_color_values | split: 'colors_'
+                              assign angle = 0
+                              assign color_list = color_object[1] | split: ','
+                              assign color_size = color_list.size
+                              if color_size > 0
+                                assign angle = 360 | divided_by: color_size
+                              endif
+                            %}
+
+                            <div class="color-swatch-background">
+                              {% for color_value in color_list %}
+                                {% if color_size == 1 %}
+                                  <span style="background: {{ color_value }}; width: 100%; height: 100%"></span>
+                                {% elsif color_size == 2 %}
+                                  {% if forloop.index0 == 0 %}
+                                    {% assign left = -50 %}
+                                  {% else %}
+                                    {% assign left = 50 %}
+                                  {% endif %}
+                                  <span
+                                    style="background: {{ color_value }}; width: 100%; height: 100%; left: {{ left }}%"
+                                  ></span>
+                                {% else %}
+                                  {% assign rotation = angle | times: forloop.index0 %}
+                                  {% assign skew = -90 | plus: angle %}
+                                  <span
+                                    style="background: {{ color_value }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if color_size == 3 %}top: -10%; right: -25%; height: 70%; width: 70%{% endif %}"
+                                  ></span>
+                                {% endif %}
+                              {% endfor %}
+                            </div>
+                          {% elsif current_color_values %}
+                            <div class="color-swatch-background flex justify-center align-center">
+                              <img src="{{ current_color_values }}" alt="{{ current_color_values }}">
+                            </div>
+                          {% endif %}
+
+                          <span
+                            class="js-title-tooltip bt-tooltip__inner bt-tooltip__inner--top {% if color_out_of_stock %}d-none{% endif %}"
+                            style="z-index: 10"
+                          >
+                            {{-
+                              product_current_variation.metafields.product_texts.title.value
+                              | default: product_current_variation.title
+                            -}}
+                          </span>
+                          {%- if selected %}
+                            {%- render 'icon-checkmark' -%}
+                          {% endif %}
+
+                          {%- if color_out_of_stock %}
+                            {%- render 'icon-close', add_classes: 'js-close-icon' -%}
+                          {% else %}
+                            {%- render 'icon-close', add_classes: 'js-close-icon d-none' -%}
+                          {%- endif %}
+                        {%- endunless -%}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- else -%}
+                <li
+                  {% unless is_first_option %}
+                    class="variant-flex-item dynamic-option{% if settings.hide_unavailable_options %}{% unless available_option_values contains value %} hidden{% endunless %}{% endif %}{% if forloop.index >= total_visible_items %} hidden-more{% endif %}"
+                  {% else %}
+                    class="variant-flex-item{% if forloop.index >= total_visible_items %} hidden-more{% endif %}"
+                  {% endunless %}
+                >
                   <input
                     type="radio"
-                    id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                    name="{{ option.name }}"
+                    id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+                    class="product-form__input__radio{% unless settings.hide_unavailable_options %}{% unless available_option_values contains value %} disabled{% endunless %}{% endunless %}"
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
-                    {% if option.selected_value == value %}checked="checked"{% endif %}
+                    data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
+                    data-title="{{ variant.metafields.product_texts.title.value | escape }}"
+                    {% if option.selected_value == value %}
+                      checked="checked"
+                    {% endif %}
+                    {% if out_of_stock %}
+                      disabled="disabled"
+                    {% endif %}
+                    {% for product_variation in variation_products %}
+                      {% assign option_color_variant = product_variation.variants
+                        | where: index_option, value
+                        | first
+                      %}
+                      {% if option_color_variant and option_color_position != null %}
+                        {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
+                        data-{{ current_color_code }}-url="{{ option_color_variant.url }}"
+                        data-{{ current_color_code }}-title="{{ option_color_variant.metafields['product_texts']['title'].value | escape }}"
+                      {% endif %}
+                    {% endfor %}
                   >
-                  <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="product-form__input__radio-label font-body-semi-bold text-small">
-                    {{ value }}
+                  <label
+                    for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if out_of_stock and is_color_swatches == false %} soldout{% endif %}"
+                    {% if is_color_swatches %}
+                      data-color="{{ value | handleize }}"
+                      {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
+                        style="--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }})"
+                      {%- endif -%}
+                    {% endif %}
+                  >
+                    {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
+                      <span
+                        class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"
+                      ></span>
+                    {%- endif -%}
+                    {%- unless is_color_swatches -%}
+                      {{ value }}
+                    {%- else -%}
+                      <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index: 10">{{ value }}</span>
+                      {% if out_of_stock %}
+                        {% render 'icon-close' %}
+                      {% elsif selected %}
+                        {%- render 'icon-checkmark' -%}
+                      {% endif %}
+                    {%- endunless -%}
                   </label>
                 </li>
-              {% endfor %}
-            {% endif %}
+              {%- endif -%}
+              {% if forloop.index == total_visible_items %}
+                <li class="variant-flex-item js-show-more">
+                  <label
+                    for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    class="product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}"
+                  >
+                    {{ 'products.product.show_more' | t }}
+                  </label>
+                </li>
+              {% endif %}
+            {%- endfor -%}
           </ul>
         </fieldset>
+        <script type="application/json">
+          {{ product.variants | json }}
+        </script>
       </{{ prefix_variant }}variant-radios>
-    {% endif %}
+    {%- else -%}
+      <{{ prefix_variant }}variant-selects
+        class="no-js-hidden variant-picker-primary-{{ section.id }} db"
+        data-section="{{ section.id }}"
+        data-url="{{ product_url | default: product.url }}"
+        {% if settings.hide_unavailable_options %}
+          data-hide-unavailable-options="true"
+        {% endif %}
+      >
+        <div class="js-product-form-input product-form__input product-form__input--dropdown product-form__input--larger{% unless forloop.first %} element-small-margin-top{% endunless %}">
+          <label
+            class="form__label product-form__input__form-label"
+            for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
+          >
+            {{ option.name | capitalize }}
+          </label>
+          <div class="select">
+            <select
+              id="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
+              class="js-select-product select__select{% unless is_first_option %} dynamic-option{% endunless %} select__select-lower"
+              name="options[{{ option.name | escape }}]"
+              form="{{ product_form_id }}"
+            >
+              {%- liquid
+                assign available_variants = product.variants
+                unless settings.hide_unavailable_options
+                  for available_option in product.options
+                    if option.position != forloop.index
+                      assign filter_index = 'option' | append: forloop.index
+                      assign filter_value = first_selected_variant[filter_index]
+                      assign available_variants = available_variants | where: filter_index, filter_value
+                    endif
+                  endfor
+                else
+                  if option.position > 1
+                    assign end_compare_index = option.position | minus: 1
+                    for i in (1..end_compare_index)
+                      assign filter_index = 'option' | append: i
+                      assign filter_value = first_selected_variant[filter_index]
+                      assign available_variants = available_variants | where: filter_index, filter_value
+                    endfor
+                  endif
+                endunless
+                assign index_option = 'option' | append: option.position
+                assign available_option_values = available_variants | map: indexOption
+
+                assign phone_option_names = ''
+
+                if option.name == settings.phone_name
+                  paginate shop.metaobjects.phone_properties.values by 10000
+                    assign phone_properties = shop.metaobjects.phone_properties.values
+
+                    if phone_properties
+                      for phone_property in phone_properties
+                        for value in option.values
+                          assign phone_code = value | strip
+
+                          if phone_property.code == phone_code
+                            assign phone_option_names = phone_option_names | append: phone_code | append: ':' | append: phone_property.model.value | append: ';'
+                          endif
+                        endfor
+                      endfor
+                    endif
+                  endpaginate
+                endif
+              -%}
+              {%- for value in option.values -%}
+                {%- liquid
+                  assign option_name_downcase = option.name | downcase
+                  assign is_first_option = forloop.first
+                  assign variant = product.variants | where: index_option, value | first
+                -%}
+
+                <option
+                  class="js-select-product-option"
+                  value="{{ value | escape }}"
+                  data-name="{{ option.name | escape }}"
+                  {% if option.selected_value == value %}
+                    selected="selected"
+                  {% endif -%}
+                  {% if settings.hide_unavailable_options and is_first_option == false %}
+                    {%- unless available_option_values contains value %} class="hidden"{% endunless -%}
+                  {% endif %}
+                  data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
+                  data-title="{{ variant.metafields.product_texts.title.value | escape }}"
+                  {% for product_variation in variation_products %}
+                    {% assign option_color_variant = product_variation.variants | where: index_option, value | first %}
+                    {% if option_color_variant and option_color_position != null %}
+                      {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
+                      data-{{ current_color_code }}-url="{{ option_color_variant.url }}"
+                      data-{{ current_color_code }}-title="{{ option_color_variant.metafields.product_texts.title.value | escape }}"
+                    {% endif %}
+                  {% endfor %}
+                >
+                  {% liquid
+                    assign display_value = value
+                    if phone_option_names and option.name == settings.phone_name
+                      assign phone_option_names_list = phone_option_names | split: ';'
+                      for phone_option_name in phone_option_names_list
+                        assign phone_option_name_parts = phone_option_name | split: ':'
+                        assign phone_option_code = phone_option_name_parts[0]
+                        assign phone_option_model = phone_option_name_parts[1]
+
+                        if phone_option_code == value
+                          assign display_value = phone_option_model
+                        endif
+                      endfor
+                    endif
+                  %}
+
+                  {%- unless settings.hide_unavailable_options -%}
+                    {%- if available_option_values contains value -%}
+                      {{- display_value -}}
+                    {%- else -%}
+                      {{- 'products.product.value_unavailable' | t: option_value: display_value -}}
+                    {%- endif -%}
+                  {%- else -%}
+                    {{ display_value }}
+                  {%- endunless -%}
+                </option>
+              {%- endfor -%}
+            </select>
+            {% render 'icon-caret' %}
+          </div>
+        </div>
+
+        <script type="application/json">
+          {{ product.variants | json }}
+        </script>
+      </{{ prefix_variant }}variant-selects>
+    {%- endif -%}
   {% endfor %}
 {%- endunless -%}
 
-<noscript>
+<noscript class="product-form__noscript-wrapper-{{ section_id | default: section.id }}">
   <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
-    <label class="form__label">{{ 'products.product.product_variants' | t }}</label>
+    <label class="form__label" for="Variants-{{ section_id | default: section.id }}">
+      {{- 'products.product.product_variants' | t -}}
+    </label>
     <div class="select">
       {% for option in product.options_with_values %}
-        <select name="options[{{ option.name | escape }}]" form="{{ product_form_id }}">
+
+        {% assign opt_name_down = option.name | downcase %}
+        {% assign only_value_down = option.values.first | downcase %}
+        {% assign values_count = option.values | size %}
+        {% if opt_name_down == 'default_option' and values_count == 1 %}
+          {% continue %}
+        {% endif %}
+
+        <select
+          name="options[{{ option.name | escape }}]"
+          id="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
+          class="select__select"
+          form="{{ product_form_id }}"
+        >
           {% for value in option.values %}
-            <option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value }}</option>
+            <option
+              value="{{ value | escape }}"
+              {% if option.selected_value == value %}
+                selected="selected"
+              {% endif %}
+            >
+              {{ value }}
+            </option>
           {% endfor %}
         </select>
       {% endfor %}
+      {% render 'icon-caret' %}
     </div>
   </div>
 </noscript>
