@@ -107,7 +107,7 @@
             "make_collapsible_row": true,
             "icon": "thumb_down",
             "product_list_limit": 3,
-            "total_enable": true,
+            "total_enable": false,
             "total_label": "Celkem bez DPH",
             "button_enable": true,
             "button_label": "Přihodit do košíku",
