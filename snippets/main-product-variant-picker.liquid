@@ -86,7 +86,10 @@ endif
               {% for product_variation in variation_products %}
                 {%- liquid
                   assign current_value = product_variation.variants.first.metafields.product_attributes.UNIV_BARVA.value
-                  assign selected = product_variation == product
+assign selected = false
+if product_variation.id == product.id
+  assign selected = true
+endif
                   assign current_variant = product.selected_or_first_available_variant
                 -%}
                 <li>
