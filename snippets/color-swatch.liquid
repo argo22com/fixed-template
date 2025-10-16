@@ -4,12 +4,18 @@
     assign has_background = true
   endif
 
-  assign color_metaobject = nill
+  # === NOVĚ: Barva se bere výhradně z metafieldu product_attributes.UNIV_BARVA ===
+  assign variant_color_value = nil
+  if variant_color and variant_color.metafields.product_attributes.UNIV_BARVA != blank
+    assign variant_color_value = variant_color.metafields.product_attributes.UNIV_BARVA.value
+  endif
+
+  assign color_metaobject = nil
   assign color_codes_all = shop.metaobjects.color_codes_hex.values
-  paginate color_codes_all  by 10000
+  paginate color_codes_all by 10000
     assign color_codes = color_codes_all
-    for  color_code_object in color_codes
-      if color_code_object.code.value == color
+    for color_code_object in color_codes
+      if color_code_object.code.value == variant_color_value
         assign color_metaobject = color_code_object
         break
       endif
@@ -17,52 +23,60 @@
   endpaginate
 
   assign angle = 0
-  assign color_size = color_metaobject.color_hex_list.value.size
+  assign color_size = 0
+  if color_metaobject and color_metaobject.color_hex_list.value
+    assign color_size = color_metaobject.color_hex_list.value.size
+  endif
+
   if color_size > 0
     assign angle = 360 | divided_by: color_size
   endif
 -%}
+
 <a
-        href="{% if variant_color %}{{ variant_color.url }}{% else %}#{% endif %}"
-        class="card__product-color-list__button bt-tooltip por db{% if color_swatches_style == 'variant' %} card__product-color-list__button--variant{% if variant_color != null %} color-swatch-own-image{% endif %}{% endif %}"
-        {% if srcset != '' %}
-          data-srcset="{{ srcset | escape }}"
-        {% endif %}
-        data-color="{{ color | handleize }}"
+  href="{% if variant_color %}{{ variant_color.url }}{% else %}#{% endif %}"
+  class="card__product-color-list__button bt-tooltip por db{% if color_swatches_style == 'variant' %} card__product-color-list__button--variant{% if variant_color != null %} color-swatch-own-image{% endif %}{% endif %}"
+  {% if srcset != '' %}
+    data-srcset="{{ srcset | escape }}"
+  {% endif %}
+  data-color="{{ variant_color_value | handleize }}"
 >
   {%- if color_swatches_style == 'variant'
     and variant_color != null
     and variant_color.featured_image != blank
   -%}
     <img
-            src="{{ variant_color.featured_image | image_url: width: 100, height: 100, crop: 'center' }}"
-            width="100"
-            height="100"
-            loading="lazy"
-            class="w100 h100"
-            alt="{{ card_product.title | escape }} - {{ color | escape }}"
+      src="{{ variant_color.featured_image | image_url: width: 100, height: 100, crop: 'center' }}"
+      width="100"
+      height="100"
+      loading="lazy"
+      class="w100 h100"
+      alt="{{ card_product.title | escape }} - {{ variant_color_value | escape }}"
     >
-  {% elsif has_background %}
-      <div class="color-swatch-background">
-        {% for color_value in color_metaobject.color_hex_list.value %}
-          {% if color_size == 1  %}
-            <span style="background: {{ color_value | color_to_rgb }}; width: 100%; height: 100%"></span>
-          {% elsif color_size == 2 %}
-            {% if forloop.index0 == 0 %}
-              {% assign left = -50 %}
-            {% else %}
-              {% assign left = 50 %}
-            {% endif %}
-            <span style="background: {{ color_value | color_to_rgb }}; width: 100%; height: 100%; left: {{ left }}%"></span>
+  {% elsif has_background and color_metaobject %}
+    <div class="color-swatch-background">
+      {% for color_value in color_metaobject.color_hex_list.value %}
+        {% if color_size == 1 %}
+          <span style="background: {{ color_value | color_to_rgb }}; width: 100%; height: 100%"></span>
+        {% elsif color_size == 2 %}
+          {% if forloop.index0 == 0 %}
+            {% assign left = -50 %}
           {% else %}
-            {% assign rotation = angle | times: forloop.index0 %}
-            {% assign skew = -90 | plus: angle %}
-            <span style="background: {{ color_value | color_to_rgb }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);"></span>
+            {% assign left = 50 %}
           {% endif %}
-        {% endfor %}
-      </div>
+          <span style="background: {{ color_value | color_to_rgb }}; width: 100%; height: 100%; left: {{ left }}%"></span>
+        {% else %}
+          {% assign rotation = angle | times: forloop.index0 %}
+          {% assign skew = -90 | plus: angle %}
+          <span style="background: {{ color_value | color_to_rgb }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);"></span>
+        {% endif %}
+      {% endfor %}
+    </div>
   {%- endif -%}
-  <span class="bt-tooltip__inner bt-tooltip__inner--top">
-    {{- color_metaobject.search_words.value | first | capitalize -}}
-  </span>
+
+  {% if color_metaobject %}
+    <span class="bt-tooltip__inner bt-tooltip__inner--top">
+      {{ color_metaobject.search_words.value | first | capitalize }}
+    </span>
+  {% endif %}
 </a>
