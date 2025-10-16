@@ -64,19 +64,5 @@
 </ul>
 
 
-{% if product.collections.size > 0 %}
-  <div class="product-collections">
-    <p>This product is in the following collection(s):</p>
-    <ul>
-      {% for collection in product.collections %}
-        <li>
-          <a href="{{ collection.url }}">{{ collection.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-{% endif %}
-
-
 
 
