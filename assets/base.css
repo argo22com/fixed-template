@@ -1436,3 +1436,12 @@ back-to-top .icon {
 .gap-2 {
   gap: 2rem;
 }
+
+
+/* Custom CSS pro potlačení odznaků z TA Labels & Badges */
+.bss-pb-stock-wrapper, 
+.bss-pb-frontend {
+  /* Z-index 10 by měl být dostatečně nízký, aby se zobrazil za menu,
+     které má obvykle z-index 1000 a více. */
+  z-index: 10 !important; 
+}
