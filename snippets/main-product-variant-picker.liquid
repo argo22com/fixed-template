@@ -123,16 +123,15 @@
             endfor
           endif
 
-          # ----- NOVÉ: label legendy -----
-          # pokud je to barevná volba (tj. UNIV_BARVA / cokoliv v settings.color_name), zkus přeložit
+          # ----- LABEL LEGENDY (s fallbackem, když chybí překlad) -----
           assign legend_label = option.name
           if is_color_option
             assign translated_color = 'products.product.color' | t
-            # když překlad neexistuje, často vrátí klíč; ošetři fallback na 'Barva'
-            if translated_color and translated_color != '' and translated_color != 'products.product.color'
-              assign legend_label = translated_color
-            else
+            assign legend_label_down = translated_color | downcase
+            if translated_color == blank or translated_color contains 'translation missing'
               assign legend_label = 'Barva'
+            else
+              assign legend_label = translated_color
             endif
           endif
         -%}
@@ -141,7 +140,7 @@
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ legend_label }}:
             {% if is_color_option %}
-              {%- comment -%} Najdi hezké jméno (např. Pink/Růžová) podle code vybrané barvy {%- endcomment -%}
+              {%- comment -%} Hezký název barvy podle kódu (např. Růžová místo PI) {%- endcomment -%}
               {%- liquid
                 assign selected_code = option.selected_value | strip
                 assign legend_nice_name = ''
@@ -307,7 +306,7 @@
                     form="{{ product_form_id }}"
                     data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
                     data-title="{{ variant.metafields.product_texts.title.value | escape }}"
-                    {% if option.selected_value == value %}checked="checked"%{% endif %}
+                    {% if option.selected_value == value %}checked="checked"{% endif %}
                     {% if out_of_stock %}disabled="disabled"{% endif %}
                   >
                   <label
