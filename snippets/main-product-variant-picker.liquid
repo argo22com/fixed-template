@@ -19,9 +19,9 @@
     assign first_selected_variant = current_variant | default: product.variants[0]
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    # === změna: nepřevádíme na lowercase ===
+    # === CASE-SENSITIVE: žádné downcase na názvu barvy ===
     assign color_option_name = settings.color_name
-    assign option_color_position = null
+    assign option_color_position = nil
     for option in product.options_with_values
       if option.name == color_option_name
         assign option_color_position = 'option' | append: option.position
@@ -73,8 +73,7 @@
           assign option_name_downcase = option.name | downcase
           assign is_color_swatches = false
           assign attribute = 'option' | append: forloop.index
-
-          # === změna: barvu detekujeme přes přesný název ===
+          # === CASE-SENSITIVE: detekce barvy přes přesný název ===
           if option.name == color_option_name and block.settings.enable_color_swatches
             assign is_color_swatches = true
           endif
@@ -112,15 +111,15 @@
         -%}
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
-            {{ option.name | capitalize }}:
-            {%- if option.name == color_option_name -%}
+            {{ option.name }}:
+            {% if option.name == color_option_name %}
               {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
               <span class="product-form__input__option-value font-body-bold">
                 {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize -}}
               </span>
-            {%- else -%}
+            {% else %}
               <span class="product-form__input__option-value font-body-bold"> {{ option.selected_value }}</span>
-            {%- endif -%}
+            {% endif %}
           </legend>
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
             {%- for value in option.values -%}
@@ -159,7 +158,7 @@
                 {%- if contains_product -%}
                   {% liquid
                     assign color_option_names = ''
-                    # === změna: držíme se přesného názvu barvy ===
+                    # === CASE-SENSITIVE: držíme se přesného názvu barvy ===
                     if option.name == color_option_name
                       paginate shop.metaobjects.color_codes_hex.values by 10000
                         assign color_codes = shop.metaobjects.color_codes_hex.values
@@ -167,7 +166,7 @@
                         if color_codes
                           for color_code_hex in color_codes
                             for product_variation in variation_products
-                              # === změna: options_by_name s přesným názvem ===
+                              # === CASE-SENSITIVE: options_by_name s přesným názvem ===
                               assign variation_color = product_variation.options_by_name[color_option_name].values | first
 
                               if color_code_hex.code == variation_color
@@ -223,7 +222,7 @@
                     <li>
                       {% liquid
                         if is_color_swatches
-                          # === změna: options_by_name s přesným názvem ===
+                          # === CASE-SENSITIVE: options_by_name s přesným názvem ===
                           assign current_value = product_variation.options_by_name[color_option_name].values | first
                         else
                           assign current_value = product_variation.title
@@ -371,8 +370,8 @@
                         | where: index_option, value
                         | first
                       %}
-                      {% if option_color_variant and option_color_position != null %}
-                        {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
+                      {% if option_color_variant and option_color_position != nil %}
+                        {% assign current_color_code = option_color_variant[option_color_position] %}
                         data-{{ current_color_code }}-url="{{ option_color_variant.url }}"
                         data-{{ current_color_code }}-title="{{ option_color_variant.metafields['product_texts']['title'].value | escape }}"
                       {% endif %}
@@ -467,7 +466,6 @@
                   endif
                 endunless
                 assign index_option = 'option' | append: option.position
-                # (ponecháno původní)
                 assign available_option_values = available_variants | map: indexOption
 
                 assign phone_option_names = ''
@@ -511,8 +509,8 @@
                   data-title="{{ variant.metafields.product_texts.title.value | escape }}"
                   {% for product_variation in variation_products %}
                     {% assign option_color_variant = product_variation.variants | where: index_option, value | first %}
-                    {% if option_color_variant and option_color_position != null %}
-                      {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
+                    {% if option_color_variant and option_color_position != nil %}
+                      {% assign current_color_code = option_color_variant[option_color_position] %}
                       data-{{ current_color_code }}-url="{{ option_color_variant.url }}"
                       data-{{ current_color_code }}-title="{{ option_color_variant.metafields.product_texts.title.value | escape }}"
                     {% endif %}
