@@ -21,7 +21,7 @@
 
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    # CASE-SENSITIVE: žádné downcase; používá se přesný název z nastavení
+    # CASE-SENSITIVE název barvy 1:1
     assign color_option_name = settings.color_name
 
     assign option_color_position = nil
@@ -46,6 +46,7 @@
   {%- endif -%}
 
   {% for option in product.options_with_values %}
+
     {% assign values_count = option.values | size %}
     {% if option.name == 'default_option' and values_count == 1 %}
       {% continue %}
@@ -68,13 +69,14 @@
         {% endif %}
       >
         {%- liquid
-          assign is_color_option = option.name == color_option_name
           assign is_color_swatches = false
-          assign attribute = 'option' | append: forloop.index
-
-          if is_color_option and block.settings.enable_color_swatches
-            assign is_color_swatches = true
+          if option.name == color_option_name
+            if block.settings.enable_color_swatches
+              assign is_color_swatches = true
+            endif
           endif
+
+          assign attribute = 'option' | append: forloop.index
 
           assign available_variants = product.variants
           unless settings.hide_unavailable_options
@@ -104,10 +106,11 @@
             endif
             assign instock_option_values = available_variants | where: 'available' | map: attribute
           endunless
+
           assign index_option = 'option' | append: option.position
           assign available_option_values = available_variants | map: index_option
 
-          # Rozhodnutí: použít grouping z variation_products jen pokud dává smysl
+          # rozhodnutí o use_color_group bez porovnání v {{ }}
           assign use_color_group = false
           if is_color_swatches and variation_products
             if variation_products.size > 0
@@ -123,7 +126,7 @@
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ option.name }}:
-            {% if is_color_option %}
+            {% if option.name == color_option_name %}
               {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
               <span class="product-form__input__option-value font-body-bold">
                 {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | default: option.selected_value }}
@@ -145,7 +148,10 @@
               {%- for product_variation in variation_products -%}
                 {%- liquid
                   assign color_out_of_stock = null
-                  assign selected = product_variation == product
+                  assign selected = false
+                  if product_variation == product
+                    assign selected = true
+                  endif
 
                   assign current_variant = product.selected_or_first_available_variant
                   assign product_current_variation = product_variation
@@ -282,7 +288,7 @@
                     data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
                     data-title="{{ variant.metafields.product_texts.title.value | escape }}"
                     {% if option.selected_value == value %}checked="checked"{% endif %}
-                    {% if out_of_stock %}disabled="disabled"{% endif %}
+                    {% if out_of_stock %}disabled="disabled{% endif %}
                   >
                   <label
                     for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -310,10 +316,7 @@
         {% endif %}
       >
         <div class="js-product-form-input product-form__input product-form__input--dropdown product-form__input--larger{% unless forloop.first %} element-small-margin-top{% endunless %}">
-          <label
-            class="form__label product-form__input__form-label"
-            for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
-          >
+          <label class="form__label product-form__input__form-label" for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}">
             {{ option.name | capitalize }}
           </label>
           <div class="select">
@@ -344,8 +347,9 @@
                   endif
                 endunless
                 assign index_option = 'option' | append: option.position
-                assign available_option_values = available_variants | map: index_option
+                assign available_option_values = available_variants | map: indexOption
               -%}
+
               {%- for value in option.values -%}
                 {%- liquid
                   assign is_first_option = forloop.first
@@ -403,12 +407,7 @@
           form="{{ product_form_id }}"
         >
           {% for value in option.values %}
-            <option
-              value="{{ value | escape }}"
-              {% if option.selected_value == value %}
-                selected="selected"
-              {% endif %}
-            >{{ value }}</option>
+            <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>{{ value }}</option>
           {% endfor %}
         </select>
       {% endfor %}
