@@ -128,9 +128,23 @@
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ option.name }}:
             {% if is_color_option %}
-              {%- assign color_handle = 'color-code-' | append: option.selected_value | handleize -%}
+              {%- comment -%}
+                DŘÍV jsme zkoušeli handle: 'color-code-' + selected_value | handleize → to vracelo jen kód (PI).
+                Teď najdeme metaobject PODLE code == kódu vybrané barvy a vytáhneme pěkný název (search_words[0]).
+              {%- endcomment -%}
+              {%- liquid
+                assign selected_code = option.selected_value | strip
+                assign legend_nice_name = ''
+                paginate shop.metaobjects.color_codes_hex.values by 10000
+                  for cc in shop.metaobjects.color_codes_hex.values
+                    if cc.code == selected_code
+                      assign legend_nice_name = cc.search_words.value | first
+                    endif
+                  endfor
+                endpaginate
+              -%}
               <span class="product-form__input__option-value font-body-bold">
-                {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | default: option.selected_value }}
+                {{ legend_nice_name | default: option.selected_value }}
               </span>
             {% else %}
               <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
@@ -413,4 +427,5 @@
     </div>
   </div>
 </noscript>
+
 <style>.card__product-color-list__button{width:100%;height:100%;}</style>
