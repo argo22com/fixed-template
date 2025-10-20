@@ -19,8 +19,8 @@
     assign first_selected_variant = current_variant | default: product.variants[0]
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-assign color_name = settings.color_name | downcase
-  assign color_option_name = settings.color_name
+    assign color_name = settings.color_name | downcase
+    assign option_color_position = null
     for option in product.options_with_values
       assign option_name_downcase = option.name | downcase
 
