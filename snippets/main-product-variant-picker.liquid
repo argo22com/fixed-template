@@ -19,15 +19,17 @@
     assign first_selected_variant = current_variant | default: product.variants[0]
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    assign color_name = settings.color_name | downcase
-    assign option_color_position = null
-    for option in product.options_with_values
-      assign option_name_downcase = option.name | downcase
+  assign color_name = settings.color_name | downcase
+  assign color_option_name = nil
+  assign option_color_position = nil
 
-      if option_name_downcase == color_name
-        assign option_color_position = 'option' | append: option.position
-      endif
-    endfor
+  for option in product.options_with_values
+    assign option_name_downcase = option.name | downcase
+    if option_name_downcase == color_name
+      assign option_color_position = 'option' | append: option.position
+      assign color_option_name = option.name
+    endif
+  endfor
   -%}
   {% style %}
     .variant-flex-item {
