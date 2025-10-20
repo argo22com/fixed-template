@@ -21,7 +21,7 @@
 
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    # === CASE-SENSITIVE: název barvy 1:1 z nastavení, žádné downcase ===
+    # CASE-SENSITIVE: žádné downcase; používá se přesný název z nastavení
     assign color_option_name = settings.color_name
 
     assign option_color_position = nil
@@ -46,7 +46,6 @@
   {%- endif -%}
 
   {% for option in product.options_with_values %}
-
     {% assign values_count = option.values | size %}
     {% if option.name == 'default_option' and values_count == 1 %}
       {% continue %}
@@ -108,7 +107,7 @@
           assign index_option = 'option' | append: option.position
           assign available_option_values = available_variants | map: index_option
 
-          # === FALLBACK rozhodnutí: máme použitelnou skupinu variations? ===
+          # Rozhodnutí: použít grouping z variation_products jen pokud dává smysl
           assign use_color_group = false
           if is_color_swatches and variation_products
             if variation_products.size > 0
@@ -130,17 +129,14 @@
                 {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | default: option.selected_value }}
               </span>
             {% else %}
-              <span class="product-form__input__option-value font-body-bold"> {{ option.selected_value }}</span>
+              <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
             {% endif %}
           </legend>
 
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
 
             {%- if is_color_swatches and use_color_group -%}
-              {%- comment -%}=== SWATCHES z variation_products ==={%- endcomment -%}
-
               {%- liquid
-                assign color_option_names = ''
                 paginate shop.metaobjects.color_codes_hex.values by 10000
                   assign color_codes = shop.metaobjects.color_codes_hex.values
                 endpaginate
@@ -169,7 +165,7 @@
                     assign color_out_of_stock = true
                   endif
 
-                  # získání hodnoty barvy přes přesný název
+                  # hodnota barvy přes přesný název optionu
                   assign current_value = product_variation.options_by_name[color_option_name].values | first
 
                   assign current_color_values = ''
@@ -189,6 +185,7 @@
                     endfor
                   endif
                 -%}
+
                 <li>
                   <a
                     href="{% if color_out_of_stock %}#{% else %}{{ product_current_variation.url }}{% endif %}"
@@ -251,10 +248,10 @@
               {%- endfor -%}
 
             {%- else -%}
-              {%- comment -%}=== FALLBACK: klasické radio inputy z option.values (ne swatche) ==={%- endcomment -%}
               {%- for value in option.values -%}
                 {%- liquid
                   assign is_first_option = forloop.first
+
                   assign out_of_stock = false
                   if settings.hide_unavailable_options
                     unless instock_option_values contains value
@@ -289,7 +286,7 @@
                   >
                   <label
                     for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                    class="product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--pill font-body-semi-bold text-small{% if out_of_stock %} soldout{% endif %}"
+                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--pill font-body-semi-bold text-small{% if out_of_stock %} soldout{% endif %}"
                   >
                     {{ value }}
                   </label>
@@ -313,7 +310,10 @@
         {% endif %}
       >
         <div class="js-product-form-input product-form__input product-form__input--dropdown product-form__input--larger{% unless forloop.first %} element-small-margin-top{% endunless %}">
-          <label class="form__label product-form__input__form-label" for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}">
+          <label
+            class="form__label product-form__input__form-label"
+            for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
+          >
             {{ option.name | capitalize }}
           </label>
           <div class="select">
@@ -344,9 +344,8 @@
                   endif
                 endunless
                 assign index_option = 'option' | append: option.position
-                assign available_option_values = available_variants | map: indexOption
+                assign available_option_values = available_variants | map: index_option
               -%}
-
               {%- for value in option.values -%}
                 {%- liquid
                   assign is_first_option = forloop.first
@@ -356,7 +355,7 @@
                   class="js-select-product-option"
                   value="{{ value | escape }}"
                   data-name="{{ option.name | escape }}"
-                  {% if option.selected_value == value %}selected="selected"{% endif %}
+                  {% if option.selected_value == value %}selected="selected"{% endif -%}
                   {% if settings.hide_unavailable_options and is_first_option == false %}
                     {%- unless available_option_values contains value %} class="hidden"{% endunless -%}
                   {% endif %}
@@ -404,7 +403,12 @@
           form="{{ product_form_id }}"
         >
           {% for value in option.values %}
-            <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>{{ value }}</option>
+            <option
+              value="{{ value | escape }}"
+              {% if option.selected_value == value %}
+                selected="selected"
+              {% endif %}
+            >{{ value }}</option>
           {% endfor %}
         </select>
       {% endfor %}
