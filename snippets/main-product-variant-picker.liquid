@@ -1,4 +1,3 @@
-
 {% comment %}
   Renders product options on the product page or featured product section.
 
@@ -20,11 +19,12 @@
     assign first_selected_variant = current_variant | default: product.variants[0]
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    assign color_name = settings.color_name | downcase
+    # BRÁT BARVU NA TVRDO Z UNIV_BARVA (klíč pro options_by_name je lowercase)
+    assign color_name = 'univ_barva'
+
     assign option_color_position = null
     for option in product.options_with_values
       assign option_name_downcase = option.name | downcase
-
       if option_name_downcase == color_name
         assign option_color_position = 'option' | append: option.position
       endif
@@ -113,7 +113,7 @@
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ option.name | capitalize }}:
-            {% if option.name == color_name %}
+            {% if option.name | downcase == color_name %}
               {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
               <span class="product-form__input__option-value font-body-bold">
                 {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize -}}
@@ -159,7 +159,8 @@
                 {%- if contains_product -%}
                   {% liquid
                     assign color_option_names = ''
-                    if option.name == settings.color_name
+                    # pevně bereme UNIV_BARVA → porovnání přes lowercase
+                    if option.name | downcase == color_name
                       paginate shop.metaobjects.color_codes_hex.values by 10000
                         assign color_codes = shop.metaobjects.color_codes_hex.values
 
