@@ -123,16 +123,10 @@
             endfor
           endif
 
-          # ----- LABEL LEGENDY (s fallbackem, když chybí překlad) -----
+          # ----- LABEL LEGENDY: vždy 'Barva' pro barevnou volbu -----
           assign legend_label = option.name
           if is_color_option
-            assign translated_color = 'products.product.color' | t
-            assign legend_label_down = translated_color | downcase
-            if translated_color == blank or translated_color contains 'translation missing'
-              assign legend_label = 'Barva'
-            else
-              assign legend_label = translated_color
-            endif
+            assign legend_label = 'Barva'
           endif
         -%}
 
