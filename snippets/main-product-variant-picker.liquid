@@ -21,13 +21,14 @@
 
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    # CASE-SENSITIVE: název barvy 1:1 ze settings
-    assign color_option_name = settings.color_name
+    # === stejné jako na kartě: klíč do options_by_name je lowercase ===
+    assign color_key = settings.color_name | downcase
 
+    # najdi pozici color optionu
     assign option_color_position = nil
-    for option in product.options_with_values
-      if option.name == color_option_name
-        assign option_color_position = 'option' | append: option.position
+    for opt in product.options_with_values
+      if opt.name | downcase == color_key
+        assign option_color_position = 'option' | append: opt.position
       endif
     endfor
   -%}
@@ -46,14 +47,11 @@
   {%- endif -%}
 
   {% for option in product.options_with_values %}
-    {% assign values_count = option.values | size %}
-    {% if option.name == 'default_option' and values_count == 1 %}
-      {% continue %}
-    {% endif %}
+    {%- assign values_count = option.values | size -%}
+    {%- if option.name == 'default_option' and values_count == 1 -%}{% continue %}{%- endif -%}
+    {%- if option.name == 'default' -%}{% continue %}{%- endif -%}
 
-    {%- if option.name == 'default' -%}
-      {%- continue -%}
-    {%- elsif block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
+    {%- if block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
       {%- liquid
         unless settings.hide_unavailable_options
           assign instock_variants = product.variants | where: 'available'
@@ -68,9 +66,10 @@
         {% endif %}
       >
         {%- liquid
-          assign is_color_swatches = false
-          if option.name == color_option_name and block.settings.enable_color_swatches
-            assign is_color_swatches = true
+          # je to barevná volba?
+          assign is_color_option = false
+          if option.name | downcase == color_key and block.settings.enable_color_swatches
+            assign is_color_option = true
           endif
 
           assign attribute = 'option' | append: forloop.index
@@ -107,9 +106,9 @@
           assign index_option = 'option' | append: option.position
           assign available_option_values = available_variants | map: index_option
 
-          # Skupina variací jen pokud obsahuje aktuální produkt (porovnání přes id/handle)
+          # použít variations group jen když obsahuje aktuální produkt
           assign use_color_group = false
-          if is_color_swatches and variation_products and variation_products.size > 0
+          if is_color_option and variation_products and variation_products.size > 0
             for pv in variation_products
               if pv.id == product.id
                 assign use_color_group = true
@@ -123,7 +122,7 @@
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ option.name }}:
-            {% if option.name == color_option_name %}
+            {% if is_color_option %}
               {%- assign color_handle = 'color-code-' | append: option.selected_value | handleize -%}
               <span class="product-form__input__option-value font-body-bold">
                 {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | default: option.selected_value }}
@@ -133,14 +132,9 @@
             {% endif %}
           </legend>
 
-          <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
-
-            {%- if is_color_swatches and use_color_group -%}
-              {%- liquid
-                paginate shop.metaobjects.color_codes_hex.values by 10000
-                  assign color_codes = shop.metaobjects.color_codes_hex.values
-                endpaginate
-              -%}
+          <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_option %} product-form__input__radio-list--color{% endif %}">
+            {%- if is_color_option and use_color_group -%}
+              {%- comment -%} swatche podle grouping (ostatní produkty ve skupině) {%- endcomment -%}
               {%- for product_variation in variation_products -%}
                 {%- liquid
                   assign selected = false
@@ -154,8 +148,8 @@
                   assign product_current_variation = product_variation
                   assign product_variation_variants = product_variation.variants
 
-                  for opt in product.options_with_values
-                    assign opt_index = 'option' | append: opt.position
+                  for opt2 in product.options_with_values
+                    assign opt_index = 'option' | append: opt2.position
                     if opt_index == option_color_position
                       continue
                     endif
@@ -169,51 +163,20 @@
                     assign color_out_of_stock = true
                   endif
 
-                  assign current_value = product_variation.options_by_name[color_option_name].values | first | strip
-
-                  # Najdi metaobject pro current_value (podle code)
-                  assign mo_image = ''
-                  assign mo_hexes = ''
-                  if color_codes
-                    for color_code_hex in color_codes
-                      if color_code_hex.code == current_value
-                        if color_code_hex.image.value
-                          assign mo_image = color_code_hex.image.value | image_url: width: 40
-                        endif
-                        assign mo_hexes = color_code_hex.color_hex_list.value
-                      endif
-                    endfor
-                  endif
-
-                  # Připrav CSS proměnné
-                  assign css_vars = ''
-                  if mo_image != ''
-                    assign css_vars = '--color-swatch-background-image: url(' | append: mo_image | append: ');'
-                  elsif mo_hexes and mo_hexes.size > 0
-                    assign first_hex = mo_hexes | first
-                    assign css_vars = '--color-swatch-background:' | append: first_hex | append: ';'
-                    if mo_hexes.size > 1
-                      assign total = mo_hexes.size
-                      assign step = 360 | divided_by: total
-                      assign stops = ''
-                      for c in mo_hexes
-                        assign idx = forloop.index0
-                        assign start = step | times: idx
-                        assign end = step | times: idx | plus: step
-                        assign stops = stops | append: c | append: ' ' | append: start | append: 'deg ' | append: end | append: 'deg,'
-                      endfor
-                      assign stops = stops | slice: 0, stops.size | strip
-                      assign css_vars = css_vars | append: '--color-swatch-background-image: conic-gradient(' | append: stops | append: ');'
-                    endif
-                  endif
+                  # klíč stejně jako karta
+                  assign current_value = product_variation.options_by_name[color_key].values | first
+                  assign variants_for_color = product_variation.variants | where: index_option, current_value
+                  assign variant_color = variants_for_color | where: 'featured_image' | first
+                  unless variant_color
+                    assign variant_color = variants_for_color | first
+                  endunless
                 -%}
-
                 <li>
                   <a
                     href="{% if color_out_of_stock %}#{% else %}{{ product_current_variation.url }}{% endif %}"
-                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color {% if mo_image != '' %}color-swatch-own-image{% endif %} product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if color_out_of_stock %} no-stock{% endif %}"
+                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if color_out_of_stock %} no-stock{% endif %}"
                     data-color="{{ current_value | handleize }}"
-                    style="{% if selected %}border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));{% endif %}{{ css_vars }}"
+                    style="{% if selected %}border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));{% endif %}"
                   >
                     <input
                       type="radio"
@@ -222,51 +185,28 @@
                       value="{{ current_value | escape }}"
                       form="{{ product_form_id }}"
                       style="display:none"
-                      {% if selected %}checked="checked"{% endif %}
+                      {% if selected %}checked="checked{% endif %}"
                     >
-
-                    {%- comment -%} Vnitřní fallback vizuálu (neškodí, pokud téma kreslí přes CSS var) {%- endcomment -%}
-                    {% if mo_image == '' and mo_hexes and mo_hexes.size > 0 %}
-                      <div class="color-swatch-background">
-                        {% assign total = mo_hexes.size %}
-                        {% if total == 1 %}
-                          <span style="background: {{ mo_hexes | first }}; width:100%; height:100%"></span>
-                        {% elsif total == 2 %}
-                          {% assign lefts = ',-50,50' | split: ',' %}
-                          {% for c in mo_hexes %}
-                            <span style="background: {{ c }}; width:100%; height:100%; left: {{ lefts[forloop.index] }}%"></span>
-                          {% endfor %}
-                        {% else %}
-                          {% assign step = 360 | divided_by: total %}
-                          {% for c in mo_hexes %}
-                            {% assign rotation = step | times: forloop.index0 %}
-                            {% assign skew = -90 | plus: step %}
-                            <span style="background: {{ c }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if total == 3 %}top:-10%; right:-25%; height:70%; width:70%{% endif %}"></span>
-                          {% endfor %}
-                        {% endif %}
-                      </div>
-                    {% endif %}
+                    {%- comment -%} použij stejné vykreslení swatche jako karta produktu {%- endcomment -%}
+                    {% render 'color-swatch', color: current_value, variant_color: variant_color, color_swatches_style: block.settings.color_swatches_style %}
 
                     <span class="bt-tooltip__inner bt-tooltip__inner--top{% if color_out_of_stock %} d-none{% endif %}" style="z-index:10">
                       {{ product_current_variation.metafields.product_texts.title.value | default: product_current_variation.title }}
                     </span>
-
-                    {% if selected %}{% render 'icon-checkmark' %}{% endif %}
-                    {% if color_out_of_stock %}{% render 'icon-close', add_classes: 'js-close-icon' %}{% else %}{% render 'icon-close', add_classes: 'js-close-icon d-none' %}{% endif %}
                   </a>
                 </li>
               {%- endfor -%}
 
-            {%- elsif is_color_swatches -%}
-              {%- comment -%} SWATCHE z option.values (fallback, ale pořád barevné) {%- endcomment -%}
-              {%- liquid
-                paginate shop.metaobjects.color_codes_hex.values by 10000
-                  assign color_codes = shop.metaobjects.color_codes_hex.values
-                endpaginate
-              -%}
-              {%- for value in option.values -%}
+            {%- elsif is_color_option -%}
+              {%- comment -%} fallback: swatche z aktuálního produktu (jako na kartě) {%- endcomment -%}
+              {%- assign attribute = 'option' | append: product.options_by_name[color_key].position -%}
+              {%- for value in product.options_by_name[color_key].values -%}
                 {%- liquid
-                  assign is_first_option = forloop.first
+                  assign variants_for_color = product.variants | where: attribute, value
+                  assign variant_color = variants_for_color | where: 'featured_image' | first
+                  unless variant_color
+                    assign variant_color = variants_for_color | first
+                  endunless
 
                   assign out_of_stock = false
                   if settings.hide_unavailable_options
@@ -277,43 +217,6 @@
                     unless instock_option_values contains value
                       assign out_of_stock = true
                     endunless
-                  endif
-
-                  assign variant = product.variants | where: attribute, value | first
-                  assign code = value | strip
-
-                  assign mo_image = ''
-                  assign mo_hexes = ''
-                  if color_codes
-                    for color_code_hex in color_codes
-                      if color_code_hex.code == code
-                        if color_code_hex.image.value
-                          assign mo_image = color_code_hex.image.value | image_url: width: 40
-                        endif
-                        assign mo_hexes = color_code_hex.color_hex_list.value
-                      endif
-                    endfor
-                  endif
-
-                  assign css_vars = ''
-                  if mo_image != ''
-                    assign css_vars = '--color-swatch-background-image: url(' | append: mo_image | append: ');'
-                  elsif mo_hexes and mo_hexes.size > 0
-                    assign first_hex = mo_hexes | first
-                    assign css_vars = '--color-swatch-background:' | append: first_hex | append: ';'
-                    if mo_hexes.size > 1
-                      assign total = mo_hexes.size
-                      assign step = 360 | divided_by: total
-                      assign stops = ''
-                      for c in mo_hexes
-                        assign idx = forloop.index0
-                        assign start = step | times: idx
-                        assign end = step | times: idx | plus: step
-                        assign stops = stops | append: c | append: ' ' | append: start | append: 'deg ' | append: end | append: 'deg,'
-                      endfor
-                      assign stops = stops | slice: 0, stops.size | strip
-                      assign css_vars = css_vars | append: '--color-swatch-background-image: conic-gradient(' | append: stops | append: ');'
-                    endif
                   endif
                 -%}
                 <li class="variant-flex-item{% if forloop.index >= total_visible_items %} hidden-more{% endif %}">
@@ -324,47 +227,22 @@
                     class="product-form__input__radio{% unless settings.hide_unavailable_options %}{% unless available_option_values contains value %} disabled{% endunless %}{% endunless %}"
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
-                    data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
-                    data-title="{{ variant.metafields.product_texts.title.value | escape }}"
                     {% if option.selected_value == value %}checked="checked"{% endif %}
                     {% if out_of_stock %}disabled="disabled"{% endif %}
                   >
                   <label
                     for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color {% if mo_image != '' %}color-swatch-own-image{% endif %} product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if out_of_stock %} soldout{% endif %}"
+                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if out_of_stock %} soldout{% endif %}"
                     data-color="{{ value | handleize }}"
-                    style="{{ css_vars }}"
                   >
-                    {%- if mo_image == '' and mo_hexes and mo_hexes.size > 0 -%}
-                      <div class="color-swatch-background">
-                        {% assign total = mo_hexes.size %}
-                        {% if total == 1 %}
-                          <span style="background: {{ mo_hexes | first }}; width:100%; height:100%"></span>
-                        {% elsif total == 2 %}
-                          {% assign lefts = ',-50,50' | split: ',' %}
-                          {% for c in mo_hexes %}
-                            <span style="background: {{ c }}; width:100%; height:100%; left: {{ lefts[forloop.index] }}%"></span>
-                          {% endfor %}
-                        {% else %}
-                          {% assign step = 360 | divided_by: total %}
-                          {% for c in mo_hexes %}
-                            {% assign rotation = step | times: forloop.index0 %}
-                            {% assign skew = -90 | plus: step %}
-                            <span style="background: {{ c }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if total == 3 %}top:-10%; right:-25%; height:70%; width:70%{% endif %}"></span>
-                          {% endfor %}
-                        {% endif %}
-                      </div>
-                    {%- endif -%}
-
-                    {% if option.selected_value == value %}
-                      {% render 'icon-checkmark' %}
-                    {% endif %}
+                    {% render 'color-swatch', color: value, variant_color: variant_color, color_swatches_style: block.settings.color_swatches_style %}
+                    {% if option.selected_value == value %}{% render 'icon-checkmark' %}{% endif %}
                   </label>
                 </li>
               {%- endfor -%}
 
             {%- else -%}
-              {%- comment -%} Ne-barevná varianta: standardní pilly {%- endcomment -%}
+              {%- comment -%} ne-barevná varianta: běžné pilly {%- endcomment -%}
               {%- for value in option.values -%}
                 {%- liquid
                   assign is_first_option = forloop.first
@@ -380,7 +258,7 @@
                     endunless
                   endif
 
-                  assign variant = product.variants | where: attribute, value | first
+                  assign variant = product.variants | where: index_option, value | first
                 -%}
                 <li
                   {% unless is_first_option %}
@@ -427,7 +305,10 @@
         {% endif %}
       >
         <div class="js-product-form-input product-form__input product-form__input--dropdown product-form__input--larger{% unless forloop.first %} element-small-margin-top{% endunless %}">
-          <label class="form__label product-form__input__form-label" for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}">
+          <label
+            class="form__label product-form__input__form-label"
+            for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
+          >
             {{ option.name | capitalize }}
           </label>
           <div class="select">
@@ -458,9 +339,8 @@
                   endif
                 endunless
                 assign index_option = 'option' | append: option.position
-                assign available_option_values = available_variants | map: indexOption
+                assign available_option_values = available_variants | map: index_option
               -%}
-
               {%- for value in option.values -%}
                 {%- liquid
                   assign is_first_option = forloop.first
