@@ -21,7 +21,7 @@
 
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    # CASE-SENSITIVE název barvy 1:1
+    # CASE-SENSITIVE: název barvy 1:1 ze settings
     assign color_option_name = settings.color_name
 
     assign option_color_position = nil
@@ -46,7 +46,6 @@
   {%- endif -%}
 
   {% for option in product.options_with_values %}
-
     {% assign values_count = option.values | size %}
     {% if option.name == 'default_option' and values_count == 1 %}
       {% continue %}
@@ -110,12 +109,14 @@
           assign index_option = 'option' | append: option.position
           assign available_option_values = available_variants | map: index_option
 
-          # rozhodnutí o use_color_group bez porovnání v {{ }}
+          # použij color group jen když skupina existuje a obsahuje aktuální produkt
           assign use_color_group = false
           if is_color_swatches and variation_products
             if variation_products.size > 0
               for pv in variation_products
-                if pv == product
+                if pv.id == product.id
+                  assign use_color_group = true
+                elsif pv.handle and product.handle and pv.handle == product.handle
                   assign use_color_group = true
                 endif
               endfor
@@ -144,12 +145,12 @@
                   assign color_codes = shop.metaobjects.color_codes_hex.values
                 endpaginate
               -%}
-
               {%- for product_variation in variation_products -%}
                 {%- liquid
-                  assign color_out_of_stock = null
                   assign selected = false
-                  if product_variation == product
+                  if product_variation.id == product.id
+                    assign selected = true
+                  elsif product_variation.handle and product.handle and product_variation.handle == product.handle
                     assign selected = true
                   endif
 
@@ -158,34 +159,34 @@
                   assign product_variation_variants = product_variation.variants
 
                   for opt in product.options_with_values
-                    assign option_index = 'option' | append: opt.position
-                    if option_index == option_color_position
+                    assign opt_index = 'option' | append: opt.position
+                    if opt_index == option_color_position
                       continue
                     endif
-                    assign product_variation_variants = product_variation_variants | where: option_index, current_variant[option_index]
+                    assign product_variation_variants = product_variation_variants | where: opt_index, current_variant[opt_index]
                   endfor
 
-                  if product_variation_variants.size != 0
+                  assign color_out_of_stock = false
+                  if product_variation_variants.size > 0
                     assign product_current_variation = product_variation_variants | first
                   else
                     assign color_out_of_stock = true
                   endif
 
-                  # hodnota barvy přes přesný název optionu
                   assign current_value = product_variation.options_by_name[color_option_name].values | first
 
-                  assign current_color_values = ''
+                  assign swatch_visual = ''
                   if color_codes
                     for color_code_hex in color_codes
                       if color_code_hex.code == current_value
                         if color_code_hex.image.value
-                          assign current_color_values = color_code_hex.image.value | image_url: width: 40
+                          assign swatch_visual = color_code_hex.image.value | image_url: width: 40
                         else
-                          assign colors_tmp = 'colors_'
+                          assign tmp = 'colors_'
                           for c in color_code_hex.color_hex_list.value
-                            assign colors_tmp = colors_tmp | append: c | append: ','
+                            assign tmp = tmp | append: c | append: ','
                           endfor
-                          assign current_color_values = colors_tmp
+                          assign swatch_visual = tmp
                         endif
                       endif
                     endfor
@@ -210,8 +211,8 @@
                     >
 
                     {%- liquid
-                      if current_color_values contains 'colors_'
-                        assign color_object = current_color_values | split: 'colors_'
+                      if swatch_visual contains 'colors_'
+                        assign color_object = swatch_visual | split: 'colors_'
                         assign color_list = color_object[1] | split: ','
                         assign color_size = color_list | size
                         assign angle = 0
@@ -221,12 +222,12 @@
                       endif
                     -%}
 
-                    {% if current_color_values contains 'colors_' %}
+                    {% if swatch_visual contains 'colors_' %}
                       <div class="color-swatch-background">
                         {% for color_value in color_list %}
                           {% if color_value == '' %}{% continue %}{% endif %}
                           {% if color_size == 1 %}
-                            <span style="background: {{ color_value }}; width: 100%; height: 100%"></span>
+                            <span style="background: {{ color_value }}; width:100%; height:100%"></span>
                           {% elsif color_size == 2 %}
                             {% if forloop.index0 == 0 %}{% assign left = -50 %}{% else %}{% assign left = 50 %}{% endif %}
                             <span style="background: {{ color_value }}; width:100%; height:100%; left: {{ left }}%"></span>
@@ -237,9 +238,9 @@
                           {% endif %}
                         {% endfor %}
                       </div>
-                    {% elsif current_color_values != '' %}
+                    {% elsif swatch_visual != '' %}
                       <div class="color-swatch-background flex justify-center align-center">
-                        <img src="{{ current_color_values }}" alt="{{ current_value }}">
+                        <img src="{{ swatch_visual }}" alt="{{ current_value }}">
                       </div>
                     {% endif %}
 
@@ -253,7 +254,107 @@
                 </li>
               {%- endfor -%}
 
+            {%- elsif is_color_swatches -%}
+              {%- comment -%} Fallback: KRESLI SWATCHE z option.values (ne pilly) {%- endcomment -%}
+              {%- liquid
+                paginate shop.metaobjects.color_codes_hex.values by 10000
+                  assign color_codes = shop.metaobjects.color_codes_hex.values
+                endpaginate
+              -%}
+              {%- for value in option.values -%}
+                {%- liquid
+                  assign is_first_option = forloop.first
+
+                  assign out_of_stock = false
+                  if settings.hide_unavailable_options
+                    unless instock_option_values contains value
+                      assign out_of_stock = true
+                    endunless
+                  elsif available_option_values contains value
+                    unless instock_option_values contains value
+                      assign out_of_stock = true
+                    endunless
+                  endif
+
+                  assign variant = product.variants | where: attribute, value | first
+
+                  assign swatch_visual = ''
+                  if color_codes
+                    for color_code_hex in color_codes
+                      if color_code_hex.code == value
+                        if color_code_hex.image.value
+                          assign swatch_visual = color_code_hex.image.value | image_url: width: 40
+                        else
+                          assign tmp = 'colors_'
+                          for c in color_code_hex.color_hex_list.value
+                            assign tmp = tmp | append: c | append: ','
+                          endfor
+                          assign swatch_visual = tmp
+                        endif
+                      endif
+                    endfor
+                  endif
+                -%}
+                <li class="variant-flex-item{% if forloop.index >= total_visible_items %} hidden-more{% endif %}">
+                  <input
+                    type="radio"
+                    id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+                    class="product-form__input__radio{% unless settings.hide_unavailable_options %}{% unless available_option_values contains value %} disabled{% endunless %}{% endunless %}"
+                    value="{{ value | escape }}"
+                    form="{{ product_form_id }}"
+                    data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
+                    data-title="{{ variant.metafields.product_texts.title.value | escape }}"
+                    {% if option.selected_value == value %}checked="checked"{% endif %}
+                    {% if out_of_stock %}disabled="disabled"{% endif %}
+                  >
+                  <label
+                    for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if out_of_stock %} soldout{% endif %}"
+                    data-color="{{ value | handleize }}"
+                  >
+                    {% if swatch_visual contains 'colors_' %}
+                      {%- liquid
+                        assign color_object = swatch_visual | split: 'colors_'
+                        assign color_list = color_object[1] | split: ','
+                        assign color_size = color_list | size
+                        assign angle = 0
+                        if color_size > 0
+                          assign angle = 360 | divided_by: color_size
+                        endif
+                      -%}
+                      <div class="color-swatch-background">
+                        {% for color_value in color_list %}
+                          {% if color_value == '' %}{% continue %}{% endif %}
+                          {% if color_size == 1 %}
+                            <span style="background: {{ color_value }}; width:100%; height:100%"></span>
+                          {% elsif color_size == 2 %}
+                            {% if forloop.index0 == 0 %}{% assign left = -50 %}{% else %}{% assign left = 50 %}{% endif %}
+                            <span style="background: {{ color_value }}; width:100%; height:100%; left: {{ left }}%"></span>
+                          {% else %}
+                            {% assign rotation = angle | times: forloop.index0 %}
+                            {% assign skew = -90 | plus: angle %}
+                            <span style="background: {{ color_value }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if color_size == 3 %}top:-10%; right:-25%; height:70%; width:70%{% endif %}"></span>
+                          {% endif %}
+                        {% endfor %}
+                      </div>
+                    {% elsif swatch_visual != '' %}
+                      <div class="color-swatch-background flex justify-center align-center">
+                        <img src="{{ swatch_visual }}" alt="{{ value }}">
+                      </div>
+                    {% else %}
+                      <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ value }}</span>
+                    {% endif %}
+
+                    {% if option.selected_value == value %}
+                      {% render 'icon-checkmark' %}
+                    {% endif %}
+                  </label>
+                </li>
+              {%- endfor -%}
+
             {%- else -%}
+              {%- comment -%} Ne-barevná varianta: standardní pilly {%- endcomment -%}
               {%- for value in option.values -%}
                 {%- liquid
                   assign is_first_option = forloop.first
@@ -288,7 +389,7 @@
                     data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
                     data-title="{{ variant.metafields.product_texts.title.value | escape }}"
                     {% if option.selected_value == value %}checked="checked"{% endif %}
-                    {% if out_of_stock %}disabled="disabled{% endif %}
+                    {% if out_of_stock %}disabled="disabled"{% endif %}
                   >
                   <label
                     for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -361,7 +462,7 @@
                   data-name="{{ option.name | escape }}"
                   {% if option.selected_value == value %}selected="selected"{% endif -%}
                   {% if settings.hide_unavailable_options and is_first_option == false %}
-                    {%- unless available_option_values contains value %} class="hidden"{% endunless -%}
+                    {%- unless available_option_values contains value %} class="hidden{% endunless -%}
                   {% endif %}
                   data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
                   data-title="{{ variant.metafields.product_texts.title.value | escape }}"
