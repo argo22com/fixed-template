@@ -134,6 +134,7 @@
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ legend_label }}:
             {% if is_color_option %}
+              {%- comment -%} Hezký název barvy podle kódu (např. Růžová místo PI) {%- endcomment -%}
               {%- liquid
                 assign selected_code = option.selected_value | strip
                 assign legend_nice_name = ''
@@ -156,6 +157,7 @@
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_option %} product-form__input__radio-list--color{% endif %}">
 
             {%- if is_color_option and use_color_group -%}
+              {%- comment -%} swatche podle grouping (ostatní produkty ve skupině) {%- endcomment -%}
               {%- assign color_opt = product.options_by_name[color_key] -%}
               {%- assign attr_group = 'option' | append: color_opt.position -%}
               {%- for product_variation in variation_products -%}
@@ -186,6 +188,7 @@
                     assign color_out_of_stock = true
                   endif
 
+                  # klíč stejně jako karta
                   assign current_value = product_variation.options_by_name[color_key].values | first
                   assign variants_for_color = product_variation.variants | where: attr_group, current_value
                   assign variant_color = variants_for_color | where: 'featured_image' | first
@@ -218,6 +221,7 @@
               {%- endfor -%}
 
             {%- elsif is_color_option -%}
+              {%- comment -%} fallback: swatche z aktuálního produktu (jako na kartě) {%- endcomment -%}
               {%- assign color_opt = product.options_by_name[color_key] -%}
               {%- assign attr_here = 'option' | append: color_opt.position -%}
               {%- for value in color_opt.values -%}
@@ -256,15 +260,13 @@
                     data-color="{{ value | handleize }}"
                   >
                     {% render 'color-swatch', color: value, variant_color: variant_color, color_swatches_style: block.settings.color_swatches_style %}
-                    <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index:10">
-                      {{ variant_color.metafields.product_texts.title.value | default: variant_color.title | default: product.title }}
-                    </span>
                     {% if option.selected_value == value %}{% render 'icon-checkmark' %}{% endif %}
                   </label>
                 </li>
               {%- endfor -%}
 
             {%- else -%}
+              {%- comment -%} ne-barevná varianta: běžné pilly {%- endcomment -%}
               {%- for value in option.values -%}
                 {%- liquid
                   assign is_first_option = forloop.first
