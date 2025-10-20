@@ -122,16 +122,26 @@
               endif
             endfor
           endif
+
+          # ----- NOVÉ: label legendy -----
+          # pokud je to barevná volba (tj. UNIV_BARVA / cokoliv v settings.color_name), zkus přeložit
+          assign legend_label = option.name
+          if is_color_option
+            assign translated_color = 'products.product.color' | t
+            # když překlad neexistuje, často vrátí klíč; ošetři fallback na 'Barva'
+            if translated_color and translated_color != '' and translated_color != 'products.product.color'
+              assign legend_label = translated_color
+            else
+              assign legend_label = 'Barva'
+            endif
+          endif
         -%}
 
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
-            {{ option.name }}:
+            {{ legend_label }}:
             {% if is_color_option %}
-              {%- comment -%}
-                DŘÍV jsme zkoušeli handle: 'color-code-' + selected_value | handleize → to vracelo jen kód (PI).
-                Teď najdeme metaobject PODLE code == kódu vybrané barvy a vytáhneme pěkný název (search_words[0]).
-              {%- endcomment -%}
+              {%- comment -%} Najdi hezké jméno (např. Pink/Růžová) podle code vybrané barvy {%- endcomment -%}
               {%- liquid
                 assign selected_code = option.selected_value | strip
                 assign legend_nice_name = ''
@@ -297,7 +307,7 @@
                     form="{{ product_form_id }}"
                     data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
                     data-title="{{ variant.metafields.product_texts.title.value | escape }}"
-                    {% if option.selected_value == value %}checked="checked"{% endif %}
+                    {% if option.selected_value == value %}checked="checked"%{% endif %}
                     {% if out_of_stock %}disabled="disabled"{% endif %}
                   >
                   <label
@@ -427,5 +437,3 @@
     </div>
   </div>
 </noscript>
-
-<style>.product__info-box .card__product-color-list__button{width:100%;height:100%;}</style>
