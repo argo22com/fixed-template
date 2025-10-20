@@ -19,10 +19,10 @@
     assign first_selected_variant = current_variant | default: product.variants[0]
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    assign color_name = settings.color_name
+    assign color_name = settings.color_name | downcase
     assign option_color_position = null
     for option in product.options_with_values
-      assign option_name_downcase = option.name
+      assign option_name_downcase = option.name | downcase
 
       if option_name_downcase == color_name
         assign option_color_position = 'option' | append: option.position
@@ -47,8 +47,8 @@
 
   {% for option in product.options_with_values %}
 
-    {% assign opt_name_down = option.name %}
-    {% assign only_value_down = option.values.first %}
+    {% assign opt_name_down = option.name | downcase %}
+    {% assign only_value_down = option.values.first | downcase %}
     {% assign values_count = option.values | size %}
     {% if opt_name_down == 'default_option' and values_count == 1 %}
       {% continue %}
@@ -71,7 +71,7 @@
         {% endif %}
       >
         {%- liquid
-          assign option_name_downcase = option.name
+          assign option_name_downcase = option.name | downcase
           assign is_color_swatches = false
           assign attribute = 'option' | append: forloop.index
           if option_name_downcase == color_name and block.settings.enable_color_swatches
@@ -368,7 +368,7 @@
                         | first
                       %}
                       {% if option_color_variant and option_color_position != null %}
-                        {% assign current_color_code = option_color_variant[option_color_position] %}
+                        {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
                         data-{{ current_color_code }}-url="{{ option_color_variant.url }}"
                         data-{{ current_color_code }}-title="{{ option_color_variant.metafields['product_texts']['title'].value | escape }}"
                       {% endif %}
@@ -487,7 +487,7 @@
               -%}
               {%- for value in option.values -%}
                 {%- liquid
-                  assign option_name_downcase = option.name
+                  assign option_name_downcase = option.name | downcase
                   assign is_first_option = forloop.first
                   assign variant = product.variants | where: index_option, value | first
                 -%}
@@ -507,7 +507,7 @@
                   {% for product_variation in variation_products %}
                     {% assign option_color_variant = product_variation.variants | where: index_option, value | first %}
                     {% if option_color_variant and option_color_position != null %}
-                      {% assign current_color_code = option_color_variant[option_color_position] %}
+                      {% assign current_color_code = option_color_variant[option_color_position] | downcase %}
                       data-{{ current_color_code }}-url="{{ option_color_variant.url }}"
                       data-{{ current_color_code }}-title="{{ option_color_variant.metafields.product_texts.title.value | escape }}"
                     {% endif %}
@@ -561,8 +561,8 @@
     <div class="select">
       {% for option in product.options_with_values %}
 
-        {% assign opt_name_down = option.name %}
-        {% assign only_value_down = option.values.first %}
+        {% assign opt_name_down = option.name | downcase %}
+        {% assign only_value_down = option.values.first | downcase %}
         {% assign values_count = option.values | size %}
         {% if opt_name_down == 'default_option' and values_count == 1 %}
           {% continue %}
