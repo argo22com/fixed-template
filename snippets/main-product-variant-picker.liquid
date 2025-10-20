@@ -69,10 +69,8 @@
       >
         {%- liquid
           assign is_color_swatches = false
-          if option.name == color_option_name
-            if block.settings.enable_color_swatches
-              assign is_color_swatches = true
-            endif
+          if option.name == color_option_name and block.settings.enable_color_swatches
+            assign is_color_swatches = true
           endif
 
           assign attribute = 'option' | append: forloop.index
@@ -109,18 +107,16 @@
           assign index_option = 'option' | append: option.position
           assign available_option_values = available_variants | map: index_option
 
-          # použij color group jen když skupina existuje a obsahuje aktuální produkt
+          # Skupina variací jen pokud obsahuje aktuální produkt (porovnání přes id/handle)
           assign use_color_group = false
-          if is_color_swatches and variation_products
-            if variation_products.size > 0
-              for pv in variation_products
-                if pv.id == product.id
-                  assign use_color_group = true
-                elsif pv.handle and product.handle and pv.handle == product.handle
-                  assign use_color_group = true
-                endif
-              endfor
-            endif
+          if is_color_swatches and variation_products and variation_products.size > 0
+            for pv in variation_products
+              if pv.id == product.id
+                assign use_color_group = true
+              elsif pv.handle and product.handle and pv.handle == product.handle
+                assign use_color_group = true
+              endif
+            endfor
           endif
         -%}
 
@@ -128,7 +124,7 @@
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ option.name }}:
             {% if option.name == color_option_name %}
-              {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
+              {%- assign color_handle = 'color-code-' | append: option.selected_value | handleize -%}
               <span class="product-form__input__option-value font-body-bold">
                 {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | default: option.selected_value }}
               </span>
@@ -173,32 +169,51 @@
                     assign color_out_of_stock = true
                   endif
 
-                  assign current_value = product_variation.options_by_name[color_option_name].values | first
+                  assign current_value = product_variation.options_by_name[color_option_name].values | first | strip
 
-                  assign swatch_visual = ''
+                  # Najdi metaobject pro current_value (podle code)
+                  assign mo_image = ''
+                  assign mo_hexes = ''
                   if color_codes
                     for color_code_hex in color_codes
                       if color_code_hex.code == current_value
                         if color_code_hex.image.value
-                          assign swatch_visual = color_code_hex.image.value | image_url: width: 40
-                        else
-                          assign tmp = 'colors_'
-                          for c in color_code_hex.color_hex_list.value
-                            assign tmp = tmp | append: c | append: ','
-                          endfor
-                          assign swatch_visual = tmp
+                          assign mo_image = color_code_hex.image.value | image_url: width: 40
                         endif
+                        assign mo_hexes = color_code_hex.color_hex_list.value
                       endif
                     endfor
+                  endif
+
+                  # Připrav CSS proměnné
+                  assign css_vars = ''
+                  if mo_image != ''
+                    assign css_vars = '--color-swatch-background-image: url(' | append: mo_image | append: ');'
+                  elsif mo_hexes and mo_hexes.size > 0
+                    assign first_hex = mo_hexes | first
+                    assign css_vars = '--color-swatch-background:' | append: first_hex | append: ';'
+                    if mo_hexes.size > 1
+                      assign total = mo_hexes.size
+                      assign step = 360 | divided_by: total
+                      assign stops = ''
+                      for c in mo_hexes
+                        assign idx = forloop.index0
+                        assign start = step | times: idx
+                        assign end = step | times: idx | plus: step
+                        assign stops = stops | append: c | append: ' ' | append: start | append: 'deg ' | append: end | append: 'deg,'
+                      endfor
+                      assign stops = stops | slice: 0, stops.size | strip
+                      assign css_vars = css_vars | append: '--color-swatch-background-image: conic-gradient(' | append: stops | append: ');'
+                    endif
                   endif
                 -%}
 
                 <li>
                   <a
                     href="{% if color_out_of_stock %}#{% else %}{{ product_current_variation.url }}{% endif %}"
-                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if color_out_of_stock %} no-stock{% endif %}"
+                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color {% if mo_image != '' %}color-swatch-own-image{% endif %} product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if color_out_of_stock %} no-stock{% endif %}"
                     data-color="{{ current_value | handleize }}"
-                    style="{% if selected %} border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));{% endif %}"
+                    style="{% if selected %}border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));{% endif %}{{ css_vars }}"
                   >
                     <input
                       type="radio"
@@ -210,37 +225,25 @@
                       {% if selected %}checked="checked"{% endif %}
                     >
 
-                    {%- liquid
-                      if swatch_visual contains 'colors_'
-                        assign color_object = swatch_visual | split: 'colors_'
-                        assign color_list = color_object[1] | split: ','
-                        assign color_size = color_list | size
-                        assign angle = 0
-                        if color_size > 0
-                          assign angle = 360 | divided_by: color_size
-                        endif
-                      endif
-                    -%}
-
-                    {% if swatch_visual contains 'colors_' %}
+                    {%- comment -%} Vnitřní fallback vizuálu (neškodí, pokud téma kreslí přes CSS var) {%- endcomment -%}
+                    {% if mo_image == '' and mo_hexes and mo_hexes.size > 0 %}
                       <div class="color-swatch-background">
-                        {% for color_value in color_list %}
-                          {% if color_value == '' %}{% continue %}{% endif %}
-                          {% if color_size == 1 %}
-                            <span style="background: {{ color_value }}; width:100%; height:100%"></span>
-                          {% elsif color_size == 2 %}
-                            {% if forloop.index0 == 0 %}{% assign left = -50 %}{% else %}{% assign left = 50 %}{% endif %}
-                            <span style="background: {{ color_value }}; width:100%; height:100%; left: {{ left }}%"></span>
-                          {% else %}
-                            {% assign rotation = angle | times: forloop.index0 %}
-                            {% assign skew = -90 | plus: angle %}
-                            <span style="background: {{ color_value }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if color_size == 3 %}top:-10%; right:-25%; height:70%; width:70%{% endif %}"></span>
-                          {% endif %}
-                        {% endfor %}
-                      </div>
-                    {% elsif swatch_visual != '' %}
-                      <div class="color-swatch-background flex justify-center align-center">
-                        <img src="{{ swatch_visual }}" alt="{{ current_value }}">
+                        {% assign total = mo_hexes.size %}
+                        {% if total == 1 %}
+                          <span style="background: {{ mo_hexes | first }}; width:100%; height:100%"></span>
+                        {% elsif total == 2 %}
+                          {% assign lefts = ',-50,50' | split: ',' %}
+                          {% for c in mo_hexes %}
+                            <span style="background: {{ c }}; width:100%; height:100%; left: {{ lefts[forloop.index] }}%"></span>
+                          {% endfor %}
+                        {% else %}
+                          {% assign step = 360 | divided_by: total %}
+                          {% for c in mo_hexes %}
+                            {% assign rotation = step | times: forloop.index0 %}
+                            {% assign skew = -90 | plus: step %}
+                            <span style="background: {{ c }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if total == 3 %}top:-10%; right:-25%; height:70%; width:70%{% endif %}"></span>
+                          {% endfor %}
+                        {% endif %}
                       </div>
                     {% endif %}
 
@@ -255,7 +258,7 @@
               {%- endfor -%}
 
             {%- elsif is_color_swatches -%}
-              {%- comment -%} Fallback: KRESLI SWATCHE z option.values (ne pilly) {%- endcomment -%}
+              {%- comment -%} SWATCHE z option.values (fallback, ale pořád barevné) {%- endcomment -%}
               {%- liquid
                 paginate shop.metaobjects.color_codes_hex.values by 10000
                   assign color_codes = shop.metaobjects.color_codes_hex.values
@@ -277,22 +280,40 @@
                   endif
 
                   assign variant = product.variants | where: attribute, value | first
+                  assign code = value | strip
 
-                  assign swatch_visual = ''
+                  assign mo_image = ''
+                  assign mo_hexes = ''
                   if color_codes
                     for color_code_hex in color_codes
-                      if color_code_hex.code == value
+                      if color_code_hex.code == code
                         if color_code_hex.image.value
-                          assign swatch_visual = color_code_hex.image.value | image_url: width: 40
-                        else
-                          assign tmp = 'colors_'
-                          for c in color_code_hex.color_hex_list.value
-                            assign tmp = tmp | append: c | append: ','
-                          endfor
-                          assign swatch_visual = tmp
+                          assign mo_image = color_code_hex.image.value | image_url: width: 40
                         endif
+                        assign mo_hexes = color_code_hex.color_hex_list.value
                       endif
                     endfor
+                  endif
+
+                  assign css_vars = ''
+                  if mo_image != ''
+                    assign css_vars = '--color-swatch-background-image: url(' | append: mo_image | append: ');'
+                  elsif mo_hexes and mo_hexes.size > 0
+                    assign first_hex = mo_hexes | first
+                    assign css_vars = '--color-swatch-background:' | append: first_hex | append: ';'
+                    if mo_hexes.size > 1
+                      assign total = mo_hexes.size
+                      assign step = 360 | divided_by: total
+                      assign stops = ''
+                      for c in mo_hexes
+                        assign idx = forloop.index0
+                        assign start = step | times: idx
+                        assign end = step | times: idx | plus: step
+                        assign stops = stops | append: c | append: ' ' | append: start | append: 'deg ' | append: end | append: 'deg,'
+                      endfor
+                      assign stops = stops | slice: 0, stops.size | strip
+                      assign css_vars = css_vars | append: '--color-swatch-background-image: conic-gradient(' | append: stops | append: ');'
+                    endif
                   endif
                 -%}
                 <li class="variant-flex-item{% if forloop.index >= total_visible_items %} hidden-more{% endif %}">
@@ -310,41 +331,30 @@
                   >
                   <label
                     for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if out_of_stock %} soldout{% endif %}"
+                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color {% if mo_image != '' %}color-swatch-own-image{% endif %} product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if out_of_stock %} soldout{% endif %}"
                     data-color="{{ value | handleize }}"
+                    style="{{ css_vars }}"
                   >
-                    {% if swatch_visual contains 'colors_' %}
-                      {%- liquid
-                        assign color_object = swatch_visual | split: 'colors_'
-                        assign color_list = color_object[1] | split: ','
-                        assign color_size = color_list | size
-                        assign angle = 0
-                        if color_size > 0
-                          assign angle = 360 | divided_by: color_size
-                        endif
-                      -%}
+                    {%- if mo_image == '' and mo_hexes and mo_hexes.size > 0 -%}
                       <div class="color-swatch-background">
-                        {% for color_value in color_list %}
-                          {% if color_value == '' %}{% continue %}{% endif %}
-                          {% if color_size == 1 %}
-                            <span style="background: {{ color_value }}; width:100%; height:100%"></span>
-                          {% elsif color_size == 2 %}
-                            {% if forloop.index0 == 0 %}{% assign left = -50 %}{% else %}{% assign left = 50 %}{% endif %}
-                            <span style="background: {{ color_value }}; width:100%; height:100%; left: {{ left }}%"></span>
-                          {% else %}
-                            {% assign rotation = angle | times: forloop.index0 %}
-                            {% assign skew = -90 | plus: angle %}
-                            <span style="background: {{ color_value }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if color_size == 3 %}top:-10%; right:-25%; height:70%; width:70%{% endif %}"></span>
-                          {% endif %}
-                        {% endfor %}
+                        {% assign total = mo_hexes.size %}
+                        {% if total == 1 %}
+                          <span style="background: {{ mo_hexes | first }}; width:100%; height:100%"></span>
+                        {% elsif total == 2 %}
+                          {% assign lefts = ',-50,50' | split: ',' %}
+                          {% for c in mo_hexes %}
+                            <span style="background: {{ c }}; width:100%; height:100%; left: {{ lefts[forloop.index] }}%"></span>
+                          {% endfor %}
+                        {% else %}
+                          {% assign step = 360 | divided_by: total %}
+                          {% for c in mo_hexes %}
+                            {% assign rotation = step | times: forloop.index0 %}
+                            {% assign skew = -90 | plus: step %}
+                            <span style="background: {{ c }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if total == 3 %}top:-10%; right:-25%; height:70%; width:70%{% endif %}"></span>
+                          {% endfor %}
+                        {% endif %}
                       </div>
-                    {% elsif swatch_visual != '' %}
-                      <div class="color-swatch-background flex justify-center align-center">
-                        <img src="{{ swatch_visual }}" alt="{{ value }}">
-                      </div>
-                    {% else %}
-                      <span class="bt-tooltip__inner bt-tooltip__inner--top">{{ value }}</span>
-                    {% endif %}
+                    {%- endif -%}
 
                     {% if option.selected_value == value %}
                       {% render 'icon-checkmark' %}
@@ -462,7 +472,7 @@
                   data-name="{{ option.name | escape }}"
                   {% if option.selected_value == value %}selected="selected"{% endif -%}
                   {% if settings.hide_unavailable_options and is_first_option == false %}
-                    {%- unless available_option_values contains value %} class="hidden{% endunless -%}
+                    {%- unless available_option_values contains value %} class="hidden"{% endunless -%}
                   {% endif %}
                   data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
                   data-title="{{ variant.metafields.product_texts.title.value | escape }}"
