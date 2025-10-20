@@ -21,13 +21,14 @@
 
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    # === stejné jako na kartě: klíč do options_by_name je lowercase ===
+    # stejná logika jako na kartě: klíč do options_by_name je lowercase
     assign color_key = settings.color_name | downcase
 
-    # najdi pozici color optionu
+    # pozice barevné optiony
     assign option_color_position = nil
     for opt in product.options_with_values
-      if opt.name | downcase == color_key
+      assign opt_name_down = opt.name | downcase
+      if opt_name_down == color_key
         assign option_color_position = 'option' | append: opt.position
       endif
     endfor
@@ -47,11 +48,14 @@
   {%- endif -%}
 
   {% for option in product.options_with_values %}
-    {%- assign values_count = option.values | size -%}
-    {%- if option.name == 'default_option' and values_count == 1 -%}{% continue %}{%- endif -%}
-    {%- if option.name == 'default' -%}{% continue %}{%- endif -%}
+    {% assign values_count = option.values | size %}
+    {% if option.name == 'default_option' and values_count == 1 %}
+      {% continue %}
+    {% endif %}
 
-    {%- if block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
+    {%- if option.name == 'default' -%}
+      {%- continue -%}
+    {%- elsif block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
       {%- liquid
         unless settings.hide_unavailable_options
           assign instock_variants = product.variants | where: 'available'
@@ -67,8 +71,9 @@
       >
         {%- liquid
           # je to barevná volba?
+          assign option_name_down = option.name | downcase
           assign is_color_option = false
-          if option.name | downcase == color_key and block.settings.enable_color_swatches
+          if option_name_down == color_key and block.settings.enable_color_swatches
             assign is_color_option = true
           endif
 
@@ -106,7 +111,7 @@
           assign index_option = 'option' | append: option.position
           assign available_option_values = available_variants | map: index_option
 
-          # použít variations group jen když obsahuje aktuální produkt
+          # variations group jen pokud obsahuje aktuální produkt (id/handle)
           assign use_color_group = false
           if is_color_option and variation_products and variation_products.size > 0
             for pv in variation_products
@@ -133,8 +138,11 @@
           </legend>
 
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_option %} product-form__input__radio-list--color{% endif %}">
+
             {%- if is_color_option and use_color_group -%}
               {%- comment -%} swatche podle grouping (ostatní produkty ve skupině) {%- endcomment -%}
+              {%- assign color_opt = product.options_by_name[color_key] -%}
+              {%- assign attr_group = 'option' | append: color_opt.position -%}
               {%- for product_variation in variation_products -%}
                 {%- liquid
                   assign selected = false
@@ -165,7 +173,7 @@
 
                   # klíč stejně jako karta
                   assign current_value = product_variation.options_by_name[color_key].values | first
-                  assign variants_for_color = product_variation.variants | where: index_option, current_value
+                  assign variants_for_color = product_variation.variants | where: attr_group, current_value
                   assign variant_color = variants_for_color | where: 'featured_image' | first
                   unless variant_color
                     assign variant_color = variants_for_color | first
@@ -185,11 +193,9 @@
                       value="{{ current_value | escape }}"
                       form="{{ product_form_id }}"
                       style="display:none"
-                      {% if selected %}checked="checked{% endif %}"
+                      {% if selected %}checked="checked"{% endif %}
                     >
-                    {%- comment -%} použij stejné vykreslení swatche jako karta produktu {%- endcomment -%}
                     {% render 'color-swatch', color: current_value, variant_color: variant_color, color_swatches_style: block.settings.color_swatches_style %}
-
                     <span class="bt-tooltip__inner bt-tooltip__inner--top{% if color_out_of_stock %} d-none{% endif %}" style="z-index:10">
                       {{ product_current_variation.metafields.product_texts.title.value | default: product_current_variation.title }}
                     </span>
@@ -199,10 +205,11 @@
 
             {%- elsif is_color_option -%}
               {%- comment -%} fallback: swatche z aktuálního produktu (jako na kartě) {%- endcomment -%}
-              {%- assign attribute = 'option' | append: product.options_by_name[color_key].position -%}
-              {%- for value in product.options_by_name[color_key].values -%}
+              {%- assign color_opt = product.options_by_name[color_key] -%}
+              {%- assign attr_here = 'option' | append: color_opt.position -%}
+              {%- for value in color_opt.values -%}
                 {%- liquid
-                  assign variants_for_color = product.variants | where: attribute, value
+                  assign variants_for_color = product.variants | where: attr_here, value
                   assign variant_color = variants_for_color | where: 'featured_image' | first
                   unless variant_color
                     assign variant_color = variants_for_color | first
