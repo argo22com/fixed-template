@@ -1,3 +1,15 @@
+{% comment %}
+  Renders product options on the product page or featured product section.
+
+  Accepts:
+  - product: {Object} Product object
+  - block: {Object} Block object when browse section.blocks array.
+  - product_form_id: {String} the HTML ID of the product form.
+  - prefix_variant: {String} used to render a custom elements which extends from the variant-radios or variant-selects elements
+
+  Usage:
+  {% render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
 {%- unless product.has_only_default_variant -%}
   {%- liquid
     assign max_rows = 4
@@ -9,12 +21,14 @@
 
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    assign color_name_display = 'UNIV_BARVA'
-    assign color_key = 'univ_barva'
+    # stejná logika jako na kartě: klíč do options_by_name je lowercase
+    assign color_key = settings.color_name | downcase
 
+    # pozice barevné optiony
     assign option_color_position = nil
     for opt in product.options_with_values
-      if opt.name == 'UNIV_BARVA'
+      assign opt_name_down = opt.name | downcase
+      if opt_name_down == color_key
         assign option_color_position = 'option' | append: opt.position
       endif
     endfor
@@ -51,11 +65,15 @@
         class="no-js-hidden variant-picker-primary-{{ section.id }} db"
         data-section="{{ section.id }}"
         data-url="{{ product_url | default: product.url }}"
-        {% if settings.hide_unavailable_options %}data-hide-unavailable-options="true"{% endif %}
+        {% if settings.hide_unavailable_options %}
+          data-hide-unavailable-options="true"
+        {% endif %}
       >
         {%- liquid
+          # je to barevná volba?
+          assign option_name_down = option.name | downcase
           assign is_color_option = false
-          if option.name == color_name_display and block.settings.enable_color_swatches
+          if option_name_down == color_key and block.settings.enable_color_swatches
             assign is_color_option = true
           endif
 
@@ -89,37 +107,34 @@
             endif
             assign instock_option_values = available_variants | where: 'available' | map: attribute
           endunless
+
           assign index_option = 'option' | append: option.position
           assign available_option_values = available_variants | map: index_option
 
+          # variations group jen pokud obsahuje aktuální produkt (id/handle)
           assign use_color_group = false
           if is_color_option and variation_products and variation_products.size > 0
             for pv in variation_products
-              if (pv.id and pv.id == product.id) or (pv.handle and product.handle and pv.handle == product.handle)
+              if pv.id == product.id
+                assign use_color_group = true
+              elsif pv.handle and product.handle and pv.handle == product.handle
                 assign use_color_group = true
               endif
             endfor
           endif
 
-          if use_color_group
-            assign all_have_color = true
-            for pv in variation_products
-              if pv.options_by_name[color_key] == blank
-                assign all_have_color = false
-              endif
-            endfor
-            unless all_have_color
-              assign use_color_group = false
-            endunless
+          # ----- LABEL LEGENDY: vždy 'Barva' pro barevnou volbu -----
+          assign legend_label = option.name
+          if is_color_option
+            assign legend_label = 'Barva'
           endif
         -%}
 
-        <!-- debug: group={{ use_color_group }} / items={{ variation_products.size | default: 0 }} -->
-
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
-            {% if is_color_option %}Barva{% else %}{{ option.name }}{% endif %}:
+            {{ legend_label }}:
             {% if is_color_option %}
+              {%- comment -%} Hezký název barvy podle kódu (např. Růžová místo PI) {%- endcomment -%}
               {%- liquid
                 assign selected_code = option.selected_value | strip
                 assign legend_nice_name = ''
@@ -142,6 +157,7 @@
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_option %} product-form__input__radio-list--color{% endif %}">
 
             {%- if is_color_option and use_color_group -%}
+              {%- comment -%} swatche podle grouping (ostatní produkty ve skupině) {%- endcomment -%}
               {%- assign color_opt = product.options_by_name[color_key] -%}
               {%- assign attr_group = 'option' | append: color_opt.position -%}
               {%- for product_variation in variation_products -%}
@@ -172,6 +188,7 @@
                     assign color_out_of_stock = true
                   endif
 
+                  # klíč stejně jako karta
                   assign current_value = product_variation.options_by_name[color_key].values | first
                   assign variants_for_color = product_variation.variants | where: attr_group, current_value
                   assign variant_color = variants_for_color | where: 'featured_image' | first
@@ -204,6 +221,7 @@
               {%- endfor -%}
 
             {%- elsif is_color_option -%}
+              {%- comment -%} fallback: swatche z aktuálního produktu (jako na kartě) {%- endcomment -%}
               {%- assign color_opt = product.options_by_name[color_key] -%}
               {%- assign attr_here = 'option' | append: color_opt.position -%}
               {%- for value in color_opt.values -%}
@@ -242,15 +260,13 @@
                     data-color="{{ value | handleize }}"
                   >
                     {% render 'color-swatch', color: value, variant_color: variant_color, color_swatches_style: block.settings.color_swatches_style %}
-                    <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index:10">
-                      {{ variant_color.metafields.product_texts.title.value | default: variant_color.title | default: product.title }}
-                    </span>
                     {% if option.selected_value == value %}{% render 'icon-checkmark' %}{% endif %}
                   </label>
                 </li>
               {%- endfor -%}
 
             {%- else -%}
+              {%- comment -%} ne-barevná varianta: běžné pilly {%- endcomment -%}
               {%- for value in option.values -%}
                 {%- liquid
                   assign is_first_option = forloop.first
@@ -308,11 +324,16 @@
         class="no-js-hidden variant-picker-primary-{{ section.id }} db"
         data-section="{{ section.id }}"
         data-url="{{ product_url | default: product.url }}"
-        {% if settings.hide_unavailable_options %}data-hide-unavailable-options="true"{% endif %}
+        {% if settings.hide_unavailable_options %}
+          data-hide-unavailable-options="true"
+        {% endif %}
       >
         <div class="js-product-form-input product-form__input product-form__input--dropdown product-form__input--larger{% unless forloop.first %} element-small-margin-top{% endunless %}">
-          <label class="form__label product-form__input__form-label" for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}">
-            {{ option.name }}
+          <label
+            class="form__label product-form__input__form-label"
+            for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
+          >
+            {{ option.name | capitalize }}
           </label>
           <div class="select">
             <select
@@ -354,7 +375,9 @@
                   value="{{ value | escape }}"
                   data-name="{{ option.name | escape }}"
                   {% if option.selected_value == value %}selected="selected"{% endif -%}
-                  {% if settings.hide_unavailable_options and is_first_option == false %}{%- unless available_option_values contains value %} class="hidden"{% endunless -%}{% endif %}
+                  {% if settings.hide_unavailable_options and is_first_option == false %}
+                    {%- unless available_option_values contains value %} class="hidden"{% endunless -%}
+                  {% endif %}
                   data-desc="{{ variant.metafields.product_texts.descriptionHtml.value | escape }}"
                   data-title="{{ variant.metafields.product_texts.title.value | escape }}"
                 >
@@ -407,3 +430,4 @@
     </div>
   </div>
 </noscript>
+<style>.product__sale-box .card__product-color-list__button {width:100%;height:100%;}</style>
