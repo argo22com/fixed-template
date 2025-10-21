@@ -1,60 +1,58 @@
-{%- liquid
-  assign DEBUG = true
+{%- assign DEBUG = true -%}
+{%- assign color_name = 'UNIV_BARVA' -%}
 
-  assign color_name = 'UNIV_BARVA'
-  assign option_color_position = nil
-  for o in product.options_with_values
-    if o.name == color_name
-      assign option_color_position = 'option' | append: o.position
-    endif
-  endfor
+{%- assign option_color_position = nil -%}
+{%- for o in product.options_with_values -%}
+  {%- if o.name == color_name -%}
+    {%- assign option_color_position = 'option' | append: o.position -%}
+  {%- endif -%}
+{%- endfor -%}
 
-  assign vp = nil
-  if product.metafields.product_variants_grouping and product.metafields.product_variants_grouping.variation_products
-    assign vp = product.metafields.product_variants_grouping.variation_products
-  elsif product.metafields['product_variants_grouping'] and product.metafields['product_variants_grouping']['variation_products']
-    assign vp = product.metafields['product_variants_grouping']['variation_products']
-  endif
-
-  assign has_vp = false
-  assign vp_count = 0
-  if vp and vp.value
-    for _x in vp.value
-      assign vp_count = vp_count | plus: 1
-    endfor
-    if vp_count > 0
-      assign has_vp = true
-    endif
-  endif
--%}
-
-{%- if DEBUG -%}
-  <div style="font:12px ui-monospace,Menlo,Consolas,monospace;background:#fff7d6;border:1px dashed #e6c200;padding:.5rem .75rem;margin:.5rem 0">
-    <div>DEBUG ON</div>
-    <div>metafield type: <code>{{ vp.type | default: 'nil' }}</code></div>
-    <div>value count (looped): <code>{{ vp_count }}</code></div>
-    <div>has_vp: <code>{{ has_vp }}</code></div>
-  </div>
+{%- assign vp = nil -%}
+{%- if product.metafields.product_variants_grouping and product.metafields.product_variants_grouping.variation_products -%}
+  {%- assign vp = product.metafields.product_variants_grouping.variation_products -%}
+{%- elsif product.metafields['product_variants_grouping'] and product.metafields['product_variants_grouping']['variation_products'] -%}
+  {%- assign vp = product.metafields['product_variants_grouping']['variation_products'] -%}
 {%- endif -%}
 
-{%- comment -%} --- výpis legendy (už ti funguje) --- {%- endcomment -%}
-<legend class="product-form__input__form-label text-small margin-bottom-1rem">
-  {{ color_name }}:
-  <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
-</legend>
+{%- assign has_vp = false -%}
+{%- assign vp_count = 0 -%}
+{%- if vp and vp.value -%}
+  {%- for _x in vp.value -%}
+    {%- assign vp_count = vp_count | plus: 1 -%}
+  {%- endfor -%}
+  {%- if vp_count > 0 -%}
+    {%- assign has_vp = true -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if DEBUG -%}
+<div style="font:12px ui-monospace,Menlo,Consolas;background:#fff7d6;border:1px dashed #e6c200;padding:.5rem .75rem;margin:.5rem 0">
+  <div>DEBUG ON</div>
+  <div>color_name: <code>{{ color_name }}</code></div>
+  <div>option_color_position: <code>{{ option_color_position | default: 'nil' }}</code></div>
+  <div>metafield present: <code>{% if vp %}true{% else %}false{% endif %}</code></div>
+  <div>value count (looped): <code>{{ vp_count }}</code></div>
+</div>
+{%- endif -%}
 
 <ul class="list-unstyled flex flex-wrap product-form__input__radio-list product-form__input__radio-list--color">
   {%- if has_vp -%}
     {%- for pv in vp.value -%}
-      {%- assign selected = pv.id == product.id -%}
+      {%- assign selected = false -%}
+      {%- if pv.id == product.id -%}{%- assign selected = true -%}{%- endif -%}
+
       {%- assign pv_color = '' -%}
       {%- if pv.options_by_name and pv.options_by_name[color_name] -%}
         {%- assign pv_color = pv.options_by_name[color_name].values | first -%}
       {%- endif -%}
 
       {%- assign target_variant = pv.variants.first -%}
-      {%- if option_color_position -%}
-        {%- assign target_variant = pv.variants | where: option_color_position, pv_color | first | default: pv.variants.first -%}
+      {%- if option_color_position and pv_color != '' -%}
+        {%- assign filtered = pv.variants | where: option_color_position, pv_color -%}
+        {%- if filtered and filtered.first -%}
+          {%- assign target_variant = filtered.first -%}
+        {%- endif -%}
       {%- endif -%}
 
       <li>
@@ -73,13 +71,11 @@
           >
           {% render 'color-swatch', color: pv_color, variant_color: target_variant, color_swatches_style: block.settings.color_swatches_style %}
 
-          <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index:10">
-            {{ pv.title }}
-          </span>
+          <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index:10">{{ pv.title }}</span>
         </a>
 
         {%- if DEBUG -%}
-          <div style="font:11px ui-monospace,Menlo,Consolas,monospace;margin:.25rem 0 .75rem;color:#555">
+          <div style="font:11px ui-monospace,Menlo,Consolas;margin:.25rem 0 .75rem;color:#555">
             pv.id=<code>{{ pv.id }}</code>
             handle=<code>{{ pv.handle }}</code>
             color=<code>{{ pv_color | default: 'nil' }}</code>
@@ -89,7 +85,6 @@
       </li>
     {%- endfor -%}
   {%- else -%}
-    {%- comment -%} fallback: jen aktuální produkt, kdyby metafield byl prázdný {%- endcomment -%}
     {%- assign vcol = '' -%}
     {%- if product.options_by_name and product.options_by_name[color_name] -%}
       {%- assign vcol = product.options_by_name[color_name].values | first -%}
@@ -101,7 +96,7 @@
         <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index:10">{{ product.title }}</span>
       </a>
       {%- if DEBUG -%}
-        <div style="font:11px ui-monospace,Menlo,Consolas,monospace;margin:.25rem 0 .75rem;color:#555">
+        <div style="font:11px ui-monospace,Menlo,Consolas;margin:.25rem 0 .75rem;color:#555">
           fallback color=<code>{{ vcol | default: 'nil' }}</code>
         </div>
       {%- endif -%}
