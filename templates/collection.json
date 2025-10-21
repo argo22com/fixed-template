@@ -113,7 +113,7 @@
         "show_compatible_devices_filters": false,
         "show_color_swatches": false,
         "color_swatches_style": "custom",
-        "enable_filtering": false,
+        "enable_filtering": true,
         "filter_type": "vertical",
         "filter_include_group_name": true,
         "enable_sorting": true,
