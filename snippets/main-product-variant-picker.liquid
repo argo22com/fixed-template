@@ -47,7 +47,7 @@
 
   {% for option in product.options_with_values %}
 
-    {% assign opt_name_down = option.name | downcase %}
+    {% assign opt_name_down = option.name %}
     {% assign only_value_down = option.values.first | downcase %}
     {% assign values_count = option.values | size %}
     {% if opt_name_down == 'default_option' and values_count == 1 %}
