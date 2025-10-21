@@ -1,42 +1,103 @@
-{%- unless product.has_only_default_variant -%}
-  {%- liquid
-    assign DEBUG = true
-    assign max_rows = 4
-    assign items_per_row = 3
-    assign total_visible_items = max_rows | times: items_per_row
+{%- liquid
+  assign DEBUG = true
 
-    assign current_variant = product.selected_or_first_available_variant
-    assign first_selected_variant = current_variant | default: product.variants[0]
+  assign max_rows = 4
+  assign items_per_row = 3
+  assign total_visible_items = max_rows | times: items_per_row
 
+  assign current_variant = product.selected_or_first_available_variant
+  assign first_selected_variant = current_variant | default: product.variants[0]
+
+  assign variation_products = nil
+  if product.metafields.product_variants_grouping and product.metafields.product_variants_grouping.variation_products
+    assign variation_products = product.metafields.product_variants_grouping.variation_products.value
+  endif
+  if variation_products == nil or variation_products == empty
+    if product.metafields['product_variants_grouping'] and product.metafields['product_variants_grouping']['variation_products']
+      assign variation_products = product.metafields['product_variants_grouping']['variation_products'].value
+    endif
+  endif
+
+  assign variation_products_source = 'product'
+  if variation_products == nil or variation_products == empty
     assign variation_products = nil
-    if product.metafields.product_variants_grouping and product.metafields.product_variants_grouping.variation_products
-      assign variation_products = product.metafields.product_variants_grouping.variation_products.value
+    if current_variant.metafields.product_variants_grouping and current_variant.metafields.product_variants_grouping.variation_products
+      assign variation_products = current_variant.metafields.product_variants_grouping.variation_products.value
+      assign variation_products_source = 'variant'
     endif
     if variation_products == nil or variation_products == empty
-      if product.metafields['product_variants_grouping'] and product.metafields['product_variants_grouping']['variation_products']
-        assign variation_products = product.metafields['product_variants_grouping']['variation_products'].value
+      if current_variant.metafields['product_variants_grouping'] and current_variant.metafields['product_variants_grouping']['variation_products']
+        assign variation_products = current_variant.metafields['product_variants_grouping']['variation_products'].value
+        assign variation_products_source = 'variant'
       endif
     endif
-    if variation_products == nil
-      assign variation_products = '' | split: '|'
+  endif
+
+  if variation_products == nil
+    assign variation_products = '' | split: '|'
+  endif
+
+  assign color_name = 'UNIV_BARVA'
+  assign color_key_exact = color_name
+  assign color_key_up = color_name | upcase
+  assign color_key_low = color_name | downcase
+
+  assign option_color_position = null
+  for option in product.options_with_values
+    if option.name == color_key_exact or option.name == color_key_up or option.name == color_key_low
+      assign option_color_position = 'option' | append: option.position
     endif
+  endfor
+-%}
 
-    assign color_name = 'UNIV_BARVA'
-    assign color_key_exact = color_name
-    assign color_key_up = color_name | upcase
-    assign color_key_low = color_name | downcase
+{%- if DEBUG -%}
+  <div class="dbg">
+    <div>DEBUG ON</div>
+    <div>product.id: <code>{{ product.id }}</code></div>
+    <div>product.handle: <code>{{ product.handle }}</code></div>
+    <div>current_variant.id: <code>{{ current_variant.id }}</code></div>
+    <div>color keys: <code>{{ color_key_exact }}</code> • <code>{{ color_key_up }}</code> • <code>{{ color_key_low }}</code></div>
+    <div>option_color_position: <code>{{ option_color_position | default: 'nil' }}</code></div>
 
-    assign option_color_position = null
-    for option in product.options_with_values
-      if option.name == color_key_exact
-        assign option_color_position = 'option' | append: option.position
-      elsif option.name == color_key_up
-        assign option_color_position = 'option' | append: option.position
-      elsif option.name == color_key_low
-        assign option_color_position = 'option' | append: option.position
-      endif
-    endfor
-  -%}
+    <div style="margin-top:.5rem;">product.metafields[product_variants_grouping]: <code>{% if product.metafields['product_variants_grouping'] %}true{% else %}false{% endif %}</code></div>
+    <div>product.metafields..variation_products exists: <code>{% if product.metafields.product_variants_grouping and product.metafields.product_variants_grouping.variation_products %}true{% else %}false{% endif %}</code></div>
+    <div>product.metafields['product_variants_grouping']['variation_products'] exists: <code>{% if product.metafields['product_variants_grouping'] and product.metafields['product_variants_grouping']['variation_products'] %}true{% else %}false{% endif %}</code></div>
+    <div>variant.metafields..variation_products exists: <code>{% if current_variant.metafields.product_variants_grouping and current_variant.metafields.product_variants_grouping.variation_products %}true{% else %}false{% endif %}</code></div>
+    <div>variant.metafields['product_variants_grouping']['variation_products'] exists: <code>{% if current_variant.metafields['product_variants_grouping'] and current_variant.metafields['product_variants_grouping']['variation_products'] %}true{% else %}false{% endif %}</code></div>
+
+    <div style="margin-top:.5rem;">variation_products.source: <code>{{ variation_products_source }}</code></div>
+    <div>variation_products.size: <code>{{ variation_products.size | default: 0 }}</code></div>
+    {%- if variation_products and variation_products.size > 0 -%}
+      <ul style="margin:.25rem 0 0 .75rem;">
+        {%- for pv in variation_products -%}
+          <li>
+            <div>pv.id: <code>{{ pv.id }}</code> • pv.handle: <code>{{ pv.handle }}</code></div>
+            <div>keys exact/up/low present: 
+              <code>{% if pv.options_by_name and pv.options_by_name[color_key_exact] %}E{% else %}-{% endif %}</code>
+              <code>{% if pv.options_by_name and pv.options_by_name[color_key_up] %}U{% else %}-{% endif %}</code>
+              <code>{% if pv.options_by_name and pv.options_by_name[color_key_low] %}L{% else %}-{% endif %}</code>
+            </div>
+            {%- assign pv_color_val = '' -%}
+            {%- if pv.options_by_name and pv.options_by_name[color_key_exact] -%}
+              {%- assign pv_color_val = pv.options_by_name[color_key_exact].values | first -%}
+            {%- elsif pv.options_by_name and pv.options_by_name[color_key_up] -%}
+              {%- assign pv_color_val = pv.options_by_name[color_key_up].values | first -%}
+            {%- elsif pv.options_by_name and pv.options_by_name[color_key_low] -%}
+              {%- assign pv_color_val = pv.options_by_name[color_key_low].values | first -%}
+            {%- endif -%}
+            <div>pv UNIV_BARVA value: <code>{{ pv_color_val | default: 'nil' }}</code></div>
+            <div>pv.variants.size: <code>{{ pv.variants.size }}</code></div>
+            <ul style="margin:.25rem 0 0 .75rem;">
+              {%- for v in pv.variants -%}
+                <li><code>{{ v.id }}</code> • title: <code>{{ v.title }}</code> • o1: <code>{{ v.option1 }}</code> • o2: <code>{{ v.option2 }}</code> • o3: <code>{{ v.option3 }}</code> • mf.title: <code>{{ v.metafields.product_texts.title.value }}</code></li>
+              {%- endfor -%}
+            </ul>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+{%- endif -%}
 
   <style>
     .variant-flex-item{flex:1 0 calc(100% * (1 /{{items_per_row}}) - 2rem);max-width:calc(100% * (1 /{{items_per_row}}) - 1rem)}
@@ -499,7 +560,6 @@
       </{{ prefix_variant }}variant-selects>
     {%- endif -%}
   {% endfor %}
-{%- endunless -%}
 
 <noscript class="product-form__noscript-wrapper-{{ section_id | default: section.id }}">
   <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
