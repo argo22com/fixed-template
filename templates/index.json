@@ -311,6 +311,7 @@
         },
         "slide_AFmp8D": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/banner3_9f73d33c-ebde-43c1-b04d-bd07ff82a186.jpg",
             "badge_label": "",
