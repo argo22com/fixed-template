@@ -1,6 +1,6 @@
 {%- unless product.has_only_default_variant -%}
   {%- liquid
-    assign DEBUG = false
+    assign DEBUG = true
     assign max_rows = 4
     assign items_per_row = 3
     assign total_visible_items = max_rows | times: items_per_row
@@ -22,9 +22,17 @@
     endif
 
     assign color_name = 'UNIV_BARVA'
+    assign color_key_exact = color_name
+    assign color_key_up = color_name | upcase
+    assign color_key_low = color_name | downcase
+
     assign option_color_position = null
     for option in product.options_with_values
-      if option.name == color_name
+      if option.name == color_key_exact
+        assign option_color_position = 'option' | append: option.position
+      elsif option.name == color_key_up
+        assign option_color_position = 'option' | append: option.position
+      elsif option.name == color_key_low
         assign option_color_position = 'option' | append: option.position
       endif
     endfor
@@ -33,7 +41,53 @@
   <style>
     .variant-flex-item{flex:1 0 calc(100% * (1 /{{items_per_row}}) - 2rem);max-width:calc(100% * (1 /{{items_per_row}}) - 1rem)}
     .hidden-more{display:none!important}
+    .dbg{font:12px/1.5 ui-monospace,Menlo,Consolas,monospace;color:#222;background:#fff7d6;padding:.5rem .75rem;margin:.5rem 0;border:1px dashed #e6c200;border-radius:.25rem}
+    .dbg .row{margin:.15rem 0}
+    .dbg ul{margin:.25rem 0 0 .75rem}
+    .dbg code{background:transparent;padding:0}
   </style>
+
+  {%- if DEBUG -%}
+    <div class="dbg">
+      <div class="row">DEBUG ON</div>
+      <div class="row">product.id: <code>{{ product.id }}</code></div>
+      <div class="row">product.handle: <code>{{ product.handle }}</code></div>
+      <div class="row">current_variant.id: <code>{{ current_variant.id }}</code></div>
+      <div class="row">color_name: <code>{{ color_name }}</code></div>
+      <div class="row">color_key_exact: <code>{{ color_key_exact }}</code> • color_key_up: <code>{{ color_key_up }}</code> • color_key_low: <code>{{ color_key_low }}</code></div>
+      <div class="row">option_color_position: <code>{{ option_color_position | default: 'nil' }}</code></div>
+      <div class="row">variation_products.size: <code>{{ variation_products.size | default: 0 }}</code></div>
+      {%- if variation_products and variation_products.size > 0 -%}
+        <ul>
+          {%- for pv in variation_products -%}
+            <li class="row">
+              <div>pv.id: <code>{{ pv.id }}</code> • pv.handle: <code>{{ pv.handle }}</code></div>
+              <div>pv.title: <code>{{ pv.title }}</code></div>
+              <div>pv.options: <code>{{ pv.options | json }}</code></div>
+              <div>has options_by_name[exact]: <code>{% if pv.options_by_name and pv.options_by_name[color_key_exact] %}true{% else %}false{% endif %}</code></div>
+              <div>has options_by_name[up]: <code>{% if pv.options_by_name and pv.options_by_name[color_key_up] %}true{% else %}false{% endif %}</code></div>
+              <div>has options_by_name[low]: <code>{% if pv.options_by_name and pv.options_by_name[color_key_low] %}true{% else %}false{% endif %}</code></div>
+              {%- assign pv_color_dbg = '' -%}
+              {%- if pv.options_by_name and pv.options_by_name[color_key_exact] -%}
+                {%- assign pv_color_dbg = pv.options_by_name[color_key_exact].values | first -%}
+              {%- elsif pv.options_by_name and pv.options_by_name[color_key_up] -%}
+                {%- assign pv_color_dbg = pv.options_by_name[color_key_up].values | first -%}
+              {%- elsif pv.options_by_name and pv.options_by_name[color_key_low] -%}
+                {%- assign pv_color_dbg = pv.options_by_name[color_key_low].values | first -%}
+              {%- endif -%}
+              <div>pv UNIV_BARVA value: <code>{{ pv_color_dbg | default: 'nil' }}</code></div>
+              <div>pv.variants.size: <code>{{ pv.variants.size }}</code></div>
+              <ul>
+                {%- for v in pv.variants -%}
+                  <li><code>{{ v.id }}</code> • title: <code>{{ v.title }}</code> • o1: <code>{{ v.option1 }}</code> • o2: <code>{{ v.option2 }}</code> • o3: <code>{{ v.option3 }}</code> • mf.title: <code>{{ v.metafields.product_texts.title.value }}</code></li>
+                {%- endfor -%}
+              </ul>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
 
   {%- if block.settings.picker_type == 'button' and block.settings.enable_color_swatches -%}
     <link rel="stylesheet" href="{{ 'component-tooltip.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -62,8 +116,10 @@
       >
         {%- liquid
           assign is_color_swatches = false
-          if option.name == color_name and block.settings.enable_color_swatches
-            assign is_color_swatches = true
+          if option.name == color_key_exact or option.name == color_key_up or option.name == color_key_low
+            if block.settings.enable_color_swatches
+              assign is_color_swatches = true
+            endif
           endif
 
           assign attribute = 'option' | append: forloop.index
@@ -104,7 +160,7 @@
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ option.name | capitalize }}:
-            {% if option.name == color_name %}
+            {% if is_color_swatches %}
               {% assign selected_code = option.selected_value | strip %}
               {% assign color_mo = nil %}
               {% assign color_list = shop.metaobjects.color_codes_hex.values %}
@@ -164,8 +220,12 @@
                   {%- for product_variation in variation_products -%}
                     {%- liquid
                       assign pv_color_value = ''
-                      if product_variation.options_by_name and product_variation.options_by_name[color_name]
-                        assign pv_color_value = product_variation.options_by_name[color_name].values | first
+                      if product_variation.options_by_name and product_variation.options_by_name[color_key_exact]
+                        assign pv_color_value = product_variation.options_by_name[color_key_exact].values | first
+                      elsif product_variation.options_by_name and product_variation.options_by_name[color_key_up]
+                        assign pv_color_value = product_variation.options_by_name[color_key_up].values | first
+                      elsif product_variation.options_by_name and product_variation.options_by_name[color_key_low]
+                        assign pv_color_value = product_variation.options_by_name[color_key_low].values | first
                       endif
 
                       assign product_current_variation = product_variation
@@ -293,8 +353,8 @@
                         class="product-form__input__radio{% unless settings.hide_unavailable_options %}{% unless available_option_values contains value2 %} disabled{% endunless %}{% endunless %}"
                         value="{{ value2 | escape }}"
                         form="{{ product_form_id }}"
-                        {% if option.selected_value == value2 %}checked="checked"%{% endif %}
-                        {% if out_of_stock2 %}disabled="disabled"{% endif %}
+                        {% if option.selected_value == value2 %}checked="checked"{% endif %}
+                        {% if out_of_stock2 %}disabled="disabled"%{% endif %}
                       >
                       <label
                         for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -330,7 +390,7 @@
                     {% assign variant2 = product.variants | where: index_option, value | first %}
                     data-desc="{{ variant2.metafields.product_texts.descriptionHtml.value | escape }}"
                     data-title="{{ variant2.metafields.product_texts.title.value | escape }}"
-                    {% if option.selected_value == value %}checked="checked"{% endif %}
+                    {% if option.selected_value == value %}checked="checked"%{% endif %}
                     {% if out_of_stock %}disabled="disabled"%{% endif %}
                   >
                   <label
@@ -365,7 +425,7 @@
         class="no-js-hidden variant-picker-primary-{{ section.id }} db"
         data-section="{{ section.id }}"
         data-url="{{ product_url | default: product.url }}"
-        {% if settings.hide_unavailable_options %}data-hide-unavailable-options="true"{% endif %}
+        {% if settings.hide_unavailable_options %}data-hide-unavailable-options="true"%{% endif %}
       >
         <div class="js-product-form-input product-form__input product-form__input--dropdown product-form__input--larger{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <label class="form__label product-form__input__form-label" for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}">
@@ -466,4 +526,3 @@
     </div>
   </div>
 </noscript>
-<style>.product__sale-box .card__product-color-list__button {width:100%;height:100%;}</style>
