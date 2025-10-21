@@ -21,17 +21,28 @@
 
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    # stejná logika jako na kartě: klíč do options_by_name je lowercase
-    assign color_key = settings.color_name | downcase
+  assign current_variant = product.selected_or_first_available_variant
+  assign first_selected_variant = current_variant | default: product.variants[0]
+  assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    # pozice barevné optiony
-    assign option_color_position = nil
+  assign color_key = settings.color_name | downcase
+  assign option_color_position = nil
+  for opt in product.options_with_values
+    assign opt_name_down = opt.name | downcase
+    if opt_name_down == color_key
+      assign option_color_position = 'option' | append: opt.position
+    endif
+  endfor
+  if option_color_position == nil
     for opt in product.options_with_values
       assign opt_name_down = opt.name | downcase
-      if opt_name_down == color_key
+      if opt_name_down contains 'barv' or opt_name_down contains 'color' or opt_name_down contains 'farbe'
+        assign color_key = opt_name_down
         assign option_color_position = 'option' | append: opt.position
+        break
       endif
     endfor
+  endif
   -%}
 
   {% style %}
