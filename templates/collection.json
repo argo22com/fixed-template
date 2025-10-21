@@ -35,21 +35,6 @@
         "text_color_transparent": "#ffffff"
       }
     },
-    "1761045974588cd820": {
-      "type": "apps",
-      "blocks": {
-        "searchanise_search_filter_app_block_AqNhpE": {
-          "type": "shopify://apps/searchanise-search-filter/blocks/app-block/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "searchanise_search_filter_app_block_AqNhpE"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
@@ -112,7 +97,6 @@
         "category_filter_icon_fqwJyL",
         "category_filter_icon_BQfNEa"
       ],
-      "disabled": true,
       "settings": {
         "products_per_page": 28,
         "columns_desktop": 4,
@@ -151,7 +135,6 @@
   },
   "order": [
     "banner",
-    "1761045974588cd820",
     "product-grid"
   ]
 }
