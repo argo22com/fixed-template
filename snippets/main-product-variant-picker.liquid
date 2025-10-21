@@ -165,7 +165,7 @@
                         if color_codes
                           for color_code_hex in color_codes
                             for product_variation in variation_products
-                              assign variation_color = product_variation.options_by_name[color_name].values | first
+                              assign variation_color = product_variation.options_by_name.UNIV_BARVA.values | first
 
                               if color_code_hex.code == variation_color
                                 if color_code_hex.image.value
