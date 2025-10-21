@@ -115,7 +115,7 @@
             {% if option.name == color_name %}
               {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
               <span class="product-form__input__option-value font-body-bold">
-                {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize -}}
+                {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value -}}
               </span>
             {% else %}
               <span class="product-form__input__option-value font-body-bold"> {{ option.selected_value }}</span>
