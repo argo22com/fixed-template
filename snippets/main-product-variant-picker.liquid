@@ -207,14 +207,19 @@
                       {% liquid
                         assign current_value = product_variation.options_by_name[color_name].values | first
                       %}
+                      {%- assign style_str = '' -%}
+                      {% if selected %}
+                        {%- assign style_str = style_str | append: 'border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));' -%}
+                      {% endif %}
+                      {% if block.settings.color_swatches_style == 'variant' and variant_color != null %}
+                        {%- assign bgimg = variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' -%}
+                        {%- assign style_str = style_str | append: '--background-image: url(' | append: bgimg | append: ');' -%}
+                      {% endif %}
                       <a
                         href="{% if color_out_of_stock %}#{% else %}{{ product_current_variation.url }}{% endif %}"
                         class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if color_out_of_stock %} no-stock{% endif %}"
                         data-color="{{ current_value | handleize }}"
-                        style="{% if selected %}border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));{% endif %}"
-                        {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
-                          style="--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }})"
-                        {%- endif -%}
+                        {% if style_str != '' %}style="{{ style_str }}"{% endif %}
                       >
                         <input
                           type="radio"
@@ -260,8 +265,11 @@
                               {% if color_size == 1 %}
                                 <span style="background: {{ color_value }}; width: 100%; height: 100%"></span>
                               {% elsif color_size == 2 %}
-                                {% assign left = forloop.index0 == 0 | default: false %}
-                                {% if forloop.index0 == 0 %}{% assign left = -50 %}{% else %}{% assign left = 50 %}{% endif %}
+                                {% if forloop.index0 == 0 %}
+                                  {% assign left = -50 %}
+                                {% else %}
+                                  {% assign left = 50 %}
+                                {% endif %}
                                 <span style="background: {{ color_value }}; width: 100%; height: 100%; left: {{ left }}%"></span>
                               {% else %}
                                 {% assign rotation = angle | times: forloop.index0 %}
@@ -272,7 +280,7 @@
                           </div>
                         {% elsif current_color_values %}
                           <div class="color-swatch-background flex justify-center align-center">
-                            <img src="{{ current_color_values }}" alt="{{ current_color_values }}">
+                            <img src="{{ current_color_values }}" alt="{{ current_value }}">
                           </div>
                         {% endif %}
 
@@ -401,23 +409,6 @@
                 endunless
                 assign index_option = 'option' | append: option.position
                 assign available_option_values = available_variants | map: indexOption
-
-                assign phone_option_names = ''
-                if option.name == settings.phone_name
-                  paginate shop.metaobjects.phone_properties.values by 10000
-                    assign phone_properties = shop.metaobjects.phone_properties.values
-                    if phone_properties
-                      for phone_property in phone_properties
-                        for value in option.values
-                          assign phone_code = value | strip
-                          if phone_property.code == phone_code
-                            assign phone_option_names = phone_option_names | append: phone_code | append: ':' | append: phone_property.model.value | append: ';'
-                          endif
-                        endfor
-                      endfor
-                    endif
-                  endpaginate
-                endif
               -%}
               {%- for value in option.values -%}
                 {%- liquid
@@ -443,28 +434,14 @@
                     {% endif %}
                   {% endfor %}
                 >
-                  {% liquid
-                    assign display_value = value
-                    if phone_option_names and option.name == settings.phone_name
-                      assign phone_option_names_list = phone_option_names | split: ';'
-                      for phone_option_name in phone_option_names_list
-                        assign phone_option_name_parts = phone_option_name | split: ':'
-                        assign phone_option_code = phone_option_name_parts[0]
-                        assign phone_option_model = phone_option_name_parts[1]
-                        if phone_option_code == value
-                          assign display_value = phone_option_model
-                        endif
-                      endfor
-                    endif
-                  %}
                   {%- unless settings.hide_unavailable_options -%}
                     {%- if available_option_values contains value -%}
-                      {{- display_value -}}
+                      {{- value -}}
                     {%- else -%}
-                      {{- 'products.product.value_unavailable' | t: option_value: display_value -}}
+                      {{- 'products.product.value_unavailable' | t: option_value: value -}}
                     {%- endif -%}
                   {%- else -%}
-                    {{ display_value }}
+                    {{ value }}
                   {%- endunless -%}
                 </option>
               {%- endfor -%}
@@ -498,7 +475,7 @@
           form="{{ product_form_id }}"
         >
           {% for value in option.values %}
-            <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected{% endif %}">{{ value }}</option>
+            <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>{{ value }}</option>
           {% endfor %}
         </select>
       {% endfor %}
