@@ -48,7 +48,7 @@
   {% for option in product.options_with_values %}
 
     {% assign opt_name_down = option.name %}
-    {% assign only_value_down = option.values.first | downcase %}
+    {% assign only_value_down = option.values.first %}
     {% assign values_count = option.values | size %}
     {% if opt_name_down == 'default_option' and values_count == 1 %}
       {% continue %}
@@ -71,7 +71,7 @@
         {% endif %}
       >
         {%- liquid
-          assign option_name_downcase = option.name | downcase
+          assign option_name_downcase = option.name
           assign is_color_swatches = false
           assign attribute = 'option' | append: forloop.index
           if option_name_downcase == color_name and block.settings.enable_color_swatches
