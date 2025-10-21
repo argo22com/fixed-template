@@ -1,10 +1,6 @@
-{% comment %}
-  Renders product options on the product page or featured product section.
-{% endcomment %}
 {%- unless product.has_only_default_variant -%}
   {%- liquid
-    assign DEBUG = true
-
+    assign DEBUG = false
     assign max_rows = 4
     assign items_per_row = 3
     assign total_visible_items = max_rows | times: items_per_row
@@ -12,26 +8,19 @@
     assign current_variant = product.selected_or_first_available_variant
     assign first_selected_variant = current_variant | default: product.variants[0]
 
-  assign variation_products = nil
-
-  # primárně dot-notation
-  if product.metafields.product_variants_grouping and product.metafields.product_variants_grouping.variation_products
-    assign variation_products = product.metafields.product_variants_grouping.variation_products.value
-  endif
-
-  # fallback přes bracket-notation
-  if variation_products == nil or variation_products == empty
-    if product.metafields['product_variants_grouping'] and product.metafields['product_variants_grouping']['variation_products']
-      assign variation_products = product.metafields['product_variants_grouping']['variation_products'].value
+    assign variation_products = nil
+    if product.metafields.product_variants_grouping and product.metafields.product_variants_grouping.variation_products
+      assign variation_products = product.metafields.product_variants_grouping.variation_products.value
     endif
-  endif
+    if variation_products == nil or variation_products == empty
+      if product.metafields['product_variants_grouping'] and product.metafields['product_variants_grouping']['variation_products']
+        assign variation_products = product.metafields['product_variants_grouping']['variation_products'].value
+      endif
+    endif
+    if variation_products == nil
+      assign variation_products = '' | split: '|'
+    endif
 
-  # poslední pojistka: když je pořád nil, nastav prázdné pole
-  if variation_products == nil
-    assign variation_products = '' | split: '|'  # => []
-  endif
-
-    # === BARVA: natvrdo UNIV_BARVA ===
     assign color_name = 'UNIV_BARVA'
     assign option_color_position = null
     for option in product.options_with_values
@@ -44,22 +33,7 @@
   <style>
     .variant-flex-item{flex:1 0 calc(100% * (1 /{{items_per_row}}) - 2rem);max-width:calc(100% * (1 /{{items_per_row}}) - 1rem)}
     .hidden-more{display:none!important}
-    .dbg{font:12px/1.4 ui-monospace,Menlo,Consolas,monospace;color:#333;background:#fff7d6;padding:.5rem;margin:.5rem 0;border:1px dashed #e6c200;border-radius:.25rem}
-    .dbg code{background:transparent;padding:0}
   </style>
-
-  {%- if DEBUG -%}
-    <div class="dbg">
-      <div>DEBUG ON</div>
-      <div>product.id: <code>{{ product.id }}</code></div>
-      <div>product.handle: <code>{{ product.handle }}</code></div>
-      <div>current_variant.id: <code>{{ current_variant.id }}</code></div>
-      <div>color_name (fix): <code>{{ color_name }}</code></div>
-      <div>option_color_position: <code>{{ option_color_position | default: 'nil' }}</code></div>
-      <div>variation_products.size: <code>{{ variation_products.size | default: 0 }}</code></div>
-      <div>product.options: <code>{{ product.options | json }}</code></div>
-    </div>
-  {%- endif -%}
 
   {%- if block.settings.picker_type == 'button' and block.settings.enable_color_swatches -%}
     <link rel="stylesheet" href="{{ 'component-tooltip.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -127,46 +101,34 @@
           assign available_option_values = available_variants | map: index_option
         -%}
 
-        {%- if DEBUG -%}
-          <div class="dbg">
-            <div>option.name: <code>{{ option.name }}</code></div>
-            <div>option.selected_value: <code>{{ option.selected_value }}</code></div>
-            <div>is_color_swatches: <code>{% if is_color_swatches %}true{% else %}false{% endif %}</code></div>
-            <div>attribute: <code>{{ attribute }}</code></div>
-            <div>available_option_values: <code>{{ available_option_values | json }}</code></div>
-            <div>instock_option_values: <code>{{ instock_option_values | json }}</code></div>
-          </div>
-        {%- endif -%}
-
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ option.name | capitalize }}:
-{% if option.name == color_name %}
-  {% assign selected_code = option.selected_value | strip %}
-  {% assign color_mo = nil %}
-  {% paginate shop.metaobjects.color_codes_hex.values by 10000 %}
-    {% for mo in shop.metaobjects.color_codes_hex.values %}
-      {% if mo.code and mo.code.value == selected_code %}
-        {% assign color_mo = mo %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-  {% endpaginate %}
-  <span class="product-form__input__option-value font-body-bold">
-    {% if color_mo and color_mo.search_words and color_mo.search_words.value %}
-      {{ color_mo.search_words.value | first | capitalize }}
-    {% else %}
-      {{ selected_code }}
-    {% endif %}
-  </span>
-{% else %}
-  <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
-{% endif %}
+            {% if option.name == color_name %}
+              {% assign selected_code = option.selected_value | strip %}
+              {% assign color_mo = nil %}
+              {% assign color_list = shop.metaobjects.color_codes_hex.values %}
+              {% if color_list %}
+                {% for mo in color_list %}
+                  {% if mo.code and mo.code.value == selected_code %}
+                    {% assign color_mo = mo %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              <span class="product-form__input__option-value font-body-bold">
+                {% if color_mo and color_mo.search_words and color_mo.search_words.value %}
+                  {{ color_mo.search_words.value | first | capitalize }}
+                {% else %}
+                  {{ selected_code }}
+                {% endif %}
+              </span>
+            {% else %}
+              <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
+            {% endif %}
           </legend>
 
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
-            {%- if DEBUG -%}<li class="dbg">UL start • option <code>{{ option.name }}</code> • values: <code>{{ option.values.size }}</code></li>{%- endif -%}
-
             {%- for value in option.values -%}
               {% liquid
                 assign is_first_option = forloop.first
@@ -185,76 +147,29 @@
               {%- assign variant = product.variants | where: attribute, value | first -%}
               {%- if is_color_swatches and block.settings.color_swatches_style == 'variant' -%}
                 {%- assign variant_color = product.variants | where: attribute, value | where: 'featured_image' | first -%}
-              {%- endif -%}
-
-              {%- if DEBUG -%}
-                <li class="dbg">
-                  <div>loop.value: <code>{{ value }}</code></div>
-                  <div>variant.id: <code>{% if variant %}{{ variant.id }}{% else %}nil{% endif %}</code></div>
-                  <div>out_of_stock: <code>{% if out_of_stock %}true{% else %}false{% endif %}</code></div>
-                  <div>variant_color? <code>{% if variant_color %}true{% else %}false{% endif %}</code></div>
-                </li>
+                {%- if variant_color == nil -%}
+                  {%- assign variant_color = product.variants | where: attribute, value | first -%}
+                {%- endif -%}
               {%- endif -%}
 
               {%- if is_color_swatches -%}
                 {%- liquid
-  assign contains_product = false
-  for pv in variation_products
-    if pv and pv.id and pv.id == product.id
-      assign contains_product = true
-    elsif pv and pv.handle and product.handle and pv.handle == product.handle
-      assign contains_product = true
-    endif
-  endfor
+                  assign has_group = false
+                  if variation_products and variation_products.size > 0
+                    assign has_group = true
+                  endif
                 -%}
-                {%- if contains_product -%}
-                  {% liquid
-                    assign color_option_names = ''
-                    if option.name == color_name
-                      paginate shop.metaobjects.color_codes_hex.values by 10000
-                        assign color_codes = shop.metaobjects.color_codes_hex.values
-                        if color_codes
-                          for color_code_hex in color_codes
-                            for product_variation in variation_products
-                              assign variation_color = product_variation.options_by_name[color_name].values | first
-                              if color_code_hex.code == variation_color
-                                if color_code_hex.image.value
-                                  assign colors = color_code_hex.image.value | image_url: width: 40
-                                else
-                                  assign colors = 'colors_'
-                                  for c in color_code_hex.color_hex_list.value
-                                    assign colors = colors | append: c | append: ','
-                                  endfor
-                                endif
-                                assign color_option_names = color_option_names | append: color_code_hex.code | append: ':' | append: colors | append: ';'
-                              endif
-                            endfor
-                          endfor
-                        endif
-                      endpaginate
-                    endif
-                  %}
-                  {%- if DEBUG -%}
-                    <li class="dbg">
-                      <div>color_option_names map:</div>
-                      <code>{{ color_option_names }}</code>
-                    </li>
-                  {%- endif -%}
 
+                {%- if has_group -%}
                   {%- for product_variation in variation_products -%}
                     {%- liquid
-                      assign color_out_of_stock = null
-
-                      if product_variation == product
-                        assign selected = true
-                      else
-                        assign selected = false
+                      assign pv_color_value = ''
+                      if product_variation.options_by_name and product_variation.options_by_name[color_name]
+                        assign pv_color_value = product_variation.options_by_name[color_name].values | first
                       endif
 
-                      assign current_variant = product.selected_or_first_available_variant
                       assign product_current_variation = product_variation
                       assign product_variation_variants = product_variation.variants
-
                       for option2 in product.options_with_values
                         assign option_index = 'option' | append: option2.position
                         if option_index == option_color_position
@@ -262,116 +177,139 @@
                         endif
                         assign product_variation_variants = product_variation_variants | where: option_index, current_variant[option_index]
                       endfor
-
-                      if product_variation_variants.size != 0
+                      assign color_out_of_stock = false
+                      if product_variation_variants.size > 0
                         assign product_current_variation = product_variation_variants | first
                       else
                         assign color_out_of_stock = true
                       endif
+
+                      assign variant_color_pv = product_variation.variants | where: option_color_position, pv_color_value | where: 'featured_image' | first
+                      if variant_color_pv == nil
+                        assign variant_color_pv = product_variation.variants | where: option_color_position, pv_color_value | first
+                      endif
+
+                      assign is_selected = false
+                      if product_variation.id == product.id
+                        assign is_selected = true
+                      elsif product_variation.handle and product.handle and product_variation.handle == product.handle
+                        assign is_selected = true
+                      endif
                     -%}
-
-                    {%- liquid
-                      assign current_value = product_variation.options_by_name[color_name].values | first
-                    -%}
-
-                    {%- if DEBUG -%}
-                      <li class="dbg">
-                        <div>pv.id: <code>{{ product_variation.id }}</code> • pv.handle: <code>{{ product_variation.handle }}</code></div>
-                        <div>current_value (UNIV_BARVA): <code>{{ current_value }}</code></div>
-                        <div>selected: <code>{% if selected %}true{% else %}false{% endif %}</code> • color_out_of_stock: <code>{% if color_out_of_stock %}true{% else %}false{% endif %}</code></div>
-                        <div>product_current_variation.id/url: <code>{{ product_current_variation.id }}</code> / <code>{{ product_current_variation.url }}</code></div>
-                      </li>
-                    {%- endif -%}
-
                     <li>
-                      {%- assign style_str = '' -%}
-                      {% if selected %}
-                        {%- assign style_str = style_str | append: 'border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));' -%}
-                      {% endif %}
-                      {% if block.settings.color_swatches_style == 'variant' and variant_color != null %}
-                        {%- assign bgimg = variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' -%}
-                        {%- assign style_str = style_str | append: '--background-image: url(' | append: bgimg | append: ');' -%}
-                      {% endif %}
                       <a
                         href="{% if color_out_of_stock %}#{% else %}{{ product_current_variation.url }}{% endif %}"
                         class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if color_out_of_stock %} no-stock{% endif %}"
-                        data-color="{{ current_value | handleize }}"
-                        {% if style_str != '' %}style="{{ style_str }}"{% endif %}
+                        data-color="{{ pv_color_value | handleize }}"
+                        {% if is_selected %}style="border:0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));"{% endif %}
                       >
                         <input
                           type="radio"
                           id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                           name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
-                          value="{{ current_value | escape }}"
+                          value="{{ pv_color_value | escape }}"
                           form="{{ product_form_id }}"
                           style="display:none"
-                          {% if selected %}checked="checked"{% endif %}
+                          {% if is_selected %}checked="checked"{% endif %}
                         >
-
-                        {%- liquid
-                          assign current_color_values = ''
-                          if color_option_names
-                            assign color_option_names_list = color_option_names | split: ';'
-                            for con in color_option_names_list
-                              assign parts = con | split: ':'
-                              assign code = parts[0]
-                              assign payload = parts[1]
-                              if code == current_value
-                                assign current_color_values = payload
-                              endif
-                            endfor
-                          endif
-                        -%}
-
-                        {%- if DEBUG -%}
-                          <span class="dbg">payload for <code>{{ current_value }}</code>: <code>{{ current_color_values }}</code></span>
-                        {%- endif -%}
-
-                        {% if block.settings.color_swatches_style == 'variant' and variant_color != null %}
-                          <span class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"></span>
-                        {% elsif current_color_values contains 'colors_' %}
-                          {% liquid
-                            assign color_object = current_color_values | split: 'colors_'
-                            assign angle = 0
-                            assign color_list = color_object[1] | split: ','
-                            assign color_size = color_list.size
-                            if color_size > 0
-                              assign angle = 360 | divided_by: color_size
-                            endif
-                          %}
-                          <div class="color-swatch-background">
-                            {% for color_value in color_list %}
-                              {% if color_value == blank %}{% continue %}{% endif %}
-                              {% if color_size == 1 %}
-                                <span style="background: {{ color_value }}; width: 100%; height: 100%"></span>
-                              {% elsif color_size == 2 %}
-                                {% if forloop.index0 == 0 %}{% assign left = -50 %}{% else %}{% assign left = 50 %}{% endif %}
-                                <span style="background: {{ color_value }}; width: 100%; height: 100%; left: {{ left }}%"></span>
-                              {% else %}
-                                {% assign rotation = angle | times: forloop.index0 %}
-                                {% assign skew = -90 | plus: angle %}
-                                <span style="background: {{ color_value }}; transform: rotate({{ rotation }}deg) skew({{ skew }}deg);{% if color_size == 3 %}top: -10%; right: -25%; height: 70%; width: 70%{% endif %}"></span>
-                              {% endif %}
-                            {% endfor %}
-                          </div>
-                        {% elsif current_color_values %}
-                          <div class="color-swatch-background flex justify-center align-center">
-                            <img src="{{ current_color_values }}" alt="{{ current_value }}">
-                          </div>
-                        {% else %}
-                          {% if DEBUG %}<span class="dbg">no bg for <code>{{ current_value }}</code></span>{% endif %}
-                        {% endif %}
-
-                        <span class="js-title-tooltip bt-tooltip__inner bt-tooltip__inner--top {% if color_out_of_stock %}d-none{% endif %}" style="z-index:10">
+                        {% render 'color-swatch',
+                           color: pv_color_value,
+                           variant_color: variant_color_pv,
+                           color_swatches_style: block.settings.color_swatches_style,
+                           card_product: product_current_variation,
+                           link_url: product_current_variation.url %}
+                        <span class="bt-tooltip__inner bt-tooltip__inner--top {% if color_out_of_stock %}d-none{% endif %}" style="z-index:10">
                           {{- product_current_variation.metafields.product_texts.title.value | default: product_current_variation.title -}}
                         </span>
-                        {% if selected %}{% render 'icon-checkmark' %}{% endif %}
+                        {% if is_selected %}{% render 'icon-checkmark' %}{% endif %}
                         {% if color_out_of_stock %}{% render 'icon-close', add_classes: 'js-close-icon' %}{% else %}{% render 'icon-close', add_classes: 'js-close-icon d-none' %}{% endif %}
                       </a>
                     </li>
                   {%- endfor -%}
+
+                  {%- assign in_group = false -%}
+                  {%- for pv in variation_products -%}
+                    {%- if pv and pv.id and pv.id == product.id -%}
+                      {%- assign in_group = true -%}
+                    {%- elsif pv and pv.handle and product.handle and pv.handle == product.handle -%}
+                      {%- assign in_group = true -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                  {%- if in_group == false -%}
+                    {%- assign attr_here = 'option' | append: option.position -%}
+                    {%- assign value_here = option.selected_value -%}
+                    {%- assign variants_for_color_here = product.variants | where: attr_here, value_here -%}
+                    {%- assign variant_color_here = variants_for_color_here | where: 'featured_image' | first | default: variants_for_color_here.first -%}
+                    <li>
+                      <label
+                        for="{{ section_id | default: section.id }}-{{ option.position }}-extra"
+                        class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip"
+                        data-color="{{ value_here | handleize }}"
+                      >
+                        <input
+                          type="radio"
+                          id="{{ section_id | default: section.id }}-{{ option.position }}-extra"
+                          name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+                          value="{{ value_here | escape }}"
+                          form="{{ product_form_id }}"
+                          checked="checked"
+                        >
+                        {% render 'color-swatch',
+                           color: value_here,
+                           variant_color: variant_color_here,
+                           color_swatches_style: block.settings.color_swatches_style,
+                           card_product: product %}
+                        {% render 'icon-checkmark' %}
+                      </label>
+                    </li>
+                  {%- endif -%}
+
                 {%- else -%}
-                  {%- if DEBUG -%}<li class="dbg">contains_product == false ⇒ skip grouping</li>{%- endif -%}
+                  {%- assign attr_here = 'option' | append: option.position -%}
+                  {%- for value2 in option.values -%}
+                    {%- liquid
+                      assign variants_for_color2 = product.variants | where: attr_here, value2
+                      assign variant_color2 = variants_for_color2 | where: 'featured_image' | first
+                      if variant_color2 == nil
+                        assign variant_color2 = variants_for_color2 | first
+                      endif
+
+                      assign out_of_stock2 = false
+                      if settings.hide_unavailable_options
+                        unless instock_option_values contains value2
+                          assign out_of_stock2 = true
+                        endunless
+                      elsif available_option_values contains value2
+                        unless instock_option_values contains value2
+                          assign out_of_stock2 = true
+                        endunless
+                      endif
+                    -%}
+                    <li class="variant-flex-item">
+                      <input
+                        type="radio"
+                        id="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                        name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+                        class="product-form__input__radio{% unless settings.hide_unavailable_options %}{% unless available_option_values contains value2 %} disabled{% endunless %}{% endunless %}"
+                        value="{{ value2 | escape }}"
+                        form="{{ product_form_id }}"
+                        {% if option.selected_value == value2 %}checked="checked"%{% endif %}
+                        {% if out_of_stock2 %}disabled="disabled"{% endif %}
+                      >
+                      <label
+                        for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                        class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if out_of_stock2 %} soldout{% endif %}"
+                        data-color="{{ value2 | handleize }}"
+                      >
+                        {% render 'color-swatch',
+                           color: value2,
+                           variant_color: variant_color2,
+                           color_swatches_style: block.settings.color_swatches_style,
+                           card_product: product %}
+                        {% if option.selected_value == value2 %}{% render 'icon-checkmark' %}{% endif %}
+                      </label>
+                    </li>
+                  {%- endfor -%}
                 {%- endif -%}
 
               {%- else -%}
@@ -393,7 +331,7 @@
                     data-desc="{{ variant2.metafields.product_texts.descriptionHtml.value | escape }}"
                     data-title="{{ variant2.metafields.product_texts.title.value | escape }}"
                     {% if option.selected_value == value %}checked="checked"{% endif %}
-                    {% if out_of_stock %}disabled="disabled"{% endif %}
+                    {% if out_of_stock %}disabled="disabled"%{% endif %}
                   >
                   <label
                     for="{{ section_id | default: section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -463,12 +401,6 @@
                 assign index_option = 'option' | append: option.position
                 assign available_option_values = available_variants | map: indexOption
               -%}
-              {%- if DEBUG -%}
-                <div class="dbg">
-                  <div>SELECT option.name: <code>{{ option.name }}</code></div>
-                  <div>available_option_values: <code>{{ available_option_values | json }}</code></div>
-                </div>
-              {%- endif -%}
               {%- for value in option.values -%}
                 {%- liquid
                   assign is_first_option = forloop.first
