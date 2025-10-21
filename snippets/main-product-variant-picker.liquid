@@ -19,7 +19,7 @@
     assign first_selected_variant = current_variant | default: product.variants[0]
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
 
-    assign color_name = settings.color_name
+    assign color_name = settings.color_name | downcase
     assign option_color_position = null
     for option in product.options_with_values
       assign option_name_downcase = option.name | downcase
@@ -47,8 +47,8 @@
 
   {% for option in product.options_with_values %}
 
-    {% assign opt_name_down = option.name %}
-    {% assign only_value_down = option.values.first %}
+    {% assign opt_name_down = option.name | downcase %}
+    {% assign only_value_down = option.values.first | downcase %}
     {% assign values_count = option.values | size %}
     {% if opt_name_down == 'default_option' and values_count == 1 %}
       {% continue %}
@@ -71,7 +71,7 @@
         {% endif %}
       >
         {%- liquid
-          assign option_name_downcase = option.name
+          assign option_name_downcase = option.name | downcase
           assign is_color_swatches = false
           assign attribute = 'option' | append: forloop.index
           if option_name_downcase == color_name and block.settings.enable_color_swatches
