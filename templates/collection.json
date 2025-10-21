@@ -112,6 +112,7 @@
         "category_filter_icon_fqwJyL",
         "category_filter_icon_BQfNEa"
       ],
+      "disabled": true,
       "settings": {
         "products_per_page": 28,
         "columns_desktop": 4,
