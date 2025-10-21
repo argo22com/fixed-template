@@ -12,7 +12,24 @@
     assign current_variant = product.selected_or_first_available_variant
     assign first_selected_variant = current_variant | default: product.variants[0]
 
+  assign variation_products = nil
+
+  # primárně dot-notation
+  if product.metafields.product_variants_grouping and product.metafields.product_variants_grouping.variation_products
     assign variation_products = product.metafields.product_variants_grouping.variation_products.value
+  endif
+
+  # fallback přes bracket-notation
+  if variation_products == nil or variation_products == empty
+    if product.metafields['product_variants_grouping'] and product.metafields['product_variants_grouping']['variation_products']
+      assign variation_products = product.metafields['product_variants_grouping']['variation_products'].value
+    endif
+  endif
+
+  # poslední pojistka: když je pořád nil, nastav prázdné pole
+  if variation_products == nil
+    assign variation_products = '' | split: '|'  # => []
+  endif
 
     # === BARVA: natvrdo UNIV_BARVA ===
     assign color_name = 'UNIV_BARVA'
