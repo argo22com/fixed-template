@@ -198,12 +198,14 @@
 
               {%- if is_color_swatches -%}
                 {%- liquid
-                  assign contains_product = false
-                  for product_variation in variation_products
-                    if product_variation == product
-                      assign contains_product = true
-                    endif
-                  endfor
+  assign contains_product = false
+  for pv in variation_products
+    if pv and pv.id and pv.id == product.id
+      assign contains_product = true
+    elsif pv and pv.handle and product.handle and pv.handle == product.handle
+      assign contains_product = true
+    endif
+  endfor
                 -%}
                 {%- if contains_product -%}
                   {% liquid
