@@ -18,50 +18,48 @@
   assign variation_products_source = 'none'
   assign vp_type = ''
   assign vp_text = ''
-  assign vp_raw_json = ''
-  assign vp_value_json = ''
 
   if vp_drop
     assign vp_type = vp_drop.type
-    assign vp_text = vp_drop | metafield_text
-    assign vp_raw_json = vp_drop | json
     assign vp_val = vp_drop.value
-    assign vp_value_json = vp_val | json
+    assign vp_text = vp_drop | metafield_text
     if vp_val and vp_val != blank
       assign variation_products = vp_val
       assign variation_products_source = 'product.value'
     endif
   endif
 
-  if variation_products == empty
-    assign handles_drop = nil
-    if product.metafields.product_variants_grouping and product.metafields.product_variants_grouping.variation_handles
-      assign handles_drop = product.metafields.product_variants_grouping.variation_handles
+  if variation_products == empty and vp_text != ''
+    assign tmp_list = '' | split: '|'
+    assign sep = ','
+    if vp_text contains ';'
+      assign sep = ';'
     endif
-    if handles_drop == nil and product.metafields['product_variants_grouping'] and product.metafields['product_variants_grouping']['variation_handles']
-      assign handles_drop = product.metafields['product_variants_grouping']['variation_handles']
-    endif
-    if handles_drop
-      assign handles_text = handles_drop | metafield_text
-      if handles_text and handles_text != blank
-        assign sep = ','
-        if handles_text contains ';'
-          assign sep = ';'
-        endif
-        assign parts = handles_text | split: sep
-        assign tmp_list = '' | split: '|'
-        for raw in parts
-          assign h = raw | strip
-          if all_products[h]
-            assign tmp_list = tmp_list | push: all_products[h]
-          endif
-        endfor
-        if tmp_list != empty
-          assign variation_products = tmp_list
-          assign variation_products_source = 'handles_text'
-        endif
+    assign raw_parts = vp_text | split: sep
+    for raw in raw_parts
+      assign key = raw | strip | downcase
+      assign key_clean = key | replace: 'gid://shopify/product/', '' | replace: '"', '' | replace: "'", ''
+      assign prod = nil
+      assign as_handle = key_clean
+      assign as_id = key_clean | plus: 0
+      if all_products[as_handle]
+        assign prod = all_products[as_handle]
       endif
+      if prod == nil and as_id > 0
+        assign prod = all_products[as_id]
+      endif
+      if prod
+        assign tmp_list = tmp_list | push: prod
+      endif
+    endfor
+    if tmp_list != empty
+      assign variation_products = tmp_list
+      assign variation_products_source = 'metafield_text+all_products'
     endif
+  endif
+
+  if variation_products == empty
+    assign variation_products_source = 'empty'
   endif
 
   assign color_name = 'UNIV_BARVA'
@@ -78,14 +76,12 @@
 -%}
 
 {%- if DEBUG -%}
-  <div style="font:12px ui-monospace,Menlo,Consolas,monospace;background:#fff7d6;border:1px dashed #e6c200;padding:.5rem .75rem;margin:.5rem 0">
+  <div class="dbg" style="font:12px ui-monospace,Menlo,Consolas,monospace;background:#fff7d6;border:1px dashed #e6c200;padding:.5rem .75rem;margin:.5rem 0">
     <div>DEBUG ON</div>
     <div>product.id: <code>{{ product.id }}</code></div>
     <div>product.handle: <code>{{ product.handle }}</code></div>
     <div>current_variant.id: <code>{{ current_variant.id }}</code></div>
     <div>metafield type: <code>{{ vp_type | default: 'nil' }}</code></div>
-    <div>metafield raw (json): <code>{{ vp_raw_json }}</code></div>
-    <div>metafield value (json): <code>{{ vp_value_json }}</code></div>
     <div>metafield text: <code>{{ vp_text | default: 'nil' }}</code></div>
     <div>variation_products.source: <code>{{ variation_products_source }}</code></div>
     <div>variation_products.size: <code>{{ variation_products.size | default: 0 }}</code></div>
@@ -94,8 +90,7 @@
         {%- for pv in variation_products -%}
           <li style="margin:.15rem 0">
             <div>pv.id: <code>{{ pv.id }}</code> • pv.handle: <code>{{ pv.handle }}</code> • pv.title: <code>{{ pv.title }}</code></div>
-            <div>
-              UNIV_BARVA keys:
+            <div>UNIV_BARVA keys present: 
               <code>{% if pv.options_by_name and pv.options_by_name[color_key_exact] %}E{% else %}-{% endif %}</code>
               <code>{% if pv.options_by_name and pv.options_by_name[color_key_up] %}U{% else %}-{% endif %}</code>
               <code>{% if pv.options_by_name and pv.options_by_name[color_key_low] %}L{% else %}-{% endif %}</code>
@@ -109,6 +104,12 @@
               {%- assign pv_color_val = pv.options_by_name[color_key_low].values | first -%}
             {%- endif -%}
             <div>pv UNIV_BARVA: <code>{{ pv_color_val | default: 'nil' }}</code></div>
+            <div>pv.variants.size: <code>{{ pv.variants.size }}</code></div>
+            <ul style="margin:.25rem 0 0 .75rem">
+              {%- for v in pv.variants -%}
+                <li><code>{{ v.id }}</code> • title: <code>{{ v.title }}</code> • o1: <code>{{ v.option1 }}</code> • o2: <code>{{ v.option2 }}</code> • o3: <code>{{ v.option3 }}</code> • mf.title: <code>{{ v.metafields.product_texts.title.value }}</code></li>
+              {%- endfor -%}
+            </ul>
           </li>
         {%- endfor -%}
       </ul>
