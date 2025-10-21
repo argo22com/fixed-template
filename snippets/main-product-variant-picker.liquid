@@ -17,13 +17,12 @@
   assign variation_products = '' | split: '|'
   assign variation_products_source = 'none'
   assign vp_type = ''
-  assign vp_value_json = ''
   assign vp_text = ''
 
   if vp_drop
     assign vp_type = vp_drop.type
-    assign vp_text = vp_drop | metafield_text
     assign vp_val = vp_drop.value
+    assign vp_text = vp_drop | metafield_text
     if vp_val and vp_val != blank
       assign variation_products = vp_val
       assign variation_products_source = 'product.value'
@@ -77,7 +76,7 @@
 -%}
 
 {%- if DEBUG -%}
-  <div class="dbg">
+  <div class="dbg" style="font:12px ui-monospace,Menlo,Consolas,monospace;background:#fff7d6;border:1px dashed #e6c200;padding:.5rem .75rem;margin:.5rem 0">
     <div>DEBUG ON</div>
     <div>product.id: <code>{{ product.id }}</code></div>
     <div>product.handle: <code>{{ product.handle }}</code></div>
@@ -87,12 +86,11 @@
     <div>variation_products.source: <code>{{ variation_products_source }}</code></div>
     <div>variation_products.size: <code>{{ variation_products.size | default: 0 }}</code></div>
     {%- if variation_products and variation_products.size > 0 -%}
-      <ul style="margin:.25rem 0 0 .75rem;">
+      <ul style="margin:.25rem 0 0 .75rem">
         {%- for pv in variation_products -%}
-          <li>
+          <li style="margin:.15rem 0">
             <div>pv.id: <code>{{ pv.id }}</code> • pv.handle: <code>{{ pv.handle }}</code> • pv.title: <code>{{ pv.title }}</code></div>
-            <div>
-              keys: 
+            <div>UNIV_BARVA keys present: 
               <code>{% if pv.options_by_name and pv.options_by_name[color_key_exact] %}E{% else %}-{% endif %}</code>
               <code>{% if pv.options_by_name and pv.options_by_name[color_key_up] %}U{% else %}-{% endif %}</code>
               <code>{% if pv.options_by_name and pv.options_by_name[color_key_low] %}L{% else %}-{% endif %}</code>
@@ -106,6 +104,12 @@
               {%- assign pv_color_val = pv.options_by_name[color_key_low].values | first -%}
             {%- endif -%}
             <div>pv UNIV_BARVA: <code>{{ pv_color_val | default: 'nil' }}</code></div>
+            <div>pv.variants.size: <code>{{ pv.variants.size }}</code></div>
+            <ul style="margin:.25rem 0 0 .75rem">
+              {%- for v in pv.variants -%}
+                <li><code>{{ v.id }}</code> • title: <code>{{ v.title }}</code> • o1: <code>{{ v.option1 }}</code> • o2: <code>{{ v.option2 }}</code> • o3: <code>{{ v.option3 }}</code> • mf.title: <code>{{ v.metafields.product_texts.title.value }}</code></li>
+              {%- endfor -%}
+            </ul>
           </li>
         {%- endfor -%}
       </ul>
