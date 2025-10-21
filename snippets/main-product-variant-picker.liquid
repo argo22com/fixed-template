@@ -124,38 +124,27 @@
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ option.name | capitalize }}:
-            {% if option.name == color_name %}
-              {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
-              <span class="product-form__input__option-value font-body-bold">
-                {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize -}}
-              </span>
-              {%- if DEBUG -%}
-                <div class="dbg">
-                  <div>legend.color_handle: <code>{{ color_handle }}</code></div>
-                  <div>legend.selected_value(raw): <code>{{ option.selected_value }}</code></div>
-                  <div>legend.metaobject exists?:
-                    <code>
-                      {% if shop.metaobjects.color_codes_hex[color_handle] %}
-                        true
-                      {% else %}
-                        false
-                      {% endif %}
-                    </code>
-                  </div>
-                  <div>legend.metaobject.search_words:
-                    <code>
-                      {% if shop.metaobjects.color_codes_hex[color_handle] and shop.metaobjects.color_codes_hex[color_handle].search_words %}
-                        {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | json }}
-                      {% else %}
-                        null
-                      {% endif %}
-                    </code>
-                  </div>
-                </div>
-              {%- endif -%}
-            {% else %}
-              <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
-            {% endif %}
+{% if option.name == color_name %}
+  {% assign selected_code = option.selected_value | strip %}
+  {% assign color_mo = nil %}
+  {% paginate shop.metaobjects.color_codes_hex.values by 10000 %}
+    {% for mo in shop.metaobjects.color_codes_hex.values %}
+      {% if mo.code and mo.code.value == selected_code %}
+        {% assign color_mo = mo %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endpaginate %}
+  <span class="product-form__input__option-value font-body-bold">
+    {% if color_mo and color_mo.search_words and color_mo.search_words.value %}
+      {{ color_mo.search_words.value | first | capitalize }}
+    {% else %}
+      {{ selected_code }}
+    {% endif %}
+  </span>
+{% else %}
+  <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
+{% endif %}
           </legend>
 
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
