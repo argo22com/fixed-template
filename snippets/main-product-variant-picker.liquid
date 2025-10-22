@@ -389,9 +389,9 @@
       {% render 'icon-checkmark' %}
       <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index:10">
         {{
-                              product_current_variation.metafields.display_text.title.value
-                              | default: product_current_variation.metafields.product_texts.title.value
-                              | default: product_current_variation.title
+          product.metafields.display_text.title.value
+          | default: product.metafields.product_texts.title.value
+          | default: product.title
         }}
       </span>
     </label>
