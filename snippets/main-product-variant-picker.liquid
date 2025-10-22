@@ -10,6 +10,40 @@
   Usage:
   {% render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
+
+{% comment %}
+  === DEBUG: Product Variant Grouping ===
+  Tento blok pomáhá ověřit, zda Shopify správně vrací data o seskupených variantách.
+  Vypíše:
+  - handle aktuálního produktu
+  - seznam všech variant produktu
+  - seznam produktů ve skupině (product_variants_grouping.variation_products)
+{% endcomment %}
+
+{% if request.design_mode or request.params.debug %}
+  <div style="background:#222;color:#0f0;padding:1rem;font-family:monospace;font-size:12px;white-space:pre-wrap;">
+    <strong>DEBUG – {{ product.handle }}</strong>
+    <hr>
+    <strong>product.id:</strong> {{ product.id }}
+    <br><strong>product.title:</strong> {{ product.title }}
+    <br><strong>product.variants:</strong> {{ product.variants | size }} variant(y)
+    <br><strong>product_variants_grouping:</strong> 
+      {% if product.metafields.product_variants_grouping %}
+        {{ product.metafields.product_variants_grouping | json }}
+      {% else %}
+        [žádné metafield product_variants_grouping]
+      {% endif %}
+    <br><strong>variation_products:</strong>
+      {% if product_variants_grouping and product_variants_grouping.variation_products %}
+        {% for p in product_variants_grouping.variation_products %}
+          - {{ p.title }} ({{ p.handle }})
+        {% endfor %}
+      {% else %}
+        [žádné variation_products]
+      {% endif %}
+  </div>
+{% endif %}
+
 {%- unless product.has_only_default_variant -%}
   {%- liquid
     assign max_rows = 4
