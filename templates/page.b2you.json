@@ -98,6 +98,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_4XeBjy": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div id=\"show-phone\" style=\"display:none; margin-top:12px;\">\n  <a href=\"tel:+420123456789\">📞 +420 123 456 789</a>\n</div>\n\n<script>\n  (function() {\n    function revealPhone(e) {\n      // zachyť klik na tlačítko/link vedoucí na #show-phone\n      if (e.target.closest && e.target.closest('a[href=\"#show-phone\"], button[href=\"#show-phone\"]')) {\n        e.preventDefault();\n        var box = document.getElementById('show-phone');\n        if (!box) return;\n        // plynulé zobrazení\n        box.style.display = 'block';\n        box.style.opacity = 0;\n        box.style.transition = 'opacity .3s ease';\n        requestAnimationFrame(function(){ box.style.opacity = 1; });\n\n        // volitelné: na mobilech po ~200 ms rovnou otevřít číselník\n        if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {\n          setTimeout(function() {\n            window.location.href = 'tel:+420123456789';\n          }, 200);\n        }\n      }\n    }\n    document.addEventListener('click', revealPhone);\n  })();\n</script>",
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
     "rich_text_GnRiqE": {
       "type": "rich-text",
       "blocks": {
@@ -1068,6 +1078,7 @@
   "order": [
     "main",
     "image_banner_Q7m3KH",
+    "custom_liquid_4XeBjy",
     "rich_text_GnRiqE",
     "multicolumn_4X9pNH",
     "text_icons_fictdW",
