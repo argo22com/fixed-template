@@ -27,30 +27,44 @@
         "heading_Jex9x4": {
           "type": "heading",
           "settings": {
-            "heading": "Firemní zakázková výroba",
+            "heading": "Firemní program B2You",
             "size": "h1"
           }
         },
         "text_KMparF": {
           "type": "text",
           "settings": {
-            "text": "Zanechte trvalý dojem u svých obchodních partnerů, klientů a zaměstnanců. Personalizované luxusní kožené doplňky z pravé italské kůže, které přišly na svět v naší dílně v Prostějově.",
-            "text_style": "body"
+            "text": "<strong> Dostávejte nabídky na míru vašemu byznysu za skvělých podmínek</strong>",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_4m37Mi": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Získat nabídku",
+            "button_link_1": "shopify://pages/b2you-nabidka",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "Domluvit schůzku",
+            "button_link_2": "shopify://pages/contact",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
           }
         }
       },
       "block_order": [
         "heading_Jex9x4",
-        "text_KMparF"
+        "text_KMparF",
+        "buttons_4m37Mi"
       ],
       "settings": {
         "layout": "full_bleed",
-        "image": "shopify://shop_images/025_Loutocky_COM_DS2_2810_exp.jpg",
-        "image_mobile": "shopify://shop_images/oxford_brown.jpg",
+        "image": "shopify://shop_images/WTTJ_FIXEDZONE_2000-50_kopie_aa02a8cf-5b82-46c9-b165-eafb420188b1.png",
+        "image_mobile": "shopify://shop_images/WTTJ_FIXEDZONE_2000-50_kopie_b5c29fb0-3024-44c0-97ee-5a713d07537b.png",
         "image_overlay_opacity": 40,
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "bottom-left",
         "desktop_content_alignment": "left",
         "keep_ltr": false,
         "hide_when_empty_image": false,
@@ -90,29 +104,171 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h2><strong>Výroba kožených produktů na míru Vašim potřebám<br/></strong>již od 50 kusů</h2>",
+            "heading": "<h1><strong>Program FIXED B2You <br/>příslušenství na míru vašemu byznysu</strong></h1>",
             "heading_size": "h2"
           }
         },
         "text_PTb6yL": {
           "type": "text",
           "settings": {
-            "text": "<p>Kožené produkty FIXED vyrábíme v dílně v Prostějově od jejího zakoupení v roce 2014 a každý z výrobků si našel svého spokojeného zákazníka. Díky kvalitním materiálům, ruční výrobě a pečlivé kontrole jsou naše Prostějovské produkty ten pravý luxus pro Váš mobilní telefon, tablet, notebook a další důležité věci.</p>"
+            "text": "<h2><strong>Příslušenství pro byznys. Zaměřeno na vaše potřeby.</strong></h2>"
+          }
+        },
+        "text_TRtq3r": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Přímá spolupráce s výrobcem znamená spolehlivost, férové ceny a rychlou reakci.</p>"
           }
         }
       },
       "block_order": [
         "heading_UWbDfX",
-        "text_PTb6yL"
+        "text_PTb6yL",
+        "text_TRtq3r"
       ],
       "settings": {
         "desktop_content_position": "center",
-        "desktop_content_width": "large",
+        "desktop_content_width": "full",
         "content_alignment": "center",
         "enable_section_box_layout": false,
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_4X9pNH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3xYEWK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/armor_test_5_b800dea5-8144-40f6-ada3-fc5aac351350.png",
+            "icon": "check",
+            "title": "Přímo od výrobce",
+            "text": "<p>Odolné, otestované a spolehlivé produkty FIXED.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_CqHXmJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.12.14.png",
+            "icon": "check",
+            "title": "Individuální cenové podmínky",
+            "text": "<p>Férové ceny přizpůsobené vašim objemům.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_7jakp3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.14.55.png",
+            "icon": "check",
+            "title": "Osobní podpora a poradenství",
+            "text": "<p>Váš FIXED zástupce je vždy na příjmu.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_GBWzYE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.15.39.png",
+            "icon": "check",
+            "title": "Přístup do B2You portálu",
+            "text": "<p>Objednávejte jednoduše, rychle a efektivně.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_jdHzan": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.15.56.png",
+            "icon": "check",
+            "title": "Dostatečné skladové zásoby",
+            "text": "<p>10 milionů kusů produktů připravených k expedici.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3xYEWK",
+        "column_CqHXmJ",
+        "column_7jakp3",
+        "column_GBWzYE",
+        "column_jdHzan"
+      ],
+      "name": "t:sections.promotion-cards.presets.name",
+      "settings": {
+        "title": "Hlavní výhody",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "Získat nabídku",
+        "button_link": "shopify://pages/b2you-nabidka",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -233,21 +389,21 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
-        "color_heading": "#000",
+        "color_heading": "#000000",
         "gradient_heading": "",
-        "color_text": "#000",
-        "color_highlight_text": "#DA2127",
-        "color_caption": "#000",
-        "color_countdown": "#000",
-        "color_icon": "#000",
-        "color_button_text": "#fff",
-        "color_button": "#000",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
         "background_container": "#eee9e4",
         "gradient_background_container": "",
-        "background_section": "#fff",
+        "background_section": "#ffffff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "rich_text_GVc7hC": {
@@ -348,21 +504,21 @@
         "mobile_content_alignment": "left",
         "padding_top": 44,
         "padding_bottom": 72,
-        "color_heading": "#000",
+        "color_heading": "#000000",
         "gradient_heading": "",
-        "color_text": "#000",
-        "color_highlight_text": "#DA2127",
-        "color_caption": "#000",
-        "color_countdown": "#000",
-        "color_icon": "#000",
-        "color_button_text": "#fff",
-        "color_button": "#000",
-        "background_container": "#fff",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
         "gradient_background_container": "",
-        "background_section": "#fff",
+        "background_section": "#ffffff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "rich_text_pnenF8": {
@@ -999,6 +1155,7 @@
     "main",
     "image_banner_Q7m3KH",
     "rich_text_GnRiqE",
+    "multicolumn_4X9pNH",
     "text_icons_fictdW",
     "image_with_text_bLNrKx",
     "rich_text_GVc7hC",
