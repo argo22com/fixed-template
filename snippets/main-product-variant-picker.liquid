@@ -1,15 +1,3 @@
-{% comment %}
-  Renders product options on the product page or featured product section.
-
-  Accepts:
-  - product: {Object} Product object
-  - block: {Object} Block object when browse section.blocks array.
-  - product_form_id: {String} the HTML ID of the product form.
-  - prefix_variant: {String} used to render a custom elements which extends from the variant-radios or variant-selects elements
-
-  Usage:
-  {% render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-{% endcomment %}
 {%- unless product.has_only_default_variant -%}
   {%- liquid
     assign max_rows = 4
@@ -30,10 +18,7 @@
     endfor
   -%}
   {% style %}
-    .variant-flex-item {
-      flex: 1 0 calc(100% * (1 /{{items_per_row}}) - 2rem);
-      max-width: calc(100% * (1 /{{items_per_row}}) - 1rem);
-    }
+    .variant-flex-item { flex: 1 0 calc(100% * (1 /{{items_per_row}}) - 2rem); max-width: calc(100% * (1 /{{items_per_row}}) - 1rem); }
     .hidden-more { display: none !important; }
   {% endstyle %}
 
@@ -43,7 +28,6 @@
   {%- endif -%}
 
   {% for option in product.options_with_values %}
-
     {% assign opt_name_down = option.name | downcase %}
     {% assign only_value_down = option.values.first | downcase %}
     {% assign values_count = option.values | size %}
@@ -63,9 +47,7 @@
         class="no-js-hidden variant-picker-primary-{{ section.id }} db"
         data-section="{{ section.id }}"
         data-url="{{ product_url | default: product.url }}"
-        {% if settings.hide_unavailable_options %}
-          data-hide-unavailable-options="true"
-        {% endif %}
+        {% if settings.hide_unavailable_options %}data-hide-unavailable-options="true"{% endif %}
       >
         {%- liquid
           assign option_name_downcase = option.name | downcase
@@ -107,16 +89,16 @@
           assign available_option_values = available_variants | map: index_option
         -%}
 
-        <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
+        <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
             {{ option.name | capitalize }}:
             {% if option.name == color_name %}
               {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
               <span class="product-form__input__option-value font-body-bold">
-                {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize -}}
+                {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize }}
               </span>
             {% else %}
-              <span class="product-form__input__option-value font-body-bold"> {{ option.selected_value }}</span>
+              <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
             {% endif %}
           </legend>
 
@@ -138,11 +120,7 @@
               %}
               {%- assign variant = product.variants | where: attribute, value | first -%}
               {%- if is_color_swatches and block.settings.color_swatches_style == 'variant' -%}
-                {%- assign variant_color = product.variants
-                  | where: attribute, value
-                  | where: 'featured_image'
-                  | first
-                -%}
+                {%- assign variant_color = product.variants | where: attribute, value | where: 'featured_image' | first -%}
               {%- endif -%}
 
               {%- if is_color_swatches -%}
@@ -150,7 +128,18 @@
                   assign contains_product = false
                   if variation_products and variation_products.value
                     for pv in variation_products.value
-                      if (pv.id and pv.id == product.id) or (pv.handle and pv.handle == product.handle)
+                      assign same_as_product = false
+                      if pv.id and product.id
+                        if pv.id == product.id
+                          assign same_as_product = true
+                        endif
+                      endif
+                      if same_as_product == false and pv.handle and product.handle
+                        if pv.handle == product.handle
+                          assign same_as_product = true
+                        endif
+                      endif
+                      if same_as_product
                         assign contains_product = true
                       endif
                     endfor
@@ -184,22 +173,30 @@
                       endpaginate
                     endif
                   %}
+
                   {%- if variation_products and variation_products.value -%}
                     {%- for product_variation in variation_products.value -%}
                       {%- liquid
                         assign color_out_of_stock = null
-                        if (product_variation.id and product_variation.id == product.id) or (product_variation.handle and product_variation.handle == product.handle)
-                          assign selected = true
-                        else
-                          assign selected = false
+
+                        assign is_selected = false
+                        if product_variation.id and product.id
+                          if product_variation.id == product.id
+                            assign is_selected = true
+                          endif
+                        endif
+                        if is_selected == false and product_variation.handle and product.handle
+                          if product_variation.handle == product.handle
+                            assign is_selected = true
+                          endif
                         endif
 
                         assign current_variant = product.selected_or_first_available_variant
                         assign product_current_variation = product_variation
                         assign product_variation_variants = product_variation.variants
 
-                        for option in product.options_with_values
-                          assign option_index = 'option' | append: option.position
+                        for option2 in product.options_with_values
+                          assign option_index = 'option' | append: option2.position
                           if option_index == option_color_position
                             continue
                           endif
@@ -212,6 +209,11 @@
                           assign color_out_of_stock = true
                         endif
                       -%}
+                      {%- capture style_attr -%}{%- endcapture -%}
+                      {%- if is_selected -%}{%- capture style_attr -%}border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));{%- endcapture -%}{%- endif -%}
+                      {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
+                        {%- capture style_attr -%}{{ style_attr }}--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }});{%- endcapture -%}
+                      {%- endif -%}
                       <li>
                         {% liquid
                           if is_color_swatches
@@ -223,13 +225,8 @@
                         <a
                           href="{% if color_out_of_stock %}#{% else %}{{ product_current_variation.url }}{% endif %}"
                           class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por {% if is_color_swatches %}product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip{% if block.settings.color_swatches_style == 'variant' and variant_color != null %} color-swatch-own-image{% endif %}{% else %} product-form__input__radio-label--pill font-body-semi-bold text-small{% endif %}{% if out_of_stock and is_color_swatches == false %} soldout{% endif %}{% if color_out_of_stock %} no-stock{% endif %}"
-                          {% if is_color_swatches %}
-                            data-color="{{ current_value | handleize }}"
-                            style="{% if selected %} border: 0.2rem solid rgb(var(--color-highlight, var(--color-foreground)));{% endif %}"
-                            {%- if block.settings.color_swatches_style == 'variant' and variant_color != null %}
-                              style="--background-image: url({{ variant_color.featured_image | image_url: width: 160, height: 200, crop: 'center' }})"
-                            {%- endif -%}
-                          {% endif %}
+                          {% if is_color_swatches and style_attr != '' %}style="{{ style_attr }}"{% endif %}
+                          {% if is_color_swatches %}data-color="{{ current_value | handleize }}"{% endif %}
                         >
                           <input
                             type="radio"
@@ -238,7 +235,7 @@
                             value="{{ current_value | escape }}"
                             form="{{ product_form_id }}"
                             style="display: none;"
-                            {% if selected %}checked="checked"{% endif %}
+                            {% if is_selected %}checked="checked"{% endif %}
                           >
                           {%- if block.settings.color_swatches_style == 'variant' and variant_color != null -%}
                             <span class="db color-swatches-variant{% if settings.color_swatches_shape == 'circle' %} color-swatches-variant--circle{% endif %}"></span>
@@ -296,7 +293,7 @@
                           <span class="js-title-tooltip bt-tooltip__inner bt-tooltip__inner--top {% if color_out_of_stock %}d-none{% endif %}" style="z-index: 10">
                             {{- product_current_variation.metafields.product_texts.title.value | default: product_current_variation.title -}}
                           </span>
-                          {%- if selected -%}{%- render 'icon-checkmark' -%}{%- endif -%}
+                          {%- if is_selected -%}{%- render 'icon-checkmark' -%}{%- endif -%}
                           {%- if color_out_of_stock -%}{%- render 'icon-close', add_classes: 'js-close-icon' -%}{%- else -%}{%- render 'icon-close', add_classes: 'js-close-icon d-none' -%}{%- endif -%}
                         </a>
                       </li>
@@ -383,9 +380,7 @@
         class="no-js-hidden variant-picker-primary-{{ section.id }} db"
         data-section="{{ section.id }}"
         data-url="{{ product_url | default: product.url }}"
-        {% if settings.hide_unavailable_options %}
-          data-hide-unavailable-options="true"
-        {% endif %}
+        {% if settings.hide_unavailable_options %}data-hide-unavailable-options="true"{% endif %}
       >
         <div class="js-product-form-input product-form__input product-form__input--dropdown product-form__input--larger{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <label class="form__label product-form__input__form-label" for="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}">
@@ -422,7 +417,6 @@
                 assign available_option_values = available_variants | map: indexOption
 
                 assign phone_option_names = ''
-
                 if option.name == settings.phone_name
                   paginate shop.metaobjects.phone_properties.values by 10000
                     assign phone_properties = shop.metaobjects.phone_properties.values
@@ -511,14 +505,12 @@
     </label>
     <div class="select">
       {% for option in product.options_with_values %}
-
         {% assign opt_name_down = option.name | downcase %}
         {% assign only_value_down = option.values.first | downcase %}
         {% assign values_count = option.values | size %}
         {% if opt_name_down == 'default_option' and values_count == 1 %}
           {% continue %}
         {% endif %}
-
         <select
           name="options[{{ option.name | escape }}]"
           id="Option-{{ section_id | default: section.id }}-{{ forloop.index0 }}"
