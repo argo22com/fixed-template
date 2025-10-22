@@ -387,13 +387,7 @@
          color_swatches_style: block.settings.color_swatches_style,
          card_product: product %}
       {% render 'icon-checkmark' %}
-      <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index:10">
-        {{
-          product.metafields.display_text.title.value
-          | default: product.metafields.product_texts.title.value
-          | default: product.title
-        }}
-      </span>
+
     </label>
   </li>
 {%- endif -%}
