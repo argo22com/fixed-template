@@ -1,27 +1,4 @@
-{% comment %}
-  Renders product options on the product page or featured product section.
-
-  Accepts:
-  - product: {Object} Product object
-  - block: {Object} Block object when browse section.blocks array.
-  - product_form_id: {String} the HTML ID of the product form.
-  - prefix_variant: {String} used to render a custom elements which extends from the variant-radios or variant-selects elements
-
-  Usage:
-  {% render 'main-product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-{% endcomment %}
-
-{% comment %}
-  === DEBUG: Product Variant Grouping ===
-  Tento blok pomáhá ověřit, zda Shopify správně vrací data o seskupených variantách.
-  Vypíše:
-  - handle aktuálního produktu
-  - seznam všech variant produktu
-  - seznam produktů ve skupině (product_variants_grouping.variation_products)
-{% endcomment %}
-
-
-  <div style="background:#222;color:#0f0;padding:1rem;font-family:monospace;font-size:12px;white-space:pre-wrap;">
+<div style="background:#222;color:#0f0;padding:1rem;font-family:monospace;font-size:12px;white-space:pre-wrap;">
     <strong>DEBUG – {{ product.handle }}</strong>
     <hr>
     <strong>product.id:</strong> {{ product.id }}
