@@ -94,9 +94,19 @@
             {{ option.name | capitalize }}:
             {% if option.name == color_name %}
               {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
-              <span class="product-form__input__option-value font-body-bold">
-                {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize }}
-              </span>
+{%- assign __label = option.selected_value -%}
+{%- assign __code_u = option.selected_value | upcase -%}
+{%- for __mo in shop.metaobjects.color_codes_hex.values -%}
+  {%- assign __mo_code = __mo.code -%}
+  {%- if __mo_code and __mo_code.value %}{% assign __mo_code = __mo_code.value %}{% endif -%}
+  {%- if __mo_code and (__mo_code | upcase) == __code_u -%}
+    {%- if __mo.search_words and __mo.search_words.value and __mo.search_words.value.first != blank -%}
+      {%- assign __label = __mo.search_words.value.first -%}
+    {%- endif -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+<span class="product-form__input__option-value font-body-bold">{{ __label }}</span>
             {% else %}
               <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
             {% endif %}
