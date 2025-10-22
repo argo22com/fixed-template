@@ -102,29 +102,26 @@
           assign available_option_values = available_variants | map: index_option
         -%}
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
-{%- assign opt_name_raw = option.name | strip -%}
+{%- assign opt_name_raw = option.name -%}
 {%- assign opt_name_u = opt_name_raw | upcase -%}
 {%- assign option_display = opt_name_raw -%}
 
 {%- assign option_labels = shop.metaobjects.option_labels.values -%}
 {%- if option_labels -%}
   {%- for mo in option_labels -%}
-    {%- assign mo_code_val = mo.code -%}
-    {%- if mo_code_val and mo_code_val.value -%}
-      {%- assign mo_code_u = mo_code_val.value | upcase -%}
-      {%- if mo_code_u == opt_name_u -%}
-        {%- if mo.display_name and mo.display_name.value != blank -%}
-          {%- assign option_display = mo.display_name.value -%}
-        {%- endif -%}
-        {%- break -%}
+    {%- assign mo_code_u = mo.code.value | upcase -%}
+    {%- if mo_code_u == opt_name_u -%}
+      {%- if mo.display_name and mo.display_name.value != blank -%}
+        {%- assign option_display = mo.display_name.value -%}
       {%- endif -%}
+      {%- break -%}
     {%- endif -%}
   {%- endfor -%}
 {%- endif -%}
 
 <legend class="product-form__input__form-label text-small margin-bottom-1rem">
   {{ option_display }}:
-  {% if option.name | downcase == color_name %}
+  {% if option_name_downcase == color_name %}
     {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
     <span class="product-form__input__option-value font-body-bold">
       {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize }}
