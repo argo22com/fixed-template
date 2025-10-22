@@ -338,9 +338,9 @@
                             style="z-index: 10"
                           >
                             {{-
-    product_current_variation.metafields.display_text.title.value
-    | default: product_current_variation.metafields.product_texts.title.value
-    | default: product_current_variation.title
+                              product_current_variation.metafields.display_text.title.value
+                              | default: product_current_variation.metafields.product_texts.title.value
+                              | default: product_current_variation.title
                             -}}
                           </span>
                           {%- if selected %}
@@ -356,7 +356,48 @@
                       </a>
                     </li>
                   {%- endfor -%}
-                {%- endif -%}
+                
+{%- else -%}
+  {%- comment -%}
+    Fallback: produkt není ve skupině (nebo je jen 1 varianta).
+    Vyrenderuj jedno kolečko pro aktuální barvu produktu.
+  {%- endcomment -%}
+  {%- assign attr_here = 'option' | append: option.position -%}
+  {%- assign value_here = option.selected_value -%}
+  {%- assign variants_for_color = product.variants | where: attr_here, value_here -%}
+  {%- assign variant_color_here = variants_for_color | where: 'featured_image' | first | default: variants_for_color.first -%}
+  <li>
+    <label
+      for="{{ section_id | default: section.id }}-{{ option.position }}-single"
+      class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip"
+      data-color="{{ value_here | handleize }}"
+    >
+      <input
+        type="radio"
+        id="{{ section_id | default: section.id }}-{{ option.position }}-single"
+        name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+        value="{{ value_here | escape }}"
+        form="{{ product_form_id }}"
+        checked="checked"
+        style="display:none"
+      >
+      {% render 'color-swatch',
+         color: value_here,
+         variant_color: variant_color_here,
+         color_swatches_style: block.settings.color_swatches_style,
+         card_product: product %}
+      {% render 'icon-checkmark' %}
+      <span class="bt-tooltip__inner bt-tooltip__inner--top" style="z-index:10">
+        {{
+          product.metafields.display_text.title.value
+          | default: product.metafields.product_texts.title.value
+          | default: product.title
+        }}
+      </span>
+    </label>
+  </li>
+{%- endif -%}
+
               {%- else -%}
                 {% comment %}  {% endcomment %}
                 <li
