@@ -46,7 +46,7 @@
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
             "button_label_2": "Domluvit schůzku",
-            "button_link_2": "shopify://pages/contact",
+            "button_link_2": "#show-phone",
             "button_style_2": "primary",
             "button_open_new_tab_2": false
           }
