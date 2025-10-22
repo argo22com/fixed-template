@@ -90,15 +90,14 @@
         "heading_RaFPay": {
           "type": "heading",
           "settings": {
-            "heading": "<h2><strong>Nezávazná poptávka</strong></h2>",
+            "heading": "<h2><strong>Získat nabídku</strong></h2>",
             "heading_size": "h1"
           }
         },
         "heading_jKwymm": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "<h3><strong>Nezávazná poptávka</strong></h3>",
+            "heading": "<h6>Přímá spolupráce s výrobcem znamená spolehlivost, férové ceny a rychlou reakci.</h6>",
             "heading_size": "h2"
           }
         }
