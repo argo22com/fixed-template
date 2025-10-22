@@ -155,7 +155,7 @@
 {%- endif -%}
 
 {{ legend_label }}:
-                        {{ option.name | capitalize }}:
+
 {%- assign option_name_downcase = option.name | downcase -%}
 {%- if option_name_downcase == color_name -%}
   {%- assign selected_code = option.selected_value | strip -%}
