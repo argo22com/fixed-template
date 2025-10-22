@@ -113,47 +113,6 @@
     .dbg code{background:transparent;padding:0}
   </style>
 
-  {%- if DEBUG -%}
-    <div class="dbg">
-      <div class="row">DEBUG ON</div>
-      <div class="row">product.id: <code>{{ product.id }}</code></div>
-      <div class="row">product.handle: <code>{{ product.handle }}</code></div>
-      <div class="row">current_variant.id: <code>{{ current_variant.id }}</code></div>
-      <div class="row">color_name: <code>{{ color_name }}</code></div>
-      <div class="row">color_key_exact: <code>{{ color_key_exact }}</code> • color_key_up: <code>{{ color_key_up }}</code> • color_key_low: <code>{{ color_key_low }}</code></div>
-      <div class="row">option_color_position: <code>{{ option_color_position | default: 'nil' }}</code></div>
-      <div class="row">variation_products.size: <code>{{ variation_products.size | default: 0 }}</code></div>
-      {%- if variation_products and variation_products.size > 0 -%}
-        <ul>
-          {%- for pv in variation_products -%}
-            <li class="row">
-              <div>pv.id: <code>{{ pv.id }}</code> • pv.handle: <code>{{ pv.handle }}</code></div>
-              <div>pv.title: <code>{{ pv.title }}</code></div>
-              <div>pv.options: <code>{{ pv.options | json }}</code></div>
-              <div>has options_by_name[exact]: <code>{% if pv.options_by_name and pv.options_by_name[color_key_exact] %}true{% else %}false{% endif %}</code></div>
-              <div>has options_by_name[up]: <code>{% if pv.options_by_name and pv.options_by_name[color_key_up] %}true{% else %}false{% endif %}</code></div>
-              <div>has options_by_name[low]: <code>{% if pv.options_by_name and pv.options_by_name[color_key_low] %}true{% else %}false{% endif %}</code></div>
-              {%- assign pv_color_dbg = '' -%}
-              {%- if pv.options_by_name and pv.options_by_name[color_key_exact] -%}
-                {%- assign pv_color_dbg = pv.options_by_name[color_key_exact].values | first -%}
-              {%- elsif pv.options_by_name and pv.options_by_name[color_key_up] -%}
-                {%- assign pv_color_dbg = pv.options_by_name[color_key_up].values | first -%}
-              {%- elsif pv.options_by_name and pv.options_by_name[color_key_low] -%}
-                {%- assign pv_color_dbg = pv.options_by_name[color_key_low].values | first -%}
-              {%- endif -%}
-              <div>pv UNIV_BARVA value: <code>{{ pv_color_dbg | default: 'nil' }}</code></div>
-              <div>pv.variants.size: <code>{{ pv.variants.size }}</code></div>
-              <ul>
-                {%- for v in pv.variants -%}
-                  <li><code>{{ v.id }}</code> • title: <code>{{ v.title }}</code> • o1: <code>{{ v.option1 }}</code> • o2: <code>{{ v.option2 }}</code> • o3: <code>{{ v.option3 }}</code> • mf.title: <code>{{ v.metafields.product_texts.title.value }}</code></li>
-                {%- endfor -%}
-              </ul>
-            </li>
-          {%- endfor -%}
-        </ul>
-      {%- endif -%}
-    </div>
-  {%- endif -%}
 
   {%- if block.settings.picker_type == 'button' and block.settings.enable_color_swatches -%}
     <link rel="stylesheet" href="{{ 'component-tooltip.css' | asset_url }}" media="print" onload="this.media='all'">
