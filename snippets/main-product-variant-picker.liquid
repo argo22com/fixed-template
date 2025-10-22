@@ -103,15 +103,30 @@
         -%}
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
-            {{ option.name | capitalize }}:
-            {% if option.name == color_name %}
-              {%- assign color_handle = 'color-code-' | append: option.selected_value -%}
-              <span class="product-form__input__option-value font-body-bold">
-                {{ shop.metaobjects.color_codes_hex[color_handle].search_words.value | first | capitalize -}}
-              </span>
-            {% else %}
-              <span class="product-form__input__option-value font-body-bold"> {{ option.selected_value }}</span>
-            {% endif %}
+{%- assign option_name_downcase = option.name | downcase -%}
+{%- if option_name_downcase == color_name -%}
+  {%- assign selected_code = option.selected_value | strip -%}
+  {%- assign selected_code_u = selected_code | upcase -%}
+  {%- assign color_label = nil -%}
+  {%- paginate shop.metaobjects.color_codes_hex.values by 10000 -%}
+    {%- for mo in shop.metaobjects.color_codes_hex.values -%}
+      {%- if mo.code and mo.code.value -%}
+        {%- assign mo_code_u = mo.code.value | upcase -%}
+        {%- if mo_code_u == selected_code_u -%}
+          {%- if mo.search_words and mo.search_words.value and mo.search_words.value.first != blank -%}
+            {%- assign color_label = mo.search_words.value.first -%}
+          {%- endif -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endpaginate -%}
+  <span class="product-form__input__option-value font-body-bold">
+    {{ color_label | default: selected_code }}
+  </span>
+{%- else -%}
+  <span class="product-form__input__option-value font-body-bold">{{ option.selected_value }}</span>
+{%- endif -%}
           </legend>
 
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
