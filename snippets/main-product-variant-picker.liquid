@@ -104,12 +104,27 @@
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
 
-  {%- assign opt_dn = option.name | downcase -%}
-  {%- assign legend_label = option.name | capitalize -%}
-  {%- if opt_dn == 'univ_barva' or opt_dn == 'univ barva' or opt_dn == 'univ-barva' -%}
-    {%- assign legend_label = 'Barva' -%}
+{%- assign opt_dn = option.name | downcase -%}
+{%- assign legend_label = option.name | capitalize -%}
+
+{%- if opt_dn == 'univ_barva' or opt_dn == 'univ barva' or opt_dn == 'univ-barva' -%}
+  {%- assign iso = '' -%}
+  {%- if localization and localization.language and localization.language.iso_code -%}
+    {%- assign iso = localization.language.iso_code | downcase -%}
+  {%- elsif request and request.locale and request.locale.iso_code -%}
+    {%- assign iso = request.locale.iso_code | downcase -%}
   {%- endif -%}
-  {{ legend_label }}:
+
+  {%- case iso -%}
+    {%- when 'cs' -%}{%- assign legend_label = 'Barva' -%}
+    {%- when 'sk' -%}{%- assign legend_label = 'Farba' -%}
+    {%- when 'en' -%}{%- assign legend_label = 'Color' -%}
+    {%- when 'de' -%}{%- assign legend_label = 'Farbe' -%}
+    {%- else -%}{%- assign legend_label = 'Barva' -%}
+  {%- endcase -%}
+{%- endif -%}
+
+{{ legend_label }}:
 
 {%- assign option_name_downcase = option.name | downcase -%}
 {%- if option_name_downcase == color_name -%}
