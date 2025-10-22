@@ -106,7 +106,7 @@
 
 {%- assign legend_label = option.name | capitalize -%}
 {%- assign opt_dn = option.name | downcase -%}
-{%- if opt_dn == 'univ_barva' -%}
+{%- if opt_dn == color_name -%}
   {%- assign pa = shop.metaobjects.product_attributes['UNIV_BARVA'] 
      | default: shop.metaobjects.product_attributes['univ-barva'] -%}
   {%- if pa and pa.display_name and pa.display_name.value != blank -%}
