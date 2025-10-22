@@ -20,7 +20,7 @@
   - seznam produktů ve skupině (product_variants_grouping.variation_products)
 {% endcomment %}
 
-{% if request.design_mode or request.params.debug %}
+
   <div style="background:#222;color:#0f0;padding:1rem;font-family:monospace;font-size:12px;white-space:pre-wrap;">
     <strong>DEBUG – {{ product.handle }}</strong>
     <hr>
@@ -42,7 +42,7 @@
         [žádné variation_products]
       {% endif %}
   </div>
-{% endif %}
+
 
 {%- unless product.has_only_default_variant -%}
   {%- liquid
