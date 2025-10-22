@@ -44,9 +44,10 @@
             {%- assign __label = option.selected_value -%}
             {%- assign __code_u = option.selected_value | upcase -%}
             {%- for __mo in shop.metaobjects.color_codes_hex.values -%}
-              {%- assign __mo_code = __mo.code -%}
-              {%- if __mo_code and __mo_code.value %}{% assign __mo_code = __mo_code.value %}{% endif -%}
-              {%- if __mo_code and (__mo_code | upcase) == __code_u -%}
+              {%- assign __mo_code_raw = __mo.code -%}
+              {%- if __mo_code_raw and __mo_code_raw.value %}{% assign __mo_code_raw = __mo_code_raw.value %}{% endif -%}
+              {%- assign __mo_code_u = __mo_code_raw | upcase -%}
+              {%- if __mo_code_raw and __mo_code_u == __code_u -%}
                 {%- if __mo.search_words and __mo.search_words.value and __mo.search_words.value.first != blank -%}
                   {%- assign __label = __mo.search_words.value.first -%}
                 {%- endif -%}
@@ -57,9 +58,7 @@
           </legend>
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
             {%- for value in option.values -%}
-              <li
-                class="dynamic-option{% if settings.hide_unavailable_options %}{% unless value.available or value.variant or value.product_url or is_combined_product and value.selected %} hidden{% endunless %}{% endif %}"
-              >
+              <li class="dynamic-option{% if settings.hide_unavailable_options %}{% unless value.available or value.variant or value.product_url or is_combined_product and value.selected %} hidden{% endunless %}{% endif %}">
                 {%- liquid
                   if is_color_swatches
                     assign visual_style = ''
@@ -117,9 +116,10 @@
                     {%- assign __label = value -%}
                     {%- assign __code_u = value | upcase -%}
                     {%- for __mo in shop.metaobjects.color_codes_hex.values -%}
-                      {%- assign __mo_code = __mo.code -%}
-                      {%- if __mo_code and __mo_code.value %}{% assign __mo_code = __mo_code.value %}{% endif -%}
-                      {%- if __mo_code and (__mo_code | upcase) == __code_u -%}
+                      {%- assign __mo_code_raw = __mo.code -%}
+                      {%- if __mo_code_raw and __mo_code_raw.value %}{% assign __mo_code_raw = __mo_code_raw.value %}{% endif -%}
+                      {%- assign __mo_code_u = __mo_code_raw | upcase -%}
+                      {%- if __mo_code_raw and __mo_code_u == __code_u -%}
                         {%- if __mo.search_words and __mo.search_words.value and __mo.search_words.value.first != blank -%}
                           {%- assign __label = __mo.search_words.value.first -%}
                         {%- endif -%}
@@ -147,10 +147,7 @@
     >
       {%- for option in product.options_with_values -%}
         <div class="product-form__input product-form__input--variant-picker product-form__input--dropdown{% unless forloop.first %} element-small-margin-top{% endunless %}{% if forloop.last %} last{% endif %}">
-          <label
-            class="form__label product-form__input__form-label"
-            for="Option-{{ section_id | default: final_section_id }}-{{ forloop.index0 }}"
-          >
+          <label class="form__label product-form__input__form-label" for="Option-{{ section_id | default: final_section_id }}-{{ forloop.index0 }}">
             {{ option.name }}
           </label>
           <div class="select">
