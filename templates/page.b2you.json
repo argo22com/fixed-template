@@ -346,7 +346,7 @@
         "heading_tbHnXW": {
           "type": "heading",
           "settings": {
-            "heading": "Prémiové materiály a kvalita",
+            "heading": "Přístup k celému portfoliu FIXED",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -354,7 +354,7 @@
         "text_WnMAni": {
           "type": "text",
           "settings": {
-            "text": "<p>Pro naše pouzdra, peněženky a další produkty jsme vybrali tu <strong>nejkvalitnější italskou kůži Torcello</strong> od prověřených dodavatelů. Díky vlastnostem pravé kůže pouzdro nestárne, ale zraje. Časem získává jedinečnou <strong>patinu</strong> a z každého kousku se stává originální a unikátní doplněk pro Vás či Vaše obchodní partnery.</p>",
+            "text": "<p>Více než <strong>3 000 produktů</strong> pro všechny hlavní značky chytrých zařízení:od krytů, skel, nabíječek a držáků až po powerbanky, lokátory a smart příslušenství.<br/><br/><strong>Získáte:</strong> </p><ul><li>přístup k celému portfoliu FIXED </li><li>nabídky už od stovek kusů </li><li>benefiční program pro zaměstnance na www.fixed.zone </li><li>3letou záruku na všechny produkty </li></ul>",
             "text_style": "body"
           }
         },
@@ -377,7 +377,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/chm_kopie_4a8dea18-b5c9-46a2-9df0-56f1ed8a432f.jpg",
+        "image": "shopify://shop_images/bts.5848.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -461,7 +461,7 @@
         "heading_kxLLqe": {
           "type": "heading",
           "settings": {
-            "heading": "Personalizace",
+            "heading": "Vaše značka. Váš styl.",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -469,7 +469,7 @@
         "text_BiebUK": {
           "type": "text",
           "settings": {
-            "text": "<p>Každý náš prémiový výrobek je možné upravit dle vašich potřeb již od 50 kusů. Pomocí gravírování či ražení přidáme na produkty loga, citaci, či jednoduché obrázky.</p><p><strong>Stačí vyplnit formulář níže.</strong> Budete kontaktování naším obchodním zástupcem, který Vám poradí s výběrem a mírou personalizace</p>",
+            "text": "<p>Díky vlastní výrobě nabízíme široké možnosti <strong>customizace</strong>: </p><p>Logo vaší firmy na produktech Iniciály zaměstnanců na koženém příslušenství Individuální potisk, barvy i úpravy produktů Specifické funkce, např. vlastní klávesová zkratka </p><p>S námi to můžete být stále vy. </p>",
             "text_style": "body"
           }
         },
@@ -492,11 +492,11 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/01_6b5451df-3af2-4b54-8719-a4ddc82e5e7b.jpg",
+        "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.23.24.png",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "hide_when_empty_image": false,
@@ -521,305 +521,351 @@
         "overlay_color": "#1e40af"
       }
     },
-    "rich_text_pnenF8": {
-      "type": "rich-text",
+    "image_with_text_KKDmGw": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_QDcKeQ": {
+        "heading_AKVLM3": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "<p>Jak na to</p>",
-            "heading_size": "h1"
+            "heading": "Naše kroky k udržitelnosti ",
+            "heading_size": "h2",
+            "enable_bold_heading": true
           }
         },
-        "text_VqkiAx": {
+        "text_hKqCdf": {
           "type": "text",
           "settings": {
-            "text": "<p>Stačí nás kontaktovat pomocí formuláře níže. Budete kontaktování naším obchodním zástupcem, který Vám poradí s výběrem a mírou personalizace</p>"
+            "text": "<p>Řídíme se mottem <strong>„Kvalitou proti spotřebě“</strong> a aktivně snižujeme naši uhlíkovou stopu. </p><p><strong>Co děláme:</strong> </p><ul><li>Výroba pouzder v ČR s až 50 % úsporou CO₂ </li><li>Certifikace <strong>GRS</strong> a <strong>ISCC+</strong> </li><li>Pouzdra z materiálů pocházejících od evropských dodavatelů </li><li>Balení z <strong>FSC papíru</strong>, elektronické manuály </li><li>Ručně šitá kožená pouzdra z Prostějova </li></ul>",
+            "text_style": "body"
           }
         },
-        "button_nVUHQ3": {
+        "button_QTxTFW": {
           "type": "button",
           "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
-            "button_style_1": "primary",
-            "button_open_new_tab_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_2": "primary",
-            "button_open_new_tab_2": false
+            "button_style": "solid",
+            "button_open_new_tab": false
           }
         }
       },
       "block_order": [
-        "heading_QDcKeQ",
-        "text_VqkiAx",
-        "button_nVUHQ3"
+        "heading_AKVLM3",
+        "text_hKqCdf",
+        "button_QTxTFW"
       ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/rain-water-green-leaf-macro.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#eee9e4",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
       }
     },
-    "gallery_lightbox_dBe4XY": {
-      "type": "gallery-lightbox",
+    "text_icons_Nd9xJR": {
+      "type": "text-icons",
       "blocks": {
-        "gallery_image_tJAieB": {
-          "type": "gallery-image",
+        "text_icon_y8iTLP": {
+          "type": "text-icon",
           "settings": {
-            "image": "shopify://shop_images/BL-1024x683.jpg",
-            "row": 1,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/Screenshot_2025-10-22_at_12.33.18.png",
+            "title": "Hotline",
+            "subheading": "přímá pomoc a rychlá reakce ",
+            "link": "",
+            "open_link_in_new_tab": false
           }
         },
-        "gallery_image_U3pajr": {
-          "type": "gallery-image",
+        "text_icon_DhGwTq": {
+          "type": "text-icon",
           "settings": {
-            "image": "shopify://shop_images/storage-one-FIXSMS-C2-1024x683.jpg",
-            "row": 2,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/Screenshot_2025-10-22_at_12.33.27.png",
+            "title": "Přidělený obchodní zástupce",
+            "subheading": "vždy dostupný ",
+            "link": "",
+            "open_link_in_new_tab": false
           }
         },
-        "gallery_image_z6HMJc": {
-          "type": "gallery-image",
+        "text_icon_kRM8jC": {
+          "type": "text-icon",
           "settings": {
-            "image": "shopify://shop_images/storage-one-FIXSM-SMMW2-1024x683.jpg",
-            "row": 1,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/Screenshot_2025-10-22_at_12.33.35.png",
+            "title": "Flexibilita výrobce",
+            "subheading": "produkt podle vašich představ ",
+            "link": "",
+            "open_link_in_new_tab": false
           }
         },
-        "gallery_image_Gf63YR": {
-          "type": "gallery-image",
+        "text_icon_VyV8Tn": {
+          "type": "text-icon",
           "settings": {
-            "image": "shopify://shop_images/O2_guru_leather-1-1024x807.png",
-            "row": 3,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_rqQTqF": {
-          "type": "gallery-image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/1B1A4684-1024x683.jpg",
-            "row": 3,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_epDgFJ": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/03-1024x683.jpg",
-            "row": 2,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_tBnJeE": {
-          "type": "gallery-image",
-          "disabled": true,
-          "settings": {
-            "row": 2,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_tnMBiQ": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/amusnet-1024x682.jpg",
-            "row": 2,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_wUbKfz": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/DATART-1024x683.jpg",
-            "row": 3,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/Screenshot_2025-10-22_at_12.33.45.png",
+            "title": "Rychlé reklamace",
+            "subheading": "průměrně do 5 dní  ",
+            "link": "",
+            "open_link_in_new_tab": false
           }
         }
       },
       "block_order": [
-        "gallery_image_tJAieB",
-        "gallery_image_U3pajr",
-        "gallery_image_z6HMJc",
-        "gallery_image_Gf63YR",
-        "gallery_image_rqQTqF",
-        "gallery_image_epDgFJ",
-        "gallery_image_tBnJeE",
-        "gallery_image_tnMBiQ",
-        "gallery_image_wUbKfz"
+        "text_icon_y8iTLP",
+        "text_icon_DhGwTq",
+        "text_icon_kRM8jC",
+        "text_icon_VyV8Tn"
       ],
+      "name": "t:sections.text-icons.presets.name",
       "settings": {
-        "title": "Ražba loga na produkty",
-        "heading_size": "h2",
-        "max_rows": 1,
-        "color_scheme": "background-1",
-        "show_more_text": "Zobrazit více fotek",
-        "button_style": "primary",
-        "button_size": "normal",
-        "button_margin_top": 52,
-        "button_margin_bottom": 0,
-        "padding_top": 0,
-        "padding_bottom": 32,
-        "overlay_color": "#999999",
-        "overlay_opacity": 80
-      }
-    },
-    "rich_text_bp6AWb": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_nyWzwM": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h2><strong>Ražba iniciálů a krátkých textů</strong></h2>",
-            "heading_size": "h1"
-          }
-        },
-        "text_qWnNBJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Všechny produkty ruční výroby je možné personalizovat ražbou iniciálů nebo krátkých textů. Ražbu provádíme na zakázku a požadavky na vyhotovení je potřeba zadat předem, protože se provádí na nově vyráběný produkt, aby byl výsledek perfektní. <br/>Maximální počet znaků je <strong>8 - 10</strong> (v závislosti na šířce znaků) a k dispozici jsou všechny znaky české abecedy v doplnění o znaky <strong>., #,@ a &</strong>.<br/><br/><strong>Pro objednávku prosíme o vyplnění nezávazné poptávky níže.</strong></p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_nyWzwM",
-        "text_qWnNBJ"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "gallery_lightbox_ymKgwN": {
-      "type": "gallery-lightbox",
-      "blocks": {
-        "gallery_image_gXpKUL": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/2.jpg",
-            "row": 1,
-            "gradient": "none",
-            "caption": "Iniciály na produktu Oxford.",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_t43WHd": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/3.jpg",
-            "row": 1,
-            "gradient": "none",
-            "caption": "Ukázka vyraženého jména na produktu Venezia.",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_xKHPBM": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/1.jpg",
-            "row": 1,
-            "gradient": "none",
-            "caption": "Ukázka vyražených iniciálů na sadě produktů Siena a Verona.",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_rbyjy8": {
-          "type": "gallery-image",
-          "settings": {
-            "image": "shopify://shop_images/4.jpg",
-            "row": 1,
-            "gradient": "none",
-            "caption": "Ukázka vyraženého textu na produktu Small Wallet.",
-            "subcaption": ""
-          }
-        },
-        "gallery_image_rw7WxY": {
-          "type": "gallery-image",
-          "settings": {
-            "row": 1,
-            "gradient": "none",
-            "caption": "",
-            "subcaption": ""
-          }
-        }
-      },
-      "block_order": [
-        "gallery_image_gXpKUL",
-        "gallery_image_t43WHd",
-        "gallery_image_xKHPBM",
-        "gallery_image_rbyjy8",
-        "gallery_image_rw7WxY"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "max_rows": 2,
-        "color_scheme": "",
-        "show_more_text": "Load more pictures",
-        "button_style": "primary",
-        "button_size": "normal",
-        "button_margin_top": 0,
-        "button_margin_bottom": 0,
-        "padding_top": 0,
-        "padding_bottom": 68,
-        "overlay_color": "#999999",
-        "overlay_opacity": 80
-      }
-    },
-    "video_8NNtLE": {
-      "type": "video",
-      "settings": {
-        "title": "",
+        "title": "Podpora, na kterou se můžete spolehnout",
         "subtitle": "",
         "heading_size": "h1",
-        "cover_image": "shopify://shop_images/010_Loutocky_COM_DS2_2408_exp-scaled.jpg",
-        "video_hosted": "shopify://files/videos/Vyroba-kozene-penezenky-Tiny-Wallet-pro-BCPP-Burzu-cennych-papiru-Praha.mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "autoplay": true,
-        "enable_controls": true,
-        "enable_video_looping": true,
-        "full_width": false,
-        "hide_when_empty_video": false,
+        "icon_width_desktop": 30,
+        "text_position": "bottom",
+        "enable_heading_in_box": false,
+        "columns_desktop": 4,
+        "columns_tablet": 4,
+        "auto_fit": false,
+        "column_alignment": "center",
+        "highlight_icon": false,
         "enable_section_box_layout": false,
-        "color_scheme": "background-1",
-        "padding_top": 20,
+        "color_scheme": "",
+        "border_width": 1,
+        "border_opacity": 0,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "square",
+        "blur_background": false,
+        "columns_mobile": "1",
+        "icon_width_mobile": 30,
+        "border_spacing_mobile": 0,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_with_text_n9wRPr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_MLdQUp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Podpora, na kterou se můžete spolehnout ",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_bqCNy7": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Hotline</strong> – přímá pomoc a rychlá reakce<br/><strong>Přidělený obchodní zástupce</strong> – vždy dostupný<br/><strong>Flexibilita výrobce</strong> – produkt podle vašich představ<br/><strong>Rychlé reklamace</strong> – průměrně do 5 dní</p>",
+            "text_style": "body"
+          }
+        },
+        "button_r9aKFX": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MLdQUp",
+        "text_bqCNy7",
+        "button_r9aKFX"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/podpora.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 44,
+        "padding_bottom": 72,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_MJiYLF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_DRqHmq": {
+          "type": "heading",
+          "settings": {
+            "heading": "3 roky záruky na všechny produkty FIXED",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_HeaXYM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kvalita, spolehlivost, dlouhá životnost – to jsou pilíře, na kterých stojí FIXED. Na všechny produkty proto poskytujeme <strong>3letou záruku</strong>, o rok delší než standard. </p><p><strong>99,4 % bezvadných produktů</strong> Pouze <strong>0,6 % reklamací</strong> – až 5× méně než konkurence </p>",
+            "text_style": "body"
+          }
+        },
+        "button_gPAR4C": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DRqHmq",
+        "text_HeaXYM",
+        "button_gPAR4C"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/3roky-ctverec.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 44,
+        "padding_bottom": 72,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_UBCGy9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_e77QAa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pojďme navázat spolupráci ",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_RFYFBa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Domluvme si osobní setkání nebo krátký telefonát:</p><ol><li>Probereme vaše potřeby</li><li>Připravíme individuální nabídku</li><li>Dodáme vzorky produktů</li><li>Zajistíme rychlé dodání</li></ol>",
+            "text_style": "body"
+          }
+        },
+        "button_aXnWqd": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_e77QAa",
+        "text_RFYFBa",
+        "button_aXnWqd"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.43.00.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#eee9e4",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
       }
     },
     "gallery_lightbox_BPB3tU": {
@@ -921,47 +967,13 @@
         "overlay_opacity": 80
       }
     },
-    "rich_text_MRRXE6": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_RaFPay": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h2><strong>Nezávazná poptávka</strong></h2>",
-            "heading_size": "h1"
-          }
-        },
-        "heading_jKwymm": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "<h3><strong>Nezávazná poptávka</strong></h3>",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_RaFPay",
-        "heading_jKwymm"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "desktop_content_width": "large",
-        "content_alignment": "center",
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "17180107320ce2e4a0": {
       "type": "apps",
       "blocks": {
         "hulk_form_builder_form_block_rgQ3YU": {
           "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
           "settings": {
-            "form_uuid": "s6wyGiKGSTXLKff7tiRoZg",
+            "form_uuid": "mzwPC766KqDNTDwd9b--4g",
             "form_settings": false,
             "font_color": "#000000",
             "size": 16,
@@ -1160,13 +1172,12 @@
     "image_with_text_bLNrKx",
     "rich_text_GVc7hC",
     "image_with_text_wXpUCh",
-    "rich_text_pnenF8",
-    "gallery_lightbox_dBe4XY",
-    "rich_text_bp6AWb",
-    "gallery_lightbox_ymKgwN",
-    "video_8NNtLE",
+    "image_with_text_KKDmGw",
+    "text_icons_Nd9xJR",
+    "image_with_text_n9wRPr",
+    "image_with_text_MJiYLF",
+    "image_with_text_UBCGy9",
     "gallery_lightbox_BPB3tU",
-    "rich_text_MRRXE6",
     "17180107320ce2e4a0",
     "rich_text_UR43tr",
     "featured_products_tabs_r8VGMC",
