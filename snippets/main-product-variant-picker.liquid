@@ -103,6 +103,7 @@
         -%}
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
+                        {{ option.name | capitalize }}:
 {%- assign option_name_downcase = option.name | downcase -%}
 {%- if option_name_downcase == color_name -%}
   {%- assign selected_code = option.selected_value | strip -%}
