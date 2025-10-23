@@ -1021,7 +1021,7 @@
         "color_text": "#fff",
         "gradient_heading_desktop": "",
         "color_button_text_1": "#fff",
-        "color_button_1": "#fff",
+        "color_button_1": "#000000",
         "color_button_text_2": "#000",
         "color_button_2": "#fff",
         "colors_badge_foreground": "#fff",
