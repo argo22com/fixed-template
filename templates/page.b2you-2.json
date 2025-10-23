@@ -1327,7 +1327,6 @@
     },
     "featured_blog_LcaDHX": {
       "type": "featured-blog",
-      "disabled": true,
       "settings": {
         "title": "Co je nového",
         "heading_size": "h1",
