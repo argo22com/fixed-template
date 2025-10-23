@@ -834,7 +834,7 @@
         "highlight_icon": false,
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "border_width": 2,
+        "border_width": 7,
         "border_opacity": 5,
         "border_spacing": 33,
         "highlight_border": false,
@@ -842,9 +842,9 @@
         "blur_background": false,
         "columns_mobile": "1",
         "icon_width_mobile": 30,
-        "border_spacing_mobile": 0,
+        "border_spacing_mobile": 7,
         "swipe_on_mobile": false,
-        "padding_top": 0,
+        "padding_top": 16,
         "padding_bottom": 76
       }
     },
