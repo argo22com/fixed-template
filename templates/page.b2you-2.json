@@ -967,6 +967,83 @@
         "overlay_color": "#1e40af"
       }
     },
+    "image_banner_zwr73E": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_jRKKY3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pojďme navázat spolupráci ",
+            "size": "h0"
+          }
+        },
+        "text_hBBei6": {
+          "type": "text",
+          "settings": {
+            "text": "Domluvme si osobní setkání nebo telefonát",
+            "text_style": "body"
+          }
+        },
+        "buttons_dqTQR8": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jRKKY3",
+        "text_hBBei6",
+        "buttons_dqTQR8"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "layout": "grid",
+        "image": "shopify://shop_images/WTTJ_FIXEDZONE_2000-39.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "image_with_text_UBCGy9": {
       "type": "image-with-text",
       "blocks": {
@@ -1245,6 +1322,7 @@
     "text_icons_Nd9xJR",
     "image_with_text_n9wRPr",
     "image_with_text_MJiYLF",
+    "image_banner_zwr73E",
     "image_with_text_UBCGy9",
     "gallery_lightbox_BPB3tU",
     "17180107320ce2e4a0",
