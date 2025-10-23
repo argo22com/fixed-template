@@ -1,0 +1,1098 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "grid",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "ul_li_marker": "#000000"
+      }
+    },
+    "image_banner_Q7m3KH": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_Jex9x4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Firemní program B2You",
+            "size": "h1"
+          }
+        },
+        "text_KMparF": {
+          "type": "text",
+          "settings": {
+            "text": "<strong> Dostávejte nabídky na míru vašemu byznysu za skvělých podmínek</strong>",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_4m37Mi": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Získat nabídku",
+            "button_link_1": "shopify://pages/b2you-nabidka",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "Domluvit schůzku",
+            "button_link_2": "#show-phone",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Jex9x4",
+        "text_KMparF",
+        "buttons_4m37Mi"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify://shop_images/WTTJ_FIXEDZONE_2000-50_kopie_aa02a8cf-5b82-46c9-b165-eafb420188b1.png",
+        "image_mobile": "shopify://shop_images/WTTJ_FIXEDZONE_2000-50_kopie_b5c29fb0-3024-44c0-97ee-5a713d07537b.png",
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "left",
+        "show_text_below_image": true,
+        "color_text": "#ffffff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#ffffff",
+        "color_button_1": "#e94200",
+        "color_button_text_2": "#ffffff",
+        "color_button_2": "#e94200",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_4XeBjy": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div id=\"show-phone\" style=\"display:none; margin-top:12px; text-align: center;\">\nKontaktujte nás na telefonním čísle  \n  <a href=\"tel:+420385510206\">📞 +420 385 510 206\n </a>\n</div>\n\n<script>\n  (function() {\n    function revealPhone(e) {\n      // zachyť klik na tlačítko/link vedoucí na #show-phone\n      if (e.target.closest && e.target.closest('a[href=\"#show-phone\"], button[href=\"#show-phone\"]')) {\n        e.preventDefault();\n        var box = document.getElementById('show-phone');\n        if (!box) return;\n        // plynulé zobrazení\n        box.style.display = 'block';\n        box.style.opacity = 0;\n        box.style.transition = 'opacity .3s ease';\n        requestAnimationFrame(function(){ box.style.opacity = 1; });\n\n        // volitelné: na mobilech po ~200 ms rovnou otevřít číselník\n        if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {\n          setTimeout(function() {\n            window.location.href = 'tel:+420123456789';\n          }, 200);\n        }\n      }\n    }\n    document.addEventListener('click', revealPhone);\n  })();\n</script>",
+        "color_scheme": "",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "rich_text_GnRiqE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UWbDfX": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1><strong>Program FIXED B2You <br/>příslušenství na míru vašemu byznysu</strong></h1>",
+            "heading_size": "h2"
+          }
+        },
+        "text_PTb6yL": {
+          "type": "text",
+          "settings": {
+            "text": "<h2><strong>Příslušenství pro byznys. Zaměřeno na vaše potřeby.</strong></h2>"
+          }
+        },
+        "text_TRtq3r": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Přímá spolupráce s výrobcem znamená spolehlivost, férové ceny a rychlou reakci.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UWbDfX",
+        "text_PTb6yL",
+        "text_TRtq3r"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "full",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_4X9pNH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3xYEWK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/armor_test_5_b800dea5-8144-40f6-ada3-fc5aac351350.png",
+            "icon": "check",
+            "title": "Přímo od výrobce",
+            "text": "<p>Odolné, otestované a spolehlivé produkty FIXED.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_CqHXmJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.12.14.png",
+            "icon": "check",
+            "title": "Individuální cenové podmínky",
+            "text": "<p>Férové ceny přizpůsobené vašim objemům.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_7jakp3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.14.55.png",
+            "icon": "check",
+            "title": "Osobní podpora a poradenství",
+            "text": "<p>Váš FIXED zástupce je vždy na příjmu.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#ffffff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_GBWzYE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.15.39.png",
+            "icon": "check",
+            "title": "Přístup do B2You portálu",
+            "text": "<p>Objednávejte jednoduše, rychle a efektivně.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_jdHzan": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.15.56.png",
+            "icon": "check",
+            "title": "Dostatečné skladové zásoby",
+            "text": "<p>10 milionů kusů produktů připravených k expedici.</p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3xYEWK",
+        "column_CqHXmJ",
+        "column_7jakp3",
+        "column_GBWzYE",
+        "column_jdHzan"
+      ],
+      "name": "t:sections.promotion-cards.presets.name",
+      "settings": {
+        "title": "Hlavní výhody",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "Získat nabídku",
+        "button_link": "shopify://pages/b2you-nabidka",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "text_icons_fictdW": {
+      "type": "text-icons",
+      "blocks": {
+        "text_icon_Cimifi": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "none",
+            "title": "Prémiové materiály a kvalita",
+            "subheading": "Pro naše pouzdra, peněženky a další produkty jsme vybrali tu nejkvalitnější italskou kůži Torcello od prověřených dodavatelů. Díky vlastnostem pravé kůže pouzdro nestárne, ale zraje. Časem získává jedinečnou patinu a z každého kousku se stává originální a unikátní doplněk pro Vás či Vaše obchodní partnery.",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_FKQJQ6": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "none",
+            "title": "Personalizace",
+            "subheading": "Každý náš prémiový výrobek je možné upravit dle vašich potřeb již od 50 kusů. Pomocí gravírování či ražení přidáme na produkty loga, citaci, či jednoduché obrázky.",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_rHAfmj": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "none",
+            "title": "Jak na to",
+            "subheading": "Stačí nás kontaktovat pomocí formjuláře níže. Budete kontaktování naším obchodním zástupcem, který Vám poradí s výběrem a mírou personalizace",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_icon_Cimifi",
+        "text_icon_FKQJQ6",
+        "text_icon_rHAfmj"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h2",
+        "icon_width_desktop": 10,
+        "text_position": "left",
+        "enable_heading_in_box": false,
+        "columns_desktop": 3,
+        "columns_tablet": 3,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "highlight_icon": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "scheme-0352a647-b3f3-4ac0-b6c3-5e4432707f6c",
+        "border_width": 1,
+        "border_opacity": 0,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "square",
+        "blur_background": false,
+        "columns_mobile": "1",
+        "icon_width_mobile": 30,
+        "border_spacing_mobile": 0,
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_bLNrKx": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_tbHnXW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Přístup k celému portfoliu FIXED",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_WnMAni": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Více než <strong>3 000 produktů</strong> pro všechny hlavní značky chytrých zařízení:od krytů, skel, nabíječek a držáků až po powerbanky, lokátory a smart příslušenství.<br/><br/><strong>Získáte:</strong> </p><ul><li>přístup k celému portfoliu FIXED </li><li>nabídky už od stovek kusů </li><li>benefiční program pro zaměstnance na www.fixed.zone </li><li>3letou záruku na všechny produkty </li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_EJpL83": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tbHnXW",
+        "text_WnMAni",
+        "button_EJpL83"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/bts.5848.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#eee9e4",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "rich_text_GVc7hC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_j9yJzD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2><strong>Personalizace</strong></h2>",
+            "heading_size": "h1"
+          }
+        },
+        "text_bECBkC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Každý náš prémiový výrobek je možné upravit dle vašich potřeb již od 50 kusů. Pomocí gravírování či ražení přidáme na produkty loga, citaci, či jednoduché obrázky.</p><p><strong>Stačí vyplnit formulář níže.</strong> Budete kontaktování naším obchodním zástupcem, který Vám poradí s výběrem a mírou personalizace</p><p></p>"
+          }
+        },
+        "button_HMDm78": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_j9yJzD",
+        "text_bECBkC",
+        "button_HMDm78"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "full",
+        "content_alignment": "center",
+        "enable_section_box_layout": true,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_wXpUCh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kxLLqe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Vaše značka. Váš styl.",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_BiebUK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Díky vlastní výrobě nabízíme široké možnosti <strong>customizace</strong>: </p><p>Logo vaší firmy na produktech Iniciály zaměstnanců na koženém příslušenství Individuální potisk, barvy i úpravy produktů Specifické funkce, např. vlastní klávesová zkratka </p><p>S námi to můžete být stále vy. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_LxX4KF": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kxLLqe",
+        "text_BiebUK",
+        "button_LxX4KF"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.23.24.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 44,
+        "padding_bottom": 72,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_KKDmGw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_AKVLM3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Naše kroky k udržitelnosti ",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_hKqCdf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Řídíme se mottem <strong>„Kvalitou proti spotřebě“</strong> a aktivně snižujeme naši uhlíkovou stopu. </p><p><strong>Co děláme:</strong> </p><ul><li>Výroba pouzder v ČR s až 50 % úsporou CO₂ </li><li>Certifikace <strong>GRS</strong> a <strong>ISCC+</strong> </li><li>Pouzdra z materiálů pocházejících od evropských dodavatelů </li><li>Balení z <strong>FSC papíru</strong>, elektronické manuály </li><li>Ručně šitá kožená pouzdra z Prostějova </li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_QTxTFW": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AKVLM3",
+        "text_hKqCdf",
+        "button_QTxTFW"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/rain-water-green-leaf-macro.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#eee9e4",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "text_icons_Nd9xJR": {
+      "type": "text-icons",
+      "blocks": {
+        "text_icon_y8iTLP": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/Screenshot_2025-10-22_at_12.33.18.png",
+            "title": "Hotline",
+            "subheading": "přímá pomoc a rychlá reakce ",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_DhGwTq": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/Screenshot_2025-10-22_at_12.33.27.png",
+            "title": "Přidělený obchodní zástupce",
+            "subheading": "vždy dostupný ",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_kRM8jC": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/Screenshot_2025-10-22_at_12.33.35.png",
+            "title": "Flexibilita výrobce",
+            "subheading": "produkt podle vašich představ ",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        },
+        "text_icon_VyV8Tn": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/Screenshot_2025-10-22_at_12.33.45.png",
+            "title": "Rychlé reklamace",
+            "subheading": "průměrně do 5 dní  ",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_icon_y8iTLP",
+        "text_icon_DhGwTq",
+        "text_icon_kRM8jC",
+        "text_icon_VyV8Tn"
+      ],
+      "name": "t:sections.text-icons.presets.name",
+      "settings": {
+        "title": "Podpora, na kterou se můžete spolehnout",
+        "subtitle": "",
+        "heading_size": "h1",
+        "icon_width_desktop": 30,
+        "text_position": "bottom",
+        "enable_heading_in_box": false,
+        "columns_desktop": 4,
+        "columns_tablet": 4,
+        "auto_fit": false,
+        "column_alignment": "center",
+        "highlight_icon": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "border_width": 1,
+        "border_opacity": 0,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "square",
+        "blur_background": false,
+        "columns_mobile": "1",
+        "icon_width_mobile": 30,
+        "border_spacing_mobile": 0,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_n9wRPr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_MLdQUp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Podpora, na kterou se můžete spolehnout ",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_bqCNy7": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Hotline</strong> – přímá pomoc a rychlá reakce<br/><strong>Přidělený obchodní zástupce</strong> – vždy dostupný<br/><strong>Flexibilita výrobce</strong> – produkt podle vašich představ<br/><strong>Rychlé reklamace</strong> – průměrně do 5 dní</p>",
+            "text_style": "body"
+          }
+        },
+        "button_r9aKFX": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MLdQUp",
+        "text_bqCNy7",
+        "button_r9aKFX"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/podpora.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 44,
+        "padding_bottom": 72,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_MJiYLF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_DRqHmq": {
+          "type": "heading",
+          "settings": {
+            "heading": "3 roky záruky na všechny produkty FIXED",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_HeaXYM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kvalita, spolehlivost, dlouhá životnost – to jsou pilíře, na kterých stojí FIXED. Na všechny produkty proto poskytujeme <strong>3letou záruku</strong>, o rok delší než standard. </p><p><strong>99,4 % bezvadných produktů</strong> Pouze <strong>0,6 % reklamací</strong> – až 5× méně než konkurence </p>",
+            "text_style": "body"
+          }
+        },
+        "button_gPAR4C": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DRqHmq",
+        "text_HeaXYM",
+        "button_gPAR4C"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/3roky-ctverec.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 44,
+        "padding_bottom": 72,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_UBCGy9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_e77QAa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pojďme navázat spolupráci ",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_RFYFBa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Domluvme si osobní setkání nebo krátký telefonát:</p><ol><li>Probereme vaše potřeby</li><li>Připravíme individuální nabídku</li><li>Dodáme vzorky produktů</li><li>Zajistíme rychlé dodání</li></ol>",
+            "text_style": "body"
+          }
+        },
+        "button_aXnWqd": {
+          "type": "button",
+          "settings": {
+            "button_label": "Spojit se s obchodním zástupcem",
+            "button_link": "shopify://pages/b2you-nabidka",
+            "button_style": "solid",
+            "button_open_new_tab": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_e77QAa",
+        "text_RFYFBa",
+        "button_aXnWqd"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.43.00.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#dc4405",
+        "background_container": "#eee9e4",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "gallery_lightbox_BPB3tU": {
+      "type": "gallery-lightbox",
+      "blocks": {
+        "gallery_image_qjBiMz": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/100520221652157110-1024x683.jpg",
+            "row": 1,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_M3yXJU": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_7359-1024x768.jpg",
+            "row": 1,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_LmTch6": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/100520221652156074-1024x683.jpg",
+            "row": 1,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_q48CHi": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/FIXSMS-C2-BR_003-1024x1024.jpg",
+            "row": 2,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_tfEHAf": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/uni-1-1024x1024.jpg",
+            "row": 2,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_fnw7PW": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify://shop_images/FIXSMS-STN2-BL_004-1024x1024.jpg",
+            "row": 2,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        },
+        "gallery_image_A3AJ4B": {
+          "type": "gallery-image",
+          "settings": {
+            "row": 1,
+            "gradient": "none",
+            "caption": "",
+            "subcaption": ""
+          }
+        }
+      },
+      "block_order": [
+        "gallery_image_qjBiMz",
+        "gallery_image_M3yXJU",
+        "gallery_image_LmTch6",
+        "gallery_image_q48CHi",
+        "gallery_image_tfEHAf",
+        "gallery_image_fnw7PW",
+        "gallery_image_A3AJ4B"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Prohlédněte si další produkty z kožené kolekce",
+        "heading_size": "h2",
+        "max_rows": 2,
+        "color_scheme": "background-1",
+        "show_more_text": "Load more pictures",
+        "button_style": "primary",
+        "button_size": "normal",
+        "button_margin_top": 0,
+        "button_margin_bottom": 0,
+        "padding_top": 4,
+        "padding_bottom": 36,
+        "overlay_color": "#999999",
+        "overlay_opacity": 80
+      }
+    },
+    "17180107320ce2e4a0": {
+      "type": "apps",
+      "blocks": {
+        "hulk_form_builder_form_block_rgQ3YU": {
+          "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+          "settings": {
+            "form_uuid": "mzwPC766KqDNTDwd9b--4g",
+            "form_settings": false,
+            "font_color": "#000000",
+            "size": 16,
+            "input_background_color": "#ffffff",
+            "input_background_color_focus": "#f4dada",
+            "input_border_radius": 1,
+            "input_border_color": "#ebe9e9",
+            "input_border_color_focus": "#2d2727",
+            "input_font_color": "#3d3131",
+            "input_size": 16,
+            "border_color": "#121212",
+            "border_radius": 2,
+            "border": 1,
+            "fill_color": "#eee9e4",
+            "padding": 35,
+            "form_width": 600,
+            "btn_text": "Submit",
+            "sub_btn_txt_color": "#f3f3f3",
+            "sub_btn_bg_color": "#3f3333",
+            "sub_btn_font_size": 14,
+            "sub_btn_bdr_color": "#ffffff",
+            "sub_btn_bdr_rad": 3,
+            "sub_btn_bdr_width": 1,
+            "fonts": "Arial"
+          }
+        }
+      },
+      "block_order": [
+        "hulk_form_builder_form_block_rgQ3YU"
+      ],
+      "custom_css": [
+        ".shopify-app-block {background-color: #f6f3f0;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "rich_text_UR43tr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UfM7R3": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>Výběr produktů s možností zakázkové výroby</strong></h3>",
+            "heading_size": "h2"
+          }
+        },
+        "text_dbVjGL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Prozkoumejte nabídku našich kožených produktů, které můžeme personalizovat pro Vaše potřeby již od 50 kusů</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UfM7R3",
+        "text_dbVjGL"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_blog_LcaDHX": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "Co je nového",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "image_height": "medium",
+        "show_view_all": true,
+        "columns_desktop": 3,
+        "enable_section_box_layout": false,
+        "color_scheme": "background-1",
+        "blog_card_text_alignment": "left",
+        "blog_card_color_scheme": "inverse",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_Q7m3KH",
+    "custom_liquid_4XeBjy",
+    "rich_text_GnRiqE",
+    "multicolumn_4X9pNH",
+    "text_icons_fictdW",
+    "image_with_text_bLNrKx",
+    "rich_text_GVc7hC",
+    "image_with_text_wXpUCh",
+    "image_with_text_KKDmGw",
+    "text_icons_Nd9xJR",
+    "image_with_text_n9wRPr",
+    "image_with_text_MJiYLF",
+    "image_with_text_UBCGy9",
+    "gallery_lightbox_BPB3tU",
+    "17180107320ce2e4a0",
+    "rich_text_UR43tr",
+    "featured_blog_LcaDHX"
+  ]
+}
