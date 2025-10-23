@@ -821,7 +821,7 @@
         "enable_section_box_layout": false,
         "color_scheme": "",
         "border_width": 2,
-        "border_opacity": 10,
+        "border_opacity": 5,
         "border_spacing": 33,
         "highlight_border": false,
         "border_shape": "circle",
