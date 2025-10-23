@@ -585,7 +585,7 @@
         "text_BiebUK": {
           "type": "text",
           "settings": {
-            "text": "<p>Díky vlastní výrobě nabízíme široké možnosti <strong>customizace</strong>: </p><ul><li>Logo vaší firmy na produktech </li><li>Iniciály zaměstnanců na koženém příslušenství</li><li>Individuální potisk, barvy i úpravy produktů </li><li>Specifické funkce, např. vlastní klávesová zkratka </li></ul><p>S námi to můžete být stále vy. </p>",
+            "text": "<p>Díky vlastní výrobě nabízíme široké možnosti <strong>customizace</strong>: </p><ul><li>Logo vaší firmy na produktech </li><li>Iniciály zaměstnanců na koženém příslušenství</li><li>Individuální potisk, barvy i úpravy produktů </li><li>Specifické funkce, např. vlastní klávesová zkratka </li></ul><p><strong>S námi to můžete být stále vy. </strong></p>",
             "text_style": "body"
           }
         },
