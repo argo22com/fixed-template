@@ -609,7 +609,7 @@
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/black.4808.jpg",
-        "height": "adapt",
+        "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "middle",
