@@ -291,11 +291,26 @@
           "settings": {
             "text": "<p>Přímá spolupráce s výrobcem znamená spolehlivost, férové ceny a rychlou reakci.</p>"
           }
+        },
+        "button_y8ebeY": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Získat nabídku",
+            "button_link": "#shopify-section-template--15895441014866__contact_form_YpfVGY",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
         }
       },
       "block_order": [
         "heading_3tQLfY",
-        "text_RzPRAi"
+        "text_RzPRAi",
+        "button_y8ebeY"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -397,10 +412,9 @@
         },
         "button_EJpL83": {
           "type": "button",
-          "disabled": true,
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Získat nabídku",
+            "button_link": "#shopify-section-template--15895441014866__contact_form_YpfVGY",
             "button_style": "solid",
             "button_open_new_tab": false
           }
