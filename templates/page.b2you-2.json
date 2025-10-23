@@ -267,7 +267,7 @@
         "background_image_overlay_color": "button",
         "columns_mobile": "1",
         "mobile_gap": 30,
-        "media_width_mobile": "100",
+        "media_width_mobile": "30",
         "swipe_on_mobile": false,
         "text_boxes_border_thickness": 0,
         "text_boxes_border_opacity": 0,
