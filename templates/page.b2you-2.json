@@ -623,6 +623,54 @@
         "overlay_color": "#1e40af"
       }
     },
+    "rich_text_cDX4Et": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_q8Dp89": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>Podpora, na kterou se můžete spolehnout</strong></p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_dEK6BX": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_NVcTBV": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_q8Dp89",
+        "text_dEK6BX",
+        "button_NVcTBV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "text_icons_Nd9xJR": {
       "type": "text-icons",
       "blocks": {
@@ -679,7 +727,7 @@
       ],
       "name": "t:sections.text-icons.presets.name",
       "settings": {
-        "title": "Podpora, na kterou se můžete spolehnout",
+        "title": "",
         "subtitle": "",
         "heading_size": "h1",
         "icon_width_desktop": 30,
@@ -702,7 +750,7 @@
         "icon_width_mobile": 30,
         "border_spacing_mobile": 0,
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
@@ -1113,6 +1161,7 @@
     "rich_text_GVc7hC",
     "image_with_text_wXpUCh",
     "image_with_text_KKDmGw",
+    "rich_text_cDX4Et",
     "text_icons_Nd9xJR",
     "image_with_text_n9wRPr",
     "image_with_text_MJiYLF",
