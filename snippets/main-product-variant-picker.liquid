@@ -531,28 +531,28 @@
                     endfor
                   endif
                 endunless
-                assign index_option = 'option' | append: option.position
-                assign available_option_values = available_variants | map: indexOption
+assign index_option = 'option' | append: option.position
+assign available_option_values = available_variants | map: indexOption
 
-                assign phone_option_names = ''
+assign phone_option_names = ''
 
-                if option.name == settings.phone_name
-                  paginate shop.metaobjects.compatible-devices.values by 10000
-                    assign compatible-devices = shop.metaobjects.compatible-devices.values
+if option.name == settings.phone_name
+  paginate shop.metaobjects['compatible-devices'].values by 10000
+    assign phone_properties = shop.metaobjects['compatible-devices'].values
 
-                    if compatible-devices
-                      for phone_property in compatible-devices
-                        for value in option.values
-                          assign phone_code = value | strip
+    if phone_properties
+      for phone_property in phone_properties
+        for value in option.values
+          assign phone_code = value | strip
 
-                          if phone_property.code == phone_code
-                            assign phone_option_names = phone_option_names | append: phone_code | append: ':' | append: phone_property.model.value | append: ';'
-                          endif
-                        endfor
-                      endfor
-                    endif
-                  endpaginate
-                endif
+          if phone_property.code == phone_code
+            assign phone_option_names = phone_option_names | append: phone_code | append: ':' | append: phone_property.model.value | append: ';'
+          endif
+        endfor
+      endfor
+    endif
+  endpaginate
+endif
               -%}
               {%- for value in option.values -%}
                 {%- liquid

@@ -17,21 +17,21 @@
     assign show_more_number = 10
   endif
 
-  assign phone_properties_all = shop.metaobjects.phone_properties.values
-  paginate phone_properties_all by 10000
-    assign phone_properties = phone_properties_all
-    if phone_properties
-      assign phone_option_names = ""
-      for phone_property in phone_properties
-        for value in sorted_values
-          assign phone_code = value.label | strip
-          if phone_property.code == phone_code
-            assign phone_option_names = phone_option_names | append: phone_code | append: ":" | append: phone_property.model.value | append: ";"
-          endif
-        endfor
+assign phone_properties_all = shop.metaobjects['compatible-devices'].values
+paginate phone_properties_all by 10000
+  assign phone_properties = phone_properties_all
+  if phone_properties
+    assign phone_option_names = ""
+    for phone_property in phone_properties
+      for value in sorted_values
+        assign phone_code = value.label | strip
+        if phone_property.code == phone_code
+          assign phone_option_names = phone_option_names | append: phone_code | append: ":" | append: phone_property.model.value | append: ";"
+        endif
       endfor
-    endif
-  endpaginate
+    endfor
+  endif
+endpaginate
   assign phone_option_names_list = phone_option_names | split: ";"
   assign phone_filter_values_unsorted = ""
   for value in sorted_values
