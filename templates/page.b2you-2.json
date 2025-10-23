@@ -973,9 +973,9 @@
         "color_icon": "#000000",
         "color_button_text": "#ffffff",
         "color_button": "#000000",
-        "background_container": "#ffffff",
+        "background_container": "#f8fafc",
         "gradient_background_container": "",
-        "background_section": "#ffffff",
+        "background_section": "#fff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
