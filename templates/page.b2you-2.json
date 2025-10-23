@@ -461,7 +461,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#fff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
           }
         },
@@ -479,7 +479,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#fff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
           }
         }
@@ -502,7 +502,7 @@
         "desktop_gap": 30,
         "auto_fit": false,
         "column_alignment": "left",
-        "enable_shadow": false,
+        "enable_shadow": true,
         "background_transparent": false,
         "button_label": "",
         "button_link": "",
