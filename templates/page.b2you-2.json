@@ -1231,7 +1231,7 @@
           "type": "custom_text",
           "settings": {
             "title": "Pojďme navázat spolupráci",
-            "content": "<p>Vyplňte prosím náš kontaktní formulář a stručně popište své požadavky. Na základě zadaných informací pro vás připravíme individuální nabídku na míru. Ozveme se vám co nejdříve s konkrétním řešením.<br/><br/>V případě, že preferujete osobní kontakt, jsme vám k dispozici i na telefonu +420 <strong>123 456 789</strong>.</p>"
+            "content": "<p>Vyplňte prosím náš kontaktní formulář a stručně popište své požadavky. Na základě zadaných informací pro vás připravíme individuální nabídku na míru. Ozveme se vám co nejdříve s konkrétním řešením.<br/><br/>V případě, že preferujete osobní kontakt, jsme vám k dispozici i na telefonu: <br/>+420 <strong>123 456 789</strong>.</p>"
           }
         }
       },
