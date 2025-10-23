@@ -1072,7 +1072,7 @@
             "border_color": "#121212",
             "border_radius": 2,
             "border": 1,
-            "fill_color": "#eee9e4",
+            "fill_color": "#fff",
             "padding": 35,
             "form_width": 600,
             "btn_text": "Submit",
