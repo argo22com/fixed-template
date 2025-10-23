@@ -42,10 +42,10 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Získat nabídku",
-            "button_link_1": "shopify://pages/b2you-nabidka",
+            "button_link_1": "#shopify-section-template--15895441014866__contact_form_YpfVGY",
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
-            "button_label_2": "Domluvit schůzku",
+            "button_label_2": "",
             "button_link_2": "#show-phone",
             "button_style_2": "primary",
             "button_open_new_tab_2": false
