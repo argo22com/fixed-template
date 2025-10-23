@@ -411,7 +411,6 @@
         "text_WnMAni",
         "button_EJpL83"
       ],
-      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "grid_layout": "grid",
@@ -488,6 +487,7 @@
         "column_TctgMa",
         "column_Gj6nPW"
       ],
+      "disabled": true,
       "name": "t:sections.promotion-cards.presets.name",
       "settings": {
         "title": "",
@@ -502,7 +502,7 @@
         "desktop_gap": 30,
         "auto_fit": false,
         "column_alignment": "left",
-        "enable_shadow": true,
+        "enable_shadow": false,
         "background_transparent": false,
         "button_label": "",
         "button_link": "",
@@ -585,7 +585,7 @@
         "text_BiebUK": {
           "type": "text",
           "settings": {
-            "text": "<p>Díky vlastní výrobě nabízíme široké možnosti <strong>customizace</strong>: </p><p>Logo vaší firmy na produktech Iniciály zaměstnanců na koženém příslušenství Individuální potisk, barvy i úpravy produktů Specifické funkce, např. vlastní klávesová zkratka </p><p>S námi to můžete být stále vy. </p>",
+            "text": "<p>Díky vlastní výrobě nabízíme široké možnosti <strong>customizace</strong>: </p><ul><li>Logo vaší firmy na produktech </li><li>Iniciály zaměstnanců na koženém příslušenství</li><li>Individuální potisk, barvy i úpravy produktů </li><li>Specifické funkce, např. vlastní klávesová zkratka </li></ul><p>S námi to můžete být stále vy. </p>",
             "text_style": "body"
           }
         },
@@ -605,7 +605,6 @@
         "text_BiebUK",
         "button_LxX4KF"
       ],
-      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "grid_layout": "grid",
