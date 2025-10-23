@@ -788,6 +788,7 @@
         "text_bqCNy7",
         "button_r9aKFX"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "grid_layout": "grid",
