@@ -541,12 +541,12 @@
                     assign compatible-devices = shop.metaobjects.compatible-devices.values
 
                     if compatible-devices
-                      for phone_property in compatible-devices
+                      for compatible-devices in compatible-devices
                         for value in option.values
                           assign phone_code = value | strip
 
-                          if phone_property.code == phone_code
-                            assign phone_option_names = phone_option_names | append: phone_code | append: ':' | append: phone_property.model.value | append: ';'
+                          if compatible-devices.code == phone_code
+                            assign phone_option_names = phone_option_names | append: phone_code | append: ':' | append: compatible-devices.model.value | append: ';'
                           endif
                         endfor
                       endfor
