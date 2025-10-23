@@ -840,7 +840,7 @@
         "highlight_border": false,
         "border_shape": "circle",
         "blur_background": false,
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "icon_width_mobile": 17,
         "border_spacing_mobile": 5,
         "swipe_on_mobile": false,
