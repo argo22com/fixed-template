@@ -980,14 +980,14 @@
         "text_hBBei6": {
           "type": "text",
           "settings": {
-            "text": "Domluvme si osobní setkání nebo telefonát",
+            "text": "Vyplňte formulář níže nebo volejte +420 123 456 789",
             "text_style": "body"
           }
         },
         "buttons_dqTQR8": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Kontaktní formulář",
+            "button_label_1": "",
             "button_link_1": "",
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
@@ -1003,6 +1003,7 @@
         "text_hBBei6",
         "buttons_dqTQR8"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "layout": "grid",
@@ -1209,11 +1210,36 @@
         "overlay_opacity": 80
       }
     },
+    "contact_form_YpfVGY": {
+      "type": "contact-form",
+      "blocks": {
+        "custom_text_mPcdLJ": {
+          "type": "custom_text",
+          "settings": {
+            "title": "Pojďme navázat spolupráci",
+            "content": "<p>Vyplňte prosím náš kontaktní formulář a stručně popište své požadavky. Na základě zadaných informací pro vás připravíme individuální nabídku na míru. Ozveme se vám co nejdříve s konkrétním řešením.<br/><br/>V případě, že preferujete osobní kontakt, jsme vám k dispozici i na telefonu +420 <strong>123 456 789</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_text_mPcdLJ"
+      ],
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "title": "Kontaktní formulář",
+        "subtitle": "",
+        "heading_size": "h2",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "17180107320ce2e4a0": {
       "type": "apps",
       "blocks": {
         "hulk_form_builder_form_block_rgQ3YU": {
           "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+          "disabled": true,
           "settings": {
             "form_uuid": "mzwPC766KqDNTDwd9b--4g",
             "form_settings": false,
@@ -1246,6 +1272,7 @@
       "block_order": [
         "hulk_form_builder_form_block_rgQ3YU"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "include_margins": true
@@ -1326,6 +1353,7 @@
     "image_banner_zwr73E",
     "image_with_text_UBCGy9",
     "gallery_lightbox_BPB3tU",
+    "contact_form_YpfVGY",
     "17180107320ce2e4a0",
     "rich_text_UR43tr",
     "featured_blog_LcaDHX"
