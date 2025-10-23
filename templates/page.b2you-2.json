@@ -120,6 +120,7 @@
         },
         "text_TRtq3r": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Přímá spolupráce s výrobcem znamená spolehlivost, férové ceny a rychlou reakci.</p>"
           }
@@ -281,15 +282,14 @@
         "heading_3tQLfY": {
           "type": "heading",
           "settings": {
-            "heading": "<h2><strong>Zaměřeno na vaše potřeby.</strong></h2>",
+            "heading": "<h2><strong>Zaměřeno na vaše potřeby</strong></h2>",
             "heading_size": "h0"
           }
         },
         "text_RzPRAi": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>Přímá spolupráce s výrobcem znamená spolehlivost, férové ceny a rychlou reakci.</p>"
           }
         }
       },
@@ -411,6 +411,7 @@
         "text_WnMAni",
         "button_EJpL83"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "grid_layout": "grid",
@@ -441,6 +442,84 @@
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
         "overlay_color": "#1e40af"
+      }
+    },
+    "multicolumn_TGGYfM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TctgMa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-10-22_at_12.23.24.png",
+            "icon": "check",
+            "title": "Přístup k celému portfoliu FIXED",
+            "text": "<p>Více než <strong>3 000 produktů</strong> pro všechny hlavní značky chytrých zařízení od krytů, skel, nabíječek a držáků až po powerbanky, lokátory a smart příslušenství.<br/> </p><ul><li>nabídky už od stovek kusů </li><li>benefiční program pro zaměstnance na www.fixed.zone </li><li>3letou záruku na všechny produkty </li></ul>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_Gj6nPW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/black.4808.jpg",
+            "icon": "check",
+            "title": "Vaše značka. Váš styl.",
+            "text": "<p>Díky vlastní výrobě nabízíme široké možnosti <strong>customizace</strong>: <br/><br/>Logo vaší firmy na produktech Iniciály zaměstnanců na koženém příslušenství Individuální potisk, barvy i úpravy produktů Specifické funkce, např. vlastní klávesová zkratka <br/><br/><strong>S námi to můžete být stále vy. </strong></p>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_TctgMa",
+        "column_Gj6nPW"
+      ],
+      "name": "t:sections.promotion-cards.presets.name",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "landscape",
+        "text_position": "bottom",
+        "columns_desktop": 2,
+        "columns_tablet": 2,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": false,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "rich_text_GVc7hC": {
@@ -526,6 +605,7 @@
         "text_BiebUK",
         "button_LxX4KF"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "grid_layout": "grid",
@@ -1158,6 +1238,7 @@
     "rich_text_anBdbG",
     "text_icons_fictdW",
     "image_with_text_bLNrKx",
+    "multicolumn_TGGYfM",
     "rich_text_GVc7hC",
     "image_with_text_wXpUCh",
     "image_with_text_KKDmGw",
