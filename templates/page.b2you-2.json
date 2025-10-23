@@ -987,11 +987,11 @@
         "buttons_dqTQR8": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
+            "button_label_1": "Kontaktní formulář",
             "button_link_1": "",
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
-            "button_label_2": "Button label",
+            "button_label_2": "",
             "button_link_2": "",
             "button_style_2": "primary",
             "button_open_new_tab_2": false
@@ -1077,6 +1077,7 @@
         "text_RFYFBa",
         "button_aXnWqd"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "grid_layout": "grid",
