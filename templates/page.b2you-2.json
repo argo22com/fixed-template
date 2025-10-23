@@ -27,15 +27,15 @@
         "heading_Jex9x4": {
           "type": "heading",
           "settings": {
-            "heading": "Firemní program B2You",
+            "heading": "Firemní program FIXED B2You",
             "size": "h1"
           }
         },
         "text_KMparF": {
           "type": "text",
           "settings": {
-            "text": "<strong> Dostávejte nabídky na míru vašemu byznysu za skvělých podmínek</strong>",
-            "text_style": "subtitle"
+            "text": "Vytvoříme nabídku na míru vašemu byznysu",
+            "text_style": "body"
           }
         },
         "buttons_4m37Mi": {
@@ -64,8 +64,8 @@
         "image_overlay_opacity": 40,
         "image_height": "small",
         "image_height_mobile": "medium-mobile",
-        "desktop_content_position": "bottom-left",
-        "desktop_content_alignment": "left",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
         "keep_ltr": false,
         "hide_when_empty_image": false,
         "preload": false,
@@ -114,14 +114,8 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h1><strong>Program FIXED B2You <br/>příslušenství na míru vašemu byznysu</strong></h1>",
+            "heading": "<h1><strong>Příslušenství na míru vašemu byznysu</strong></h1>",
             "heading_size": "h2"
-          }
-        },
-        "text_PTb6yL": {
-          "type": "text",
-          "settings": {
-            "text": "<h2><strong>Příslušenství pro byznys. Zaměřeno na vaše potřeby.</strong></h2>"
           }
         },
         "text_TRtq3r": {
@@ -133,7 +127,6 @@
       },
       "block_order": [
         "heading_UWbDfX",
-        "text_PTb6yL",
         "text_TRtq3r"
       ],
       "settings": {
@@ -164,7 +157,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#ffffff",
+            "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
           }
         },
@@ -182,7 +175,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#ffffff",
+            "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
           }
         },
@@ -200,7 +193,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#ffffff",
+            "card_color_background": "#f8fafc",
             "card_color_background_gradient": ""
           }
         },
@@ -250,21 +243,21 @@
       ],
       "name": "t:sections.promotion-cards.presets.name",
       "settings": {
-        "title": "Hlavní výhody",
+        "title": "",
         "subtitle": "",
         "heading_size": "h1",
         "media_type": "image",
-        "media_width_desktop": "100",
-        "image_ratio": "adapt",
-        "text_position": "bottom",
-        "columns_desktop": 3,
-        "columns_tablet": 3,
+        "media_width_desktop": "50",
+        "image_ratio": "landscape",
+        "text_position": "right",
+        "columns_desktop": 2,
+        "columns_tablet": 2,
         "desktop_gap": 30,
         "auto_fit": false,
         "column_alignment": "left",
-        "enable_shadow": true,
+        "enable_shadow": false,
         "background_transparent": false,
-        "button_label": "Získat nabídku",
+        "button_label": "",
         "button_link": "shopify://pages/b2you-nabidka",
         "button_open_new_tab": false,
         "enable_section_box_layout": false,
@@ -280,6 +273,39 @@
         "text_boxes_radius": 10,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_anBdbG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3tQLfY": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2><strong>Zaměřeno na vaše potřeby.</strong></h2>",
+            "heading_size": "h1"
+          }
+        },
+        "text_RzPRAi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3tQLfY",
+        "text_RzPRAi"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "text_icons_fictdW": {
@@ -1081,6 +1107,7 @@
     "custom_liquid_4XeBjy",
     "rich_text_GnRiqE",
     "multicolumn_4X9pNH",
+    "rich_text_anBdbG",
     "text_icons_fictdW",
     "image_with_text_bLNrKx",
     "rich_text_GVc7hC",
