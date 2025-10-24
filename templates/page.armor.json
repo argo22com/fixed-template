@@ -143,6 +143,7 @@
       "blocks": {
         "column_MLnBw7": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/armor_pruznost.jpg",
             "icon": "check",
@@ -182,6 +183,7 @@
         "column_MLnBw7",
         "column_xr8Xx8"
       ],
+      "disabled": true,
       "name": "t:sections.promotion-cards.presets.name",
       "settings": {
         "title": "",
@@ -239,7 +241,6 @@
         "heading_TJjMV3",
         "text_FgxdBE"
       ],
-      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/armor_pruznost.jpg",
@@ -294,7 +295,6 @@
         "heading_J8hx6t",
         "text_PQARFT"
       ],
-      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/armor_antireflex.png",
