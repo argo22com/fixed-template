@@ -98,7 +98,7 @@
         "text_Rc9KRn": {
           "type": "text",
           "settings": {
-            "text": "<p>Produkty pod značkou Armor se vyznačují zvýšenou odolností, moderním a čistým designem za použití pokročilých technologických procesů a prémiových materiálů. Jsou to produkty s vysokými standardy pro funkčnost bez kompromisů.</p>",
+            "text": "<p>Produkty pod značkou Armor se vyznačují <strong>zvýšenou odolností</strong>, moderním a čistým designem za použití pokročilých technologických procesů a prémiových materiálů. Jsou to produkty s vysokými standardy pro funkčnost bez kompromisů.</p>",
             "text_style": "body"
           }
         }
