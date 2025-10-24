@@ -102,7 +102,21 @@
             </div>
             <div class="field">
               <label class="field__label text-small font-body-semi-bold uppercase" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
-              <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" pattern="[0-13\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}">
+           
+  <input
+  type="tel"
+  id="ContactForm-phone"
+  class="field__input"
+  name="contact[{{ 'templates.contact.form.phone' | t }}]"
+  autocomplete="tel"
+  inputmode="tel"
+  pattern="^\+?[0-9 ]{7,15}$"
+  title="Zadejte telefonní číslo v mezinárodním formátu, např. +420608222333 nebo +4915123456789"
+  placeholder="+420608222333"
+  value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+>
+
+           
             </div>
             <div class="field field--full">
               <label class="field__label text-small font-body-semi-bold uppercase" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
