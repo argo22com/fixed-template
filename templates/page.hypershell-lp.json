@@ -146,6 +146,7 @@
         "column_NYe7nm": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/x-GO.jpg",
             "icon": "check",
             "title": "Hypershell X Go",
             "text": "<p>Základní podpora pro každý pohyb. </p><p><strong>400</strong> W | <strong>15</strong> km | <strong>6</strong> inteligentních režimů | <strong>2</strong> kg</p>",
@@ -201,6 +202,37 @@
         "padding_bottom": 36
       }
     },
+    "testimonials_PMma9J": {
+      "type": "testimonials",
+      "blocks": {
+        "quote_ytt94D": {
+          "type": "quote",
+          "settings": {
+            "title": "Quote heading",
+            "content": "<p>Quote content</p>",
+            "number_of_stars": 5,
+            "user_full_name": "Full name",
+            "hide_avatar": false,
+            "user_title": "User title"
+          }
+        }
+      },
+      "block_order": [
+        "quote_ytt94D"
+      ],
+      "name": "t:sections.testimonials.presets.name",
+      "settings": {
+        "title": "What clients say",
+        "subtitle": "",
+        "heading_size": "h1",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection_eR9Hfp": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -235,39 +267,9 @@
         "padding_bottom": 36
       }
     },
-    "testimonials_PMma9J": {
-      "type": "testimonials",
-      "blocks": {
-        "quote_ytt94D": {
-          "type": "quote",
-          "settings": {
-            "title": "Quote heading",
-            "content": "<p>Quote content</p>",
-            "number_of_stars": 5,
-            "user_full_name": "Full name",
-            "hide_avatar": false,
-            "user_title": "User title"
-          }
-        }
-      },
-      "block_order": [
-        "quote_ytt94D"
-      ],
-      "name": "t:sections.testimonials.presets.name",
-      "settings": {
-        "title": "What clients say",
-        "subtitle": "",
-        "heading_size": "h1",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_section_box_layout": false,
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "section_width": "grid",
         "content_alignment": "left",
