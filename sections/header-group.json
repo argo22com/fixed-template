@@ -195,7 +195,7 @@
         "mega_menu_product_brand_eMcj9n": {
           "type": "mega_menu_product_brand",
           "settings": {
-            "trigger": "Objevujte",
+            "trigger": "O nás",
             "title": "Objevujte",
             "position": "last",
             "item_label": "Pro firmy",
@@ -225,10 +225,10 @@
         "mega_menu_product_brand_KBhfXH": {
           "type": "mega_menu_product_brand",
           "settings": {
-            "trigger": "Objevujte",
-            "title": "O nás",
+            "trigger": "O nás",
+            "title": "O společnosti",
             "position": "last",
-            "item_label": "O nás",
+            "item_label": "O společnosti",
             "image_ratio": "circle",
             "brand_1": "Seznamte se s FIXED",
             "brand_link_1": "shopify://pages/seznamte-se-s-fixed",
