@@ -70,8 +70,8 @@
         "menu_badge_CxNkFp": {
           "type": "menu_badge",
           "settings": {
-            "trigger": "EKO pouzdra",
-            "text": "Výprodej -70 %",
+            "trigger": "Výprodej",
+            "text": "Slevy až -70 %",
             "text_color": "#ffffff",
             "background_color": "#dc4405"
           }
