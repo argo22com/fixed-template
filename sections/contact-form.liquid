@@ -103,15 +103,12 @@
             <div class="field">
               <label class="field__label text-small font-body-semi-bold uppercase" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
            
- <input
+<input
   type="tel"
   id="ContactForm-phone"
   class="field__input"
   name="contact[phone]"
-  autocomplete="off"
-  autocorrect="off"
-  autocapitalize="off"
-  spellcheck="false"
+  autocomplete="tel"
   inputmode="tel"
   pattern="^\+?[0-9 ]{7,15}$"
   title="Zadejte telefon v mezinárodním formátu, např. +420111222333"
