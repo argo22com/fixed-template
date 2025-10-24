@@ -177,7 +177,7 @@
         "media_width_desktop": "100",
         "image_ratio": "adapt",
         "text_position": "bottom",
-        "columns_desktop": 2,
+        "columns_desktop": 4,
         "columns_tablet": 3,
         "desktop_gap": 17,
         "auto_fit": false,
