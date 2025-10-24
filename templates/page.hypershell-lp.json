@@ -9,6 +9,263 @@
  */
 {
   "sections": {
+    "image_banner_xtFwRW": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_BhLMjb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hypershell X",
+            "size": "h0"
+          }
+        },
+        "text_H63ciF": {
+          "type": "text",
+          "settings": {
+            "text": "Nejmodernější exoskeletony na světě",
+            "text_style": "body"
+          }
+        },
+        "buttons_RAi48Y": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Zjistit více",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "Koupit",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_BhLMjb",
+        "text_H63ciF",
+        "buttons_RAi48Y"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "layout": "grid",
+        "image": "shopify://shop_images/hypershell-bann-pro.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_BQprXP": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Lktdgk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/x-ultra.jpg",
+            "icon": "check",
+            "title": "Hypershell X Ultra",
+            "text": "<p>Špičkový výkon pro extrémní expedice. </p><p><strong>1000 </strong>W<strong> | 30 </strong>km | <strong>12</strong> inteligentních režimů | <strong>1,8</strong> kg</p>",
+            "link_label": "Prozkoumat",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#166534",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#effdf4",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_Y6Tcbw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/x-carbon.jpg",
+            "icon": "check",
+            "title": "Hypershell X Carbon",
+            "text": "<p>Maximální mobilita pro minimalistický průzkum.</p><p><strong>800</strong> W | <strong>17,5</strong> km | <strong>10</strong> inteligentních režimů | <strong>1,8</strong> kg</p>",
+            "link_label": "Prozkoumat",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#a06207",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fefce8",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_H36z3q": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/X-pro.jpg",
+            "icon": "check",
+            "title": "Hypershell X Pro",
+            "text": "<p>Vyvážený výkon pro dobrodružství v každém terénu.</p><p><strong>800 </strong>W | <strong>17,5</strong> km | <strong>10</strong> inteligentních režimů | <strong>2</strong> kg</p>",
+            "link_label": "Prozkoumat",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#981c1b",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fef2f2",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_NYe7nm": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "title": "Hypershell X Go",
+            "text": "<p>Základní podpora pro každý pohyb. </p><p><strong>400</strong> W | <strong>15</strong> km | <strong>6</strong> inteligentních režimů | <strong>2</strong> kg</p>",
+            "link_label": "Prozkoumat",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Lktdgk",
+        "column_Y6Tcbw",
+        "column_H36z3q",
+        "column_NYe7nm"
+      ],
+      "name": "t:sections.promotion-cards.presets.name",
+      "settings": {
+        "title": "Hypershell X",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 2,
+        "columns_tablet": 3,
+        "desktop_gap": 17,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": true,
+        "background_transparent": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_eR9Hfp": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Příslušenství",
+        "subtitle": "",
+        "collection": "",
+        "heading_size": "h1",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "enable_desktop_slider": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "image_position_desktop": "left",
+        "image_height": "adapt_product_list",
+        "image_height_mobile": "34",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_compare": true,
+        "enable_quick_view": true,
+        "show_color_swatches": true,
+        "color_swatches_style": "custom",
+        "columns_tablet": "3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "testimonials_PMma9J": {
+      "type": "testimonials",
+      "blocks": {
+        "quote_ytt94D": {
+          "type": "quote",
+          "settings": {
+            "title": "Quote heading",
+            "content": "<p>Quote content</p>",
+            "number_of_stars": 5,
+            "user_full_name": "Full name",
+            "hide_avatar": false,
+            "user_title": "User title"
+          }
+        }
+      },
+      "block_order": [
+        "quote_ytt94D"
+      ],
+      "name": "t:sections.testimonials.presets.name",
+      "settings": {
+        "title": "What clients say",
+        "subtitle": "",
+        "heading_size": "h1",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -22,6 +279,10 @@
     }
   },
   "order": [
+    "image_banner_xtFwRW",
+    "multicolumn_BQprXP",
+    "testimonials_PMma9J",
+    "featured_collection_eR9Hfp",
     "main"
   ]
 }
