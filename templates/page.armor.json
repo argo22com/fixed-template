@@ -90,8 +90,8 @@
         "heading_Mf43cQ": {
           "type": "heading",
           "settings": {
-            "heading": "Produkty Armor",
-            "heading_size": "h2",
+            "heading": "Armor",
+            "heading_size": "h1",
             "enable_bold_heading": true
           }
         },
@@ -225,7 +225,7 @@
           "type": "heading",
           "settings": {
             "heading": "Ultraodolnost díky vysoké pružnosti",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "enable_bold_heading": true
           }
         },
