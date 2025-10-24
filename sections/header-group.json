@@ -356,22 +356,6 @@
             "color_scheme": "inverse"
           }
         },
-        "menu_label_fBV3r3": {
-          "type": "menu_label",
-          "settings": {
-            "title": "Seznam přání",
-            "icon": "heart",
-            "link": "#hero-wishlist"
-          }
-        },
-        "3753f6b7-733c-49d7-881c-f8fe4195e49f": {
-          "type": "menu_label",
-          "settings": {
-            "title": "Doprava",
-            "icon": "delivery",
-            "link": "shopify://pages/zpusoby-dopravy-a-platby"
-          }
-        },
         "mega_menu_promotion_9HJwDd": {
           "type": "mega_menu_promotion",
           "disabled": true,
@@ -507,6 +491,14 @@
             "title": "Doprava a platba",
             "link": "shopify://pages/zpusoby-dopravy-a-platby"
           }
+        },
+        "store_information_B3E87z": {
+          "type": "store_information",
+          "settings": {
+            "icon": "heart",
+            "title": "Můj seznam",
+            "link": "#hero-wishlist"
+          }
         }
       },
       "block_order": [
@@ -525,15 +517,14 @@
         "mega_menu_product_brand_3VPHNd",
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_qrrCqd",
-        "menu_label_fBV3r3",
-        "3753f6b7-733c-49d7-881c-f8fe4195e49f",
         "mega_menu_promotion_9HJwDd",
         "mega_menu_promotion_fXE9Ac",
         "mega_menu_promotion_ya4VNA",
         "mega_menu_promotion_fBdRTY",
         "mega_menu_promotion_TLTfPK",
         "mega_menu_promotion_LL7tjW",
-        "store_information_4TNjEH"
+        "store_information_4TNjEH",
+        "store_information_B3E87z"
       ],
       "custom_css": [
         ".header__heading {margin-top: -27px;}",
