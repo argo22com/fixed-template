@@ -138,6 +138,84 @@
         "overlay_color": "#1e40af"
       }
     },
+    "multicolumn_cMrjAy": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_MLnBw7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/armor_pruznost.jpg",
+            "icon": "check",
+            "title": "Ultraodolnost díky vysoké pružnosti",
+            "text": "<ul><li>Extrémně vysoká pevnost skla – až 3× vyšší než u běžných skel​</li><li>O 30 % vyšší pružnost, která absorbuje případné nárazy a  odolává téměř všem běžným pádům​</li><li>Parametry testovány ve FIXED</li></ul>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        },
+        "column_xr8Xx8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/armor_antireflex.jpg",
+            "icon": "check",
+            "title": "Antireflexní vrstva",
+            "text": "<ul><li>Nejvyšší propustnost světla na trhu – více než 94 % – zajistí významný pozitivní rozdíl v čitelnosti displeje​</li><li>Antireflexní vrstva zlepšuje čitelnost displeje, zejména na slunci nebo pod umělým osvětlením</li><li>Parametry testovány ve FIXED</li></ul>",
+            "link_label": "",
+            "link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false,
+            "card_color_text": "#000000",
+            "color_button_text": "#fff",
+            "color_button": "#2563eb",
+            "card_color_background": "#fff",
+            "card_color_background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_MLnBw7",
+        "column_xr8Xx8"
+      ],
+      "name": "t:sections.promotion-cards.presets.name",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "media_type": "image",
+        "media_width_desktop": "100",
+        "image_ratio": "adapt",
+        "text_position": "bottom",
+        "columns_desktop": 2,
+        "columns_tablet": 2,
+        "desktop_gap": 30,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "enable_shadow": false,
+        "background_transparent": false,
+        "button_label": "",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "enable_parallax_scrolling_effect": true,
+        "background_image_overlay_color": "button",
+        "columns_mobile": "1",
+        "mobile_gap": 30,
+        "media_width_mobile": "100",
+        "swipe_on_mobile": false,
+        "text_boxes_border_thickness": 0,
+        "text_boxes_border_opacity": 0,
+        "text_boxes_radius": 10,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_h7EAQW": {
       "type": "image-with-text",
       "blocks": {
@@ -161,6 +239,7 @@
         "heading_TJjMV3",
         "text_FgxdBE"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/armor_pruznost.jpg",
@@ -215,6 +294,7 @@
         "heading_J8hx6t",
         "text_PQARFT"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/armor_antireflex.png",
@@ -491,25 +571,28 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
-        "color_heading": "#000",
+        "color_heading": "#000000",
         "gradient_heading": "",
-        "color_text": "#000",
-        "color_highlight_text": "#DA2127",
-        "color_caption": "#000",
-        "color_countdown": "#000",
-        "color_icon": "#000",
-        "color_button_text": "#fff",
-        "color_button": "#000",
-        "background_container": "#fff",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
         "gradient_background_container": "",
-        "background_section": "#fff",
+        "background_section": "#ffffff",
         "gradient_background_section": "",
         "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1E40AF"
+        "overlay_color": "#1e40af"
       }
     },
     "page_xWFHVt": {
       "type": "page",
+      "custom_css": [
+        "table {width: 100%;}"
+      ],
       "settings": {
         "page": "test-armor-skla",
         "heading_size": "h2",
@@ -707,7 +790,7 @@
         "enable_video_looping": true,
         "full_width": false,
         "hide_when_empty_video": false,
-        "enable_section_box_layout": false,
+        "enable_section_box_layout": true,
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
@@ -763,6 +846,7 @@
     "main",
     "image_banner_7GGLw8",
     "image_with_text_rRBN9q",
+    "multicolumn_cMrjAy",
     "image_with_text_h7EAQW",
     "image_with_text_x39Mgh",
     "image_with_text_bXVgiV",
