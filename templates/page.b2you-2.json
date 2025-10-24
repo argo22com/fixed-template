@@ -599,7 +599,7 @@
         "text_BiebUK": {
           "type": "text",
           "settings": {
-            "text": "<p>Díky vlastní výrobě nabízíme široké možnosti <strong>customizace</strong>: </p><ul><li>Logo vaší firmy na produktech </li><li>Iniciály zaměstnanců na koženém příslušenství</li><li>Individuální potisk, barvy i úpravy produktů </li><li>Specifické funkce, např. vlastní klávesová zkratka </li></ul><p><strong>S námi to můžete být stále vy. </strong></p>",
+            "text": "<p>Díky vlastní výrobě nabízíme široké možnosti <strong>personalizace</strong>: </p><ul><li>Logo vaší firmy na produktech </li><li>Iniciály zaměstnanců na koženém příslušenství</li><li>Individuální potisk, barvy i úpravy produktů </li><li>Specifické funkce, např. vlastní klávesová zkratka </li></ul><p><strong>S námi to můžete být stále vy. </strong></p>",
             "text_style": "body"
           }
         },
@@ -921,7 +921,7 @@
         "heading_DRqHmq": {
           "type": "heading",
           "settings": {
-            "heading": "3 roky záruky na všechny produkty FIXED",
+            "heading": "3 roky záruka platí i na nákupy \"na firmu\"",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
@@ -929,7 +929,7 @@
         "text_HeaXYM": {
           "type": "text",
           "settings": {
-            "text": "<p>Kvalita, spolehlivost, dlouhá životnost – to jsou pilíře, na kterých stojí FIXED. Na všechny produkty proto poskytujeme <strong>3letou záruku</strong>, o rok delší než standard. </p><p><strong>99,4 % bezvadných produktů</strong> Pouze <strong>0,6 % reklamací</strong> – až 5× méně než konkurence </p>",
+            "text": "<p>Kvalita, spolehlivost, dlouhá životnost – to jsou pilíře, na kterých stojí FIXED. Na všechny produkty proto poskytujeme tříletou záruku, tedy o 2 roky delší, než je standard při nákupech na firmu.</p><p><strong>99,4 % bezvadných produktů</strong> Pouze <strong>0,6 % reklamací</strong> – až 5× méně než konkurence </p>",
             "text_style": "body"
           }
         },
