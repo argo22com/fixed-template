@@ -430,6 +430,7 @@
         "heading_9RkAxL",
         "text_W7e6H9"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "left",
         "desktop_content_width": "large",
@@ -439,6 +440,72 @@
         "full_width": false,
         "padding_top": 40,
         "padding_bottom": 0
+      }
+    },
+    "image_with_text_Pk3HyJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6GpUtJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Testování odolnosti skel",
+            "heading_size": "h1",
+            "enable_bold_heading": true
+          }
+        },
+        "text_cFRKXh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Abychom si byli kvalitou ochrany jisti, každý aspekt pečlivě testujeme.</p><p>Testujeme odolnost skla, ale i uživatelský zážitek.</p><p>Testů odolnosti existuje několik:</p><ul><li>Odolnost vůči pádu na plochu skla – pád ocelové kuličky o váze 64 g na samotné sklo</li><li>Odolnost proti poškrábání – rydly různé tvrdosti se zjišťuje tvrdost skla na Mohsově stupnici odolnosti</li><li>Odolnost hrany – dopad hrany skla na ostrou špičku</li></ul><p></p><p>Testy pro vylepšení uživatelského zážitku:</p><ul><li>Test propustnosti světla – ovlivňuje zejména dobrou viditelnost displeje pod ochranným sklem</li><li>Mikroskopický test na kapce destilované vody – takto se testuje oleofobní vrstva, která napomáhá hladkému skluzu po skle a redukuje vznik otisků prstů</li><li>Analýza obsahu příslušenství v balení – jednoduchá aplikace skla na telefon</li></ul><p></p>",
+            "text_style": "body"
+          }
+        },
+        "button_9QRfcY": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "solid",
+            "button_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_6GpUtJ",
+        "text_cFRKXh",
+        "button_9QRfcY"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/1B1A66332.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000",
+        "gradient_heading": "",
+        "color_text": "#000",
+        "color_highlight_text": "#DA2127",
+        "color_caption": "#000",
+        "color_countdown": "#000",
+        "color_icon": "#000",
+        "color_button_text": "#fff",
+        "color_button": "#000",
+        "background_container": "#fff",
+        "gradient_background_container": "",
+        "background_section": "#fff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1E40AF"
       }
     },
     "page_xWFHVt": {
@@ -702,6 +769,7 @@
     "featured_collection_Jbdayq",
     "multicolumn_XKCb7x",
     "rich_text_akQrQY",
+    "image_with_text_Pk3HyJ",
     "page_xWFHVt",
     "banner_grid_nNa8c6",
     "video_jrq3tR",
