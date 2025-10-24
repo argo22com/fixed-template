@@ -405,8 +405,8 @@
         "text_boxes_border_thickness": 0,
         "text_boxes_border_opacity": 0,
         "text_boxes_radius": 10,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     },
     "rich_text_akQrQY": {
