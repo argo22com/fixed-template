@@ -499,6 +499,14 @@
             "title": "Můj seznam",
             "link": "#hero-wishlist"
           }
+        },
+        "store_information_hfbNHe": {
+          "type": "store_information",
+          "settings": {
+            "icon": "presentation_chart_bar",
+            "title": "Objev naše produkty",
+            "link": "shopify://pages/akce"
+          }
         }
       },
       "block_order": [
@@ -524,7 +532,8 @@
         "mega_menu_promotion_TLTfPK",
         "mega_menu_promotion_LL7tjW",
         "store_information_4TNjEH",
-        "store_information_B3E87z"
+        "store_information_B3E87z",
+        "store_information_hfbNHe"
       ],
       "custom_css": [
         ".header__heading {margin-top: -27px;}",
