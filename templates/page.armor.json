@@ -119,7 +119,7 @@
         "hide_when_empty_image": false,
         "preload": false,
         "mobile_content_alignment": "left",
-        "padding_top": 8,
+        "padding_top": 0,
         "padding_bottom": 0,
         "color_heading": "#000000",
         "gradient_heading": "",
