@@ -929,7 +929,7 @@
         "text_HeaXYM": {
           "type": "text",
           "settings": {
-            "text": "<p>Kvalita, spolehlivost, dlouhá životnost – to jsou pilíře, na kterých stojí FIXED. Na všechny produkty proto poskytujeme tříletou záruku, tedy o 2 roky delší, než je standard při nákupech na firmu.</p><p><strong>99,4 % bezvadných produktů</strong> Pouze <strong>0,6 % reklamací</strong> – až 5× méně než konkurence </p>",
+            "text": "<p>Kvalita, spolehlivost, dlouhá životnost – to jsou pilíře, na kterých stojí FIXED. Na všechny produkty proto poskytujeme tříletou záruku, tedy o 2 roky delší, než je standard při nákupech na firmu.</p><p><strong>99,4 %</strong> bezvadných produktů znamená jen <strong>0,6 %</strong> reklamací, což je až <strong>5x méně</strong>, než konkurence.</p>",
             "text_style": "body"
           }
         },
@@ -1231,7 +1231,7 @@
           "type": "custom_text",
           "settings": {
             "title": "Pojďme navázat spolupráci",
-            "content": "<p>Vyplňte prosím náš kontaktní formulář a stručně popište své požadavky. Na základě zadaných informací pro vás připravíme individuální nabídku na míru. Ozveme se vám co nejdříve s konkrétním řešením.<br/><br/>V případě, že preferujete osobní kontakt, jsme vám k dispozici i na telefonu: <br/>+420 <strong>123 456 789</strong>.</p>"
+            "content": "<p>text pod HL vyměnit za:<br/>Vyplňte náš kontaktní formulář a začněte využívat všech výhod programu B2You. Náš obchodník vás bude kontaktovat v co nejkratším možném termínu.<br/><br/>Můžete nás také kontaktovat telefonicky na:<a href=\"tel:+420385510206\"><strong>+420 385 510 206</strong></a></p>"
           }
         }
       },
