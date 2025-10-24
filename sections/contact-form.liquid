@@ -111,10 +111,11 @@
   autocomplete="tel"
   inputmode="tel"
   pattern="^\+?[0-9 ]{7,15}$"
-  title="Zadejte telefonní číslo v mezinárodním formátu, např. +420608222333 nebo +4915123456789"
-  placeholder="+420608222333"
+  title="Zadejte telefonní číslo v mezinárodním formátu, např. +420111222333 nebo +4915123456789"
+  placeholder="+420111222333"
   value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
 >
+
 
            
             </div>
