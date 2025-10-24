@@ -86,6 +86,54 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_tKX8cm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RGikHB": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Revoluce v pohybu</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_d3UhUG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_Dr4pUz": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_RGikHB",
+        "text_d3UhUG",
+        "button_Dr4pUz"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "multicolumn_BQprXP": {
       "type": "multicolumn",
       "blocks": {
@@ -302,6 +350,7 @@
   },
   "order": [
     "image_banner_xtFwRW",
+    "rich_text_tKX8cm",
     "multicolumn_BQprXP",
     "video_xaNmrH",
     "testimonials_PMma9J",
