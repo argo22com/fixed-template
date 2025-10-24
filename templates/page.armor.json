@@ -390,7 +390,7 @@
         "desktop_gap": 30,
         "auto_fit": false,
         "column_alignment": "left",
-        "enable_shadow": true,
+        "enable_shadow": false,
         "background_transparent": true,
         "button_label": "",
         "button_link": "",
@@ -432,12 +432,12 @@
         "text_W7e6H9"
       ],
       "settings": {
-        "desktop_content_position": "center",
+        "desktop_content_position": "left",
         "desktop_content_width": "large",
         "content_alignment": "left",
         "enable_section_box_layout": false,
         "color_scheme": "",
-        "full_width": true,
+        "full_width": false,
         "padding_top": 40,
         "padding_bottom": 0
       }
