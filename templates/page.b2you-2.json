@@ -1231,7 +1231,7 @@
           "type": "custom_text",
           "settings": {
             "title": "Pojďme navázat spolupráci",
-            "content": "<p>text pod HL vyměnit za:<br/>Vyplňte náš kontaktní formulář a začněte využívat všech výhod programu B2You. Náš obchodník vás bude kontaktovat v co nejkratším možném termínu.<br/><br/>Můžete nás také kontaktovat telefonicky na:<a href=\"tel:+420385510206\"><strong>+420 385 510 206</strong></a></p>"
+            "content": "<p>text pod HL vyměnit za:<br/>Vyplňte náš kontaktní formulář a začněte využívat všech výhod programu B2You. Náš obchodník vás bude kontaktovat v co nejkratším možném termínu.<br/><br/>Můžete nás také kontaktovat telefonicky na: <a href=\"tel:+420385510206\"><strong>+420 385 510 206</strong></a></p>"
           }
         }
       },
