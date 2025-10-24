@@ -714,6 +714,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "title": "Doporučené produkty",
         "subtitle": "",
@@ -741,6 +742,7 @@
     },
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed": {
       "type": "recently-viewed-products",
+      "disabled": true,
       "settings": {
         "title": "Naposledy zobrazené produkty",
         "subtitle": "",
