@@ -120,7 +120,7 @@
         "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 8,
-        "padding_bottom": 8,
+        "padding_bottom": 0,
         "color_heading": "#000000",
         "gradient_heading": "",
         "color_text": "#000000",
