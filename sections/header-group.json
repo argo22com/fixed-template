@@ -42,14 +42,14 @@
             "trigger": "Produkty",
             "title": "Produkty",
             "image": "shopify://shop_images/armor_5d81f6de-d16d-4d74-8c03-61fc6af4ff32.jpg",
-            "image_ratio": "landscape",
+            "image_ratio": "square",
             "caption": "",
             "heading_text": "",
             "subheading": "Ultraodolné sklo armor",
             "button_label": "Objevit",
             "button_style": "link",
             "text_align": "center",
-            "text_position": "2",
+            "text_position": "3",
             "link": "shopify://pages/armor",
             "position": "last",
             "overlay_text_enable": true,
@@ -499,6 +499,14 @@
             "overlay_opacity": 50,
             "color_scheme": "inverse"
           }
+        },
+        "store_information_4TNjEH": {
+          "type": "store_information",
+          "settings": {
+            "icon": "calendar",
+            "title": "Doprava a platba",
+            "link": "shopify://pages/zpusoby-dopravy-a-platby"
+          }
         }
       },
       "block_order": [
@@ -524,7 +532,8 @@
         "mega_menu_promotion_ya4VNA",
         "mega_menu_promotion_fBdRTY",
         "mega_menu_promotion_TLTfPK",
-        "mega_menu_promotion_LL7tjW"
+        "mega_menu_promotion_LL7tjW",
+        "store_information_4TNjEH"
       ],
       "custom_css": [
         ".header__heading {margin-top: -27px;}",
