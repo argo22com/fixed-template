@@ -202,6 +202,26 @@
         "padding_bottom": 36
       }
     },
+    "video_xaNmrH": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "title": "Video",
+        "subtitle": "",
+        "heading_size": "h1",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "testimonials_PMma9J": {
       "type": "testimonials",
       "blocks": {
@@ -283,6 +303,7 @@
   "order": [
     "image_banner_xtFwRW",
     "multicolumn_BQprXP",
+    "video_xaNmrH",
     "testimonials_PMma9J",
     "featured_collection_eR9Hfp",
     "main"
