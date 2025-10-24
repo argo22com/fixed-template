@@ -154,9 +154,9 @@
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         },
@@ -172,9 +172,9 @@
             "button_style": "solid",
             "button_open_new_tab": false,
             "card_color_text": "#000000",
-            "color_button_text": "#fff",
+            "color_button_text": "#ffffff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
         }
@@ -768,7 +768,7 @@
         "desktop_gap": 30,
         "mobile_gap": 10,
         "hide_when_empty_content": true,
-        "enable_section_box_layout": true,
+        "enable_section_box_layout": false,
         "media_border_thickness": 1,
         "media_border_opacity": 5,
         "media_radius": 15,
