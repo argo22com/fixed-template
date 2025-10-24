@@ -9,133 +9,81 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-product",
+    "image_banner_97JDHj": {
+      "type": "image-banner",
       "blocks": {
-        "title": {
-          "type": "title",
+        "heading_jRdNRj": {
+          "type": "heading",
           "settings": {
-            "show_vendor_link": false,
-            "title_size": "h3"
+            "heading": "Hypershell X Ultra",
+            "size": "h0"
           }
         },
-        "2525f94e-add4-418e-b362-bd2bb35545fa": {
-          "type": "rating",
-          "settings": {
-            "show_if_no_reviews": true
-          }
-        },
-        "popup_XDycdy": {
-          "type": "popup",
-          "disabled": true,
-          "settings": {
-            "text": "Tabulka velikostí",
-            "page": "tabulka-velikosti-univerzalni-pouzdra"
-          }
-        },
-        "text_TL7xaD": {
+        "text_D4tegH": {
           "type": "text",
           "settings": {
-            "icon": "none",
-            "text": "",
+            "text": "Podpořte svou sílu, výkon, a vytrvalost s Hypershell X Ultra.",
             "text_style": "body"
           }
         },
-        "text_in_multi_line_enwE7B": {
-          "type": "text_in_multi_line",
+        "buttons_PqyXHJ": {
+          "type": "buttons",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.kr_tk_popisek | metafield_tag }}</p>"
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-            "variant_price": true
-          }
-        },
-        "e592d434-8377-4309-b179-f98d4b3742a2": {
-          "type": "sale_box",
-          "settings": {
-            "show_free_shipping_bar": false,
-            "enable_compare": true,
-            "picker_type": "button",
-            "enable_color_swatches": true,
-            "color_swatches_style": "custom",
-            "size_chart_enable": true,
-            "size_chart_link_label": "Tabulka velikostí",
-            "size_chart_page": "tabulka-velikosti-univerzalni-pouzdra",
-            "quantity_selector_enable": true,
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": true
-          }
-        },
-        "a1934adc-1886-4a20-bdd7-5f9778c59ebe": {
-          "type": "information_group",
-          "settings": {
-            "brand_enable": false,
-            "brand_label": "Brand",
-            "stock_enable": false,
-            "stock_label": "Dostupnost",
-            "inventory_threshold": 10,
-            "show_inventory_quantity": false,
-            "sku_enable": true,
-            "sku_label": "Produktový kód",
-            "tags_enable": false,
-            "tags_label": "Tags",
-            "collections_enable": false,
-            "collections_label": "Kolekce"
-          }
-        },
-        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
-          "type": "complementary",
-          "settings": {
-            "block_heading": "Mohlo by se vám také líbit",
-            "make_collapsible_row": true,
-            "icon": "thumb_down",
-            "product_list_limit": 3,
-            "total_enable": true,
-            "total_label": "Celkem",
-            "button_enable": true,
-            "button_label": "Přihodit do košíku",
-            "image_ratio": "square"
+            "button_label_1": "Dozvědět se více",
+            "button_link_1": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "Koupit",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
           }
         }
       },
       "block_order": [
-        "title",
-        "2525f94e-add4-418e-b362-bd2bb35545fa",
-        "popup_XDycdy",
-        "text_TL7xaD",
-        "text_in_multi_line_enwE7B",
-        "price",
-        "e592d434-8377-4309-b179-f98d4b3742a2",
-        "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
-        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
+        "heading_jRdNRj",
+        "text_D4tegH",
+        "buttons_PqyXHJ"
       ],
-      "custom_css": [
-        ".price__vat {font-size: 4rem; font-weight: bold; color: #00ace6;}",
-        ".inventory-template--15699447283794__main {color: #00bc00;}"
-      ],
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "section_width": "page-width",
-        "use_background_input": true,
-        "enable_sticky_info": true,
-        "enable_sticky_cart": true,
-        "show_next_prev_products": true,
-        "auto_scroll_up_mobile": false,
-        "default_image": "product_featured_image",
-        "media_position": "left",
-        "gallery_layout": "thumbnail_slider",
-        "thumbnail_position": "left",
-        "media_size": "small",
-        "image_ratio": "square",
-        "image_fit": true,
-        "disable_images_lightbox": false,
-        "mobile_thumbnails": "hide",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 8,
-        "padding_bottom": 40
+        "layout": "grid",
+        "image": "shopify://shop_images/hypershell-bann-pro.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#fff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000",
+        "color_button_1": "#fff",
+        "color_button_text_2": "#000",
+        "color_button_2": "#fff",
+        "colors_badge_foreground": "#fff",
+        "colors_badge_background": "#F87171",
+        "color_countdown_foreground": "#000",
+        "color_countdown_background": "#fff",
+        "color_text_mobile": "#fff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000",
+        "color_button_1_mobile": "#fff",
+        "color_button_text_2_mobile": "#000",
+        "color_button_2_mobile": "#fff",
+        "colors_badge_foreground_mobile": "#fff",
+        "colors_badge_background_mobile": "#F87171",
+        "color_countdown_foreground_mobile": "#000",
+        "color_countdown_background_mobile": "#fff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_KhfnnF": {
@@ -573,6 +521,135 @@
         "padding_bottom": 36
       }
     },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_vendor_link": false,
+            "title_size": "h3"
+          }
+        },
+        "2525f94e-add4-418e-b362-bd2bb35545fa": {
+          "type": "rating",
+          "settings": {
+            "show_if_no_reviews": true
+          }
+        },
+        "popup_XDycdy": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "Tabulka velikostí",
+            "page": "tabulka-velikosti-univerzalni-pouzdra"
+          }
+        },
+        "text_TL7xaD": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "text_in_multi_line_enwE7B": {
+          "type": "text_in_multi_line",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.kr_tk_popisek | metafield_tag }}</p>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "variant_price": true
+          }
+        },
+        "e592d434-8377-4309-b179-f98d4b3742a2": {
+          "type": "sale_box",
+          "settings": {
+            "show_free_shipping_bar": false,
+            "enable_compare": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatches_style": "custom",
+            "size_chart_enable": true,
+            "size_chart_link_label": "Tabulka velikostí",
+            "size_chart_page": "tabulka-velikosti-univerzalni-pouzdra",
+            "quantity_selector_enable": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "a1934adc-1886-4a20-bdd7-5f9778c59ebe": {
+          "type": "information_group",
+          "settings": {
+            "brand_enable": false,
+            "brand_label": "Brand",
+            "stock_enable": false,
+            "stock_label": "Dostupnost",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": false,
+            "sku_enable": true,
+            "sku_label": "Produktový kód",
+            "tags_enable": false,
+            "tags_label": "Tags",
+            "collections_enable": false,
+            "collections_label": "Kolekce"
+          }
+        },
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Mohlo by se vám také líbit",
+            "make_collapsible_row": true,
+            "icon": "thumb_down",
+            "product_list_limit": 3,
+            "total_enable": true,
+            "total_label": "Celkem",
+            "button_enable": true,
+            "button_label": "Přihodit do košíku",
+            "image_ratio": "square"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "2525f94e-add4-418e-b362-bd2bb35545fa",
+        "popup_XDycdy",
+        "text_TL7xaD",
+        "text_in_multi_line_enwE7B",
+        "price",
+        "e592d434-8377-4309-b179-f98d4b3742a2",
+        "a1934adc-1886-4a20-bdd7-5f9778c59ebe",
+        "5f0a8bbb-065e-48f8-bd53-5715da3b80b7"
+      ],
+      "custom_css": [
+        ".price__vat {font-size: 4rem; font-weight: bold; color: #00ace6;}",
+        ".inventory-template--15699447283794__main {color: #00bc00;}"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "use_background_input": true,
+        "enable_sticky_info": true,
+        "enable_sticky_cart": true,
+        "show_next_prev_products": true,
+        "auto_scroll_up_mobile": false,
+        "default_image": "product_featured_image",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
+        "media_size": "small",
+        "image_ratio": "square",
+        "image_fit": true,
+        "disable_images_lightbox": false,
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 8,
+        "padding_bottom": 40
+      }
+    },
     "main_product_tabs_XdRTBE": {
       "type": "main-product-tabs",
       "blocks": {
@@ -706,16 +783,17 @@
     }
   },
   "order": [
-    "main",
+    "image_banner_97JDHj",
+    "video_GJcT4J",
     "rich_text_KhfnnF",
     "image_with_text_rVJmD8",
     "image_with_text_i6bPEB",
     "image_with_text_meHxRb",
     "image_with_text_JcxmMg",
     "multicolumn_7bqrwM",
-    "video_GJcT4J",
     "17570586597fa9ae1b",
     "collapsible_content_VwPeDk",
+    "main",
     "main_product_tabs_XdRTBE",
     "product-recommendations",
     "42ea5b86-e5b3-44b9-8a28-410eec1590ed",
