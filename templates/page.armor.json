@@ -147,7 +147,7 @@
             "image": "shopify://shop_images/armor_pruznost.jpg",
             "icon": "check",
             "title": "Ultraodolnost díky vysoké pružnosti",
-            "text": "<ul><li>Extrémně vysoká pevnost skla – až 3× vyšší než u běžných skel​</li><li>O 30 % vyšší pružnost, která absorbuje případné nárazy a  odolává téměř všem běžným pádům​</li><li>Parametry testovány ve FIXED</li></ul>",
+            "text": "<ul><li>Extrémně vysoká pevnost skla – až <strong>3×</strong> vyšší než u běžných skel​</li><li>O <strong>30 % vyšší pružnost</strong>, která absorbuje případné nárazy a  odolává téměř všem běžným pádům​</li><li><strong>Testováno</strong> ve FIXED</li></ul>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -155,7 +155,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#fff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#fffaf5",
             "card_color_background_gradient": ""
           }
         },
@@ -165,7 +165,7 @@
             "image": "shopify://shop_images/armor_antireflex.jpg",
             "icon": "check",
             "title": "Antireflexní vrstva",
-            "text": "<ul><li>Nejvyšší propustnost světla na trhu – více než 94 % – zajistí významný pozitivní rozdíl v čitelnosti displeje​</li><li>Antireflexní vrstva zlepšuje čitelnost displeje, zejména na slunci nebo pod umělým osvětlením</li><li>Parametry testovány ve FIXED</li></ul>",
+            "text": "<ul><li>Nejvyšší propustnost světla na trhu – více než <strong>94 % </strong>– zajistí významný pozitivní rozdíl v čitelnosti displeje​</li><li>Antireflexní vrstva zlepšuje čitelnost displeje, zejména na slunci nebo pod umělým osvětlením</li><li><strong>Testováno</strong> ve FIXED</li></ul>",
             "link_label": "",
             "link": "",
             "button_style": "solid",
@@ -173,7 +173,7 @@
             "card_color_text": "#000000",
             "color_button_text": "#fff",
             "color_button": "#2563eb",
-            "card_color_background": "#fff",
+            "card_color_background": "#fffaf5",
             "card_color_background_gradient": ""
           }
         }
@@ -186,7 +186,7 @@
       "settings": {
         "title": "",
         "subtitle": "",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "media_type": "image",
         "media_width_desktop": "100",
         "image_ratio": "adapt",
