@@ -820,6 +820,10 @@
         "order_edit_banner_items_added": {
           "few": "Added: %{count}",
           "many": "Added: %{count}"
+        },
+        "discount_show_more_warnings": {
+          "few": "Show more (%{count})",
+          "many": "Show more (%{count})"
         }
       },
       "shipping_errors": {
@@ -868,6 +872,44 @@
         "gift_card_resend_failure": {
           "few": "There was a problem resending gift cards. Please try again or contact us.",
           "many": "There was a problem resending gift cards. Please try again or contact us."
+        },
+        "thank_you_unconfirmed_items_heading": {
+          "few": "Some items are not confirmed",
+          "many": "Some items are not confirmed"
+        },
+        "thank_you_unconfirmed_items_description": {
+          "few": "You have not been charged for these items.",
+          "many": "You have not been charged for these items."
+        },
+        "thank_you_confirmed_items_with_email": {
+          "few": "You will receive confirmation emails soon.",
+          "many": "You will receive confirmation emails soon."
+        },
+        "thank_you_confirmed_items_with_phone": {
+          "few": "You will receive confirmation text messages soon.",
+          "many": "You will receive confirmation text messages soon."
+        },
+        "items_fulfilled_by_store": {
+          "few": "The items purchased will come from other stores.",
+          "many": "The items purchased will come from other stores."
+        },
+        "thank_you_confirmed_orders_with_email_description": {
+          "one": "You will receive a confirmation email soon.",
+          "other": "You will soon receive confirmation emails from each store separately.",
+          "few": "You will soon receive confirmation emails from each store separately.",
+          "many": "You will soon receive confirmation emails from each store separately."
+        },
+        "thank_you_confirmed_orders_with_phone_description": {
+          "one": "You will receive a confirmation text message soon.",
+          "other": "You will soon receive confirmation text messages from each store separately",
+          "few": "You will soon receive confirmation text messages from each store separately",
+          "many": "You will soon receive confirmation text messages from each store separately"
+        },
+        "thank_you_confirmed_orders_with_email_and_phone_description": {
+          "one": "You will receive a confirmation email soon.",
+          "other": "You will soon receive confirmation emails from each store separately.",
+          "few": "You will soon receive confirmation emails from each store separately.",
+          "many": "You will soon receive confirmation emails from each store separately."
         }
       },
       "order_payment_collection": {
@@ -1148,6 +1190,26 @@
           "few": "Load more items ( {{count}} )",
           "many": "Load more items ( {{count}} )"
         }
+      }
+    },
+    "subscriptions": {
+      "subscription_contracts": {
+        "more_items": {
+          "few": "Other products ( {{count}} )",
+          "many": "Other products ( {{count}} )"
+        },
+        "product_count": {
+          "few": "products: {{count}}",
+          "many": "products: {{count}}"
+        }
+      },
+      "updating_contracts": {
+        "few": "Updating {{count}} } subscriptions...",
+        "many": "Updating {{count}} } subscriptions..."
+      },
+      "contracts_updated": {
+        "few": "Several ( {{count}} ) subscriptions have been successfully updated",
+        "many": "Several ( {{count}} ) subscriptions have been successfully updated"
       }
     }
   },
