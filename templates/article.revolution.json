@@ -117,9 +117,9 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify://shop_images/Martin_Schwarz_100px.jpg",
-            "title": "Autor: Martin Schwarz",
-            "subheading": "Martin se dlouhodobě specializuje na psaní o IT a technologiích. Vystudoval žurnalistiku, píše více než 14 let a dříve působil v online i tištěných médiích. Na přípravě článků spolupracuje společně s týmem FIXED. ",
+            "custom_icon": "shopify://shop_images/Jan_Moravec.png",
+            "title": "Autor: Jan Moravec",
+            "subheading": "<strong>Jan Moravec</strong> je CEO společnosti FIXED.zone a firemní kouč. Už více než deset let pomáhá rozvíjet nejen značku, ale i lidi v ní. Věnuje se komunikaci, leadershipu a firemní kultuře – a o své zkušenosti se dělí i v článcích pro blog FIXED.",
             "link": "",
             "open_link_in_new_tab": false
           }
