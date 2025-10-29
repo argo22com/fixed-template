@@ -378,6 +378,27 @@
             "color_scheme": "inverse"
           }
         },
+        "mega_menu_promotion_ya4VNA": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Blog",
+            "title": "Jak správně nabíjet?",
+            "image": "shopify://shop_images/FIXCG120-3C1A-LS2_aa8471ea-9bca-4526-8970-6cfa983f12e1.jpg",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "Jak správně nabíjet mobil, tablet nebo notebook?",
+            "subheading": "",
+            "button_label": "číst",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://blogs/news/jak-spravne-nabijet-mobil-tablet-a-notebook",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
         "mega_menu_promotion_fXE9Ac": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -393,27 +414,6 @@
             "text_align": "center",
             "text_position": "2",
             "link": "shopify://blogs/news/apple-predstavil-iphony-17-v-cem-predcily-lonske-modely-a-co-si-k-nim-poridit",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 50,
-            "color_scheme": "inverse"
-          }
-        },
-        "mega_menu_promotion_ya4VNA": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Blog",
-            "title": "Tablet nebo notebook na vejšku?",
-            "image": "shopify://shop_images/tablet_laptop.jpg",
-            "image_ratio": "square",
-            "caption": "",
-            "heading_text": "Tablet, nebo notebook? Porovnali jsme možnosti.",
-            "subheading": "",
-            "button_label": "číst",
-            "button_style": "solid",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "shopify://blogs/news/tablet-nebo-notebook-srovnali-jsme-co-se-ti-vic-vyplati-do-skoly",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 50,
@@ -526,8 +526,8 @@
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_qrrCqd",
         "mega_menu_promotion_9HJwDd",
-        "mega_menu_promotion_fXE9Ac",
         "mega_menu_promotion_ya4VNA",
+        "mega_menu_promotion_fXE9Ac",
         "mega_menu_promotion_fBdRTY",
         "mega_menu_promotion_TLTfPK",
         "mega_menu_promotion_LL7tjW",
