@@ -1,0 +1,134 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "title_background_image": "shopify://shop_images/macbook-air-on-desk.jpg",
+        "posts_per_page": 12,
+        "show_tags": true,
+        "layout": "collage",
+        "show_image": true,
+        "image_height": "small",
+        "show_date": true,
+        "show_author": false,
+        "show_comment": false,
+        "show_article_tags": true,
+        "share_enable": false,
+        "share_on_facebook": true,
+        "share_on_twitter": true,
+        "share_on_pinterest": true,
+        "share_on_email": true,
+        "share_link": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "text_icons_pn83Ub": {
+      "type": "text-icons",
+      "blocks": {
+        "text_icon_MkCWxG": {
+          "type": "text-icon",
+          "settings": {
+            "icon": "check",
+            "custom_icon": "shopify://shop_images/Martin.jpg",
+            "title": "Autor: Martin Schwarz",
+            "subheading": "Martin je copywriter s více než 14letou praxí, který se dlouhodobě zaměřuje na psaní o IT a technologiích. K práci s texty se dostal přes svou vášeň pro hokej, začínal v online i tištěných médiích jako sportovní redaktor. Vystudoval žurnalistiku na Univerzitě Palackého v Olomouci, ale při tvorbě technologicky zaměřených textů čerpá také ze studia IT oboru na střední škole. V minulosti si vyzkoušel práci šéfredaktora průmyslově zaměřeného časopisu a působil i jako marketingový specialista u internetového poskytovatele. Na přípravě článků pro blog spolupracuje společně s týmem FIXED, který mu pomáhá například s chystáním podkladů.",
+            "link": "",
+            "open_link_in_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "text_icon_MkCWxG"
+      ],
+      "name": "t:sections.text-icons.presets.name",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "heading_size": "h1",
+        "icon_width_desktop": 10,
+        "text_position": "right",
+        "enable_heading_in_box": false,
+        "columns_desktop": 1,
+        "columns_tablet": 1,
+        "auto_fit": false,
+        "column_alignment": "left",
+        "highlight_icon": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "border_width": 1,
+        "border_opacity": 15,
+        "border_spacing": 0,
+        "highlight_border": false,
+        "border_shape": "circle",
+        "blur_background": false,
+        "columns_mobile": "1",
+        "icon_width_mobile": 30,
+        "border_spacing_mobile": 0,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_gQJeVa": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_VbcayN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Přihlašte se k  odběru novinek",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_TatFqc": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Přidejte se k naší komunitě ať už vám žádné novinky neutečou!<br/>Přečtěte si naše <a href=\"/pages/contact\" title=\"Kontakt\">zásady ochrany osobních údajů</a>. </p>"
+          }
+        },
+        "email_form_abBzYa": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_VbcayN",
+        "paragraph_TatFqc",
+        "email_form_abBzYa"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "grid_layout": "stretched_grid",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "background-2",
+        "background_image_section": "shopify://shop_images/bg.jpg",
+        "enable_parallax_scrolling_effect": true,
+        "colors_text": "#ffffff",
+        "colors_input": "#000000",
+        "overlay_color": "#00a9e0",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "text_icons_pn83Ub",
+    "newsletter_gQJeVa"
+  ]
+}
