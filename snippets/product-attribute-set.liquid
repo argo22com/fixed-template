@@ -151,3 +151,93 @@
     </div>
   </div>
 {% endif %}
+
+{%- comment -%} DEBUG: výpis všech attribute setů z připojených kolekcí {%- endcomment -%}
+{%- assign _debug_attr_sets = true -%}
+{%- if _debug_attr_sets -%}
+  <div class="mt-4" style="font-family:monospace; font-size:12px; line-height:1.4;">
+    <details open>
+      <summary><strong>DEBUG</strong> – Attribute sety z připojených kolekcí</summary>
+      <div style="padding:8px 12px; background:#111; color:#0f0; border-radius:6px; margin-top:8px;">
+        {%- if products != blank -%}
+          {%- for p in products -%}
+            <div style="margin-bottom:10px;">
+              <div>Produkt: {{ p.title }} (ID {{ p.id }})</div>
+              {%- if p.collections.size > 0 -%}
+                {%- for collection in p.collections -%}
+                  {%- assign sets = collection.metafields.product_attributes.product_attribute_set.value -%}
+                  {%- if sets != blank -%}
+                    {%- if sets.id != blank -%}
+                      {%- assign attribute_sets = sets | array -%}
+                    {%- else -%}
+                      {%- assign attribute_sets = sets -%}
+                    {%- endif -%}
+                    <div style="margin:6px 0 2px;">• Kolekce: {{ collection.title }} (handle: {{ collection.handle }})</div>
+                    <ul style="margin:0 0 6px 16px; padding:0;">
+                      {%- for attribute_set in attribute_sets -%}
+                        {%- assign set_obj = attribute_set.value | default: attribute_set -%}
+                        {%- assign set_name = set_obj.name | default: set_obj.title | default: set_obj.handle | default: set_obj.id -%}
+                        <li>
+                          Set: <strong>{{ set_name }}</strong>{% if set_obj.id %} (id: {{ set_obj.id }}){% endif %}
+                          {%- if set_obj.list and set_obj.list.value -%}
+                            <div style="opacity:.8;">
+                              Atributy:
+                              {%- for attribute in set_obj.list.value -%}
+                                {%- assign a = attribute.value | default: attribute -%}
+                                {{ a.display_name | default: a.metafield_key }}{%- unless forloop.last -%}, {% endunless -%}
+                              {%- endfor -%}
+                            </div>
+                          {%- endif -%}
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- else -%}
+                <div>Žádné kolekce.</div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+
+        {%- elsif product != blank -%}
+          <div>Produkt: {{ product.title }} (ID {{ product.id }})</div>
+          {%- if product.collections.size > 0 -%}
+            {%- for collection in product.collections -%}
+              {%- assign sets = collection.metafields.product_attributes.product_attribute_set.value -%}
+              {%- if sets != blank -%}
+                {%- if sets.id != blank -%}
+                  {%- assign attribute_sets = sets | array -%}
+                {%- else -%}
+                  {%- assign attribute_sets = sets -%}
+                {%- endif -%}
+                <div style="margin:6px 0 2px;">• Kolekce: {{ collection.title }} (handle: {{ collection.handle }})</div>
+                <ul style="margin:0 0 6px 16px; padding:0;">
+                  {%- for attribute_set in attribute_sets -%}
+                    {%- assign set_obj = attribute_set.value | default: attribute_set -%}
+                    {%- assign set_name = set_obj.name | default: set_obj.title | default: set_obj.handle | default: set_obj.id -%}
+                    <li>
+                      Set: <strong>{{ set_name }}</strong>{% if set_obj.id %} (id: {{ set_obj.id }}){% endif %}
+                      {%- if set_obj.list and set_obj.list.value -%}
+                        <div style="opacity:.8;">
+                          Atributy:
+                          {%- for attribute in set_obj.list.value -%}
+                            {%- assign a = attribute.value | default: attribute -%}
+                            {{ a.display_name | default: a.metafield_key }}{%- unless forloop.last -%}, {% endunless -%}
+                          {%- endfor -%}
+                        </div>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- else -%}
+            <div>Žádné kolekce.</div>
+          {%- endif -%}
+        {%- else -%}
+          <div>Není k dispozici products ani product.</div>
+        {%- endif -%}
+      </div>
+    </details>
+  </div>
+{%- endif -%}
