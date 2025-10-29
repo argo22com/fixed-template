@@ -39,9 +39,9 @@
           "type": "text-icon",
           "settings": {
             "icon": "check",
-            "custom_icon": "shopify://shop_images/Martin.jpg",
-            "title": "Autor: Martin Schwarz",
-            "subheading": "Martin je copywriter s více než 14letou praxí, který se dlouhodobě zaměřuje na psaní o IT a technologiích. K práci s texty se dostal přes svou vášeň pro hokej, začínal v online i tištěných médiích jako sportovní redaktor. Vystudoval žurnalistiku na Univerzitě Palackého v Olomouci, ale při tvorbě technologicky zaměřených textů čerpá také ze studia IT oboru na střední škole. V minulosti si vyzkoušel práci šéfredaktora průmyslově zaměřeného časopisu a působil i jako marketingový specialista u internetového poskytovatele. Na přípravě článků pro blog spolupracuje společně s týmem FIXED, který mu pomáhá například s chystáním podkladů.",
+            "custom_icon": "shopify://shop_images/Jan_Moravec.png",
+            "title": "Autor: Jan Moravec",
+            "subheading": "<strong>Jan Moravec</strong> je CEO společnosti FIXED.zone a zároveň firemní kouč, který se už více než deset let podílí na budování značky i její kultury. Má za sebou řadu školení v oblasti komunikace a vedení lidí a své zkušenosti pravidelně předává dál – ať už na interních workshopech pro tým FIXED, nebo při vzdělávacích setkáních pro veřejnost.Psaním článků sdílí své postřehy, myšlenky a zkušenosti nejen s kolegy, ale i s každým, koho zajímá osobní rozvoj, efektivní komunikace a zdravé firemní prostředí.",
             "link": "",
             "open_link_in_new_tab": false
           }
