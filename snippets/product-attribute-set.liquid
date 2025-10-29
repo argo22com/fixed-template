@@ -12,8 +12,6 @@
 {% liquid
   assign attribute_names = ''
   assign attribute_keys  = ''
-
-  # Opevněný řetězec pro deduplikaci klíčů (aby "contains" nehledal jen podřetězce)
   assign keys_guard = '|'
 
   if products != blank
@@ -24,7 +22,6 @@
           continue
         endif
 
-        # normalize: single → array
         if sets.id != blank
           assign attribute_sets = sets | array
         else
@@ -35,12 +32,10 @@
           assign set_obj = attribute_set.value | default: attribute_set
           if set_obj.list and set_obj.list.value
             for attribute in set_obj.list.value
-              # rozbal případnou referenci na Product Attribute
               assign a = attribute.value | default: attribute
               assign k = a.metafield_key
               assign n = a.display_name
 
-              # bezpečný dedupe: kontrolujeme výskyt |KEY|
               assign needle = '|' | append: k | append: '|'
               if k == blank or keys_guard contains needle
                 continue
@@ -62,7 +57,6 @@
         continue
       endif
 
-      # normalize: single → array
       if sets.id != blank
         assign attribute_sets = sets | array
       else
@@ -91,11 +85,9 @@
     endfor
   endif
 
-  # žádné uniq – jen split (ponecháme 1:1 páry v pořadí)
   assign attribute_names = attribute_names | split: '|' 
   assign attribute_keys  = attribute_keys  | split: '|'
 
-  # ponecháme původní logiku indexování (poslední prvek je prázdný díky trailing '|')
   assign keys_length = attribute_keys.size | minus: 1
 %}
 
