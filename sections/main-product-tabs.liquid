@@ -162,47 +162,52 @@
                   %}
                 {% when 'recommendations' %}
                   {% render 'product-recommendations', id: section.id, title: block.settings.title %}
-                {%- when 'files' -%}
-                  {% assign documents = product.metafields.fixed.documents.value %}
-                  {%- if documents.count > 0 -%}
-                    <div class="element-small-margin-top">
-                      <ul class="list-unstyled flex flex-wrap">
-                        {%- for document in documents -%}
-                          {% if document.media_type == 'generic_file' %}
-                            {% assign file_name_with_shopify_extension = document.url | split: '/' | last %}
-                            <!-- parse the file name from the URL -->
-                            {% assign file_name = file_name_with_shopify_extension | split: '?' | first %}
-                            <!-- strip off the ?v=123456789 part of the file name -->
-                            <li>
-                              <a
-                                href="{{ document.url }}"
-                                class="product-download-link link button--large"
-                                target="_blank"
-                                download="{{ file_name }}"
-                              >
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                >
-                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                  <path d="M14 3v4a1 1 0 0 0 1 1h4"/>
-                                  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/>
-                                </svg>
-                                {{ file_name }}
-                              </a>
-                            </li>
-                          {% endif %}
-                        {%- endfor -%}
-                      </ul>
-                    </div>
-                  {%- endif -%}
+{%- when 'files' -%}
+  {% assign docs_raw = product.metafields.fixed.documents.value %}
+  {%- if docs_raw != blank -%}
+    {%- comment -%}
+      Normalize: pokud je to single file_reference (nemá .first/.size), uděláme z něj pole.
+    {%- endcomment -%}
+    {% assign documents = docs_raw %}
+    {% if documents.first == nil and documents.size == nil %}
+      {% assign documents = documents | array %}
+    {% endif %}
+
+    {%- if documents.size > 0 -%}
+      <div class="element-small-margin-top">
+        <ul class="list-unstyled flex flex-wrap">
+          {%- for document in documents -%}
+            {%- comment -%}
+              U file_reference objektu bývá k dispozici document.url a document.filename.
+              Některé typy nemusí mít media_type; proto na něj nespoléháme.
+            {%- endcomment -%}
+            {% assign file_url = document.url %}
+            {% assign file_name = document.filename | default: file_url | split: '/' | last | split: '?' | first %}
+
+            {%- if file_url -%}
+              <li class="mr-4 mb-2">
+                <a
+                  href="{{ file_url }}"
+                  class="product-download-link link button--large"
+                  target="_blank"
+                  download="{{ file_name }}"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4"/>
+                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/>
+                  </svg>
+                  {{ file_name }}
+                </a>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+  {%- endif -%}
                 {%- when 'page_content' -%}
                   {%- if block.settings.page != blank -%}
                     {{ block.settings.page.content }}
