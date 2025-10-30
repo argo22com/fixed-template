@@ -162,8 +162,7 @@
                   %}
                 {% when 'recommendations' %}
                   {% render 'product-recommendations', id: section.id, title: block.settings.title %}
-
-{%- when 'files' -%}
+                {%- when 'files' -%}
                   {% assign documents = product.metafields.fixed.documents.value %}
                   {%- if documents.count > 0 -%}
                     <div class="element-small-margin-top">
