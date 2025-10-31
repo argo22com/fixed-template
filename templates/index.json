@@ -237,6 +237,7 @@
         },
         "slide_T3NJDj": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bts.58512.jpg",
             "mobile_image": "shopify://shop_images/bts.58512.jpg",
