@@ -48,7 +48,24 @@
     {%- endif -%}
   {%- endfor -%}
 {%- endif -%}
-
+  <div style="margin-top:.5rem;padding:.5rem;border:1px dashed #888;font:12px/1.4 system-ui;background:#fff">
+    <strong>DEBUG labels</strong><br>
+    product_id: {{ card_product.id }}<br>
+    variant_id: {{ variant_obj.id }}<br>
+    metafield_used: {% if variant_obj.metafields.fixed.labels != blank %}fixed.labels{% else %}<em>none</em>{% endif %}<br>
+    available: {{ card_product.available }}<br>
+    total_rendered (sale+custom, bez sold-out limitu): {{ total }}<br>
+    {% if labels_mf and labels_mf.value %}
+      items ({{ labels_mf.value.size }}):
+      <ul style="margin:.25rem 0 0;padding-left:1rem">
+        {% for label in labels_mf.value %}
+          <li>#{{ forloop.index }} — handle: {{ label.handle }} | display_name: {{ label.display_name | escape }} | key: {{ label.key | escape }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      items: <em>žádné (metafield prázdný)</em>
+    {% endif %}
+  </div>
 {%- if total > 0 or card_product.available == false -%}
 
   {%- comment -%} SALE badge (původní, beze změny) {%- endcomment -%}
