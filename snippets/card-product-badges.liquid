@@ -48,24 +48,50 @@
     {%- endif -%}
   {%- endfor -%}
 {%- endif -%}
-  <div style="margin-top:.5rem;padding:.5rem;border:1px dashed #888;font:12px/1.4 system-ui;background:#fff">
-    <strong>DEBUG labels</strong><br>
+
+<div style="margin-top:.5rem;padding:.5rem;border:1px dashed #888;font:12px/1.5 system-ui;background:#fff">
+    <strong>DEBUG labels (deep)</strong><br>
     product_id: {{ card_product.id }}<br>
-    variant_id: {{ variant_obj.id }}<br>
-    metafield_used: {% if variant_obj.metafields.fixed.labels != blank %}fixed.labels{% else %}<em>none</em>{% endif %}<br>
-    available: {{ card_product.available }}<br>
-    total_rendered (sale+custom, bez sold-out limitu): {{ total }}<br>
-    {% if labels_mf and labels_mf.value %}
-      items ({{ labels_mf.value.size }}):
+    selected_variant_id: {{ variant_obj.id }}<br>
+    <hr style="border:none;border-top:1px dotted #ccc;margin:.4rem 0">
+
+    <div><u>Selected variant → namespaces/keys pod <code>fixed</code>:</u></div>
+    <div style="font-family:monospace;white-space:pre-wrap;margin:.25rem 0 .5rem">
+      fixed.labels present: {{ variant_obj.metafields.fixed.labels != blank }}<br>
+      fixed.lables present (typo, jen debug): {{ variant_obj.metafields.fixed.lables != blank }}
+    </div>
+
+    {%- if variant_obj.metafields.fixed.labels and variant_obj.metafields.fixed.labels.value != blank -%}
+      <div><u>Selected variant → fixed.labels items ({{ variant_obj.metafields.fixed.labels.value.size }}):</u></div>
       <ul style="margin:.25rem 0 0;padding-left:1rem">
-        {% for label in labels_mf.value %}
-          <li>#{{ forloop.index }} — handle: {{ label.handle }} | display_name: {{ label.display_name | escape }} | key: {{ label.key | escape }}</li>
-        {% endfor %}
+      {%- for label in variant_obj.metafields.fixed.labels.value -%}
+        <li>#{{ forloop.index }} — handle: {{ label.handle }} | display_name: {{ label.display_name | escape }} | key: {{ label.key | escape }}</li>
+      {%- endfor -%}
       </ul>
-    {% else %}
-      items: <em>žádné (metafield prázdný)</em>
-    {% endif %}
+    {%- else -%}
+      <em>Selected variant nemá nic ve fixed.labels.</em>
+    {%- endif -%}
+
+    <hr style="border:none;border-top:1px dotted #ccc;margin:.6rem 0">
+    <div><u>Kontrola všech variant produktu (hledáme, kde něco je ve fixed.labels):</u></div>
+    <ul style="margin:.25rem 0 0;padding-left:1rem">
+      {%- for v in card_product.variants -%}
+        <li>
+          variant_id {{ v.id }} —
+          labels? {{ v.metafields.fixed.labels != blank }}{% if v.metafields.fixed.labels != blank and v.metafields.fixed.labels.value %} ({{ v.metafields.fixed.labels.value.size }}){% endif %}
+          {% if v.metafields.fixed.lables != blank %} | <em>lables? true (překlep)</em>{% endif %}
+          {%- if v.metafields.fixed.labels and v.metafields.fixed.labels.value != blank -%}
+            <ul style="margin:.15rem 0 0;padding-left:1rem">
+              {%- for lbl in v.metafields.fixed.labels.value -%}
+                <li>• {{ lbl.display_name | escape }} {% if lbl.key != blank %}(key: {{ lbl.key | escape }}){% endif %}</li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
   </div>
+
 {%- if total > 0 or card_product.available == false -%}
 
   {%- comment -%} SALE badge (původní, beze změny) {%- endcomment -%}
