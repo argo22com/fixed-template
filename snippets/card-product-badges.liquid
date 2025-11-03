@@ -1,28 +1,31 @@
 {%- comment -%}
-	Renders badges in a card product
-
-	Accepts:
-	- card_product: {Object} Product Liquid object (optional)
-	- section_id: {String} The ID of the section that contains this card.
-	- prefix_id: {String} The prefix that used to print in the HTML ID. Not apply the prefix ID for custom badges.
-	
-	Usage:
-	{% render 'card-product-badges', card_product: product %}
+  Card product badges – původní SALE/SOLD-OUT + nové custom labels z variant metafieldu fixed.labels
+  - SALE a SOLD-OUT: beze změny (převzato z původního snippetu)
+  - Custom labels: list.metaobject_reference na metaobjekt custom_data/lables (field: display_name)
+  - Limit: max 4 badge (počítá se SALE + custom; SOLD-OUT se do limitu nepočítá)
+  - Debug: ?debug_labels=1 (viditelný box + hluboká kontrola variant)
 {%- endcomment -%}
+
 {%- liquid
   assign custom_badges = ''
   assign total = 0
   assign index_badge_position = 1
 
+  # Zjisti, zda je aktivní sleva (původní logika – ovlivní jen pozice/limit customů)
+  assign sale_active = 'false'
   if card_product.compare_at_price > card_product.price and card_product.available and settings.sale_badge_label != 'none'
+    assign sale_active = 'true'
     assign total = total | plus: 1
     assign index_badge_position = 2
   endif
 
+  # Varianta pro čtení custom labelů
   assign variant_obj = card_product.selected_or_first_available_variant
   if variant_obj == nil
     assign variant_obj = card_product.variants | first
   endif
+
+  # Metafield s odkazy na metaobjekty (bez fallbacku)
   assign labels_mf = variant_obj.metafields.fixed.labels
 -%}
 
@@ -35,7 +38,7 @@
       {%- capture custom_badges -%}
         {{ custom_badges }}
         <span
-          class="badge badge--bottom-left badge--position-{{ index_badge_position }} font-body-bold"
+          class="badge badge--bottom-left badge--custom badge--position-{{ index_badge_position }} font-body-bold"
           data-badge="custom_label"
           data-product-id="{{ card_product.id }}"
           data-variant-id="{{ variant_obj.id }}"
@@ -49,19 +52,52 @@
   {%- endfor -%}
 {%- endif -%}
 
- {%- assign sel_has_labels = 'false' -%}
+{%- if total > 0 or card_product.available == false -%}
+
+  {%- comment -%} SALE badge (původní, beze změny) {%- endcomment -%}
+  {%- if card_product.compare_at_price > card_product.price and card_product.available and settings.sale_badge_label != 'none' -%}
+    <span id="{{ prefix_id }}-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left badge--sale badge--position-1 font-body-bold">
+      {%- if settings.sale_badge_label == 'text' -%}
+        {{ 'products.product.on_sale' | t }}
+      {%- elsif settings.sale_badge_label == 'percent' -%}
+        {{ card_product.price | minus: card_product.compare_at_price | times: 100.00 | divided_by: card_product.compare_at_price | round }}%
+      {%- else -%}
+        {%- if settings.currency_code_enabled -%}
+          -{{ card_product.compare_at_price | minus: card_product.price | money_with_currency }}
+        {%- else -%}
+          -{{ card_product.compare_at_price | minus: card_product.price | money }}
+        {%- endif -%}
+      {%- endif -%}
+    </span>
+  {%- endif -%}
+
+  {%- comment -%} SOLD OUT badge (původní, beze změny) {%- endcomment -%}
+  {%- if card_product.available == false -%}
+    <span id="{{ prefix_id }}-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left badge--sold-out uppercase {% if card_product.compare_at_price > card_product.price and card_product.available %}badge--position-2{% else %}badge--position-1{% endif %} font-body-bold">
+      {{ 'products.product.sold_out' | t }}
+    </span>
+  {%- endif -%}
+
+  {{ custom_badges }}
+
+{%- endif -%}
+
+
+  {%- assign sel_has_labels = 'false' -%}
   {%- assign sel_has_lables = 'false' -%}
   {%- if variant_obj.metafields.fixed.labels != blank -%}{% assign sel_has_labels = 'true' %}{%- endif -%}
   {%- if variant_obj.metafields.fixed.lables != blank -%}{% assign sel_has_lables = 'true' %}{%- endif -%}
 
   <div style="margin-top:.5rem;padding:.5rem;border:1px dashed #888;font:12px/1.5 system-ui;background:#fff">
-    <strong>DEBUG labels (deep)</strong><br>
+    <strong>DEBUG labels</strong><br>
     product_id: {{ card_product.id }}<br>
-    selected_variant_id: {{ variant_obj.id }}<br>
-    <hr style="border:none;border-top:1px dotted #ccc;margin:.4rem 0">
-
-    <div><u>Selected variant → namespaces/keys pod <code>fixed</code>:</u></div>
-    <div style="font-family:monospace;white-space:pre-wrap;margin:.25rem 0 .5rem">
+    variant_id: {{ variant_obj.id }}<br>
+    sale_active: {{ sale_active }}<br>
+    available: {{ card_product.available }}<br>
+    total_rendered (sale+custom, bez sold-out limitu): {{ total }}<br>
+    metafield_used: {% if sel_has_labels == 'true' %}fixed.labels{% else %}<em>none</em>{% endif %}<br>
+    <div style="margin-top:.4rem"><u>Selected variant → fixed.* přehled:</u></div>
+    <div style="font-family:monospace;white-space:pre-wrap;margin:.2rem 0 .5rem">
       fixed.labels present: {{ sel_has_labels }}<br>
       fixed.lables present (typo, jen debug): {{ sel_has_lables }}
     </div>
@@ -105,33 +141,3 @@
       {%- endfor -%}
     </ul>
   </div>
-
-{%- if total > 0 or card_product.available == false -%}
-
-  {%- comment -%} SALE badge (původní, beze změny) {%- endcomment -%}
-  {%- if card_product.compare_at_price > card_product.price and card_product.available and settings.sale_badge_label != 'none' -%}
-    <span id="{{ prefix_id }}-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left badge--sale badge--position-1 font-body-bold">
-      {%- if settings.sale_badge_label == 'text' -%}
-        {{ 'products.product.on_sale' | t }}
-      {%- elsif settings.sale_badge_label == 'percent' -%}
-        {{ card_product.price | minus: card_product.compare_at_price | times: 100.00 | divided_by: card_product.compare_at_price | round }}%
-      {%- else -%}
-        {%- if settings.currency_code_enabled -%}
-          -{{ card_product.compare_at_price | minus: card_product.price | money_with_currency }}
-        {%- else -%}
-          -{{ card_product.compare_at_price | minus: card_product.price | money }}
-        {%- endif -%}
-      {%- endif -%}
-    </span>
-  {%- endif -%}
-
-  {%- comment -%} SOLD OUT badge (původní, beze změny) {%- endcomment -%}
-  {%- if card_product.available == false -%}
-    <span id="{{ prefix_id }}-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left badge--sold-out uppercase {% if card_product.compare_at_price > card_product.price and card_product.available %}badge--position-2{% else %}badge--position-1{% endif %} font-body-bold">
-      {{ 'products.product.sold_out' | t }}
-    </span>
-  {%- endif -%}
-
-  {{ custom_badges }}
-
-{%- endif -%}
