@@ -37,14 +37,15 @@
     {%- if label_text != '' -%}
       {%- capture custom_badges -%}
         {{ custom_badges }}
-        <span
-          class="badge badge--bottom-left badge--custom badge--position-{{ index_badge_position }} font-body-bold"
-          data-badge="custom_label"
-          data-product-id="{{ card_product.id }}"
-          data-variant-id="{{ variant_obj.id }}"
-          {%- if label.key != blank -%} data-label-key="{{ label.key | escape }}"{%- endif -%}
-          {%- if label.handle != blank -%} data-label-handle="{{ label.handle | escape }}"{%- endif -%}
-        >{{ label_text }}</span>
+<span
+  class="badge badge--bottom-left badge--custom badge--position-{{ index_badge_position }} badge--{{ label.key | downcase }} font-body-bold"
+  data-badge="custom_label"
+  data-product-id="{{ card_product.id }}"
+  data-variant-id="{{ variant_obj.id }}"
+  data-label-key="{{ label.key | escape }}"
+>
+  {{ label_text }}
+</span>
       {%- endcapture -%}
       {%- assign total = total | plus: 1 -%}
       {%- assign index_badge_position = index_badge_position | plus: 1 -%}
