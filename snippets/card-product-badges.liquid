@@ -11,7 +11,6 @@
   assign total = 0
   assign index_badge_position = 1
 
-  # Zjisti, zda je aktivní sleva (původní logika – ovlivní jen pozice/limit customů)
   assign sale_active = 'false'
   if card_product.compare_at_price > card_product.price and card_product.available and settings.sale_badge_label != 'none'
     assign sale_active = 'true'
@@ -19,14 +18,15 @@
     assign index_badge_position = 2
   endif
 
-  # Varianta pro čtení custom labelů
   assign variant_obj = card_product.selected_or_first_available_variant
   if variant_obj == nil
     assign variant_obj = card_product.variants | first
   endif
 
-  # Metafield s odkazy na metaobjekty (bez fallbacku)
-  assign labels_mf = variant_obj.metafields.fixed.labels
+  assign LABELS_NS = 'fixed'
+  assign LABELS_KEY = 'lables'
+
+  assign labels_mf = variant_obj.metafields[LABELS_NS][LABELS_KEY]
 -%}
 
 {%- comment -%} CUSTOM LABELS (nová logika) {%- endcomment -%}
