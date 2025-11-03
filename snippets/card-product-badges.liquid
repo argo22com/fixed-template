@@ -17,11 +17,17 @@
   if variant_obj == nil
     assign variant_obj = card_product.variants | first
   endif
+
+  # NOVÉ: předpočítaná logická proměnná (true/false string)
+  assign sale_active = 'false'
+  if card_product.compare_at_price > card_product.price and card_product.available and settings.sale_badge_label != 'none'
+    assign sale_active = 'true'
+  endif
 -%}
 
 {%- capture badges_out -%}
-  {%- comment %} SALE badge (původní tvorba) {% endcomment -%}
-  {%- if card_product.compare_at_price > card_product.price and card_product.available and settings.sale_badge_label != 'none' -%}
+  {%- comment %} SALE badge {% endcomment -%}
+  {%- if sale_active == 'true' -%}
     <span
       class="badge badge--bottom-left badge--sale badge--position-1 font-body-bold"
       data-badge="sale"
@@ -44,7 +50,7 @@
     {%- assign index_badge_position = 2 -%}
   {%- endif -%}
 
-  {%- comment %} SOLD OUT badge (původní tvorba) {% endcomment -%}
+  {%- comment %} SOLD OUT badge {% endcomment -%}
   {%- if card_product.available == false and total < 4 -%}
     <span
       class="badge badge--bottom-left badge--sold-out uppercase badge--position-{{ index_badge_position }} font-body-bold"
@@ -58,7 +64,7 @@
     {%- assign index_badge_position = index_badge_position | plus: 1 -%}
   {%- endif -%}
 
-  {%- comment %} CUSTOM LABELS z varianty: fixed.labels (list.metaobject_reference) {% endcomment -%}
+  {%- comment %} CUSTOM LABELS z varianty: fixed.labels {% endcomment -%}
   {%- assign labels_mf = variant_obj.metafields.fixed.labels -%}
   {%- if labels_mf and labels_mf.value != blank -%}
     {%- for label in labels_mf.value -%}
@@ -93,7 +99,7 @@
   <!-- DEBUG labels
   product_id: {{ card_product.id }}
   variant_id: {{ variant_obj.id }}
-  sale_active: {{ card_product.compare_at_price > card_product.price and card_product.available and settings.sale_badge_label != 'none' }}
+  sale_active: {{ sale_active }}
   available: {{ card_product.available }}
   total_rendered: {{ total }}
   metafield_used: {% if variant_obj.metafields.fixed.labels != blank %}fixed.labels{% else %}none{% endif %}
