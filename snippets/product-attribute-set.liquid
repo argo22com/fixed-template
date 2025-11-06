@@ -6,71 +6,43 @@
   if products != blank
     for product in products
       for collection in product.collections
-        assign sets = collection.metafields.product_attributes.product_attribute_set.value
+        assign mf_sets = collection.metafields.product_attributes.product_attribute_set
+        assign sets = mf_sets.references
+        if sets == blank and mf_sets.value
+          assign sets = mf_sets.value
+        endif
         if sets == blank
           continue
         endif
+
         if sets.id != blank
           assign attribute_sets = sets | array
         else
           assign attribute_sets = sets
         endif
+
         for attribute_set in attribute_sets
           assign set_obj = attribute_set.value | default: attribute_set
-          if set_obj.list and set_obj.list.value
-            for attribute in set_obj.list.value
-              assign a = attribute.value | default: attribute
-              assign k = a.metafield_key
-              if k == blank and a.product_attribute__metafield_key
-                assign k = a.product_attribute__metafield_key
-              endif
-              if k == blank and a.key
-                assign k = a.key
-              endif
-              if k != blank
-                assign k = k | strip | replace: 'product_attributes.', ''
-                if k contains '.'
-                  assign k = k | split: '.' | last
-                endif
-              endif
-              assign n = a.display_name
-              if n == blank and a.product_attribute__display_name
-                assign n = a.product_attribute__display_name
-              endif
-              if n == blank and a.name
-                assign n = a.name
-              endif
-              if n != blank
-                assign n = n | strip
-              endif
-              assign needle = '|' | append: k | append: '|'
-              if k == blank or n == blank or keys_guard contains needle
-                continue
-              endif
-              assign attribute_names = attribute_names | append: n | append: '|'
-              assign attribute_keys  = attribute_keys  | append: k | append: '|'
-              assign keys_guard      = keys_guard      | append: k | append: '|'
-            endfor
+
+          assign attrs_holder = set_obj.list
+          if attrs_holder == blank and set_obj.product_attribute_set__list
+            assign attrs_holder = set_obj.product_attribute_set__list
           endif
-        endfor
-      endfor
-    endfor
-  elsif product != blank
-    for collection in product.collections
-      assign sets = collection.metafields.product_attributes.product_attribute_set.value
-      if sets == blank
-        continue
-      endif
-      if sets.id != blank
-        assign attribute_sets = sets | array
-      else
-        assign attribute_sets = sets
-      endif
-      for attribute_set in attribute_sets
-        assign set_obj = attribute_set.value | default: attribute_set
-        if set_obj.list and set_obj.list.value
-          for attribute in set_obj.list.value
+          if attrs_holder == blank and set_obj.attributes
+            assign attrs_holder = set_obj.attributes
+          endif
+
+          assign attrs = attrs_holder.references
+          if attrs == blank and attrs_holder and attrs_holder.value
+            assign attrs = attrs_holder.value
+          endif
+          if attrs == blank
+            continue
+          endif
+
+          for attribute in attrs
             assign a = attribute.value | default: attribute
+
             assign k = a.metafield_key
             if k == blank and a.product_attribute__metafield_key
               assign k = a.product_attribute__metafield_key
@@ -84,6 +56,7 @@
                 assign k = k | split: '.' | last
               endif
             endif
+
             assign n = a.display_name
             if n == blank and a.product_attribute__display_name
               assign n = a.product_attribute__display_name
@@ -94,15 +67,93 @@
             if n != blank
               assign n = n | strip
             endif
+
             assign needle = '|' | append: k | append: '|'
             if k == blank or n == blank or keys_guard contains needle
               continue
             endif
+
             assign attribute_names = attribute_names | append: n | append: '|'
             assign attribute_keys  = attribute_keys  | append: k | append: '|'
             assign keys_guard      = keys_guard      | append: k | append: '|'
           endfor
+        endfor
+      endfor
+    endfor
+
+  elsif product != blank
+    for collection in product.collections
+      assign mf_sets = collection.metafields.product_attributes.product_attribute_set
+      assign sets = mf_sets.references
+      if sets == blank and mf_sets.value
+        assign sets = mf_sets.value
+      endif
+      if sets == blank
+        continue
+      endif
+
+      if sets.id != blank
+        assign attribute_sets = sets | array
+      else
+        assign attribute_sets = sets
+      endif
+
+      for attribute_set in attribute_sets
+        assign set_obj = attribute_set.value | default: attribute_set
+
+        assign attrs_holder = set_obj.list
+        if attrs_holder == blank and set_obj.product_attribute_set__list
+          assign attrs_holder = set_obj.product_attribute_set__list
         endif
+        if attrs_holder == blank and set_obj.attributes
+          assign attrs_holder = set_obj.attributes
+        endif
+
+        assign attrs = attrs_holder.references
+        if attrs == blank and attrs_holder and attrs_holder.value
+          assign attrs = attrs_holder.value
+        endif
+        if attrs == blank
+          continue
+        endif
+
+        for attribute in attrs
+          assign a = attribute.value | default: attribute
+
+          assign k = a.metafield_key
+          if k == blank and a.product_attribute__metafield_key
+            assign k = a.product_attribute__metafield_key
+          endif
+          if k == blank and a.key
+            assign k = a.key
+          endif
+          if k != blank
+            assign k = k | strip | replace: 'product_attributes.', ''
+            if k contains '.'
+              assign k = k | split: '.' | last
+            endif
+          endif
+
+          assign n = a.display_name
+          if n == blank and a.product_attribute__display_name
+            assign n = a.product_attribute__display_name
+          endif
+          if n == blank and a.name
+            assign n = a.name
+          endif
+          if n != blank
+            assign n = n | strip
+          endif
+
+          assign needle = '|' | append: k | append: '|'
+          if k == blank or n == blank or keys_guard contains needle
+            continue
+          endif
+
+          assign attribute_names = attribute_names | append: n | append: '|'
+          assign attribute_keys  = attribute_keys  | append: k | append: '|'
+          assign keys_guard      = keys_guard      | append: k | append: '|'
+        endfor
       endfor
     endfor
   endif
