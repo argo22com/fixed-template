@@ -1,167 +1,55 @@
-{% liquid
-  assign attribute_names = ''
-  assign attribute_keys  = ''
-  assign keys_guard = '|'
-
-  if products != blank
-    assign _products = products
-  else
-    assign _products = product | array
-  endif
-
-  for _p in _products
-    for _c in _p.collections
-      assign mf_sets = _c.metafields.product_attributes.product_attribute_set
-      assign sets = mf_sets.references
-      if sets == blank and mf_sets.value
-        assign sets = mf_sets.value
-      endif
-      if sets == blank
-        continue
-      endif
-
-      if sets.id != blank
-        assign attribute_sets = sets | array
-      else
-        assign attribute_sets = sets
-      endif
-
-      for s in attribute_sets
-        assign so = s.value | default: s
-
-        assign holder = so.list
-        if holder == blank and so.product_attribute_set__list
-          assign holder = so.product_attribute_set__list
-        endif
-        if holder == blank and so.product_attribute__list
-          assign holder = so.product_attribute__list
-        endif
-        if holder == blank and so.attributes
-          assign holder = so.attributes
-        endif
-        if holder == blank and so.attribute_list
-          assign holder = so.attribute_list
-        endif
-
-        assign attrs = holder.references
-        if attrs == blank and holder and holder.value
-          assign attrs = holder.value
-        endif
-        if attrs == blank
-          continue
-        endif
-
-        for a0 in attrs
-          assign a = a0.value | default: a0
-
-          assign k = a.metafield_key
-          if k == blank and a.product_attribute__metafield_key
-            assign k = a.product_attribute__metafield_key
-          endif
-          if k == blank and a.key
-            assign k = a.key
-          endif
-          if k != blank
-            assign k = k | strip | replace: 'product_attributes.', ''
-            if k contains '.'
-              assign k = k | split: '.' | last
-            endif
-          endif
-
-          assign n = a.display_name
-          if n == blank and a.product_attribute__display_name
-            assign n = a.product_attribute__display_name
-          endif
-          if n == blank and a.name
-            assign n = a.name
-          endif
-          if n != blank
-            assign n = n | strip
-          endif
-
-          assign needle = '|' | append: k | append: '|'
-          if k == blank or n == blank or keys_guard contains needle
-            continue
-          endif
-
-          assign attribute_names = attribute_names | append: n | append: '|'
-          assign attribute_keys  = attribute_keys  | append: k | append: '|'
-          assign keys_guard      = keys_guard      | append: k | append: '|'
-        endfor
-      endfor
-    endfor
-  endfor
-
-  assign attribute_names = attribute_names | split: '|' 
-  assign attribute_keys  = attribute_keys  | split: '|'
-  assign keys_length = attribute_keys.size | minus: 1
-%}
-
-{% if products != blank %}
-  {% for i in (0..keys_length) %}
-    {% liquid
-      assign k = attribute_keys[i]
-      assign mf_any = blank
-      for _p in products
-        assign mf = _p.metafields.product_attributes[k]
-        assign v = mf.value
-        assign s = v | append: '' | strip | downcase
-        if mf == blank or v == nil or s == '' or s == 'undefined' or s == 'null'
-          assign mf = _p.selected_or_first_available_variant.metafields.product_attributes[k]
-          assign v = mf.value
-          assign s = v | append: '' | strip | downcase
-        endif
-        if mf != blank and v != nil and s != '' and s != 'undefined' and s != 'null'
-          assign mf_any = mf
-          break
-        endif
-      endfor
-    %}
-    {% if mf_any != blank %}
-      <tr>
-        <th>{{ attribute_names[i] }}:</th>
-        {% for _p in products %}
-          {% assign pmf = _p.metafields.product_attributes[attribute_keys[i]] %}
-          {% assign pv = pmf.value %}
-          {% assign ps = pv | append:'' | strip | downcase %}
-          {% if pmf == blank or pv == nil or ps == '' or ps == 'undefined' or ps == 'null' %}
-            {% assign pmf = _p.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
-            {% assign pv = pmf.value %}
-            {% assign ps = pv | append:'' | strip | downcase %}
-          {% endif %}
-          <td class="product-compare-{{ _p.id }}">
-            {% if pmf != blank and pv != nil and ps != '' and ps != 'undefined' and ps != 'null' %}
-              {% render 'metafield-display', attribute_metafield: pmf %}
-            {% endif %}
-          </td>
+{% assign __dbg_open = true %}
+{% if __dbg_open %}
+<div style="font-family:ui-monospace,monospace;font-size:12px;line-height:1.45;padding:12px;border:1px dashed #999;margin:12px 0;background:#fff">
+<pre>{
+  "product": {"id": {{ product.id }}, "handle": {{ product.handle | json }}, "variants": {{ product.variants.size }}},
+  "collections": [
+{% for c in product.collections %}
+  {% assign mf = c.metafields.product_attributes.product_attribute_set %}
+  {% assign sets = mf.references %}{% assign src = 'references' %}
+  {% if sets == blank and mf.value != blank %}{% assign sets = mf.value %}{% assign src = 'value' %}{% endif %}
+  {
+    "handle": {{ c.handle | json }},
+    "title": {{ c.title | json }},
+    "sets_source": {{ src | json }},
+    "sets_count": {% if sets != blank %}{{ sets.size | default: 1 }}{% else %}0{% endif %},
+    "sets":[
+      {% if sets != blank %}
+        {% for s in sets %}
+          {% assign so = s.value | default: s %}
+          {% assign holder = so.list %}
+          {% if holder == blank and so.product_attribute_set__list %}{% assign holder = so.product_attribute_set__list %}{% endif %}
+          {% if holder == blank and so.product_attribute__list %}{% assign holder = so.product_attribute__list %}{% endif %}
+          {% if holder == blank and so.attributes %}{% assign holder = so.attributes %}{% endif %}
+          {% if holder == blank and so.attribute_list %}{% assign holder = so.attribute_list %}{% endif %}
+          {% assign attrs = holder.references %}
+          {% if attrs == blank and holder and holder.value %}{% assign attrs = holder.value %}{% endif %}
+          {
+            "set_name": {{ so.name | default: so.title | default: so.handle | default: so.id | json }},
+            "attrs_count": {% if attrs != blank %}{{ attrs.size }}{% else %}0{% endif %},
+            "attrs": [
+              {% if attrs != blank %}
+                {% for a0 in attrs %}
+                  {% assign a = a0.value | default: a0 %}
+                  {% assign k = a.metafield_key | default: a.product_attribute__metafield_key | default: a.key %}
+                  {% if k != blank %}{% assign k = k | strip | replace: 'product_attributes.', '' %}{% if k contains '.' %}{% assign k = k | split: '.' | last %}{% endif %}{% endif %}
+                  {% assign n = a.display_name | default: a.product_attribute__display_name | default: a.name %}
+                  {"key": {{ k | json }}, "name": {{ n | json }}}{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+              {% endif %}
+            ]
+          }{% unless forloop.last %},{% endunless %}
         {% endfor %}
-      </tr>
-    {% endif %}
-  {% endfor %}
-{% else %}
-  <div class="w100">
-    <div class="grid">
-      {% for i in (0..keys_length)  %}
-        {% liquid
-          assign k = attribute_keys[i]
-          assign mf = product.metafields.product_attributes[k]
-          assign v = mf.value
-          assign s = v | append:'' | strip | downcase
-          if mf == blank or v == nil or s == '' or s == 'undefined' or s == 'null'
-            assign mf = product.selected_or_first_available_variant.metafields.product_attributes[k]
-            assign v = mf.value
-            assign s = v | append:'' | strip | downcase
-          endif
-        %}
-        {% if mf != blank and v != nil and s != '' and s != 'undefined' and s != 'null' %}
-          <div class="grid__item">
-            <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
-            <div class="rte">
-              {% render 'metafield-display', attribute_metafield: mf %}
-            </div>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
+      {% endif %}
+    ]
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+  ],
+  "gathered_keys": {{ attribute_keys | json }},
+  "gathered_names": {{ attribute_names | json }},
+  "product_keys": [{% for m in product.metafields.product_attributes %}{{ m[0] | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "variant_keys": [{% for m in product.selected_or_first_available_variant.metafields.product_attributes %}{{ m[0] | json }}{% unless forloop.last %},{% endunless %}{% endfor %}]
+}
+</pre>
+</div>
 {% endif %}
