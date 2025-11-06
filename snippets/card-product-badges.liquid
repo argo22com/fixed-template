@@ -23,8 +23,8 @@
     assign variant_obj = card_product.variants | first
   endif
 
-  assign LABELS_NS = 'fixed'
-  assign LABELS_KEY = 'labels'
+  assign LABELS_NS = 'labels'
+  assign LABELS_KEY = 'key'
 
   assign labels_mf = variant_obj.metafields[LABELS_NS][LABELS_KEY]
 -%}
