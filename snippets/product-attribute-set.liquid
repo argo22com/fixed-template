@@ -1,14 +1,3 @@
-{% comment %}
-  Renders a list of product atributes
-
-    Accepts:
-    - products: {Array} Array of products to compare
-    - product - {Object} Product to show
-
-    Usage:
-    {% render 'product-attribute-set', products: products %} or {% render 'product-attribute-set', product: product %}
-{% endcomment %}
-
 {% liquid
   assign attribute_names = ''
   assign attribute_keys  = ''
@@ -21,31 +10,67 @@
         if sets == blank
           continue
         endif
-
         if sets.id != blank
           assign attribute_sets = sets | array
         else
           assign attribute_sets = sets
         endif
-
         for attribute_set in attribute_sets
           assign set_obj = attribute_set.value | default: attribute_set
-
-          assign attrs = blank
           if set_obj.list and set_obj.list.value
-            assign attrs = set_obj.list.value
-          elsif set_obj.product_attribute_set__list and set_obj.product_attribute_set__list.value
-            assign attrs = set_obj.product_attribute_set__list.value
-          elsif set_obj.attributes and set_obj.attributes.value
-            assign attrs = set_obj.attributes.value
+            for attribute in set_obj.list.value
+              assign a = attribute.value | default: attribute
+              assign k = a.metafield_key
+              if k == blank and a.product_attribute__metafield_key
+                assign k = a.product_attribute__metafield_key
+              endif
+              if k == blank and a.key
+                assign k = a.key
+              endif
+              if k != blank
+                assign k = k | strip | replace: 'product_attributes.', ''
+                if k contains '.'
+                  assign k = k | split: '.' | last
+                endif
+              endif
+              assign n = a.display_name
+              if n == blank and a.product_attribute__display_name
+                assign n = a.product_attribute__display_name
+              endif
+              if n == blank and a.name
+                assign n = a.name
+              endif
+              if n != blank
+                assign n = n | strip
+              endif
+              assign needle = '|' | append: k | append: '|'
+              if k == blank or n == blank or keys_guard contains needle
+                continue
+              endif
+              assign attribute_names = attribute_names | append: n | append: '|'
+              assign attribute_keys  = attribute_keys  | append: k | append: '|'
+              assign keys_guard      = keys_guard      | append: k | append: '|'
+            endfor
           endif
-          if attrs == blank
-            continue
-          endif
-
-          for attribute in attrs
+        endfor
+      endfor
+    endfor
+  elsif product != blank
+    for collection in product.collections
+      assign sets = collection.metafields.product_attributes.product_attribute_set.value
+      if sets == blank
+        continue
+      endif
+      if sets.id != blank
+        assign attribute_sets = sets | array
+      else
+        assign attribute_sets = sets
+      endif
+      for attribute_set in attribute_sets
+        assign set_obj = attribute_set.value | default: attribute_set
+        if set_obj.list and set_obj.list.value
+          for attribute in set_obj.list.value
             assign a = attribute.value | default: attribute
-
             assign k = a.metafield_key
             if k == blank and a.product_attribute__metafield_key
               assign k = a.product_attribute__metafield_key
@@ -56,11 +81,9 @@
             if k != blank
               assign k = k | strip | replace: 'product_attributes.', ''
               if k contains '.'
-                assign parts = k | split: '.'
-                assign k = parts | last
+                assign k = k | split: '.' | last
               endif
             endif
-
             assign n = a.display_name
             if n == blank and a.product_attribute__display_name
               assign n = a.product_attribute__display_name
@@ -71,86 +94,15 @@
             if n != blank
               assign n = n | strip
             endif
-
             assign needle = '|' | append: k | append: '|'
             if k == blank or n == blank or keys_guard contains needle
               continue
             endif
-
             assign attribute_names = attribute_names | append: n | append: '|'
             assign attribute_keys  = attribute_keys  | append: k | append: '|'
             assign keys_guard      = keys_guard      | append: k | append: '|'
           endfor
-        endfor
-      endfor
-    endfor
-
-  elsif product != blank
-    for collection in product.collections
-      assign sets = collection.metafields.product_attributes.product_attribute_set.value
-      if sets == blank
-        continue
-      endif
-
-      if sets.id != blank
-        assign attribute_sets = sets | array
-      else
-        assign attribute_sets = sets
-      endif
-
-      for attribute_set in attribute_sets
-        assign set_obj = attribute_set.value | default: attribute_set
-
-        assign attrs = blank
-        if set_obj.list and set_obj.list.value
-          assign attrs = set_obj.list.value
-        elsif set_obj.product_attribute_set__list and set_obj.product_attribute_set__list.value
-          assign attrs = set_obj.product_attribute_set__list.value
-        elsif set_obj.attributes and set_obj.attributes.value
-          assign attrs = set_obj.attributes.value
         endif
-        if attrs == blank
-          continue
-        endif
-
-        for attribute in attrs
-          assign a = attribute.value | default: attribute
-
-          assign k = a.metafield_key
-          if k == blank and a.product_attribute__metafield_key
-            assign k = a.product_attribute__metafield_key
-          endif
-          if k == blank and a.key
-            assign k = a.key
-          endif
-          if k != blank
-            assign k = k | strip | replace: 'product_attributes.', ''
-            if k contains '.'
-              assign parts = k | split: '.'
-              assign k = parts | last
-            endif
-          endif
-
-          assign n = a.display_name
-          if n == blank and a.product_attribute__display_name
-            assign n = a.product_attribute__display_name
-          endif
-          if n == blank and a.name
-            assign n = a.name
-          endif
-          if n != blank
-            assign n = n | strip
-          endif
-
-          assign needle = '|' | append: k | append: '|'
-          if k == blank or n == blank or keys_guard contains needle
-            continue
-          endif
-
-          assign attribute_names = attribute_names | append: n | append: '|'
-          assign attribute_keys  = attribute_keys  | append: k | append: '|'
-          assign keys_guard      = keys_guard      | append: k | append: '|'
-        endfor
       endfor
     endfor
   endif
@@ -162,27 +114,27 @@
 
 {% if products != blank %}
   {% for i in (0..keys_length) %}
-{% liquid
-  assign all_empty = true
-  for product in products
-    assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
-    if attribute_metafield == blank
-      assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
-    endif
-    if attribute_metafield != blank and attribute_metafield.value
-      assign all_empty = false
-      break
-    endif
-  endfor
-%}
+    {% liquid
+      assign all_empty = true
+      for product in products
+        assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
+        if attribute_metafield == blank
+          assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
+        endif
+        if attribute_metafield != blank and attribute_metafield.value
+          assign all_empty = false
+          break
+        endif
+      endfor
+    %}
     {% if all_empty == false %}
       <tr>
         <th>{{ attribute_names[i] }}:</th>
         {% for product in products %}
-{% assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]] %}
-{% if attribute_metafield == blank %}
-  {% assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
-{% endif %}
+          {% assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]] %}
+          {% if attribute_metafield == blank %}
+            {% assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
+          {% endif %}
           <td class="product-compare-{{ product.id }}">
             {% render 'metafield-display', attribute_metafield: attribute_metafield %}
           </td>
@@ -212,92 +164,3 @@
     </div>
   </div>
 {% endif %}
-{%- comment -%} DEBUG: výpis všech attribute setů z připojených kolekcí {%- endcomment -%}
-{%- assign _debug_attr_sets = false -%}
-{%- if _debug_attr_sets -%}
-  <div class="mt-4" style="font-family:monospace; font-size:12px; line-height:1.4;">
-    <details open>
-      <summary><strong>DEBUG</strong> – Attribute sety z připojených kolekcí</summary>
-      <div style="padding:8px 12px; background:#111; color:#0f0; border-radius:6px; margin-top:8px;">
-        {%- if products != blank -%}
-          {%- for p in products -%}
-            <div style="margin-bottom:10px;">
-              <div>Produkt: {{ p.title }} (ID {{ p.id }})</div>
-              {%- if p.collections.size > 0 -%}
-                {%- for collection in p.collections -%}
-                  {%- assign sets = collection.metafields.product_attributes.product_attribute_set.value -%}
-                  {%- if sets != blank -%}
-                    {%- if sets.id != blank -%}
-                      {%- assign attribute_sets = sets | array -%}
-                    {%- else -%}
-                      {%- assign attribute_sets = sets -%}
-                    {%- endif -%}
-                    <div style="margin:6px 0 2px;">• Kolekce: {{ collection.title }} (handle: {{ collection.handle }})</div>
-                    <ul style="margin:0 0 6px 16px; padding:0;">
-                      {%- for attribute_set in attribute_sets -%}
-                        {%- assign set_obj = attribute_set.value | default: attribute_set -%}
-                        {%- assign set_name = set_obj.name | default: set_obj.title | default: set_obj.handle | default: set_obj.id -%}
-                        <li>
-                          Set: <strong>{{ set_name }}</strong>{% if set_obj.id %} (id: {{ set_obj.id }}){% endif %}
-                          {%- if set_obj.list and set_obj.list.value -%}
-                            <div style="opacity:.8;">
-                              Atributy:
-                              {%- for attribute in set_obj.list.value -%}
-                                {%- assign a = attribute.value | default: attribute -%}
-                                {{ a.display_name | default: a.metafield_key }}{%- unless forloop.last -%}, {% endunless -%}
-                              {%- endfor -%}
-                            </div>
-                          {%- endif -%}
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%}
-                {%- endfor -%}
-              {%- else -%}
-                <div>Žádné kolekce.</div>
-              {%- endif -%}
-            </div>
-          {%- endfor -%}
-
-        {%- elsif product != blank -%}
-          <div>Produkt: {{ product.title }} (ID {{ product.id }})</div>
-          {%- if product.collections.size > 0 -%}
-            {%- for collection in product.collections -%}
-              {%- assign sets = collection.metafields.product_attributes.product_attribute_set.value -%}
-              {%- if sets != blank -%}
-                {%- if sets.id != blank -%}
-                  {%- assign attribute_sets = sets | array -%}
-                {%- else -%}
-                  {%- assign attribute_sets = sets -%}
-                {%- endif -%}
-                <div style="margin:6px 0 2px;">• Kolekce: {{ collection.title }} (handle: {{ collection.handle }})</div>
-                <ul style="margin:0 0 6px 16px; padding:0;">
-                  {%- for attribute_set in attribute_sets -%}
-                    {%- assign set_obj = attribute_set.value | default: attribute_set -%}
-                    {%- assign set_name = set_obj.name | default: set_obj.title | default: set_obj.handle | default: set_obj.id -%}
-                    <li>
-                      Set: <strong>{{ set_name }}</strong>{% if set_obj.id %} (id: {{ set_obj.id }}){% endif %}
-                      {%- if set_obj.list and set_obj.list.value -%}
-                        <div style="opacity:.8;">
-                          Atributy:
-                          {%- for attribute in set_obj.list.value -%}
-                            {%- assign a = attribute.value | default: attribute -%}
-                            {{ a.display_name | default: a.metafield_key }}{%- unless forloop.last -%}, {% endunless -%}
-                          {%- endfor -%}
-                        </div>
-                      {%- endif -%}
-                    </li>
-                  {%- endfor -%}
-                </ul>
-              {%- endif -%}
-            {%- endfor -%}
-          {%- else -%}
-            <div>Žádné kolekce.</div>
-          {%- endif -%}
-        {%- else -%}
-          <div>Není k dispozici products ani product.</div>
-        {%- endif -%}
-      </div>
-    </details>
-  </div>
-{%- endif -%}
