@@ -30,63 +30,20 @@
 
         for attribute_set in attribute_sets
           assign set_obj = attribute_set.value | default: attribute_set
+
+          assign attrs = blank
           if set_obj.list and set_obj.list.value
-            for attribute in set_obj.list.value
-              assign a = attribute.value | default: attribute
-
-              assign k = a.metafield_key
-              if k == blank and a.product_attribute__metafield_key
-                assign k = a.product_attribute__metafield_key
-              endif
-              if k == blank and a.key
-                assign k = a.key
-              endif
-              if k != blank
-                assign k = k | strip
-              endif
-
-              assign n = a.display_name
-              if n == blank and a.product_attribute__display_name
-                assign n = a.product_attribute__display_name
-              endif
-              if n == blank and a.name
-                assign n = a.name
-              endif
-              if n != blank
-                assign n = n | strip
-              endif
-
-              assign needle = '|' | append: k | append: '|'
-              if k == blank or n == blank or keys_guard contains needle
-                continue
-              endif
-
-              assign attribute_names = attribute_names | append: n | append: '|'
-              assign attribute_keys  = attribute_keys  | append: k | append: '|'
-              assign keys_guard      = keys_guard      | append: k | append: '|'
-            endfor
+            assign attrs = set_obj.list.value
+          elsif set_obj.product_attribute_set__list and set_obj.product_attribute_set__list.value
+            assign attrs = set_obj.product_attribute_set__list.value
+          elsif set_obj.attributes and set_obj.attributes.value
+            assign attrs = set_obj.attributes.value
           endif
-        endfor
-      endfor
-    endfor
+          if attrs == blank
+            continue
+          endif
 
-  elsif product != blank
-    for collection in product.collections
-      assign sets = collection.metafields.product_attributes.product_attribute_set.value
-      if sets == blank
-        continue
-      endif
-
-      if sets.id != blank
-        assign attribute_sets = sets | array
-      else
-        assign attribute_sets = sets
-      endif
-
-      for attribute_set in attribute_sets
-        assign set_obj = attribute_set.value | default: attribute_set
-        if set_obj.list and set_obj.list.value
-          for attribute in set_obj.list.value
+          for attribute in attrs
             assign a = attribute.value | default: attribute
 
             assign k = a.metafield_key
@@ -97,7 +54,11 @@
               assign k = a.key
             endif
             if k != blank
-              assign k = k | strip
+              assign k = k | strip | replace: 'product_attributes.', ''
+              if k contains '.'
+                assign parts = k | split: '.'
+                assign k = parts | last
+              endif
             endif
 
             assign n = a.display_name
@@ -120,7 +81,76 @@
             assign attribute_keys  = attribute_keys  | append: k | append: '|'
             assign keys_guard      = keys_guard      | append: k | append: '|'
           endfor
+        endfor
+      endfor
+    endfor
+
+  elsif product != blank
+    for collection in product.collections
+      assign sets = collection.metafields.product_attributes.product_attribute_set.value
+      if sets == blank
+        continue
+      endif
+
+      if sets.id != blank
+        assign attribute_sets = sets | array
+      else
+        assign attribute_sets = sets
+      endif
+
+      for attribute_set in attribute_sets
+        assign set_obj = attribute_set.value | default: attribute_set
+
+        assign attrs = blank
+        if set_obj.list and set_obj.list.value
+          assign attrs = set_obj.list.value
+        elsif set_obj.product_attribute_set__list and set_obj.product_attribute_set__list.value
+          assign attrs = set_obj.product_attribute_set__list.value
+        elsif set_obj.attributes and set_obj.attributes.value
+          assign attrs = set_obj.attributes.value
         endif
+        if attrs == blank
+          continue
+        endif
+
+        for attribute in attrs
+          assign a = attribute.value | default: attribute
+
+          assign k = a.metafield_key
+          if k == blank and a.product_attribute__metafield_key
+            assign k = a.product_attribute__metafield_key
+          endif
+          if k == blank and a.key
+            assign k = a.key
+          endif
+          if k != blank
+            assign k = k | strip | replace: 'product_attributes.', ''
+            if k contains '.'
+              assign parts = k | split: '.'
+              assign k = parts | last
+            endif
+          endif
+
+          assign n = a.display_name
+          if n == blank and a.product_attribute__display_name
+            assign n = a.product_attribute__display_name
+          endif
+          if n == blank and a.name
+            assign n = a.name
+          endif
+          if n != blank
+            assign n = n | strip
+          endif
+
+          assign needle = '|' | append: k | append: '|'
+          if k == blank or n == blank or keys_guard contains needle
+            continue
+          endif
+
+          assign attribute_names = attribute_names | append: n | append: '|'
+          assign attribute_keys  = attribute_keys  | append: k | append: '|'
+          assign keys_guard      = keys_guard      | append: k | append: '|'
+        endfor
       endfor
     endfor
   endif
@@ -182,7 +212,6 @@
     </div>
   </div>
 {% endif %}
-
 {%- comment -%} DEBUG: výpis všech attribute setů z připojených kolekcí {%- endcomment -%}
 {%- assign _debug_attr_sets = false -%}
 {%- if _debug_attr_sets -%}
