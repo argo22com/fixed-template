@@ -24,17 +24,17 @@
         for attribute_set in attribute_sets
           assign set_obj = attribute_set.value | default: attribute_set
 
-          assign attrs_holder = set_obj.list
-          if attrs_holder == blank and set_obj.product_attribute_set__list
-            assign attrs_holder = set_obj.product_attribute_set__list
+          assign holder = set_obj.list
+          if holder == blank and set_obj.product_attribute_set__list
+            assign holder = set_obj.product_attribute_set__list
           endif
-          if attrs_holder == blank and set_obj.attributes
-            assign attrs_holder = set_obj.attributes
+          if holder == blank and set_obj.attributes
+            assign holder = set_obj.attributes
           endif
 
-          assign attrs = attrs_holder.references
-          if attrs == blank and attrs_holder and attrs_holder.value
-            assign attrs = attrs_holder.value
+          assign attrs = holder.references
+          if attrs == blank and holder and holder.value
+            assign attrs = holder.value
           endif
           if attrs == blank
             continue
@@ -101,17 +101,17 @@
       for attribute_set in attribute_sets
         assign set_obj = attribute_set.value | default: attribute_set
 
-        assign attrs_holder = set_obj.list
-        if attrs_holder == blank and set_obj.product_attribute_set__list
-          assign attrs_holder = set_obj.product_attribute_set__list
+        assign holder = set_obj.list
+        if holder == blank and set_obj.product_attribute_set__list
+          assign holder = set_obj.product_attribute_set__list
         endif
-        if attrs_holder == blank and set_obj.attributes
-          assign attrs_holder = set_obj.attributes
+        if holder == blank and set_obj.attributes
+          assign holder = set_obj.attributes
         endif
 
-        assign attrs = attrs_holder.references
-        if attrs == blank and attrs_holder and attrs_holder.value
-          assign attrs = attrs_holder.value
+        assign attrs = holder.references
+        if attrs == blank and holder and holder.value
+          assign attrs = holder.value
         endif
         if attrs == blank
           continue
@@ -168,11 +168,20 @@
     {% liquid
       assign all_empty = true
       for product in products
-        assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
-        if attribute_metafield == blank
-          assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
+        assign k = attribute_keys[i]
+        assign mf = product.metafields.product_attributes[k]
+        if mf == blank
+          assign mf = product.selected_or_first_available_variant.metafields.product_attributes[k]
         endif
-        if attribute_metafield != blank and attribute_metafield.value
+        assign __v = mf.value
+        assign __vs = __v | append: '' | strip | downcase
+        assign __is_empty = false
+        if mf == blank or __v == nil
+          assign __is_empty = true
+        elsif __vs == '' or __vs == 'undefined' or __vs == 'null'
+          assign __is_empty = true
+        endif
+        if __is_empty == false
           assign all_empty = false
           break
         endif
@@ -182,12 +191,23 @@
       <tr>
         <th>{{ attribute_names[i] }}:</th>
         {% for product in products %}
-          {% assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]] %}
-          {% if attribute_metafield == blank %}
-            {% assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]] %}
+          {% assign k = attribute_keys[i] %}
+          {% assign mf = product.metafields.product_attributes[k] %}
+          {% if mf == blank %}
+            {% assign mf = product.selected_or_first_available_variant.metafields.product_attributes[k] %}
+          {% endif %}
+          {% assign __v = mf.value %}
+          {% assign __vs = __v | append: '' | strip | downcase %}
+          {% assign __is_empty = false %}
+          {% if mf == blank or __v == nil %}
+            {% assign __is_empty = true %}
+          {% elsif __vs == '' or __vs == 'undefined' or __vs == 'null' %}
+            {% assign __is_empty = true %}
           {% endif %}
           <td class="product-compare-{{ product.id }}">
-            {% render 'metafield-display', attribute_metafield: attribute_metafield %}
+            {% unless __is_empty %}
+              {% render 'metafield-display', attribute_metafield: mf %}
+            {% endunless %}
           </td>
         {% endfor %}
       </tr>
@@ -198,19 +218,28 @@
     <div class="grid">
       {% for i in (0..keys_length)  %}
         {% liquid
-          assign attribute_metafield = product.metafields.product_attributes[attribute_keys[i]]
-          if attribute_metafield == blank
-            assign attribute_metafield = product.selected_or_first_available_variant.metafields.product_attributes[attribute_keys[i]]
+          assign k = attribute_keys[i]
+          assign mf = product.metafields.product_attributes[k]
+          if mf == blank
+            assign mf = product.selected_or_first_available_variant.metafields.product_attributes[k]
+          endif
+          assign __v = mf.value
+          assign __vs = __v | append: '' | strip | downcase
+          assign __is_empty = false
+          if mf == blank or __v == nil
+            assign __is_empty = true
+          elsif __vs == '' or __vs == 'undefined' or __vs == 'null'
+            assign __is_empty = true
           endif
         %}
-        {% if attribute_metafield != blank and attribute_metafield.value %}
+        {% unless __is_empty %}
           <div class="grid__item">
             <h4 class="db font-heading-bold margin0 margin-bottom-1rem h5">{{ attribute_names[i] }}</h4>
             <div class="rte">
-              {% render 'metafield-display', attribute_metafield: attribute_metafield %}
+              {% render 'metafield-display', attribute_metafield: mf %}
             </div>
           </div>
-        {% endif %}
+        {% endunless %}
       {% endfor %}
     </div>
   </div>
