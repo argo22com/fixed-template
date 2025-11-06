@@ -33,11 +33,31 @@
           if set_obj.list and set_obj.list.value
             for attribute in set_obj.list.value
               assign a = attribute.value | default: attribute
+
               assign k = a.metafield_key
+              if k == blank and a.product_attribute__metafield_key
+                assign k = a.product_attribute__metafield_key
+              endif
+              if k == blank and a.key
+                assign k = a.key
+              endif
+              if k != blank
+                assign k = k | strip
+              endif
+
               assign n = a.display_name
+              if n == blank and a.product_attribute__display_name
+                assign n = a.product_attribute__display_name
+              endif
+              if n == blank and a.name
+                assign n = a.name
+              endif
+              if n != blank
+                assign n = n | strip
+              endif
 
               assign needle = '|' | append: k | append: '|'
-              if k == blank or keys_guard contains needle
+              if k == blank or n == blank or keys_guard contains needle
                 continue
               endif
 
@@ -68,11 +88,31 @@
         if set_obj.list and set_obj.list.value
           for attribute in set_obj.list.value
             assign a = attribute.value | default: attribute
+
             assign k = a.metafield_key
+            if k == blank and a.product_attribute__metafield_key
+              assign k = a.product_attribute__metafield_key
+            endif
+            if k == blank and a.key
+              assign k = a.key
+            endif
+            if k != blank
+              assign k = k | strip
+            endif
+
             assign n = a.display_name
+            if n == blank and a.product_attribute__display_name
+              assign n = a.product_attribute__display_name
+            endif
+            if n == blank and a.name
+              assign n = a.name
+            endif
+            if n != blank
+              assign n = n | strip
+            endif
 
             assign needle = '|' | append: k | append: '|'
-            if k == blank or keys_guard contains needle
+            if k == blank or n == blank or keys_guard contains needle
               continue
             endif
 
@@ -87,7 +127,6 @@
 
   assign attribute_names = attribute_names | split: '|' 
   assign attribute_keys  = attribute_keys  | split: '|'
-
   assign keys_length = attribute_keys.size | minus: 1
 %}
 
