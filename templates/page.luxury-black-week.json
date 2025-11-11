@@ -154,7 +154,7 @@
             "keep_ltr": false,
             "desktop_image_width": "full",
             "desktop_image_position": "left",
-            "image_overlay_opacity": 20,
+            "image_overlay_opacity": 10,
             "text_alignment_mobile": "center",
             "colors_text": "#fff",
             "gradient_heading_desktop": "",
