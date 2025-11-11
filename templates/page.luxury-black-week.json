@@ -26,6 +26,7 @@
       "blocks": {
         "slide_d3AYiw": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/kuze_banner-desktop.jpg",
             "mobile_image": "shopify://shop_images/1B1A5760.jpg",
@@ -63,6 +64,7 @@
         },
         "slide_68Kgzz": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/profit_banner-desktop.jpg",
             "mobile_image": "shopify://shop_images/1B1A5911.jpg",
@@ -104,8 +106,8 @@
             "image": "shopify://shop_images/OXFORD.jpg",
             "mobile_image": "shopify://shop_images/1B1A5878.jpg",
             "badge_label": "",
-            "heading": "Kožené pouzdro Oxford",
-            "text": "360° Ochrana pro notebooky a tablety",
+            "heading": "Luxury Black Week",
+            "text": "-33 % na všechny naše prémiové produkty! Použij slevový kód \"<strong>luxus33</strong>\"",
             "hide_text_on_mobile": false,
             "button_label": "",
             "price": "",
@@ -179,6 +181,7 @@
         "heading_UWbDfX",
         "text_PTb6yL"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "large",
@@ -188,76 +191,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 0
-      }
-    },
-    "text_icons_fictdW": {
-      "type": "text-icons",
-      "blocks": {
-        "text_icon_Cimifi": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/warranty_1.png",
-            "title": "",
-            "subheading": "Všechny produkty pocházejí z naší kožené dílny v Prostějově.",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_FKQJQ6": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/natural-material.png",
-            "title": "",
-            "subheading": "Díky přírodním materiálům je každý produkt unikát a dlouho vydrží.",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        },
-        "text_icon_rHAfmj": {
-          "type": "text-icon",
-          "settings": {
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/top-grain-1.png",
-            "title": "",
-            "subheading": "Na výběru kůže záleží, proto máme jen to nejlepší od italských dodavatelů.",
-            "link": "",
-            "open_link_in_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "text_icon_Cimifi",
-        "text_icon_FKQJQ6",
-        "text_icon_rHAfmj"
-      ],
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "heading_size": "h2",
-        "icon_width_desktop": 50,
-        "text_position": "bottom",
-        "enable_heading_in_box": false,
-        "columns_desktop": 3,
-        "columns_tablet": 3,
-        "auto_fit": false,
-        "column_alignment": "center",
-        "highlight_icon": false,
-        "enable_section_box_layout": false,
-        "color_scheme": "background-1",
-        "border_width": 1,
-        "border_opacity": 0,
-        "border_spacing": 0,
-        "highlight_border": false,
-        "border_shape": "square",
-        "blur_background": false,
-        "columns_mobile": "1",
-        "icon_width_mobile": 30,
-        "border_spacing_mobile": 0,
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 36
       }
     },
     "collection_list_NekX4X": {
@@ -721,7 +654,6 @@
     "main",
     "slideshow_8r6nPV",
     "rich_text_GnRiqE",
-    "text_icons_fictdW",
     "collection_list_NekX4X",
     "image_with_text_zKVCnf",
     "image_with_text_VYpWNw",
