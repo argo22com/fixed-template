@@ -145,7 +145,7 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "small",
+        "slide_height": "medium",
         "slide_height_mobile": "adapt_image_mobile",
         "auto_rotate": false,
         "change_slides_speed": 5,
