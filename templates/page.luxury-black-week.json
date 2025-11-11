@@ -293,7 +293,7 @@
         "title": "Výrobky z kůže se slevou 33 %",
         "subtitle": "",
         "heading_size": "h1",
-        "image_ratio": "adapt",
+        "image_ratio": "landscape",
         "columns_desktop": 3,
         "full_width": false,
         "enable_section_box_layout": false,
