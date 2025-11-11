@@ -273,6 +273,53 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_4zTRPj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_y8Ykhd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Jediný týden, kdy je luxus dosažitelný.</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_iRxUPj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Luxury Black Week – slevy až 33 %. Použij slevový kód \"luxus33\".</p>"
+          }
+        },
+        "button_x7px9p": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zobrazit všechny produkty",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_y8Ykhd",
+        "text_iRxUPj",
+        "button_x7px9p"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection_LmtAdD": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -644,6 +691,7 @@
     "slideshow_8r6nPV",
     "rich_text_GnRiqE",
     "collection_list_NekX4X",
+    "rich_text_4zTRPj",
     "featured_collection_LmtAdD",
     "image_with_text_zKVCnf",
     "image_with_text_VYpWNw",
