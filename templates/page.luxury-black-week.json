@@ -202,12 +202,13 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h3>Pečlivě vyrobené doplňky pro vaše zařízení</h3>",
+            "heading": "<h1><strong>Výrobky z kůže se slevou 33 %</strong></h1>",
             "heading_size": "h2"
           }
         },
         "text_PTb6yL": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Na každém koženém doplňku si dáváme záležet, jenom tak můžeme dosáhnout té nejvyšší kvality. Od návrhu designu, přípravy kůže, střihu, pečlivé výroby až po důkladnou kontrolu. Tak vzniká dokonalý výrobek s vůní pravé kůže.</p>"
           }
@@ -217,7 +218,6 @@
         "heading_UWbDfX",
         "text_PTb6yL"
       ],
-      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "large",
@@ -237,7 +237,7 @@
           "settings": {
             "collection": "venezia",
             "custom_image": "shopify://shop_images/venezia_ls3_9e1a74e1-b4e0-411b-9180-288e9cb120cb.jpg",
-            "custom_title": "TAŠTIČKY NA TELEFONY"
+            "custom_title": "Taštičky na telefony"
           }
         },
         "featured_collection_39BEyL": {
@@ -245,7 +245,7 @@
           "settings": {
             "collection": "pouzdra-na-telefony",
             "custom_image": "shopify://shop_images/profit_1.jpg",
-            "custom_title": "POUZDRA NA TELEFONY"
+            "custom_title": "Pouzdra na telefony"
           }
         },
         "featured_collection_MWJN9E": {
@@ -253,7 +253,7 @@
           "settings": {
             "collection": "pouzdra-na-notebooky",
             "custom_image": "shopify://shop_images/1B1A1377_1e40ff19-5738-4d6a-b0cc-939455e6b6f8.jpg",
-            "custom_title": "POUZDRA NA NOTEBOOKY"
+            "custom_title": "Pouzdra na notebooky"
           }
         },
         "featured_collection_iXWMGe": {
@@ -261,7 +261,7 @@
           "settings": {
             "collection": "pouzdra-na-tablety",
             "custom_image": "shopify://shop_images/pouzdra_na_tablety.jpg",
-            "custom_title": "POUZDRA NA TABLETY"
+            "custom_title": "Pouzdra na tablety"
           }
         },
         "featured_collection_cGFVCd": {
@@ -269,7 +269,7 @@
           "settings": {
             "collection": "penezenky",
             "custom_image": "shopify://shop_images/Penezenky_pro_airtag.jpg",
-            "custom_title": "PENĚŽENKY"
+            "custom_title": "Peněženky"
           }
         },
         "featured_collection_pejaJ6": {
@@ -277,7 +277,7 @@
           "settings": {
             "collection": "pasovky",
             "custom_image": "shopify://shop_images/pasovky.jpg",
-            "custom_title": "PASOVKY"
+            "custom_title": "Pasovky"
           }
         }
       },
@@ -290,7 +290,7 @@
         "featured_collection_pejaJ6"
       ],
       "settings": {
-        "title": "Výrobky z kůže se slevou 33 %",
+        "title": "",
         "subtitle": "",
         "heading_size": "h1",
         "image_ratio": "landscape",
