@@ -202,15 +202,14 @@
         "heading_UWbDfX": {
           "type": "heading",
           "settings": {
-            "heading": "<h1><strong>Výrobky z kůže se slevou 33 %</strong></h1>",
+            "heading": "<h3><strong>Jediný týden, kdy je luxus dosažitelný.</strong></h3><h1><strong>Výrobky z kůže se slevou 33 %</strong></h1>",
             "heading_size": "h2"
           }
         },
         "text_PTb6yL": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "<p>Na každém koženém doplňku si dáváme záležet, jenom tak můžeme dosáhnout té nejvyšší kvality. Od návrhu designu, přípravy kůže, střihu, pečlivé výroby až po důkladnou kontrolu. Tak vzniká dokonalý výrobek s vůní pravé kůže.</p>"
+            "text": "<h3></h3><h3>s kódem \"luxus33\"</h3>"
           }
         }
       },
@@ -315,18 +314,19 @@
         "heading_y8Ykhd": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Jediný týden, kdy je luxus dosažitelný.</p>",
+            "heading": "<p><strong>Jediný týden, kdy je luxus dosažitelný.</strong></p>",
             "heading_size": "h1"
           }
         },
         "text_iRxUPj": {
           "type": "text",
           "settings": {
-            "text": "<p>Luxury Black Week – slevy až 33 %. Použij slevový kód \"luxus33\".</p>"
+            "text": "<h3><strong>Slevy až</strong> <strong>33 % </strong>s kódem \"luxus33\"</h3>"
           }
         },
         "button_x7px9p": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Zobrazit všechny produkty",
             "button_link": "",
@@ -344,6 +344,55 @@
         "text_iRxUPj",
         "button_x7px9p"
       ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_NC6eyG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DHDfgy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>Titanové řemínky se slevou 33 %</strong></p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_dE7Bi3": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>S kódem \"luxus33\"</h3>"
+          }
+        },
+        "button_FzpFcj": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DHDfgy",
+        "text_dE7Bi3",
+        "button_FzpFcj"
+      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -360,7 +409,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "Titanové řemínky se slevou 33 %",
+        "title": "",
         "subtitle": "",
         "collection": "titanove-reminky",
         "heading_size": "h1",
@@ -728,6 +777,7 @@
     "rich_text_GnRiqE",
     "collection_list_NekX4X",
     "rich_text_4zTRPj",
+    "rich_text_NC6eyG",
     "featured_collection_LmtAdD",
     "image_with_text_zKVCnf",
     "image_with_text_VYpWNw",
