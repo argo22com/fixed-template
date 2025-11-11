@@ -142,7 +142,7 @@
             "image": "shopify://shop_images/FIXTST-434_NT_LSF2-_1_eb0a1ec3-85b5-47ee-8461-75029b05c267.jpg",
             "badge_label": "slevový kód \"luxus33\"",
             "heading": "Luxury Black Week",
-            "text": "Tell your brand's story through images",
+            "text": "-33 % na naše prémiové produkty!",
             "hide_text_on_mobile": false,
             "button_label": "",
             "price": "1300",
@@ -402,7 +402,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 20
       }
     },
     "featured_collection_LmtAdD": {
