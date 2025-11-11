@@ -107,7 +107,7 @@
             "mobile_image": "shopify://shop_images/1B1A5878.jpg",
             "badge_label": "",
             "heading": "Luxury Black Week",
-            "text": "-33 % na všechny naše prémiové produkty! Použij slevový kód \"<strong>luxus33</strong>\"",
+            "text": "-33 % na naše prémiové produkty! Použij slevový kód \"<strong>luxus33</strong>\"",
             "hide_text_on_mobile": false,
             "button_label": "",
             "price": "",
@@ -254,7 +254,7 @@
         "featured_collection_pejaJ6"
       ],
       "settings": {
-        "title": "Kategorie výrobků z kůže",
+        "title": "Výrobky z kůže se slevou 33 %",
         "subtitle": "",
         "heading_size": "h1",
         "image_ratio": "adapt",
@@ -277,7 +277,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "Titanové řemínky",
+        "title": "Titanové řemínky se slevou 33 %",
         "subtitle": "",
         "collection": "titanove-reminky",
         "heading_size": "h1",
@@ -285,7 +285,7 @@
         "columns_desktop": 3,
         "full_width": false,
         "show_view_all": true,
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "enable_section_box_layout": false,
         "color_scheme": "",
         "image_position_desktop": "left",
@@ -340,6 +340,7 @@
         "text_BVLD3r",
         "button_MppFHw"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/leather.png",
@@ -404,6 +405,7 @@
         "text_gXWYDt",
         "button_fcqKMB"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/1B1A0152.jpg",
@@ -435,64 +437,12 @@
         "overlay_color": "#1e40af"
       }
     },
-    "collection_list_bB4BBc": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_fE9TMM": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pouzdra-na-telefony-z-umele-kuze",
-            "custom_image": "shopify://shop_images/verona-768x512.jpg",
-            "custom_title": "TAŠTIČKY NA TELEFON"
-          }
-        },
-        "featured_collection_WMUJtn": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pouzdra-na-tablety-z-umele-kuze",
-            "custom_image": "shopify://shop_images/1B1A0588.jpg",
-            "custom_title": "OBALY NA TABLETY"
-          }
-        },
-        "featured_collection_4Ge7Ga": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pouzdra-na-notebooky-z-umele-kuze",
-            "custom_image": "shopify://shop_images/york_ls2.jpg",
-            "custom_title": "OBALY NA NOTEBOOKY"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_fE9TMM",
-        "featured_collection_WMUJtn",
-        "featured_collection_4Ge7Ga"
-      ],
-      "settings": {
-        "title": "Kategorie výrobků z veganské kůže",
-        "subtitle": "",
-        "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "full_width": false,
-        "enable_section_box_layout": false,
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "show_view_all": false,
-        "collection_card_show_title": true,
-        "show_products_count": false,
-        "columns_tablet": "3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "featured_products_tabs_AyhByH": {
       "type": "featured-products-tabs",
       "blocks": {
         "featured_products_CX9Rfz": {
           "type": "featured_products",
+          "disabled": true,
           "settings": {
             "title": "Novinky",
             "product_list": [
@@ -506,6 +456,7 @@
         },
         "featured_collection_Ccb8Vb": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "title": "Bestsellery",
             "collection": "rucni-vyroba",
@@ -520,6 +471,7 @@
         "featured_products_CX9Rfz",
         "featured_collection_Ccb8Vb"
       ],
+      "disabled": true,
       "settings": {
         "title": "Novinky a bestsellery z naší kolekce",
         "subtitle": "",
@@ -564,6 +516,7 @@
         "heading_ceCYpX",
         "text_4UtjNC"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "desktop_content_width": "large",
@@ -598,6 +551,7 @@
         "heading_JW7Xxj",
         "text_LgN74N"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/rucni_vyroba.jpg",
@@ -652,6 +606,7 @@
         "heading_jPWPVM",
         "text_PjkGfz"
       ],
+      "disabled": true,
       "settings": {
         "grid_layout": "grid",
         "image": "shopify://shop_images/rucni_vyroba2.jpg",
@@ -692,7 +647,6 @@
     "featured_collection_LmtAdD",
     "image_with_text_zKVCnf",
     "image_with_text_VYpWNw",
-    "collection_list_bB4BBc",
     "featured_products_tabs_AyhByH",
     "rich_text_w69QNV",
     "image_with_text_MUzzfc",
