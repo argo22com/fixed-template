@@ -63,6 +63,7 @@
         },
         "slide_68Kgzz": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Loutocky_COM_DS8_0533.jpg",
             "mobile_image": "shopify://shop_images/Loutocky_COM_DS8_0533.jpg",
@@ -138,6 +139,7 @@
         },
         "slide_KJ7LmQ": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/FIXPFIT2-793-BRW-PRODUCT-10.webp",
             "badge_label": "slevový kód \"luxus33\"",
