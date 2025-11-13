@@ -93,6 +93,7 @@
         },
         "column_dMTh3w": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/obchod.png",
             "icon": "check",
