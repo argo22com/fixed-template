@@ -378,6 +378,27 @@
             "color_scheme": "inverse"
           }
         },
+        "mega_menu_promotion_fBdRTY": {
+          "type": "mega_menu_promotion",
+          "settings": {
+            "trigger": "Blog",
+            "title": "Dárky",
+            "image": "shopify://shop_images/bts.58512.jpg",
+            "image_ratio": "square",
+            "caption": "",
+            "heading_text": "9+1 tip na vánoční dárky",
+            "subheading": "Sestavili jsme průvodce na dárky pro všechny",
+            "button_label": "číst",
+            "button_style": "solid",
+            "text_align": "center",
+            "text_position": "2",
+            "link": "shopify://blogs/news/9-1-tip-na-vanocni-darky",
+            "position": "last",
+            "overlay_text_enable": true,
+            "overlay_opacity": 50,
+            "color_scheme": "inverse"
+          }
+        },
         "mega_menu_promotion_ya4VNA": {
           "type": "mega_menu_promotion",
           "settings": {
@@ -414,27 +435,6 @@
             "text_align": "center",
             "text_position": "2",
             "link": "shopify://blogs/news/apple-predstavil-iphony-17-v-cem-predcily-lonske-modely-a-co-si-k-nim-poridit",
-            "position": "last",
-            "overlay_text_enable": true,
-            "overlay_opacity": 50,
-            "color_scheme": "inverse"
-          }
-        },
-        "mega_menu_promotion_fBdRTY": {
-          "type": "mega_menu_promotion",
-          "settings": {
-            "trigger": "Blog",
-            "title": "Datablocker",
-            "image": "shopify://shop_images/ChatGPT_Image_Aug_21_2025_10_31_52_AM.png",
-            "image_ratio": "square",
-            "caption": "",
-            "heading_text": "Nabíjej bezpečně",
-            "subheading": "Připojuješ mobil do USB na nádraží? Připrav se na tohle…",
-            "button_label": "číst",
-            "button_style": "solid",
-            "text_align": "center",
-            "text_position": "2",
-            "link": "shopify://blogs/news/pripojujes-mobil-do-usb-na-nadrazi-priprav-se-na-tohle",
             "position": "last",
             "overlay_text_enable": true,
             "overlay_opacity": 50,
@@ -526,9 +526,9 @@
         "mega_menu_promotion_kURg37",
         "mega_menu_promotion_qrrCqd",
         "mega_menu_promotion_9HJwDd",
+        "mega_menu_promotion_fBdRTY",
         "mega_menu_promotion_ya4VNA",
         "mega_menu_promotion_fXE9Ac",
-        "mega_menu_promotion_fBdRTY",
         "mega_menu_promotion_TLTfPK",
         "mega_menu_promotion_LL7tjW",
         "store_information_4TNjEH",
