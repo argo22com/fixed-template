@@ -3,7 +3,6 @@
   - SALE a SOLD-OUT: beze změny (převzato z původního snippetu)
   - Custom labels: list.metaobject_reference na metaobjekt custom_data/lables (field: display_name)
   - Limit: max 4 badge (počítá se SALE + custom; SOLD-OUT se do limitu nepočítá)
-  - Debug: ?debug_labels=1 (viditelný box + hluboká kontrola variant)
 {%- endcomment -%}
 
 {%- liquid
@@ -25,24 +24,66 @@
 
   assign LABELS_NS = 'labels'
   assign LABELS_KEY = 'key'
-
   assign labels_mf = variant_obj.metafields[LABELS_NS][LABELS_KEY]
+
+  # Aktuální čas jako timestamp
+  assign now_ts = 'now' | date: '%s'
+
+  # JSON s platností labelů – nejdřív varianta, pak fallback na produkt
+  assign validity_raw = variant_obj.metafields.labels.metadata
+  if validity_raw == blank
+    assign validity_raw = card_product.metafields.labels.metadata
+  endif
+
+  if validity_raw != blank
+    assign label_validity = validity_raw | parse_json
+  else
+    assign label_validity = nil
+  endif
 -%}
 
-{%- comment -%} CUSTOM LABELS (nová logika) {%- endcomment -%}
+{%- comment -%} CUSTOM LABELS s kontrolou platnosti {%- endcomment -%}
 {%- if labels_mf and labels_mf.value != blank -%}
   {%- for label in labels_mf.value -%}
     {%- if total >= 4 -%}{% break %}{%- endif -%}
+
     {%- assign label_text = label.display_name | default: '' | strip -%}
-    {%- if label_text != '' -%}
+    {%- assign label_key  = label.key | default: '' | strip -%}
+    {%- assign show_label = true -%}
+
+    {%- comment -%}
+      Pokud máme JSON label_validity a label_key není prázdný:
+      - najdeme pravidlo pro daný key
+      - pokud existuje, porovnáme validFrom / validTo s now_ts
+    {%- endcomment -%}
+    {%- if label_validity and label_key != '' -%}
+      {%- assign rule = label_validity[label_key] -%}
+      {%- if rule -%}
+        {%- if rule.validFrom != blank -%}
+          {%- assign from_ts = rule.validFrom | date: '%s' -%}
+          {%- if now_ts < from_ts -%}
+            {%- assign show_label = false -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if rule.validTo != blank and show_label -%}
+          {%- assign to_ts = rule.validTo | date: '%s' -%}
+          {%- if now_ts > to_ts -%}
+            {%- assign show_label = false -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if show_label and label_text != '' -%}
       {%- capture custom_badges -%}
         {{ custom_badges }}
 <span
-  class="badge badge--bottom-left badge--custom badge--position-{{ index_badge_position }} badge--{{ label.key | downcase }} font-body-bold"
+  class="badge badge--bottom-left badge--custom badge--position-{{ index_badge_position }} badge--{{ label_key | downcase }} font-body-bold"
   data-badge="custom_label"
   data-product-id="{{ card_product.id }}"
   data-variant-id="{{ variant_obj.id }}"
-  data-label-key="{{ label.key | escape }}"
+  data-label-key="{{ label_key | escape }}"
 >
   {{ label_text }}
 </span>
@@ -82,6 +123,7 @@
   {{ custom_badges }}
 
 {%- endif -%}
+
 <style>
 .badge--custom {
     --color-badge-foreground: var(--color-custom-badge-4-foreground);
@@ -96,7 +138,7 @@
     --color-badge-background: var(--color-custom-badge-3-background);
 }
 .badge--custom.badge--laststock {
-      --color-badge-foreground: var(--color-custom-badge-1-foreground);
+    --color-badge-foreground: var(--color-custom-badge-1-foreground);
     --color-badge-background: var(--color-custom-badge-1-background);
 }
 </style>
