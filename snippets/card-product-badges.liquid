@@ -1,7 +1,14 @@
 {%- comment -%}
-  Card product badges – původní SALE/SOLD-OUT + nové custom labels z variant metafieldu fixed.labels
+  Card product badges – původní SALE/SOLD-OUT + custom labels s platností
+
   - SALE a SOLD-OUT: beze změny (převzato z původního snippetu)
-  - Custom labels: list.metaobject_reference na metaobjekt custom_data/lables (field: display_name)
+  - Custom labels:
+      • list.metaobject_reference na metaobjekt (field: display_name, key)
+      • namespace: labels, key: key → variant.metafields.labels.key
+  - Validita labelů:
+      • JSON v metafieldu labels.metadata
+      • může být na variantě (priorita) nebo na produktu
+      • struktura: {"KEY": {"validFrom": "...", "validTo": "..."}}
   - Limit: max 4 badge (počítá se SALE + custom; SOLD-OUT se do limitu nepočítá)
 {%- endcomment -%}
 
@@ -26,16 +33,19 @@
   assign LABELS_KEY = 'key'
   assign labels_mf = variant_obj.metafields[LABELS_NS][LABELS_KEY]
 
-  # Aktuální čas jako timestamp
-  assign now_ts = 'now' | date: '%s'
+  # Aktuální čas jako číslo (timestamp)
+  assign now_ts_str = 'now' | date: '%s'
+  assign now_ts = now_ts_str | plus: 0
 
   # JSON s platností labelů – nejdřív varianta, pak fallback na produkt
-  assign validity_raw = variant_obj.metafields.labels.metadata
-  if validity_raw == blank
-    assign validity_raw = card_product.metafields.labels.metadata
+  assign validity_mf = variant_obj.metafields.labels.metadata
+  if validity_mf == blank
+    assign validity_mf = card_product.metafields.labels.metadata
   endif
 
-  if validity_raw != blank
+  if validity_mf != blank
+    # vezmeme .value, pokud existuje, jinak samotný obsah
+    assign validity_raw = validity_mf.value | default: validity_mf
     assign label_validity = validity_raw | parse_json
   else
     assign label_validity = nil
@@ -49,28 +59,39 @@
 
     {%- assign label_text = label.display_name | default: '' | strip -%}
     {%- assign label_key  = label.key | default: '' | strip -%}
-    {%- assign show_label = true -%}
 
     {%- comment -%}
-      Pokud máme JSON label_validity a label_key není prázdný:
-      - najdeme pravidlo pro daný key
-      - pokud existuje, porovnáme validFrom / validTo s now_ts
+      Výchozí stav: label NEZOBRAZUJEME.
+      Zobrazíme ho jen pokud:
+        - existují validační data (label_validity)
+        - existuje pravidlo pro daný key
+        - a jsme v intervalu validFrom/validTo
     {%- endcomment -%}
+    {%- assign show_label = false -%}
+
     {%- if label_validity and label_key != '' -%}
       {%- assign rule = label_validity[label_key] -%}
       {%- if rule -%}
+        {%- assign rule_valid = true -%}
+
         {%- if rule.validFrom != blank -%}
-          {%- assign from_ts = rule.validFrom | date: '%s' -%}
+          {%- assign from_ts_str = rule.validFrom | date: '%s' -%}
+          {%- assign from_ts = from_ts_str | plus: 0 -%}
           {%- if now_ts < from_ts -%}
-            {%- assign show_label = false -%}
+            {%- assign rule_valid = false -%}
           {%- endif -%}
         {%- endif -%}
 
-        {%- if rule.validTo != blank and show_label -%}
-          {%- assign to_ts = rule.validTo | date: '%s' -%}
+        {%- if rule.validTo != blank and rule_valid -%}
+          {%- assign to_ts_str = rule.validTo | date: '%s' -%}
+          {%- assign to_ts = to_ts_str | plus: 0 -%}
           {%- if now_ts > to_ts -%}
-            {%- assign show_label = false -%}
+            {%- assign rule_valid = false -%}
           {%- endif -%}
+        {%- endif -%}
+
+        {%- if rule_valid -%}
+          {%- assign show_label = true -%}
         {%- endif -%}
       {%- endif -%}
     {%- endif -%}
