@@ -910,6 +910,10 @@
           "other": "You will soon receive confirmation emails from each store separately.",
           "few": "You will soon receive confirmation emails from each store separately.",
           "many": "You will soon receive confirmation emails from each store separately."
+        },
+        "thank_you_item_label": {
+          "few": "%{count} items.",
+          "many": "%{count} items."
         }
       },
       "order_payment_collection": {
@@ -945,6 +949,10 @@
           "year": {
             "few": "%{count} years",
             "many": "%{count} years"
+          },
+          "day": {
+            "few": "%{count} days.",
+            "many": "%{count} days."
           }
         },
         "recurring_totals_with_initial_order_shipping_discount_with_policies": {
@@ -1036,6 +1044,12 @@
         "remove_items_action": {
           "few": "remove unavailable items",
           "many": "remove unavailable items"
+        }
+      },
+      "remote_merchandise_only": {
+        "detail_item_label": {
+          "few": "{{count}} positions.",
+          "many": "{{count}} positions."
         }
       }
     },
