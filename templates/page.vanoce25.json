@@ -479,6 +479,54 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_GzNnRJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_GqFgtA": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>Dárek pro tebe.</strong></p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_jmPNGj": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Nakup do 17. 12. dárky nad 2000 Kč a získáváš automaticky 300 Kč slevu. </h3>"
+          }
+        },
+        "button_aVgLBk": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_1": "primary",
+            "button_open_new_tab_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "button_open_new_tab_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_GqFgtA",
+        "text_jmPNGj",
+        "button_aVgLBk"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "large",
+        "content_alignment": "center",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
     "featured_collection_kCnXqR": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -618,6 +666,7 @@
         "text_gPVxVK",
         "button_bYCAP9"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -970,6 +1019,7 @@
     "rich_text_4zTRPj",
     "rich_text_NC6eyG",
     "featured_collection_wNjtcU",
+    "rich_text_GzNnRJ",
     "featured_collection_kCnXqR",
     "featured_collection_XRP4My",
     "featured_collection_f3XhtE",
