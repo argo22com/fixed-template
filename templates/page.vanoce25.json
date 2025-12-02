@@ -27,11 +27,11 @@
         "slide_d3AYiw": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1B1A1377-kopie3.jpg",
+            "image": "shopify://shop_images/vanoce25.png",
             "mobile_image": "shopify://shop_images/1B1A1377-kopie2.jpg",
-            "badge_label": "slevový kód \"luxus33\"",
-            "heading": "Luxury Black Week",
-            "text": "-33 % na naše kožené produkty!",
+            "badge_label": "Tipy na dárky",
+            "heading": "Vánoce s FIXED",
+            "text": "Noví mazlíčci pod stromečkem? Oblečte je s FIXED.",
             "hide_text_on_mobile": false,
             "button_label": "",
             "price": "",
@@ -43,7 +43,7 @@
             "keep_ltr": false,
             "desktop_image_width": "full",
             "desktop_image_position": "left",
-            "image_overlay_opacity": 20,
+            "image_overlay_opacity": 0,
             "text_alignment_mobile": "center",
             "colors_text": "#ffffff",
             "gradient_heading_desktop": "",
@@ -176,6 +176,7 @@
         },
         "slide_pjqCzU": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/FIXTST-434_NT_LSF2-_1_eb0a1ec3-85b5-47ee-8461-75029b05c267.jpg",
             "badge_label": "slevový kód \"luxus33\"",
@@ -226,7 +227,7 @@
         "change_slides_speed": 5,
         "enable_pagination_desktop": false,
         "enable_navigation_desktop": true,
-        "preload": false,
+        "preload": true,
         "show_text_below": true,
         "enable_pagination_mobile": false,
         "enable_navigation_mobile": true,
