@@ -200,6 +200,7 @@
       "blocks": {
         "slide_QWELn3": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/1B1A1377-kopie3.jpg",
             "mobile_image": "shopify://shop_images/1B1A1377-kopie3.jpg",
