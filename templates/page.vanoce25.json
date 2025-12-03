@@ -31,7 +31,7 @@
             "mobile_image": "shopify://shop_images/vanoce-mobil.png",
             "badge_label": "Dárek 300 Kč pro tebe",
             "heading": "Vánoce s FIXED",
-            "text": "Noví mazlíčci pod stromečkem? Oblečte je s FIXED.",
+            "text": "Nakup dárky nad 2000 Kč a získáváš automaticky 300 Kč slevu.",
             "hide_text_on_mobile": false,
             "button_label": "",
             "price": "",
@@ -249,7 +249,7 @@
         "text_PTb6yL": {
           "type": "text",
           "settings": {
-            "text": "<h3></h3><h3>Ruční práce. Skutečný dárek.</h3>"
+            "text": "<h3></h3><h3>Česká kvalita, kterou poznáš na první dotek.</h3>"
           }
         }
       },
