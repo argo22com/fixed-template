@@ -191,6 +191,7 @@ endpaginate
                                     {%- when 'sk' -%}{%- assign legend_label = 'Farba' -%}
                                     {%- when 'en' -%}{%- assign legend_label = 'Color' -%}
                                     {%- when 'de' -%}{%- assign legend_label = 'Farbe' -%}
+                                    {%- when 'pl' -%}{%- assign legend_label = 'Kolor' -%}
                                     {%- else -%}{%- assign legend_label = 'Barva' -%}
                                   {%- endcase -%}
                                     {%- for option in item.options_with_values -%}
@@ -223,8 +224,21 @@ endpaginate
                                         <dt>{{ option.name }}:</dt>
                                         <dd>{{ display_value | default: option.value | escape }}</dd>
                                       {% else %}
+                                        {%- liquid
+                                          assign display_value = option.value
+
+                                          for size_item in shop.metaobjects.size_codes.values
+                                            if size_item.code and size_item.code.value and size_item.display_name and size_item.display_name.value
+                                              assign size_code = size_item.code.value | strip
+                                              if size_code == option.value
+                                                assign display_value = size_item.display_name.value
+                                                break
+                                              endif
+                                            endif
+                                          endfor
+                                        -%}
                                         <dt>{{ option.name }}:</dt>
-                                        <dd>{{ option.value }}</dd>
+                                        <dd>{{ display_value | default: option.value }}</dd>
                                       {%- endif -%}
                                     </div>
                                   {%- endfor -%}
