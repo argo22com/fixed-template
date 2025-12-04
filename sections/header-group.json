@@ -70,8 +70,8 @@
         "menu_badge_CxNkFp": {
           "type": "menu_badge",
           "settings": {
-            "trigger": "Výprodej",
-            "text": "Slevy až -70 %",
+            "trigger": "Vánoce s FIXED",
+            "text": "300 Kč pro tebe",
             "text_color": "#ffffff",
             "background_color": "#dc4405"
           }
