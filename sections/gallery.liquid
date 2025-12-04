@@ -123,7 +123,7 @@
         {%- render 'section-heading', show_desktop_slider: show_desktop_slider, show_tablet_slider: show_tablet_slider, show_mobile_slider: show_mobile_slider -%}  
       {%- endunless -%}  
     {%- endif -%}
- {%- if request.design_mode -%}
+
   <details class="gallery-debug" style="margin-bottom:1rem; border:1px solid #ccc; padding:0.75rem; font-size:12px;">
     <summary style="cursor:pointer;">Gallery debug – image data & metafields (only in editor)</summary>
     <pre style="white-space:pre-wrap; margin-top:0.75rem;">
@@ -153,7 +153,7 @@ Block {{ forloop.index }} (id: {{ block.id }}, type: {{ block.type }})
 {% endfor %}
     </pre>
   </details>
-{%- endif -%}
+
 
     <div class="gallery">
       <slider-component class="por slider-mobile-gutter{% unless section.settings.enable_section_box_layout %}{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width{% endif %}{% if show_desktop_slider and section.settings.full_width == false %} page-width-desktop{% endif %}{% endunless %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if show_tablet_slider %} slider-component-tablet{% endif %}{% if show_mobile_slider %} slider-component-mobile{% endif %}"
