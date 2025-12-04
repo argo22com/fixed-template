@@ -213,8 +213,26 @@ endpaginate
                                         <dt>{{ option.name }}:</dt>
                                         <dd>{{ display_value | default: option.value | escape }}</dd>
                                       {% else %}
+                                        {%- liquid
+                                          assign display_value = option.value
+
+                                          comment
+                                            Přemapování velikostí přes metaobject size_codes:
+                                            - code         = např. "2XXL_cover"
+                                            - display_name = např. "2XL / Cover"
+                                          endcomment
+                                          for size_item in shop.metaobjects.size_codes.values
+                                            if size_item.code and size_item.code.value and size_item.display_name and size_item.display_name.value
+                                              assign size_code = size_item.code.value | strip
+                                              if size_code == option.value
+                                                assign display_value = size_item.display_name.value
+                                                break
+                                              endif
+                                            endif
+                                          endfor
+                                        -%}
                                         <dt>{{ option.name }}:</dt>
-                                        <dd>{{ option.value }}</dd>
+                                        <dd class="pl-1">{{ display_value | default: option.value }}</dd>
                                       {% endif %}
                                     </div>
                                   {%- endfor -%}
