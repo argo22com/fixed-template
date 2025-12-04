@@ -1,4 +1,89 @@
 <media-gallery id="MediaGallery-{{ section.id }}" role="region" class="product__media-gallery{% if is_vertical %} product__media-gallery--vertical product__media-gallery--vertical-{{ section.settings.thumbnail_position }}{% endif %}" aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}"{% if section.settings.auto_scroll_up_mobile %} data-scroll-up-mobile="true"{% endif %}{% if section.settings.disable_images_lightbox %} data-disable-lightbox="true"{% endif %}>
+    {%- comment -%}
+    DEBUG: Výpis dat z product.media a metafieldů pro ladění lokalizace obrázků.
+    Necháváme viditelné na frontendu, protože jsme na vývojovém prostředí.
+  {%- endcomment -%}
+  <div class="media-debug" style="font-size:12px; line-height:1.4; margin-bottom:1rem; padding:0.75rem; border:1px dashed #999; background:#fafafa;">
+    <strong>MEDIA DEBUG (product.media & metafields)</strong><br>
+    <em>Template: {{ template | escape }}</em><br>
+    <em>Product: {{ product.title | escape }} (id: {{ product.id }})</em><br><br>
+
+    {%- if featured_media -%}
+      <div style="margin-bottom:0.75rem;">
+        <strong>Featured media:</strong><br>
+        type: {{ featured_media.media_type }}<br>
+        id: {{ featured_media.id }}<br>
+        alt: {{ featured_media.alt | escape }}<br>
+        src (preview): {% if featured_media.preview_image %}{{ featured_media.preview_image | image_url: width: 600 }}{% else %}(no preview_image){% endif %}<br><br>
+
+        metafields (featured_media.metafields) – raw JSON:<br>
+        <code style="display:block; white-space:pre-wrap; background:#fff; padding:4px; border:1px solid #ddd;">
+{{ featured_media.metafields | json }}
+        </code>
+        image_localization (featured_media.metafields.fixed.image_localization):<br>
+        {%- if featured_media.metafields and featured_media.metafields.fixed and featured_media.metafields.fixed.image_localization -%}
+          value: "{{ featured_media.metafields.fixed.image_localization.value | escape }}"<br>
+          type: "{{ featured_media.metafields.fixed.image_localization.type | default: 'unknown' | escape }}"<br>
+        {%- else -%}
+          (none)<br>
+        {%- endif -%}
+
+        {%- if featured_media.image -%}
+          <br>
+          metafields (featured_media.image.metafields) – raw JSON:<br>
+          <code style="display:block; white-space:pre-wrap; background:#fff; padding:4px; border:1px solid #ddd;">
+{{ featured_media.image.metafields | json }}
+          </code>
+          image_localization (featured_media.image.metafields.fixed.image_localization):<br>
+          {%- if featured_media.image.metafields and featured_media.image.metafields.fixed and featured_media.image.metafields.fixed.image_localization -%}
+            value: "{{ featured_media.image.metafields.fixed.image_localization.value | escape }}"<br>
+            type: "{{ featured_media.image.metafields.fixed.image_localization.type | default: 'unknown' | escape }}"<br>
+          {%- else -%}
+            (none)<br>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <strong>All product.media items:</strong><br><br>
+    {%- for media in product.media -%}
+      <div style="margin-bottom:0.75rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+        <strong>Media {{ forloop.index }}</strong><br>
+        type: {{ media.media_type }}<br>
+        id: {{ media.id }}<br>
+        alt: {{ media.alt | escape }}<br>
+        status: {{ media.status | default: 'n/a' }}<br>
+        src (preview): {% if media.preview_image %}{{ media.preview_image | image_url: width: 600 }}{% else %}(no preview_image){% endif %}<br><br>
+
+        metafields (media.metafields) – raw JSON:<br>
+        <code style="display:block; white-space:pre-wrap; background:#fff; padding:4px; border:1px solid #ddd;">
+{{ media.metafields | json }}
+        </code>
+        image_localization (media.metafields.fixed.image_localization):<br>
+        {%- if media.metafields and media.metafields.fixed and media.metafields.fixed.image_localization -%}
+          value: "{{ media.metafields.fixed.image_localization.value | escape }}"<br>
+          type: "{{ media.metafields.fixed.image_localization.type | default: 'unknown' | escape }}"<br>
+        {%- else -%}
+          (none)<br>
+        {%- endif -%}
+
+        {%- if media.image -%}
+          <br>
+          metafields (media.image.metafields) – raw JSON:<br>
+          <code style="display:block; white-space:pre-wrap; background:#fff; padding:4px; border:1px solid #ddd;">
+{{ media.image.metafields | json }}
+          </code>
+          image_localization (media.image.metafields.fixed.image_localization):<br>
+          {%- if media.image.metafields and media.image.metafields.fixed and media.image.metafields.fixed.image_localization -%}
+            value: "{{ media.image.metafields.fixed.image_localization.value | escape }}"<br>
+            type: "{{ media.image.metafields.fixed.image_localization.type | default: 'unknown' | escape }}"<br>
+          {%- else -%}
+            (none)<br>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
   <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter por{% if is_vertical %} product__media-vertical{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
