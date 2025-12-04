@@ -124,37 +124,6 @@
       {%- endunless -%}  
     {%- endif -%}
 
-  <details class="gallery-debug" style="margin-bottom:1rem; border:1px solid #ccc; padding:0.75rem; font-size:12px;">
-    <summary style="cursor:pointer;">Gallery debug – image data & metafields (only in editor)</summary>
-    <pre style="white-space:pre-wrap; margin-top:0.75rem;">
-{% for block in gallery_blocks %}
-Block {{ forloop.index }} (id: {{ block.id }}, type: {{ block.type }})
-  has image: {% if block.settings.image != blank %}true{% else %}false{% endif %}
-
-  {% if block.settings.image != blank %}
-  image.id: {{ block.settings.image.id }}
-  image.alt: {{ block.settings.image.alt | escape }}
-  image.src: {{ block.settings.image | image_url: width: 800 }}
-
-  metafields (raw JSON):
-  {{ block.settings.image.metafields | json }}
-
-  image_localization (fixed.image_localization):
-  {%- if block.settings.image.metafields
-    and block.settings.image.metafields.fixed
-    and block.settings.image.metafields.fixed.image_localization -%}
-    value: "{{ block.settings.image.metafields.fixed.image_localization.value | escape }}"
-    type: "{{ block.settings.image.metafields.fixed.image_localization.type | default: 'unknown' }}"
-  {%- else -%}
-    (none)
-  {%- endif -%}
-  {% endif %}
-
-{% endfor %}
-    </pre>
-  </details>
-
-
     <div class="gallery">
       <slider-component class="por slider-mobile-gutter{% unless section.settings.enable_section_box_layout %}{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.full_width == false %} page-width{% endif %}{% if show_desktop_slider and section.settings.full_width == false %} page-width-desktop{% endif %}{% endunless %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if show_tablet_slider %} slider-component-tablet{% endif %}{% if show_mobile_slider %} slider-component-mobile{% endif %}"
         {% if show_mobile_slider or show_tablet_slider or show_desktop_slider %}{% if section.settings.title != blank %}data-outside-prev-button-id="Slider-{{ section.id }}-prev-button" data-outside-next-button-id="Slider-{{ section.id }}-next-button"{% endif %}{% endif %}>
