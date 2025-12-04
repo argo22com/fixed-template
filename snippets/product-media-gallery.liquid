@@ -1,3 +1,13 @@
+{%- liquid
+  assign current_locale = ''
+
+  if localization and localization.language and localization.language.iso_code
+    assign current_locale = localization.language.iso_code | downcase
+  elsif request and request.locale and request.locale.iso_code
+    assign current_locale = request.locale.iso_code | downcase
+  endif
+  assign media_locale_map = product.fixed.media_metadata
+-%}
 <media-gallery id="MediaGallery-{{ section.id }}" role="region" class="product__media-gallery{% if is_vertical %} product__media-gallery--vertical product__media-gallery--vertical-{{ section.settings.thumbnail_position }}{% endif %}" aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}"{% if section.settings.auto_scroll_up_mobile %} data-scroll-up-mobile="true"{% endif %}{% if section.settings.disable_images_lightbox %} data-disable-lightbox="true"{% endif %}>
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
   <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter por{% if is_vertical %} product__media-vertical{% endif %}">
