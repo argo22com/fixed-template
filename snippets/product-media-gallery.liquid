@@ -137,24 +137,3 @@
     </{%- if is_vertical -%}product-thumbnail-vertical-{%- endif -%}slider-component>
   {%- endif -%}
 </media-gallery>
-
-<div style="padding:1rem; background:#222; color:#fff; font-size:12px; white-space:pre-wrap;">
-  <strong>DEBUG – media metafields check</strong>
-
-  {% for media in product.media %}
-    Media ID: {{ media.id }}
-    Type: {{ media.media_type }}
-
-    media.metafields exists? → {% if media.metafields %}YES{% else %}NO{% endif %}
-
-    Raw: {{ media.metafields | json }}
-
-    image.metafields exists? → 
-      {% if media.image and media.image.metafields %}YES{% else %}NO{% endif %}
-
-    Raw image.metafields: 
-      {{ media.image.metafields | json }}
-
-    ----------------------------------------------------
-  {% endfor %}
-</div>
