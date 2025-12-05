@@ -112,11 +112,8 @@
     }
   {%- endif -%}
 {%- endstyle -%}
-{%- comment -%}
-    HLAVNÍ GALLERY SLIDER
-  {%- endcomment -%}
 <slideshow-component
-  class="slideshow-component-{{ section.id }} por flex flex-column slider-mobile-gutter{% if section.settings.layout contains 'grid' %} page-width{% if section.settings.layout == 'stretched_grid' %}--full{% endif %}{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %} slider-component-full-width"
+  class="aaa slideshow-component-{{ section.id }} por flex flex-column slider-mobile-gutter{% if section.settings.layout contains 'grid' %} page-width{% if section.settings.layout == 'stretched_grid' %}--full{% endif %}{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %} slider-component-full-width"
   role="region"
   aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
   aria-label="{{ section.settings.accessibility_info | escape }}"
