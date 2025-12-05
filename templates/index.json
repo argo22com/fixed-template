@@ -350,6 +350,7 @@
         },
         "slide_LBwdxn": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/banner5.jpg",
             "mobile_image": "shopify://shop_images/banner5-mobil.jpg",
