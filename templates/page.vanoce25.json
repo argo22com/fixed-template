@@ -220,7 +220,7 @@
         "slide_pjqCzU"
       ],
       "settings": {
-        "layout": "full_bleed",
+        "layout": "stretched_grid",
         "slide_height": "medium",
         "slide_height_mobile": "adapt_image_mobile",
         "auto_rotate": false,
