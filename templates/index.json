@@ -200,6 +200,43 @@
       "blocks": {
         "slide_QWELn3": {
           "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/fixed-vanoce-banner.png",
+            "mobile_image": "shopify://shop_images/vanoce-mobil.png",
+            "badge_label": "300 Kč pro tebe",
+            "heading": "Vánoce s FIXED",
+            "text": "Nakup dárky nad 2000 Kč a získej 300 Kč slevu",
+            "hide_text_on_mobile": false,
+            "button_label": "Získat 300 Kč",
+            "price": "1300",
+            "link": "shopify://pages/vanoce-s-fixed",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-right",
+            "text_alignment": "right",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#e94200",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
+            "colors_text_mobile": "#ffffff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#dc4405"
+          }
+        },
+        "slide_dwJ4nE": {
+          "type": "slide",
           "disabled": true,
           "settings": {
             "image": "shopify://shop_images/1B1A1377-kopie3.jpg",
@@ -498,6 +535,7 @@
       },
       "block_order": [
         "slide_QWELn3",
+        "slide_dwJ4nE",
         "slide_YFtG7x",
         "slide_T3NJDj",
         "slide_LBwdxn",
