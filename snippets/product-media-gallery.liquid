@@ -22,20 +22,53 @@
           {% render 'product-thumbnail', media: featured_media, media_count: media_count, position: media_position, desktop_layout: section.settings.gallery_layout, mobile_layout: section.settings.mobile_thumbnails, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false, image_ratio: section.settings.image_ratio %}
         </li>
       {%- endif -%}
-      {%- for media in product.media -%}
-        {%- unless media.id == featured_media.id -%}
-          <li id="Slide-{{ section.id }}-{{ media.id }}" class="w100 product__media-item grid__item slider__slide flex-wrap{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-            {%- liquid
-              assign media_position = media_position | default: 0 | plus: 1
-              assign lazy_load = false
-              if media_position > 1
-                assign lazy_load = true
-              endif
-              render 'product-thumbnail', media: media, media_count: media_count, position: media_position, desktop_layout: section.settings.gallery_layout, mobile_layout: section.settings.mobile_thumbnails, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load, image_ratio: section.settings.image_ratio
-            -%}
-          </li>
-        {%- endunless -%}
-      {%- endfor -%}
+{%- for media in product.media -%}
+  {%- unless media.id == featured_media.id -%}
+    {%- liquid
+      assign show_media = true
+      assign media_locale = ''
+
+      # Použijeme produktový metafield s mapou media → locale
+      if media_locale_map and current_locale != ''
+        # pokud je to JSON metafield, iterace přes .value
+        for item in media_locale_map.value
+          if item.shopifyId and item.shopifyId contains media.id
+            assign media_locale = item.locale
+            break
+          endif
+        endfor
+
+        # Pokud má záznam locale:
+        # - blank / null = globální → necháme show_media = true
+        # - jinak zobrazíme jen pokud se shoduje s current_locale
+        if media_locale != blank and media_locale != current_locale
+          assign show_media = false
+        endif
+      endif
+    -%}
+
+    {%- if show_media -%}
+      <li
+        id="Slide-{{ section.id }}-{{ media.id }}"
+        class="w100 product__media-item grid__item slider__slide flex-wrap
+          {% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}
+          {% if media.media_type != 'image' %} product__media-item--full{% endif %}
+          {% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
+        data-media-id="{{ section.id }}-{{ media.id }}"
+      >
+        {%- liquid
+          assign media_position = media_position | default: 0 | plus: 1
+          assign lazy_load = false
+          if media_position > 1
+            assign lazy_load = true
+          endif
+
+          render 'product-thumbnail', media: media, media_count: media_count, position: media_position, desktop_layout: section.settings.gallery_layout, mobile_layout: section.settings.mobile_thumbnails, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load, image_ratio: section.settings.image_ratio
+        -%}
+      </li>
+    {%- endif -%}
+  {%- endunless -%}
+{%- endfor -%}
     </ul>
     {%- if media_count > 1 -%}
       <div class="slider-buttons no-js-hidden{% if section.settings.gallery_layout == 'stacked' or section.settings.gallery_layout == 'thumbnail' or section.settings.gallery_layout == 'columns' %} medium-hide large-up-hide{% endif %} flex justify-center align-center">
