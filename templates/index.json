@@ -553,7 +553,7 @@
         "slide_height": "medium",
         "slide_height_mobile": "medium-mobile",
         "auto_rotate": true,
-        "change_slides_speed": 7,
+        "change_slides_speed": 9,
         "enable_pagination_desktop": false,
         "enable_navigation_desktop": true,
         "preload": false,
