@@ -632,11 +632,10 @@
     "featured_product_3GXe9c": {
       "type": "featured-product",
       "blocks": {
-        "title_kcwBen": {
-          "type": "title",
+        "text_in_multi_line_TMAi4H": {
+          "type": "text_in_multi_line",
           "settings": {
-            "show_vendor_link": false,
-            "title_size": "h2"
+            "text": "<h2><strong>Dárkový poukaz FIXED</strong></h2>"
           }
         },
         "price_y3wzDC": {
@@ -684,7 +683,7 @@
         }
       },
       "block_order": [
-        "title_kcwBen",
+        "text_in_multi_line_TMAi4H",
         "price_y3wzDC",
         "sale_box_nQGRNr",
         "description_6qxAyb",
