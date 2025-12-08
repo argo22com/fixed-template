@@ -7,7 +7,12 @@
     assign current_locale = request.locale.iso_code | downcase
   endif
 
-  assign media_locale_map = product.metafields.fixed.media_metadata
+  comment
+    product.metafields.fixed.media_metadata je jednořádkový text s JSONem,
+    takže si ho vezmeme jako raw string a rozsekáme na "řádky".
+  endcomment
+  assign media_locale_map_raw  = product.metafields.fixed.media_metadata | default: ''
+  assign media_locale_rows     = media_locale_map_raw | split: '},{'
 -%}
 
 <media-gallery
@@ -21,12 +26,10 @@
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
 
-  {%- comment -%}
-    HLAVNÍ GALLERY SLIDER
-  {%- endcomment -%}
-  <slider-component id="GalleryViewer-{{ section.id }}" class="bbb slider-mobile-gutter por{% if is_vertical %} product__media-vertical{% endif %}">
+  {%- comment -%} HLAVNÍ GALLERY SLIDER {%- endcomment -%}
+  <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter por{% if is_vertical %} product__media-vertical{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
-      <span>{{ "accessibility.skip_to_product_info" | t }}</span>
+      <span>{{ 'accessibility.skip_to_product_info' | t }}</span>
     </a>
 
     <ul
@@ -61,18 +64,26 @@
 
       {%- for media in product.media -%}
         {%- unless media.id == featured_media.id -%}
-          {%- assign show_media = true -%}
+          {%- assign show_media  = true -%}
           {%- assign media_locale = '' -%}
 
-          {%- if media_locale_map and current_locale != '' -%}
-            {%- for item in media_locale_map.value -%}
-              {%- if item.shopifyId and item.shopifyId contains media.id -%}
-                {%- assign media_locale = item.locale -%}
+          {%- if current_locale != '' and media_locale_rows.size > 0 -%}
+            {%- for row in media_locale_rows -%}
+              {%- if row contains media.id -%}
+                {%- comment -%}
+                  Pokusíme se vytáhnout "locale":"xx"
+                  Pokud tam není (locale:null), necháme media_locale prázdné = globální obrázek.
+                {%- endcomment -%}
+                {%- assign locale_parts = row | split: '"locale":"' -%}
+                {%- if locale_parts.size > 1 -%}
+                  {%- assign locale_rest   = locale_parts[1] -%}
+                  {%- assign media_locale  = locale_rest | split: '"' | first | downcase -%}
+                {%- endif -%}
                 {%- break -%}
               {%- endif -%}
             {%- endfor -%}
 
-            {%- if media_locale != blank and media_locale != current_locale -%}
+            {%- if media_locale != '' and media_locale != current_locale -%}
               {%- assign show_media = false -%}
             {%- endif -%}
           {%- endif -%}
@@ -133,9 +144,7 @@
     {%- endif -%}
   </slider-component>
 
-  {%- comment -%}
-    THUMBNAILS – stejný filtr podle locale
-  {%- endcomment -%}
+  {%- comment -%} THUMBNAILY – stejný filtr {%- endcomment -%}
   {%- if media_count > 1 and section.settings.gallery_layout contains 'thumbnail' or section.settings.mobile_thumbnails == 'show' -%}
     <{%- if is_vertical -%}product-thumbnail-vertical-{%- endif -%}slider-component
       id="GalleryThumbnails-{{ section.id }}"
@@ -212,18 +221,22 @@
 
         {%- for media in product.media -%}
           {%- unless media.id == featured_media.id -%}
-            {%- assign show_media = true -%}
+            {%- assign show_media  = true -%}
             {%- assign media_locale = '' -%}
 
-            {%- if media_locale_map and current_locale != '' -%}
-              {%- for item in media_locale_map.value -%}
-                {%- if item.shopifyId and item.shopifyId contains media.id -%}
-                  {%- assign media_locale = item.locale -%}
+            {%- if current_locale != '' and media_locale_rows.size > 0 -%}
+              {%- for row in media_locale_rows -%}
+                {%- if row contains media.id -%}
+                  {%- assign locale_parts = row | split: '"locale":"' -%}
+                  {%- if locale_parts.size > 1 -%}
+                    {%- assign locale_rest  = locale_parts[1] -%}
+                    {%- assign media_locale = locale_rest | split: '"' | first | downcase -%}
+                  {%- endif -%}
                   {%- break -%}
                 {%- endif -%}
               {%- endfor -%}
 
-              {%- if media_locale != blank and media_locale != current_locale -%}
+              {%- if media_locale != '' and media_locale != current_locale -%}
                 {%- assign show_media = false -%}
               {%- endif -%}
             {%- endif -%}
