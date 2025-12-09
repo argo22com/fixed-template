@@ -14,10 +14,15 @@
   }
 {% endcomment %}
 
-{% assign manufacturers_and_models_map_filter = results.filters
+{%- assign manufacturer_filter = results.filters
+  | where: 'param_name', 'filter.v.m.product_compatible_devices.manufacturer_code'
+  | first
+-%}
+
+{%- assign manufacturers_and_models_map_filter = results.filters
   | where: 'param_name', 'filter.p.m.product_compatible_devices.manufacturers_and_models_map'
   | first
-%}
+-%}
 
 <style>
   @media screen and (min-width: 750px) {
@@ -37,101 +42,78 @@
   }
 </style>
 
-{% comment %}
-  Find parent collection by iterating over all collections
-{% endcomment %}
-{% assign parent_collection = null %}
-{% for collection in collections %}
-  {% if collection.metafields.product_compatible_devices.subcollections.value %}
-    {% for subcollection in collection.metafields.product_compatible_devices.subcollections.value %}
-      {% if subcollection.url == results.url %}
-        {% assign parent_collection = collection %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-    {% if parent_collection != null %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
 <div class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
-  <div class="compatible-devices-facet-filter select facets__filter">
-    <select
-      class="facets__select select__select"
-      onchange="
-        // Save current scroll position to session storage before changing page
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        sessionStorage.setItem('facetsScrollPosition', scrollPosition);
-        window.location.href=this.value
-      "
-    >
-      <option
-        value="{{ parent_collection.url | escape }}"
-        {% if filter.active_value == blank %}
-          selected
-        {% endif %}
-      >
-        {{ 'products.facets.compatible_manufacturers' | t }}
-      </option>
-
-      {% if results.metafields.product_compatible_devices.subcollections.value %}
-        {% assign sorted_subcollections = results.metafields.product_compatible_devices.subcollections.value | sort: 'title' %}
-        {% for subcollection in sorted_subcollections %}
-          <option
-            value="{{ subcollection.url | escape }}"
-          >
-            {{ subcollection.metafields.product_compatible_devices.manufacturer | escape }}
-          </option>
-        {% endfor %}
-      {% elsif parent_collection != null and parent_collection.metafields.product_compatible_devices.subcollections.value %}
-        {% assign sorted_subcollections = parent_collection.metafields.product_compatible_devices.subcollections.value | sort: 'title' %}
-        {% for subcollection in sorted_subcollections %}
-          <option
-            value="{{ subcollection.url | escape }}"
-            {% if subcollection.url == results.url %}
-              selected
-            {% endif %}
-          >
-            {{ subcollection.metafields.product_compatible_devices.manufacturer | escape }}
-          </option>
-        {% endfor %}
-      {% endif %}
-    </select>
-
-    {% render 'icon-caret' %}
-  </div>
 
   <facet-filters-form>
-    <form id="FacetFiltersForm" class="">
-      <div class="compatible-devices-facet-filter select facets__filter">
-        <select
-          id="Filter-{{ manufacturers_and_models_map_filter.param_name | escape | handleize }}"
-          name="{{ manufacturers_and_models_map_filter.param_name }}"
-          class="facets__select select__select"
-        >
-          <option
-            value=""
-            {% if manufacturers_and_models_map_filter.active_values[0].value == blank %}
-              selected
-            {% endif %}
+    <form id="FacetFiltersForm">
+      {%- comment -%}
+        1) Výrobce zařízení – variant metafield product_compatible_devices.manufacturer_code
+      {%- endcomment -%}
+      {% if manufacturer_filter %}
+        <div class="compatible-devices-facet-filter select facets__filter">
+          <select
+            id="Filter-{{ manufacturer_filter.param_name | escape | handleize }}"
+            name="{{ manufacturer_filter.param_name }}"
+            class="facets__select select__select"
           >
-            {{ 'products.facets.compatible_devices' | t }}
-          </option>
-          {%- for filter_value in manufacturers_and_models_map_filter.values %}
             <option
-              value="{{ filter_value.value | escape }}"
-              {% if filter_value.value == manufacturers_and_models_map_filter.active_values[0].value %}
+              value=""
+              {% if manufacturer_filter.active_values == blank or manufacturer_filter.active_values[0].value == blank %}
                 selected
               {% endif %}
             >
-              {{ filter_value.label }}
+              {{ 'products.facets.compatible_manufacturers' | t }}
             </option>
-          {%- endfor %}
-        </select>
 
-        {% render 'icon-caret' %}
-      </div>
+            {%- for filter_value in manufacturer_filter.values -%}
+              <option
+                value="{{ filter_value.value | escape }}"
+                {% if filter_value.active %}selected{% endif %}
+                {% if filter_value.count == 0 %}disabled{% endif %}
+              >
+                {{ filter_value.label }}
+              </option>
+            {%- endfor -%}
+          </select>
+
+          {% render 'icon-caret' %}
+        </div>
+      {% endif %}
+
+      {%- comment -%}
+        2) Model zařízení – původní metafield manufacturers_and_models_map
+      {%- endcomment -%}
+      {% if manufacturers_and_models_map_filter %}
+        <div class="compatible-devices-facet-filter select facets__filter">
+          <select
+            id="Filter-{{ manufacturers_and_models_map_filter.param_name | escape | handleize }}"
+            name="{{ manufacturers_and_models_map_filter.param_name }}"
+            class="facets__select select__select"
+          >
+            <option
+              value=""
+              {% if manufacturers_and_models_map_filter.active_values == blank
+                 or manufacturers_and_models_map_filter.active_values[0].value == blank %}
+                selected
+              {% endif %}
+            >
+              {{ 'products.facets.compatible_devices' | t }}
+            </option>
+
+            {%- for filter_value in manufacturers_and_models_map_filter.values -%}
+              <option
+                value="{{ filter_value.value | escape }}"
+                {% if filter_value.active %}selected{% endif %}
+                {% if filter_value.count == 0 %}disabled{% endif %}
+              >
+                {{ filter_value.label }}
+              </option>
+            {%- endfor -%}
+          </select>
+
+          {% render 'icon-caret' %}
+        </div>
+      {% endif %}
     </form>
   </facet-filters-form>
 </div>
@@ -143,5 +125,13 @@
       window.scrollTo(0, scrollPosition);
       sessionStorage.removeItem('facetsScrollPosition');
     }
+
+    // Uložení pozice před změnou filtru (funguje i s facet-filters-form)
+    document.addEventListener('change', function(event) {
+      if (event.target.closest('#FacetFiltersForm')) {
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        sessionStorage.setItem('facetsScrollPosition', scrollPosition);
+      }
+    });
   });
 </script>
