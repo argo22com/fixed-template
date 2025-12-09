@@ -4,7 +4,6 @@
   assign presentation = filter.presentation | default: 'text'
 
   assign sorted_values = filter.values
-  # Keep the selected values grouped together when operator is AND
   if filter.operator == 'AND'
     assign active_filter_values = filter.values | where: 'active', true
     assign inactive_filter_values = filter.values | where: 'active', false
@@ -215,7 +214,6 @@
 
           </ul>
 
-          {%- comment -%} … dál nechávám beze změny (noscript + show more) {%- endcomment -%}
           {%- if filter.values.size > show_more_number and filter_type == 'vertical' -%}
             <show-more-button>
               <button class="button-show-more link underlined-link no-js-hidden no-control-menu" id="Show-More-{{ suffix_id }}{{ forloop.index }}-{{ section.id }}" type="button">
