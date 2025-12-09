@@ -1,17 +1,14 @@
 {% comment %}
-  This snippet expects a 'results' prop to be passed in. The 'results' prop should contain the following structure:
-  {
-    filters: [
-      {
-        param_name: 'filter.p.m.product_compatible_devices.manufacturers_and_models_map',
-        label: 'Model',
-        values: [
-          { value: 'manufacturer2_model1', label: 'Manufacturer 2 Model 1', active: false },
-          { value: 'manufacturer2_model2', label: 'Manufacturer 2 Model 2', active: true }
-        ]
-      }
-    ]
-  }
+  Snippet pro filtrování kompatibilních zařízení
+
+  Očekává props:
+  - results (Shopify výsledky kolekce / hledání)
+
+  Používá dva filtry:
+  1) Variant metafield: product_compatible_devices.manufacturer_code
+     → param_name: filter.v.m.product_compatible_devices.manufacturer_code
+  2) Variant metafield: product_compatible_devices.devices_metaobject (list of metaobjects)
+     → param_name: filter.v.m.product_compatible_devices.devices_metaobject
 {% endcomment %}
 
 {%- assign manufacturer_filter = results.filters
@@ -19,8 +16,8 @@
   | first
 -%}
 
-{%- assign manufacturers_and_models_map_filter = results.filters
-  | where: 'param_name', 'filter.p.m.product_compatible_devices.manufacturers_and_models_map'
+{%- assign devices_filter = results.filters
+  | where: 'param_name', 'filter.v.m.product_compatible_devices.devices_metaobject'
   | first
 -%}
 
@@ -43,13 +40,10 @@
 </style>
 
 <div class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
-
   <facet-filters-form>
-    <form id="FacetFiltersForm">
-      {%- comment -%}
-        1) Výrobce zařízení – variant metafield product_compatible_devices.manufacturer_code
-      {%- endcomment -%}
-      {% if manufacturer_filter %}
+    <form id="FacetFiltersForm" class="compatible-devices-facets__form">
+      {%- if manufacturer_filter -%}
+        {%- comment -%} FILTR: VÝROBCE ZAŘÍZENÍ {%- endcomment -%}
         <div class="compatible-devices-facet-filter select facets__filter">
           <select
             id="Filter-{{ manufacturer_filter.param_name | escape | handleize }}"
@@ -68,8 +62,10 @@
             {%- for filter_value in manufacturer_filter.values -%}
               <option
                 value="{{ filter_value.value | escape }}"
-                {% if filter_value.active %}selected{% endif %}
-                {% if filter_value.count == 0 %}disabled{% endif %}
+                {% if manufacturer_filter.active_values
+                  and filter_value.value == manufacturer_filter.active_values[0].value %}
+                  selected
+                {% endif %}
               >
                 {{ filter_value.label }}
               </option>
@@ -78,33 +74,32 @@
 
           {% render 'icon-caret' %}
         </div>
-      {% endif %}
+      {%- endif -%}
 
-      {%- comment -%}
-        2) Model zařízení – původní metafield manufacturers_and_models_map
-      {%- endcomment -%}
-      {% if manufacturers_and_models_map_filter %}
+      {%- if devices_filter -%}
+        {%- comment -%} FILTR: MODEL / KOMPATIBILNÍ ZAŘÍZENÍ {%- endcomment -%}
         <div class="compatible-devices-facet-filter select facets__filter">
           <select
-            id="Filter-{{ manufacturers_and_models_map_filter.param_name | escape | handleize }}"
-            name="{{ manufacturers_and_models_map_filter.param_name }}"
+            id="Filter-{{ devices_filter.param_name | escape | handleize }}"
+            name="{{ devices_filter.param_name }}"
             class="facets__select select__select"
           >
             <option
               value=""
-              {% if manufacturers_and_models_map_filter.active_values == blank
-                 or manufacturers_and_models_map_filter.active_values[0].value == blank %}
+              {% if devices_filter.active_values == blank or devices_filter.active_values[0].value == blank %}
                 selected
               {% endif %}
             >
               {{ 'products.facets.compatible_devices' | t }}
             </option>
 
-            {%- for filter_value in manufacturers_and_models_map_filter.values -%}
+            {%- for filter_value in devices_filter.values -%}
               <option
                 value="{{ filter_value.value | escape }}"
-                {% if filter_value.active %}selected{% endif %}
-                {% if filter_value.count == 0 %}disabled{% endif %}
+                {% if devices_filter.active_values
+                  and filter_value.value == devices_filter.active_values[0].value %}
+                  selected
+                {% endif %}
               >
                 {{ filter_value.label }}
               </option>
@@ -113,7 +108,7 @@
 
           {% render 'icon-caret' %}
         </div>
-      {% endif %}
+      {%- endif -%}
     </form>
   </facet-filters-form>
 </div>
@@ -125,13 +120,17 @@
       window.scrollTo(0, scrollPosition);
       sessionStorage.removeItem('facetsScrollPosition');
     }
+  });
 
-    // Uložení pozice před změnou filtru (funguje i s facet-filters-form)
-    document.addEventListener('change', function(event) {
-      if (event.target.closest('#FacetFiltersForm')) {
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        sessionStorage.setItem('facetsScrollPosition', scrollPosition);
-      }
-    });
+  document.addEventListener('change', function(event) {
+    const form = document.getElementById('FacetFiltersForm');
+    if (!form) return;
+
+    const target = event.target;
+    if (target.closest('#FacetFiltersForm')) {
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      sessionStorage.setItem('facetsScrollPosition', scrollPosition);
+      form.requestSubmit();
+    }
   });
 </script>
