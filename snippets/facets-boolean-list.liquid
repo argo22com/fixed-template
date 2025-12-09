@@ -17,21 +17,21 @@
     assign show_more_number = 10
   endif
 
-assign phone_properties_all = shop.metaobjects['compatible-devices'].values
-paginate phone_properties_all by 10000
-  assign phone_properties = phone_properties_all
-  if phone_properties
-    assign phone_option_names = ""
-    for phone_property in phone_properties
-      for value in sorted_values
-        assign phone_code = value.label | strip
-        if phone_property.code == phone_code
-          assign phone_option_names = phone_option_names | append: phone_code | append: ":" | append: phone_property.model.value | append: ";"
-        endif
+  assign phone_properties_all = shop.metaobjects['compatible-devices'].values
+  paginate phone_properties_all by 10000
+    assign phone_properties = phone_properties_all
+    if phone_properties
+      assign phone_option_names = ""
+      for phone_property in phone_properties
+        for value in sorted_values
+          assign phone_code = value.label | strip
+          if phone_property.code == phone_code
+            assign phone_option_names = phone_option_names | append: phone_code  | append: ":"  | append: phone_property.model.value  | append: ";"
+          endif
+        endfor
       endfor
-    endfor
-  endif
-endpaginate
+    endif
+  endpaginate
   assign phone_option_names_list = phone_option_names | split: ";"
   assign phone_filter_values_unsorted = ""
   for value in sorted_values
@@ -40,7 +40,7 @@ endpaginate
       assign phone_option_code = phone_option_name_parts[0]
       assign phone_option_model = phone_option_name_parts[1]
       if phone_option_code == value.label
-        assign phone_filter_values_unsorted = phone_filter_values_unsorted | append: phone_option_model | append: ":" | append: phone_option_code | append: ";"
+        assign phone_filter_values_unsorted = phone_filter_values_unsorted  | append: phone_option_model  | append: ":"  | append: phone_option_code  | append: ";"
       endif
     endfor
   endfor
@@ -64,21 +64,21 @@ endpaginate
         for value in sorted_values
           assign color_code = value.label | strip
           if color_property.code == color_code
-            assign color_option_names = color_option_names | append: color_code | append: ":" | append: color_name | append: ";"
+            assign color_option_names = color_option_names  | append: color_code  | append: ":"  | append: color_name  | append: ";"
           endif
         endfor
       endfor
     endif
   endpaginate
   assign color_option_names_list = color_option_names | split: ";"
-  assign filter_values_unsorted = ""
+  assign color_filter_values_unsorted = ""
   for value in sorted_values
     for color_option_name in color_option_names_list
       assign color_option_name_parts = color_option_name | split: ":"
       assign color_option_code = color_option_name_parts[0]
       assign color_option_label = color_option_name_parts[1]
       if color_option_code == value.label
-        assign color_filter_values_unsorted = color_filter_values_unsorted | append: color_option_label | append: ":" | append: color_option_code | append: ";"
+        assign color_filter_values_unsorted = color_filter_values_unsorted  | append: color_option_label  | append: ":"  | append: color_option_code  | append: ";"
       endif
     endfor
   endfor
@@ -91,152 +91,141 @@ endpaginate
     assign color_codes = color_codes | append: color_code | append: ";"
   endfor
   assign color_codes_sorted_array = color_codes | split: ";"
+
+  assign hide_compatible_filter = false
+  if filter.param_name == 'filter.v.m.product_compatible_devices.manufacturer_code'
+    assign hide_compatible_filter = true
+  endif
+  if filter.param_name == 'filter.v.m.product_compatible_devices.devices_metaobject'
+    assign hide_compatible_filter = true
+  endif
 %}
 
-<{% unless filter_type == 'horizontal' %}details-accordion{% else %}div{% endunless %} class="db facets__item-filter" data-ignore-setup-event="true">
-  <details id="Details-{{ filter.param_name | escape | handleize }}-{{ suffix_id }}{{ section.id }}" class="facets__details facets__details--{{ filter_type }} {% if filter_type == 'horizontal' %}disclosure-has-popup por facets__disclosure{% else %} facets__accordion{% endif %} js-filter"{% if section.settings.filter_collapse == 'expand' and filter_type != 'horizontal' %} open{% endif %}>
-    <summary class="facets__summary facets__summary--{{ filter_type }}{% if filter_type == 'vertical' or filter_type == 'drawer' %} h6 font-heading-bold{% elsif filter_type == 'horizontal' %} font-body-semi-bold text-small background-input{% if filter.active_values.size > 0 %} facets__summary--has-actives{% endif %}{% endif %}{% if summary_classes %} {{ summary_classes }}{% endif %} summary-accordion" aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})"
-      {% unless filter_type == 'horizontal' %} onclick="return this.closest('details-accordion').toggleContent();"{% if section.settings.filter_collapse == 'expand' %} aria-expanded="true"{% endif %}{% endunless %}>
-      <div class="flex align-center justify-space-between facets__label-wrapper">
-        <span class="flex align-center facets__summary__label">{{ filter.label | escape }}{%- if filter.active_values.size > 0 -%}<span class="facets__selected facet-checkbox__content__count flex justify-center align-center lh1 no-js-hidden">{{ filter.active_values.size }}</span>{% endif %}</span>
-        {% render 'facets-heading-icon', filter_type: filter_type %}
-      </div>
-    </summary>
-    <div id="Facet-{{ filter.param_name | escape | handleize }}-{{ suffix_id }}{{ section.id }}" class="parent-display facets__display facets__display--{{ filter_type }}">
-      <fieldset class="facets-wrap parent-wrap facets-wrap--{{ filter_type }} margin0">
-        <legend class="visually-hidden">{{ filter.label | escape }}</legend>
-        {%- if filter_type == 'horizontal' -%}
-          <div class="facets__header flex justify-space-between align-center">
-            <div>
-              <span class="facets__selected-str no-js-hidden">
-                {{- 'products.facets.filters_selected' | t: count: filter.active_values.size -}}
-              </span>
+{% unless hide_compatible_filter %}
+  <{% unless filter_type == 'horizontal' %}details-accordion{% else %}div{% endunless %} class="db facets__item-filter" data-ignore-setup-event="true">
+    <details id="Details-{{ filter.param_name | escape | handleize }}-{{ suffix_id }}{{ section.id }}" class="facets__details facets__details--{{ filter_type }} {% if filter_type == 'horizontal' %}disclosure-has-popup por facets__disclosure{% else %} facets__accordion{% endif %} js-filter"{% if section.settings.filter_collapse == 'expand' and filter_type != 'horizontal' %} open{% endif %}>
+      <summary class="facets__summary facets__summary--{{ filter_type }}{% if filter_type == 'vertical' or filter_type == 'drawer' %} h6 font-heading-bold{% elsif filter_type == 'horizontal' %} font-body-semi-bold text-small background-input{% if filter.active_values.size > 0 %} facets__summary--has-actives{% endif %}{% endif %}{% if summary_classes %} {{ summary_classes }}{% endif %} summary-accordion" aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})"
+        {% unless filter_type == 'horizontal' %} onclick="return this.closest('details-accordion').toggleContent();"{% if section.settings.filter_collapse == 'expand' %} aria-expanded="true"{% endif %}{% endunless %}>
+        <div class="flex align-center justify-space-between facets__label-wrapper">
+          <span class="flex align-center facets__summary__label">
+            {{ filter.label | escape }}
+            {%- if filter.active_values.size > 0 -%}
+              <span class="facets__selected facet-checkbox__content__count flex justify-center align-center lh1 no-js-hidden">{{ filter.active_values.size }}</span>
+            {% endif %}
+          </span>
+          {% render 'facets-heading-icon', filter_type: filter_type %}
+        </div>
+      </summary>
+      <div id="Facet-{{ filter.param_name | escape | handleize }}-{{ suffix_id }}{{ section.id }}" class="parent-display facets__display facets__display--{{ filter_type }}">
+        <fieldset class="facets-wrap parent-wrap facets-wrap--{{ filter_type }} margin0">
+          <legend class="visually-hidden">{{ filter.label | escape }}</legend>
+
+          {%- if filter_type == 'horizontal' -%}
+            <div class="facets__header flex justify-space-between align-center">
+              <div>
+                <span class="facets__selected-str no-js-hidden">
+                  {{- 'products.facets.filters_selected' | t: count: filter.active_values.size -}}
+                </span>
+              </div>
+              <facet-remove>
+                <a href="{{ filter.url_to_remove }}" class="facets__reset flex align-center text-small facets__button button button--secondary">
+                  <span>{{ 'products.facets.reset' | t }}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M3 9L9 3M3 3L9 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </facet-remove>
             </div>
-            <facet-remove>
-              <a href="{{ filter.url_to_remove }}" class="facets__reset flex align-center text-small facets__button button button--secondary">
-                <span>{{ 'products.facets.reset' | t }}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M3 9L9 3M3 3L9 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            </facet-remove>
-          </div>
-        {%- endif -%}
-        <ul class="{% if filter_type != 'vertical' %} facets__list{% endif %} list-unstyled{% if filter.values.size > show_more_number and filter_type == 'vertical' %} no-js-hidden{% endif %}{% if presentation == 'image' %} facets__image-grid flex{% endif %}" role="list">
+          {%- endif -%}
 
-        {% for value in sorted_values %}
-          {% unless filter_label_downcase == settings.phone_name or filter_label_downcase == settings.color_name %}
-            {% render 'facets-boolean-item', 
-              suffix_id: suffix_id, 
-              filter: filter, 
-              filter_type: filter_type,
-              forloop_index: forloop.index,
-              presentation: presentation, 
-              value: value,
-              filter_label_downcase: filter_label_downcase, 
-              color_name: color_name 
-            %}
-          {% endunless %}
-        {% endfor %}
-      
-        {% for phone_code_sorted in phone_codes_sorted_array %}
-          {% assign outer_index = forloop.index %}
-          {% for value in sorted_values %}
-            {% if filter_label_downcase == settings.phone_name and value.value == phone_code_sorted %}
-              {% assign display_value = value.label %}
-              {% assign phone_option_names_list = phone_option_names | split: ";" %}
-              {% for phone_option_name in phone_option_names_list %}
-                {% assign phone_option_name_parts = phone_option_name | split: ":" %}
-                {% assign phone_option_code = phone_option_name_parts[0] %}
-                {% assign phone_option_model = phone_option_name_parts[1] %}
-                {% if phone_option_code == value.label %}
-                  {% assign display_value = phone_option_model %}
+          <ul class="{% if filter_type != 'vertical' %} facets__list{% endif %} list-unstyled{% if filter.values.size > show_more_number and filter_type == 'vertical' %} no-js-hidden{% endif %}{% if presentation == 'image' %} facets__image-grid flex{% endif %}" role="list">
+
+            {%- for value in sorted_values -%}
+              {% unless filter_label_downcase == settings.phone_name or filter_label_downcase == settings.color_name %}
+                {% render 'facets-boolean-item',
+                  suffix_id: suffix_id,
+                  filter: filter,
+                  filter_type: filter_type,
+                  forloop_index: forloop.index,
+                  presentation: presentation,
+                  value: value,
+                  filter_label_downcase: filter_label_downcase,
+                  color_name: color_name
+                %}
+              {% endunless %}
+            {%- endfor -%}
+
+            {%- for phone_code_sorted in phone_codes_sorted_array -%}
+              {% assign outer_index = forloop.index %}
+              {% for value in sorted_values %}
+                {% if filter_label_downcase == settings.phone_name and value.value == phone_code_sorted %}
+                  {% assign display_value = value.label %}
+                  {% assign phone_option_names_list = phone_option_names | split: ";" %}
+                  {% for phone_option_name in phone_option_names_list %}
+                    {% assign phone_option_name_parts = phone_option_name | split: ":" %}
+                    {% assign phone_option_code = phone_option_name_parts[0] %}
+                    {% assign phone_option_model = phone_option_name_parts[1] %}
+                    {% if phone_option_code == value.label %}
+                      {% assign display_value = phone_option_model %}
+                    {% endif %}
+                  {% endfor %}
+                  {% render 'facets-boolean-item',
+                    suffix_id: suffix_id,
+                    filter: filter,
+                    filter_type: filter_type,
+                    forloop_index: outer_index,
+                    presentation: presentation,
+                    value: value,
+                    display_value: display_value,
+                    filter_label_downcase: filter_label_downcase,
+                    color_name: color_name
+                  %}
                 {% endif %}
               {% endfor %}
-              {% render 'facets-boolean-item', 
-                suffix_id: suffix_id, 
-                filter: filter, 
-                filter_type: filter_type,
-                forloop_index: outer_index, 
-                presentation: presentation, 
-                value: value, 
-                display_value: display_value, 
-                filter_label_downcase: filter_label_downcase, 
-                color_name: color_name 
-              %}
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
-        
-        {% for color_code_sorted in color_codes_sorted_array %}
-          {% assign outer_index = forloop.index %}
-          {% for value in sorted_values %}
-            {% if filter_label_downcase == settings.color_name and value.value == color_code_sorted %}
-              {% assign display_value = value.label %}
-              {% assign color_option_names_list = color_option_names | split: ";" %}
-              {% for color_option_name in color_option_names_list %}
-                {% assign color_option_name_parts = color_option_name | split: ":" %}
-                {% assign color_option_code = color_option_name_parts[0] %}
-                {% assign color_option_label = color_option_name_parts[1] %}
-                {% if color_option_code == value.label %}
-                  {% assign display_value = color_option_label %}
+            {%- endfor -%}
+
+            {%- for color_code_sorted in color_codes_sorted_array -%}
+              {% assign outer_index = forloop.index %}
+              {% for value in sorted_values %}
+                {% if filter_label_downcase == settings.color_name and value.value == color_code_sorted %}
+                  {% assign display_value = value.label %}
+                  {% assign color_option_names_list = color_option_names | split: ";" %}
+                  {% for color_option_name in color_option_names_list %}
+                    {% assign color_option_name_parts = color_option_name | split: ":" %}
+                    {% assign color_option_code = color_option_name_parts[0] %}
+                    {% assign color_option_label = color_option_name_parts[1] %}
+                    {% if color_option_code == value.label %}
+                      {% assign display_value = color_option_label %}
+                    {% endif %}
+                  {% endfor %}
+                  {% render 'facets-boolean-item',
+                    suffix_id: suffix_id,
+                    filter: filter,
+                    filter_type: filter_type,
+                    forloop_index: outer_index,
+                    presentation: presentation,
+                    value: value,
+                    display_value: display_value,
+                    filter_label_downcase: filter_label_downcase,
+                    color_name: color_name
+                  %}
                 {% endif %}
               {% endfor %}
-              {% render 'facets-boolean-item', 
-                suffix_id: suffix_id, 
-                filter: filter, 
-                filter_type: filter_type,
-                forloop_index: outer_index, 
-                presentation: presentation, 
-                value: value, 
-                display_value: display_value, 
-                filter_label_downcase: filter_label_downcase, 
-                color_name: color_name 
-              %}
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
+            {%- endfor -%}
 
-        </ul>
-        {% comment %} No show more for no JS {% endcomment %}
-        {% if filter.values.size > show_more_number and filter_type == 'vertical' %}
-          <noscript>
-            <ul class="{% if filter_type != 'vertical' %} facets__list{% endif %} no-js-list list-unstyled no-js" role="list">
-              {%- for value in filter.values -%}
-                <li class="facets__item flex align-center">
-                  <label for="Filter-{{ suffix_id }}{{ filter.param_name | handleize }}-{{ forloop.index }}" class="facet-checkbox flex-grow-1 por flex align-center{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
-                    <input type="checkbox"
-                      name="{{ value.param_name }}"
-                      value="{{ value.value }}"
-                      id="Filter-{{ suffix_id }}{{ filter.param_name | handleize }}-{{ forloop.index }}"
-                      {% if value.active %}checked{% endif %}
-                      {% if value.count == 0 and value.active == false %}disabled{% endif %}
-                      class="facets__checkbox-value{% if color_name == filter_label_downcase %} facets__checkbox-value--color{% endif %}"
-                    >
+          </ul>
 
-                    <span class="flex justify-center align-center facet-checkbox__box{% if color_name == filter_label_downcase %} facet-checkbox__box--color{% endif %}"{% if color_name == filter_label_downcase %} data-color="{{ value.value | handleize }}"{% endif %}>
-                      <svg class="facet-checkbox__box__icon icon icon-checkmark" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.5 4.00002L3.83333 6.33335L8.5 1.66669" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </span>
-
-                    <span aria-hidden="true" class="flex facet-checkbox__content flex-grow-1 justify-space-between align-center"><span class="facet-checkbox__content__label caption-large">{{ value.label | escape }}</span><span class="facet-checkbox__content__count flex justify-center align-center lh1">{{ value.count }}</span></span>
-                    <span class="visually-hidden">{{ value.label | escape }} ({% if value.count == 1 %}{{ 'products.facets.product_count_simple.one' | t: count: value.count }}{% else %}{{ 'products.facets.product_count_simple.other' | t: count: value.count }}{% endif %})</span>
-                  </label>
-                </li> 
-              {%- endfor -%}
-            </ul>
-          </noscript>
-        {%- endif -%}
-      </fieldset>
-      {%- if filter.values.size > show_more_number and filter_type == 'vertical' -%}
-        <show-more-button>
-          <button class="button-show-more link underlined-link no-js-hidden no-control-menu" id="Show-More-{{ suffix_id }}{{ forloop.index }}-{{ section.id }}" type="button">
-            <span class="label-show-more label-text"><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t }}</span>
-            <span class="label-show-less label-text hidden"><span aria-hidden="true">- </span>{{ 'products.facets.show_less' | t }}</span>
-          </button>
-        </show-more-button>
-      {%- endif %}
-    </div>
-  </details>
-</{% unless filter_type == 'horizontal' %}details-accordion{% else %}div{% endunless %}>
+          {%- comment -%} … dál nechávám beze změny (noscript + show more) {%- endcomment -%}
+          {%- if filter.values.size > show_more_number and filter_type == 'vertical' -%}
+            <show-more-button>
+              <button class="button-show-more link underlined-link no-js-hidden no-control-menu" id="Show-More-{{ suffix_id }}{{ forloop.index }}-{{ section.id }}" type="button">
+                <span class="label-show-more label-text"><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t }}</span>
+                <span class="label-show-less label-text hidden"><span aria-hidden="true">- </span>{{ 'products.facets.show_less' | t }}</span>
+              </button>
+            </show-more-button>
+          {%- endif %}
+        </fieldset>
+      </div>
+    </details>
+  </{% unless filter_type == 'horizontal' %}details-accordion{% else %}div{% endunless %}>
+{% endunless %}
