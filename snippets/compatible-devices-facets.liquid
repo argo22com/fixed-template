@@ -35,7 +35,7 @@
 
 <div class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
 
-  {%- comment -%} VÝROBCE {%- endcomment -%}
+  {%- comment -%} VÝROBCE ZAŘÍZENÍ {%- endcomment -%}
   {%- if manufacturer_filter and manufacturer_filter.values.size > 0 -%}
     <div class="compatible-devices-facet-filter select facets__filter">
       <select
@@ -51,11 +51,21 @@
         </option>
 
         {%- for filter_value in manufacturer_filter.values -%}
+
+          {%- assign manufacturer_label = filter_value.label -%}
+
+          {%- for m in shop.metaobjects['compatible_devices_manufactures'].values -%}
+            {%- if m.code == filter_value.label -%}
+              {%- assign manufacturer_label = m.display_name | default: filter_value.label -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+
           <option
             value="{{ filter_value.url_to_add | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
-            {{ filter_value.label }}
+            {{ manufacturer_label }}
           </option>
         {%- endfor -%}
       </select>
@@ -64,7 +74,7 @@
     </div>
   {%- endif -%}
 
-  {%- comment -%} ZAŘÍZENÍ (MODEL) {%- endcomment -%}
+  {%- comment -%} ZAŘÍZENÍ / MODEL {%- endcomment -%}
   {%- if devices_filter and devices_filter.values.size > 0 -%}
     <div class="compatible-devices-facet-filter select facets__filter">
       <select
