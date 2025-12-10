@@ -447,7 +447,7 @@
         "video_url": "",
         "description": "",
         "autoplay": false,
-        "enable_controls": true,
+        "enable_controls": false,
         "enable_video_looping": true,
         "full_width": false,
         "hide_when_empty_video": false,
