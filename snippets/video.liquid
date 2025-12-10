@@ -68,7 +68,7 @@
   </button>
   <template>
     {%- if section.settings.video_hosted != nil -%}
-      {{ section.settings.video_hosted | video_tag: autoplay: true, loop: section.settings.enable_video_looping, muted: true, controls: section.settings.enable_controls }}
+      {{ section.settings.video_hosted | video_tag: autoplay: true, loop: section.settings.enable_video_looping, muted: false, controls: section.settings.enable_controls }}
     {%- elsif section.settings.video_url != nil -%}
       {%- liquid
         assign loop = ''
