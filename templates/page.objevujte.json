@@ -59,11 +59,30 @@
             "card_color_background": "#ffffff",
             "card_color_background_gradient": ""
           }
+        },
+        "column_xHihwn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Mix_nabijecek.jpg",
+            "icon": "check",
+            "title": "B2You Program",
+            "text": "<p>Produkty na míru vašim potřebám</p>",
+            "link_label": "Zjistit více",
+            "link": "shopify://pages/b2you",
+            "button_style": "link",
+            "button_open_new_tab": false,
+            "card_color_text": "#121212",
+            "color_button_text": "#ffffff",
+            "color_button": "#2563eb",
+            "card_color_background": "#f8fafc",
+            "card_color_background_gradient": ""
+          }
         }
       },
       "block_order": [
         "column_NwTBYX",
-        "column_3dD8tM"
+        "column_3dD8tM",
+        "column_xHihwn"
       ],
       "name": "t:sections.promotion-cards.presets.name",
       "settings": {
@@ -158,6 +177,7 @@
         },
         "column_GF8HCY": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/people-holding-earth-their-hands.jpg",
             "icon": "check",
