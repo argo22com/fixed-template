@@ -34,14 +34,7 @@
   {%- endif -%}
 
 {% for option in product.options_with_values %}
-  {%- assign option_name_dn = option.name | downcase -%}
-  {%- assign first_value_dn = option.values.first | downcase -%}
-
-  {%- if option_name_dn == 'default'
-        or (option_name_dn == 'default_option'
-            and first_value_dn == 'default_option_value'
-            and option.values.size == 1)
-  -%}
+  {%- if option.name == 'default' -%}
     {%- continue -%}
   {%- elsif block.settings.picker_type == 'button' and option.name != settings.phone_name -%}
       {%- liquid
