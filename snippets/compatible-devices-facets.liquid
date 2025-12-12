@@ -15,6 +15,16 @@
   | first
 -%}
 
+{%- assign manufacturer_has_values = false -%}
+{%- if manufacturer_filter and manufacturer_filter.values and manufacturer_filter.values.size > 0 -%}
+  {%- assign manufacturer_has_values = true -%}
+{%- endif -%}
+
+{%- assign devices_has_values = false -%}
+{%- if devices_filter and devices_filter.values and devices_filter.values.size > 0 -%}
+  {%- assign devices_has_values = true -%}
+{%- endif -%}
+
 <style>
   @media screen and (min-width: 750px) {
     .compatible-devices-facet-filter {
@@ -31,27 +41,34 @@
   .compatible-devices-facet-filter .select__select {
     padding: 1.2rem 3.2rem 1.2rem 1.2rem;
   }
+
+  /* Volitelně: aby disabled vypadalo "záměrně" */
+  .compatible-devices-facet-filter select:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
 </style>
 
 <div class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
 
-  {%- comment -%} VÝROBCE ZAŘÍZENÍ {%- endcomment -%}
-  {%- if manufacturer_filter and manufacturer_filter.values.size > 0 -%}
-    <div class="compatible-devices-facet-filter select facets__filter">
-      <select
-        class="facets__select select__select"
-        onchange="
-          const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-          sessionStorage.setItem('facetsScrollPosition', scrollPosition);
-          if (this.value) { window.location.href = this.value; }
-        "
-      >
+  {%- comment -%} VÝROBCE ZAŘÍZENÍ – vždy render, případně disabled {%- endcomment -%}
+  <div class="compatible-devices-facet-filter select facets__filter">
+    <select
+      class="facets__select select__select"
+      {% unless manufacturer_has_values %}disabled{% endunless %}
+      onchange="
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        sessionStorage.setItem('facetsScrollPosition', scrollPosition);
+        if (!this.value) return;
+        window.location.href = this.value;
+      "
+    >
+      {%- if manufacturer_has_values -%}
         <option value="{{ manufacturer_filter.url_to_remove | escape }}">
           {{ 'products.facets.compatible_manufacturers' | t }}
         </option>
 
         {%- for filter_value in manufacturer_filter.values -%}
-
           {%- assign manufacturer_label = filter_value.label -%}
 
           {%- for m in shop.metaobjects['compatible_devices_manufactures'].values -%}
@@ -68,23 +85,32 @@
             {{ manufacturer_label }}
           </option>
         {%- endfor -%}
-      </select>
+      {%- else -%}
+        {%- comment -%}
+          Filtr není dostupný (neexistuje / 0 values) – zachováme layout
+        {%- endcomment -%}
+        <option value="" selected>
+          {{ 'products.facets.compatible_manufacturers' | t }}
+        </option>
+      {%- endif -%}
+    </select>
 
-      {% render 'icon-caret' %}
-    </div>
-  {%- endif -%}
+    {% render 'icon-caret' %}
+  </div>
 
-  {%- comment -%} ZAŘÍZENÍ / MODEL {%- endcomment -%}
-  {%- if devices_filter and devices_filter.values.size > 0 -%}
-    <div class="compatible-devices-facet-filter select facets__filter">
-      <select
-        class="facets__select select__select"
-        onchange="
-          const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-          sessionStorage.setItem('facetsScrollPosition', scrollPosition);
-          if (this.value) { window.location.href = this.value; }
-        "
-      >
+  {%- comment -%} ZAŘÍZENÍ / MODEL – vždy render, případně disabled {%- endcomment -%}
+  <div class="compatible-devices-facet-filter select facets__filter">
+    <select
+      class="facets__select select__select"
+      {% unless devices_has_values %}disabled{% endunless %}
+      onchange="
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        sessionStorage.setItem('facetsScrollPosition', scrollPosition);
+        if (!this.value) return;
+        window.location.href = this.value;
+      "
+    >
+      {%- if devices_has_values -%}
         <option value="{{ devices_filter.url_to_remove | escape }}">
           {{ 'products.facets.compatible_devices' | t }}
         </option>
@@ -97,11 +123,15 @@
             {{ filter_value.label }}
           </option>
         {%- endfor -%}
-      </select>
+      {%- else -%}
+        <option value="" selected>
+          {{ 'products.facets.compatible_devices' | t }}
+        </option>
+      {%- endif -%}
+    </select>
 
-      {% render 'icon-caret' %}
-    </div>
-  {%- endif -%}
+    {% render 'icon-caret' %}
+  </div>
 
 </div>
 
