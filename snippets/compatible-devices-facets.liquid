@@ -42,7 +42,6 @@
     padding: 1.2rem 3.2rem 1.2rem 1.2rem;
   }
 
-  /* Volitelně: aby disabled vypadalo "záměrně" */
   .compatible-devices-facet-filter select:disabled {
     opacity: 0.55;
     cursor: not-allowed;
@@ -51,7 +50,6 @@
 
 <div class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
 
-  {%- comment -%} VÝROBCE ZAŘÍZENÍ – vždy render, případně disabled {%- endcomment -%}
   <div class="compatible-devices-facet-filter select facets__filter">
     <select
       class="facets__select select__select"
@@ -98,7 +96,6 @@
     {% render 'icon-caret' %}
   </div>
 
-  {%- comment -%} ZAŘÍZENÍ / MODEL – vždy render, případně disabled {%- endcomment -%}
   <div class="compatible-devices-facet-filter select facets__filter">
     <select
       class="facets__select select__select"
