@@ -104,83 +104,83 @@
         <fieldset class="js js-product-form-input product-form__input product-form__input--fieldset flex flex-column{% if block.settings.size_chart_enable and size_name == option_name_downcase and block.settings.size_chart_link_label != blank %} por{% endif %}{% unless forloop.first %} element-small-margin-top{% endunless %}">
           <legend class="product-form__input__form-label text-small margin-bottom-1rem">
 
-{%- assign opt_dn = option.name | downcase -%}
-{%- assign legend_label = option.name | capitalize -%}
+          {%- assign opt_dn = option.name | downcase -%}
+          {%- assign legend_label = option.name | capitalize -%}
 
-{%- if opt_dn == 'univ_barva' or opt_dn == 'univ barva' or opt_dn == 'univ-barva' -%}
-  {%- assign iso = '' -%}
-  {%- if localization and localization.language and localization.language.iso_code -%}
-    {%- assign iso = localization.language.iso_code | downcase -%}
-  {%- elsif request and request.locale and request.locale.iso_code -%}
-    {%- assign iso = request.locale.iso_code | downcase -%}
-  {%- endif -%}
+          {%- if opt_dn == 'univ_barva' or opt_dn == 'univ barva' or opt_dn == 'univ-barva' -%}
+            {%- assign iso = '' -%}
+            {%- if localization and localization.language and localization.language.iso_code -%}
+              {%- assign iso = localization.language.iso_code | downcase -%}
+            {%- elsif request and request.locale and request.locale.iso_code -%}
+              {%- assign iso = request.locale.iso_code | downcase -%}
+            {%- endif -%}
 
-  {%- case iso -%}
-    {%- when 'cs' -%}{%- assign legend_label = 'Barva' -%}
-    {%- when 'sk' -%}{%- assign legend_label = 'Farba' -%}
-    {%- when 'en' -%}{%- assign legend_label = 'Color' -%}
-    {%- when 'de' -%}{%- assign legend_label = 'Farbe' -%}
-    {%- when 'pl' -%}{%- assign legend_label = 'Kolor' -%}
-    {%- else -%}{%- assign legend_label = 'Barva' -%}
-  {%- endcase -%}
-{%- endif -%}
-
-{{ legend_label }}:
-
-{%- assign option_name_downcase = option.name | downcase -%}
-{%- if option_name_downcase == color_name -%}
-  {%- assign selected_code = option.selected_value | strip -%}
-  {%- assign selected_code_u = selected_code | upcase -%}
-  {%- assign color_label = nil -%}
-  {%- paginate shop.metaobjects.color_codes_hex.values by 10000 -%}
-    {%- for mo in shop.metaobjects.color_codes_hex.values -%}
-      {%- if mo.code and mo.code.value -%}
-        {%- assign mo_code_u = mo.code.value | upcase -%}
-        {%- if mo_code_u == selected_code_u -%}
-          {%- if mo.search_words and mo.search_words.value and mo.search_words.value.first != blank -%}
-            {%- assign color_label = mo.search_words.value.first -%}
+            {%- case iso -%}
+              {%- when 'cs' -%}{%- assign legend_label = 'Barva' -%}
+              {%- when 'sk' -%}{%- assign legend_label = 'Farba' -%}
+              {%- when 'en' -%}{%- assign legend_label = 'Color' -%}
+              {%- when 'de' -%}{%- assign legend_label = 'Farbe' -%}
+              {%- when 'pl' -%}{%- assign legend_label = 'Kolor' -%}
+              {%- else -%}{%- assign legend_label = 'Barva' -%}
+            {%- endcase -%}
           {%- endif -%}
-          {%- break -%}
-        {%- endif -%}
-      {%- endif -%}
-    {%- endfor -%}
-  {%- endpaginate -%}
-  <span class="product-form__input__option-value font-body-bold">
-    {{ color_label | default: selected_code }}
-  </span>
-{%- else -%}
 
-  {%- assign selected_option_value = option.selected_value | strip -%}
-  {%- assign size_label = nil -%}
-  {%- for size_item in shop.metaobjects.size_codes.values -%}
-    {%- if size_item.code and size_item.code.value and size_item.display_name and size_item.display_name.value -%}
-      {%- assign size_code = size_item.code.value | strip -%}
-      {%- if size_code == selected_option_value -%}
-        {%- assign size_label = size_item.display_name.value -%}
-        {%- break -%}
-      {%- endif -%}
-    {%- endif -%}
-  {%- endfor -%}
-  <span class="product-form__input__option-value font-body-bold">
-    {{ size_label | default: option.selected_value }}
-  </span>
-{%- endif -%}
+          {{ legend_label }}:
+
+          {%- assign option_name_downcase = option.name | downcase -%}
+          {%- if option_name_downcase == color_name -%}
+            {%- assign selected_code = option.selected_value | strip -%}
+            {%- assign selected_code_u = selected_code | upcase -%}
+            {%- assign color_label = nil -%}
+            {%- paginate shop.metaobjects.color_codes_hex.values by 10000 -%}
+              {%- for mo in shop.metaobjects.color_codes_hex.values -%}
+                {%- if mo.code and mo.code.value -%}
+                  {%- assign mo_code_u = mo.code.value | upcase -%}
+                  {%- if mo_code_u == selected_code_u -%}
+                    {%- if mo.search_words and mo.search_words.value and mo.search_words.value.first != blank -%}
+                      {%- assign color_label = mo.search_words.value.first -%}
+                    {%- endif -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endpaginate -%}
+            <span class="product-form__input__option-value font-body-bold">
+              {{ color_label | default: selected_code }}
+            </span>
+          {%- else -%}
+
+            {%- assign selected_option_value = option.selected_value | strip -%}
+            {%- assign size_label = nil -%}
+            {%- for size_item in shop.metaobjects.size_codes.values -%}
+              {%- if size_item.code and size_item.code.value and size_item.display_name and size_item.display_name.value -%}
+                {%- assign size_code = size_item.code.value | strip -%}
+                {%- if size_code == selected_option_value -%}
+                  {%- assign size_label = size_item.display_name.value -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endif -%}
+            {%- endfor -%}
+            <span class="product-form__input__option-value font-body-bold">
+              {{ size_label | default: option.selected_value }}
+            </span>
+          {%- endif -%}
           </legend>
 
-{%- liquid
-  assign size_option_names = ''
+          {%- liquid
+            assign size_option_names = ''
 
-  for size_item in shop.metaobjects.size_codes.values
-    if size_item.code and size_item.code.value and size_item.display_name and size_item.display_name.value
-      for opt_value in option.values
-        assign size_code = opt_value | strip
-        if size_item.code.value == size_code
-          assign size_option_names = size_option_names | append: size_code | append: ':' | append: size_item.display_name.value | append: ';'
-        endif
-      endfor
-    endif
-  endfor
--%}
+            for size_item in shop.metaobjects.size_codes.values
+              if size_item.code and size_item.code.value and size_item.display_name and size_item.display_name.value
+                for opt_value in option.values
+                  assign size_code = opt_value | strip
+                  if size_item.code.value == size_code
+                    assign size_option_names = size_option_names | append: size_code | append: ':' | append: size_item.display_name.value | append: ';'
+                  endif
+                endfor
+              endif
+            endfor
+          -%}
 
           <ul class="list-unstyled flex flex-wrap product-form__input__radio-list{% if is_color_swatches %} product-form__input__radio-list--color{% endif %}">
             {%- for value in option.values -%}
@@ -398,36 +398,36 @@
                     </li>
                   {%- endfor -%}
                 
-{%- else -%}
-  {%- assign attr_here = 'option' | append: option.position -%}
-  {%- assign value_here = option.selected_value -%}
-  {%- assign variants_for_color = product.variants | where: attr_here, value_here -%}
-  {%- assign variant_color_here = variants_for_color | where: 'featured_image' | first | default: variants_for_color.first -%}
-  <li>
-    <label
-      for="{{ section_id | default: section.id }}-{{ option.position }}-single"
-      class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip"
-      data-color="{{ value_here | handleize }}"
-    >
-      <input
-        type="radio"
-        id="{{ section_id | default: section.id }}-{{ option.position }}-single"
-        name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
-        value="{{ value_here | escape }}"
-        form="{{ product_form_id }}"
-        checked="checked"
-        style="display:none"
-      >
-      {% render 'color-swatch',
-         color: value_here,
-         variant_color: variant_color_here,
-         color_swatches_style: block.settings.color_swatches_style,
-         card_product: product %}
-      {% render 'icon-checkmark' %}
+              {%- else -%}
+                {%- assign attr_here = 'option' | append: option.position -%}
+                {%- assign value_here = option.selected_value -%}
+                {%- assign variants_for_color = product.variants | where: attr_here, value_here -%}
+                {%- assign variant_color_here = variants_for_color | where: 'featured_image' | first | default: variants_for_color.first -%}
+                <li>
+                  <label
+                    for="{{ section_id | default: section.id }}-{{ option.position }}-single"
+                    class="color-swatch-icon product-form__input__radio-label flex justify-center align-center por product-form__input__radio-label--color product-form__input__radio-label--color-{{ settings.color_swatches_shape }} bt-tooltip"
+                    data-color="{{ value_here | handleize }}"
+                  >
+                    <input
+                      type="radio"
+                      id="{{ section_id | default: section.id }}-{{ option.position }}-single"
+                      name="{{ option.name }}{% if section_id %}-{{ section_id }}{% endif %}"
+                      value="{{ value_here | escape }}"
+                      form="{{ product_form_id }}"
+                      checked="checked"
+                      style="display:none"
+                    >
+                    {% render 'color-swatch',
+                       color: value_here,
+                       variant_color: variant_color_here,
+                       color_swatches_style: block.settings.color_swatches_style,
+                       card_product: product %}
+                    {% render 'icon-checkmark' %}
 
-    </label>
-  </li>
-{%- endif -%}
+                  </label>
+                </li>
+              {%- endif -%}
 
               {%- else -%}
                 <li
