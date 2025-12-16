@@ -35,6 +35,12 @@
     <div class="customer__block background-input">
       {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
       <p class="alert alert--success alert--small margin0">{{ 'customer.order.date_html' | t: date: order_date }}</p>
+      {%- assign sap_id = order.metafields.fixed.order_sap_id.value -%}
+      {%- if sap_id != blank -%}
+        <p class="alert alert--small margin-top-1rem">
+          <strong>Interní ID:</strong> {{ sap_id | default: 'Bude doplněno po zpracování objednávky' }}
+        </p>
+      {%- endif -%}
       {%- if order.cancelled -%}
         <div class="alert alert--warning alert--small element-small-margin-top">
           {%- assign cancelled_at = order.cancelled_at | time_tag: format: "date_at_time" -%}
