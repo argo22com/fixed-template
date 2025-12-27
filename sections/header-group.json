@@ -70,8 +70,8 @@
         "menu_badge_CxNkFp": {
           "type": "menu_badge",
           "settings": {
-            "trigger": "Vánoce s FIXED",
-            "text": "300 Kč pro tebe",
+            "trigger": "Kryty a pouzdra",
+            "text": "15% sleva",
             "text_color": "#ffffff",
             "background_color": "#dc4405"
           }
