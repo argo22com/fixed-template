@@ -570,9 +570,9 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "Prémiové dárky od FIXED",
+        "title": "Prémiové kryty od FIXED",
         "subtitle": "",
-        "collection": "luxury-black-week",
+        "collection": "premiove-kryty",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
