@@ -209,7 +209,7 @@
             "hide_text_on_mobile": false,
             "button_label": "Kryty se slevou 15 %",
             "price": "1300",
-            "link": "shopify://pages/vanoce-s-fixed",
+            "link": "shopify://collections/na-telefon",
             "button_style": "primary",
             "button_open_new_tab": false,
             "box_align": "middle-right",
