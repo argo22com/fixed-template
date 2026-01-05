@@ -459,6 +459,44 @@
             "colors_button_mobile": "#000000"
           }
         },
+        "slide_Krx86g": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/hypershell.jpg",
+            "mobile_image": "shopify://shop_images/hypershell.jpg",
+            "badge_label": "Hot new",
+            "heading": "Hypershell",
+            "text": "Power your adventure",
+            "hide_text_on_mobile": false,
+            "button_label": "Zjistit více",
+            "price": "1300",
+            "link": "shopify://pages/hypershell",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#000000",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#f87171",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#000000",
+            "colors_text_mobile": "#fff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
         "slide_Pb37rp": {
           "type": "slide",
           "settings": {
@@ -542,6 +580,7 @@
         "slide_LBwdxn",
         "slide_AFmp8D",
         "slide_VnxEnd",
+        "slide_Krx86g",
         "slide_Pb37rp",
         "6d524d43-1bde-474f-b4c0-f6b07a06c8be"
       ],
