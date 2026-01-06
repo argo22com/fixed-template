@@ -156,7 +156,7 @@
         "enable_controls": false,
         "enable_video_looping": true,
         "full_width": false,
-        "hide_when_empty_video": false,
+        "hide_when_empty_video": true,
         "enable_section_box_layout": false,
         "color_scheme": "",
         "padding_top": 36,
