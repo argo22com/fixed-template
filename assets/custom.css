@@ -280,6 +280,9 @@
     gap: 6px;
     font-size: 12px;
   }
+  .price--on-sale .price-item--sale {
+    color: #00a9e0;
+}
 @media (min-width: 750px) {
 .blog-tags.page-width {
     margin-top: -5rem;
