@@ -92,7 +92,7 @@
   assign color_codes_sorted_array = color_codes | split: ";"
 
   assign hide_compatible_filter = false
-  if filter.param_name == 'filter.v.m.product_compatible_devices.manufacturer_code'
+  if filter.param_name == 'filter.v.m.product_compatible_devices.manufacturers_metaobjects'
     assign hide_compatible_filter = true
   endif
   if filter.param_name == 'filter.v.m.product_compatible_devices.devices_metaobject'
