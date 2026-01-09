@@ -102,6 +102,12 @@
             "text": "<p>Hypershell X Pro není jen pasivní opora. Díky pokročilé umělé inteligenci a senzorům v reálném čase analyzuje váš pohyb a terén. Okamžitě pozná, zda stoupáte do prudkého kopce, běžíte po rovince nebo scházíte suťovisko, a přizpůsobí výkon (až 1000 W) tak, aby byla podpora naprosto plynulá a přirozená.</p>"
           }
         },
+        "text_CWrHag": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Šetří kolena a záda</strong> - zejména při sestupech nebo s těžkým batohem.</p><p><strong>Prodlužuje aktivní věk</strong> - umožňuje starším turistům držet krok s mladšími.</p><p><strong>Zvyšuje efektivitu</strong> - dokážete nést těžší náklad nebo urazit delší trasu za stejný čas.</p>"
+          }
+        },
         "button_Dr4pUz": {
           "type": "button",
           "disabled": true,
@@ -120,6 +126,7 @@
       "block_order": [
         "heading_RGikHB",
         "text_d3UhUG",
+        "text_CWrHag",
         "button_Dr4pUz"
       ],
       "name": "t:sections.rich-text.presets.name",
