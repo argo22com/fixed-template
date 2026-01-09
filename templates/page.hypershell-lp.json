@@ -232,7 +232,7 @@
         "column_alignment": "left",
         "enable_shadow": true,
         "background_transparent": false,
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "button_open_new_tab": false,
         "enable_section_box_layout": false,
@@ -257,7 +257,8 @@
         "title": "Video",
         "subtitle": "",
         "heading_size": "h1",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_hosted": "shopify://files/videos/MAIN FILM_4K_16x9_CLEAN.mp4",
+        "video_url": "",
         "description": "",
         "autoplay": false,
         "enable_controls": false,
@@ -273,24 +274,48 @@
     "testimonials_PMma9J": {
       "type": "testimonials",
       "blocks": {
+        "quote_AH7PYG": {
+          "type": "quote",
+          "settings": {
+            "title": "Hypershell Pro X",
+            "content": "<p>Když jsem běžel maraton v Kodani s modelem Hypershell Pro X, objevil jsem něco nečekaného. Toto zařízení nezměnilo samotného ducha běhu, ale změnilo křivku únavy. Díky podpoře nohou a středu těla pro mě bylo snazší udržet tempo i techniku, a to zejména v pozdějších fázích závodu. Místo boje s vyčerpáním jsem se mohl soustředit na rytmus cesty a radost z dokončení výzvy.</p>",
+            "number_of_stars": 5,
+            "user_full_name": "Chris Howett",
+            "hide_avatar": false,
+            "user_title": "překonává výzvy"
+          }
+        },
+        "quote_tgtEnD": {
+          "type": "quote",
+          "settings": {
+            "title": "Hypershell X",
+            "content": "<p>Při testování Hypershell X během výstupu na Ben Nevis, nejvyšší horu Velké Británie, jsem zjistila, že exoskeleton výrazně snížil zátěž během stoupání. Díky tomu byl výstup mnohem zvladatelnější i přes mé dřívější operace kolen.</p>",
+            "number_of_stars": 5,
+            "user_full_name": "Julia Clarke",
+            "hide_avatar": false,
+            "user_title": "novinářka"
+          }
+        },
         "quote_ytt94D": {
           "type": "quote",
           "settings": {
-            "title": "Quote heading",
-            "content": "<p>Quote content</p>",
+            "title": "Hypershell pro jízdu na kole",
+            "content": "<p>Byl jsem šokován a ohromen hned při prvním nasazení během jízdy. Umožnilo mi to šlapat ve skvělém rytmu a kadenci, díky čemuž jsem si mohl dopřát úžasný kardio trénink. Nemám problém se silou při tlaku do pedálů, jde mi hlavně o tu fázi pohybu nohy nahoru.</p>",
             "number_of_stars": 5,
-            "user_full_name": "Full name",
+            "user_full_name": "Woody Drabousky",
             "hide_avatar": false,
-            "user_title": "User title"
+            "user_title": "cyklista"
           }
         }
       },
       "block_order": [
+        "quote_AH7PYG",
+        "quote_tgtEnD",
         "quote_ytt94D"
       ],
       "name": "t:sections.testimonials.presets.name",
       "settings": {
-        "title": "What clients say",
+        "title": "Hodnocení zákazníků",
         "subtitle": "",
         "heading_size": "h1",
         "auto_rotate": false,
@@ -303,6 +328,7 @@
     },
     "featured_collection_eR9Hfp": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "title": "Příslušenství",
