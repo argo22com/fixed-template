@@ -29,11 +29,15 @@
     endif
     assign columns_desktop_number = columns_desktop | default: 4
 
-      assign fixed_state = card_product.selected_or_first_available_variant.metafields.fixed.state.value | default: ''
-      assign is_archived = false
-      if fixed_state == 'ARCHIVED'
-        assign is_archived = true
-      endif
+    comment
+      ARCHIVED logic (variant metafield fixed.state)
+      Expected values: ACTIVE | ARCHIVED
+    endcomment
+    assign fixed_state = card_product.selected_or_first_available_variant.metafields.fixed.state.value | default: ''
+    assign is_archived = false
+    if fixed_state == 'ARCHIVED'
+      assign is_archived = true
+    endif
   -%}
   {%- capture sizes -%}
     (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: columns_desktop_number }}px, (min-width: 990px) calc((100vw - 130px) / {{ columns_desktop_number }}), (min-width: 750px) calc((100vw - 120px) / {{ columns_tablet | default: 3 }}), calc((100vw - 35px) / {{ columns_mobile | default: 2 }})
@@ -83,8 +87,8 @@
               {{ card_product.featured_media | image_url: width: 300 | image_tag: sizes: sizes, srcset: srcset, width: card_product.featured_media.width, height: card_product.featured_media.height, class: 'motion-reduce', loading: 'lazy' }}
             {%- else -%}
               {{ card_product.featured_media | image_url: width: 300 | image_tag: sizes: sizes, srcset: srcset, width: card_product.featured_media.width, height: card_product.featured_media.height, preload: true, class: 'motion-reduce', fetchpriority: 'high' }}
-            {%- endunless -%}  
-            
+            {%- endunless -%}
+
             {%- if card_product.media[1] != nil and show_secondary_image -%}
               {%- liquid
                 assign srcset = ''
@@ -124,13 +128,13 @@
             {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
           </div>
         {%- else -%}
-        <div class="media w100 media--{{ media_aspect_ratio | replace: 'adapt', 'square' }}">&nbsp;</div>  
+        <div class="media w100 media--{{ media_aspect_ratio | replace: 'adapt', 'square' }}">&nbsp;</div>
         {%- endif -%}
 
         {%- liquid
-          render 'card-product-badges', card_product: card_product, section_id: section_id, prefix_id: 'Badge' 
+          render 'card-product-badges', card_product: card_product, section_id: section_id, prefix_id: 'Badge'
         -%}
-        
+
         {%- if show_quick_view -%}
           <quick-view-modal-opener data-modal="#QuickView-Modal" class="quick-button quick-button--view small-hide medium-hide">
             <button
@@ -180,7 +184,7 @@
                   assign rating_count = card_product.metafields.loox.num_reviews | default: 0 | plus: 0
                   if card_product.metafields.loox.avg_rating.value != blank
                     assign has_rating_data = true
-                  endif  
+                  endif
                 when 'okendo'
                   assign rating_summary_data = card_product.metafields.okendo.summaryData
                   assign rating_value = rating_summary_data.reviewAverageValue | default: 0 | plus: 0.0
@@ -195,7 +199,7 @@
                   assign rating_max = 5
                   if card_product.metafields.stamped.reviews_average != blank
                     assign has_rating_data = true
-                  endif  
+                  endif
                 endcase
                 if has_rating_data
                   assign number_gap = rating_max | minus: rating_value | minus: 1.00 | at_least: 0 | ceil
@@ -232,7 +236,7 @@
               </div>
               {% render 'price', product: card_product, show_in_card: true, price_class: 'small-margin-top', show_badges: true %}
             {%- else -%}
-              {% render 'price', product: card_product, show_in_card: true, price_class: 'margin-top-1rem', show_badges: true %}    
+              {% render 'price', product: card_product, show_in_card: true, price_class: 'margin-top-1rem', show_badges: true %}
             {%- endif -%}
 
             {%- if card_product.quantity_price_breaks_configured? -%}
@@ -257,47 +261,63 @@
                     assign cart_text_classes = cart_text_classes | append: ' large-up-hide'
                     assign cart_icon_classes = ''
                   else
-                    assign cart_icon_classes = 'large-up-hide'  
+                    assign cart_icon_classes = 'large-up-hide'
                   endif
                   unless full_on_mobile
                     assign cart_text_classes = cart_text_classes | append: ' small-hide'
                   else
-                    assign cart_icon_classes = cart_icon_classes | append: ' small-hide'  
+                    assign cart_icon_classes = cart_icon_classes | append: ' small-hide'
                   endunless
-                endunless  
+                endunless
               -%}
               {%- if card_product.available -%}
                 {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
                 {%- if card_product.variants.size == 1 -%}
-                  <product-form class="quick-button quick-button--add{% unless enable_compare %} flex-grow-1{% endunless %}">
-                    {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                      <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+
+                  {%- if is_archived -%}
+                    <div class="quick-button quick-button--add{% unless enable_compare %} flex-grow-1{% endunless %}">
                       <button
-                        id="{{ product_form_id }}-submit"
-                        type="submit"
+                        type="button"
                         name="add"
-                        class="quick-add__submit button cart-submit-button button--medium{% unless enable_compare %} w100{% endunless %}"
-                        aria-haspopup="dialog"
-                        aria-label="{{ "products.product.add_to_cart" | t | escape }}"
+                        class="quick-add__submit button button--medium{% unless enable_compare %} w100{% endunless %}"
                         aria-live="polite"
-                        data-sold-out-message="false"
+                        disabled
                       >
-                        {%- unless settings.cart_button_text == 'visible' -%}
-                          {%- if enable_compare or full_on_mobile != true -%}
-                            <span class="{{ cart_text_classes }}">{{ "products.product.add_to_cart" | t }}</span>
-                            {%- render 'icon-cart-in-card', add_classes: cart_icon_classes -%}
+                        <span>{{ 'products.product.no_longer_available' | t }}</span>
+                      </button>
+                    </div>
+                  {%- else -%}
+                    <product-form class="quick-button quick-button--add{% unless enable_compare %} flex-grow-1{% endunless %}">
+                      {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                        <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+                        <button
+                          id="{{ product_form_id }}-submit"
+                          type="submit"
+                          name="add"
+                          class="quick-add__submit button cart-submit-button button--medium{% unless enable_compare %} w100{% endunless %}"
+                          aria-haspopup="dialog"
+                          aria-label="{{ "products.product.add_to_cart" | t | escape }}"
+                          aria-live="polite"
+                          data-sold-out-message="false"
+                        >
+                          {%- unless settings.cart_button_text == 'visible' -%}
+                            {%- if enable_compare or full_on_mobile != true -%}
+                              <span class="{{ cart_text_classes }}">{{ "products.product.add_to_cart" | t }}</span>
+                              {%- render 'icon-cart-in-card', add_classes: cart_icon_classes -%}
+                            {%- else -%}
+                              <span>{{ "products.product.add_to_cart" | t }}</span>
+                            {%- endif -%}
                           {%- else -%}
                             <span>{{ "products.product.add_to_cart" | t }}</span>
-                          {%- endif -%}
-                        {%- else -%}  
-                          <span>{{ "products.product.add_to_cart" | t }}</span>  
-                        {%- endunless -%}
-                        <div class="loading-overlay__spinner hidden">
-                          {%- render 'icon-cart-loading' -%}
-                        </div>
-                      </button>
-                    {%- endform -%}
-                  </product-form>
+                          {%- endunless -%}
+                          <div class="loading-overlay__spinner hidden">
+                            {%- render 'icon-cart-loading' -%}
+                          </div>
+                        </button>
+                      {%- endform -%}
+                    </product-form>
+                  {%- endif -%}
+
                 {%- else -%}
                   <quick-add-drawer-opener class="quick-button quick-button--add{% unless enable_compare %} flex-grow-1{% endunless %}">
                     <button
@@ -316,8 +336,8 @@
                         {%- else -%}
                           <span>{{ "products.product.add_to_cart" | t }}</span>
                         {%- endif -%}
-                      {%- else -%}  
-                        <span>{{ "products.product.add_to_cart" | t }}</span>  
+                      {%- else -%}
+                        <span>{{ "products.product.add_to_cart" | t }}</span>
                       {%- endunless -%}
                       <div class="loading-overlay__spinner hidden">
                         {%- render 'icon-cart-loading' -%}
@@ -344,13 +364,13 @@
                       {%- else -%}
                         <span>{{ "products.product.add_to_cart" | t }}</span>
                       {%- endif -%}
-                    {%- else -%}  
-                      <span>{{ "products.product.add_to_cart" | t }}</span>  
+                    {%- else -%}
+                      <span>{{ "products.product.add_to_cart" | t }}</span>
                     {%- endunless -%}
                   </button>
-                </div>  
+                </div>
               {%- endif -%}
-            {%- endif -%}  
+            {%- endif -%}
             {%- if enable_compare -%}
               <compare-add-button class="flex por">
                 <button type="button" class="compare-add-button compare-add-button--in-grid por flex justify-right align-center unstyled-button tap-area-icon" data-product-id="{{ card_product.id | escape }}" aria-label="{{ 'templates.compare.add_button' | t: product_title: card_product.title | escape }}">
@@ -364,7 +384,7 @@
                   </span>
                 </button>
               </compare-add-button>
-            {%- endif -%}  
+            {%- endif -%}
           </div>
         {%- endif -%}
       </div>
