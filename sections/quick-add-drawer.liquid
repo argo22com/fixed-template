@@ -18,6 +18,7 @@
   elsif section.settings.media_size == 'small'
     assign media_width = 0.45
   endif
+
   assign product_form_id = 'product-form-' | append: section.id
   assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
 
@@ -38,6 +39,21 @@
   assign has_vol_pricing = false
   if product.selected_or_first_available_variant.quantity_price_breaks.size > 0
     assign has_vol_pricing = true
+  endif
+
+  comment
+    ARCHIVED logic (variant metafield fixed.state)
+    Expected values: ACTIVE | ARCHIVED
+  endcomment
+  assign fixed_state = product.selected_or_first_available_variant.metafields.fixed.state.value | default: ''
+  assign is_archived = false
+  if fixed_state == 'ARCHIVED'
+    assign is_archived = true
+  endif
+
+  assign is_purchase_disabled = false
+  if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or is_archived
+    assign is_purchase_disabled = true
   endif
 -%}
 <quick-add-drawer class="flex drawer h100">
@@ -218,7 +234,7 @@
                   <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
                   <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
                   <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-                  <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                  <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7"></path>
                 </svg>
                 <span class="product-form__error-message"></span>
               </div>
@@ -234,16 +250,17 @@
                   type="hidden"
                   name="id"
                   value="{{ product.selected_or_first_available_variant.id }}"
-                  {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+                  {% if is_purchase_disabled %}
                     disabled
                   {% endif %}
                   class="product-variant-id"
                 >
+
                 <div
                   class="quick-add__product-form-buttons product-form__buttons--input flex flex-wrap product-form__quantity-wrapper{% if has_qty_rules or has_vol_pricing %} product-form__wholesale{% endif %}{% unless section.settings.quantity_selector_enable %} product-form__buttons--no-quantity{% endunless %} {% if section.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}product-form__buttons-group{% else %}product-form__buttons-single{% endif %}"
                   id="Quantity-Form-{{ section.id }}"
                 >
-                  {%- if section.settings.quantity_selector_enable -%}
+                  {%- if section.settings.quantity_selector_enable and is_archived == false -%}
                     {%- render 'main-product-quantity-label', cart_qty: cart_qty, section_id: section.id -%}
                     <div class="product-form__input product-form__quantity">
                       <quantity-input class="quantity flex align-center color-foreground por">
@@ -279,13 +296,7 @@
                             <span class="visually-hidden">
                               {{- 'products.product.quantity.increase' | t: product: title | escape -}}
                             </span>
-                            <svg
-                              width="12"
-                              height="6"
-                              viewBox="0 0 12 6"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
+                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M10.6666 5.33331L5.99992 0.666646L1.33325 5.33331" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                           </button>
@@ -297,13 +308,7 @@
                             <span class="visually-hidden">
                               {{- 'products.product.quantity.decrease' | t: product: title | escape -}}
                             </span>
-                            <svg
-                              width="12"
-                              height="7"
-                              viewBox="0 0 12 7"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M10.6666 1.16663L5.99992 5.83329L1.33325 1.16663" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                           </button>
@@ -311,11 +316,12 @@
                       </quantity-input>
                     </div>
                   {%- endif -%}
+
                   <button
                     type="submit"
                     name="add"
                     class="product-form__submit button flex flex-grow-1"
-                    {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+                    {% if is_purchase_disabled %}
                       disabled
                     {% endif %}
                     {% if product.selected_or_first_available_variant.inventory_management == 'shopify'
@@ -328,9 +334,9 @@
                     {% endif %}
                   >
                     <span>
-                      {%- if product.selected_or_first_available_variant.available
-                        and quantity_rule_soldout == false
-                      -%}
+                      {%- if is_archived -%}
+                        {{ 'products.product.no_longer_available' | t }}
+                      {%- elsif product.selected_or_first_available_variant.available and quantity_rule_soldout == false -%}
                         {%- unless product.selected_or_first_available_variant.inventory_management == 'shopify'
                           and product.selected_or_first_available_variant.inventory_quantity
                             < product.selected_or_first_available_variant.quantity_rule.min
@@ -349,9 +355,11 @@
                       {%- render 'icon-cart-loading' -%}
                     </div>
                   </button>
-                  {%- if section.settings.show_dynamic_checkout -%}
+
+                  {%- if section.settings.show_dynamic_checkout and is_archived == false -%}
                     {{ form | payment_button }}
                   {%- endif -%}
+
                   {%- render 'main-product-quantity-rules', product: product, section_id: section.id -%}
                   {%- render 'main-product-volume-pricing', product: product, section: section -%}
                 </div>
@@ -372,6 +380,7 @@
   </div>
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
 </quick-add-drawer>
+
 {% schema %}
 {
   "name": "t:sections.quick-add.name",
@@ -387,18 +396,9 @@
       "type": "select",
       "id": "media_size",
       "options": [
-        {
-          "value": "small",
-          "label": "t:sections.main-product.settings.media_size.options__1.label"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.main-product.settings.media_size.options__2.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.main-product.settings.media_size.options__3.label"
-        }
+        { "value": "small", "label": "t:sections.main-product.settings.media_size.options__1.label" },
+        { "value": "medium", "label": "t:sections.main-product.settings.media_size.options__2.label" },
+        { "value": "large", "label": "t:sections.main-product.settings.media_size.options__3.label" }
       ],
       "default": "large",
       "label": "t:sections.main-product.settings.media_size.label",
@@ -409,22 +409,10 @@
       "id": "image_ratio",
       "label": "t:sections.all.image_ratio.label",
       "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.all.image_ratio.option_1.label"
-        },
-        {
-          "value": "square",
-          "label": "t:sections.all.image_ratio.option_2.label"
-        },
-        {
-          "value": "portrait",
-          "label": "t:sections.all.image_ratio.option_3.label"
-        },
-        {
-          "value": "landscape",
-          "label": "t:sections.all.image_ratio.option_4.label"
-        }
+        { "value": "adapt", "label": "t:sections.all.image_ratio.option_1.label" },
+        { "value": "square", "label": "t:sections.all.image_ratio.option_2.label" },
+        { "value": "portrait", "label": "t:sections.all.image_ratio.option_3.label" },
+        { "value": "landscape", "label": "t:sections.all.image_ratio.option_4.label" }
       ]
     },
     {
@@ -441,14 +429,8 @@
       "type": "select",
       "id": "picker_type",
       "options": [
-        {
-          "value": "dropdown",
-          "label": "t:sections.main-product.blocks.sale_box.settings.picker_type.options__1.label"
-        },
-        {
-          "value": "button",
-          "label": "t:sections.main-product.blocks.sale_box.settings.picker_type.options__2.label"
-        }
+        { "value": "dropdown", "label": "t:sections.main-product.blocks.sale_box.settings.picker_type.options__1.label" },
+        { "value": "button", "label": "t:sections.main-product.blocks.sale_box.settings.picker_type.options__2.label" }
       ],
       "default": "button",
       "label": "t:sections.main-product.blocks.sale_box.settings.picker_type.label"
@@ -465,14 +447,8 @@
       "id": "color_swatches_style",
       "label": "t:sections.main-product.blocks.sale_box.settings.color_swatches_style.label",
       "options": [
-        {
-          "value": "variant",
-          "label": "t:sections.main-product.blocks.sale_box.settings.color_swatches_style.option_1.label"
-        },
-        {
-          "value": "custom",
-          "label": "t:sections.main-product.blocks.sale_box.settings.color_swatches_style.option_2.label"
-        }
+        { "value": "variant", "label": "t:sections.main-product.blocks.sale_box.settings.color_swatches_style.option_1.label" },
+        { "value": "custom", "label": "t:sections.main-product.blocks.sale_box.settings.color_swatches_style.option_2.label" }
       ],
       "default": "variant"
     },
