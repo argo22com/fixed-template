@@ -163,6 +163,7 @@
   },
   "products": {
     "product": {
+      "no_longer_available": "Produkt nie jest już dostępny",
       "add_to_cart": "Dodaj do koszyka",
       "description": "Opis",
       "pre_order": "Pre-order",
