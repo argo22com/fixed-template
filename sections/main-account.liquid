@@ -61,12 +61,12 @@
                       class="button button--small ignore-effect"
                     >
                       {{ order.name }}
-                           {%- assign sap_id = order.metafields.fixed.order_sap_id.value -%}
-      {%- if sap_id != blank -%}
-        <br><small>
-          Interní ID:{{ sap_id | default: 'Bude doplněno po zpracování objednávky' }}
-        </smal>
-      {%- endif -%}
+                      {%- assign sap_id = order.metafields.fixed.order_sap_id.value -%}
+                      {%- if sap_id != blank -%}
+                        <small>
+                          Interní ID:{{ sap_id | default: 'Bude doplněno po zpracování objednávky' }}
+                        </smal>
+                      {%- endif -%}
                     </a>
                   </td>
                   <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
