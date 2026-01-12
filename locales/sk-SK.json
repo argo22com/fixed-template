@@ -163,6 +163,7 @@
   },
   "products": {
     "product": {
+      "no_longer_available": "Produkt už nie je dostupný",
       "add_to_cart": "Pridať do košíka",
       "description": "Popis",
       "pre_order": "Pre-order",
