@@ -163,6 +163,7 @@
   },
   "products": {
     "product": {
+      "no_longer_available": "Produkt už není dostupný",
       "add_to_cart": "Přidat do košíku",
       "description": "Popis",
       "pre_order": "Předobjednávka",
