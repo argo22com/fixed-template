@@ -1436,3 +1436,10 @@ back-to-top .icon {
 .gap-2 {
   gap: 2rem;
 }
+
+
+/* Zajištění, že kontejner odznaku se zobrazí pod vším (z-index: 1 je téměř na dně) */
+.bss-pb-stock-wrapper, 
+.bss-pb-frontend {
+  z-index: 1 !important; 
+}
