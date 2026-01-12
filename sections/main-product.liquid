@@ -528,7 +528,7 @@
         >
           <span>
             {%- if is_archived -%}
-              Archived
+              {{ 'products.product.no_longer_available' | t }}
             {%- elsif product.selected_or_first_available_variant.available and quantity_rule_soldout == false -%}
               {%- unless product.selected_or_first_available_variant.inventory_management == 'shopify'
                 and product.selected_or_first_available_variant.inventory_quantity
