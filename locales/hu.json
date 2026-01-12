@@ -161,6 +161,7 @@
   },
   "products": {
     "product": {
+      "no_longer_available": "Ez a termék már nem elérhető",
       "add_to_cart": "Hozzáadás a kosárhoz",
       "description": "Leírás",
       "pre_order": "Pre-order",
