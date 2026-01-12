@@ -15,6 +15,7 @@
 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
   {%-liquid
     assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
+
     assign check_against_inventory = true
     assign quantity_rule_soldout = false
     if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
@@ -23,10 +24,33 @@
     if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
       assign quantity_rule_soldout = true
     endif
+
+    comment
+      ARCHIVED logic (variant metafield fixed.state)
+      Expected values: ACTIVE | ARCHIVED
+    endcomment
+    assign fixed_state = product.selected_or_first_available_variant.metafields.fixed.state.value | default: ''
+    assign is_archived = false
+    if fixed_state == 'ARCHIVED'
+      assign is_archived = true
+    endif
+
+    assign is_purchase_disabled = false
+    if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or is_archived
+      assign is_purchase_disabled = true
+    endif
   -%}
-  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"{% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %} disabled{% endif %} class="product-variant-id">
+
+  <input
+    type="hidden"
+    name="id"
+    value="{{ product.selected_or_first_available_variant.id }}"
+    {% if is_purchase_disabled %} disabled{% endif %}
+    class="product-variant-id"
+  >
+
   <div class="product-form__buttons product-form__buttons--input product-form__buttons-single product-form__buttons--compare product-form__quantity-wrapper product-form__flex" id="Quantity-Form-{{ section_id }}">
-    {%- if show_quantity_selector -%}
+    {%- if show_quantity_selector and is_archived == false -%}
       {%- render 'main-product-quantity-label', cart_qty: cart_qty, section_id: section_id -%}
       <div class="product-form__input product-form__quantity">
         <quantity-input class="quantity flex align-center color-foreground por">
@@ -44,7 +68,7 @@
               step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
               value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
             >
-          <div class="quantity__buttons flex flex-column flex-grow-1">    
+          <div class="quantity__buttons flex flex-column flex-grow-1">
             <button class="quantity__button flex justify-center align-center no-js-hidden w100 color-foreground" name="plus" type="button">
               <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
               <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,18 +85,29 @@
         </quantity-input>
       </div>
     {%- endif -%}
+
     <button
       type="submit"
       name="add"
       class="product-form__submit button flex cart-submit-button"
-      {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %}
+      {% if is_purchase_disabled %}disabled{% endif %}
       {% if limit_button == true %}style="min-width: 100%;"{% endif %}
+      {% if is_archived %}aria-label="{{ 'products.product.no_longer_available' | t | escape }}"{% endif %}
     >
-      {%- render 'icon-cart' -%}
+      {%- if is_archived -%}
+        {%- comment -%}
+          <span>{{ 'products.product.no_longer_available' | t }}</span>
+        {%- endcomment -%}
+        {%- render 'icon-cart' -%}
+      {%- else -%}
+        {%- render 'icon-cart' -%}
+      {%- endif -%}
+
       <div class="loading-overlay__spinner hidden">
         {%- render 'icon-cart-loading' -%}
       </div>
     </button>
+
     {%- render 'main-product-quantity-rules', product: product, section_id: section_id -%}
     {%- render 'main-product-volume-pricing', product: product, section_id: section_id -%}
   </div>
