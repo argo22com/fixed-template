@@ -28,6 +28,12 @@
       endif
     endif
     assign columns_desktop_number = columns_desktop | default: 4
+
+      assign fixed_state = card_product.selected_or_first_available_variant.metafields.fixed.state.value | default: ''
+      assign is_archived = false
+      if fixed_state == 'ARCHIVED'
+        assign is_archived = true
+      endif
   -%}
   {%- capture sizes -%}
     (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: columns_desktop_number }}px, (min-width: 990px) calc((100vw - 130px) / {{ columns_desktop_number }}), (min-width: 750px) calc((100vw - 120px) / {{ columns_tablet | default: 3 }}), calc((100vw - 35px) / {{ columns_mobile | default: 2 }})
