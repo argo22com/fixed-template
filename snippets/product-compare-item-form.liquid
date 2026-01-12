@@ -95,10 +95,10 @@
       {% if is_archived %}aria-label="{{ 'products.product.no_longer_available' | t | escape }}"{% endif %}
     >
       {%- if is_archived -%}
-        {%- comment -%}
           <span>{{ 'products.product.no_longer_available' | t }}</span>
-        {%- endcomment -%}
+         {%- comment -%}
         {%- render 'icon-cart' -%}
+         {%- endcomment -%}
       {%- else -%}
         {%- render 'icon-cart' -%}
       {%- endif -%}
