@@ -63,7 +63,7 @@
                       {{ order.name }}
                            {%- assign sap_id = order.metafields.fixed.order_sap_id.value -%}
       {%- if sap_id != blank -%}
-        <small>
+        <br><small>
           Interní ID:{{ sap_id | default: 'Bude doplněno po zpracování objednávky' }}
         </smal>
       {%- endif -%}
