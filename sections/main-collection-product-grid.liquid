@@ -261,6 +261,10 @@
               data-id="{{ section.id }}"
             >
               {%- for card_product in collection.products -%}
+                {%- comment -%} Hide archived products completely {%- endcomment -%}
+                {%- if card_product.status == 'archived' -%}
+                  {%- continue -%}
+                {%- endif -%}
                 {%- liquid
                   if promotion_tile_ids != ''
                     assign index_key = 'position_' | append: forloop.index | append: ':'
