@@ -261,10 +261,13 @@
               data-id="{{ section.id }}"
             >
               {%- for card_product in collection.products -%}
-                {%- comment -%} Hide archived products completely {%- endcomment -%}
-                {%- if card_product.status == 'ARCHIVED' -%}
-                  {%- continue -%}
-                {%- endif -%}
+  {%- liquid
+    assign state_raw = card_product.metafields.fixed.state.value | default: card_product.metafields.fixed.state
+    assign state = state_raw
+  -%}
+  {%- if state == 'archived' -%}
+    {%- continue -%}
+  {%- endif -%}
                 {%- liquid
                   if promotion_tile_ids != ''
                     assign index_key = 'position_' | append: forloop.index | append: ':'
