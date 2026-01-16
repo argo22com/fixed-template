@@ -265,7 +265,7 @@
     assign state_raw = card_product.metafields.fixed.state.value | default: card_product.metafields.fixed.state
     assign state = state_raw
   -%}
-  {%- if state == 'archived' -%}
+  {%- if state == 'ARCHIVED' -%}
     {%- continue -%}
   {%- endif -%}
                 {%- liquid
