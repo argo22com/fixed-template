@@ -262,7 +262,7 @@
             >
               {%- for card_product in collection.products -%}
                 {%- comment -%} Hide archived products completely {%- endcomment -%}
-                {%- if card_product.status == 'archived' -%}
+                {%- if card_product.status == 'ARCHIVED' -%}
                   {%- continue -%}
                 {%- endif -%}
                 {%- liquid
