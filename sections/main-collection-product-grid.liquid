@@ -261,11 +261,13 @@
               data-id="{{ section.id }}"
             >
               {%- for card_product in collection.products -%}
+
   {%- liquid
-    assign state_raw = card_product.metafields.fixed.state.value | default: card_product.metafields.fixed.state
-    assign state = state_raw
+    assign v = card_product.selected_or_first_available_variant
+    assign state_json = v.metafields.fixed.state | json | downcase
   -%}
-  {%- if state == 'ARCHIVED' -%}
+
+  {%- if state_json contains 'archived' -%}
     {%- continue -%}
   {%- endif -%}
                 {%- liquid
