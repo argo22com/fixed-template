@@ -274,6 +274,43 @@
             "colors_button_mobile": "#dc4405"
           }
         },
+        "slide_T3NJDj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/FIXMST2.6884.jpg",
+            "mobile_image": "shopify://shop_images/FIXMST2.6885.jpg",
+            "badge_label": "",
+            "heading": "Vše pro chytré hodinky",
+            "text": "Vylaďte své hodinky k dokonalosti.",
+            "hide_text_on_mobile": false,
+            "button_label": "Nakupovat",
+            "price": "",
+            "link": "shopify://collections/zpatky-do-skoly",
+            "button_style": "primary",
+            "button_open_new_tab": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "keep_ltr": false,
+            "desktop_image_width": "full",
+            "desktop_image_position": "left",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center",
+            "colors_text": "#ffffff",
+            "gradient_heading_desktop": "",
+            "colors_background": "#ffffff",
+            "colors_badge_foreground": "#ffffff",
+            "colors_badge_background": "#e31c79",
+            "colors_button_text": "#ffffff",
+            "colors_button": "#dc4405",
+            "colors_text_mobile": "#ffffff",
+            "gradient_heading_mobile": "",
+            "colors_background_mobile": "#ffffff",
+            "colors_badge_foreground_mobile": "#ffffff",
+            "colors_badge_background_mobile": "#f87171",
+            "colors_button_text_mobile": "#ffffff",
+            "colors_button_mobile": "#000000"
+          }
+        },
         "slide_YFtG7x": {
           "type": "slide",
           "settings": {
@@ -309,44 +346,6 @@
             "colors_badge_background_mobile": "#f87171",
             "colors_button_text_mobile": "#ffffff",
             "colors_button_mobile": "#dc4405"
-          }
-        },
-        "slide_T3NJDj": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/FIXMST2.6884.jpg",
-            "mobile_image": "shopify://shop_images/FIXMST2.6885.jpg",
-            "badge_label": "",
-            "heading": "Vše pro chytré hodinky",
-            "text": "Vylaďte své hodinky k dokonalosti.",
-            "hide_text_on_mobile": false,
-            "button_label": "Nakupovat",
-            "price": "",
-            "link": "shopify://collections/zpatky-do-skoly",
-            "button_style": "primary",
-            "button_open_new_tab": false,
-            "box_align": "middle-left",
-            "text_alignment": "left",
-            "keep_ltr": false,
-            "desktop_image_width": "full",
-            "desktop_image_position": "left",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center",
-            "colors_text": "#ffffff",
-            "gradient_heading_desktop": "",
-            "colors_background": "#ffffff",
-            "colors_badge_foreground": "#ffffff",
-            "colors_badge_background": "#e31c79",
-            "colors_button_text": "#ffffff",
-            "colors_button": "#dc4405",
-            "colors_text_mobile": "#ffffff",
-            "gradient_heading_mobile": "",
-            "colors_background_mobile": "#ffffff",
-            "colors_badge_foreground_mobile": "#ffffff",
-            "colors_badge_background_mobile": "#f87171",
-            "colors_button_text_mobile": "#ffffff",
-            "colors_button_mobile": "#000000"
           }
         },
         "slide_LBwdxn": {
@@ -576,8 +575,8 @@
       "block_order": [
         "slide_QWELn3",
         "slide_dwJ4nE",
-        "slide_YFtG7x",
         "slide_T3NJDj",
+        "slide_YFtG7x",
         "slide_LBwdxn",
         "slide_AFmp8D",
         "slide_VnxEnd",
