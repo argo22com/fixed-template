@@ -426,7 +426,7 @@
           "type": "button",
           "settings": {
             "button_label": "Prohlédnout všechny výrobky",
-            "button_link": "shopify://collections/pouzdra_z_umele_kuze",
+            "button_link": "shopify://collections/pouzdra-z-umele-kuze",
             "button_style": "solid",
             "button_open_new_tab": false
           }
@@ -474,7 +474,7 @@
         "featured_collection_fE9TMM": {
           "type": "featured_collection",
           "settings": {
-            "collection": "pouzdra-na-telefony-z-umele-kuze",
+            "collection": "verona",
             "custom_image": "shopify://shop_images/verona-768x512.jpg",
             "custom_title": "TAŠTIČKY NA TELEFON"
           }
@@ -482,7 +482,7 @@
         "featured_collection_WMUJtn": {
           "type": "featured_collection",
           "settings": {
-            "collection": "pouzdra-na-tablety-z-umele-kuze",
+            "collection": "siena",
             "custom_image": "shopify://shop_images/1B1A0588.jpg",
             "custom_title": "OBALY NA TABLETY"
           }
@@ -490,7 +490,7 @@
         "featured_collection_4Ge7Ga": {
           "type": "featured_collection",
           "settings": {
-            "collection": "pouzdra-na-notebooky-z-umele-kuze",
+            "collection": "york",
             "custom_image": "shopify://shop_images/york_ls2.jpg",
             "custom_title": "OBALY NA NOTEBOOKY"
           }
@@ -541,7 +541,7 @@
           "type": "featured_collection",
           "settings": {
             "title": "Bestsellery",
-            "collection": "rucni_vyroba",
+            "collection": "rucni-vyroba",
             "products_to_show": 6,
             "columns_desktop": 3,
             "show_view_all": true,
