@@ -144,7 +144,7 @@
           "disabled": true,
           "settings": {
             "button_label": "Prohlédnout všechny výrobky",
-            "button_link": "shopify://collections/pouzdra-z-umele-kuze",
+            "button_link": "shopify://collections/pouzdra_z_umele_kuze",
             "button_style": "solid",
             "button_open_new_tab": false
           }
@@ -344,7 +344,7 @@
         "hide_when_empty_image": false,
         "preload": false,
         "mobile_content_alignment": "left",
-        "padding_top": 60,
+        "padding_top": 24,
         "padding_bottom": 24,
         "color_heading": "#000000",
         "gradient_heading": "",
@@ -670,7 +670,7 @@
           "type": "button",
           "settings": {
             "button_label": "TPU Pouzdra z Bystřice",
-            "button_link": "shopify://collections/na-telefon",
+            "button_link": "",
             "button_style_1": "primary",
             "button_open_new_tab_1": false,
             "button_label_2": "",
