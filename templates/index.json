@@ -1031,7 +1031,7 @@
           "type": "text-overlay-image",
           "settings": {
             "image": "shopify://shop_images/drzaky_eb071698-172a-48e6-a91b-af4eda74fae8.jpg",
-            "link": "shopify://collections/drzaky-a-stojanky",
+            "link": "shopify://collections/drzaky_a_stojanky",
             "keep_ltr": false,
             "text": "Do auta, na kolo i motorku...",
             "text_style": "subtitle",
