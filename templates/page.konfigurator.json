@@ -159,7 +159,7 @@
       "settings": {
         "title": "",
         "subtitle": "",
-        "collection": "do-auta",
+        "collection": "do_auta",
         "heading_size": "h1",
         "products_to_show": 12,
         "columns_desktop": 6,
