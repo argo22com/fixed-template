@@ -701,41 +701,6 @@
     },
     "17225355129c0ff813": {
       "type": "apps",
-      "blocks": {
-        "hulk_form_builder_form_block_H7Q4mi": {
-          "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
-          "settings": {
-            "form_uuid": "",
-            "form_settings": false,
-            "font_color": "#000000",
-            "size": 14,
-            "input_background_color": "#ffffff",
-            "input_background_color_focus": "#f4dada",
-            "input_border_radius": 1,
-            "input_border_color": "#ebe9e9",
-            "input_border_color_focus": "#2d2727",
-            "input_font_color": "#3d3131",
-            "input_size": 14,
-            "border_color": "#121212",
-            "border_radius": 2,
-            "border": 1,
-            "fill_color": "#ebe9e9",
-            "padding": 35,
-            "form_width": 600,
-            "btn_text": "Submit",
-            "sub_btn_txt_color": "#f3f3f3",
-            "sub_btn_bg_color": "#3f3333",
-            "sub_btn_font_size": 14,
-            "sub_btn_bdr_color": "#ffffff",
-            "sub_btn_bdr_rad": 3,
-            "sub_btn_bdr_width": 1,
-            "fonts": "Times New Roman"
-          }
-        }
-      },
-      "block_order": [
-        "hulk_form_builder_form_block_H7Q4mi"
-      ],
       "settings": {
         "include_margins": true
       }
@@ -954,7 +919,7 @@
         "featured_collection_ejGJRA": {
           "type": "featured_collection",
           "settings": {
-            "collection": "bezdratove-nabijecky",
+            "collection": "bezdratove_nabijecky",
             "custom_image": "shopify://shop_images/kolekce3_c2608871-fe82-457b-a948-8f16b1759638.jpg",
             "custom_title": "Bezdrátové nabíjení"
           }
@@ -1506,35 +1471,6 @@
     },
     "1756906366f4bc4740": {
       "type": "apps",
-      "blocks": {
-        "heureka_reviews_heureka_review_YmcUKM": {
-          "type": "shopify://apps/heureka-reviews/blocks/heureka_review/6b1d450a-0cbe-475a-b2f9-0bd342111b5d",
-          "settings": {
-            "title": "",
-            "heading_size": "h2",
-            "description": "",
-            "description_style": "body",
-            "reviews_to_show": 10,
-            "columns_desktop": 5,
-            "full_width": true,
-            "show_view_all": false,
-            "view_all_link": "",
-            "view_all_style": "solid",
-            "view_all_target": "_self",
-            "enable_desktop_slider": true,
-            "review_record_preset": "0",
-            "show_percentage": false,
-            "show_stars": true,
-            "number_of_review_rows": 3,
-            "show_initials_name": "name",
-            "columns_mobile": "2",
-            "swipe_on_mobile": true
-          }
-        }
-      },
-      "block_order": [
-        "heureka_reviews_heureka_review_YmcUKM"
-      ],
       "settings": {
         "include_margins": true
       }
