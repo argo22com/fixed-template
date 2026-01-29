@@ -45,7 +45,7 @@
             "image": "shopify://shop_images/FIXPUM-1591-TR-PRODUCT-1.jpg",
             "heading": "Boží pouzdra od FIXED s Magsafe",
             "button_label": "Vybrat si",
-            "link": "shopify://collections/magsafe-nabijecky",
+            "link": "shopify://collections/magsafe_nabijecky",
             "enable_parallax_scrolling_effect": false,
             "content_position": "end",
             "text_alignment": "left",

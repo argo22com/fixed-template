@@ -623,7 +623,7 @@
         "featured_collection_xdJmVL": {
           "type": "featured_collection",
           "settings": {
-            "collection": "magsafe-nabijecky",
+            "collection": "magsafe_nabijecky",
             "custom_title": "Magnetické příslušenství"
           }
         },
@@ -637,7 +637,7 @@
         "featured_collection_ejGJRA": {
           "type": "featured_collection",
           "settings": {
-            "collection": "bezdratove-nabijecky",
+            "collection": "bezdratove_nabijecky",
             "custom_title": "Bezdrátové nabíjení"
           }
         },
