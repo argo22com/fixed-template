@@ -283,7 +283,7 @@
         "featured_collection_QBAJFW": {
           "type": "featured_collection",
           "settings": {
-            "collection": "selfie-tyce-a-stativy",
+            "collection": "selfie_tyce_a_stativy",
             "custom_title": "Selfie tyče a stativy"
           }
         },
