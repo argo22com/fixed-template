@@ -138,6 +138,60 @@
         "overlay_color": "#1e40af"
       }
     },
+    "image_with_text_KATQ6D": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YFPDpN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zlepšujeme život s chytrými zařízeními. Udržitelně.",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_zrMzfU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Přemýšlíme nad tím, jak věci děláme — a snažíme se je dělat tak, aby po nás nezůstával zbytečný odpad. Proto řešíme, odkud materiály pochází, jak se produkty přepravují a co se s nimi stane, až doslouží. Hlídáme množství odpadu, volíme rozumnější způsoby dopravy, pracujeme s materiály, které dávají smysl, a postupně zlepšujeme celý dodavatelský proces. Zároveň hledáme lepší cesty, jak naše produkty po jejich životnosti znovu využít nebo recyklovat. </p><p>Věříme, že firmy mají vliv na svět kolem sebe, a chceme ho používat zodpovědně — s ohledem na lidi dnes i ty, kteří přijdou po nás.<br/><br/></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YFPDpN",
+        "text_zrMzfU"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/people-holding-earth-their-hands.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
     "image_with_text_AwNNQH": {
       "type": "image-with-text",
       "blocks": {
@@ -175,60 +229,6 @@
         "preload": false,
         "mobile_content_alignment": "left",
         "padding_top": 24,
-        "padding_bottom": 36,
-        "color_heading": "#000000",
-        "gradient_heading": "",
-        "color_text": "#000000",
-        "color_highlight_text": "#da2127",
-        "color_caption": "#000000",
-        "color_countdown": "#000000",
-        "color_icon": "#000000",
-        "color_button_text": "#ffffff",
-        "color_button": "#000000",
-        "background_container": "#ffffff",
-        "gradient_background_container": "",
-        "background_section": "#ffffff",
-        "gradient_background_section": "",
-        "enable_parallax_scrolling_effect": true,
-        "overlay_color": "#1e40af"
-      }
-    },
-    "image_with_text_KATQ6D": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_YFPDpN": {
-          "type": "heading",
-          "settings": {
-            "heading": "Zlepšujeme život s chytrými zařízeními. Udržitelně.",
-            "heading_size": "h2",
-            "enable_bold_heading": true
-          }
-        },
-        "text_zrMzfU": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Přemýšlíme nad tím, jak věci děláme — a snažíme se je dělat tak, aby po nás nezůstával zbytečný odpad. Proto řešíme, odkud materiály pochází, jak se produkty přepravují a co se s nimi stane, až doslouží. Hlídáme množství odpadu, volíme rozumnější způsoby dopravy, pracujeme s materiály, které dávají smysl, a postupně zlepšujeme celý dodavatelský proces. Zároveň hledáme lepší cesty, jak naše produkty po jejich životnosti znovu využít nebo recyklovat. </p><p>Věříme, že firmy mají vliv na svět kolem sebe, a chceme ho používat zodpovědně — s ohledem na lidi dnes i ty, kteří přijdou po nás.<br/><br/></p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_YFPDpN",
-        "text_zrMzfU"
-      ],
-      "settings": {
-        "grid_layout": "grid",
-        "image": "shopify://shop_images/people-holding-earth-their-hands.png",
-        "height": "small",
-        "desktop_image_width": "small",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "hide_when_empty_image": false,
-        "preload": false,
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
         "padding_bottom": 36,
         "color_heading": "#000000",
         "gradient_heading": "",
@@ -446,9 +446,9 @@
   "order": [
     "main",
     "image_banner_x8BxCc",
+    "image_with_text_KATQ6D",
     "image_with_text_WYH4FU",
     "image_with_text_AwNNQH",
-    "image_with_text_KATQ6D",
     "image_with_text_MG4e48",
     "image_banner_DVAQgg",
     "rich_text_4J3ddB",

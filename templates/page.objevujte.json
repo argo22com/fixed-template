@@ -177,7 +177,6 @@
         },
         "column_GF8HCY": {
           "type": "column",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/people-holding-earth-their-hands.jpg",
             "icon": "check",
