@@ -1,1 +1,458 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"section_width":"grid","content_alignment":"left","color_scheme":"background-2","padding_top":40,"padding_bottom":40,"ul_li_marker":"#000000"}},"image_banner_x8BxCc":{"type":"image-banner","blocks":{"heading_76DBMV":{"type":"heading","settings":{"heading":"FIXED Udržitelnost","size":"h0"}},"text_wMAP9F":{"type":"text","settings":{"text":"Ve společnosti FIXED vnímáme změnu směrem k obnovitelné ekonomice jako nevyhnutelný krok pro udržitelnou budoucnost.","text_style":"body"}}},"block_order":["heading_76DBMV","text_wMAP9F"],"settings":{"layout":"full_bleed","image":"shopify:\/\/shop_images\/sun-beams-through-forest.jpg","image_mobile":"shopify:\/\/shop_images\/sun-beams-through-forest.jpg","image_overlay_opacity":30,"image_height":"small","image_height_mobile":"medium-mobile","desktop_content_position":"middle-left","desktop_content_alignment":"left","keep_ltr":false,"hide_when_empty_image":false,"preload":false,"enable_parallax_scrolling_effect":false,"mobile_content_alignment":"center","show_text_below_image":true,"color_text":"#ffffff","gradient_heading_desktop":"","color_button_text_1":"#000000","color_button_1":"#ffffff","color_button_text_2":"#000000","color_button_2":"#ffffff","colors_badge_foreground":"#ffffff","colors_badge_background":"#f87171","color_countdown_foreground":"#000000","color_countdown_background":"#ffffff","color_text_mobile":"#ffffff","gradient_heading_mobile":"","color_button_text_1_mobile":"#000000","color_button_1_mobile":"#ffffff","color_button_text_2_mobile":"#000000","color_button_2_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","color_countdown_foreground_mobile":"#000000","color_countdown_background_mobile":"#ffffff","background_container_mobile":"#565656","gradient_background_container_mobile":"","padding_top":0,"padding_bottom":0}},"image_with_text_AwNNQH":{"type":"image-with-text","blocks":{"heading_xi6Qgt":{"type":"heading","settings":{"heading":"Zlepšujeme život s chytrými zařízeními. Udržitelně.","heading_size":"h2","enable_bold_heading":true}},"text_M496Hi":{"type":"text","settings":{"text":"<p><strong>FIXED ReLeaf<\/strong><\/p><p>Výrobky a projekty pro udržitelnou budoucnost jsou označeny logem ReLeaf, inspirovaným naším národním stromem - lípou s listy ve tvaru srdce.<\/p><p><strong>Žádný greenwashing<\/strong><\/p><p>Všechny produkty nebo činnosti ReLeaf jsou podloženy konkrétními opatřeními a\/nebo celosvětově uznávanými certifikáty, jako jsou GRS, ISCC a další.<\/p>","text_style":"body"}}},"block_order":["heading_xi6Qgt","text_M496Hi"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/releaf_1.png","height":"small","desktop_image_width":"small","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":24,"padding_bottom":36,"color_heading":"#000000","gradient_heading":"","color_text":"#000000","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_icon":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"#ffffff","gradient_background_container":"","background_section":"#ffffff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"image_with_text_WYH4FU":{"type":"image-with-text","blocks":{"heading_fmTPUb":{"type":"heading","settings":{"heading":"Produkty a certifikace","heading_size":"h2","enable_bold_heading":true}},"text_fazkwC":{"type":"text","settings":{"text":"<p>Výběr udržitelných výrobků je zásadní pro zachování zdraví naší planety a zajištění lepší budoucnosti pro všechny. <\/p><p>Ve společnosti FIXED jsme hrdí na to, že můžeme nabízet výrobky s certifikací GRS a ISCC PLUS, což zaručuje, že naše nabídka splňuje nejvyšší ekologické a sociální standardy. <\/p><p>Pokud se spotřebitelé rozhodnou pro naše certifikované udržitelné výrobky, mohou věřit, že jejich nákupy přispívají k transparentnějšímu a odpovědnějšímu dodavatelskému řetězci. Tyto certifikace umožňují jednotlivcům činit informovaná rozhodnutí, která jsou v souladu s jejich hodnotami, a podporují pozitivní změny směrem k udržitelnějšímu světu.<\/p>","text_style":"body"}}},"block_order":["heading_fmTPUb","text_fazkwC"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/sustainability_logos.png","height":"small","desktop_image_width":"small","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000000","gradient_heading":"","color_text":"#000000","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_icon":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"#ffffff","gradient_background_container":"","background_section":"#ffffff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"image_with_text_KATQ6D":{"type":"image-with-text","blocks":{"heading_YFPDpN":{"type":"heading","settings":{"heading":"Zlepšujeme život s chytrými zařízeními. Udržitelně.","heading_size":"h2","enable_bold_heading":true}},"text_zrMzfU":{"type":"text","settings":{"text":"<p>Abychom zachovali náš firemní cíl, uplatňujeme udržitelné myšlení v každém kroku našeho procesu. Od minimalizace odpadu a naší ekologické stopy, přes výběr lepších dopravních metod a etických materiálů, optimalizaci našeho dodavatelského řetězce až po hledání lepších způsobů recyklace našich výrobků.<br\/><br\/>Věříme, že firmy mají povinnost pozitivně přispívat k okolnímu světu, a chceme zanechat planetu v co nejlepším stavu i pro naše děti.<br\/><br\/>V současné době vytváříme základní údaje o uhlíkové stopě, sbíráme data a provádíme systémové změny, abychom mohli brzy zveřejnit naši první zprávu ESG.<\/p>","text_style":"body"}}},"block_order":["heading_YFPDpN","text_zrMzfU"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/people-holding-earth-their-hands.png","height":"small","desktop_image_width":"small","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000000","gradient_heading":"","color_text":"#000000","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_icon":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"#ffffff","gradient_background_container":"","background_section":"#ffffff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"image_with_text_MG4e48":{"type":"image-with-text","blocks":{"heading_MijtqT":{"type":"heading","settings":{"heading":"Myšlenka za recyklací obalů","heading_size":"h2","enable_bold_heading":true}},"text_An3YRn":{"type":"text","settings":{"text":"<p><\/p><p><\/p><p><\/p><p><\/p><p>Každý rok jsou vyřazeny miliony obalů na telefony z TPU (termoplastický polyuretan), což přispívá k rostoucí ekologické krizi. <\/p><p>Tento nadměrný odpad představuje značný problém, protože TPU není biologicky rozložitelný, což vede k dlouhodobému znečištění. Co kdybychom však tento problém mohli proměnit v příležitost? <\/p><p>Recyklací těchto pouzder vytvoříme nové výrobky, které si zachovají vysokou kvalitu a designové standardy, a zároveň díky místní výrobě sníží naší uhlíkovou stopu.<\/p>","text_style":"body"}}},"block_order":["heading_MijtqT","text_An3YRn"],"settings":{"grid_layout":"grid","image":"shopify:\/\/shop_images\/restory-black-2cz.jpg","height":"adapt","desktop_image_width":"small","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","hide_when_empty_image":false,"preload":false,"mobile_content_alignment":"left","padding_top":36,"padding_bottom":36,"color_heading":"#000000","gradient_heading":"","color_text":"#000000","color_highlight_text":"#da2127","color_caption":"#000000","color_countdown":"#000000","color_icon":"#000000","color_button_text":"#ffffff","color_button":"#000000","background_container":"#ffffff","gradient_background_container":"","background_section":"#ffffff","gradient_background_section":"","enable_parallax_scrolling_effect":true,"overlay_color":"#1e40af"}},"image_banner_DVAQgg":{"type":"image-banner","settings":{"layout":"grid","image":"shopify:\/\/shop_images\/restory-black-3cz.jpg","image_mobile":"shopify:\/\/shop_images\/restory-black-3cz.jpg","image_overlay_opacity":0,"image_height":"adapt","image_height_mobile":"adapt-mobile","desktop_content_position":"middle-center","desktop_content_alignment":"center","keep_ltr":false,"hide_when_empty_image":false,"preload":false,"enable_parallax_scrolling_effect":false,"mobile_content_alignment":"center","show_text_below_image":true,"color_text":"#ffffff","gradient_heading_desktop":"","color_button_text_1":"#000000","color_button_1":"#ffffff","color_button_text_2":"#000000","color_button_2":"#ffffff","colors_badge_foreground":"#ffffff","colors_badge_background":"#f87171","color_countdown_foreground":"#000000","color_countdown_background":"#ffffff","color_text_mobile":"#ffffff","gradient_heading_mobile":"","color_button_text_1_mobile":"#000000","color_button_1_mobile":"#ffffff","color_button_text_2_mobile":"#000000","color_button_2_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","color_countdown_foreground_mobile":"#000000","color_countdown_background_mobile":"#ffffff","background_container_mobile":"#565656","gradient_background_container_mobile":"","padding_top":0,"padding_bottom":0}},"rich_text_4J3ddB":{"type":"rich-text","blocks":{"heading_HdDjq8":{"type":"heading","settings":{"heading":"<h2><strong>Pouzdro ReStory splňuje nejpřísnější ekologické normy a nabízí řadu výhod.<\/strong><\/h2>","heading_size":"h2"}},"text_tCNjeN":{"type":"text","settings":{"text":"<ul><li>Vyrobeno a zabaleno v Evropské unii<\/li><li>Vyrobeno z recyklovaných materiálů pocházejících ze starých, neprodaných skladových obalů TPU<\/li><li>Nižší uhlíková stopa (podloženo univerzitní studií)<\/li><li>Výrobek s certifikací ISCC Plus<\/li><\/ul><p><\/p><p><\/p>"}}},"block_order":["heading_HdDjq8","text_tCNjeN"],"settings":{"desktop_content_position":"center","desktop_content_width":"medium","content_alignment":"left","enable_section_box_layout":false,"color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"image_banner_mFjjn8":{"type":"image-banner","settings":{"layout":"grid","image":"shopify:\/\/shop_images\/ReLeaf-cz5.jpg","image_overlay_opacity":0,"image_height":"adapt","image_height_mobile":"medium-mobile","desktop_content_position":"middle-center","desktop_content_alignment":"center","keep_ltr":false,"hide_when_empty_image":false,"preload":false,"enable_parallax_scrolling_effect":false,"mobile_content_alignment":"center","show_text_below_image":true,"color_text":"#ffffff","gradient_heading_desktop":"","color_button_text_1":"#000000","color_button_1":"#ffffff","color_button_text_2":"#000000","color_button_2":"#ffffff","colors_badge_foreground":"#ffffff","colors_badge_background":"#f87171","color_countdown_foreground":"#000000","color_countdown_background":"#ffffff","color_text_mobile":"#ffffff","gradient_heading_mobile":"","color_button_text_1_mobile":"#000000","color_button_1_mobile":"#ffffff","color_button_text_2_mobile":"#000000","color_button_2_mobile":"#ffffff","colors_badge_foreground_mobile":"#ffffff","colors_badge_background_mobile":"#f87171","color_countdown_foreground_mobile":"#000000","color_countdown_background_mobile":"#ffffff","background_container_mobile":"#565656","gradient_background_container_mobile":"","padding_top":0,"padding_bottom":0}},"video_PkWUBz":{"type":"video","settings":{"title":"Jak probíhá výroba ReStory?","subtitle":"","heading_size":"h1","video_url":"https:\/\/www.youtube.com\/watch?v=Fx_Po1G_j9Y","description":"","autoplay":false,"enable_controls":false,"enable_video_looping":true,"full_width":false,"hide_when_empty_video":false,"enable_section_box_layout":false,"color_scheme":"","padding_top":36,"padding_bottom":36}}},"order":["main","image_banner_x8BxCc","image_with_text_AwNNQH","image_with_text_WYH4FU","image_with_text_KATQ6D","image_with_text_MG4e48","image_banner_DVAQgg","rich_text_4J3ddB","image_banner_mFjjn8","video_PkWUBz"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_width": "grid",
+        "content_alignment": "left",
+        "color_scheme": "background-2",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "ul_li_marker": "#000000"
+      }
+    },
+    "image_banner_x8BxCc": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_76DBMV": {
+          "type": "heading",
+          "settings": {
+            "heading": "FIXED Udržitelnost",
+            "size": "h0"
+          }
+        },
+        "text_wMAP9F": {
+          "type": "text",
+          "settings": {
+            "text": "Ve společnosti FIXED vnímáme změnu směrem k obnovitelné ekonomice jako nevyhnutelný krok pro udržitelnou budoucnost.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_76DBMV",
+        "text_wMAP9F"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "image": "shopify://shop_images/sun-beams-through-forest.jpg",
+        "image_mobile": "shopify://shop_images/sun-beams-through-forest.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "small",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#ffffff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000000",
+        "color_button_1": "#ffffff",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#ffffff",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_WYH4FU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fmTPUb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Produkty a certifikace",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_fazkwC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>To, z čeho jsou výrobky vyrobené a odkud pochází, má reálný dopad. Proto u části našeho sortimentu pracujeme s certifikacemi GRS a ISCC PLUS. Tyhle certifikace nejsou marketingová nálepka — znamenají dohledatelný původ materiálů, jasná pravidla a kontrolovaný dodavatelský řetězec.</p><p>Když si vybereš naše certifikované produkty, víš, že za nimi stojí konkrétní standardy a transparentní proces, ne jen hezká slova. Díky tomu se můžeš rozhodovat na základě faktů a podporovat výrobu, která dává smysl i z dlouhodobého hlediska.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fmTPUb",
+        "text_fazkwC"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/sustainability_logos.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_AwNNQH": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xi6Qgt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zlepšujeme život s chytrými zařízeními. Udržitelně.",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_M496Hi": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>FIXED ReLeaf</strong></p><p>Výrobky a projekty pro udržitelnou budoucnost jsou označeny logem ReLeaf, inspirovaným naším národním stromem - lípou s listy ve tvaru srdce.</p><p><strong>Žádný greenwashing</strong></p><p>Všechny produkty nebo činnosti ReLeaf jsou podloženy konkrétními opatřeními a/nebo celosvětově uznávanými certifikáty, jako jsou GRS, ISCC a další.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xi6Qgt",
+        "text_M496Hi"
+      ],
+      "disabled": true,
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/releaf_1.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_KATQ6D": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YFPDpN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zlepšujeme život s chytrými zařízeními. Udržitelně.",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_zrMzfU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Přemýšlíme nad tím, jak věci děláme — a snažíme se je dělat tak, aby po nás nezůstával zbytečný odpad. Proto řešíme, odkud materiály pochází, jak se produkty přepravují a co se s nimi stane, až doslouží. Hlídáme množství odpadu, volíme rozumnější způsoby dopravy, pracujeme s materiály, které dávají smysl, a postupně zlepšujeme celý dodavatelský proces. Zároveň hledáme lepší cesty, jak naše produkty po jejich životnosti znovu využít nebo recyklovat. </p><p>Věříme, že firmy mají vliv na svět kolem sebe, a chceme ho používat zodpovědně — s ohledem na lidi dnes i ty, kteří přijdou po nás.<br/><br/></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YFPDpN",
+        "text_zrMzfU"
+      ],
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/people-holding-earth-their-hands.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_with_text_MG4e48": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_MijtqT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Myšlenka za recyklací obalů",
+            "heading_size": "h2",
+            "enable_bold_heading": true
+          }
+        },
+        "text_An3YRn": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p></p><p></p><p></p><p>Každý rok jsou vyřazeny miliony obalů na telefony z TPU (termoplastický polyuretan), což přispívá k rostoucí ekologické krizi. </p><p>Tento nadměrný odpad představuje značný problém, protože TPU není biologicky rozložitelný, což vede k dlouhodobému znečištění. Co kdybychom však tento problém mohli proměnit v příležitost? </p><p>Recyklací těchto pouzder vytvoříme nové výrobky, které si zachovají vysokou kvalitu a designové standardy, a zároveň díky místní výrobě sníží naší uhlíkovou stopu.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MijtqT",
+        "text_An3YRn"
+      ],
+      "disabled": true,
+      "settings": {
+        "grid_layout": "grid",
+        "image": "shopify://shop_images/restory-black-2cz.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "hide_when_empty_image": false,
+        "preload": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_heading": "#000000",
+        "gradient_heading": "",
+        "color_text": "#000000",
+        "color_highlight_text": "#da2127",
+        "color_caption": "#000000",
+        "color_countdown": "#000000",
+        "color_icon": "#000000",
+        "color_button_text": "#ffffff",
+        "color_button": "#000000",
+        "background_container": "#ffffff",
+        "gradient_background_container": "",
+        "background_section": "#ffffff",
+        "gradient_background_section": "",
+        "enable_parallax_scrolling_effect": true,
+        "overlay_color": "#1e40af"
+      }
+    },
+    "image_banner_DVAQgg": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "layout": "grid",
+        "image": "shopify://shop_images/restory-black-3cz.jpg",
+        "image_mobile": "shopify://shop_images/restory-black-3cz.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_height_mobile": "adapt-mobile",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#ffffff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000000",
+        "color_button_1": "#ffffff",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#ffffff",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_4J3ddB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HdDjq8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2><strong>Pouzdro ReStory splňuje nejpřísnější ekologické normy a nabízí řadu výhod.</strong></h2>",
+            "heading_size": "h2"
+          }
+        },
+        "text_tCNjeN": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Vyrobeno a zabaleno v Evropské unii</li><li>Vyrobeno z recyklovaných materiálů pocházejících ze starých, neprodaných skladových obalů TPU</li><li>Nižší uhlíková stopa (podloženo univerzitní studií)</li><li>Výrobek s certifikací ISCC Plus</li></ul><p></p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HdDjq8",
+        "text_tCNjeN"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "desktop_content_width": "medium",
+        "content_alignment": "left",
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_mFjjn8": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "layout": "grid",
+        "image": "shopify://shop_images/ReLeaf-cz5.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_height_mobile": "medium-mobile",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "keep_ltr": false,
+        "hide_when_empty_image": false,
+        "preload": false,
+        "enable_parallax_scrolling_effect": false,
+        "mobile_content_alignment": "center",
+        "show_text_below_image": true,
+        "color_text": "#ffffff",
+        "gradient_heading_desktop": "",
+        "color_button_text_1": "#000000",
+        "color_button_1": "#ffffff",
+        "color_button_text_2": "#000000",
+        "color_button_2": "#ffffff",
+        "colors_badge_foreground": "#ffffff",
+        "colors_badge_background": "#f87171",
+        "color_countdown_foreground": "#000000",
+        "color_countdown_background": "#ffffff",
+        "color_text_mobile": "#ffffff",
+        "gradient_heading_mobile": "",
+        "color_button_text_1_mobile": "#000000",
+        "color_button_1_mobile": "#ffffff",
+        "color_button_text_2_mobile": "#000000",
+        "color_button_2_mobile": "#ffffff",
+        "colors_badge_foreground_mobile": "#ffffff",
+        "colors_badge_background_mobile": "#f87171",
+        "color_countdown_foreground_mobile": "#000000",
+        "color_countdown_background_mobile": "#ffffff",
+        "background_container_mobile": "#565656",
+        "gradient_background_container_mobile": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "video_PkWUBz": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "title": "Jak probíhá výroba ReStory?",
+        "subtitle": "",
+        "heading_size": "h1",
+        "video_url": "https://www.youtube.com/watch?v=Fx_Po1G_j9Y",
+        "description": "",
+        "autoplay": false,
+        "enable_controls": false,
+        "enable_video_looping": true,
+        "full_width": false,
+        "hide_when_empty_video": false,
+        "enable_section_box_layout": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_x8BxCc",
+    "image_with_text_WYH4FU",
+    "image_with_text_AwNNQH",
+    "image_with_text_KATQ6D",
+    "image_with_text_MG4e48",
+    "image_banner_DVAQgg",
+    "rich_text_4J3ddB",
+    "image_banner_mFjjn8",
+    "video_PkWUBz"
+  ]
+}
