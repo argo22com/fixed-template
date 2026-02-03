@@ -84,35 +84,35 @@
         "padding_bottom": 0
       }
     },
-    "image_with_text_WYH4FU": {
+    "image_with_text_KATQ6D": {
       "type": "image-with-text",
       "blocks": {
-        "heading_fmTPUb": {
+        "heading_YFPDpN": {
           "type": "heading",
           "settings": {
-            "heading": "Produkty a certifikace",
+            "heading": "Zlepšujeme život s chytrými zařízeními. Udržitelně.",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
-        "text_fazkwC": {
+        "text_zrMzfU": {
           "type": "text",
           "settings": {
-            "text": "<p>To, z čeho jsou výrobky vyrobené a odkud pochází, má reálný dopad. Proto u části našeho sortimentu pracujeme s certifikacemi GRS a ISCC PLUS. Tyhle certifikace nejsou marketingová nálepka — znamenají dohledatelný původ materiálů, jasná pravidla a kontrolovaný dodavatelský řetězec.</p><p>Když si vybereš naše certifikované produkty, víš, že za nimi stojí konkrétní standardy a transparentní proces, ne jen hezká slova. Díky tomu se můžeš rozhodovat na základě faktů a podporovat výrobu, která dává smysl i z dlouhodobého hlediska.</p>",
+            "text": "<p>Přemýšlíme nad tím, jak věci děláme, a snažíme se je dělat tak, aby po nás nezůstával zbytečný odpad. Proto řešíme, odkud materiály pochází, jak se produkty přepravují a co se s nimi stane, až doslouží. Hlídáme množství odpadu, volíme rozumnější způsoby dopravy, pracujeme s materiály, které dávají smysl, a postupně zlepšujeme celý dodavatelský proces. Zároveň hledáme lepší cesty, jak naše produkty po jejich životnosti znovu využít nebo recyklovat. </p><p>Věříme, že firmy mají vliv na svět kolem sebe, a chceme ho používat zodpovědně s ohledem na lidi dnes i ty, kteří přijdou po nás.<br/><br/></p>",
             "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_fmTPUb",
-        "text_fazkwC"
+        "heading_YFPDpN",
+        "text_zrMzfU"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/sustainability_logos.png",
+        "image": "shopify://shop_images/people-holding-earth-their-hands.png",
         "height": "small",
         "desktop_image_width": "small",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -138,35 +138,35 @@
         "overlay_color": "#1e40af"
       }
     },
-    "image_with_text_KATQ6D": {
+    "image_with_text_WYH4FU": {
       "type": "image-with-text",
       "blocks": {
-        "heading_YFPDpN": {
+        "heading_fmTPUb": {
           "type": "heading",
           "settings": {
-            "heading": "Zlepšujeme život s chytrými zařízeními. Udržitelně.",
+            "heading": "Produkty a certifikace",
             "heading_size": "h2",
             "enable_bold_heading": true
           }
         },
-        "text_zrMzfU": {
+        "text_fazkwC": {
           "type": "text",
           "settings": {
-            "text": "<p>Přemýšlíme nad tím, jak věci děláme — a snažíme se je dělat tak, aby po nás nezůstával zbytečný odpad. Proto řešíme, odkud materiály pochází, jak se produkty přepravují a co se s nimi stane, až doslouží. Hlídáme množství odpadu, volíme rozumnější způsoby dopravy, pracujeme s materiály, které dávají smysl, a postupně zlepšujeme celý dodavatelský proces. Zároveň hledáme lepší cesty, jak naše produkty po jejich životnosti znovu využít nebo recyklovat. </p><p>Věříme, že firmy mají vliv na svět kolem sebe, a chceme ho používat zodpovědně — s ohledem na lidi dnes i ty, kteří přijdou po nás.<br/><br/></p>",
+            "text": "<p>To, z čeho jsou výrobky vyrobené a odkud pochází, má reálný dopad. Proto u části našeho sortimentu pracujeme s certifikacemi GRS a ISCC PLUS. Tyto certifikace nejsou marketingová nálepka, znamenají dohledatelný původ materiálů, jasná pravidla a kontrolovaný dodavatelský řetězec.</p><p>Když si vybereš naše certifikované produkty, víš, že za nimi stojí konkrétní standardy a transparentní proces, ne jen hezká slova. Díky tomu se můžeš rozhodovat na základě faktů a podporovat výrobu, která dává smysl i z dlouhodobého hlediska.</p>",
             "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_YFPDpN",
-        "text_zrMzfU"
+        "heading_fmTPUb",
+        "text_fazkwC"
       ],
       "settings": {
         "grid_layout": "grid",
-        "image": "shopify://shop_images/people-holding-earth-their-hands.png",
+        "image": "shopify://shop_images/sustainability_logos.png",
         "height": "small",
         "desktop_image_width": "small",
-        "layout": "text_first",
+        "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
