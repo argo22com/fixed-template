@@ -21,6 +21,7 @@
         },
         "2525f94e-add4-418e-b362-bd2bb35545fa": {
           "type": "rating",
+          "disabled": true,
           "settings": {
             "show_if_no_reviews": false
           }
@@ -35,12 +36,14 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "variant_price": true
           }
         },
         "e592d434-8377-4309-b179-f98d4b3742a2": {
           "type": "sale_box",
+          "disabled": true,
           "settings": {
             "show_free_shipping_bar": true,
             "enable_compare": true,
@@ -57,6 +60,7 @@
         },
         "wishlist_hero_custom_product_button_McnAG4": {
           "type": "shopify://apps/wishlist-hero/blocks/custom-product-button/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+          "disabled": true,
           "settings": {
             "displayButtonMode": "text_with_icon",
             "contentAlignment": "left",
@@ -73,6 +77,7 @@
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Sdílet",
             "enable_floating_layout": false,
@@ -85,6 +90,7 @@
         },
         "a1934adc-1886-4a20-bdd7-5f9778c59ebe": {
           "type": "information_group",
+          "disabled": true,
           "settings": {
             "brand_enable": false,
             "brand_label": "Brand",
