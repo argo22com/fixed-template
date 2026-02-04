@@ -777,6 +777,11 @@
         "type": "shopify://apps/ta-labels-badges/blocks/bss-pl-config-data/91bfe765-b604-49a1-805e-3599fa600b24",
         "disabled": false,
         "settings": {}
+      },
+      "16556818989376849476": {
+        "type": "shopify://apps/password-page-lock-page/blocks/password_protection/4dc6a6fa-3301-49ba-95e6-03c694327386",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
