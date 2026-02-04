@@ -13,27 +13,6 @@
   "sections": {
     "announcement_bar_prdjQa": {
       "type": "announcement-bar",
-      "blocks": {
-        "announcement_mTAfbg": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
-        },
-        "announcement_QTYLrD": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "Výprodej produktů s poškozeným obalem - sleva až 40 %.",
-            "link": "shopify://collections/rozbaleno"
-          }
-        }
-      },
-      "block_order": [
-        "announcement_mTAfbg",
-        "announcement_QTYLrD"
-      ],
       "settings": {
         "auto_rotate": true,
         "change_slides_speed": 7,
