@@ -87,12 +87,23 @@
     "collapsible_content_AHHHxy": {
       "type": "collapsible-content",
       "blocks": {
+        "collapsible_row_QGUe7L": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2026",
+            "icon": "pencil",
+            "row_content": "",
+            "liquid": "",
+            "page": "copy-of-2025"
+          }
+        },
         "collapsible_row_KYxBXK": {
           "type": "collapsible_row",
           "settings": {
             "heading": "2025",
             "icon": "pencil",
             "row_content": "",
+            "liquid": "",
             "page": "2025"
           }
         },
@@ -102,6 +113,7 @@
             "heading": "2024",
             "icon": "pencil",
             "row_content": "",
+            "liquid": "",
             "page": "2024"
           }
         },
@@ -111,6 +123,7 @@
             "heading": "2023",
             "icon": "pencil",
             "row_content": "",
+            "liquid": "",
             "page": "2023"
           }
         },
@@ -120,6 +133,7 @@
             "heading": "2022",
             "icon": "pencil",
             "row_content": "",
+            "liquid": "",
             "page": "2022"
           }
         },
@@ -129,11 +143,13 @@
             "heading": "2021",
             "icon": "pencil",
             "row_content": "",
+            "liquid": "",
             "page": "2021"
           }
         }
       },
       "block_order": [
+        "collapsible_row_QGUe7L",
         "collapsible_row_KYxBXK",
         "collapsible_row_fkqnBp",
         "collapsible_row_JJcMaG",
@@ -324,6 +340,7 @@
             "heading": "Loga FIXED",
             "icon": "download",
             "row_content": "",
+            "liquid": "",
             "page": "loga"
           }
         }
