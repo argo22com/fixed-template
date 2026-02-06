@@ -25,7 +25,7 @@
         "menu_badge_CxNkFp": {
           "type": "menu_badge",
           "settings": {
-            "trigger": "Hypershell",
+            "trigger": "Exoskelety",
             "text": "Novinka v nabídce",
             "text_color": "#ffffff",
             "background_color": "#dc4405"
