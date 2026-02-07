@@ -1,3 +1,10 @@
+{% comment %}
+  Očekává se, že snippet dostane results (Search & Discovery).
+  Filtry:
+  - výrobce:   filter.v.m.product_compatible_devices.manufacturers_metaobjects  (metaobject reference LIST)
+  - zařízení:  filter.v.m.product_compatible_devices.devices_metaobject
+{% endcomment %}
+
 {%- assign manufacturer_filter = results.filters
   | where: 'param_name', 'filter.v.m.product_compatible_devices.manufacturers_metaobjects'
   | first
@@ -8,6 +15,10 @@
   | first
 -%}
 
+{%- comment -%}
+  Načteme všechny metaobjecty výrobců pro mapování GID -> display_name
+  (upravte handle v hranatých závorkách podle vašeho skutečného typu metaobjectu)
+{%- endcomment -%}
 {%- assign manufacturers_all = shop.metaobjects['compatible_devices_manufactures'].values -%}
 
 <style>
@@ -27,19 +38,32 @@
   {%- comment -%} VÝROBCE ZAŘÍZENÍ {%- endcomment -%}
   <div class="compatible-devices-facet-filter select facets__filter">
     <select
-      id="compatibleManufacturerSelect"
       class="facets__select select__select"
-      name="{{ manufacturer_filter.param_name }}"
       {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
+      onchange="
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        sessionStorage.setItem('facetsScrollPosition', scrollPosition);
+        if (this.value) { window.location.href = this.value; }
+      "
     >
-      <option value="">
-        {{ 'products.facets.compatible_manufacturers' | t }}
-      </option>
+      {%- if manufacturer_filter and manufacturer_filter.url_to_remove -%}
+        <option value="{{ manufacturer_filter.url_to_remove | escape }}">
+          {{ 'products.facets.compatible_manufacturers' | t }}
+        </option>
+      {%- else -%}
+        <option value="">
+          {{ 'products.facets.compatible_manufacturers' | t }}
+        </option>
+      {%- endif -%}
 
       {%- if manufacturer_filter and manufacturer_filter.values.size > 0 -%}
         {%- for filter_value in manufacturer_filter.values -%}
           {%- assign manufacturer_label = filter_value.label -%}
 
+          {%- comment -%}
+            U metaobject reference filtru bývá filter_value.value = GID metaobjectu.
+            Najdeme metaobject a vezmeme display_name (nebo title jako fallback).
+          {%- endcomment -%}
           {%- if manufacturers_all -%}
             {%- for m in manufacturers_all -%}
               {%- if m.id == filter_value.value -%}
@@ -50,7 +74,7 @@
           {%- endif -%}
 
           <option
-            value="{{ filter_value.value | escape }}"
+            value="{{ filter_value.url_to_add | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
             {{ manufacturer_label | escape }}
@@ -65,19 +89,28 @@
   {%- comment -%} ZAŘÍZENÍ / MODEL {%- endcomment -%}
   <div class="compatible-devices-facet-filter select facets__filter">
     <select
-      id="compatibleDeviceSelect"
       class="facets__select select__select"
-      name="{{ devices_filter.param_name }}"
       {% if devices_filter == blank or devices_filter.values.size == 0 %}disabled{% endif %}
+      onchange="
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        sessionStorage.setItem('facetsScrollPosition', scrollPosition);
+        if (this.value) { window.location.href = this.value; }
+      "
     >
-      <option value="">
-        {{ 'products.facets.compatible_devices' | t }}
-      </option>
+      {%- if devices_filter and devices_filter.url_to_remove -%}
+        <option value="{{ devices_filter.url_to_remove | escape }}">
+          {{ 'products.facets.compatible_devices' | t }}
+        </option>
+      {%- else -%}
+        <option value="">
+          {{ 'products.facets.compatible_devices' | t }}
+        </option>
+      {%- endif -%}
 
       {%- if devices_filter and devices_filter.values.size > 0 -%}
         {%- for filter_value in devices_filter.values -%}
           <option
-            value="{{ filter_value.value | escape }}"
+            value="{{ filter_value.url_to_add | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
             {{ filter_value.label | escape }}
@@ -92,32 +125,11 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const manufacturerSelect = document.getElementById('compatibleManufacturerSelect');
-    const deviceSelect = document.getElementById('compatibleDeviceSelect');
-
-    const findFacetForm = (el) => el?.closest('form');
-
-    const submitFacetForm = (form) => {
-      if (form && typeof form.requestSubmit === 'function') form.requestSubmit();
-      else if (form) form.submit();
-    };
-
-    if (manufacturerSelect) {
-      manufacturerSelect.addEventListener('change', () => {
-        // volitelné: když se změní výrobce, resetni zařízení
-        if (deviceSelect) deviceSelect.value = '';
-
-        const form = findFacetForm(manufacturerSelect);
-        submitFacetForm(form);
-      });
-    }
-
-    if (deviceSelect) {
-      deviceSelect.addEventListener('change', () => {
-        const form = findFacetForm(deviceSelect);
-        submitFacetForm(form);
-      });
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollPosition = sessionStorage.getItem('facetsScrollPosition');
+    if (scrollPosition) {
+      window.scrollTo(0, scrollPosition);
+      sessionStorage.removeItem('facetsScrollPosition');
     }
   });
 </script>
