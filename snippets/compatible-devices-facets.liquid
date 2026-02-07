@@ -5,6 +5,7 @@
       class="facets__select select__select"
       data-compatible-select="manufacturer"
       data-filter-param="{{ manufacturer_filter.param_name }}"
+      {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
     >
       <option value="" data-gid="">
         {{ 'products.facets.compatible_manufacturers' | t }}
@@ -42,6 +43,7 @@
       class="facets__select select__select"
       data-compatible-select="device"
       data-filter-param="{{ devices_filter.param_name }}"
+      {% if devices_filter == blank or devices_filter.values.size == 0 %}disabled{% endif %}
     >
       <option value="" data-gid="">
         {{ 'products.facets.compatible_devices' | t }}
@@ -80,48 +82,25 @@
     }
   }
 
-  function computeDisabled(selectEl) {
-    // pokud má select jen placeholder (1 option), musí být disabled
-    // pokud má víc než 1, je enabled
-    const realOptions = selectEl.querySelectorAll('option').length;
-    selectEl.disabled = realOptions <= 1;
-  }
-
-  function getParam(selectEl) {
-    // když param_name při některém renderu není dostupný, fallback na hardcoded
-    const p = selectEl.dataset.filterParam || '';
-    if (p) return p;
-
-    return selectEl.dataset.compatibleSelect === 'manufacturer'
-      ? 'filter.v.m.product_compatible_devices.manufacturers_metaobjects'
-      : 'filter.v.m.product_compatible_devices.devices_metaobject';
-  }
-
-  function getGid(selectEl) {
-    const opt = selectEl.options[selectEl.selectedIndex];
-    return opt?.dataset?.gid || '';
-  }
-
-  function applySingleSelect(selectEl) {
+  function handleSelectChange(selectEl) {
     saveScroll();
 
-    const param = getParam(selectEl);
+    const param = selectEl.dataset.filterParam;
     if (!param) return;
 
-    const gid = getGid(selectEl);
+    const selected = selectEl.options[selectEl.selectedIndex];
+    const gid = selected?.dataset?.gid || '';
 
     const url = new URL(window.location.href);
 
-    // vždy smaž existující hodnotu tohoto filtru
+    // single-select: vždy přepiš hodnotu tohoto filtru
     url.searchParams.delete(param);
 
-    // změna výrobce -> reset zařízení
+    // změna výrobce -> reset zařízení (URL i UI)
     if (selectEl.dataset.compatibleSelect === 'manufacturer') {
-      const deviceSelect = document.querySelector('[data-compatible-facets] select[data-compatible-select="device"]');
-      const deviceParam = deviceSelect ? getParam(deviceSelect) : 'filter.v.m.product_compatible_devices.devices_metaobject';
+      const deviceSelect = document.querySelector('[data-compatible-facets] select[data-compatible-select="device"][data-filter-param]');
+      const deviceParam = deviceSelect?.dataset?.filterParam;
       if (deviceParam) url.searchParams.delete(deviceParam);
-
-      // resetni UI device selectu, pokud existuje
       if (deviceSelect) deviceSelect.selectedIndex = 0;
     }
 
@@ -137,18 +116,12 @@
       if (wrap.dataset.wired === '1') return;
       wrap.dataset.wired = '1';
 
-      // nastav disabled/enabled podle skutečného obsahu options
-      wrap.querySelectorAll('select[data-compatible-select]').forEach((sel) => {
-        computeDisabled(sel);
-      });
-
-      // delegation handler (přežije re-render wrapperu)
       wrap.addEventListener('change', (e) => {
         const target = e.target;
         if (!(target instanceof HTMLSelectElement)) return;
-        if (!target.matches('select[data-compatible-select]')) return;
+        if (!target.matches('select[data-compatible-select][data-filter-param]')) return;
         if (target.disabled) return;
-        applySingleSelect(target);
+        handleSelectChange(target);
       });
     });
   }
@@ -158,17 +131,16 @@
     restoreScrollOnce();
   });
 
-  // Dawn / Shopify section reload
+  // Shopify section events
   document.addEventListener('shopify:section:load', () => wire(document));
   document.addEventListener('shopify:section:reorder', () => wire(document));
 
-  // AJAX re-render (facets) – hlídáme změny DOM
+  // AJAX facets: když Dawn vymění DOM, znovu připojíme listener na nový wrapper
   const mo = new MutationObserver((mutations) => {
     for (const m of mutations) {
       for (const node of m.addedNodes) {
         if (!(node instanceof HTMLElement)) continue;
         if (node.matches?.('[data-compatible-facets]') || node.querySelector?.('[data-compatible-facets]')) {
-          // nový wrapper = znovu wire
           wire(document);
           return;
         }
