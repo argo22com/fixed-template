@@ -1,3 +1,23 @@
+{%- liquid
+  assign _results = results
+  if _results == blank and collection != blank
+    assign _results = collection
+  endif
+  if _results == blank and search != blank
+    assign _results = search
+  endif
+-%}
+
+{%- assign manufacturer_filter = _results.filters
+  | where: 'param_name', 'filter.v.m.product_compatible_devices.manufacturers_metaobjects'
+  | first
+-%}
+
+{%- assign devices_filter = _results.filters
+  | where: 'param_name', 'filter.v.m.product_compatible_devices.devices_metaobject'
+  | first
+-%}
+
 <div class="compatible-devices-facets facets facets-active-toolbar flex pt-2" data-compatible-facets>
 
   <div class="compatible-devices-facet-filter select facets__filter">
