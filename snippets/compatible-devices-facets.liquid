@@ -16,14 +16,11 @@
       data-filter-param="{{ manufacturer_filter.param_name }}"
       {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
     >
-      <option value="" data-gid="">
+      <option value="">
         {{ 'products.facets.compatible_manufacturers' | t }}
       </option>
       {%- for filter_value in manufacturer_filter.values -%}
-        <option
-          value="{{ filter_value.value | escape }}"
-          {%- if filter_value.active -%} selected{%- endif -%}
-        >
+        <option value="{{ filter_value.value | escape }}" {%- if filter_value.active -%} selected{%- endif -%}>
           {{ filter_value.label | escape }}
         </option>
       {%- endfor -%}
@@ -42,10 +39,7 @@
         {{ 'products.facets.compatible_devices' | t }}
       </option>
       {%- for filter_value in devices_filter.values -%}
-        <option
-          value="{{ filter_value.value | escape }}"
-          {%- if filter_value.active -%} selected{%- endif -%}
-        >
+        <option value="{{ filter_value.value | escape }}" {%- if filter_value.active -%} selected{%- endif -%}>
           {{ filter_value.label | escape }}
         </option>
       {%- endfor -%}
@@ -53,69 +47,109 @@
     {% render 'icon-caret' %}
   </div>
 </div>
-
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const manufacturerSelect = document.getElementById('compatibleManufacturerSelect');
-    const deviceSelect = document.getElementById('compatibleDeviceSelect');
+  (function () {
+    function getFacetForms() {
+      // Dawn / Shopify standard: <facet-filters-form> obsahuje form uvnitř
+      const forms = [];
 
-    const facetForm =
-      document.querySelector('form#FacetFiltersForm') ||
-      document.querySelector('facet-filters-form form') ||
-      document.querySelector('form[data-facet-form]') ||
-      document.querySelector('form');
+      document.querySelectorAll('facet-filters-form form').forEach(f => forms.push(f));
 
-    if (!facetForm) return;
+      // časté ID v Dawn (někdy víc instancí)
+      document.querySelectorAll('form[id*="FacetFiltersForm"]').forEach(f => {
+        if (!forms.includes(f)) forms.push(f);
+      });
 
-    const upsertHidden = (name, value) => {
-      // smaž existující inputy s tímto name (single-select)
-      facetForm.querySelectorAll(`input[type="hidden"][name="${CSS.escape(name)}"]`).forEach(el => el.remove());
+      // fallback: všechny formy, které obsahují filter.* inputy
+      document.querySelectorAll('form').forEach(f => {
+        if (forms.includes(f)) return;
+        if (f.querySelector('[name^="filter."]')) forms.push(f);
+      });
 
+      return forms;
+    }
+
+    function upsertHidden(form, name, value) {
+      // single-select: odstraň staré hiddeny stejného name
+      form.querySelectorAll('input[type="hidden"][name="' + CSS.escape(name) + '"]').forEach(el => el.remove());
       if (!value) return;
 
       const input = document.createElement('input');
       input.type = 'hidden';
       input.name = name;
       input.value = value;
-      facetForm.appendChild(input);
-    };
+      form.appendChild(input);
+    }
 
-    const submitFacetForm = () => {
-      // reset page
-      const pageInput = facetForm.querySelector('input[name="page"]');
-      if (pageInput) pageInput.remove();
+    function submitForm(form) {
+      // reset stránkování
+      form.querySelectorAll('input[name="page"]').forEach(el => el.remove());
 
-      if (typeof facetForm.requestSubmit === 'function') facetForm.requestSubmit();
-      else facetForm.submit();
-    };
+      // Dawn poslouchá na submit a dělá AJAX render; potřebujeme vyvolat submit event
+      const evt = new Event('submit', { bubbles: true, cancelable: true });
+      const prevented = !form.dispatchEvent(evt);
 
-    if (manufacturerSelect) {
-      manufacturerSelect.addEventListener('change', () => {
-        const mParam = manufacturerSelect.dataset.filterParam;
-        const mVal = manufacturerSelect.value;
+      // když to nikdo neodchytil, tak klasický submit
+      if (!prevented) {
+        if (typeof form.requestSubmit === 'function') form.requestSubmit();
+        else form.submit();
+      }
+    }
 
-        if (!mParam) return;
+    function fallbackNavigate(param, value, resetParam) {
+      const url = new URL(window.location.href);
+      url.searchParams.delete(param);
+      url.searchParams.delete('page');
+      if (resetParam) url.searchParams.delete(resetParam);
+      if (value) url.searchParams.set(param, value);
+      window.location.assign(url.toString());
+    }
 
-        upsertHidden(mParam, mVal);
+    function wire() {
+      const manufacturerSelect = document.getElementById('compatibleManufacturerSelect');
+      const deviceSelect = document.getElementById('compatibleDeviceSelect');
+      if (!manufacturerSelect && !deviceSelect) return;
 
-        if (deviceSelect && deviceSelect.dataset.filterParam) {
-          deviceSelect.value = '';
-          upsertHidden(deviceSelect.dataset.filterParam, '');
+      const manufacturerParam = manufacturerSelect?.dataset?.filterParam || '';
+      const deviceParam = deviceSelect?.dataset?.filterParam || '';
+
+      const forms = getFacetForms();
+
+      const applyToForms = (changedParam, changedValue, resetParam) => {
+        if (!forms.length) {
+          // když nenajdeme facety form, alespoň funguj URL přepisem
+          fallbackNavigate(changedParam, changedValue, resetParam);
+          return;
         }
 
-        submitFacetForm();
-      });
+        forms.forEach(form => {
+          upsertHidden(form, changedParam, changedValue);
+
+          // volitelný reset druhého filtru (výrobce -> reset zařízení)
+          if (resetParam) {
+            upsertHidden(form, resetParam, '');
+          }
+
+          submitForm(form);
+        });
+      };
+
+      if (manufacturerSelect && manufacturerParam) {
+        manufacturerSelect.addEventListener('change', () => {
+          // reset device select UI
+          if (deviceSelect) deviceSelect.value = '';
+          applyToForms(manufacturerParam, manufacturerSelect.value, deviceParam);
+        });
+      }
+
+      if (deviceSelect && deviceParam) {
+        deviceSelect.addEventListener('change', () => {
+          applyToForms(deviceParam, deviceSelect.value, '');
+        });
+      }
     }
 
-    if (deviceSelect) {
-      deviceSelect.addEventListener('change', () => {
-        const dParam = deviceSelect.dataset.filterParam;
-        const dVal = deviceSelect.value;
-        if (!dParam) return;
-
-        upsertHidden(dParam, dVal);
-        submitFacetForm();
-      });
-    }
-  });
+    document.addEventListener('DOMContentLoaded', wire);
+    document.addEventListener('shopify:section:load', wire);
+  })();
 </script>
