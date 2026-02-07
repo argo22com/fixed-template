@@ -1,10 +1,3 @@
-{% comment %}
-  Očekává se, že snippet dostane `results` (Search & Discovery).
-  Filtry:
-  - výrobce:   filter.v.m.product_compatible_devices.manufacturers_metaobjects  (metaobject reference LIST)
-  - zařízení:  filter.v.m.product_compatible_devices.devices_metaobject
-{% endcomment %}
-
 {%- assign manufacturer_filter = results.filters
   | where: 'param_name', 'filter.v.m.product_compatible_devices.manufacturers_metaobjects'
   | first
@@ -15,69 +8,65 @@
   | first
 -%}
 
-{%- comment -%}
-  Načteme všechny metaobjecty výrobců pro mapování GID -> display_name
-  (upravte handle v hranatých závorkách podle vašeho skutečného typu metaobjectu)
-{%- endcomment -%}
 {%- assign manufacturers_all = shop.metaobjects['compatible_devices_manufactures'].values -%}
-
-<style>
-  @media screen and (min-width: 750px) {
-    .compatible-devices-facet-filter { width: 20rem; }
-  }
-  @media screen and (max-width: 749px) {
-    .compatible-devices-facets > * { flex: 1; }
-  }
-  .compatible-devices-facet-filter .select__select {
-    padding: 1.2rem 3.2rem 1.2rem 1.2rem;
-  }
-</style>
 
 <div class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
 
   {%- comment -%} VÝROBCE ZAŘÍZENÍ {%- endcomment -%}
   <div class="compatible-devices-facet-filter select facets__filter">
-<select
-  class="facets__select select__select"
-  data-filter-param="{{ manufacturer_filter.param_name }}"
-  {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
-  onchange="
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-    sessionStorage.setItem('facetsScrollPosition', scrollPosition);
+    <select
+      class="facets__select select__select"
+      data-filter-param="{{ manufacturer_filter.param_name }}"
+      {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
+      onchange="
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        sessionStorage.setItem('facetsScrollPosition', scrollPosition);
 
-    const param = this.dataset.filterParam;
-    const selected = this.options[this.selectedIndex];
+        const param = this.dataset.filterParam;
+        const val = this.value;
 
-    // placeholder = reset
-    const gid = selected?.dataset?.gid || '';
+        const url = new URL(window.location.href);
 
-    const url = new URL(window.location.href);
+        // single-select: vždy smaž existující hodnoty daného filtru
+        url.searchParams.delete(param);
 
-    // smaž existující hodnoty daného filtru (single-select)
-    url.searchParams.delete(param);
+        // při změně filtru obvykle nechceš zůstat na stránce 3
+        url.searchParams.delete('page');
 
-    // volitelně reset stránkování
-    url.searchParams.delete('page');
+        // pokud není vybráno nic (placeholder), tak je to reset
+        if (val) {
+          url.searchParams.set(param, val);
+        }
 
-    if (gid) url.searchParams.set(param, gid);
-
-    window.location.href = url.toString();
-  "
->
-  <option value="" data-gid="">
-    {{ 'products.facets.compatible_manufacturers' | t }}
-  </option>
-
-  {%- for filter_value in manufacturer_filter.values -%}
-    <option
-      value="{{ filter_value.url_to_add | escape }}"
-      data-gid="{{ filter_value.value | escape }}"
-      {%- if filter_value.active -%} selected{%- endif -%}
+        window.location.href = url.toString();
+      "
     >
-      {{ filter_value.label | escape }}
-    </option>
-  {%- endfor -%}
-</select>
+      <option value="">
+        {{ 'products.facets.compatible_manufacturers' | t }}
+      </option>
+
+      {%- if manufacturer_filter and manufacturer_filter.values.size > 0 -%}
+        {%- for filter_value in manufacturer_filter.values -%}
+          {%- assign manufacturer_label = filter_value.label -%}
+
+          {%- if manufacturers_all -%}
+            {%- for m in manufacturers_all -%}
+              {%- if m.id == filter_value.value -%}
+                {%- assign manufacturer_label = m.display_name | default: m.title | default: filter_value.label -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+
+          <option
+            value="{{ filter_value.value | escape }}"
+            {%- if filter_value.active -%} selected{%- endif -%}
+          >
+            {{ manufacturer_label | escape }}
+          </option>
+        {%- endfor -%}
+      {%- endif -%}
+    </select>
 
     {% render 'icon-caret' %}
   </div>
@@ -86,27 +75,34 @@
   <div class="compatible-devices-facet-filter select facets__filter">
     <select
       class="facets__select select__select"
+      data-filter-param="{{ devices_filter.param_name }}"
       {% if devices_filter == blank or devices_filter.values.size == 0 %}disabled{% endif %}
       onchange="
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
         sessionStorage.setItem('facetsScrollPosition', scrollPosition);
-        if (this.value) { window.location.href = this.value; }
+
+        const param = this.dataset.filterParam;
+        const val = this.value;
+
+        const url = new URL(window.location.href);
+        url.searchParams.delete(param);
+        url.searchParams.delete('page');
+
+        if (val) {
+          url.searchParams.set(param, val);
+        }
+
+        window.location.href = url.toString();
       "
     >
-      {%- if devices_filter and devices_filter.url_to_remove -%}
-        <option value="{{ devices_filter.url_to_remove | escape }}">
-          {{ 'products.facets.compatible_devices' | t }}
-        </option>
-      {%- else -%}
-        <option value="">
-          {{ 'products.facets.compatible_devices' | t }}
-        </option>
-      {%- endif -%}
+      <option value="">
+        {{ 'products.facets.compatible_devices' | t }}
+      </option>
 
       {%- if devices_filter and devices_filter.values.size > 0 -%}
         {%- for filter_value in devices_filter.values -%}
           <option
-            value="{{ filter_value.url_to_add | escape }}"
+            value="{{ filter_value.value | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
             {{ filter_value.label | escape }}
