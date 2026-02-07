@@ -1,7 +1,7 @@
 {% comment %}
   Filtry:
-  - výrobce: filter.v.m.product_compatible_devices.manufacturers_metaobjects
-  - zařízení: filter.v.m.product_compatible_devices.devices_metaobject
+  - výrobce:   filter.v.m.product_compatible_devices.manufacturers_metaobjects  (metaobject reference LIST)
+  - zařízení:  filter.v.m.product_compatible_devices.devices_metaobject
 {% endcomment %}
 
 {%- assign manufacturer_filter = results.filters
@@ -35,10 +35,10 @@
     <select
       id="compatibleManufacturerSelect"
       class="facets__select select__select"
-      name="{{ manufacturer_filter.param_name }}"
+      data-filter-param="{{ manufacturer_filter.param_name }}"
       {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
     >
-      <option value="">
+      <option value="" data-gid="">
         {{ 'products.facets.compatible_manufacturers' | t }}
       </option>
 
@@ -56,7 +56,8 @@
           {%- endif -%}
 
           <option
-            value="{{ filter_value.value | escape }}"
+            value=""
+            data-gid="{{ filter_value.value | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
             {{ manufacturer_label | escape }}
@@ -73,17 +74,18 @@
     <select
       id="compatibleDeviceSelect"
       class="facets__select select__select"
-      name="{{ devices_filter.param_name }}"
+      data-filter-param="{{ devices_filter.param_name }}"
       {% if devices_filter == blank or devices_filter.values.size == 0 %}disabled{% endif %}
     >
-      <option value="">
+      <option value="" data-gid="">
         {{ 'products.facets.compatible_devices' | t }}
       </option>
 
       {%- if devices_filter and devices_filter.values.size > 0 -%}
         {%- for filter_value in devices_filter.values -%}
           <option
-            value="{{ filter_value.value | escape }}"
+            value=""
+            data-gid="{{ filter_value.value | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
             {{ filter_value.label | escape }}
@@ -102,27 +104,52 @@
     const manufacturerSelect = document.getElementById('compatibleManufacturerSelect');
     const deviceSelect = document.getElementById('compatibleDeviceSelect');
 
-    const findFacetForm = (el) => el?.closest('form');
+    const manufacturerParam = manufacturerSelect?.dataset?.filterParam || '';
+    const devicesParam = deviceSelect?.dataset?.filterParam || '';
 
-    const submitFacetForm = (form) => {
-      if (form && typeof form.requestSubmit === 'function') form.requestSubmit();
-      else if (form) form.submit();
+    const saveScroll = () => {
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      sessionStorage.setItem('facetsScrollPosition', String(scrollPosition));
     };
 
-    if (manufacturerSelect) {
-      manufacturerSelect.addEventListener('change', () => {
-        if (deviceSelect) deviceSelect.value = '';
+    const applySingleSelectFilter = (selectEl, { resetOtherParam = '' } = {}) => {
+      if (!selectEl) return;
 
-        const form = findFacetForm(manufacturerSelect);
-        submitFacetForm(form);
-      });
-    }
+      selectEl.addEventListener('change', () => {
+        saveScroll();
 
-    if (deviceSelect) {
-      deviceSelect.addEventListener('change', () => {
-        const form = findFacetForm(deviceSelect);
-        submitFacetForm(form);
+        const param = selectEl.dataset.filterParam;
+        if (!param) return;
+
+        const selected = selectEl.options[selectEl.selectedIndex];
+        const gid = selected?.dataset?.gid || '';
+
+        const url = new URL(window.location.href);
+
+        url.searchParams.delete(param);
+
+        if (resetOtherParam) {
+          url.searchParams.delete(resetOtherParam);
+        }
+
+        url.searchParams.delete('page');
+
+        if (gid) {
+          url.searchParams.set(param, gid);
+        }
+
+        window.location.assign(url.toString());
       });
+    };
+
+    applySingleSelectFilter(manufacturerSelect, { resetOtherParam: devicesParam });
+
+    applySingleSelectFilter(deviceSelect);
+
+    const scrollPosition = sessionStorage.getItem('facetsScrollPosition');
+    if (scrollPosition) {
+      window.scrollTo(0, Number(scrollPosition));
+      sessionStorage.removeItem('facetsScrollPosition');
     }
   });
 </script>
