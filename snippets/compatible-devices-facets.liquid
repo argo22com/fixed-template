@@ -1,29 +1,51 @@
-{%- assign manufacturer_count = 0 -%}
-{%- if manufacturer_filter and manufacturer_filter.values -%}
-  {%- assign manufacturer_count = manufacturer_filter.values.size -%}
-{%- endif -%}
+{% comment %}
+  Filtry:
+  - výrobce:   filter.v.m.product_compatible_devices.manufacturers_metaobjects  (metaobject reference LIST)
+  - zařízení:  filter.v.m.product_compatible_devices.devices_metaobject
+{% endcomment %}
 
-{%- assign devices_count = 0 -%}
-{%- if devices_filter and devices_filter.values -%}
-  {%- assign devices_count = devices_filter.values.size -%}
-{%- endif -%}
+{%- assign manufacturer_filter = results.filters
+  | where: 'param_name', 'filter.v.m.product_compatible_devices.manufacturers_metaobjects'
+  | first
+-%}
 
-<div class="compatible-devices-facets facets facets-active-toolbar flex pt-2" data-compatible-facets>
+{%- assign devices_filter = results.filters
+  | where: 'param_name', 'filter.v.m.product_compatible_devices.devices_metaobject'
+  | first
+-%}
 
+{%- assign manufacturers_all = shop.metaobjects['compatible_devices_manufactures'].values -%}
+
+<style>
+  @media screen and (min-width: 750px) {
+    .compatible-devices-facet-filter { width: 20rem; }
+  }
+  @media screen and (max-width: 749px) {
+    .compatible-devices-facets > * { flex: 1; }
+  }
+  .compatible-devices-facet-filter .select__select {
+    padding: 1.2rem 3.2rem 1.2rem 1.2rem;
+  }
+</style>
+
+<div class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
+
+  {%- comment -%} VÝROBCE ZAŘÍZENÍ {%- endcomment -%}
   <div class="compatible-devices-facet-filter select facets__filter">
     <select
+      id="compatibleManufacturerSelect"
       class="facets__select select__select"
-      data-compatible-select="manufacturer"
       data-filter-param="{{ manufacturer_filter.param_name }}"
-      {%- if manufacturer_filter == blank or manufacturer_count == 0 -%}disabled{%- endif -%}
+      {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
     >
-      <option value="">
+      <option value="" data-gid="">
         {{ 'products.facets.compatible_manufacturers' | t }}
       </option>
 
-      {%- if manufacturer_filter and manufacturer_count > 0 -%}
+      {%- if manufacturer_filter and manufacturer_filter.values.size > 0 -%}
         {%- for filter_value in manufacturer_filter.values -%}
           {%- assign manufacturer_label = filter_value.label -%}
+
           {%- if manufacturers_all -%}
             {%- for m in manufacturers_all -%}
               {%- if m.id == filter_value.value -%}
@@ -34,7 +56,7 @@
           {%- endif -%}
 
           <option
-            value="{{ filter_value.value | escape }}"
+            value=""
             data-gid="{{ filter_value.value | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
@@ -47,21 +69,22 @@
     {% render 'icon-caret' %}
   </div>
 
+  {%- comment -%} ZAŘÍZENÍ / MODEL {%- endcomment -%}
   <div class="compatible-devices-facet-filter select facets__filter">
     <select
+      id="compatibleDeviceSelect"
       class="facets__select select__select"
-      data-compatible-select="device"
       data-filter-param="{{ devices_filter.param_name }}"
-      {%- if devices_filter == blank or devices_count == 0 -%}disabled{%- endif -%}
+      {% if devices_filter == blank or devices_filter.values.size == 0 %}disabled{% endif %}
     >
-      <option value="">
+      <option value="" data-gid="">
         {{ 'products.facets.compatible_devices' | t }}
       </option>
 
-      {%- if devices_filter and devices_count > 0 -%}
+      {%- if devices_filter and devices_filter.values.size > 0 -%}
         {%- for filter_value in devices_filter.values -%}
           <option
-            value="{{ filter_value.value | escape }}"
+            value=""
             data-gid="{{ filter_value.value | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
@@ -77,91 +100,56 @@
 </div>
 
 <script>
-(function () {
-  function saveScroll() {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-    sessionStorage.setItem('facetsScrollPosition', String(scrollPosition));
-  }
+  document.addEventListener('DOMContentLoaded', () => {
+    const manufacturerSelect = document.getElementById('compatibleManufacturerSelect');
+    const deviceSelect = document.getElementById('compatibleDeviceSelect');
 
-  function restoreScrollOnce() {
+    const manufacturerParam = manufacturerSelect?.dataset?.filterParam || '';
+    const devicesParam = deviceSelect?.dataset?.filterParam || '';
+
+    const saveScroll = () => {
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      sessionStorage.setItem('facetsScrollPosition', String(scrollPosition));
+    };
+
+    const applySingleSelectFilter = (selectEl, { resetOtherParam = '' } = {}) => {
+      if (!selectEl) return;
+
+      selectEl.addEventListener('change', () => {
+        saveScroll();
+
+        const param = selectEl.dataset.filterParam;
+        if (!param) return;
+
+        const selected = selectEl.options[selectEl.selectedIndex];
+        const gid = selected?.dataset?.gid || '';
+
+        const url = new URL(window.location.href);
+
+        url.searchParams.delete(param);
+
+        if (resetOtherParam) {
+          url.searchParams.delete(resetOtherParam);
+        }
+
+        url.searchParams.delete('page');
+
+        if (gid) {
+          url.searchParams.set(param, gid);
+        }
+
+        window.location.assign(url.toString());
+      });
+    };
+
+    applySingleSelectFilter(manufacturerSelect, { resetOtherParam: devicesParam });
+
+    applySingleSelectFilter(deviceSelect);
+
     const scrollPosition = sessionStorage.getItem('facetsScrollPosition');
     if (scrollPosition) {
       window.scrollTo(0, Number(scrollPosition));
       sessionStorage.removeItem('facetsScrollPosition');
     }
-  }
-
-  function getSelectedValue(selectEl) {
-    const opt = selectEl.options[selectEl.selectedIndex];
-    // primárně value, fallback na data-gid (pro jistotu)
-    return (opt && opt.value) ? opt.value : (opt?.dataset?.gid || '');
-  }
-
-  function handleSelectChange(selectEl) {
-    saveScroll();
-
-    const param = selectEl.dataset.filterParam;
-    if (!param) return;
-
-    const val = getSelectedValue(selectEl);
-
-    const url = new URL(window.location.href);
-
-    // single-select: přepiš hodnotu parametru
-    url.searchParams.delete(param);
-
-    // pokud se mění výrobce, resetni device filtr (v URL)
-    if (selectEl.dataset.compatibleSelect === 'manufacturer') {
-      const deviceSelect = document.querySelector('[data-compatible-select="device"][data-filter-param]');
-      const deviceParam = deviceSelect?.dataset?.filterParam;
-      if (deviceParam) url.searchParams.delete(deviceParam);
-
-      // a resetni i UI druhého selectu (když existuje)
-      if (deviceSelect) deviceSelect.selectedIndex = 0;
-    }
-
-    url.searchParams.delete('page');
-
-    if (val) url.searchParams.set(param, val);
-
-    window.location.assign(url.toString());
-  }
-
-  function wireCompatibleSelects(root = document) {
-    root.querySelectorAll('[data-compatible-facets]').forEach((wrap) => {
-      if (wrap.dataset.wired === '1') return;
-      wrap.dataset.wired = '1';
-
-      wrap.addEventListener('change', (e) => {
-        const target = e.target;
-        if (!(target instanceof HTMLSelectElement)) return;
-        if (!target.matches('[data-compatible-select][data-filter-param]')) return;
-        if (target.disabled) return;
-        handleSelectChange(target);
-      });
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    wireCompatibleSelects(document);
-    restoreScrollOnce();
   });
-
-  document.addEventListener('shopify:section:load', () => wireCompatibleSelects(document));
-  document.addEventListener('shopify:section:reorder', () => wireCompatibleSelects(document));
-
-  const mo = new MutationObserver((mutations) => {
-    for (const m of mutations) {
-      for (const node of m.addedNodes) {
-        if (!(node instanceof HTMLElement)) continue;
-        if (node.matches?.('[data-compatible-facets]') || node.querySelector?.('[data-compatible-facets]')) {
-          wireCompatibleSelects(document);
-          return;
-        }
-      }
-    }
-  });
-
-  mo.observe(document.documentElement, { childList: true, subtree: true });
-})();
 </script>
