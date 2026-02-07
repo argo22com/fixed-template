@@ -10,38 +10,29 @@
 
 {%- assign manufacturers_all = shop.metaobjects['compatible_devices_manufactures'].values -%}
 
+<style>
+  @media screen and (min-width: 750px) {
+    .compatible-devices-facet-filter { width: 20rem; }
+  }
+  @media screen and (max-width: 749px) {
+    .compatible-devices-facets > * { flex: 1; }
+  }
+  .compatible-devices-facet-filter .select__select {
+    padding: 1.2rem 3.2rem 1.2rem 1.2rem;
+  }
+</style>
+
 <div class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
 
   {%- comment -%} VÝROBCE ZAŘÍZENÍ {%- endcomment -%}
   <div class="compatible-devices-facet-filter select facets__filter">
     <select
+      id="compatibleManufacturerSelect"
       class="facets__select select__select"
       data-filter-param="{{ manufacturer_filter.param_name }}"
       {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
-      onchange="
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        sessionStorage.setItem('facetsScrollPosition', scrollPosition);
-
-        const param = this.dataset.filterParam;
-        const val = this.value;
-
-        const url = new URL(window.location.href);
-
-        // single-select: vždy smaž existující hodnoty daného filtru
-        url.searchParams.delete(param);
-
-        // při změně filtru obvykle nechceš zůstat na stránce 3
-        url.searchParams.delete('page');
-
-        // pokud není vybráno nic (placeholder), tak je to reset
-        if (val) {
-          url.searchParams.set(param, val);
-        }
-
-        window.location.href = url.toString();
-      "
     >
-      <option value="">
+      <option value="" data-gid="">
         {{ 'products.facets.compatible_manufacturers' | t }}
       </option>
 
@@ -59,7 +50,8 @@
           {%- endif -%}
 
           <option
-            value="{{ filter_value.value | escape }}"
+            value=""
+            data-gid="{{ filter_value.value | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
             {{ manufacturer_label | escape }}
@@ -74,35 +66,20 @@
   {%- comment -%} ZAŘÍZENÍ / MODEL {%- endcomment -%}
   <div class="compatible-devices-facet-filter select facets__filter">
     <select
+      id="compatibleDeviceSelect"
       class="facets__select select__select"
       data-filter-param="{{ devices_filter.param_name }}"
       {% if devices_filter == blank or devices_filter.values.size == 0 %}disabled{% endif %}
-      onchange="
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        sessionStorage.setItem('facetsScrollPosition', scrollPosition);
-
-        const param = this.dataset.filterParam;
-        const val = this.value;
-
-        const url = new URL(window.location.href);
-        url.searchParams.delete(param);
-        url.searchParams.delete('page');
-
-        if (val) {
-          url.searchParams.set(param, val);
-        }
-
-        window.location.href = url.toString();
-      "
     >
-      <option value="">
+      <option value="" data-gid="">
         {{ 'products.facets.compatible_devices' | t }}
       </option>
 
       {%- if devices_filter and devices_filter.values.size > 0 -%}
         {%- for filter_value in devices_filter.values -%}
           <option
-            value="{{ filter_value.value | escape }}"
+            value=""
+            data-gid="{{ filter_value.value | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
             {{ filter_value.label | escape }}
@@ -117,10 +94,55 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', () => {
+    const manufacturerSelect = document.getElementById('compatibleManufacturerSelect');
+    const deviceSelect = document.getElementById('compatibleDeviceSelect');
+
+    const manufacturerParam = manufacturerSelect?.dataset?.filterParam || '';
+    const devicesParam = deviceSelect?.dataset?.filterParam || '';
+
+    const saveScroll = () => {
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      sessionStorage.setItem('facetsScrollPosition', String(scrollPosition));
+    };
+
+    const applySingleSelectFilter = (selectEl, { resetOtherParam = '' } = {}) => {
+      if (!selectEl) return;
+
+      selectEl.addEventListener('change', () => {
+        saveScroll();
+
+        const param = selectEl.dataset.filterParam;
+        if (!param) return;
+
+        const selected = selectEl.options[selectEl.selectedIndex];
+        const gid = selected?.dataset?.gid || '';
+
+        const url = new URL(window.location.href);
+
+        url.searchParams.delete(param);
+
+        if (resetOtherParam) {
+          url.searchParams.delete(resetOtherParam);
+        }
+
+        url.searchParams.delete('page');
+
+        if (gid) {
+          url.searchParams.set(param, gid);
+        }
+
+        window.location.assign(url.toString());
+      });
+    };
+
+    applySingleSelectFilter(manufacturerSelect, { resetOtherParam: devicesParam });
+
+    applySingleSelectFilter(deviceSelect);
+
     const scrollPosition = sessionStorage.getItem('facetsScrollPosition');
     if (scrollPosition) {
-      window.scrollTo(0, scrollPosition);
+      window.scrollTo(0, Number(scrollPosition));
       sessionStorage.removeItem('facetsScrollPosition');
     }
   });
