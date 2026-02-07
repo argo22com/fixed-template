@@ -5,7 +5,7 @@
       class="facets__select select__select"
       data-compatible-select="manufacturer"
       data-filter-param="{{ manufacturer_filter.param_name }}"
-      {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
+      data-auto-disable="1"
     >
       <option value="" data-gid="">
         {{ 'products.facets.compatible_manufacturers' | t }}
@@ -13,23 +13,8 @@
 
       {%- if manufacturer_filter and manufacturer_filter.values.size > 0 -%}
         {%- for filter_value in manufacturer_filter.values -%}
-          {%- assign manufacturer_label = filter_value.label -%}
-
-          {%- if manufacturers_all -%}
-            {%- for m in manufacturers_all -%}
-              {%- if m.id == filter_value.value -%}
-                {%- assign manufacturer_label = m.display_name | default: m.title | default: filter_value.label -%}
-                {%- break -%}
-              {%- endif -%}
-            {%- endfor -%}
-          {%- endif -%}
-
-          <option
-            value=""
-            data-gid="{{ filter_value.value | escape }}"
-            {%- if filter_value.active -%} selected{%- endif -%}
-          >
-            {{ manufacturer_label | escape }}
+          <option value="" data-gid="{{ filter_value.value | escape }}" {%- if filter_value.active -%} selected{%- endif -%}>
+            {{ filter_value.label | escape }}
           </option>
         {%- endfor -%}
       {%- endif -%}
@@ -43,7 +28,7 @@
       class="facets__select select__select"
       data-compatible-select="device"
       data-filter-param="{{ devices_filter.param_name }}"
-      {% if devices_filter == blank or devices_filter.values.size == 0 %}disabled{% endif %}
+      data-auto-disable="1"
     >
       <option value="" data-gid="">
         {{ 'products.facets.compatible_devices' | t }}
@@ -51,11 +36,7 @@
 
       {%- if devices_filter and devices_filter.values.size > 0 -%}
         {%- for filter_value in devices_filter.values -%}
-          <option
-            value=""
-            data-gid="{{ filter_value.value | escape }}"
-            {%- if filter_value.active -%} selected{%- endif -%}
-          >
+          <option value="" data-gid="{{ filter_value.value | escape }}" {%- if filter_value.active -%} selected{%- endif -%}>
             {{ filter_value.label | escape }}
           </option>
         {%- endfor -%}
@@ -82,6 +63,25 @@
     }
   }
 
+  function setDisabledState(selectEl) {
+    if (!selectEl || selectEl.dataset.autoDisable !== '1') return;
+
+    // reálná hodnota = option, která má data-gid (a není prázdná)
+    const realCount = Array.from(selectEl.options).filter(o => (o.dataset && o.dataset.gid)).length;
+
+    // placeholder je první option bez data-gid -> realCount >= 1 => enable
+    selectEl.disabled = realCount === 0;
+  }
+
+  function enforceDisabledStates(root = document) {
+    root.querySelectorAll('[data-compatible-facets] select[data-auto-disable="1"]').forEach(sel => {
+      setDisabledState(sel);
+      // přebít případné "disable během loadingu" ještě jednou po chvilce
+      setTimeout(() => setDisabledState(sel), 0);
+      setTimeout(() => setDisabledState(sel), 200);
+    });
+  }
+
   function handleSelectChange(selectEl) {
     saveScroll();
 
@@ -93,10 +93,9 @@
 
     const url = new URL(window.location.href);
 
-    // single-select: vždy přepiš hodnotu tohoto filtru
     url.searchParams.delete(param);
 
-    // změna výrobce -> reset zařízení (URL i UI)
+    // změna výrobce -> reset zařízení
     if (selectEl.dataset.compatibleSelect === 'manufacturer') {
       const deviceSelect = document.querySelector('[data-compatible-facets] select[data-compatible-select="device"][data-filter-param]');
       const deviceParam = deviceSelect?.dataset?.filterParam;
@@ -105,7 +104,6 @@
     }
 
     url.searchParams.delete('page');
-
     if (gid) url.searchParams.set(param, gid);
 
     window.location.assign(url.toString());
@@ -120,10 +118,16 @@
         const target = e.target;
         if (!(target instanceof HTMLSelectElement)) return;
         if (!target.matches('select[data-compatible-select][data-filter-param]')) return;
+
+        // pokaždé přepočti disabled těsně před použitím
+        setDisabledState(target);
         if (target.disabled) return;
+
         handleSelectChange(target);
       });
     });
+
+    enforceDisabledStates(root);
   }
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -131,20 +135,18 @@
     restoreScrollOnce();
   });
 
-  // Shopify section events
   document.addEventListener('shopify:section:load', () => wire(document));
   document.addEventListener('shopify:section:reorder', () => wire(document));
 
-  // AJAX facets: když Dawn vymění DOM, znovu připojíme listener na nový wrapper
+  // sleduj re-rendery (Dawn facety mění DOM)
   const mo = new MutationObserver((mutations) => {
     for (const m of mutations) {
-      for (const node of m.addedNodes) {
-        if (!(node instanceof HTMLElement)) continue;
-        if (node.matches?.('[data-compatible-facets]') || node.querySelector?.('[data-compatible-facets]')) {
-          wire(document);
-          return;
-        }
-      }
+      if (m.type !== 'childList') continue;
+
+      // kdykoliv se něco přidá/změní, zkus znovu enforce disabled + případně wire nové wrappery
+      // (je to levné – jen pár selectů)
+      wire(document);
+      return;
     }
   });
 
