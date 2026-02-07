@@ -1,3 +1,13 @@
+{%- assign manufacturer_count = 0 -%}
+{%- if manufacturer_filter and manufacturer_filter.values -%}
+  {%- assign manufacturer_count = manufacturer_filter.values.size -%}
+{%- endif -%}
+
+{%- assign devices_count = 0 -%}
+{%- if devices_filter and devices_filter.values -%}
+  {%- assign devices_count = devices_filter.values.size -%}
+{%- endif -%}
+
 <div class="compatible-devices-facets facets facets-active-toolbar flex pt-2" data-compatible-facets>
 
   <div class="compatible-devices-facet-filter select facets__filter">
@@ -5,13 +15,13 @@
       class="facets__select select__select"
       data-compatible-select="manufacturer"
       data-filter-param="{{ manufacturer_filter.param_name }}"
-      {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
+      {%- if manufacturer_filter == blank or manufacturer_count == 0 -%}disabled{%- endif -%}
     >
-      <option value="" data-gid="">
+      <option value="">
         {{ 'products.facets.compatible_manufacturers' | t }}
       </option>
 
-      {%- if manufacturer_filter and manufacturer_filter.values.size > 0 -%}
+      {%- if manufacturer_filter and manufacturer_count > 0 -%}
         {%- for filter_value in manufacturer_filter.values -%}
           {%- assign manufacturer_label = filter_value.label -%}
           {%- if manufacturers_all -%}
@@ -23,7 +33,11 @@
             {%- endfor -%}
           {%- endif -%}
 
-          <option value="" data-gid="{{ filter_value.value | escape }}" {%- if filter_value.active -%} selected{%- endif -%}>
+          <option
+            value="{{ filter_value.value | escape }}"
+            data-gid="{{ filter_value.value | escape }}"
+            {%- if filter_value.active -%} selected{%- endif -%}
+          >
             {{ manufacturer_label | escape }}
           </option>
         {%- endfor -%}
@@ -38,15 +52,19 @@
       class="facets__select select__select"
       data-compatible-select="device"
       data-filter-param="{{ devices_filter.param_name }}"
-      {% if devices_filter == blank or devices_filter.values.size == 0 %}disabled{% endif %}
+      {%- if devices_filter == blank or devices_count == 0 -%}disabled{%- endif -%}
     >
-      <option value="" data-gid="">
+      <option value="">
         {{ 'products.facets.compatible_devices' | t }}
       </option>
 
-      {%- if devices_filter and devices_filter.values.size > 0 -%}
+      {%- if devices_filter and devices_count > 0 -%}
         {%- for filter_value in devices_filter.values -%}
-          <option value="" data-gid="{{ filter_value.value | escape }}" {%- if filter_value.active -%} selected{%- endif -%}>
+          <option
+            value="{{ filter_value.value | escape }}"
+            data-gid="{{ filter_value.value | escape }}"
+            {%- if filter_value.active -%} selected{%- endif -%}
+          >
             {{ filter_value.label | escape }}
           </option>
         {%- endfor -%}
@@ -57,6 +75,7 @@
   </div>
 
 </div>
+
 <script>
 (function () {
   function saveScroll() {
@@ -72,36 +91,43 @@
     }
   }
 
+  function getSelectedValue(selectEl) {
+    const opt = selectEl.options[selectEl.selectedIndex];
+    // primárně value, fallback na data-gid (pro jistotu)
+    return (opt && opt.value) ? opt.value : (opt?.dataset?.gid || '');
+  }
+
   function handleSelectChange(selectEl) {
     saveScroll();
 
     const param = selectEl.dataset.filterParam;
     if (!param) return;
 
-    const selected = selectEl.options[selectEl.selectedIndex];
-    const gid = selected?.dataset?.gid || '';
+    const val = getSelectedValue(selectEl);
 
     const url = new URL(window.location.href);
 
     // single-select: přepiš hodnotu parametru
     url.searchParams.delete(param);
 
-    // pokud se mění výrobce, resetni device filtr
+    // pokud se mění výrobce, resetni device filtr (v URL)
     if (selectEl.dataset.compatibleSelect === 'manufacturer') {
       const deviceSelect = document.querySelector('[data-compatible-select="device"][data-filter-param]');
       const deviceParam = deviceSelect?.dataset?.filterParam;
       if (deviceParam) url.searchParams.delete(deviceParam);
+
+      // a resetni i UI druhého selectu (když existuje)
+      if (deviceSelect) deviceSelect.selectedIndex = 0;
     }
 
     url.searchParams.delete('page');
 
-    if (gid) url.searchParams.set(param, gid);
+    if (val) url.searchParams.set(param, val);
 
     window.location.assign(url.toString());
   }
 
   function wireCompatibleSelects(root = document) {
-    // Event delegation: připojíme listener na wrapper, ne na konkrétní <select>
     root.querySelectorAll('[data-compatible-facets]').forEach((wrap) => {
       if (wrap.dataset.wired === '1') return;
       wrap.dataset.wired = '1';
@@ -110,22 +136,20 @@
         const target = e.target;
         if (!(target instanceof HTMLSelectElement)) return;
         if (!target.matches('[data-compatible-select][data-filter-param]')) return;
+        if (target.disabled) return;
         handleSelectChange(target);
       });
     });
   }
 
-  // 1) initial
   document.addEventListener('DOMContentLoaded', () => {
     wireCompatibleSelects(document);
     restoreScrollOnce();
   });
 
-  // 2) Shopify section events (někdy přijdou)
   document.addEventListener('shopify:section:load', () => wireCompatibleSelects(document));
   document.addEventListener('shopify:section:reorder', () => wireCompatibleSelects(document));
 
-  // 3) MutationObserver: Dawn po AJAX filtraci mění HTML -> znovu připoj wrapper
   const mo = new MutationObserver((mutations) => {
     for (const m of mutations) {
       for (const node of m.addedNodes) {
