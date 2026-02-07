@@ -1,8 +1,8 @@
 {% comment %}
-  Musí běžet uvnitř stejného formu jako klasické facety (FacetFiltersForm).
+  Očekává se, že snippet dostane `results` (Search & Discovery).
   Filtry:
-  - výrobce: filter.v.m.product_compatible_devices.manufacturers_metaobjects
-  - zařízení: filter.v.m.product_compatible_devices.devices_metaobject
+  - výrobce:   filter.v.m.product_compatible_devices.manufacturers_metaobjects  (metaobject reference LIST)
+  - zařízení:  filter.v.m.product_compatible_devices.devices_metaobject
 {% endcomment %}
 
 {%- assign manufacturer_filter = results.filters
@@ -15,6 +15,10 @@
   | first
 -%}
 
+{%- comment -%}
+  Načteme všechny metaobjecty výrobců pro mapování GID -> display_name
+  (upravte handle v hranatých závorkách podle vašeho skutečného typu metaobjectu)
+{%- endcomment -%}
 {%- assign manufacturers_all = shop.metaobjects['compatible_devices_manufactures'].values -%}
 
 <style>
@@ -36,10 +40,10 @@
     <select
       id="compatibleManufacturerSelect"
       class="facets__select select__select"
-      name="{{ manufacturer_filter.param_name }}"
+      data-filter-param="{{ manufacturer_filter.param_name }}"
       {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
     >
-      <option value="">
+      <option value="" data-gid="">
         {{ 'products.facets.compatible_manufacturers' | t }}
       </option>
 
@@ -57,7 +61,8 @@
           {%- endif -%}
 
           <option
-            value="{{ filter_value.value | escape }}"
+            value=""
+            data-gid="{{ filter_value.value | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
             {{ manufacturer_label | escape }}
@@ -74,17 +79,18 @@
     <select
       id="compatibleDeviceSelect"
       class="facets__select select__select"
-      name="{{ devices_filter.param_name }}"
+      data-filter-param="{{ devices_filter.param_name }}"
       {% if devices_filter == blank or devices_filter.values.size == 0 %}disabled{% endif %}
     >
-      <option value="">
+      <option value="" data-gid="">
         {{ 'products.facets.compatible_devices' | t }}
       </option>
 
       {%- if devices_filter and devices_filter.values.size > 0 -%}
         {%- for filter_value in devices_filter.values -%}
           <option
-            value="{{ filter_value.value | escape }}"
+            value=""
+            data-gid="{{ filter_value.value | escape }}"
             {%- if filter_value.active -%} selected{%- endif -%}
           >
             {{ filter_value.label | escape }}
@@ -103,30 +109,59 @@
     const manufacturerSelect = document.getElementById('compatibleManufacturerSelect');
     const deviceSelect = document.getElementById('compatibleDeviceSelect');
 
-    const findFacetForm = (el) => el?.closest('form');
+    const manufacturerParam = manufacturerSelect?.dataset?.filterParam || '';
+    const devicesParam = deviceSelect?.dataset?.filterParam || '';
 
-    const submitFacetForm = (form) => {
-      // Dawn často poslouchá na "submit"/"change" a dělá AJAX reload sekcí
-      // requestSubmit je nejbezpečnější (spustí i eventy)
-      if (form && typeof form.requestSubmit === 'function') form.requestSubmit();
-      else if (form) form.submit();
+    const saveScroll = () => {
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      sessionStorage.setItem('facetsScrollPosition', String(scrollPosition));
     };
 
-    if (manufacturerSelect) {
-      manufacturerSelect.addEventListener('change', () => {
-        // volitelné: když se změní výrobce, resetni zařízení
-        if (deviceSelect) deviceSelect.value = '';
+    const applySingleSelectFilter = (selectEl, { resetOtherParam = '' } = {}) => {
+      if (!selectEl) return;
 
-        const form = findFacetForm(manufacturerSelect);
-        submitFacetForm(form);
-      });
-    }
+      selectEl.addEventListener('change', () => {
+        saveScroll();
 
-    if (deviceSelect) {
-      deviceSelect.addEventListener('change', () => {
-        const form = findFacetForm(deviceSelect);
-        submitFacetForm(form);
+        const param = selectEl.dataset.filterParam;
+        if (!param) return;
+
+        const selected = selectEl.options[selectEl.selectedIndex];
+        const gid = selected?.dataset?.gid || '';
+
+        const url = new URL(window.location.href);
+
+        // vždy smaž existující hodnoty tohoto filtru (single-select)
+        url.searchParams.delete(param);
+
+        // volitelně reset druhého filtru (např. při změně výrobce reset zařízení)
+        if (resetOtherParam) {
+          url.searchParams.delete(resetOtherParam);
+        }
+
+        // reset stránkování
+        url.searchParams.delete('page');
+
+        // nastav jen novou hodnotu (pokud není placeholder)
+        if (gid) {
+          url.searchParams.set(param, gid);
+        }
+
+        window.location.assign(url.toString());
       });
+    };
+
+    // Výrobce: single-select + reset zařízení (smaž tenhle řádek, pokud reset nechceš)
+    applySingleSelectFilter(manufacturerSelect, { resetOtherParam: devicesParam });
+
+    // Zařízení: single-select (bez resetu výrobce)
+    applySingleSelectFilter(deviceSelect);
+
+    // restore scroll
+    const scrollPosition = sessionStorage.getItem('facetsScrollPosition');
+    if (scrollPosition) {
+      window.scrollTo(0, Number(scrollPosition));
+      sessionStorage.removeItem('facetsScrollPosition');
     }
   });
 </script>
