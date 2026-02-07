@@ -1,3 +1,9 @@
+{% comment %}
+  Filtry:
+  - výrobce: filter.v.m.product_compatible_devices.manufacturers_metaobjects
+  - zařízení: filter.v.m.product_compatible_devices.devices_metaobject
+{% endcomment %}
+
 {%- assign manufacturer_filter = results.filters
   | where: 'param_name', 'filter.v.m.product_compatible_devices.manufacturers_metaobjects'
   | first
@@ -8,148 +14,115 @@
   | first
 -%}
 
-<div class="compatible-devices-topbar">
+{%- assign manufacturers_all = shop.metaobjects['compatible_devices_manufactures'].values -%}
+
+<style>
+  @media screen and (min-width: 750px) {
+    .compatible-devices-facet-filter { width: 20rem; }
+  }
+  @media screen and (max-width: 749px) {
+    .compatible-devices-facets > * { flex: 1; }
+  }
+  .compatible-devices-facet-filter .select__select {
+    padding: 1.2rem 3.2rem 1.2rem 1.2rem;
+  }
+</style>
+
+<div class="compatible-devices-facets facets facets-active-toolbar flex pt-2">
+
+  {%- comment -%} VÝROBCE ZAŘÍZENÍ {%- endcomment -%}
   <div class="compatible-devices-facet-filter select facets__filter">
     <select
       id="compatibleManufacturerSelect"
       class="facets__select select__select"
-      data-filter-param="{{ manufacturer_filter.param_name }}"
+      name="{{ manufacturer_filter.param_name }}"
       {% if manufacturer_filter == blank or manufacturer_filter.values.size == 0 %}disabled{% endif %}
     >
       <option value="">
         {{ 'products.facets.compatible_manufacturers' | t }}
       </option>
-      {%- for filter_value in manufacturer_filter.values -%}
-        <option value="{{ filter_value.value | escape }}" {%- if filter_value.active -%} selected{%- endif -%}>
-          {{ filter_value.label | escape }}
-        </option>
-      {%- endfor -%}
+
+      {%- if manufacturer_filter and manufacturer_filter.values.size > 0 -%}
+        {%- for filter_value in manufacturer_filter.values -%}
+          {%- assign manufacturer_label = filter_value.label -%}
+
+          {%- if manufacturers_all -%}
+            {%- for m in manufacturers_all -%}
+              {%- if m.id == filter_value.value -%}
+                {%- assign manufacturer_label = m.display_name | default: m.title | default: filter_value.label -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+
+          <option
+            value="{{ filter_value.value | escape }}"
+            {%- if filter_value.active -%} selected{%- endif -%}
+          >
+            {{ manufacturer_label | escape }}
+          </option>
+        {%- endfor -%}
+      {%- endif -%}
     </select>
+
     {% render 'icon-caret' %}
   </div>
 
+  {%- comment -%} ZAŘÍZENÍ / MODEL {%- endcomment -%}
   <div class="compatible-devices-facet-filter select facets__filter">
     <select
       id="compatibleDeviceSelect"
       class="facets__select select__select"
-      data-filter-param="{{ devices_filter.param_name }}"
+      name="{{ devices_filter.param_name }}"
       {% if devices_filter == blank or devices_filter.values.size == 0 %}disabled{% endif %}
     >
       <option value="">
         {{ 'products.facets.compatible_devices' | t }}
       </option>
-      {%- for filter_value in devices_filter.values -%}
-        <option value="{{ filter_value.value | escape }}" {%- if filter_value.active -%} selected{%- endif -%}>
-          {{ filter_value.label | escape }}
-        </option>
-      {%- endfor -%}
+
+      {%- if devices_filter and devices_filter.values.size > 0 -%}
+        {%- for filter_value in devices_filter.values -%}
+          <option
+            value="{{ filter_value.value | escape }}"
+            {%- if filter_value.active -%} selected{%- endif -%}
+          >
+            {{ filter_value.label | escape }}
+          </option>
+        {%- endfor -%}
+      {%- endif -%}
     </select>
+
     {% render 'icon-caret' %}
   </div>
+
 </div>
+
 <script>
-  (function () {
-    function getFacetForms() {
-      // Dawn / Shopify standard: <facet-filters-form> obsahuje form uvnitř
-      const forms = [];
+  document.addEventListener('DOMContentLoaded', () => {
+    const manufacturerSelect = document.getElementById('compatibleManufacturerSelect');
+    const deviceSelect = document.getElementById('compatibleDeviceSelect');
 
-      document.querySelectorAll('facet-filters-form form').forEach(f => forms.push(f));
+    const findFacetForm = (el) => el?.closest('form');
 
-      // časté ID v Dawn (někdy víc instancí)
-      document.querySelectorAll('form[id*="FacetFiltersForm"]').forEach(f => {
-        if (!forms.includes(f)) forms.push(f);
+    const submitFacetForm = (form) => {
+      if (form && typeof form.requestSubmit === 'function') form.requestSubmit();
+      else if (form) form.submit();
+    };
+
+    if (manufacturerSelect) {
+      manufacturerSelect.addEventListener('change', () => {
+        if (deviceSelect) deviceSelect.value = '';
+
+        const form = findFacetForm(manufacturerSelect);
+        submitFacetForm(form);
       });
+    }
 
-      // fallback: všechny formy, které obsahují filter.* inputy
-      document.querySelectorAll('form').forEach(f => {
-        if (forms.includes(f)) return;
-        if (f.querySelector('[name^="filter."]')) forms.push(f);
+    if (deviceSelect) {
+      deviceSelect.addEventListener('change', () => {
+        const form = findFacetForm(deviceSelect);
+        submitFacetForm(form);
       });
-
-      return forms;
     }
-
-    function upsertHidden(form, name, value) {
-      // single-select: odstraň staré hiddeny stejného name
-      form.querySelectorAll('input[type="hidden"][name="' + CSS.escape(name) + '"]').forEach(el => el.remove());
-      if (!value) return;
-
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = name;
-      input.value = value;
-      form.appendChild(input);
-    }
-
-    function submitForm(form) {
-      // reset stránkování
-      form.querySelectorAll('input[name="page"]').forEach(el => el.remove());
-
-      // Dawn poslouchá na submit a dělá AJAX render; potřebujeme vyvolat submit event
-      const evt = new Event('submit', { bubbles: true, cancelable: true });
-      const prevented = !form.dispatchEvent(evt);
-
-      // když to nikdo neodchytil, tak klasický submit
-      if (!prevented) {
-        if (typeof form.requestSubmit === 'function') form.requestSubmit();
-        else form.submit();
-      }
-    }
-
-    function fallbackNavigate(param, value, resetParam) {
-      const url = new URL(window.location.href);
-      url.searchParams.delete(param);
-      url.searchParams.delete('page');
-      if (resetParam) url.searchParams.delete(resetParam);
-      if (value) url.searchParams.set(param, value);
-      window.location.assign(url.toString());
-    }
-
-    function wire() {
-      const manufacturerSelect = document.getElementById('compatibleManufacturerSelect');
-      const deviceSelect = document.getElementById('compatibleDeviceSelect');
-      if (!manufacturerSelect && !deviceSelect) return;
-
-      const manufacturerParam = manufacturerSelect?.dataset?.filterParam || '';
-      const deviceParam = deviceSelect?.dataset?.filterParam || '';
-
-      const forms = getFacetForms();
-
-      const applyToForms = (changedParam, changedValue, resetParam) => {
-        if (!forms.length) {
-          // když nenajdeme facety form, alespoň funguj URL přepisem
-          fallbackNavigate(changedParam, changedValue, resetParam);
-          return;
-        }
-
-        forms.forEach(form => {
-          upsertHidden(form, changedParam, changedValue);
-
-          // volitelný reset druhého filtru (výrobce -> reset zařízení)
-          if (resetParam) {
-            upsertHidden(form, resetParam, '');
-          }
-
-          submitForm(form);
-        });
-      };
-
-      if (manufacturerSelect && manufacturerParam) {
-        manufacturerSelect.addEventListener('change', () => {
-          // reset device select UI
-          if (deviceSelect) deviceSelect.value = '';
-          applyToForms(manufacturerParam, manufacturerSelect.value, deviceParam);
-        });
-      }
-
-      if (deviceSelect && deviceParam) {
-        deviceSelect.addEventListener('change', () => {
-          applyToForms(deviceParam, deviceSelect.value, '');
-        });
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', wire);
-    document.addEventListener('shopify:section:load', wire);
-  })();
+  });
 </script>
